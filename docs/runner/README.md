@@ -32,16 +32,22 @@ Preflight uses OS `lsof` to reject wildcard/LAN listeners, verifies the exact di
 Requests send `keep_alive: -1` and `options.num_ctx: 32768`; server configuration remains
 necessary if the OpenAI adapter ignores these fields. Proxies and redirects are disabled.
 
-The session fingerprint includes digest, size_vram, context_length, expires_at, server
-`/api/version`, listener PIDs, and loaded_at/load_session_id when supplied. Infinite
-keep-alive keeps expires_at constant. Any change fails closed. Listener inspection remains
-mandatory for local-only safety, including when no PID can be extracted.
+The session fingerprint includes digest, size_vram, context_length, listener PIDs and
+an unambiguous model runner subprocess PID under the listener (`ps -axo pid=,ppid=,command=`).
+The dedicated single-model server requirement associates that subprocess with gemma4:26b.
+A runner PID change means reload. `expires_at` is checked for valid residency but is
+excluded from identity: Ollama refreshes it on requests even with infinite keep-alive.
+Server version changes also fail closed. When process inspection is unavailable or
+ambiguous, fingerprint plus canary is used. Attestation and session checks record the
+selected detector and observed runner PID; the canary remains active with either detector.
 
 Before and after each eligible checkpoint's branch set, a fixed prompt, seed 731921,
 T=0.7, and max_tokens=16 probe passes through OllamaChatClient/GuardedChatClient.
 UTF-8 output content must match byte for byte across this process's session; response IDs
 are excluded. Canary requests/responses and guard attempts are retained in `canary/`,
-counted in both ledgers and the frozen request cap (two extra calls per checkpoint).
+counted in both ledgers and the frozen request cap. An additional canary is sent immediately
+after each successful source run, including sources without an eligible checkpoint
+(three extra calls for a completed eligible checkpoint).
 Probe failure or mismatch invalidates every scheduled checkpoint branch as model_reload.
 This detector follows INF-001's observed load-dependent stochastic behavior; it is not a
 proof that every possible reload changes the canary. No real model calls were made for
@@ -133,3 +139,19 @@ in the middle of a branch set, digest/context/lease/identity refusal, nonlocal l
 seeds, unequal schedules, held-out gating, and time cutoffs. Synthetic responses are test
 evidence only. The Python guard is not OS-level isolation for arbitrary native code.
 Earlier EXP-000 dry-run artifacts and logs remain unchanged historical evidence.
+
+## Halt and restart
+
+On exceptions and normal halt, the collector releases its OS advisory lock in `finally`.
+The empty `.collector.lock` file remains intentionally: deleting a locked inode can allow
+concurrent collectors to bypass each other. Its presence does not mean a collector is active;
+process exit also releases the OS lock. Do not delete it while a collector may be running.
+`status --output <directory>` reports failed/invalid/interrupted attempts as halted and
+accepts the watchdog's raw JSON sidecars while still checking collector evidence hashes.
+
+Preserve halted evidence. With unchanged code and manifest, an explicitly authorized
+`run <manifest> --output <same-directory> --live --retry-failed` starts a new whole-world
+attempt, subject to the single reload retry, request cap and deadline. After code changes
+(including EXP-000d), use a fresh output directory and a reviewed manifest version; the
+old code hashes deliberately prevent resuming the pilot in place. No failed branch set
+is resumed. These instructions do not authorize a live retry.

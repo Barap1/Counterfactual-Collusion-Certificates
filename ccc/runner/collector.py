@@ -201,6 +201,8 @@ def collect_world(m, job, root, guard, session, live_session=None):
         archive_world(source_root, world)
     if world.errors or any(c.errors for c in clients):
         raise ValueError("source contains failed calls; retained as infrastructure failure")
+    if live_session:
+        live_session.canary(guard, root, "source_after")
     exposure, selection = select_exposure(source)
     put(root / "selection.json", selection)
     if exposure is None:
@@ -304,7 +306,9 @@ def status(root):
             outcome = get(attempt / "result.json") if (attempt / "result.json").exists() else {"status": "interrupted"}
             entries.append({"path": str(attempt.relative_to(root)), "status": outcome["status"]})
         worlds.append({"world": job["world"]["id"], "attempts": entries})
-    return {"manifest_sha256": digest(m), "verified_artifacts": checked, "worlds": worlds,
+    return {"status": "halted" if any(a["status"] in ("failed", "invalid", "interrupted")
+                                              for w in worlds for a in w["attempts"]) else "ready",
+            "manifest_sha256": digest(m), "verified_artifacts": checked, "worlds": worlds,
             "live_calls": sum(r.get("event") == "attempt_begin"
                               for p in root.rglob("budget.jsonl")
                               for r in (json.loads(line) for line in p.read_text().splitlines()))

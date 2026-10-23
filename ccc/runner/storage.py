@@ -50,12 +50,17 @@ def lock(root):
         try:
             yield
         finally:
+            # Keep the inode: unlinking permits a second collector to bypass waiters.
             fcntl.flock(stream, fcntl.LOCK_UN)
 
 
 def verify(root):
     paths = sorted(Path(root).rglob("*.json"))
     for path in paths:
+        # Watchdog sidecars are raw JSON, outside the collector envelope contract.
+        if path.parent == Path(root) and path.name in ("WATCHDOG_EXIT.json", "WATCHDOG_STOP.json"):
+            json.loads(path.read_text())
+            continue
         if "replay_ledger" not in path.relative_to(root).parts:
             get(path)
     for events in Path(root).rglob("replay_ledger/*/events.jsonl"):

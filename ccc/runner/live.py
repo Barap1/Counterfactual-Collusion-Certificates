@@ -35,6 +35,28 @@ def local_listener(port):
     return sorted(set(s[1:] for s in result.stdout.splitlines() if s.startswith("p")))
 
 
+def model_runner_pid(listener_pids):
+    """Only an unambiguous model-serving descendant of the listener qualifies."""
+    try:
+        result = subprocess.run(["ps", "-axo", "pid=,ppid=,command="],
+                                capture_output=True, text=True, check=True)
+        rows = [line.strip().split(None, 2) for line in result.stdout.splitlines()]
+        rows = [r for r in rows if len(r) == 3]
+        descendants = set(listener_pids)
+        while True:
+            expanded = descendants | {pid for pid, parent, _ in rows if parent in descendants}
+            if expanded == descendants:
+                break
+            descendants = expanded
+        candidates = [pid for pid, _, command in rows
+                      if pid in descendants - set(listener_pids)
+                      and ("llama-server" in command or " runner " in command)
+                      and "--model" in command and "sha256-" in command]
+        return candidates[0] if len(candidates) == 1 else None
+    except (OSError, subprocess.SubprocessError):
+        return None
+
+
 class OllamaSession:
     def __init__(self, model):
         self.model = model
@@ -52,8 +74,11 @@ class OllamaSession:
         self.initial = self.snapshot()
         if (parse_instant(self.initial["expires_at"]) - datetime.now(timezone.utc)).total_seconds() < 6 * 3600:
             raise ValueError("resident lease must cover at least six hours; operator must set OLLAMA_KEEP_ALIVE=-1")
+        self.runner_pid = model_runner_pid(self.pids)
+        self.detector = "fingerprint+runner_pid+canary" if self.runner_pid else "fingerprint+canary"
+        self.history[-1].update(runner_pid=self.runner_pid, detector=self.detector)
         self.identity = self.token(self.initial)
-        self.session_id = digest([self.version, self.pids, self.identity])
+        self.session_id = digest([self.version, self.pids, self.runner_pid, self.identity])
 
     def get(self, path):
         with self.opener.open(self.origin + path, timeout=30) as response:
@@ -83,16 +108,21 @@ class OllamaSession:
 
     @staticmethod
     def token(entry):
-        # With infinite keep_alive the expiry is constant, unlike finite leases.
-        fields = ("digest", "size_vram", "context_length", "expires_at")
+        fields = ("digest", "size_vram", "context_length")
         if any(entry.get(k) is None for k in fields):
             raise ValueError("/api/ps lacks required fingerprint fields")
-        return {k: entry[k] for k in fields} | {
-            "load_identity": entry.get("loaded_at") or entry.get("load_session_id")}
+        return {k: entry[k] for k in fields}
 
     def check(self):
         try:
             entry = self.snapshot()
+            runner_pid = model_runner_pid(self.pids)
+            detector = "fingerprint+runner_pid+canary" if runner_pid else "fingerprint+canary"
+            self.history[-1].update(runner_pid=runner_pid, detector=detector)
+            if self.runner_pid is not None and runner_pid is not None and runner_pid != self.runner_pid:
+                raise ModelReload("model_reload: model runner PID changed")
+            if self.runner_pid is None and runner_pid is not None:
+                self.runner_pid = runner_pid
             if (local_listener(self.port) != self.pids or self.get("/api/version") != self.version
                     or self.token(entry) != self.identity):
                 raise ModelReload("model_reload: model-load session changed")
@@ -138,6 +168,7 @@ class OllamaSession:
 
     def attestation(self):
         return {"weight_digest": self.tag["digest"], "load_session_id": self.session_id,
+                "runner_pid": self.runner_pid, "detector": self.detector,
                 "initial_ps": self.initial, "server_version": self.version, "listener_pids": self.pids, "keep_alive": KEEP_ALIVE}
 
 

@@ -53,6 +53,7 @@ class FixtureHandler(BaseHTTPRequestHandler):
             return self.send_error(404)
         payload = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
         state['posts'].append(payload)
+        state['expiry'] = f"9999-12-{30 - len(state['posts']) % 2}T23:59:59Z"
         if payload['messages'] == __import__('ccc.runner.live', fromlist=['CANARY_MESSAGES']).CANARY_MESSAGES:
             response = {'model': 'gemma4:26b', 'choices': [{'message': {'role': 'assistant', 'content': state.get('canary', 'fixed probe')}}]}
             state['canary_calls'] = state.get('canary_calls', 0) + 1
@@ -64,7 +65,7 @@ class FixtureHandler(BaseHTTPRequestHandler):
             response = {'id': str(len(state['posts'])), 'model': 'gemma4:26b',
                         'choices': [{'message': {'role': 'assistant', 'content': 'fixture'}}]}
         if state.get('reload_on_post') == len(state['posts']):
-            state['loaded_at'] = '2026-10-23T02:00:00Z'
+            state['runner_pid'] = 'runner-2'
         self.send_json(response)
 
 
@@ -106,10 +107,11 @@ def fixture(m):
     # in-memory byte streams. Neither bind nor connect is available in this sandbox.
     server = SimpleNamespace(server_port=19439)
     server.state = {'digest': m['model']['weight_digest'], 'posts': [], 'gets': [],
-                    'loaded_at': '2026-10-23T01:00:00Z', 'resident': True, 'ctx': 32768,
+                    'runner_pid': 'runner-1', 'loaded_at': '2026-10-23T01:00:00Z', 'resident': True, 'ctx': 32768,
                     'expiry': '9999-12-31T23:59:59Z'}
     with patch('ccc.runner.live.urllib.request.build_opener', return_value=FixtureOpener(server)), \
-         patch('ccc.runner.live.local_listener', return_value=['fixture-pid']):
+         patch('ccc.runner.live.local_listener', return_value=['fixture-pid']), \
+         patch('ccc.runner.live.model_runner_pid', side_effect=lambda pids: server.state['runner_pid']):
         m['model']['base_url'] = f'http://127.0.0.1:{server.server_port}/v1'
         yield server.state
 
@@ -174,10 +176,10 @@ class LiveTests(unittest.TestCase):
             session = OllamaSession(self.m['model'])
             self.assertEqual(session.attestation()['weight_digest'], self.m['model']['weight_digest'])
             session.check()
-            state['loaded_at'] = 'different'
+            state['runner_pid'] = 'runner-2'
             with self.assertRaises(ModelReload):
                 session.check()
-            state['loaded_at'] = session.identity['load_identity']
+            state['runner_pid'] = 'runner-1'
             state['expiry'] = '2000-01-01T00:00:00Z'
             with self.assertRaises(ModelReload):
                 session.check()
@@ -207,14 +209,23 @@ class LiveTests(unittest.TestCase):
             session = OllamaSession(self.m['model'])
             session.check()
             state['expiry'] = '9999-12-30T23:59:59Z'
-            with self.assertRaises(ModelReload):
-                session.check()
-        for field in ('digest', 'size_vram', 'context_length', 'expires_at', 'loaded_at', 'load_session_id'):
+            session.check()
+        for field in ('digest', 'size_vram', 'context_length'):
             entry = dict(digest='a', size_vram=10, context_length=32768,
                          expires_at='9999-12-31T23:59:59Z')
             before = OllamaSession.token(entry)
             entry[field] = 'changed'
             self.assertNotEqual(before, OllamaSession.token(entry), field)
+
+    def test_model_runner_process_selection(self):
+        from ccc.runner.live import model_runner_pid
+        with patch('ccc.runner.live.subprocess.run') as command:
+            command.return_value.stdout = "10 1 ollama serve\n11 10 ollama runner --model /blobs/sha256-abc\n12 1 llama-server --model /blobs/sha256-other\n"
+            self.assertEqual(model_runner_pid(['10']), '11')
+            command.return_value.stdout += "13 10 llama-server --model /blobs/sha256-other\n"
+            self.assertIsNone(model_runner_pid(['10']))
+            command.side_effect = OSError('unavailable')
+            self.assertIsNone(model_runner_pid(['10']))
 
     def test_listener_wildcard_lan_and_missing_refused(self):
         for output in ('p1\nn*:11434\n', 'p1\nn192.168.1.2:11434\n', ''):
@@ -250,6 +261,8 @@ class LiveTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT / 'docs/runner') as d, fixture(self.m) as state:
             state['respond'] = respond
             state['loaded_at'] = None if getattr(self, 'real_ps', False) else state['loaded_at']
+            if getattr(self, 'real_ps', False):
+                state['runner_pid'] = None
             state['canary_reload'] = getattr(self, 'canary_reload', False)
             # Source = 28 calls. Reload during the second branch after a completed first branch.
             state['reload_on_post'] = getattr(self, 'reload_on_post', 50)
@@ -263,10 +276,23 @@ class LiveTests(unittest.TestCase):
                     with self.assertRaisesRegex(ValueError, 'invalid'):
                         run(self.m, Path(d), live=True)
             attempt = Path(d) / 'worlds/dev02_B1/attempt_0001'
+            from ccc.runner.collector import status
+            (Path(d) / 'WATCHDOG_EXIT.json').write_text('{}')
+            inspected = status(Path(d))
+            self.assertEqual(inspected['status'], 'ready' if state['reload_on_post'] is None and not state['canary_reload'] else 'halted')
+            from ccc.runner.storage import lock
+            with lock(Path(d)):
+                pass
             result = get(attempt / 'result.json')
             if state['reload_on_post'] is None and not state['canary_reload']:
                 self.assertEqual(result['status'], 'complete')
                 self.assertTrue((attempt / 'session_after.json').exists())
+                self.assertEqual(state['canary_calls'], 3)
+                from ccc.runner.live import CANARY_MESSAGES
+                self.assertEqual([i for i, p in enumerate(state['posts']) if p['messages'] == CANARY_MESSAGES],
+                                 [28, 29, len(state['posts']) - 1])
+                self.assertEqual(sorted(p.name for p in (attempt / 'canary').glob('*.end.json')),
+                                 ['after.end.json', 'before.end.json', 'source_after.end.json'])
             else:
                 self.assertEqual(result.get('reason'), 'model_reload', result)
                 self.assertEqual(len(result['branches']), 8)
