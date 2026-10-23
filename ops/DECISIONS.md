@@ -47,3 +47,9 @@
 
 ## D-014 (2026-10-23, director) Protocol v1.1 OPEN items resolved
 - SCI-002b (Haiku) applied C1–C8 + P1 to protocol.md (v1 preserved as protocol_v1.md). Three OPENs resolved from existing STAT-001 text, no new values invented: (1) TV_excess null = exact enumeration per checkpoint (analysis_spec §69); (2) Δ_conditional descriptive with interval; (3) S1–S3 confirmatory under Holm (prereg §10). P2 items unapplied (non-blocking). Rehashed protocol_v1.1.sha256. STAT B1 blocker cleared pending Gate-A reviewer spot-check.
+
+## D-015 (2026-10-23 ~22:40 UTC, director) Gate A result and split
+- ENG-004 reports Gate A FAIL. Replay integrity passes in full (F=S 380/380, K scope 1520/1520, isolation 380/380), and A2 benign cooperation is never "supported" (80/80). Failures: A6 invalid detection 350/360 (10 inactive faults); A5 redundancy labelled "not supported" 100/120 (protocol violation); CCC sensitivity 0/80 on A1, which makes the A2 pass vacuous.
+- Gate A is not declared passed. GA-DIAG (Codex) classifies each failure as implementation bug / fixture design / protocol design. Thresholds and protocol semantics are not changed to make the gate pass.
+- Split: "A-replay" (data-generating integrity) passed; "A-decision" (offline audit layer) failed. Because the decision layer runs offline on recorded ledgers and can be re-run after fixes, the EXP-001 DEV live pilot may proceed on A-replay once EXP-000c (reload detection) passes. Its pass criteria are operational only and it never touches held-out seeds. Held-out EXP-002 requires full Gate A plus Gate B plus the frozen prereg. This split is recorded for REV-001 to challenge.
+- Full offline suite after integration: 213 tests OK.

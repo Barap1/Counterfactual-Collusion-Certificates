@@ -24,14 +24,14 @@ class ManifestTests(unittest.TestCase):
         self.assertEqual((p["independent_worlds"], p["base_trajectories"], p["continuations"]), (1, 1, 8))
         order = p["jobs"][0]["order"]
         self.assertEqual({i["arm"] for i in order[:4]}, {"F", "S", "K", "N"})
-        self.assertEqual(len({i["seed"] for i in order[:4]}), 1)
+        self.assertEqual(len({i["seed"] for i in order[:4]}), 4)
         self.assertNotEqual(order[0]["seed"], order[-1]["seed"])
 
     def test_random_half_placebo_frozen_before_sources(self):
         self.m["worlds"] = [dict(id=f"w{s}", seed=s, regime="B1", split="development") for s in range(2, 6)]
         p = plan(self.m)
-        self.assertEqual(sum(j["placebo"] for j in p["jobs"]), 2)
-        self.assertEqual(p["continuations"], 28)
+        self.assertEqual(sum(j["placebo"] for j in p["jobs"]), 4)
+        self.assertEqual(p["continuations"], 32)
 
     def test_duplicate_world_does_not_inflate_unit(self):
         self.m["worlds"].append(dict(self.m["worlds"][0], id="duplicate"))
@@ -57,8 +57,13 @@ class ManifestTests(unittest.TestCase):
             f = Path(directory) / "stat.json"
             f.write_text(json.dumps({"task_id": "STAT-001", "frozen_manifest_sha256": freeze_hash(self.m)}))
             self.m["stat001"] = {"task_id": "STAT-001", "artifact": str(f.relative_to(ROOT)), "sha256": file_hash(f)}
+            self.m["stat001_hash"] = self.m["stat001"]["sha256"]
+            self.m["worlds"].append(dict(self.m["worlds"][0], id="dev02_B2", regime="B2"))
+            # Rebind after adding the matched regime.
+            f.write_text(json.dumps({"task_id": "STAT-001", "frozen_manifest_sha256": freeze_hash(self.m)}))
+            self.m["stat001"]["sha256"] = self.m["stat001_hash"] = file_hash(f)
             validate(self.m)
-            self.m["sampling_seed"] += 1
+            self.m["master_seed"] += 1
             with self.assertRaisesRegex(ValueError, "bind"):
                 validate(self.m)
 
@@ -71,6 +76,10 @@ class ManifestTests(unittest.TestCase):
             f = Path(directory) / "stat.json"
             f.write_text(json.dumps({"task_id": "STAT-001", "frozen_manifest_sha256": freeze_hash(self.m)}))
             self.m["stat001"] = {"task_id": "STAT-001", "artifact": str(f.relative_to(ROOT)), "sha256": file_hash(f)}
+            self.m["stat001_hash"] = self.m["stat001"]["sha256"]
+            self.m["worlds"].append(dict(self.m["worlds"][0], id="archive_B2", regime="B2"))
+            f.write_text(json.dumps({"task_id": "STAT-001", "frozen_manifest_sha256": freeze_hash(self.m)}))
+            self.m["stat001"]["sha256"] = self.m["stat001_hash"] = file_hash(f)
             with self.assertRaisesRegex(ValueError, "seed 1"):
                 validate(self.m)
 

@@ -1,139 +1,122 @@
-# EXP-000 Gate B collection plumbing
+# Gate-B runner (EXP-000b)
 
-Run from the repository root with `starter/collusion_hackathon/colosseum/.venv/bin/python`.
-The CLI is intentionally offline-only in EXP-000. It never starts Ollama, discovers providers,
-loads credential files, or enables a remote fallback. The scripted client is a transport **inside**
-`GuardedChatClient`; all simulated generation calls pass the same budget admission path.
-Its response model string is a scripted echo of the configured identity, not a measurement of
-loaded weights. Every run is labelled `scripted_dry_run`.
+Run commands from the repository root. This runner never starts Ollama, reads credentials,
+loads local policy/secrets, or discovers remote providers. All generation calls, including
+scripted tests, pass through `ccc.infra.budget_guard.GuardedChatClient`. Live execution is
+explicit, local-only, single-call concurrency, with no fallback and no automatic retries.
 
-```sh
-python -m ccc.runner plan docs/runner/dev_manifest.json
-python -m ccc.runner run docs/runner/dev_manifest.json --output docs/runner/my-run --dry-run
-python -m ccc.runner status --output docs/runner/my-run
-# Explicit retry creates an additional whole-world attempt, retaining the previous one:
-python -m ccc.runner run docs/runner/dev_manifest.json --output docs/runner/my-run --dry-run --retry-failed
-```
+## Operator command for EXP-001
 
-`run` without `--dry-run` refuses before collection writes. Output roots must be under
-`docs/runner/`; this prevents writes to the pilot archive and other workers' collection paths.
-CLI errors return 2. `plan` and `status` are read-only. No commit is created by the runner.
-
-## Manifest schema
-
-The complete, runnable JSON example is [`dev_manifest.json`](dev_manifest.json).
-`ccc.runner.manifest.v1` extends the module-15 contract with explicit source-world construction
-and freeze metadata. Required fields:
-
-| Fields | Contract |
-| --- | --- |
-| `schema_version`, `experiment_id` | Version and experiment identity |
-| `analysis_commit`, `upstream_commit`, `ccc_commit` | Declared provenance; retained alongside actual working-tree Python hashes in `code.json` |
-| `phase`, `frozen` | `development` or `holdout`; `frozen: true` required even for dry-run |
-| `protocol_artifact`, `protocol_sha256` | Repository-relative non-secret file and verified SHA-256 |
-| `worlds` | List of `{id, seed, regime, split}`; unique safe ids and seed/regime pairs; B1/B2 supported |
-| `world_template` | Embedded Colosseum batch config; four agents, private pair, two planning rounds, no assignment filling |
-| `b1_prompt_variant`, `colluder_selection` | Exactly `deception` and `random`; B2 overrides coalition prompting to `never` |
-| `selection_rule`, `horizon` | `sci002.first_private_bundle.v1`, `episode_end` |
-| `arms`, `continuations_per_arm` | F/S/K/N, at least two fresh continuations per collected arm |
-| `branch_order_seed`, `sampling_seed`, `placebo_subset_seed` | Separate frozen integer seeds; sampling seed is explicitly sent in every guarded wire request |
-| `common_randomness_claim` | Exactly `none`; seeded F/S does not establish common provider RNG |
-| `max_requests` | Frozen cap across the output root, including retries and attempted admissions |
-| `model` | `backend`, `requested_id`, `base_url`, `weight_digest`, `context_limit`, `parameters`; primary stratum pins local `gemma4:26b`, ctx 32768, `reasoning_effort: none` |
-| `policy` | Exactly zero new spending, no automatic fallback, live inference disabled |
-| `stat001` (holdout only) | `{task_id: "STAT-001", artifact, sha256}`; actual approval JSON must contain `task_id` and `frozen_manifest_sha256` |
-
-The STAT-001 approval's `frozen_manifest_sha256` is the SHA-256 of canonical manifest JSON
-with only `stat001` omitted (`ccc.runner.manifest.freeze_hash`). Its file hash is independently
-checked. A hash of an unrelated file cannot authorize held-out seeds. Seed 1 remains development
-only even with an approval. Declared splits must agree with the run phase. STAT-001 approval
-is not manufactured by this runner; tests use temporary synthetic approvals solely to test refusal.
-
-The manifest is copied immutably into the output. Resume refuses a changed manifest or changed
-runner/replay/infra Python sources. A new protocol, backend, config, or code version requires a
-new collection root. The embedded template's model, prompt and regime knobs are overridden by
-the explicit frozen fields; the complete resulting `WorldSpec` is archived before execution.
-
-## Selection and collection
-
-Selection follows SCI-002 §4 without outcome inspection: first communication on the designated
-pair's private board, its author as sender, other member as receiver, first receiver exposure,
-then the complete sender bundle first rendered at that boundary. The selector checks each
-bundle member for prior exposure with replay's public validator. It does not replace an
-ineligible first message with a later candidate. No-message, post-decision, prior-exposure and
-restore failures remain in the world denominator with missing outcomes.
-
-F/S/K/N restore one serialized checkpoint. ENG-003 supplies persistent masks, original-index
-rendering, neutral filler and independent prompt checks. Neutral fillers are frozen code/data
-whose exact hashes are retained in `code.json`. The random N subset is chosen before source
-generation: half the independent worlds, rounding up for odd counts; matched B1/B2 worlds share
-inclusion. In the one-world development demo, N is included. Within each replicate all arms are
-shuffled, and replicate blocks are interleaved in execution order. Continuations never increase
-the independent-world count.
-
-Source calls, per-turn snapshots, generated tasks/costs/roles/order, requests/responses, selected
-bundle and checkpoint are persisted. Branches retain native replay `ccc.event.v1` JSONL and
-its request/response hashes under `replay_ledger/`. The additional runner call records retain
-the **actual guarded wire payload**, including fixed sampling seed, which can differ from
-the upstream request params recorded by the replay wrapper. Headers are never serialized.
-
-Every call has an exclusive fsynced `.begin.json` before admission and `.end.json` after success
-or failure. A crash between them remains visible. Guard retries are zero. Upstream-swallowed
-call exceptions are checked independently before accepting outcomes. Branch failures remain
-missing, never numeric zero. Ended attempts have a sealed file inventory that catches deletion
-as well as mutation; native replay hash chains are also verified by `status`. Append-only budget
-logs are per-attempt here, separate from the shared live inference ledger.
-
-Resume skips completed or ineligible worlds. Failed/interrupted/invalid worlds require
-`--retry-failed`, which creates a new attempt with `retry_of` lineage and regenerates the entire
-source/checkpoint/arm block. It does not combine successful arms from different sessions. It
-does not resume an individual branch or reconstruct a running provider session. All old attempts
-remain available to missingness analysis. The dry-run session label is synthetic and is not an
-Ollama load-session observation.
-
-## Verification and retained evidence
-
-Requested OS sandbox command (this environment refuses nested sandboxing):
+With the INF-001 operator's already running, resident, attested local server:
 
 ```sh
-sandbox-exec -p '(version 1)(allow default)(deny network-outbound (remote ip))' starter/collusion_hackathon/colosseum/.venv/bin/python -m unittest discover -s tests/runner -t .
+starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner run docs/runner/exp001_manifest.json --output docs/runner/exp001-live --live
 ```
 
-Real output in [`sandbox-test-output.txt`](sandbox-test-output.txt):
-`sandbox-exec: sandbox_apply: Operation not permitted` (exit 71; no tests ran).
+The runner does not start or load a model. The operator must configure the server with
+`OLLAMA_HOST=127.0.0.1:11434`, `OLLAMA_NO_CLOUD=1`, `OLLAMA_NUM_PARALLEL=1`,
+`OLLAMA_MAX_LOADED_MODELS=1`, `OLLAMA_CONTEXT_LENGTH=32768`, and
+`OLLAMA_KEEP_ALIVE=24h`. The server must already have `gemma4:26b` resident.
 
-The fallback audit hook denies Python socket connection, send, and DNS events before execution.
-It is not an OS sandbox for arbitrary native extensions or subprocesses. Tests additionally
-patch the live HTTP transport to fail on use during the full-collection test.
+**Residency attestation limitation:** `/api/ps` must expose a trustworthy `loaded_at` or
+`load_session_id` that changes on every model load, plus `expires_at` and `context_length`.
+If the installed Ollama version exposes only `expires_at`, live mode **refuses pre-flight**.
+Expiry changes on lease renewal and cannot establish absence of a reload. No live server
+was inspected in this task, and compatibility of the operator's server is unverified.
+INF-001 must supply trustworthy session telemetry before this command can collect against
+such a server. The runner does not invent a load identity from expiry.
+
+Pre-flight uses OS `lsof` to reject wildcard/LAN listeners (a localhost URL alone is
+insufficient), checks the exact digest in `/api/tags` and `/api/ps`, checks resident ctx
+32768, and requires at least six hours of remaining residency. Requests use the local
+OpenAI-compatible `/v1/chat/completions` endpoint, send a seed, T=0.7, max_tokens=1500,
+reasoning_effort=none, and include `keep_alive: "24h"` and `options.num_ctx: 32768`.
+Server-side context and lease checks remain authoritative if an OpenAI adapter ignores
+these extra fields. HTTP proxies and redirects are disabled.
+
+The observed digest and initial residency are written into immutable `run_manifest.json`,
+linked to the frozen input manifest hash. Each attempt retains all `/api/ps` observations
+in `session_checks.json`, with explicit checkpoint before/after evidence. The runner checks
+residency and listener PID before and after **every** generation call, too. Every call logs
+its session ID, request bytes represented as JSON, seed and guard attempts. Live budget
+records go to both `ops/budget_ledger.jsonl` and the attempt-local `budget.jsonl`; shared
+HALTs are honored. No local policy file or secret is read.
+
+A changed session, expired/lost residency, changed digest/context, or failed attestation
+invalidates the entire checkpoint with reason `model_reload`. All scheduled branch
+`result.json` files have invalid status and null outcomes; branch results are published
+only after the final session check. Raw traces are retained. `invalidation.json` identifies
+the checkpoint-wide scope. The run halts; it does not silently continue on a fresh model.
+An explicit `--retry-failed` retains the prior attempt and regenerates the whole world.
+The director may authorize the preregistered single reload retry; repeated reloads require
+operator investigation. No process resumes an unfinished checkpoint's branch set.
+
+## Manifest and schedule
+
+`ccc.runner.manifest.v1` now requires a **map** `continuations_per_arm` and integer
+`master_seed`; the old scalar continuation count and `sampling_seed` are refused.
+The default map is `{F:4,K:4,S:2,N:4}`. Held-out checkpoint slots must be even: sort the
+world/regime slot IDs, shuffle with Python `random.Random(placebo_subset_seed)`, take
+exactly the first half for N, before source calls or outcomes exist. There is at most one
+selected checkpoint per slot; ineligible slots are retained and never replaced to fill
+N quotas. The realized eligible N fraction need not be 50%. The frozen `plan.json`
+persists this selection. Development collects N on all slots.
+
+For each replicate, independently shuffle the still-active arms using
+`sha256(canonical_json([branch_order_seed, world_id, replicate]))` as the shuffle seed.
+This interleaves unequal arm counts without assuming S has as many replicates as F/K.
+
+Every generation seed is the first 31 bits of SHA-256 of canonical JSON:
+
+```text
+["ccc.runner.seed.v1", master_seed, protocol_sha256,
+ world_regime_checkpoint_slot_id, arm, replicate, turn_index, call_k, agent]
+```
+
+Here `canonical_json` sorts object keys, uses compact separators and UTF-8; `call_k`
+is the zero-based call counter within that agent's continuation client. Source calls use
+arm `source`, replicate 0. The slot ID identifies the selected checkpoint before it exists.
+The schedule's `seed` is the same derivation with turn=-1, call_k=0, agent=""; the actual
+per-call seed is recorded separately as `seed_sent`. S and F have different derivation
+inputs, as do replicates, turns and tool-loop calls. This deliberately extends the
+compute-plan seed tuple with a master seed, domain version and agent; STAT-001 must include
+this documented derivation in its freeze. `common_randomness_claim` remains `none`.
+
+Held-out execution, even a dry run, requires `frozen: true`, a verified `stat001` approval
+JSON (`task_id`, `frozen_manifest_sha256`) and `stat001_hash` equal to its SHA-256.
+The approval binds the exact canonical manifest excluding only `stat001` and
+`stat001_hash`. Seed 1 is archival development only. The protocol artifact hash is verified
+on every invocation. A changed protocol requires a new reviewed manifest hash.
+
+`exp001_manifest.json` follows the STAT-001 development matrix: seeds 2,3,4,5, B1 then B2
+within each seed; B1 deception with a random designated pair, B2 coalition prompting
+`never`, the same seed/pair, private-channel access and legitimate task. Counts are
+F4/S4/K4/N2, eight base trajectories, at most 112 branch continuations. The request cap
+is 2,470 (the planning 2,352 calls plus 5%, rounded up); it is a cap, not a result.
+The hard stop is `2026-10-24T09:00:00Z`: do not start another world after that time,
+and recheck before launching a checkpoint's branches after its source trajectory.
+An already launched checkpoint can finish after the deadline. Unstarted slots remain
+visible with no attempt; a source that crosses the cutoff is retained as
+`stopped_hard_stop`. There is no outcome-dependent stopping or reordering.
+
+Provenance fields preserve declared commits alongside actual Python hashes in `code.json`.
+Outputs are exclusive, hashed, sealed, and restricted to `docs/runner/`; existing output
+cannot resume under changed manifest/code. No runner command makes a commit.
+
+## Offline verification and inspection
 
 ```sh
 starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner.offline unittest discover -s tests/runner -t .
-starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner.offline ccc.runner plan docs/runner/dev_manifest.json
-starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner.offline ccc.runner run docs/runner/dev_manifest.json --output docs/runner/dry-run-dev02-v2 --dry-run
-starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner.offline ccc.runner status --output docs/runner/dry-run-dev02-v2
+starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner plan docs/runner/exp001_manifest.json
+starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner.offline ccc.runner run docs/runner/dev_manifest.json --output docs/runner/my-offline-run --dry-run
+starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner status --output docs/runner/exp001-live
 ```
 
-[`tests-current.txt`](tests-current.txt) contains real output: **22 tests, OK** (10.590 seconds).
-[`dry-run-v2-summary.json`](dry-run-v2-summary.json) records seed 2/B1: eight valid branches,
-28 source + 152 branch = 180 guarded scripted calls, 778 verified JSON artifacts,
-zero live calls, $0 new spend. `dry-run-dev02-v2/` is the current immutable evidence tree.
-`plan-output.json`, `dry-run-v2-output.json`, `status-v2-output.json`, `resume-v2-output.json` and
-the corresponding stderr files retain CLI evidence; resume returned identical output without
-new attempts. Current source hashes matched the collected snapshot at handoff.
-The earlier `dry-run-dev02/` evidence and summaries remain intact: ENG-003 subsequently
-changed replay code, so a fresh collection root was used. Earlier test outputs are retained
-as development history, not presented as passing final evidence.
-
-## Before live Gate B
-
-INF-001 must activate a live controller entry point using this guarded collection path, the
-shared budget ledger and approved local resource policy. This task intentionally ships no
-CLI path that can issue a live request. Live transport activation is **remaining integration
-work**, not a validated feature. It must establish and monitor one actual model-load session
-for the source/checkpoint and every arm, keep the model resident, verify weights/context/parallelism,
-and stop on a reload. A synthetic session id cannot establish that condition.
-
-The director must accept ENG-003/replay and ENG-004/audit integration, inspect an actual live
-branch and feasibility under EXP-001, then obtain STAT-001's frozen plan/margins/approval before
-holdout. No certificate or scientific effect is produced by this plumbing. OpenRouter corroboration
-is a separate future stratum with the 50/day guard, not a fallback or bulk route.
+The Python socket/DNS audit guard remains intact. The sandbox rejects localhost bind, so
+the fake Ollama HTTP server uses in-memory streams with the real stdlib HTTP handler and
+response parser; only the opener and listener inspection are substituted. It accepts only
+its localhost fixture origin. Tests exercise successful guarded collection and a reload
+in the middle of a branch set, digest/context/lease/identity refusal, nonlocal listeners,
+seeds, unequal schedules, held-out gating, and time cutoffs. Synthetic responses are test
+evidence only. The Python guard is not OS-level isolation for arbitrary native code.
+Earlier EXP-000 dry-run artifacts and logs remain unchanged historical evidence.

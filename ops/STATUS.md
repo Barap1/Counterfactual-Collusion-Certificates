@@ -1,21 +1,15 @@
-# CCC STATUS (updated 2026-10-23 21:20 UTC by director)
+# CCC STATUS (updated 2026-10-23 22:40 UTC by director)
 
-**Phase:** Gate A integration. Deadline 2026-10-26 11:59 UTC. Science freeze target 2026-10-25 22:00 UTC.
-**Next gate:** GATE-A, decided from docs/gate_a/GATE_A_REPORT.md (ENG-004) plus an independent Claude verifier.
+**Phase:** Gate A remediation. Deadline 2026-10-26 11:59 UTC. EXP-001 hard stop 2026-10-24 09:00 UTC; held-out latest start 2026-10-24 14:12 UTC; freeze 2026-10-25 22:00 UTC.
+**GATE-A: FAIL (not passed).** Replay integrity passes; the decision layer fails on A5 redundancy, A6 (10 inactive faults), and A1 sensitivity 0/80. See D-015.
 
 | Task | State | Owner |
 |---|---|---|
-| BOOT-001, SCI-001, PUB-001 (early), INF-001, FIX-001, ENG-001 | ACCEPTED | done |
-| SCI-002 | ACCEPTED v1 freeze-candidate | done (re-review in STAT-001) |
-| ENG-002 | prototype accepted (46 tests) | done |
-| ENG-003 | ACCEPTED (58 tests; 11/11 native probes) | done; Haiku updating 1 fixture test |
-| ENG-004 | active: audit layer + baselines + Gate A evidence | Codex gpt-6.1-sol/medium |
-| EXP-000 | ACCEPTED (22 tests) | done |
-| EXP-000b | active: per-arm seeds, live Ollama transport, EXP-001 manifest | Codex gpt-6.1-sol/medium |
-| STAT-001 | draft accepted; freeze blocked on B1/B2/B3 | done |
-| SCI-002b | ACCEPTED (protocol v1.1, D-014) | done |
-| Next | Gate A verifier → EXP-001 Gate B pilot (local gemma4:26b) | - |
+| BOOT/SCI-001/SCI-002(+b v1.1)/INF/FIX/ENG-001..003/EXP-000(b)/PUB early | ACCEPTED | done |
+| STAT-001 | draft accepted; B1 cleared, B2 done (EXP-000b), B3 after EXP-001 | done |
+| ENG-004 | done; Gate A FAIL evidence | done |
+| GA-DIAG | active: root-cause Gate A failures | Codex gpt-6.1-sol/medium |
+| EXP-000c | active: Ollama reload detection | Codex gpt-6.1-sol/low |
+| Next | Haiku operator: live smoke test → EXP-001 DEV pilot (A-replay basis, D-015) | - |
 
-**Live agents:** 3 Codex of 6. EXP-001 hard stop 2026-10-24 09:00 UTC; held-out latest start 2026-10-24 14:12 UTC.
-**Budget:** out-of-pocket $0.00. Modal unused (permission denied on billing check). Local Ollama is the primary backend.
-**Tests:** 128/129 offline pass; 1 error (`problem_layer` import), assigned to ENG-003.
+**Tests:** 213/213 offline OK. **Live agents:** 2 Codex of 6. **Budget:** $0 out-of-pocket; 0 experimental live calls so far.

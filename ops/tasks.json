@@ -354,7 +354,7 @@
     "FIX-001",
     "SCI-002"
    ],
-   "status": "ACTIVE",
+   "status": "DONE \u2014 Gate A FAIL reported honestly (D-015)",
    "brief": "ops/briefs/ENG-004.md"
   },
   {
@@ -381,12 +381,26 @@
    "id": "EXP-000b",
    "objective": "Per-arm map + seeds (STAT B2), live Ollama transport with model-reload guard, EXP-001 manifest",
    "owner": "codex gpt-6.1-sol/medium",
-   "status": "ACTIVE",
+   "status": "ACCEPTED (35 tests); Ollama load-session gap -> EXP-000c",
    "depends_on": [
     "EXP-000",
     "STAT-001"
    ],
    "brief": "ops/briefs/EXP-000b.md"
+  },
+  {
+   "id": "GA-DIAG",
+   "objective": "Diagnose Gate A failures; fix impl bugs only",
+   "owner": "codex gpt-6.1-sol/medium",
+   "status": "ACTIVE",
+   "brief": "ops/briefs/GA-DIAG.md"
+  },
+  {
+   "id": "EXP-000c",
+   "objective": "Ollama-compatible reload detection (canary + keep_alive -1)",
+   "owner": "codex gpt-6.1-sol/low",
+   "status": "ACTIVE",
+   "brief": "ops/briefs/EXP-000c.md"
   }
  ]
 }

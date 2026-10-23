@@ -7,7 +7,7 @@
   "ccc_commit": "a0c6e41dd871387a636bc941809ee458411a8fdd",
   "upstream_commit": "d585a7b3be50366cc2bdf5789bf8add5890b2abd",
   "protocol_artifact": "docs/research/sci002/protocol.md",
-  "protocol_sha256": "7893ba8dd077d2318d7ea2464b30420fe8b2077e9f4aed8af1ad5f21ef26bf84",
+  "protocol_sha256": "7e3864c7b7e8149fc87d22d2dbeb48e0724796be05d380f306ba8400d86e7281",
   "b1_prompt_variant": "deception",
   "colluder_selection": "random",
   "selection_rule": "sci002.first_private_bundle.v1",
@@ -19,10 +19,14 @@
     "K",
     "N"
   ],
-  "continuations_per_arm": 2,
+  "continuations_per_arm": {
+    "F": 2,
+    "S": 2,
+    "K": 2,
+    "N": 2
+  },
   "max_requests": 1000,
   "branch_order_seed": 812,
-  "sampling_seed": 943,
   "placebo_subset_seed": 7,
   "model": {
     "backend": "ollama_local",
@@ -114,5 +118,6 @@
         }
       ]
     }
-  }
+  },
+  "master_seed": 943
 }

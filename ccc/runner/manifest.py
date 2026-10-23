@@ -25,7 +25,9 @@ def file_hash(path):
 
 
 def freeze_hash(m):
-    return digest({k: v for k, v in m.items() if k != "stat001"})
+    normalized = dict(m)
+    normalized.setdefault("continuations_per_arm", {"F": 4, "K": 4, "S": 2, "N": 4})
+    return digest({k: v for k, v in normalized.items() if k not in ("stat001", "stat001_hash")})
 
 
 def repo_file(name):
@@ -46,10 +48,13 @@ def validate(m):
     for path_key, hash_key in (("protocol_artifact", "protocol_sha256"),):
         if file_hash(repo_file(m[path_key])) != m.get(hash_key):
             raise ValueError(f"{hash_key} mismatch")
+    m.setdefault("continuations_per_arm", {"F": 4, "K": 4, "S": 2, "N": 4})
     if m.get("phase") == "holdout" or any(w.get("split") == "holdout" for w in m.get("worlds", [])):
         freeze = m.get("stat001", {})
         if freeze.get("task_id") != "STAT-001" or not re.fullmatch(r"[0-9a-f]{64}", freeze.get("sha256", "")):
             raise ValueError("held-out seeds require a STAT-001 artifact hash")
+        if m.get("stat001_hash") != freeze["sha256"]:
+            raise ValueError("STAT-001 stat001_hash must match approval artifact hash")
         if file_hash(repo_file(freeze["artifact"])) != freeze["sha256"]:
             raise ValueError("STAT-001 artifact hash mismatch")
         approval = json.loads(repo_file(freeze["artifact"]).read_text())
@@ -64,27 +69,36 @@ def validate(m):
     arms = m.get("arms", [])
     if set(arms) != {"F", "S", "K", "N"} or len(arms) != 4:
         raise ValueError("declare F/S/K/N; N is collected on the frozen random half")
-    for key in ("continuations_per_arm", "max_requests"):
-        if type(m.get(key)) is not int or m[key] <= 0:
-            raise ValueError(f"{key} must be a positive integer")
-    if m["continuations_per_arm"] < 2:
-        raise ValueError("Gate B requires at least two continuations per arm")
-    for key in ("branch_order_seed", "sampling_seed", "placebo_subset_seed"):
+    counts = m["continuations_per_arm"]
+    if not isinstance(counts, dict) or set(counts) != set(arms) or any(
+            type(n) is not int or n < 2 for n in counts.values()):
+        raise ValueError("continuations_per_arm must map F/S/K/N to integers >= 2")
+    if type(m.get("max_requests")) is not int or m["max_requests"] <= 0:
+        raise ValueError("max_requests must be a positive integer")
+    for key in ("branch_order_seed", "master_seed", "placebo_subset_seed"):
         if type(m.get(key)) is not int:
             raise ValueError(f"{key} must be an integer")
+    if "sampling_seed" in m:
+        raise ValueError("replace sampling_seed with master_seed")
+    if m.get("hard_stop_utc") is not None:
+        parse_time(m["hard_stop_utc"])
     model = m["model"]
     if (model.get("backend"), model.get("requested_id")) != ("ollama_local", "gemma4:26b"):
         raise ValueError("this primary-stratum runner pins ollama_local/gemma4:26b")
     if model.get("context_limit") != 32768 or model.get("parameters", {}).get("reasoning_effort") != "none":
         raise ValueError("benchmark requires ctx 32768 and reasoning_effort none")
-    if model.get("base_url") != "http://127.0.0.1:11434/v1":
+    from urllib.parse import urlsplit
+    endpoint = urlsplit(model.get("base_url", ""))
+    if endpoint.scheme != "http" or endpoint.hostname != "127.0.0.1" or endpoint.path != "/v1" or endpoint.username or endpoint.password or endpoint.query or endpoint.fragment:
         raise ValueError("unexpected local endpoint")
     if model.get("weight_digest") != "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251":
         raise ValueError("unbenchmarked model digest")
+    if model["parameters"].get("temperature") != 0.7 or model["parameters"].get("max_tokens") != 1500:
+        raise ValueError("prereg requires temperature 0.7 and max_tokens 1500")
     policy = m.get("policy", {})
     if policy != {"new_out_of_pocket_usd": 0, "automatic_model_fallback": False,
-                  "live_inference_enabled": False}:
-        raise ValueError("EXP-000 is offline-only, $0, with no fallback")
+                  "live_inference_enabled": policy.get("live_inference_enabled")} or type(policy.get("live_inference_enabled")) is not bool:
+        raise ValueError("runner requires $0 with no fallback")
     template = m.get("world_template", {})
     if template.get("environment", {}).get("assignment_filling") is not False:
         raise ValueError("world_template must disable assignment filling")
@@ -98,6 +112,8 @@ def validate(m):
         raise ValueError("world ids must be present and unique")
     if len({(w["seed"], w["regime"]) for w in worlds}) != len(worlds):
         raise ValueError("duplicate world seed/regime")
+    if m["phase"] == "holdout" and len(worlds) % 2:
+        raise ValueError("held-out checkpoint slots must be even for exact 50% N subset")
     seeds = {}
     for w in worlds:
         if not re.fullmatch(r"[A-Za-z0-9_-]+", w["id"]) or type(w["seed"]) is not int:
@@ -115,24 +131,40 @@ def load(path):
     return validate(json.loads(Path(path).read_text()))
 
 
+def parse_time(value):
+    from datetime import datetime, timezone
+    t = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    if t.tzinfo is None or t.utcoffset().total_seconds() != 0:
+        raise ValueError("hard_stop_utc must be UTC")
+    return t.astimezone(timezone.utc)
+
+
+def call_seed(m, checkpoint_id, arm, replicate, turn, call_k, agent=""):
+    # Canonical JSON avoids delimiter ambiguities. Domain/version is frozen in the schema.
+    key = ["ccc.runner.seed.v1", m["master_seed"], m["protocol_sha256"],
+           checkpoint_id, arm, replicate, turn, call_k, agent]
+    return int(digest(key)[:8], 16) >> 1
+
+
 def plan(m):
     import random
 
-    # Exactly half (rounded up for an odd development set); selected before any source calls.
-    ids = sorted({str(w["seed"]) for w in m["worlds"]})
+    # One fixed checkpoint slot per base trajectory; sample before any source calls/outcomes.
+    ids = sorted(w["id"] for w in m["worlds"])
     random.Random(m["placebo_subset_seed"]).shuffle(ids)
-    placebo = set(ids[:(len(ids) + 1) // 2])
+    placebo = set(ids[:len(ids) // 2]) if m["phase"] == "holdout" else set(ids)
     jobs = []
     for w in m["worlds"]:
-        arms = [a for a in m["arms"] if a != "N" or str(w["seed"]) in placebo]
+        arms = [a for a in m["arms"] if a != "N" or w["id"] in placebo]
         order = []
-        for rep in range(m["continuations_per_arm"]):
-            block = list(arms)
+        for rep in range(max(m["continuations_per_arm"].values())):
+            block = [a for a in arms if rep < m["continuations_per_arm"][a]]
             rng = random.Random(int(digest([m["branch_order_seed"], w["id"], rep]), 16))
             rng.shuffle(block)
-            seed = int(digest([m["sampling_seed"], w["seed"], rep]), 16) % (2**31)
-            order.extend({"arm": arm, "replicate": rep, "seed": seed} for arm in block)
+            order.extend({"arm": arm, "replicate": rep,
+                          "seed": call_seed(m, w["id"], arm, rep, -1, 0)} for arm in block)
         jobs.append({"world": w, "order": order, "placebo": "N" in arms})
     return {"manifest_sha256": digest(m), "independent_worlds": len({w["seed"] for w in m["worlds"]}),
             "base_trajectories": len(jobs), "continuations": sum(len(j["order"]) for j in jobs),
-            "max_requests": m["max_requests"], "jobs": jobs, "live_inference_enabled": False}
+            "max_requests": m["max_requests"], "jobs": jobs,
+            "live_inference_enabled": m["policy"]["live_inference_enabled"]}

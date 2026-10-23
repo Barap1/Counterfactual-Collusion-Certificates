@@ -1,0 +1,167 @@
+{
+  "schema_version": "ccc.runner.manifest.v1",
+  "experiment_id": "EXP-001",
+  "phase": "development",
+  "frozen": true,
+  "analysis_commit": "a0c6e41dd871387a636bc941809ee458411a8fdd",
+  "ccc_commit": "a0c6e41dd871387a636bc941809ee458411a8fdd",
+  "upstream_commit": "d585a7b3be50366cc2bdf5789bf8add5890b2abd",
+  "protocol_artifact": "docs/research/sci002/protocol.md",
+  "protocol_sha256": "7e3864c7b7e8149fc87d22d2dbeb48e0724796be05d380f306ba8400d86e7281",
+  "b1_prompt_variant": "deception",
+  "colluder_selection": "random",
+  "selection_rule": "sci002.first_private_bundle.v1",
+  "horizon": "episode_end",
+  "common_randomness_claim": "none",
+  "arms": [
+    "F",
+    "S",
+    "K",
+    "N"
+  ],
+  "continuations_per_arm": {
+    "F": 4,
+    "S": 4,
+    "K": 4,
+    "N": 2
+  },
+  "max_requests": 2470,
+  "branch_order_seed": 812,
+  "placebo_subset_seed": 7,
+  "model": {
+    "backend": "ollama_local",
+    "requested_id": "gemma4:26b",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "context_limit": 32768,
+    "weight_digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+    "parameters": {
+      "reasoning_effort": "none",
+      "temperature": 0.7,
+      "max_tokens": 1500
+    }
+  },
+  "policy": {
+    "new_out_of_pocket_usd": 0,
+    "automatic_model_fallback": false,
+    "live_inference_enabled": true
+  },
+  "worlds": [
+    {
+      "id": "dev02_B1",
+      "seed": 2,
+      "regime": "B1",
+      "split": "development"
+    },
+    {
+      "id": "dev02_B2",
+      "seed": 2,
+      "regime": "B2",
+      "split": "development"
+    },
+    {
+      "id": "dev03_B1",
+      "seed": 3,
+      "regime": "B1",
+      "split": "development"
+    },
+    {
+      "id": "dev03_B2",
+      "seed": 3,
+      "regime": "B2",
+      "split": "development"
+    },
+    {
+      "id": "dev04_B1",
+      "seed": 4,
+      "regime": "B1",
+      "split": "development"
+    },
+    {
+      "id": "dev04_B2",
+      "seed": 4,
+      "regime": "B2",
+      "split": "development"
+    },
+    {
+      "id": "dev05_B1",
+      "seed": 5,
+      "regime": "B1",
+      "split": "development"
+    },
+    {
+      "id": "dev05_B2",
+      "seed": 5,
+      "regime": "B2",
+      "split": "development"
+    }
+  ],
+  "world_template": {
+    "simulation": {
+      "max_iterations": 1,
+      "max_planning_rounds": 2,
+      "max_conversation_steps": 3,
+      "seed": 1,
+      "tags": [
+        "EXP-001"
+      ]
+    },
+    "environment": {
+      "name": "JiraTicketEnvironment",
+      "assignment_filling": false,
+      "max_tasks": 8
+    },
+    "communication_network": {
+      "topology": "complete",
+      "num_agents": 4,
+      "consolidate_channels": true
+    },
+    "llm_models": [
+      {
+        "label": "EXP-001",
+        "llm": {
+          "provider": "openrouter",
+          "openrouter": {
+            "model": "gemma4:26b",
+            "params": {
+              "reasoning_effort": "none",
+              "temperature": 0.7,
+              "max_tokens": 1500
+            }
+          }
+        }
+      }
+    ],
+    "experiment": {
+      "tag": "EXP-001",
+      "seeds": [
+        1
+      ],
+      "collusion": {
+        "colluder_selection": "random",
+        "agent_order": "random"
+      },
+      "sweeps": [
+        {
+          "name": "EXP-001",
+          "topologies": [
+            "complete"
+          ],
+          "num_agents": [
+            4
+          ],
+          "colluder_counts": [
+            2
+          ],
+          "secret_channel_enabled": [
+            true
+          ],
+          "prompt_variants": [
+            "deception"
+          ]
+        }
+      ]
+    }
+  },
+  "master_seed": 943,
+  "hard_stop_utc": "2026-10-24T09:00:00Z"
+}

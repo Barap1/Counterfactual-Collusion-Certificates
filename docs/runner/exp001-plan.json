@@ -1,0 +1,658 @@
+{
+  "base_trajectories": 8,
+  "continuations": 112,
+  "independent_worlds": 4,
+  "jobs": [
+    {
+      "order": [
+        {
+          "arm": "F",
+          "replicate": 0,
+          "seed": 1149349857
+        },
+        {
+          "arm": "S",
+          "replicate": 0,
+          "seed": 1446594201
+        },
+        {
+          "arm": "K",
+          "replicate": 0,
+          "seed": 171623639
+        },
+        {
+          "arm": "N",
+          "replicate": 0,
+          "seed": 1840114946
+        },
+        {
+          "arm": "F",
+          "replicate": 1,
+          "seed": 1622420545
+        },
+        {
+          "arm": "S",
+          "replicate": 1,
+          "seed": 533836623
+        },
+        {
+          "arm": "N",
+          "replicate": 1,
+          "seed": 280662827
+        },
+        {
+          "arm": "K",
+          "replicate": 1,
+          "seed": 754661572
+        },
+        {
+          "arm": "K",
+          "replicate": 2,
+          "seed": 977065267
+        },
+        {
+          "arm": "F",
+          "replicate": 2,
+          "seed": 32407333
+        },
+        {
+          "arm": "S",
+          "replicate": 2,
+          "seed": 1763846177
+        },
+        {
+          "arm": "K",
+          "replicate": 3,
+          "seed": 1006856490
+        },
+        {
+          "arm": "F",
+          "replicate": 3,
+          "seed": 1608338328
+        },
+        {
+          "arm": "S",
+          "replicate": 3,
+          "seed": 68779627
+        }
+      ],
+      "placebo": true,
+      "world": {
+        "id": "dev02_B1",
+        "regime": "B1",
+        "seed": 2,
+        "split": "development"
+      }
+    },
+    {
+      "order": [
+        {
+          "arm": "K",
+          "replicate": 0,
+          "seed": 1722217067
+        },
+        {
+          "arm": "N",
+          "replicate": 0,
+          "seed": 1458218834
+        },
+        {
+          "arm": "S",
+          "replicate": 0,
+          "seed": 675556079
+        },
+        {
+          "arm": "F",
+          "replicate": 0,
+          "seed": 953844514
+        },
+        {
+          "arm": "N",
+          "replicate": 1,
+          "seed": 1031051209
+        },
+        {
+          "arm": "K",
+          "replicate": 1,
+          "seed": 502045104
+        },
+        {
+          "arm": "S",
+          "replicate": 1,
+          "seed": 2031745894
+        },
+        {
+          "arm": "F",
+          "replicate": 1,
+          "seed": 528089871
+        },
+        {
+          "arm": "K",
+          "replicate": 2,
+          "seed": 572587972
+        },
+        {
+          "arm": "F",
+          "replicate": 2,
+          "seed": 968622002
+        },
+        {
+          "arm": "S",
+          "replicate": 2,
+          "seed": 534054748
+        },
+        {
+          "arm": "S",
+          "replicate": 3,
+          "seed": 761931022
+        },
+        {
+          "arm": "K",
+          "replicate": 3,
+          "seed": 193892623
+        },
+        {
+          "arm": "F",
+          "replicate": 3,
+          "seed": 2138012461
+        }
+      ],
+      "placebo": true,
+      "world": {
+        "id": "dev02_B2",
+        "regime": "B2",
+        "seed": 2,
+        "split": "development"
+      }
+    },
+    {
+      "order": [
+        {
+          "arm": "S",
+          "replicate": 0,
+          "seed": 1451645368
+        },
+        {
+          "arm": "N",
+          "replicate": 0,
+          "seed": 1114923875
+        },
+        {
+          "arm": "F",
+          "replicate": 0,
+          "seed": 1911764495
+        },
+        {
+          "arm": "K",
+          "replicate": 0,
+          "seed": 1440459737
+        },
+        {
+          "arm": "K",
+          "replicate": 1,
+          "seed": 2093335065
+        },
+        {
+          "arm": "S",
+          "replicate": 1,
+          "seed": 409140826
+        },
+        {
+          "arm": "F",
+          "replicate": 1,
+          "seed": 13558430
+        },
+        {
+          "arm": "N",
+          "replicate": 1,
+          "seed": 116710651
+        },
+        {
+          "arm": "S",
+          "replicate": 2,
+          "seed": 584668304
+        },
+        {
+          "arm": "K",
+          "replicate": 2,
+          "seed": 199749553
+        },
+        {
+          "arm": "F",
+          "replicate": 2,
+          "seed": 656162170
+        },
+        {
+          "arm": "K",
+          "replicate": 3,
+          "seed": 784789763
+        },
+        {
+          "arm": "S",
+          "replicate": 3,
+          "seed": 1096095177
+        },
+        {
+          "arm": "F",
+          "replicate": 3,
+          "seed": 40369113
+        }
+      ],
+      "placebo": true,
+      "world": {
+        "id": "dev03_B1",
+        "regime": "B1",
+        "seed": 3,
+        "split": "development"
+      }
+    },
+    {
+      "order": [
+        {
+          "arm": "K",
+          "replicate": 0,
+          "seed": 957728391
+        },
+        {
+          "arm": "N",
+          "replicate": 0,
+          "seed": 945056852
+        },
+        {
+          "arm": "F",
+          "replicate": 0,
+          "seed": 566152990
+        },
+        {
+          "arm": "S",
+          "replicate": 0,
+          "seed": 644527210
+        },
+        {
+          "arm": "K",
+          "replicate": 1,
+          "seed": 103234017
+        },
+        {
+          "arm": "N",
+          "replicate": 1,
+          "seed": 438430448
+        },
+        {
+          "arm": "F",
+          "replicate": 1,
+          "seed": 1085226711
+        },
+        {
+          "arm": "S",
+          "replicate": 1,
+          "seed": 620805882
+        },
+        {
+          "arm": "K",
+          "replicate": 2,
+          "seed": 1675976013
+        },
+        {
+          "arm": "S",
+          "replicate": 2,
+          "seed": 1007849693
+        },
+        {
+          "arm": "F",
+          "replicate": 2,
+          "seed": 1817009500
+        },
+        {
+          "arm": "F",
+          "replicate": 3,
+          "seed": 1474051517
+        },
+        {
+          "arm": "K",
+          "replicate": 3,
+          "seed": 731511359
+        },
+        {
+          "arm": "S",
+          "replicate": 3,
+          "seed": 708048137
+        }
+      ],
+      "placebo": true,
+      "world": {
+        "id": "dev03_B2",
+        "regime": "B2",
+        "seed": 3,
+        "split": "development"
+      }
+    },
+    {
+      "order": [
+        {
+          "arm": "S",
+          "replicate": 0,
+          "seed": 1526208989
+        },
+        {
+          "arm": "K",
+          "replicate": 0,
+          "seed": 1579664528
+        },
+        {
+          "arm": "N",
+          "replicate": 0,
+          "seed": 1962436654
+        },
+        {
+          "arm": "F",
+          "replicate": 0,
+          "seed": 706305693
+        },
+        {
+          "arm": "K",
+          "replicate": 1,
+          "seed": 352303064
+        },
+        {
+          "arm": "N",
+          "replicate": 1,
+          "seed": 586331321
+        },
+        {
+          "arm": "F",
+          "replicate": 1,
+          "seed": 2080225425
+        },
+        {
+          "arm": "S",
+          "replicate": 1,
+          "seed": 672917836
+        },
+        {
+          "arm": "F",
+          "replicate": 2,
+          "seed": 1818443392
+        },
+        {
+          "arm": "S",
+          "replicate": 2,
+          "seed": 1739361482
+        },
+        {
+          "arm": "K",
+          "replicate": 2,
+          "seed": 869602104
+        },
+        {
+          "arm": "S",
+          "replicate": 3,
+          "seed": 760547919
+        },
+        {
+          "arm": "F",
+          "replicate": 3,
+          "seed": 110245982
+        },
+        {
+          "arm": "K",
+          "replicate": 3,
+          "seed": 227707116
+        }
+      ],
+      "placebo": true,
+      "world": {
+        "id": "dev04_B1",
+        "regime": "B1",
+        "seed": 4,
+        "split": "development"
+      }
+    },
+    {
+      "order": [
+        {
+          "arm": "F",
+          "replicate": 0,
+          "seed": 179159081
+        },
+        {
+          "arm": "K",
+          "replicate": 0,
+          "seed": 510071737
+        },
+        {
+          "arm": "S",
+          "replicate": 0,
+          "seed": 1360248016
+        },
+        {
+          "arm": "N",
+          "replicate": 0,
+          "seed": 804681519
+        },
+        {
+          "arm": "N",
+          "replicate": 1,
+          "seed": 1957223335
+        },
+        {
+          "arm": "K",
+          "replicate": 1,
+          "seed": 1522584513
+        },
+        {
+          "arm": "S",
+          "replicate": 1,
+          "seed": 1093721113
+        },
+        {
+          "arm": "F",
+          "replicate": 1,
+          "seed": 1051627232
+        },
+        {
+          "arm": "F",
+          "replicate": 2,
+          "seed": 575168386
+        },
+        {
+          "arm": "K",
+          "replicate": 2,
+          "seed": 39237675
+        },
+        {
+          "arm": "S",
+          "replicate": 2,
+          "seed": 1877057121
+        },
+        {
+          "arm": "S",
+          "replicate": 3,
+          "seed": 1890142107
+        },
+        {
+          "arm": "F",
+          "replicate": 3,
+          "seed": 660913245
+        },
+        {
+          "arm": "K",
+          "replicate": 3,
+          "seed": 414128763
+        }
+      ],
+      "placebo": true,
+      "world": {
+        "id": "dev04_B2",
+        "regime": "B2",
+        "seed": 4,
+        "split": "development"
+      }
+    },
+    {
+      "order": [
+        {
+          "arm": "F",
+          "replicate": 0,
+          "seed": 1961271880
+        },
+        {
+          "arm": "N",
+          "replicate": 0,
+          "seed": 1871460920
+        },
+        {
+          "arm": "K",
+          "replicate": 0,
+          "seed": 625235193
+        },
+        {
+          "arm": "S",
+          "replicate": 0,
+          "seed": 295412199
+        },
+        {
+          "arm": "S",
+          "replicate": 1,
+          "seed": 1762530286
+        },
+        {
+          "arm": "N",
+          "replicate": 1,
+          "seed": 2031869758
+        },
+        {
+          "arm": "F",
+          "replicate": 1,
+          "seed": 1125536104
+        },
+        {
+          "arm": "K",
+          "replicate": 1,
+          "seed": 2141690956
+        },
+        {
+          "arm": "F",
+          "replicate": 2,
+          "seed": 2132711247
+        },
+        {
+          "arm": "S",
+          "replicate": 2,
+          "seed": 454323159
+        },
+        {
+          "arm": "K",
+          "replicate": 2,
+          "seed": 1262475503
+        },
+        {
+          "arm": "S",
+          "replicate": 3,
+          "seed": 1655727482
+        },
+        {
+          "arm": "K",
+          "replicate": 3,
+          "seed": 1997753225
+        },
+        {
+          "arm": "F",
+          "replicate": 3,
+          "seed": 1511049858
+        }
+      ],
+      "placebo": true,
+      "world": {
+        "id": "dev05_B1",
+        "regime": "B1",
+        "seed": 5,
+        "split": "development"
+      }
+    },
+    {
+      "order": [
+        {
+          "arm": "K",
+          "replicate": 0,
+          "seed": 190318406
+        },
+        {
+          "arm": "N",
+          "replicate": 0,
+          "seed": 613130320
+        },
+        {
+          "arm": "S",
+          "replicate": 0,
+          "seed": 1546905500
+        },
+        {
+          "arm": "F",
+          "replicate": 0,
+          "seed": 1729233615
+        },
+        {
+          "arm": "F",
+          "replicate": 1,
+          "seed": 726953715
+        },
+        {
+          "arm": "N",
+          "replicate": 1,
+          "seed": 1732818603
+        },
+        {
+          "arm": "K",
+          "replicate": 1,
+          "seed": 859436296
+        },
+        {
+          "arm": "S",
+          "replicate": 1,
+          "seed": 1185818850
+        },
+        {
+          "arm": "S",
+          "replicate": 2,
+          "seed": 536278613
+        },
+        {
+          "arm": "K",
+          "replicate": 2,
+          "seed": 565393106
+        },
+        {
+          "arm": "F",
+          "replicate": 2,
+          "seed": 1815754061
+        },
+        {
+          "arm": "K",
+          "replicate": 3,
+          "seed": 1755806362
+        },
+        {
+          "arm": "S",
+          "replicate": 3,
+          "seed": 270159544
+        },
+        {
+          "arm": "F",
+          "replicate": 3,
+          "seed": 1435149677
+        }
+      ],
+      "placebo": true,
+      "world": {
+        "id": "dev05_B2",
+        "regime": "B2",
+        "seed": 5,
+        "split": "development"
+      }
+    }
+  ],
+  "live_inference_enabled": true,
+  "manifest_sha256": "2cf3b97528838405d618f24c845610d16bda5dfe5fb1266b196e7309b5e86222",
+  "max_requests": 2470
+}
