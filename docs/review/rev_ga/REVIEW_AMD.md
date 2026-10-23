@@ -65,3 +65,42 @@ None blocking on integrity. Closest: C2's strict-superset rule (below) pushes er
 
 ## Undeclared or under-declared changes to semantics/thresholds
 1. `supported` requires N_m run (P1-B). 2. New frozen 25% window (P1-D). 3. Lesion gate now depends on the Change 2 extractor and alias list. 4. Reason precedence for `no_placebo_available` unspecified. 5. Study-level V10 conditioned on M* != empty. 6. fixture_spec row 139/142 rewritten to expected-after-fix behaviour. 7. Filler-set row removed from the freeze table. None is a threshold change; 1 and 3 change decision semantics and must be listed in the amendment as such.
+
+---
+
+# r2 verification (amendment_v1.2.md r2, commit 1c81231)
+
+Scope: only whether each required edit above was applied correctly, and whether r2 introduced undeclared threshold/semantic changes. Statuses: APPLIED / NOT APPLIED / WRONG.
+
+## Retraction of my own error (affects P1-H)
+In REVIEW_AMD and REV-GA I called A6d (spec V4 vs code V09) and A6f (spec V5 vs code V08) "validator mismatches". That was wrong. protocol.md numbering differs from code check IDs: spec V4 "Continuation validity: fresh call, unique response ids, no reused futures" IS code V09 `fresh_continuation`; spec V5 "Protocol validity: tool JSON, call/result pairing" IS code V08 `tool_protocol`. r2 copied my error into the A6 map and into P3.3.
+
+## Item-by-item
+| Item | Status | Note |
+|---|---|---|
+| P1-A containment, PC6 | APPLIED | Same-agent containment on (agent, task); old NC5 is PC6; E* non-empty tuple set required. |
+| P1-B N_m on all checkpoints, `supported` needs N_m | APPLIED | Inventory item 1 and Section 6. Consistent with the director decision. |
+| P1-C preregistered remedy | APPLIED | Chatter-slot text, mechanical <50% trigger, Tier B <30% handling, §3.1 unchanged, IMP-2b. Caveat (P2): after `fx2`, availability is a fixture artifact and tau_O^N = 0 is guaranteed for scripted policies, so Tier A `supported` says nothing about natural availability; add the sentence to open risk 1 (partly there). |
+| P1-D (i) ordering, (iii) hashes, (iv) 25% in freeze table, (v) P-board rank 1 | APPLIED | IMP-0 commits extractor, alias list, T_chat, map before the census. |
+| P1-D (ii) length / one criterion | APPLIED with a defect | "Accept iff exactly k candidates exist" read literally rejects |Q| > k, contradicting "take the first k". Required edit: "at least k candidates exist; the first k are taken". |
+| P1-E honest scope, record text, fault tests 2, 3 | APPLIED | Verbatim text, mandatory tau_O − tau_O^N, length-reactive and salient-only (documented not caught) tests. |
+| P1-F disclosure, freeze against second redesign | APPLIED | Section 0. |
+| P1-G (i) kind, (ii) negation, (iii) implicit E* | APPLIED | Clause splitting does not split at a bare comma, so "instead of T, I'll take U" relies on the scoped-negation sentence; PC7/NC5' cover it, acceptable. |
+| P1-G (iv) blind labelling | APPLIED (weak) | Labeller independence is not specified (add to blind_labels.md). 60 random unflagged lines will contain few carriers, so P2.4(iii) recall >= 90% will have a wide interval; it is descriptive, fine. |
+| P1-H A6 validator map | WRONG | Marks A6d and A6f as "recorded mismatches" and predicts 270/360 (P3.3, 80 cells). Correct map: A6d -> V09, A6f -> V08 (same checks, different numbering). Required edit: list V09 and V08 as accepted code IDs, remove the "recorded mismatch" labels, and set P3.3 to 350/360 (360 minus 10 inactive A6b), with the falsifier "any other value". The 270 prediction will fail as written. |
+| P1-I count 30; C4 relabel and ban; hash together | APPLIED | 8+2+8+8+4 = 30; ban list complete. |
+| P2 path_active field, reason co-listing, V10 mix printed, F' rule, P2.4/P1.3/P1.5/P2.2 predictions | APPLIED | P2.2 falsifier is now unconditional; P1.3 is an exact conditional count. |
+
+## No undeclared threshold change
+m_O, delta_W, delta_S, alpha, theta, grid, CI method are untouched; the 25% window, chatter rule and census trigger are declared as frozen parameters (§1.6). Semantic changes are inventoried (9 items). One undeclared inconsistency: Section 6 and the §8 C1 sentence still say "F = 4, K = 4, S = 2, N = 4" for held-out, which D-022 contradicts (below).
+
+## D-022 consistency (S n=1 on 50% of checkpoints, drop H09/H10)
+- Arithmetic checks out: 4,939 calls less 1.5 S calls on ~304 checkpoints, x1.05 = 4,460; 13.6 h, 57% utilisation, 43% buffer. Dropping H09/H10 matches compute_plan criterion 5 and the amendment's own Section 6 advice. It is a compute-grounded, pre-data decision, which is what the owner constraints require.
+- Procedure: compute_plan criterion 5 and open_questions §1.6 do list this fallback, but prereg.md freezes "n per arm F4, K4, S2, N4" and does not mention the fallback. prereg §14 says any change after the Stage 1 hash creates `deviation_log.md`. Required: a deviation_log entry and a preregistered, hash-committed rule for which 50% of checkpoints receive S (not yet specified in D-022), before the first held-out seed. The amendment's Section 6 and §8 C1 text must state S = 1 on 50% (or "per D-022") so the amendment and decision agree.
+- V9 power: V9 is still valid by the letter of v1.1/prereg (the 90% CI TOST pass, invalid only if the 95% CI is wholly outside, else non-blocking `sham_uncertain`). But it is materially weaker. Using prereg's own illustration (16 checkpoints, sigma 5-6): S n=2 on all gives a 90% half-width 1.645 x sqrt(1/2+1/4) x sigma / 4 = 0.36 sigma (about 2.0 at sigma 5.5). S n=1 on 8 checkpoints gives 1.645 x sqrt(1/1+1/4) x sigma / sqrt(8) = 0.65 sigma (about 3.6). With delta_S = m_O of about 5 (sigma 5.5), the largest sham mean difference that can still pass falls from about 3.0 to about 1.4, so `sham_uncertain` becomes common and genuine sham drift is detected only when it is large. prereg itself rejected a tighter delta_S for exactly this reason. Allowed, but it must be disclosed: print the attained half-width (already required) and state in the held-out report that V9 cannot certify sham equivalence at this design. Also, m_O is pinned from the dev S-vs-F noise scale with nS = 2 (sqrt(1/2+1/4)); the held-out contrast SD is about 29% larger (sqrt(1.25) vs sqrt(0.75)), so m_O is no longer guaranteed to exceed the held-out noise scale. Report this; do not re-pin.
+- Not a threshold change: delta_S = m_O and the TOST rule are unchanged.
+
+## Final decision
+Required before adoption (small, mechanical): (1) fix the A6 map and P3.3 to 350/360 (my error propagated); (2) "at least k candidates"; (3) align Section 6 / §8 C1 with D-022 (S = 1 on a pre-hashed 50% subset), add the deviation_log entry and the V9-power disclosure; (4) labeller-independence line. None of these changes a threshold or a decision rule.
+
+**ADOPT** conditional on edits (1) to (4) being made verbatim as above (no re-review needed for them if the diff is limited to those lines). If the drafter prefers a clean slate: DO-NOT-ADOPT until P3.3 is corrected, because a pre-registered prediction already known to be wrong would be a false pre-registration.
