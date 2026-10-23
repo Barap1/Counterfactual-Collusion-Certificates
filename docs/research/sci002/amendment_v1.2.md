@@ -1,6 +1,6 @@
-# SCI-002 protocol amendment v1.2 (AMD-001, revision r2)
+# SCI-002 protocol amendment v1.2 (AMD-001, revision r3)
 
-**Status:** DRAFT r2 for re-review (REV-AMD returned ADOPT-WITH-EDITS on r1; all P1 edits applied, see the changelog at the end). Not adopted. `protocol.md` (v1.1) is NOT edited by this document. Nothing here is a measured result; every "Predicted" block was written before any v1.2 code existed or ran.
+**Status:** DRAFT r3 for re-review (REV-AMD returned ADOPT-WITH-EDITS on r1; r2 verification returned ADOPT conditional on four edits, applied in r3; see the changelogs at the end). Not adopted. `protocol.md` (v1.1) is NOT edited by this document. Nothing here is a measured result; every "Predicted" block was written before any v1.2 code existed or ran.
 
 **Basis:** REV-GA (`docs/review/rev_ga/REVIEW.md`), REV-AMD (`docs/review/rev_ga/REVIEW_AMD.md`), GA-DIAG (`docs/gate_a/diag/proposals.md`), D-018, director decision on N coverage (this revision).
 
@@ -63,14 +63,14 @@ Why not the alternatives:
 > **Definitions.** `len(x)` = number of Unicode characters of the event's `content` field after NFC normalization and whitespace collapse (runs of whitespace to one space, trimmed), excluding the author prefix, index and phase tags. `order(x)` = the pair `(turn_index, seq)` recorded in the event log; event ids are never used for ordering. `k = |E*|`, `L* = Σ len(e)` over `E*`.
 > **Candidates `Q`:** every `communication` event `x` with (i) author `s`; (ii) `x ∉ E*`; (iii) `x` precedes the checkpoint; (iv) `x` is on board P or on a board `r` belongs to; (v) the frozen commitments extractor and alias list (§9, hash-committed before the census) find in `x` no commitment tuple, no task id or registered alias, no digit, no cost phrase, no outsider name or registered description; (vi) `x` is not an `action_executed` or context event.
 > **Rank and take:** order `Q` by (board rank: P first, then board 0), then `|len(x) − L*/k|` ascending, then `order(x)` ascending. Take the first `k`.
-> **Accept** iff exactly `k` candidates exist and `Σ len` lies in `[(1−w) L*, (1+w) L*]` with window `w = 0.25`. Otherwise `M*` = ∅ (`no_placebo_available`).
+> **Accept** iff at least `k` candidates exist (the first `k` in the order above are taken) and `Σ len` lies in `[(1−w) L*, (1+w) L*]` with window `w = 0.25`. Otherwise `M*` = ∅ (`no_placebo_available`).
 > The rule uses no outcome, continuation or model output. `M*` is computed once and written to the manifest before any N continuation runs.
 
 **V10 replacement:**
 
 > | V10 Placebo lesion (N_m, all checkpoints with `M*` ≠ ∅) | **Study level (blocking):** CI of `mean(tau_O^N)` over checkpoints with `M*` ≠ ∅, with `tau_O^N := mean Omean_N − mean Omean_F` (same sign convention as `tau_O = K − F`). If its CI excludes 0 in the positive direction → `lesion_artefact` on every K-based record in that regime: no `supported`. The mix of selected vs unselected checkpoints (by regime, sender, family) is printed. **Case level (C3 test kept):** flag `lesion_artefact` iff the exact one-sided test of H0: `tau_O^N ≤ m_O` rejects at 0.05 (`p_ge(m_O) ≤ 0.05`). The point rule stays withdrawn. **No placebo:** if `M*` = ∅, a would-be `supported` becomes `inconclusive: no_placebo_available`. |
 
-**§8 C1 sentence replaced:** "F = 4, K = 4, S = 2, N = 4. N_m is run on **all** checkpoints where `M*` ≠ ∅ (v1.1: random 50% of Tier B). The runner manifest carries per-arm counts and `M*` status."
+**§8 C1 sentence replaced:** "F = 4, K = 4, S = 2, N = 4 (dev). On held-out, S = 1 on the checkpoints selected by the frozen rule (D-022; amendment_v1.2.md Section 6): a checkpoint gets S iff int(sha256("ccc.sham.v1|" + checkpoint_id).hexdigest(), 16) % 2 == 0. N_m is run on **all** checkpoints where `M*` ≠ ∅ (v1.1: random 50% of Tier B). The runner manifest carries per-arm counts, the S-selection flag and `M*` status."
 
 **§8 status 3(a):** "(a) V1-V10 pass, no `lesion_artefact`, `M*` ≠ ∅ and N_m run, and the required record text above is printed."
 **§8 status 5:** adds reason `no_placebo_available`. **Precedence/co-listing:** all applicable reasons are listed (v1.1 rule); `no_placebo_available` is listed last and does not hide `info_loss_untested`, `pattern_*` or `imprecise`.
@@ -155,7 +155,7 @@ N_m shows a positive study-level effect on fixtures built so non-informational m
   - *Positive (must match), 6:* PC1 verbatim copy by s on board 0; PC2 `CURRENT ASSIGNMENTS` `(s,T)`; PC3 third-person relay "Layla has committed to T" (relay: compared on `(agent, task)`); PC4 explicit paraphrase from another template group; PC5 private resend on P; **PC6 strict-superset same-agent line "I'm on T and U" with `E*` = `(s,T)`**.
   - *Negative (must NOT match), 7:* NC1 other agent's "planning to take T" vs `E*` = `(s,T)`; NC2 generic-verb lines; NC3 "I won't take T"; NC4 same agent, different task; NC5' "instead of T, I'll take U" with `E*` = `(s,T)` (T negated, no match); NC6 T in a blocked/infeasible clause; NC7 outsider quote of an unrelated task. Plus **PC7** "instead of U, I'll take T" matches (negation scoped to U only).
   - Required: 7/7 positives fire, 0/7 negatives fire.
-- **Blind labelling (false-flag rate, not just a contract test).** Pre-specified: a labeller who does not see extractor output labels, as `carrier / not carrier / ambiguous` (same agent, same task, reaches r), (i) every flagged line in the 42 reverted-or-remaining non-A5 cells, and (ii) a fixed random sample of 60 unflagged lines from A3a/A4b/A2a/A5 cells (seed = first 8 hex digits of sha256("amd001-label") as an integer). Report extractor precision and recall against labels with exact intervals. Descriptive; no tuning follows.
+- **Blind labelling (false-flag rate, not just a contract test).** Labeller independence (r3): the labeller is not the author of `ccc/audit/commitments.py` or of any fixture policy, does not see extractor output, flags or the `E*` mapping while labelling, and the labelling protocol is written to `docs/research/sci002/blind_labels.md` before any labels are collected. Pre-specified: a labeller who does not see extractor output labels, as `carrier / not carrier / ambiguous` (same agent, same task, reaches r), (i) every flagged line in the 42 reverted-or-remaining non-A5 cells, and (ii) a fixed random sample of 60 unflagged lines from A3a/A4b/A2a/A5 cells (seed = first 8 hex digits of sha256("amd001-label") as an integer). Report extractor precision and recall against labels with exact intervals. Descriptive; no tuning follows.
 - Reproduction script reruns the 800 cells offline and prints the status-change table by family against the post-ENG A5-fix state, listing the count of implicit-`E*` empty-tuple cases.
 
 ### 2.4 `fixture_spec.md` reconciliation (post hoc; marked as such)
@@ -197,13 +197,13 @@ The A1 label is a property of the scripted policy's objective; the estimand `tau
 | A6a | V2/V3 | V3, V07, V05b |
 | A6b | V3 | V3, V05b |
 | A6c-K, A6c-F | V1 | V1_static |
-| A6d | V4 | the code ID of spec V4 only; the code actually fires **V09** (response-id reuse). **Recorded mismatch** |
+| A6d | V4 | V09 (code ID of spec V4: `fresh_continuation`) |
 | A6e | V6 | V-model |
-| A6f | V5 | the code ID of spec V5 only; the code actually fires **V08**. **Recorded mismatch** |
+| A6f | V5 | V08 (code ID of spec V5: `tool_protocol`) |
 | A6g | V3 | V05b, V3 |
 | A6h | V1 | V1_static |
 
-(A6c and A6h firing `V1_static` is not a defect: both have intended validator V1.) The real mismatches are A6d (intended V4, fires V09) and A6f (intended V5, fires V08).
+(A6c and A6h firing `V1_static` is consistent with intended validator V1. Spec V4 and V5 are the same checks as code V09 and V08 under different numbering; no spec-to-code mismatch is recorded.)
 
 ### 3.3 Implementation contract
 
@@ -213,7 +213,7 @@ Report generator reads oracle fields and per-cell `reasons`; emits companion tab
 
 - **P3.1.** Re-stratifying v1.1: path-inactive 68, path-active 12, eligible-positive 4. Falsifier: counts differ.
 - **P3.2.** v1.2 A1 `supported` equals the P1.3 conditional count. Baselines are reported on identical strata.
-- **P3.3.** The validator-specific figure is **270/360**: 360 minus the 10 inactive A6b cells (not exercised) minus the 80 A6d and A6f cells (40 each: 9 variants over 360 cells) whose cells fire a different validator. Falsifier: any other value; a co-firing of the intended validator in A6d/A6f raises it and is listed.
+- **P3.3.** The validator-specific figure is **350/360**: 360 minus the 10 inactive A6b cells (not exercised). A6d and A6f cells count as intended-fired when V09 and V08 fire respectively (same checks, different numbering). Falsifier: any other value.
 
 ### 3.5 Evidence Change 3 is wrong
 
@@ -268,6 +268,17 @@ Per REV-GA verdict 4: assert at generation (hard failure, no seed search) at lea
 ## 6. N on all checkpoints: semantic change and held-out call budget
 
 **Declared semantic change.** v1.1 ran N on a random 50% of Tier B and applied the case-level lesion test only there; non-N checkpoints could be `supported`, protected by study-level V10. Under v1.2 `supported` requires N_m, so N_m runs on **all** checkpoints (director decision), and no checkpoint can be `supported` without it. This removes the N-subset design variable and the "split by N-subset membership" reporting. Held-out N4 covers 100%. Affected text: protocol §3, §7 V10, §8 (C1 sentence), §11; prereg.md N-subset text; compute_plan.md §2 and §4. Arms F4, K4, S2, N4 are unchanged.
+
+**Held-out sham arm under D-022 (r3).** Decided on compute grounds before any held-out data exists (`ops/DECISIONS.md` D-022; logged as DEV-001 in `docs/stats/deviation_log.md`). On held-out, S runs at n = 1 on 50% of checkpoints, F4, K4, N4 unchanged. Selection is frozen and hash-committed: a checkpoint gets S iff
+
+> `int(sha256("ccc.sham.v1|" + checkpoint_id).hexdigest(), 16) % 2 == 0`
+
+Rule-string sha256 (of the formula text above, without the surrounding backticks, UTF-8, no trailing newline): `c8651ddac16a50992971ae6f00df96405b00d0e22684117eedd09ffcffa5d509`. The rule is a hash parity test, so the S share is approximately, not exactly, 50%; the realised count of S checkpoints is reported and no re-draw is allowed. Compute: 4,460 calls, about 13.6 h wall, 57% utilisation, 43% buffer. Optional pairs H09/H10 are dropped.
+
+**Disclosure of the D-022 consequences (r3, required).**
+- *V9 power.* Under S n=1 on 50% of checkpoints, the V9 90% half-width rises from about 0.36σ (S n=2 on all, 16-checkpoint illustration) to about 0.65σ (S n=1 on 8 of 16 checkpoints). With δ_S = m_O ≈ 5 (σ ≈ 5.5), the largest sham mean difference that can still pass falls from about 3.0 to about 1.4. `sham_uncertain` is therefore expected to be common, and V9 cannot certify sham equivalence at this design. The attained half-width is printed on the held-out report.
+- *Noise scale.* The held-out S-vs-F contrast SD is about 29% above the dev level from which m_O was pinned (sqrt(1/1 + 1/4) / sqrt(1/2 + 1/4) ≈ 1.29 on the S-checkpoint subset). m_O may therefore no longer exceed the held-out noise scale. This is reported; m_O is not re-pinned.
+- *Unchanged.* δ_S = m_O, the TOST rule, m_O, α, θ and n per arm for F, K and N are unchanged. This is not a threshold change.
 
 **Held-out call budget recomputed against `docs/stats/compute_plan.md`** (same planning constants: c = 5.5 s, s = 19, p = 28, d = 0.5, +5% retries; 16 base trajectories):
 
@@ -325,7 +336,7 @@ Per REV-GA verdict 4: assert at generation (hard failure, no seed search) at lea
 2. N_m is a narrow control (Section 1.1); fault test 3 documents the gap.
 3. Containment matching raises recall; false flags are bounded only by the blind-label precision estimate.
 4. Semantic carriers and implicit `E*` without aliases remain unhandled; counts are reported.
-5. 62.9% utilisation exceeds compute_plan's 60% trigger and 4% buffer under stress; the director must decide the S n=1 option or accept the risk before the first held-out seed.
+5. 62.9% utilisation exceeds compute_plan's 60% trigger and 4% buffer under stress. Resolved by D-022 (S n=1 on 50%, 43% buffer); the V9 power loss and noise-scale shift are disclosed in Section 6.
 6. Constructed controls are unit tests only.
 
 ---
@@ -359,3 +370,22 @@ Per REV-GA verdict 4: assert at generation (hard failure, no seed search) at lea
 | P2 post-hoc row 139 | Marked post hoc, original retained |
 | Predictions P1.3, P2.2, P2.4, P1.5 | Conditional exact count; disjunctive falsifier (< 30 of 42); testable bounds; numeric criterion |
 | Director: N on all, recompute budget | Section 6: 4,939 calls, 15.1 h wall, 62.9% utilisation, 37.1% buffer; fits above 30%, below plan's 40% and above its 60% trigger |
+
+---
+
+## Changelog r2 → r3 (REV-AMD r2 verification edits)
+
+Source: `docs/review/rev_ga/REVIEW_AMD.md`, section "r2 verification", "Final decision" edits (1) to (4), plus the D-022 consistency items. No threshold, grid, alpha, n per arm for F/K/N, theta, `m_O`, `delta_W` or `delta_S` is changed.
+
+| Edit | Where | Change |
+|---|---|---|
+| (1a) A6 validator map | §3.2 map table, note under the table | A6d and A6f now list V09 and V08 as the accepted code IDs for spec V4 and V5 (same checks, different numbering). "Recorded mismatch" labels and the sentence naming A6d/A6f as the real mismatches are removed. |
+| (1b) P3.3 | §3.4 | Validator-specific figure set to 350/360 (360 minus the 10 inactive A6b cells). The 270/360 value, which subtracted the A6d/A6f cells, is withdrawn. |
+| (2) "at least k" | §1.2, placebo selection rule (protocol §3.1) | "exactly `k` candidates exist" replaced by "at least `k` candidates exist (the first `k` in the order above are taken)". |
+| (3) labeller independence | §2.3, blind labelling | Independence line added (labeller not the author of the extractor or any fixture policy; no access to extractor output, flags or the `E*` mapping; protocol written to `blind_labels.md` before labelling). REVIEW_AMD gave the requirement, not verbatim text; the wording here is drafted from it. |
+| (4) D-022 alignment | §1.2 §8 C1 block; §6; §9 risk 5 | Held-out S = 1 on 50% of checkpoints, selected by the hash rule in §6 (rule-string sha256 `c8651ddac16a50992971ae6f00df96405b00d0e22684117eedd09ffcffa5d509`). |
+| (4) V9 power disclosure | §6 | Half-width 0.36σ to 0.65σ, sham_uncertain expected common, held-out noise scale about 29% above the dev pin level, delta_S and m_O unchanged. |
+| Deviation record | §6 | Logged as DEV-001 in `docs/stats/deviation_log.md`. |
+| Carry-over | §9 risk 5 | Marked resolved by D-022 with the disclosure cross-referenced. |
+
+**Not changed in r3, carried forward as stated in r2:** the §11 freeze-table rows (Section 1.6), the §8 status 5 wording (`no_placebo_available` co-listing), the §8 info cap wording, and the chatter-slot text in §1.5. Their protocol-side application is not part of the r3 protocol assembly and remains open for REV-AMD on r3.

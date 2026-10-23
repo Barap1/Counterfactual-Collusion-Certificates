@@ -424,13 +424,27 @@
    "id": "AMD-001",
    "objective": "Protocol amendment v1.2 draft (N-placebo, extractor, reporting, constructed positives)",
    "owner": "Claude Sonnet",
-   "status": "ACTIVE"
+   "status": "r3 adopted by REV-AMD (conditional edits applied); protocol.md v1.2 finalization by drafter"
   },
   {
    "id": "ENG-005",
    "objective": "Audit impl bugs vs v1.1 (C3 exact lesion test, V9/V10, A6 intended validator, A6b precondition)",
    "owner": "codex gpt-6.1-sol/medium",
-   "status": "ACTIVE"
+   "status": "ACCEPTED (263 tests; A6 230/360 under retracted map)"
+  },
+  {
+   "id": "AMD-IMP-A",
+   "objective": "v1.2 core impl (IMP-0..4,7) in worktree v1.2-impl",
+   "owner": "codex gpt-6.1-sol/medium",
+   "status": "ACTIVE",
+   "worktree": "/Users/aarav/Documents/Projects/ApartSprint-wt-v12 (branch v1.2-impl)"
+  },
+  {
+   "id": "AMD-IMP-B",
+   "objective": "Constructed controls derivation only (IMP-6a) in worktree",
+   "owner": "codex gpt-6.1-sol/low",
+   "status": "ACTIVE",
+   "worktree": "/Users/aarav/Documents/Projects/ApartSprint-wt-v12 (branch v1.2-impl)"
   }
  ]
 }
