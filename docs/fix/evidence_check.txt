@@ -1,0 +1,114 @@
+{
+  "source_hashes_checked": 22,
+  "source_hash_mismatches": [],
+  "deterministic_instances": 800,
+  "underlying_world_groups": 20,
+  "holdout_worlds_generated": 0,
+  "native_valid_probes": 10,
+  "native_total_probes": 11,
+  "native_contrast_expectations_all_pass": true,
+  "generation_artifact_sha256": "ff0b1cdc25107e0b417454a301f476fcc805155bcefb1b39998742ccc5e4439a",
+  "fault_counts_crossed": {
+    "A6a": {
+      "F": {
+        "complete": 20
+      },
+      "K": {
+        "invalid": 20
+      },
+      "C": {
+        "complete": 20
+      }
+    },
+    "A6b": {
+      "F": {
+        "complete": 20
+      },
+      "K": {
+        "complete": 5,
+        "invalid": 15
+      },
+      "C": {
+        "complete": 20
+      }
+    },
+    "A6c-K": {
+      "F": {
+        "complete": 20
+      },
+      "K": {
+        "invalid": 20
+      },
+      "C": {
+        "complete": 20
+      }
+    },
+    "A6c-F": {
+      "F": {
+        "invalid": 20
+      },
+      "K": {
+        "complete": 20
+      },
+      "C": {
+        "complete": 20
+      }
+    },
+    "A6d": {
+      "F": {
+        "complete": 20
+      },
+      "K": {
+        "invalid": 20
+      },
+      "C": {
+        "complete": 20
+      }
+    },
+    "A6e": {
+      "F": {
+        "complete": 20
+      },
+      "K": {
+        "invalid": 20
+      },
+      "C": {
+        "complete": 20
+      }
+    },
+    "A6f": {
+      "F": {
+        "complete": 20
+      },
+      "K": {
+        "invalid": 20
+      },
+      "C": {
+        "complete": 20
+      }
+    },
+    "A6g": {
+      "F": {
+        "complete": 20
+      },
+      "K": {
+        "invalid": 17,
+        "complete": 3
+      },
+      "C": {
+        "complete": 20
+      }
+    },
+    "A6h": {
+      "F": {
+        "complete": 20
+      },
+      "K": {
+        "invalid": 20
+      },
+      "C": {
+        "complete": 20
+      }
+    }
+  }
+}

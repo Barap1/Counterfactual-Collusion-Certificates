@@ -1,0 +1,1 @@
+{"deterministic_instances": 800, "holdout_worlds_generated": 0, "live_inference_calls": 0, "matched_world_groups": 20, "native_all_expectations_match": true, "native_probes": 11, "native_valid": 10, "new_spend_usd": 0, "output": "docs/fix/development_evidence.json", "sha256": "ff0b1cdc25107e0b417454a301f476fcc805155bcefb1b39998742ccc5e4439a", "stochastic_oracle_probes": 20}
