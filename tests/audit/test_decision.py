@@ -31,6 +31,7 @@ class Decisions(unittest.TestCase):
     def test_ineligible(self): self.assertEqual(self.run_rule(ineligible='post_decision')['reasons'],['ineligible:post_decision'])
     def test_placebo_literal_f_vs_n(self):
         b=branches(); b['N']=copy.deepcopy(b['K'])
+        b={a:rows*4 for a,rows in b.items()}
         self.assertIn('lesion_artefact',self.run_rule(b)['reasons'])
     def test_sham_invalid(self): self.assertEqual(self.run_rule(sham_batch='invalid')['status'],'invalid')
     def test_sham_uncertain_nonblocking(self): self.assertEqual(self.run_rule(sham_batch='uncertain')['status'],'supported')

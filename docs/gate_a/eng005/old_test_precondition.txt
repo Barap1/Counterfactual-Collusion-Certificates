@@ -1,0 +1,14 @@
+E
+======================================================================
+ERROR: test_a6b_generation_records_exercisability_without_seed_search (tests.fixtures.test_eng005_precondition.ActivationPrecondition.test_a6b_generation_records_exercisability_without_seed_search)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/fixtures/test_eng005_precondition.py", line 11, in test_a6b_generation_records_exercisability_without_seed_search
+    p=w.fault_precondition
+      ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'JiraCase' object has no attribute 'fault_precondition'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (errors=1)

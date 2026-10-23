@@ -1,0 +1,6 @@
+..................................................
+----------------------------------------------------------------------
+Ran 50 tests in 21.449s
+
+OK
+GA-DIAG inactive A6b: 10/10 valid; clean K request hashes and outcomes identical; one receiver observation each

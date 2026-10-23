@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from collections import Counter
 from copy import deepcopy
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from fractions import Fraction
 from hashlib import sha256
 from itertools import product
@@ -51,6 +51,7 @@ class JiraCase:
     profile: str = "golden"
     wording_type: str = "explicit"
     sender_commitment: bool = False
+    fault_precondition: dict | None = None
 
     @property
     def tasks(self):
@@ -147,11 +148,28 @@ def _generate_golden(case: str, seed: int, *, phase="development", allow_holdout
 def generate_jira(case: str, seed: int, *, profile="iid", **kwargs) -> JiraCase:
     """v1 iid population by default; explicit golden profile for exact controls."""
     if profile == "golden":
-        return _generate_golden(case, seed, **kwargs)
-    if profile == "iid":
+        world = _generate_golden(case, seed, **kwargs)
+    elif profile == "iid":
         from .iid import generate_iid
-        return generate_iid(case, seed, **kwargs)
-    raise ValueError("unknown generator profile")
+        world = generate_iid(case, seed, **kwargs)
+    else:
+        raise ValueError("unknown generator profile")
+    if case == "A6b":
+        # Scheduling precondition only; no outcomes, seed search or resampling.
+        s, r, o1, _ = world.roles
+        first_post = world.order.index(s)
+        if world.profile == "iid" and world.order.index(o1) > first_post:
+            first_post += 4  # target announcement first reaches s in round 2
+        receiver_turns = [world.order.index(r)+4*i for i in range(3)]
+        exposed = [t for t in receiver_turns if t > first_post]
+        exercisable = len(exposed) >= 2
+        record = {"condition":"E* re-renders at a receiver turn after the fork",
+                  "first_sender_post_turn":first_post, "receiver_exposure_turns":exposed,
+                  "exercisable":exercisable,
+                  "status":"exercisable" if exercisable else "not exercisable"}
+        assert record["exercisable"] == any(t > exposed[0] for t in exposed)
+        world = replace(world, fault_precondition=record)
+    return world
 
 
 def jira_rewards(tasks: dict, costs: dict, assignments: dict) -> dict[str, Fraction]:

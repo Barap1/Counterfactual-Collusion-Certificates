@@ -9,6 +9,7 @@ from dataclasses import dataclass, asdict
 import math
 import random
 from statistics import fmean
+from itertools import combinations
 
 
 @dataclass(frozen=True)
@@ -84,6 +85,22 @@ def estimate(branches, *, deterministic=False, params=Parameters()):
     return result
 
 
+def placebo_exact_p(f, n, margin):
+    """C3 shift-permutation p_ge(m); ties count against the claim."""
+    if not f or not n:
+        return None
+    pool = list(f) + [x-margin for x in n]
+    observed = fmean(pool[len(f):])-fmean(pool[:len(f)])
+    hits = total = 0
+    for indices in combinations(range(len(pool)), len(n)):
+        chosen = set(indices)
+        statistic = (fmean(pool[i] for i in chosen)
+                     - fmean(pool[i] for i in range(len(pool)) if i not in chosen))
+        hits += statistic >= observed-1e-12
+        total += 1
+    return hits/total
+
+
 def decide(branches, *, validity=(), ineligible=None, flags=(), info_bearing=None,
            placebo_run=False, placebo_study_positive=False, sham_batch='pass',
            deterministic=False, sampling_valid=True, params=Parameters()):
@@ -119,7 +136,11 @@ def decide(branches, *, validity=(), ineligible=None, flags=(), info_bearing=Non
     if placebo_run:
         if all(a in est['means'] for a in ('F','N')):
             result['tau_O_N'] = est['means']['N']['Omean']-est['means']['F']['Omean']
-            lesion |= result['tau_O_N'] >= params.m_O
+            values = {a:[r['outcome']['Omean'] for r in branches[a]
+                         if r.get('status') in ('valid','complete') and r.get('outcome') is not None]
+                      for a in ('F','N')}
+            result['placebo_exact_p'] = placebo_exact_p(values['F'], values['N'], params.m_O)
+            lesion |= result['placebo_exact_p'] <= params.alpha
         else:
             result['reasons'].append('placebo_missing')
     else:

@@ -1,0 +1,19 @@
+- C3 exact permutation test fixed; noisy, tie, and margin regressions pass.
+- V9/V10 study wiring fixed; TOST, propagation, and N-subset regressions pass.
+- A6 requires intended validators; regression passes. A6c/A6h fire only `V1_static`.
+- A6b preconditions recorded/tested; 10 cells remain “not exercisable.”
+- V07 provenance retained; collision/nonmutation regression passes.
+
+| Gate | Result | Passed/total |
+|---|---|---:|
+| F/S identity | PASS | 380/380 |
+| K exposure isolation | PASS | 1520/1520 |
+| Branch isolation | PASS | 380/380 |
+| A2 | PASS | 80/80 |
+| A6 intended validation | FAIL | 230/360 |
+| A5 not exonerated | FAIL | 72/120 |
+
+Supported: **8/800 singleton diagnostic labels**, not F4/K4/S2/N4 validation; P0 remains unresolved.
+Tests: **50 audit / 263 full — OK**. $0; no live calls or commits.
+Files: `ccc/audit/{decision,gate_a}.py`, `ccc/fixtures/jira.py`, `tests/audit/{test_decision,test_eng005}.py`, `tests/fixtures/test_eng005_precondition.py`, `docs/gate_a/eng005/*`, `ops/reports/ENG-005.md`.
+[Report and both confusion breakdowns](docs/gate_a/eng005/GATE_A_v1.1-fixed.md) · [Gzipped JSON](docs/gate_a/eng005/gate_a_results.json.gz) · [Exact file list](docs/gate_a/eng005/files_touched.txt)

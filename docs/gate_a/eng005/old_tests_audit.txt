@@ -1,0 +1,123 @@
+...............................FEFFEEEEEEEEE.........
+======================================================================
+ERROR: test_c3_exact_ties_and_attainable_rejection (tests.audit.test_eng005.ProtocolRegressions.test_c3_exact_ties_and_attainable_rejection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 18, in test_c3_exact_ties_and_attainable_rejection
+    self.assertEqual(decision.placebo_exact_p([0]*4,[2.5]*4,2.5),1)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ccc.audit.decision' has no attribute 'placebo_exact_p'
+
+======================================================================
+ERROR: test_study_tost_three_outcomes_and_half_width (tests.audit.test_eng005.ProtocolRegressions.test_study_tost_three_outcomes_and_half_width) (state='pass')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 29, in test_study_tost_three_outcomes_and_half_width
+    d = gate_a.study_checks(values,[1]*4)
+        ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ccc.audit.gate_a' has no attribute 'study_checks'
+
+======================================================================
+ERROR: test_study_tost_three_outcomes_and_half_width (tests.audit.test_eng005.ProtocolRegressions.test_study_tost_three_outcomes_and_half_width) (state='invalid')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 29, in test_study_tost_three_outcomes_and_half_width
+    d = gate_a.study_checks(values,[1]*4)
+        ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ccc.audit.gate_a' has no attribute 'study_checks'
+
+======================================================================
+ERROR: test_study_tost_three_outcomes_and_half_width (tests.audit.test_eng005.ProtocolRegressions.test_study_tost_three_outcomes_and_half_width) (state='uncertain')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 29, in test_study_tost_three_outcomes_and_half_width
+    d = gate_a.study_checks(values,[1]*4)
+        ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ccc.audit.gate_a' has no attribute 'study_checks'
+
+======================================================================
+ERROR: test_study_tost_three_outcomes_and_half_width (tests.audit.test_eng005.ProtocolRegressions.test_study_tost_three_outcomes_and_half_width)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 33, in test_study_tost_three_outcomes_and_half_width
+    self.assertEqual(gate_a.study_checks([0],[])['sham_batch'],'uncertain')
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ccc.audit.gate_a' has no attribute 'study_checks'
+
+======================================================================
+ERROR: test_v07_collision_retains_all_checks_and_audit_evidence (tests.audit.test_eng005.ProtocolRegressions.test_v07_collision_retains_all_checks_and_audit_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 99, in test_v07_collision_retains_all_checks_and_audit_evidence
+    merged['resend_detected']['additional_evidence']],['0','1'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'additional_evidence'
+
+======================================================================
+ERROR: test_v10_study_veto_applies_outside_n_subset (tests.audit.test_eng005.ProtocolRegressions.test_v10_study_veto_applies_outside_n_subset)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 69, in test_v10_study_veto_applies_outside_n_subset
+    gate_a.apply_study_checks(e)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ccc.audit.gate_a' has no attribute 'apply_study_checks'
+
+======================================================================
+ERROR: test_v10_study_veto_reaches_cases_below_c3_margin (tests.audit.test_eng005.ProtocolRegressions.test_v10_study_veto_reaches_cases_below_c3_margin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 61, in test_v10_study_veto_reaches_cases_below_c3_margin
+    gate_a.apply_study_checks(e)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ccc.audit.gate_a' has no attribute 'apply_study_checks'
+
+======================================================================
+ERROR: test_v10_uses_one_sided_95_study_lower_bound (tests.audit.test_eng005.ProtocolRegressions.test_v10_uses_one_sided_95_study_lower_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 36, in test_v10_uses_one_sided_95_study_lower_bound
+    d=gate_a.study_checks([0]*4,[0,2,3,4])
+      ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ccc.audit.gate_a' has no attribute 'study_checks'
+
+======================================================================
+ERROR: test_v9_study_invalid_reaches_every_decision (tests.audit.test_eng005.ProtocolRegressions.test_v9_study_invalid_reaches_every_decision)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 55, in test_v9_study_invalid_reaches_every_decision
+    gate_a.apply_study_checks(e)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ccc.audit.gate_a' has no attribute 'apply_study_checks'
+
+======================================================================
+FAIL: test_a6_any_invalid_is_not_intended_detection (tests.audit.test_eng005.ProtocolRegressions.test_a6_any_invalid_is_not_intended_detection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 109, in test_a6_any_invalid_is_not_intended_detection
+    self.assertEqual(evidence['gate_checks']['A6_invalid']['pass'],0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_c3_no_rejection_with_noisy_four_by_four_above_margin (tests.audit.test_eng005.ProtocolRegressions.test_c3_no_rejection_with_noisy_four_by_four_above_margin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 89, in test_c3_no_rejection_with_noisy_four_by_four_above_margin
+    self.assertNotIn('lesion_artefact',d['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lesion_artefact' unexpectedly found in ['imprecise', 'lesion_artefact', 'pattern_ambiguous']
+
+======================================================================
+FAIL: test_c3_point_above_margin_is_not_significance (tests.audit.test_eng005.ProtocolRegressions.test_c3_point_above_margin_is_not_significance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/eng005-before-1ifqs8ve/tests/audit/test_eng005.py", line 14, in test_c3_point_above_margin_is_not_significance
+    self.assertNotIn('lesion_artefact', d['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lesion_artefact' unexpectedly found in ['lesion_artefact']
+
+----------------------------------------------------------------------
+Ran 50 tests in 21.036s
+
+FAILED (failures=3, errors=10)
+GA-DIAG inactive A6b: 10/10 valid; clean K request hashes and outcomes identical; one receiver observation each
