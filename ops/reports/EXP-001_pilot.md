@@ -99,3 +99,37 @@ Do not relaunch until the expires_at question is resolved. The director must dec
 - `docs/runner/exp001-pilot/` (runner output, halted), `docs/runner/exp001-pilot.log`, `docs/runner/exp001-pilot.watchdog.log`
 - `runs/exp001/pilot_status.txt`, `runs/exp001/pilot_start_utc.txt`, `runs/exp001/pilot.pid`, `runs/exp001/watchdog.pid`
 - `ccc/runner/watchdog.py`, `tests/runner/test_watchdog.py`
+
+## Pilot 2 (EXP-000d detector, fresh output docs/runner/exp001-pilot2)
+
+Status: HALTED. Checkpoint dev02_B1 ran to completion, but the attempt was invalid (V09 fresh_continuation on 12 of 14 branches). No model_reload. Full run NOT launched. Ollama PID 57827 still running; resident digest unchanged (5571076f3d70...). No commits.
+
+Launch: pilot PID 73552 (caffeinate parent), watchdog PID 73699, `--max-checkpoints 1`, ledger start 256 lines (`runs/exp001/pilot2_ledger_start_lines.txt`). Offline suite before launch: `Ran 62 tests in 25.684s / OK`.
+
+### Metrics (from `ops/budget_ledger.jsonl` lines 257-852 and the attempt's own files)
+
+| Metric | Value |
+|---|---|
+| Wall time | 21:56:08.54Z to 22:16:50.17Z (last ledger line) = 1,241.6 s (20.7 min); runner exit observed by watchdog at 22:17:12.67Z |
+| Live calls | 297 total: 294 generation + 3 reload canaries (`before`, `source_after`, `after`); all 297 `attempt_end` status ok |
+| Mean / p95 s per call | 3.876 s / 6.808 s (p95 nearest-rank); median 3.631 s, min 0.57 s, max 9.37 s; sum of latencies 1,151.3 s |
+| Calls/min | 14.3 (297 calls over 20.7 min wall) |
+| Tokens | prompt 623,593; completion 25,688 |
+| Branch statuses | 14 scheduled (F4/S4/K4/N2): 2 valid (N rep 0, S rep 1), 12 invalid. Reason on all 12: `V09 fresh_continuation failed` |
+| V09 problem detail | "duplicate response ids within branch", "N response(s) reused from the source run", "N response(s) shared with another branch/replicate". Response IDs look like `chatcmpl-NN` and recur across branches (e.g. `chatcmpl-25` appears 3 times). |
+| Attempt status | invalid, world dev02_B1 attempt_0001; other 7 world slots have no attempt (runner refused to continue) |
+| Reload detector | `fingerprint+runner_pid+canary` (EXP-000d). 597 session checks, runner_pid 58015 in every check. |
+| model_reload count | 0 |
+| Canary | 3 probes sent (before, source_after, after); no canary mismatch raised |
+| Cost | api_cost_usd 0.0; new_out_of_pocket_usd 0.0 (sum over 297 attempt_end lines) |
+| Watchdog | no trigger; `WATCHDOG_EXIT.json` at 22:17:12.67Z (run_pid 73552); no `WATCHDOG_STOP.json` |
+
+Runner refusal (`docs/runner/exp001-pilot2.log`): `runner refused: world attempt invalid; evidence retained at .../docs/runner/exp001-pilot2/worlds/dev02_B1/attempt_0001`
+
+### Projection (not a go decision)
+
+Measured throughput is 14.3 calls/min. The full plan is 8 checkpoints x 294 generation calls = 2,352 planned, plus 3 canaries each = 2,376 live calls. At 14.3 calls/min that is about 166 min (2.8 h) of wall time, against about 10.7 h remaining to the 2026-10-24T09:00:00Z hard stop from 22:18Z. Margin would be about 8 h, but this projection assumes every checkpoint is valid. Here 12 of 14 branches were invalid, and the runner halts on an invalid attempt, so the full run cannot finish without a fix to V09 (or the response-ID scheme) and a clean checkpoint.
+
+### Anomaly and recommended director decision
+
+V09 is failing on response IDs, not on content or reloads. The IDs repeat across branches and across the source run, which the V09 fresh-continuation rule reads as reuse. Whether that is a validator bug or an Ollama OpenAI-adapter ID scheme is not established. No code, manifest, or protocol was changed. The director should decide how to handle it. Any change under `ccc/` needs owner approval.
