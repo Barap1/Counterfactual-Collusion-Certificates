@@ -93,6 +93,7 @@ def persist_branch(checkpoint, result, ledger_dir=None):
                "replicate_id": result.replicate_id, "attempt_id": attempt,
                "logical_turn": record.turn_index, "event_type": "model_response",
                "agent_id": record.agent, "request_id": record.response_id,
+               "client_request_id": record.client_request_id, "unique_response_ids": record.unique_response_ids,
                "request_sha256": record.request_sha256, "request_artifact": request,
                "response_artifact": response, "response_sha256": hashes[response],
                "cache_mode": record.cache_mode, "model_resolved": record.model_resolved,

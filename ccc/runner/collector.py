@@ -240,6 +240,7 @@ def collect_world(m, job, root, guard, session, live_session=None):
             return invalidate()
 
     response_ids = set()
+    request_ids = set()
     branches = {}
     for item in job["order"]:
         arm, rep = item["arm"], item["replicate"]
@@ -253,7 +254,7 @@ def collect_world(m, job, root, guard, session, live_session=None):
             from ccc.replay.interventions import neutral_placebo_hook
             kwargs["hook"] = neutral_placebo_hook(exposure)
         result = engine.run_branch(checkpoint, arm, factory(item["seed"], location, arm, rep),
-                                   replicate_id=str(rep), other_response_ids=response_ids,
+                                   replicate_id=str(rep), other_response_ids=response_ids, other_request_ids=request_ids,
                                    ledger_dir=location / "replay_ledger",
                                    execution_metadata=item | {"load_session": session,
                                        "evidence_tier": tier, "common_randomness_claim": "none"}, **kwargs)
@@ -270,6 +271,7 @@ def collect_world(m, job, root, guard, session, live_session=None):
                          "outcomes": result.outcomes if status == "valid" else None}
         results.append(record)
         response_ids.update(r.response_id for r in result.records if r.response_id)
+        request_ids.update(r.client_request_id for r in result.records if r.client_request_id)
         branches[(rep, arm)] = result
     cross = []
     for rep in range(m["continuations_per_arm"]["F"]):

@@ -13,6 +13,7 @@ import itertools
 import random
 import json
 import threading
+import uuid
 from dataclasses import dataclass
 from typing import Any, Callable, Dict, List, Optional
 
@@ -23,6 +24,11 @@ from .recorder import RequestRecord, request_payload
 
 ensure_import_path()
 from llm_server.clients.together_client import TogetherClient  # noqa: E402
+
+
+def new_request_id() -> str:
+    """Client-generated freshness key: one UUID4 per live generation, never taken from the provider."""
+    return uuid.uuid4().hex
 
 
 class PrefixMismatch(RuntimeError):
@@ -65,6 +71,7 @@ class ScriptedClient(TogetherClient):
 
     cache_mode = "fresh"
     accepts_ccc_context = True
+    unique_response_ids = True  # scripted ids embed a per-process counter and nonce
     _ids = itertools.count()
     _ids_lock = threading.Lock()
 
@@ -72,6 +79,7 @@ class ScriptedClient(TogetherClient):
         self.policy = policy
         self.nonce = nonce
         self.calls = 0
+        self.last_request_id: Optional[str] = None
 
     def generate_response(self, input, params, ccc_context: Optional[Dict[str, Any]] = None):  # noqa: A002
         ctx = ccc_context or {}
@@ -92,6 +100,7 @@ class ScriptedClient(TogetherClient):
         with self._ids_lock:
             uid = next(self._ids)
         self.calls += 1
+        self.last_request_id = new_request_id()
         response = {"id": f"scripted:{self.nonce}:{uid}", "object": "chat.completion",
                     "model": params.get("model"),
                     "choices": [{"index": 0, "message": message,
@@ -138,12 +147,15 @@ class ReplayClient(TogetherClient):
 
     cache_mode = "prefix_replay"
     accepts_ccc_context = True
+    unique_response_ids = True
+    last_request_id: Optional[str] = None
 
     def __init__(self, source: ReplaySource):
         self.source = source
 
     def generate_response(self, input, params, ccc_context: Optional[Dict[str, Any]] = None):  # noqa: A002
         rec = self.source.next(ccc_context or {}, request_payload(input, params))
+        self.last_request_id = rec.client_request_id  # replayed, not a new generation
         response = deep_copy_json(rec.response)
         if rec.python_rng_state_after is not None:
             st = rec.python_rng_state_after
@@ -161,6 +173,8 @@ class ReusingClient(TogetherClient):
 
     cache_mode = "fresh"  # lies about its mode, as an accidental cache would
     accepts_ccc_context = True
+    unique_response_ids = True
+    last_request_id: Optional[str] = None
 
     def __init__(self, recorded: List[RequestRecord]):
         self.queue = {}
@@ -171,6 +185,7 @@ class ReusingClient(TogetherClient):
         ctx = ccc_context or {}
         q = self.queue.get((ctx.get("agent"), ctx.get("step"))) or []
         rec = q.pop(0) if q else None
+        self.last_request_id = rec.client_request_id if rec else None  # reuses the source's id on purpose
         response = deep_copy_json(rec.response) if rec else {"id": None, "choices": [{"message": {"role": "assistant", "content": ""}}]}
         msg = response["choices"][0]["message"]
         return response, self._extract_message_content(msg)

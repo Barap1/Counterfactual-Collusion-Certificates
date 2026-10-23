@@ -270,7 +270,8 @@ def native_case(world):
                 return out,diff
             hook=tracked
         br=run_branch(cp,arm,fault_factory if hook is None else factory,hook=hook,
-                      replicate_id='fault',other_response_ids={r.response_id for b in clean.values() for r in b.records})
+                      replicate_id='fault',other_response_ids={r.response_id for b in clean.values() for r in b.records},
+                      other_request_ids={r.client_request_id for b in clean.values() for r in b.records})
         ar.branches[arm]=br
         # Cross-arm checks must be rerun against the actual faulted branches.
         from ccc.replay.engine import check_sham_identity,check_targeted_exposure
@@ -318,7 +319,8 @@ def native_case(world):
                     ev['payload']['content']=(words*(length//len(words)+1))[:length]
             expected=format_blackboard_events_for_prompt(events)
             if obs['contexts'][bb]!=expected: nproblems.append((obs['turn_index'],bb))
-    checks += [check_fresh(nw.ledger.records,cp.boundary,source.response_ids,{r.response_id for b in ar.branches.values() for r in b.records}),
+    checks += [check_fresh(nw.ledger.records,cp.boundary,source.response_ids,{r.response_id for b in ar.branches.values() for r in b.records},
+                           source_request_ids=source.request_ids,other_request_ids={r.client_request_id for b in ar.branches.values() for r in b.records}),
                check_model_identity(nw.ledger.records,nw.model_name),check_tool_protocol(nw.ledger.records),
                CheckResult('N_render','neutral_exact_every_prompt','fail' if nproblems else 'pass',{'problems':nproblems})]
     branches={a:[{'status':b.status,'outcome':b.outcomes if b.status=='valid' else None,'reasons':b.reasons}] for a,b in ar.branches.items()}

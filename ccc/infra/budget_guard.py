@@ -530,6 +530,9 @@ class GuardedChatClient:
     """
 
     PASS_THROUGH = ("temperature", "top_p", "top_k", "seed", "reasoning_effort", "stop", "tool_choice")
+    # Backends whose provider response ids are globally unique. Ollama's OpenAI-compatible endpoint
+    # returns repeating ids (e.g. "chatcmpl-NN"), so only the client request id proves freshness there.
+    UNIQUE_RESPONSE_ID_BACKENDS = (BACKEND_OPENROUTER,)
 
     def __init__(self, guard: BudgetGuard, *, backend: str, model: str, base_url: str,
                  request_timeout: float = 300.0, key_env_name: Optional[str] = None,
@@ -546,6 +549,10 @@ class GuardedChatClient:
         self.fixed_params = dict(fixed_params or {})
         self.meta = dict(meta or {})
         self.last_attempt_records: List[Dict[str, Any]] = []
+        self.unique_response_ids = backend in self.UNIQUE_RESPONSE_ID_BACKENDS
+        # Freshness key for the call that succeeded: the UUID4 attempt_id already logged in the ledger
+        # (attempt_begin / attempt_end), so every recorded generation joins to its ledger rows.
+        self.last_request_id: Optional[str] = None
 
     # --- TogetherClient-compatible helpers
     @staticmethod
@@ -600,6 +607,7 @@ class GuardedChatClient:
         body = json.dumps(payload).encode()
         url = f"{self.base_url}/chat/completions"
         self.last_attempt_records = []
+        self.last_request_id = None
         last_err = None
         for attempt_no in range(1, self.guard.policy.max_retries + 2):
             a = self.guard.begin(self.backend, self.model, self.base_url, payload, attempt_no=attempt_no, meta=self.meta)
@@ -621,6 +629,7 @@ class GuardedChatClient:
             if 200 <= code < 300 and isinstance(data, dict) and data.get("choices"):
                 rec = self.guard.end(a, status="ok", http_status=code, response=data)
                 self.last_attempt_records.append(rec)
+                self.last_request_id = a.attempt_id
                 msg = data["choices"][0].get("message") or {}
                 return data, self._content(msg)
             status = "http_error" if code >= 300 else "empty_response"

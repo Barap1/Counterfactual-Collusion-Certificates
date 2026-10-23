@@ -71,6 +71,10 @@ class SourceRun:
     def response_ids(self) -> set:
         return {r.response_id for r in self.ledger.records}
 
+    @property
+    def request_ids(self) -> set:
+        return {r.client_request_id for r in self.ledger.records if r.client_request_id}
+
 
 def record_source_run(spec: WorldSpec, client_factory) -> SourceRun:
     w = ColosseumWorld(spec, client_factory, branch_id="source", snapshot_every_turn=True)
@@ -266,7 +270,8 @@ class BranchResult:
 
 
 def run_branch(cp: Checkpoint, arm: str, client_factory, *, replicate_id: str = "0", hook=None,
-               other_response_ids: set = frozenset(), ledger_dir=None, execution_metadata=None) -> BranchResult:
+               other_response_ids: set = frozenset(), other_request_ids: set = frozenset(), ledger_dir=None,
+               execution_metadata=None) -> BranchResult:
     if arm not in ARMS:
         raise ValueError(f"arm must be one of {ARMS}")
     checks: List[CheckResult] = []
@@ -302,7 +307,8 @@ def run_branch(cp: Checkpoint, arm: str, client_factory, *, replicate_id: str = 
     if world.errors:
         status, reasons = "failed", reasons + world.errors
     checks.append(check_tool_protocol(world.ledger.records))
-    checks.append(check_fresh(world.ledger.records, cp.boundary, cp.source.response_ids, other_response_ids))
+    checks.append(check_fresh(world.ledger.records, cp.boundary, cp.source.response_ids, other_response_ids,
+                              source_request_ids=cp.source.request_ids, other_request_ids=other_request_ids))
     import json
     prefix_ids = [e["id"] for b in json.loads(cp.snapshot.dynamic)["megaboard"]["blackboards"] for e in b["logs"]]
     checks.append(scan_leaks(cp.exposure, world.ledger.records, world.prompt_audits, prefix_ids,
@@ -385,6 +391,7 @@ class AuditResult:
 def audit(cp: Checkpoint, client_factory, *, replicate_id: str = "0", arms=DEFAULT_ARMS,
           branch_order_seed: int = 0, ledger_dir=None) -> AuditResult:
     seen: set = set()
+    seen_requests: set = set()
     branches: Dict[str, BranchResult] = {}
     import random
     order = list(arms)
@@ -392,10 +399,12 @@ def audit(cp: Checkpoint, client_factory, *, replicate_id: str = "0", arms=DEFAU
         raise ValueError("arms must be unique supported arms")
     random.Random(branch_order_seed).shuffle(order)
     for arm in order:
-        br = run_branch(cp, arm, client_factory, replicate_id=replicate_id, other_response_ids=frozenset(seen), ledger_dir=ledger_dir,
+        br = run_branch(cp, arm, client_factory, replicate_id=replicate_id, other_response_ids=frozenset(seen),
+                        other_request_ids=frozenset(seen_requests), ledger_dir=ledger_dir,
                         execution_metadata={"branch_order_seed": branch_order_seed, "arm_order": order, "position": len(branches)})
         branches[arm] = br
         seen |= {r.response_id for r in br.records}
+        seen_requests |= {r.client_request_id for r in br.records if r.client_request_id}
     cross = []
     if all(a in branches and branches[a].world is not None for a in DEFAULT_ARMS):
         cross = [check_sham_identity(cp, branches["F"], branches["S"]),
@@ -453,12 +462,15 @@ def audit_replicates(cp: Checkpoint, client_factory, *, replicate_ids=("0",), ar
     random.Random(branch_order_seed).shuffle(schedule)
     groups = {rep: {} for rep in reps}
     seen = set()
+    seen_requests: set = set()
     for position, (rep, arm) in enumerate(schedule):
         branch = run_branch(cp, arm, client_factory, replicate_id=rep, ledger_dir=ledger_dir,
-                            other_response_ids=frozenset(seen), execution_metadata={
+                            other_response_ids=frozenset(seen), other_request_ids=frozenset(seen_requests),
+                            execution_metadata={
                                 "branch_order_seed": branch_order_seed, "schedule": schedule, "position": position})
         groups[rep][arm] = branch
         seen.update(r.response_id for r in branch.records)
+        seen_requests.update(r.client_request_id for r in branch.records if r.client_request_id)
     results = []
     for rep in reps:
         branches = groups[rep]

@@ -134,7 +134,13 @@ def check_tool_protocol(records: Sequence[RequestRecord]) -> CheckResult:
 # V09/V10 freshness and cache-mode integrity
 # ----------------------------------------------------------------------------------------------
 def check_fresh(branch_records: Sequence[RequestRecord], boundary: int, source_response_ids: set,
-                other_branch_response_ids: set = frozenset()) -> CheckResult:
+                other_branch_response_ids: set = frozenset(), *, source_request_ids: set = frozenset(),
+                other_request_ids: set = frozenset()) -> CheckResult:
+    """V09/V10. Freshness is proven by the client-generated request id (one per live generation).
+
+    Provider response ids are checked only for backends declaring ``unique_response_ids``; elsewhere
+    (e.g. Ollama's OpenAI-compatible endpoint, which repeats ``chatcmpl-NN``) a repeat proves nothing.
+    """
     d: Dict[str, Any] = {"post_fork_requests": len(branch_records)}
     problems = []
     if not branch_records:
@@ -145,17 +151,41 @@ def check_fresh(branch_records: Sequence[RequestRecord], boundary: int, source_r
     d["cache_modes"] = modes
     if modes and modes != ["fresh"]:
         problems.append(f"cache_mode mixture after fork: {modes}")
-    ids = [r.response_id for r in branch_records]
-    if any(i is None for i in ids):
-        problems.append("response without id (cannot prove freshness)")
-    if len(set(ids)) != len(ids):
-        problems.append("duplicate response ids within branch")
-    reused = sorted({i for i in ids if i in source_response_ids})
-    if reused:
-        problems.append(f"{len(reused)} response(s) reused from the source run")
-    cross = sorted({i for i in ids if i in other_branch_response_ids})
-    if cross:
-        problems.append(f"{len(cross)} response(s) shared with another branch/replicate")
+
+    # Client request ids: every post-fork record must carry one, unique in branch, source and other branches.
+    rids = [r.client_request_id for r in branch_records]
+    missing = [r.seq for r in branch_records if not r.client_request_id]
+    if missing:
+        problems.append(f"record(s) without client request id: {missing}")
+    present = [i for i in rids if i]
+    dup_rids = sorted({i for i in present if present.count(i) > 1})
+    if dup_rids:
+        problems.append(f"duplicate client request ids within branch: {len(dup_rids)}")
+    reused_rids = sorted(set(present) & set(source_request_ids))
+    if reused_rids:
+        problems.append(f"{len(reused_rids)} client request id(s) reused from the source run")
+    cross_rids = sorted(set(present) & set(other_request_ids))
+    if cross_rids:
+        problems.append(f"{len(cross_rids)} client request id(s) shared with another branch/replicate")
+    d["client_request_ids"] = len(present)
+
+    # Provider response ids: only where the backend declares them globally unique.
+    unique = [r for r in branch_records if r.unique_response_ids]
+    d["unique_response_id_records"] = len(unique)
+    if unique:
+        ids = [r.response_id for r in unique]
+        if any(i is None for i in ids):
+            problems.append("response without id on a unique-response-id backend (cannot prove freshness)")
+        present_ids = [i for i in ids if i is not None]
+        if len(set(present_ids)) != len(present_ids):
+            problems.append("duplicate response ids within branch")
+        reused = sorted(set(present_ids) & set(source_response_ids))
+        if reused:
+            problems.append(f"{len(reused)} response(s) reused from the source run")
+        cross = sorted(set(present_ids) & set(other_branch_response_ids))
+        if cross:
+            problems.append(f"{len(cross)} response(s) shared with another branch/replicate")
+
     failed = [r.seq for r in branch_records if r.status != "complete"]
     if failed:
         problems.append(f"failed requests: {failed}")

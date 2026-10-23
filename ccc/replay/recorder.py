@@ -35,7 +35,7 @@ class RequestRecord:
     request: Dict[str, Any]       # {"messages": [...], "params": {...}} as submitted
     request_sha256: str
     response: Dict[str, Any]
-    response_id: Optional[str]
+    response_id: Optional[str]    # provider-reported id; recorded always, trusted only if unique_response_ids
     cache_mode: str
     finish_reason: Optional[str]
     latency_ms: Optional[float]
@@ -46,6 +46,8 @@ class RequestRecord:
     api_cost_usd: Optional[float] = None
     context_overflow: bool = False
     python_rng_state_after: Any = None
+    client_request_id: Optional[str] = None   # client-generated unique id per live generation (freshness key)
+    unique_response_ids: bool = False         # backend capability: provider response ids are globally unique
 
     def to_json(self) -> Dict[str, Any]:
         return dict(self.__dict__)
@@ -124,6 +126,8 @@ class RecordingClient:
             turn_index=ctx["turn_index"], agent=ctx["agent"], phase=ctx["phase"],
             planning_round=ctx.get("planning_round"), step=ctx["step"], request=payload,
             request_sha256=sha, response=resp, response_id=resp.get("id"),
+            client_request_id=getattr(self._inner, "last_request_id", None),
+            unique_response_ids=bool(getattr(self._inner, "unique_response_ids", False)),
             cache_mode=getattr(self._inner, "cache_mode", "fresh"),
             finish_reason=(choices[0] or {}).get("finish_reason"), latency_ms=latency_ms,
             status=status, error=error, model_resolved=resp.get("model"),
