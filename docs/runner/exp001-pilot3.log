@@ -1,0 +1,52 @@
+{
+  "evidence_tier": "live_local",
+  "live_calls": 297,
+  "manifest_sha256": "613aed0eba1ba13825f2429be0daf15bcac6baaef7bcc54411e39eeec96afcd1",
+  "run_record": {
+    "checkpoints_launched": 1,
+    "dry_run": false,
+    "live": true,
+    "max_checkpoints": 1
+  },
+  "status": "ready",
+  "verified_artifacts": 1338,
+  "worlds": [
+    {
+      "attempts": [
+        {
+          "path": "worlds/dev02_B1/attempt_0001",
+          "status": "complete"
+        }
+      ],
+      "world": "dev02_B1"
+    },
+    {
+      "attempts": [],
+      "world": "dev02_B2"
+    },
+    {
+      "attempts": [],
+      "world": "dev03_B1"
+    },
+    {
+      "attempts": [],
+      "world": "dev03_B2"
+    },
+    {
+      "attempts": [],
+      "world": "dev04_B1"
+    },
+    {
+      "attempts": [],
+      "world": "dev04_B2"
+    },
+    {
+      "attempts": [],
+      "world": "dev05_B1"
+    },
+    {
+      "attempts": [],
+      "world": "dev05_B2"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "caption": "Schematic of F/S/K/N\u2098 branches from earliest exposure. N\u2098 masks preregistered matched non-audited message(s) M* from the same sender through the persistent receiver-mask path; audited exposure E* remains visible; this checks whether masking irrelevant content itself is harmless. No empirical values.",
+  "data_tier": "synthetic DEV fixtures; no real experiment data",
+  "figure": "fig_arms",
+  "generated_by": "figures/scripts/build_publication.py",
+  "labels": {
+    "N_m": "mask preregistered matched non-audited M* from same sender; E* remains visible",
+    "protocol": "v1.2 \u00a73.1",
+    "tier": "schematic"
+  },
+  "source_files": [
+    {
+      "path": "docs/research/sci002/protocol.md",
+      "sha256": "8f7dcd896c524aa0a056bf11490641c8cc116a2b099de0b903285109f0a92549"
+    }
+  ]
+}

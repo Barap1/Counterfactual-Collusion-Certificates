@@ -1,0 +1,7 @@
+- Produced [fig_arms.svg/pdf](</Users/aarav/Documents/Projects/ApartSprint/figures/fig_arms.svg>) and [fig_gateA_integrity.svg/pdf](</Users/aarav/Documents/Projects/ApartSprint/figures/fig_gateA_integrity.svg>).
+- Produced [fig_confusion_dev.svg/pdf](</Users/aarav/Documents/Projects/ApartSprint/figures/fig_confusion_dev.svg>), labeled DEV, v1.1, pre-amendment.
+- Each figure has a JSON sidecar with source paths and SHA-256 hashes.
+- Added [make_results.py](</Users/aarav/Documents/Projects/ApartSprint/figures/make_results.py>); no results figure was generated.
+- Sources: committed ENG-005 Gate A JSON, Gate A report, and the documented analysis schema. Results are synthetic DEV fixtures, not real or held-out observations.
+- Build completed with starter venv matplotlib; sidecars and output files validated. No tests run.
+- Handoff: [VIS-001a.md](</Users/aarav/Documents/Projects/ApartSprint/ops/reports/VIS-001a.md>).
