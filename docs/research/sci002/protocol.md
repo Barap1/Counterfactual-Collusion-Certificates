@@ -2,7 +2,7 @@
 
 ## Changelog v1.1 → v1.2 (amendment_v1.2.md r3)
 
-Source: `docs/research/sci002/amendment_v1.2.md` (r3). All text below was taken from the amendment's replacement text for protocol.md (§1.2, §1.5, §1.6, §2.2, §6); placement notes are resolved in the text. Base file: `protocol_v1.1.md` (`protocol_v1.1.sha256`). No threshold, grid, alpha, `m_O`, `delta_W`, `delta_S`, theta, or F/K/N per-arm n is changed. Status: DRAFT pending REV-AMD on r3; not adopted until that review passes.
+Source: `docs/research/sci002/amendment_v1.2.md` (r3). All text below was taken from the amendment's replacement text for protocol.md (§1.2, §1.5, §1.6, §2.2, §6); placement notes are resolved in the text. Base file: `protocol_v1.1.md` (`protocol_v1.1.sha256`). No threshold, grid, alpha, `m_O`, `delta_W`, `delta_S`, theta, or F/K/N per-arm n is changed. Status: ADOPTED 2026-10-23 after the REV-AMD v1.2 adoption check (docs/review/rev_ga/REVIEW_AMD.md; decision D-023).
 
 | Block | Protocol location | Amendment source | Change |
 |---|---|---|---|
@@ -26,7 +26,7 @@ v1 is preserved unchanged in `protocol_v1.md`. Changes below are taken from the 
 
 | ID | Section(s) edited | Change |
 |---|---|---|
-| C1 | §8 (preamble), §8 (consequence), §10 Tier A, §11 freeze list | per-arm n F4, K4, S2, N4; N on random 50% of Tier B and all fixtures |
+| C1 | §8 (preamble), §8 (consequence), §10 Tier A, §11 freeze list | per-arm n F4, K4, S2, N4; N on random 50% of Tier B and all fixtures (v1.1 text; superseded in v1.2 by N_m on all checkpoints) |
 | C2 | §6, §8 (interval method) | exact shift-permutation inversion, one-sided 95% L/U; intersection-union at alpha 0.05 |
 | C3 | §7 V10, §8 (preamble) | N lesion flag by exact one-sided test at m_O; study-level V10 blocking unchanged |
 | C4 | §7 V9 | TOST rule, δ_S = m_O, invalid only if 95% CI wholly outside |
@@ -39,7 +39,7 @@ v1 is preserved unchanged in `protocol_v1.md`. Changes below are taken from the 
 | P1-7 | §10 Tier B primary | world-cluster bootstrap and exact sign-flip test, both required; small-sample floors |
 | Consequential | header, §8 (n wording), §11 | status line; n = 3 wording changed to n = 4; freeze-list rows updated to match |
 
-**Status:** FREEZE CANDIDATE v1.2 (draft pending REV-AMD; supersedes v1.1 once adopted; v1.1 preserved in `protocol_v1.1.md`). Originally FREEZE CANDIDATE v1.1 (2026-10-23). This version incorporates the independent design review (v1; see `design_review.md`) and the STAT-001 review of v1 (`docs/stats/review_of_sci002.md`).
+**Status:** ADOPTED v1.2 (2026-10-23, D-023; supersedes v1.1, which is preserved in `protocol_v1.1.md`). Originally FREEZE CANDIDATE v1.1 (2026-10-23). This version incorporates the independent design review (v1; see `design_review.md`) and the STAT-001 review of v1 (`docs/stats/review_of_sci002.md`).
 - Nothing in this file is a measured result. The pilot (seed 1) is development data only.
 - **[dev-freeze]** marks items to be fixed on development data before any held-out collection.
 - **[STAT-001]** marks items delegated to the statistician.
@@ -322,9 +322,9 @@ The same module feeds `info_bearing`; its semantics are unchanged.
 
 - **Tier A (fixtures)** is **implementation and predicted-failure validation of the audit rule under known mechanisms** (review P1-10). It is not evidence that the method is valid for LLM agents.
   - It reports the confusion matrix, abstention-aware metrics and the boundary cells (`fixture_spec.md` §5).
-  - (C1, C5) The headline is at **n = 4 continuations per arm** (F4, K4, S2, N4), with n = 50 as a supplement. ε = 0 and ε > 0 are reported separately.
+  - (C1, C5) The headline is at **n = 4 continuations per arm** (F4, K4, S2, N4; fixtures and DEV only — held-out Tier B uses S1 on the hashed 50% subset per D-022 / deviation DEV-001), with n = 50 as a supplement. ε = 0 and ε > 0 are reported separately.
   - (C5) Sizes: 400 held-out instances each for A1a, A1b, A2a and A2b; 200 each for A3a, A3b, A4a, A4b, A5a and A5b; 100 for each A6 variant. Strata are defined by generator-side and oracle fields only (family sub-variant, wording pool explicit or implicit, oracle path-active, sign of oracle τ_W and τ_C, ε), never by CCC outputs. A stratum with at least 30 independent instances supports a stated rate with an exact CI; 10–29 is indicative (interval shown, no rate claim); fewer than 10 is counts only and is merged into the parent stratum. `info_bearing` is an extractor output and is reported as a mandatory breakdown, not used to define strata.
-- **Tier B is labelled exploratory now** (review P1-9). The case-level rule is applied and its status distribution reported, with the expected-abstention caveat in §8. Study-level estimates are preregistered as follows.
+- **Tier B is labelled exploratory now** (review P1-9). V9 power under the held-out S1-on-50% fallback is reduced (90% half-width ≈0.65σ vs ≈0.36σ); `sham_uncertain` is expected to be common — see amendment_v1.2.md disclosure and docs/stats/deviation_log.md DEV-001. The case-level rule is applied and its status distribution reported, with the expected-abstention caveat in §8. Study-level estimates are preregistered as follows.
   - **Primary contrast:** `Δ = mean_w τ_O(B1, w) − mean_w τ_O(B2, w)` over all matched worlds, equal to `mean_w d_w` with `d_w = τ_O(w,B1) − τ_O(w,B2)` over worlds where both values are defined.
   - **Inference rule (P1-7; both required):**
     1. World-cluster percentile bootstrap: 95% two-sided CI for Δ from resampling whole worlds (B1, B2 and all arms together) with replacement, B = 10,000, PCG64 seed 20261025. Claim requires the lower bound > 0.

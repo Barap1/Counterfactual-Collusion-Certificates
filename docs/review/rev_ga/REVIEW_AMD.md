@@ -104,3 +104,40 @@ m_O, delta_W, delta_S, alpha, theta, grid, CI method are untouched; the 25% wind
 Required before adoption (small, mechanical): (1) fix the A6 map and P3.3 to 350/360 (my error propagated); (2) "at least k candidates"; (3) align Section 6 / §8 C1 with D-022 (S = 1 on a pre-hashed 50% subset), add the deviation_log entry and the V9-power disclosure; (4) labeller-independence line. None of these changes a threshold or a decision rule.
 
 **ADOPT** conditional on edits (1) to (4) being made verbatim as above (no re-review needed for them if the diff is limited to those lines). If the drafter prefers a clean slate: DO-NOT-ADOPT until P3.3 is corrected, because a pre-registered prediction already known to be wrong would be a false pre-registration.
+
+---
+
+# v1.2 adoption check (protocol.md sha256 2d115d4a169b..., vs protocol_v1.1.md 7e3864c7b7e8...)
+
+Method: `diff protocol_v1.1.md protocol.md` (104 lines), every hunk matched to amendment r3 or D-022; v1.1 sha256 matches `protocol_v1.1.sha256`; D-022 hash rule re-computed independently: sha256 of the rule string = c8651ddac16a... (MATCH).
+
+## Hunk traceability (all traceable; none untraceable)
+| Hunk | Source |
+|---|---|
+| Header + changelog table B1-B9 | assembly note; each row maps to a block below |
+| Status line v1.2 draft | assembly |
+| §3 N row -> N_m (all checkpoints, M* empty -> not run, honest scope in last column) | r3 §1.2 |
+| New §3.1 selection rule (definitions, Q with board P rank 1, rank, "at least k", w = 0.25, surface note) | r3 §1.2 incl. r2-verification edit "at least k" |
+| New §3.2 chatter slot + mechanical trigger; Tier B <30% rule | r3 §1.5 |
+| V10 replacement (study level over M* != empty, mix printed, case-level C3 test kept, no-placebo rule) | r3 §1.2 |
+| §8 C1 sentence (S = 2 dev; held-out S = 1 on hash rule; N_m all checkpoints; manifest fields) | r3 §1.2 + §6 / D-022 |
+| §8 info-cap sentence (shared extractor, info_bearing unchanged) | r3 §2.2 |
+| Status 3(a) (M* != empty, N_m run, record text); verbatim record text; status 4 note | r3 §1.1, §1.2 |
+| Status 5 reason `no_placebo_available` listed last | r3 §1.2 |
+| Always-reported tau_O - tau_O^N | r3 §1.2 |
+| §9 first paragraph replaced by the extractor contract, containment, implicit-E* rule, limit text | r3 §2.2 |
+| §11 rows: N_m on all; extractor/alias hash; 25% window + order; chatter + T_chat + trigger; S-subset rule + sha256; filler row removed; n per arm row | r3 §1.6, §6 |
+
+No m_O, delta_W, delta_S, alpha, theta, grid, CI method, V9 TOST rule or F/K/N per-arm n changed (checked: the only parameter lines touched are S n on held-out per D-022 and the new declared 25% window). No analysis rule was altered outside the declared blocks.
+
+## Missing changes
+None of the protocol-bound r3 blocks is missing. Change 3, Change 4 (fixture_spec) and the A6 map are correctly outside protocol.md. Rule-string hash verified.
+
+## Residual non-blocking items
+1. Stale text, §10 Tier A (line ~325): "(C1, C5) ... n = 4 continuations per arm (F4, K4, S2, N4)" still reads S2 with no held-out S1 qualifier, and the v1.1 change-table row C1 (line ~29) still says "N on random 50% of Tier B". The rule text in §8 and §11 governs, but add a one-line qualifier or note "superseded by v1.2 §8" so the document is not self-contradictory.
+2. The V9 power-loss and noise-scale disclosures (REVIEW_AMD requirement) live in amendment Section 6, not in protocol.md. Add a one-line pointer in §7 V9 or §8 reporting that the held-out report must print them.
+3. The status line still reads "draft pending REV-AMD"; update when adopted.
+
+None of these changes a threshold or decision rule.
+
+**ADOPT** (items 1 to 3 are editorial; make them in the adoption commit).

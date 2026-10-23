@@ -97,3 +97,13 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 
 ## D-022 (director) Held-out compute choice under v1.2
 - With N_m on all checkpoints the held-out plan leaves only a 37.1% buffer (4% at 8.4 s/call), below compute_plan.md's 40% requirement. Adopted the preregistered fallback S n=1 on 50% of checkpoints (4,460 calls, about 13.6 h wall, 43% buffer) and dropped optional pairs H09/H10. This was decided on compute grounds before any held-out data exists. Latest held-out start stays 2026-10-24 14:12 UTC.
+
+## D-023 (director) Protocol v1.2 ADOPTED
+- REV-AMD adoption check: all 104 diff lines trace to amendment r3 or D-022, every protocol-bound change landed, and no threshold, V9 rule, CI method or F/K/N n changed. Verdict ADOPT.
+- The director applied the non-blocking cleanups: status lines set to adopted; Tier A S2 clarified as fixtures/DEV only (held-out uses S1 on 50% per D-022); V9-power disclosure pointer added; v1.1 changelog row annotated as superseded. Rehashed protocol_v1.2.sha256.
+- Further N redesign is frozen before held-out. Paper must disclose that C1 was motivated by the DEV Gate A result.
+
+## D-024 (director) Codex credits exhausted
+- Both v1.2 Codex jobs (AMD-IMP-A/B) failed mid-task: "Your workspace is out of credits." Buying credits would be new spending, so no purchase. Partial files are retained in the worktree for review.
+- Remaining implementation moves to Claude: core v1.2 on Sonnet; the independent extractor contract suite on Haiku (a different author from the extractor, per the amendment); constructed-controls completion on Haiku. Owner informed; Codex resumes if the owner restores credits.
+- (D-024 addendum) Independent contract suite (Haiku): 22 tests, 17 pass, 2 fail, 3 skipped as SPEC-AMBIGUOUS. The failures show an extractor mismatch: third-person commitments are attributed to the author instead of the named agent; relayed to the implementer without the tests. Independence caveat: the suite author read about 30 lines of the earlier partial test file before writing. Disclose this in the reproducibility notes. The three ambiguities (CURRENT ASSIGNMENTS syntax, alias format, attribution surface form) are resolved by the implementer as recorded "spec clarifications" and frozen before the census.
