@@ -1,15 +1,15 @@
-# CCC STATUS (updated 2026-10-23 22:40 UTC by director)
+# CCC STATUS (updated 2026-10-23 ~22:20 UTC by director)
 
-**Phase:** Gate A remediation. Deadline 2026-10-26 11:59 UTC. EXP-001 hard stop 2026-10-24 09:00 UTC; held-out latest start 2026-10-24 14:12 UTC; freeze 2026-10-25 22:00 UTC.
-**GATE-A: FAIL (not passed).** Replay integrity passes; the decision layer fails on A5 redundancy, A6 (10 inactive faults), and A1 sensitivity 0/80. See D-015.
+**Phase:** Gate A remediation and dev pilot. Deadline 2026-10-26 11:59 UTC. EXP-001 hard stop 2026-10-24 09:00 UTC; held-out latest start 2026-10-24 14:12 UTC; freeze 2026-10-25 22:00 UTC.
+**GATE-A: FAIL.** Integrity checks are demonstrated (9/9 independent fault injections fire; F=S, K scope and isolation all pass). P0 (REV-GA): "supported" is unreachable under v1.1 because the N-placebo is mis-specified. Amendment v1.2 needed (D-018).
 
 | Task | State | Owner |
 |---|---|---|
-| BOOT/SCI-001/SCI-002(+b v1.1)/INF/FIX/ENG-001..003/EXP-000(b)/PUB early | ACCEPTED | done |
-| STAT-001 | draft accepted; B1 cleared, B2 done (EXP-000b), B3 after EXP-001 | done |
-| ENG-004 | done; Gate A FAIL evidence | done |
-| GA-DIAG | active: root-cause Gate A failures | Codex gpt-6.1-sol/medium |
-| EXP-000c | ACCEPTED (38 tests) | done |
-| EXP-001 | launching: smoke → DEV pilot, local gemma4:26b, hard stop 09:00 UTC | Claude Haiku operator |
+| EXP-001 | 1-checkpoint pilot + watchdog running; full run awaits pilot report to owner | Claude Haiku operator |
+| AMD-001 | drafting protocol amendment v1.2 | Claude Sonnet → REV-GA review |
+| ENG-005 | audit impl fixes vs v1.1, re-run DEV Gate A | Codex gpt-6.1-sol/medium |
+| PUB-002 | draft accepted; SCI-001b wording fixes queued | done |
+| Earlier tasks | ACCEPTED (see tasks.json) | done |
 
-**Tests:** 213/213 offline OK. **Live agents:** 2 Codex of 6. **Budget:** $0 out-of-pocket; 0 experimental live calls so far.
+**Live agents:** 3 of 6. **Budget:** $0 out-of-pocket. **Tests:** 213 + 9 review + new runner tests OK at last full run.
+**Owner-approved (D-016):** dev-only overnight local run under conditions. Held-out NOT approved yet.

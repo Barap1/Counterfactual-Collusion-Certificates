@@ -406,13 +406,31 @@
    "id": "REV-GA",
    "objective": "Independent review of GA-DIAG fixes/proposals + fault-injection tests",
    "owner": "Claude Sonnet",
-   "status": "ACTIVE"
+   "status": "ACCEPTED (9/9 fault-injection; P0 supported unreachable) \u2014 will review AMD-001"
   },
   {
    "id": "PUB-002",
    "objective": "Paper draft methods-first with VERIFIED/PROVISIONAL tags",
    "owner": "Claude Sonnet",
    "status": "DRAFT ACCEPTED (paper/draft.md ~3.7k words main text; trim to 6pp later). Note: docs/gate_a/diag IS committed (GA-DIAG commit)."
+  },
+  {
+   "id": "SCI-001b",
+   "objective": "Close read P01/P04 + recency",
+   "owner": "Claude Sonnet",
+   "status": "ACCEPTED (novelty narrowed: sham/regeneration precedented by P04; 4 draft fixes queued for PUB-003)"
+  },
+  {
+   "id": "AMD-001",
+   "objective": "Protocol amendment v1.2 draft (N-placebo, extractor, reporting, constructed positives)",
+   "owner": "Claude Sonnet",
+   "status": "ACTIVE"
+  },
+  {
+   "id": "ENG-005",
+   "objective": "Audit impl bugs vs v1.1 (C3 exact lesion test, V9/V10, A6 intended validator, A6b precondition)",
+   "owner": "codex gpt-6.1-sol/medium",
+   "status": "ACTIVE"
   }
  ]
 }

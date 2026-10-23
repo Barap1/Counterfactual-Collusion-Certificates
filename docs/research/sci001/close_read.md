@@ -1,0 +1,69 @@
+# SCI-001b Close Read: P01 (VLA) and P04 (Tran & Yu)
+
+**Date:** 2026-10-23. **Sources read in full (method, evaluation, appendices where relevant):** arXiv:2608.19161v1 (PDF text, 11 pp.) and arXiv:2610.28787v1 (arXiv HTML plus PDF). Section numbers below are the papers' own. Quotes are short and verbatim from the retrieved text.
+
+## 1. P01: Kaur, Chari, Raskar, Singh, Jha, Roy. *Beyond the Transcript: Detecting Covert Coordination in Latent Multi-Agent Communication* (VLA). arXiv:2608.19161v1, 19 Aug 2026
+
+| Item | Finding |
+|---|---|
+| **What is intervened on** | A **continuous latent vector** (sender last-token hidden state mapped into the receiver's embedding sequence, §2), not text. Conditions: delivered / replaced with the partner's "matched neutral latent" / blocked (§1, §5 "Matched conditions"). |
+| **Unit** | "one sidecar row represents one scheduled sender-receiver interaction joined to one receiver bid event" (§5 "Pairing and causal units"). A single decision, joined by a correlation ID (§3.1). |
+| **Continuations regenerated?** | **No for the detector.** Layer 2 compares the receiver's *candidate-action score distribution* p(a given latent) with a reference q(a) taken from stored rows of matched conditions (same seed, design, prompt, objective, role order, sender, receiver, context), with priority "blocked latent, then neutral latent, then independent" (§3.2). The reference is a different run condition, not a fork. Regeneration appears only in whitebox *steering*: "the runtime reruns the decision under the matched neutral prompt" for senders; for receivers it "replaces only the incoming suspect latent before scoring the receiver's action distribution" (§4). All single-step. |
+| **Sham / placebo arm** | **None as such.** The closest items are "Neutral latent: the channel carries ordinary, non-collusive information" and "Neutral replacement" (§5). These are controls for content, but are used as the reference/negatives, not as a null-effect (variance-floor) arm. No A/A or resampling test. |
+| **Benign-cooperation control** | **None.** Negatives are independent, neutral latent and blocked rows (Table 4 caption). The neutral latent is "ordinary" information, not engineered to be causally useful. Nothing tests whether a useful-but-legitimate handoff triggers the influence score. |
+| **Harm definition** | Task-specific and directional: bid suppression, Eq[a] lowered. S2 = max(0, Eq[a] - Ep[a]) + 5 * KL(p to q) (§3.2). Outcome metrics: revenue change and "low bid" (a cartel bid at most 5 credits above base) (§6.1). Harm is baked into the score's direction ("lower values represent the harmful direction"). |
+| **False-positive handling** | Thresholds Ti are "neutral 95th-percentile" (§3.2), i.e. nominal 5% on neutral training rows. **No FPR is reported.** AUROC only; positives pool text and latent collusion (§5, abstract). Layer 2 "evaluates a matched counterfactual-access setting rather than control-free prospective detection" (§6.3). Layer 2 AUROC is 0.735 for Phi-4-mini and Qwen3-0.6B vs 0.994 for Mistral-7B (Table 1). |
+| **Scope caveats the authors state** | "a controlled, receiver-primed attack, not the spontaneous emergence of a latent protocol" (§5); full whitebox recovery "is a sanity check by construction" (abstract, §6.4). Single seed per scale setting (Table 5 caption). |
+
+Bottom line: VLA's counterfactual is a **single-step, pre-materialised matched-condition comparison on a latent channel**. It has no fork-and-resample, no sham, no benign-cooperation hard negative, and no inconclusive/invalid verdicts. The ledger's P01 description stands, with two refinements: (a) the reference is a stored matched-condition row, not an online counterfactual of the same trajectory; (b) it does have a neutral-latent control that can be mistaken for a sham.
+
+## 2. P04: Tran & Yu. *Is Anyone Enforcing the Cartel? What Reinforcement Learning Teaches LLM Agents in Markets.* arXiv:2610.28787v1, 20 Oct 2026
+
+| Item | Finding |
+|---|---|
+| **What is intervened on** | **One agent's action** for one period: "In the clone one agent deviates for one period, to its one-period best response or by a visible aggressive shift ... and both copies continue" (§3 "Paired deviation tests"). |
+| **Unit** | A saved market state ("From a saved state we clone the market and its agents"); the event (clone plus deviation) is the unit. CIs are over events, several per session, which "are not independent"; a session-level robustness check is reported (App. F text). |
+| **Continuations regenerated?** | **Yes.** Both copies keep running LLM calls; "Model calls carry sampling seeds set by session, agent and period, so the copies draw the same answers until the deviation changes what agents see" (common random numbers). The clone copies "every agent's history and notes and all random draws to come". |
+| **Sham / placebo arm** | **Yes, in two forms.** (i) A/A tests: copies without a deviation, to check pairing; vLLM copies agree in most calls, API less so, "adding noise but no bias" (§3, App. C). (ii) Strategy-free placebos: "a lone trader, a myopic objective ... and the same prompt with and without a real rival" (§3 "Placebos"). Positive controls are LLMs told to punish and Q-learners. |
+| **Benign-cooperation control** | **No.** The placebos are agents that *cannot* collude, not agents that cooperate legitimately. The audit's null is "a rival that does not punish". Cheap talk (App. J) adds a message channel (prompt: "Messages do not affect prices or profits") and codes messages with an LLM judge; **messages are never ablated or masked**. |
+| **Harm definition** | **None.** Collusion is defined by enforcement: "a cartel ... holds only if a member who cheats is punished" (abstract). Outcomes are a profit/collusion index between Nash (0) and cartel (1); "say where an outcome lies, not whether anyone enforces it" (§2). Customer harm is motivated in §1 but not measured. |
+| **False-positive handling** | Verdict rules (App. F): "punishes" requires the rival's response to be significantly above a non-punishing rival's (and above its myopic placebo's where run) and the deviation not to pay. They report a "False alarms" verdict for agents told to punish that react to noise without a deviation. CIs across events, with a session-level robustness check. A/A bounds the noise. |
+| **Scope caveats stated** | Needs a cloneable market; "a deployed agent that cannot be copied would have to be audited in a sandbox replica" (App. F text). |
+
+Bottom line: P04 is the closest on **methodology** (clone, intervene, regenerate with common random numbers, A/A and placebo arms, positive controls, explicit false-alarm verdict). It is far from us on **object** (actions in markets vs message exposures), on **harm** (none, collusion defined as enforcement), and on **benign cooperation** (absent). Our draft should not imply that regeneration or null/sham arms are unprecedented; they are precedented in P04.
+
+## 3. Check of paper/draft.md Related Work (lines 41, 43)
+
+| # | Draft sentence | Verdict | Corrected wording |
+|---|---|---|---|
+| 1 | "For LLM market agents, counterfactual-copy audits force one agent to deviate in a cloned market and argue that outcome measures alone cannot distinguish enforced collusion from look-alikes [tran2026enforcing]." | Accurate. Could be sharper. | Add: "...and continue both copies with shared sampling seeds, using A/A tests and non-colluding placebos as nulls." Credits their nulls so our sham arm is not presented as new in kind. |
+| 2 | "This work intervenes on actions or populations, not on individual messages." (covers tran2026enforcing and shi2026emergent) | Accurate for message ablation. Slightly incomplete for P04. | "...not on individual messages; Tran and Yu add a message channel in one appendix experiment but only code the messages, without removing them." |
+| 3 | "The closest work, VLA [kaur2026beyond], blocks or neutralizes one private latent exposure with a matched neutral counterfactual and measures the shift in the receiver's action distribution." | Mostly accurate. Imprecise on the reference. | "...compares the receiver's action-score distribution under a delivered latent with that from a matched blocked, neutral or independent condition (same seed, prompt and roles), and combines this with a representation-anomaly gate." State that the exposure is a continuous latent vector and the harm term is directional (bid suppression). |
+| 4 | "we intervene on text exposures in tool-using teams" | Accurate as a difference (VLA is latent). | Keep. Note VLA studies latent, not text, channels, so this is a different channel, not a rival method. |
+| 5 | "we regenerate multi-step continuations in every arm" | Accurate vs VLA (single-step scoring). **Overstated if read as unique:** P04 regenerates continuations in clones. | "In contrast to VLA's single-step action-score comparison, we regenerate multi-step continuations in every arm, as the counterfactual-copy audit of Tran and Yu does for actions." |
+| 6 | "our evaluation targets legitimate causal cooperation as a source of false positives" | Accurate: neither P01 nor P04 has such a control. | Keep. Optionally: "Neither VLA's neutral-latent negatives nor Tran and Yu's non-colluding placebos include causally useful legitimate coordination." |
+| 7 | "We extend this line in three respects" | Wording risk. "Extend" is fine, but VLA also has a neutral-latent control and reports no FPR; do not claim VLA "has no controls". | Keep, but avoid saying VLA lacks a content-matched control. Say it lacks a sham (variance floor) and a legitimate-cooperation control. |
+| 8 | TODO at line 39 ("read the method sections in full") | Resolved by this read. | Remove the TODO for these two papers after PUB review. The residual novelty search is partly refreshed (section 4). |
+| 9 | Line 110: B3 "VLA-style single-step influence score, our adaptation and not a reproduction" | Accurate. VLA's S2 also has a directional term (max(0, Eq[a]-Ep[a])) and a KL weight of 5; neither is mandatory for a text setting. | Keep. State the adaptation (which terms kept) in the methods text. |
+
+claim_review.md/source_ledger.md P04 note "back half not read" and "communication is barely present": now the back half is read; communication appears only in App. J (cheap talk, no ablation). Ledger P01 line "no sham arm, no benign-cooperation fixture ... no inconclusive/invalid verdicts" is confirmed.
+
+## 4. Recency sweep (arXiv API, sorted by submission date, submitted 2026-10-10 onward; run 2026-10-23)
+
+Queries covered: collusion with LLM/agents and counterfactual / intervention / ablation / audit / message / causal; covert coordination; steganography with agents; secret channel / hidden communication; counterfactual replay and failure attribution in multi-agent systems; cooperation vs collusion distinction; Colosseum / Apart. Limits: arXiv keyword search only; no Semantic Scholar or OpenReview citation graph.
+
+| arXiv ID | Date | Title (as retrieved) | Authors | Overlap |
+|---|---|---|---|---|
+| 2610.28787 | 2026-10-20 | Is Anyone Enforcing the Cartel? ... | Hieu Tran, Hong Yu | Already P04. |
+| 2610.21867 | v2 2026-10-15 | Algorithmic Collusion Without Deterrence: Auditing the Punishment Mechanism in Q-Learning Pricing Agents | Kaue Lopes de Moraes, Rodrigo De-Losso | Already P09. |
+| 2610.28905 | 2026-10-20 | Hidden Messages Between Diffusion Language Model Agents: Causal Evidence for Latent Communication | Alan-Barsag Gazzaev, Alexey Gavrilov, Sergey Muravyov, Ilya Makarov | **Partial, method only.** Removal of a message tests "whether the channel matters"; replacement "with a message from another example tests whether its content matters" (abstract). Uses removal plus content-swap (derangement) controls, but on accuracy tasks with latent messages, no collusion, no harm, no benign-cooperation negative. Cite as method precedent for the matched wrong-message control. |
+| 2610.28891 | 2026-10-20 | Fig: Automated Multiagent Behavior Elicitor | Anrui Gu, Zhichao Wang, Nicolai Ouporov (list truncated in retrieval) | Low. Environment interventions to elicit behaviours (incl. covert coordination); an elicitation tool, not an audit of message exposures. |
+| 2610.25852 | 2026-10-19 | MASIF: Implicit Failures for Process Observability in Multi-Agent Systems | Yanwei Huang, Arpit Narechania, Atanu Sinha | Low. Counterfactual replay for MAS failure analysis, not collusion. |
+
+Not found: any paper since 2026-10-15 that combines LLM-agent collusion with message-exposure counterfactuals, regenerated continuations, a sham arm and benign-cooperation hard negatives.
+
+**Apart Research sprint pages.** `https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25` is the sprint itself (23-25 Oct 2026). The retrieved excerpt lists Track 3 item 3.2 with "a benign cooperation request" as a *condition in a partner-offer experiment* (a prompt-manipulation condition, not a hard negative for an intervention audit). No submitted projects were visible, so concurrent same-sprint submissions cannot be ruled out. Search also returned an unrelated earlier Apart submission PDF on peer recognition (not reviewed).
+
+## 5. Novelty status
+
+**Narrowed slightly, not falsified.** (a) Regeneration with common random numbers, A/A nulls and positive controls are precedented in P04 (for actions). (b) Removal plus matched content-swap on messages is precedented in 2610.28905 (outside collusion). (c) No source found combines these with a validity-gated verdict (supported / not supported / inconclusive / invalid) and a legitimate-cooperation hard-negative evaluation for text messages. The contribution must remain the combination plus the failure-mode evaluation. The residual risk is same-sprint submissions and OpenReview, which were not searchable.
