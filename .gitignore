@@ -24,3 +24,4 @@ __pycache__/
 # generated run artifacts (summaries tracked; raw branch dirs not)
 docs/runner/dry-run-*/
 runs/
+docs/gate_a/gate_a_results.json
