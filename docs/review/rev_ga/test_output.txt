@@ -1,0 +1,16 @@
+test_1_leaked_masked_copy_in_receiver_view (tests.review.test_fault_injection.Faults.test_1_leaked_masked_copy_in_receiver_view) ... ok
+test_1b_leak_in_paraphrase_is_NOT_expected_to_fire (tests.review.test_fault_injection.Faults.test_1b_leak_in_paraphrase_is_NOT_expected_to_fire)
+Documents the known limit (not an assertion of success): a light paraphrase of the ... ok
+test_2_tampered_ledger_byte (tests.review.test_fault_injection.Faults.test_2_tampered_ledger_byte) ... ok
+test_3_reused_nonfresh_response (tests.review.test_fault_injection.Faults.test_3_reused_nonfresh_response) ... ok
+test_3b_cross_branch_response_sharing (tests.review.test_fault_injection.Faults.test_3b_cross_branch_response_sharing) ... ok
+test_4_model_id_mismatch (tests.review.test_fault_injection.Faults.test_4_model_id_mismatch) ... ok
+test_4b_requested_model_mismatch (tests.review.test_fault_injection.Faults.test_4b_requested_model_mismatch) ... ok
+test_5_cross_branch_state_mutation (tests.review.test_fault_injection.Faults.test_5_cross_branch_state_mutation) ... ok
+test_clean_controls_valid (tests.review.test_fault_injection.Faults.test_clean_controls_valid) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 4.955s
+
+OK
+REV-GA word-reversed paraphrase leak: status=invalid V07=fail

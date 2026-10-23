@@ -1,0 +1,7 @@
+A1 n=80 oracle tau_O<m_O: 68 ; <=0: 54 ; >m_O: 12
+native-vs-oracle max |diff| over A1: 5.33e-15
+above-floor cells: 12 ; with N==K (|tau_O_N-tau_O|<1e-9): 12 ; lesion reason: 12 ; status={'inconclusive': 12}
+A6 requested=360 activated=350 activated&invalid=350 ; inactive by family={'A6b': 10}
+A5 not-supported (bad): {'A5a-verbatim': 12, 'A5a-paraphrase': 16, 'A5b': 20} / 120
+cells where tau_O_N != tau_O: 0
+CCC supported anywhere: 0

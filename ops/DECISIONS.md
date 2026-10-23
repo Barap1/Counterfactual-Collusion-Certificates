@@ -71,3 +71,11 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 - A5: IMPLEMENTATION BUG (carrier flags not passed to decide) fixed; not-supported down from 100 to 48. The remaining 48 are FIXTURE (24) or PROTOCOL (24 paraphrase carriers).
 - A6: all 350 activated faults detected. The 10 inactive faults produced byte-identical clean branches (FIXTURE activation issue).
 - Gate A stays FAIL. Every proposal in docs/gate_a/diag/proposals.md goes to REV-GA (Claude Sonnet, independent) before adoption. Threshold or semantic changes need a formal amendment.
+
+## D-018 (2026-10-23 ~22:15 UTC, director) REV-GA findings adopted; amendment v1.2 path
+- REV-GA reproduced every GA-DIAG number from raw cells, and all 9 independent fault-injection tests fire (leak, ledger tamper, reused response, model-id mismatch, cross-branch mutation). Integrity checks are demonstrated.
+- P0: under v1.1 as implemented, "supported" is unreachable (0/800 cells). The N filler removes the same content as K, so tau_O_N == tau_O in 390/390 cells and the N-veto always fires. CCC's 0/80 is not evidence about harm detection. Fixing this needs protocol amendment v1.2 (AMD-001), drafted by Sonnet and reviewed by REV-GA before adoption. No threshold changes.
+- The A5 carrier fix over-flags 42 non-A5 truth-none cells (A3a, A4b, A2a). The extractor contract (agent-keyed, equality, negation, negative controls) goes into the amendment.
+- Implementation-vs-v1.1 bugs with no amendment needed go to ENG-005 (Codex): lesion rule must use the C3 exact test, not a point rule; V9/V10 study-level inputs must be wired; the A6 gate must require the intended validator; A6b precondition asserted at generation (no seed search); V07 provenance must not be dropped by setdefault.
+- EXP-001 dev run proceeds. F/S/K are unaffected. Its N branches use the v1.1 placebo and are labelled N_v1.1_deprecated in analysis.
+- Candidate reportable finding (provisional): mechanism-labelled "harmful dependence" fixtures are mostly path-inactive for outsider harm (68/80 below the floor). Label/estimand mismatch.
