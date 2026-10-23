@@ -6,7 +6,7 @@
   "analysis_commit": "a0c6e41dd871387a636bc941809ee458411a8fdd",
   "ccc_commit": "a0c6e41dd871387a636bc941809ee458411a8fdd",
   "upstream_commit": "d585a7b3be50366cc2bdf5789bf8add5890b2abd",
-  "protocol_artifact": "docs/research/sci002/protocol.md",
+  "protocol_artifact": "docs/research/sci002/protocol_v1.1.md",
   "protocol_sha256": "7e3864c7b7e8149fc87d22d2dbeb48e0724796be05d380f306ba8400d86e7281",
   "b1_prompt_variant": "deception",
   "colluder_selection": "random",
