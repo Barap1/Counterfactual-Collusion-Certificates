@@ -15,3 +15,13 @@
 **2026-10-23 D-007 - OpenRouter: pin `cohere/north-mini-code:free`; forbid `openrouter/free`.** `.env` and the session env export `OPENROUTER_MODEL=openrouter/free`; the starter does not read it, but CCC code must never use it.
 
 **2026-10-23 D-008 - Hardened `starter/collusion_hackathon/compute.env` to mode 0600** (was 0644). Contents untouched.
+
+## D-009 (2026-10-23, director) Accept BOOT-001 and SCI-001
+- BOOT-001 accepted. `.claude/settings.json` (depth 3 / concurrency 6) was created by the bootstrap worker; flagged to owner for review, not relied on. Codex usage pending owner confirmation of the logged-in ChatGPT account; Claude workers used meanwhile.
+- SCI-001 accepted. Contribution narrowed per `docs/research/sci001/claim_review.md`: no "first causal audit" or "novel knockout" claims; core claim = validity-gated protocol + benign-cooperation hard-negative evaluation. Fallback ladder in claim_review §3 adopted.
+- INF-001 benchmark (local Ollama + free OpenRouter, no experiments) started in parallel with Gate A work to de-risk throughput; it is a backend benchmark, not experimental collection.
+
+## D-010 (2026-10-23, owner via director) Codex, Modal, commits
+- Owner confirmed the Codex ChatGPT account is correct and asked to prefer Codex workers over Claude workers. New implementation tasks route to Codex via `codex-companion.mjs task --write --background`; Claude agents kept for review/coordination.
+- Owner approved Modal use up to the existing ~$51 credit. Director policy: hard stop at $45 cumulative Modal spend (margin below credit), billing checked before/after each job, no always-on deployments. Out-of-pocket remains $0.
+- Owner approved committing any files (spec pack included). Push/publish/submission still require explicit approval.

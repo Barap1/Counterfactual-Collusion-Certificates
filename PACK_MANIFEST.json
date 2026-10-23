@@ -1,0 +1,137 @@
+{
+  "pack_version": "1.0",
+  "prepared_date": "2026-10-23",
+  "purpose": "Specification and launch materials only; no new experiment execution is claimed.",
+  "master_word_count_approx": 20919,
+  "module_count": 19,
+  "checks": [
+    "balanced Markdown fences",
+    "JSON examples parse",
+    "source references resolve to listed IDs",
+    "module routing paths exist",
+    "pasted pilot CSV columns and reward difference verified",
+    "no API-key-shaped secrets detected"
+  ],
+  "files": [
+    {
+      "path": "CCC_LAUNCH_PROMPT.txt",
+      "bytes": 629,
+      "sha256": "f750ed0ae22b16b3403b993d2a5090d75b65dc187b817c1c1e78f66a4454980d"
+    },
+    {
+      "path": "CCC_MASTER_SPEC.md",
+      "bytes": 154530,
+      "sha256": "348aaf676637f39b11479162ec11ca8a906ee1cd228dd3700da08b5a2edbb835"
+    },
+    {
+      "path": "CCC_PACK_README.md",
+      "bytes": 1818,
+      "sha256": "e3be4509fa7d89044955b2084237b46450de8f17f52366322557d4edf271b8fa"
+    },
+    {
+      "path": "CCC_START_HERE.md",
+      "bytes": 3306,
+      "sha256": "1201a60ecc4f09ed488a0c43bf36d2916968e9ca1330735f38e5039f633beb76"
+    },
+    {
+      "path": "docs/spec/00_control_plane.md",
+      "bytes": 7366,
+      "sha256": "eb15e7a8d4f4ce6f40d42fc0c8dd03de3c27cfab0f60414078040cdd12fae7d5"
+    },
+    {
+      "path": "docs/spec/01_research_strategy.md",
+      "bytes": 9650,
+      "sha256": "9bcf265a155aef90ebceaaa193d40fce75b15902828c6b557de4ae104be6d39d"
+    },
+    {
+      "path": "docs/spec/02_known_state.md",
+      "bytes": 6620,
+      "sha256": "98241025e723d270e5cef7e01c44e576817342bdd6ea8e2bc7020e00f03a888c"
+    },
+    {
+      "path": "docs/spec/03_agent_orchestration.md",
+      "bytes": 10457,
+      "sha256": "fe48770414af56cf844b4d31957033c61e5bc97a1b6113f666fde980c5d77454"
+    },
+    {
+      "path": "docs/spec/04_causal_contract.md",
+      "bytes": 10849,
+      "sha256": "731943357a90d068e757fbf0a9b9835eed55671aa0c1dcd75ec747e48b110cb2"
+    },
+    {
+      "path": "docs/spec/05_experiment_design.md",
+      "bytes": 12037,
+      "sha256": "3959899b6cf9672880347028675ad2e1c085268adffd2f1cc6e48e2e4abcbe32"
+    },
+    {
+      "path": "docs/spec/06_analysis_plan.md",
+      "bytes": 8337,
+      "sha256": "ce0f5006bfc4589d9a74faa4d52c3fab0ddd2a19d8b2136cf15f14ea42fdce61"
+    },
+    {
+      "path": "docs/spec/07_engineering_architecture.md",
+      "bytes": 10088,
+      "sha256": "62ecac53e7f35632d4ac2f21d201f9c0d74f90f757eb391d3fd52b8efa024d08"
+    },
+    {
+      "path": "docs/spec/08_bootstrap_runbook.md",
+      "bytes": 7520,
+      "sha256": "bdb3b9595010b9915da275913852bfc82c65130ff5a19ca52d5da650eb95ff9b"
+    },
+    {
+      "path": "docs/spec/09_inference_and_budget.md",
+      "bytes": 7964,
+      "sha256": "ef48822acafc5ab5dc88addf6d2930c40e0509a4f4b07e1009bc5a3ad2ed8d1d"
+    },
+    {
+      "path": "docs/spec/10_verification.md",
+      "bytes": 6894,
+      "sha256": "200da453fcc2ccf8ce6666361bf21d7231754ce09a126e0ad3f7142b524d6865"
+    },
+    {
+      "path": "docs/spec/11_visual_experience.md",
+      "bytes": 6033,
+      "sha256": "435f79274371b9fc5459db43af4a92d741f628a2b4ece6cb9724d1de3f440c34"
+    },
+    {
+      "path": "docs/spec/12_paper_and_drive.md",
+      "bytes": 7622,
+      "sha256": "79bbac9ce1ba6066071deb7608fbe36f7b52ba829afe709d06329794213ecae9"
+    },
+    {
+      "path": "docs/spec/13_workplan.md",
+      "bytes": 8039,
+      "sha256": "6bd4dc412f19ad9d3d5996c32382479587572237c71d169245b4eb5ece868b1f"
+    },
+    {
+      "path": "docs/spec/14_git_and_security.md",
+      "bytes": 5577,
+      "sha256": "d055cffeb01b078b307e7cdb382a69b66747b6a1d12d9e8b2e75bc4f8b2f341f"
+    },
+    {
+      "path": "docs/spec/15_artifact_contracts.md",
+      "bytes": 5937,
+      "sha256": "29b0663970fb77e72cf628c7078a6a15267075bacdd8d4981daf369f6afad130"
+    },
+    {
+      "path": "docs/spec/16_agent_briefs.md",
+      "bytes": 7757,
+      "sha256": "36bd70e1d3dda37faf753a9425a037ae99babae6223338be156ca04bc14afe7f"
+    },
+    {
+      "path": "docs/spec/17_release_checklist.md",
+      "bytes": 4067,
+      "sha256": "edce755d552fff3ccadf0faba1cc7001c243209f5ae519dbc716a6dd74aa05ba"
+    },
+    {
+      "path": "docs/spec/18_sources.md",
+      "bytes": 7035,
+      "sha256": "69a950b048f0b3071b3e1c784b2d6b19eb1c80e49936320b0ecabd86571990ef"
+    },
+    {
+      "path": "docs/spec/assets/pilot_summary.csv",
+      "bytes": 1345,
+      "sha256": "5da734b737cd2c04a864afc5164e5f25f8638040f87847c6fd16dfade348b159"
+    }
+  ]
+}

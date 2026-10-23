@@ -1,6 +1,6 @@
 {
  "schema": "ccc-tasks/1",
- "updated_utc": "2026-10-23T16:25Z",
+ "updated_utc": "2026-10-23T16:13:11Z",
  "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
  "policy": {
   "max_worker_depth": 3,
@@ -59,14 +59,14 @@
    "role": "Bootstrap Lead",
    "depends_on": [],
    "acceptance": "Module 08 checks pass; no large inference batch",
-   "status": "READY_FOR_REVIEW",
+   "status": "ACCEPTED",
    "owner": "bootstrap-subagent(depth1)",
    "lease": {
     "lock": "ops/locks/BOOT-001.lock",
     "acquired_utc": "2026-10-23T16:03:25Z"
    },
    "attempt": 1,
-   "review_state": "none",
+   "review_state": "director-accepted 2026-10-23T16:13:11Z; owner items open (Modal limit, Codex account, settings restart)",
    "artifacts": [
     "ops/reports/BOOT-001.md",
     "ops/environment.local.json (gitignored)",
@@ -111,12 +111,16 @@
    "role": "Source worker + skeptical reviewer",
    "depends_on": [],
    "acceptance": "At least the closest four methods inspected; no unsupported first claim",
-   "status": "active",
+   "status": "ACCEPTED",
    "owner": "director-launched read-only agent",
    "lease": null,
    "attempt": 0,
-   "review_state": "none",
-   "artifacts": [],
+   "review_state": "director-accepted 2026-10-23T16:13:11Z; REV-001 to re-verify sources + recency check before submission",
+   "artifacts": [
+    "docs/research/sci001/novelty_matrix.md",
+    "docs/research/sci001/source_ledger.md",
+    "docs/research/sci001/claim_review.md"
+   ],
    "note": "started alongside BOOT-001 after lock"
   },
   {
@@ -125,8 +129,8 @@
    "role": "Replay engineer",
    "depends_on": [],
    "acceptance": "Exact hooks and inaccessible state documented",
-   "status": "queued",
-   "owner": null,
+   "status": "ACTIVE",
+   "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
@@ -142,8 +146,8 @@
     "ENG-001"
    ],
    "acceptance": "Independent design reviewer approves or explicitly narrows",
-   "status": "queued",
-   "owner": null,
+   "status": "ACTIVE",
+   "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
@@ -159,8 +163,8 @@
     "ENG-001"
    ],
    "acceptance": "Offline invariants and corruption tests pass",
-   "status": "queued",
-   "owner": null,
+   "status": "ACTIVE",
+   "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
@@ -189,8 +193,8 @@
     "GATE-A"
    ],
    "acceptance": "Tool-loop compatibility and zero-new-spend guards demonstrated",
-   "status": "queued",
-   "owner": null,
+   "status": "ACTIVE",
+   "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
@@ -294,8 +298,8 @@
     "GATE-C"
    ],
    "acceptance": "Numeric/source audit and template preservation",
-   "status": "queued",
-   "owner": null,
+   "status": "ACTIVE (early: outline + read-only Drive check)",
+   "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
    "review_state": "none",

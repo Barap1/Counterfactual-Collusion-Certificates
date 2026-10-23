@@ -1,15 +1,19 @@
-# CCC STATUS (updated 2026-10-23 ~16:30 UTC by BOOT-001)
+# CCC STATUS (updated 2026-10-23 ~17:00 UTC by director)
 
-**Phase:** Bootstrap complete → Phase 1 (SCI-001 ∥ ENG-001). Deadline 2026-10-26 11:59 UTC.
-**Next gate:** director reviews BOOT-001, then launches ENG-001 (recorder/state inspection). SCI-001 is already running. Next after those: SCI-002 ↔ ENG-002 → GATE-A.
+**Phase:** 1 → Gate A work. Deadline 2026-10-26 11:59 UTC. Internal freeze target 2026-10-25 22:00 UTC; owner-review package 2026-10-26 01:00 UTC.
+**Next gate:** GATE-A (deterministic F=S identity, knockout-only-changes-exposure, isolation, benign-cooperation fixture not mislabeled).
 
 | Task | State | Owner |
 |---|---|---|
-| BOOT-001 | READY_FOR_REVIEW (`ops/reports/BOOT-001.md`) | bootstrap subagent |
-| SCI-001 | active (read-only) | director-launched agent |
-| ENG-001 | queued, unblocked | - |
+| BOOT-001 | ACCEPTED | bootstrap agent (done) |
+| SCI-001 | ACCEPTED (`docs/research/sci001/`) | source agent (done) |
+| SCI-002 | active | causal-design agent (+≤1 reviewer child) |
+| ENG-001/002 | active (offline only) | replay engineer (+≤1 child) |
+| INF-001 | active (benchmark only; Modal blocked) | inference controller |
+| PUB-001 (early) | active (outline, read-only Drive check) | publication agent |
+| FIX-001 | queued: after SCI-002 fixture_spec | - |
 | rest | queued (see `ops/tasks.json`) | - |
 
-**Readiness:** offline ✅ · nested Claude ✅ (depth 3) · Codex bridge ✅ (+ native nesting) · OpenRouter free ⚠️ conditional · local Ollama ⏳ INF-001 · Modal ⛔ owner · Drive ❔ unverified.
-**Budget:** new out-of-pocket $0.00. OpenRouter usage 0. Modal $0.00 metered. No experiment calls made.
-**Blockers (owner):** Modal $0 net-spend limit + credit balance. Confirm Codex ChatGPT account. Restart session so `.claude/settings.json` caps apply.
+**Live agents:** 4 (+ up to 2 children) of 6.
+**Budget:** new out-of-pocket $0.00.
+**Owner items:** Modal $0 net-spend limit + credit; confirm Codex ChatGPT account (Codex unused until then); review subagent-created `.claude/settings.json`.
