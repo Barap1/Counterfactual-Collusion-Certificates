@@ -11,9 +11,10 @@
 | ENG-003 | active: replay hardening | Codex gpt-6.1-sol/high |
 | ENG-004 | active: audit layer + baselines + Gate A evidence | Codex gpt-6.1-sol/medium |
 | EXP-000 | active: live runner plumbing, dry-run only | Codex gpt-6.1-sol/medium |
-| STAT-001 | active: prereg + compute plan + SCI-002 review | Claude Sonnet |
+| STAT-001 | draft accepted; freeze blocked on B1/B2/B3 | done |
+| SCI-002b | active: protocol v1.1 (C1–C8) | Claude Haiku |
 | Next | Gate A verifier → EXP-001 Gate B pilot (local gemma4:26b) | - |
 
-**Live agents:** 4 (3 Codex + 1 Claude, ≤1 child) of 6.
+**Live agents:** 4 (3 Codex + 1 Claude Haiku) of 6. EXP-001 hard stop 2026-10-24 09:00 UTC; held-out latest start 2026-10-24 14:12 UTC.
 **Budget:** out-of-pocket $0.00. Modal unused (permission denied on billing check). Local Ollama is the primary backend.
 **Tests:** 128/129 offline pass; 1 error (`problem_layer` import), assigned to ENG-003.

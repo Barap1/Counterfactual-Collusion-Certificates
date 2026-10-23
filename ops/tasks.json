@@ -229,12 +229,14 @@
     "GATE-B"
    ],
    "acceptance": "World-level analysis; realistic uncertainty; holdout untouched",
-   "status": "ACTIVE",
+   "status": "DRAFT ACCEPTED; freeze blocked on B1 (SCI-002b), B2 (runner manifest), B3 (post-EXP-001 addendum)",
    "owner": "Claude Sonnet agent (relaunched per D-012)",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
-   "artifacts": []
+   "artifacts": [
+    "docs/stats/"
+   ]
   },
   {
    "id": "EXP-002",
@@ -365,6 +367,15 @@
    ],
    "status": "ACTIVE",
    "brief": "ops/briefs/EXP-000.md"
+  },
+  {
+   "id": "SCI-002b",
+   "objective": "Protocol v1.1 applying STAT-001 C1-C8",
+   "owner": "Claude Haiku",
+   "status": "ACTIVE",
+   "depends_on": [
+    "STAT-001"
+   ]
   }
  ]
 }

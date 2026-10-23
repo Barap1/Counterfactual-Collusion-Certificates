@@ -39,3 +39,8 @@
 - Relaunched ENG-004 on gpt-6.1-sol/medium; STAT-001 on Claude Sonnet, no child. ENG-003 (gpt-6.1-sol/high) and EXP-000 (gpt-6.1-sol/medium) left running.
 - Default policy from now: Codex gpt-6.1-sol medium (high only when justified), gpt-6-luna for easy tasks; Claude Sonnet/Haiku. No gpt-6-astra or Opus without recording a reason.
 - (owner follow-up) Be stingy with model/reasoning choices; use Claude Haiku for simple builds, edits and checks. Escalate tier only for science-critical judgment, with the reason logged.
+
+## D-013 (2026-10-23 21:50 UTC, director) STAT-001 draft accepted; freeze path
+- STAT-001 prereg accepted as draft, NOT frozen. Freeze blockers: B1 protocol v1.1 (C1–C8; Haiku SCI-002b, then spot-check), B2 runner manifest per-arm map {F4,K4,S2,N4} + per-arm/rep/call seeds (follow-up to EXP-000), B3 Stage-2 dev-pinned addendum after EXP-001.
+- Schedule adopted: EXP-001 Gate-B dev pilot (4 dev world-pairs) must finish by 2026-10-24 09:00 UTC hard stop; held-out EXP-002 latest start 2026-10-24 14:12 UTC; collection ends 2026-10-25 12:00 UTC.
+- STAT-001 test-vector reference script copied from /tmp into docs/stats/ref_enumeration.py for reproducibility.
