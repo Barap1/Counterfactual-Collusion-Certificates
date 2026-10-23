@@ -89,3 +89,8 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 - AMD-001 draft committed with pre-written predictions; hash in git. Under review by REV-GA (same independent reviewer, not the drafter). It is not adopted and protocol.md is unchanged until the review passes.
 - EXP-001 runs with F/S/K plus N_v1.1 (labelled N_v1.1_deprecated) once EXP-000d lands and the pilot passes. Its purpose is operational validity plus F/S noise for pinning m_O.
 - If v1.2 is adopted, a small EXP-001b dev mini-run (fresh F alongside N_m in the same model session) validates N_m operationally before any held-out run. This is AMD-001's preferred option; a cross-session contrast is rejected.
+
+## D-021 (director) REV-AMD outcome
+- REV-AMD verdict: ADOPT-WITH-EDITS, no P0. All P1 required edits go back to the drafter (AMD-001 r2), then REV-AMD re-checks the edits only.
+- Director choice on the P1 "supported needs N_m but N runs on only 50% of Tier B" issue: run N_m on ALL checkpoints (held-out N4 on 100%) rather than declare a semantic change. The compute impact must be recomputed in the amendment against compute_plan.md's 45% buffer; if it does not fit, fall back to declaring the semantic change explicitly.
+- Disclose in the paper and amendment that C1 was motivated by the DEV Gate A result; freeze against any further N redesign before held-out.
