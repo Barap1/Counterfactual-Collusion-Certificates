@@ -1,0 +1,321 @@
+{
+ "schema": "ccc-tasks/1",
+ "updated_utc": "2026-10-23T16:25Z",
+ "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
+ "policy": {
+  "max_worker_depth": 3,
+  "max_live_agents_global": 6,
+  "max_live_leads": 2,
+  "reserve_review_capacity": 1,
+  "max_new_children_per_delegation": 2,
+  "max_concurrent_experiment_controllers": 1,
+  "initial_remote_inference_concurrency": 1,
+  "note": "Codex threads and their native subagents count toward the 6-agent global cap; the Claude env cap does not see them."
+ },
+ "live_agents": [
+  {
+   "id": "SCI-001",
+   "runtime": "claude"
+  },
+  {
+   "id": "BOOT-001",
+   "runtime": "claude",
+   "releasing": true
+  }
+ ],
+ "gates": {
+  "GATE-A": {
+   "after": [
+    "SCI-002",
+    "ENG-002",
+    "FIX-001"
+   ],
+   "criterion": "deterministic integrity and benign-cooperation tests"
+  },
+  "GATE-B": {
+   "after": [
+    "EXP-001"
+   ],
+   "criterion": "valid real branch and feasible collection plan"
+  },
+  "GATE-C": {
+   "after": [
+    "STAT-002",
+    "REV-001"
+   ],
+   "criterion": "claim audit + reproduction"
+  },
+  "GATE-D": {
+   "after": [
+    "PUB-001"
+   ],
+   "criterion": "final PDF, ethics, provenance, owner approval"
+  }
+ },
+ "tasks": [
+  {
+   "id": "BOOT-001",
+   "objective": "Environment/delegation/budget audit; preserved pilot",
+   "role": "Bootstrap Lead",
+   "depends_on": [],
+   "acceptance": "Module 08 checks pass; no large inference batch",
+   "status": "READY_FOR_REVIEW",
+   "owner": "bootstrap-subagent(depth1)",
+   "lease": {
+    "lock": "ops/locks/BOOT-001.lock",
+    "acquired_utc": "2026-10-23T16:03:25Z"
+   },
+   "attempt": 1,
+   "review_state": "none",
+   "artifacts": [
+    "ops/reports/BOOT-001.md",
+    "ops/environment.local.json (gitignored)",
+    "ops/resource_policy.local.json (gitignored)",
+    "ops/pilot_manifest.sha256",
+    "ops/reports/pilot_metric_audit.md",
+    "ops/reports/delegation_check/",
+    "ops/reports/INF-001_benchmark_plan.md",
+    "tests/test_offline_adapter.py",
+    "ccc/"
+   ],
+   "children": [
+    {
+     "id": "BOOT-001-NEST-A",
+     "depth": 2,
+     "runtime": "claude(haiku)",
+     "status": "completed"
+    },
+    {
+     "id": "BOOT-001-NEST-B",
+     "depth": 3,
+     "runtime": "claude(haiku)",
+     "status": "completed"
+    },
+    {
+     "id": "BOOT-001-CODEX-1",
+     "depth": 2,
+     "runtime": "codex(gpt-6.1-sol default, effort low)",
+     "thread": "01a16983-935e-7c32-ab4d-90e3ade2264a",
+     "status": "completed",
+     "codex_subagent": "/root/hash_check"
+    }
+   ],
+   "open_items": [
+    "Modal $0 net-spend limit + credit balance (owner dashboard)",
+    "module 08 \u00a7F paper outline/author checklist + Drive check deferred to PUB-001 (module 12 not in BOOT inputs)"
+   ]
+  },
+  {
+   "id": "SCI-001",
+   "objective": "Closest prior art and claim review; novelty matrix; verified source ledger",
+   "role": "Source worker + skeptical reviewer",
+   "depends_on": [],
+   "acceptance": "At least the closest four methods inspected; no unsupported first claim",
+   "status": "active",
+   "owner": "director-launched read-only agent",
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": [],
+   "note": "started alongside BOOT-001 after lock"
+  },
+  {
+   "id": "ENG-001",
+   "objective": "Recorder/state inspection; state/observation map and prototype strategy",
+   "role": "Replay engineer",
+   "depends_on": [],
+   "acceptance": "Exact hooks and inaccessible state documented",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "SCI-002",
+   "objective": "Causal/metric contract: harm definition, intervention scope, control plan",
+   "role": "Causal-design worker",
+   "depends_on": [
+    "BOOT-001",
+    "SCI-001",
+    "ENG-001"
+   ],
+   "acceptance": "Independent design reviewer approves or explicitly narrows",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "ENG-002",
+   "objective": "Minimal replay prototype: snapshot/reconstruction, F/K/S execution",
+   "role": "Replay engineer + test worker",
+   "depends_on": [
+    "BOOT-001",
+    "SCI-001",
+    "ENG-001"
+   ],
+   "acceptance": "Offline invariants and corruption tests pass",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "FIX-001",
+   "objective": "Independent mechanism/control fixture generator",
+   "role": "Fixture worker",
+   "depends_on": [
+    "SCI-002"
+   ],
+   "acceptance": "Labels not derived from CCC; hidden labels not leaked",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "INF-001",
+   "objective": "Realistic backend benchmark and cost reservation",
+   "role": "Inference controller",
+   "depends_on": [
+    "GATE-A"
+   ],
+   "acceptance": "Tool-loop compatibility and zero-new-spend guards demonstrated",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "EXP-001",
+   "objective": "Small real development pilot; throughput and failure report",
+   "role": "Experiment controller",
+   "depends_on": [
+    "INF-001"
+   ],
+   "acceptance": "Real branch validity inspected; all attempted cases retained",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "STAT-001",
+   "objective": "Freeze protocol, thresholds, sample/compute plan + independent review",
+   "role": "Statistician + cold reviewer",
+   "depends_on": [
+    "GATE-B"
+   ],
+   "acceptance": "World-level analysis; realistic uncertainty; holdout untouched",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "EXP-002",
+   "objective": "Held-out collection; immutable traces and manifests",
+   "role": "Experiment controller",
+   "depends_on": [
+    "STAT-001"
+   ],
+   "acceptance": "No unregistered model/prompt switch or selective reruns",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "STAT-002",
+   "objective": "Frozen analysis: effect tables, intervals, missingness, claim candidates",
+   "role": "Statistician",
+   "depends_on": [
+    "EXP-002"
+   ],
+   "acceptance": "Offline rerun agrees; claims follow realized evidence",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "VIS-001",
+   "objective": "Publication figures and offline replay viewer (skeleton may use labeled fixtures)",
+   "role": "Visualization worker",
+   "depends_on": [
+    "EXP-002"
+   ],
+   "acceptance": "Data lineage, readable design, no hidden live calls",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "REV-001",
+   "objective": "Independent scientific and code audit",
+   "role": "Independent reviewer",
+   "depends_on": [
+    "STAT-002"
+   ],
+   "acceptance": "Reproduces key metric and challenges strongest claim",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "PUB-001",
+   "objective": "Paper, references, required appendix, working Doc sync",
+   "role": "Publication worker",
+   "depends_on": [
+    "GATE-C"
+   ],
+   "acceptance": "Numeric/source audit and template preservation",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  },
+  {
+   "id": "REL-001",
+   "objective": "Reproduction bundle, final PDF, owner checklist",
+   "role": "Integration/release reviewer",
+   "depends_on": [
+    "PUB-001",
+    "GATE-D"
+   ],
+   "acceptance": "All mandatory gates pass or limitations explicitly narrow release",
+   "status": "queued",
+   "owner": null,
+   "lease": null,
+   "attempt": 0,
+   "review_state": "none",
+   "artifacts": []
+  }
+ ]
+}

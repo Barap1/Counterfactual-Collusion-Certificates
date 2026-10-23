@@ -1,0 +1,4 @@
+spawned: yes
+subagent_id: /root/hash_check
+subagent_reported_sha256: a72b43c1eca7188cba4e85b825fb467d1f5370a9be66d58a7caa6e084d93b031
+note: One native subagent read the file and reported its SHA-256.

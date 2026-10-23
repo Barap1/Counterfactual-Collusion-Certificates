@@ -1,0 +1,19 @@
+{
+ "task_id": "BOOT-001",
+ "role": "Environment/Bootstrap Lead",
+ "owner": "bootstrap-subagent (depth 1, spawned by director)",
+ "acquired_utc": "2026-10-23T16:03:25Z",
+ "owned_paths": [
+  "ops/**",
+  "CLAUDE.md",
+  "AGENTS.md",
+  ".gitignore",
+  ".claude/settings.json",
+  "ccc/**",
+  "tests/**",
+  "pyproject.toml"
+ ],
+ "note": "Setup writes complete; director/integrator may now write ops/* (serialize updates).",
+ "status": "released-pending-director-review",
+ "released_utc": "2026-10-23T16:30Z"
+}

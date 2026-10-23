@@ -1,0 +1,17 @@
+# Decisions (dated; newest last)
+
+**2026-10-23 D-001 (BOOT-001) - Starter checkout stays gitignored.** `starter/collusion_hackathon/` is a separate upstream git checkout (SHA d585a7b, clean tracked tree), ignored by the project `.gitignore`. Kept as-is to avoid a nested repo in history; its absolute paths live in `ops/environment.local.json`. Alternative (submodule/vendoring) deferred to REL-001.
+
+**2026-10-23 D-002 - Pilot archived locally, hashes tracked.** Both pilot batches copied read-only to `results/baselines/colosseum_positive_control_seed1/` (complete, 20261023-111625) and `..._interrupted/` (20261023-111229, status "running", 0 completed). Raw traces gitignored until a sanitized release; `ops/pilot_manifest.sha256` (27 files) is tracked. Source left untouched.
+
+**2026-10-23 D-003 - Pilot model provenance kept unedited.** Batch `config.json` requested `Qwen/Qwen2.5-7B-Instruct` (label `openai_gpt4o_mini`); `run_config.json` recorded `cohere/north-mini-code:free`. Mechanism most likely an `LLM_MODEL` override at run time (unset now) - unverified. Archived labels are not rewritten.
+
+**2026-10-23 D-004 - Use the existing Colosseum venv read-only for CCC dev.** Python 3.14.7, Terrarium 0.1.1 pass the offline preflight; no reinstall/downgrade. CCC tests are stdlib-only and run with that interpreter via `-m unittest`; a separate env is created only on a demonstrated incompatibility.
+
+**2026-10-23 D-005 - Codex bridge = direct companion script.** The `codex@openai-codex` plugin (1.0.6) is installed for `/Users/aarav` scope and not enabled here, so the `codex:codex-rescue` agent type is absent. The verified route is `node ~/.claude/plugins/cache/openai-codex/codex/1.0.6/scripts/codex-companion.mjs task ...` via Bash. Enabling the plugin for this project is an owner choice (adds hooks).
+
+**2026-10-23 D-006 - Modal blocked until account-side $0 net-spend limit is verified.** CLI shows $0 metered/billed this month but not credits or limits.
+
+**2026-10-23 D-007 - OpenRouter: pin `cohere/north-mini-code:free`; forbid `openrouter/free`.** `.env` and the session env export `OPENROUTER_MODEL=openrouter/free`; the starter does not read it, but CCC code must never use it.
+
+**2026-10-23 D-008 - Hardened `starter/collusion_hackathon/compute.env` to mode 0600** (was 0644). Contents untouched.

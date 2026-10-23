@@ -1,0 +1,2 @@
+reader: BOOT-001-NEST-B depth3
+sha256: 622aed5a4507bc2e6a594c4011857e37387a7e8dc8ac9f7fd7649a1efbf70014

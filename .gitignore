@@ -1,0 +1,22 @@
+starter/collusion_hackathon/
+.env
+compute.env
+**/compute.env
+starter/collusion_hackathon/
+
+# --- BOOT-001 additions (2026-10-23) ---
+# local-only manifests / policies (paths, account details)
+*.local.json
+ops/environment.local.json
+ops/resource_policy.local.json
+.claude/settings.local.json
+# raw pilot / experiment traces stay local until a sanitized release (hash manifest is tracked in ops/)
+results/baselines/
+results/raw/
+# models, envs, caches, OS noise
+*.gguf
+*.safetensors
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
