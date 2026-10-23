@@ -94,3 +94,6 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 - REV-AMD verdict: ADOPT-WITH-EDITS, no P0. All P1 required edits go back to the drafter (AMD-001 r2), then REV-AMD re-checks the edits only.
 - Director choice on the P1 "supported needs N_m but N runs on only 50% of Tier B" issue: run N_m on ALL checkpoints (held-out N4 on 100%) rather than declare a semantic change. The compute impact must be recomputed in the amendment against compute_plan.md's 45% buffer; if it does not fit, fall back to declaring the semantic change explicitly.
 - Disclose in the paper and amendment that C1 was motivated by the DEV Gate A result; freeze against any further N redesign before held-out.
+
+## D-022 (director) Held-out compute choice under v1.2
+- With N_m on all checkpoints the held-out plan leaves only a 37.1% buffer (4% at 8.4 s/call), below compute_plan.md's 40% requirement. Adopted the preregistered fallback S n=1 on 50% of checkpoints (4,460 calls, about 13.6 h wall, 43% buffer) and dropped optional pairs H09/H10. This was decided on compute grounds before any held-out data exists. Latest held-out start stays 2026-10-24 14:12 UTC.
