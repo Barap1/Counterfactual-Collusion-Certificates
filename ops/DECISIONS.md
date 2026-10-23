@@ -79,3 +79,8 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 - Implementation-vs-v1.1 bugs with no amendment needed go to ENG-005 (Codex): lesion rule must use the C3 exact test, not a point rule; V9/V10 study-level inputs must be wired; the A6 gate must require the intended validator; A6b precondition asserted at generation (no seed search); V07 provenance must not be dropped by setdefault.
 - EXP-001 dev run proceeds. F/S/K are unaffected. Its N branches use the v1.1 placebo and are labelled N_v1.1_deprecated in analysis.
 - Candidate reportable finding (provisional): mechanism-labelled "harmful dependence" fixtures are mostly path-inactive for outsider harm (68/80 below the floor). Label/estimand mismatch.
+
+## D-019 (director) EXP-001 pilot false-positive halt
+- The pilot halted after 1 live call ($0) with model_reload. Cause: expires_at was part of the load fingerprint, and Ollama refreshes it on each request even with keep_alive -1. Digest, VRAM, context and the listener and runner PIDs were unchanged. Classified as a runner false positive, not a real reload. The halt behaved as intended (fail closed).
+- Fix in EXP-000d (Codex): fingerprint without expires_at, using the runner-subprocess PID as the primary reload signal and the canary as secondary. Then re-run the 1-checkpoint pilot and report to the owner before the full run (D-016).
+- Watchdog (20 tests) accepted.
