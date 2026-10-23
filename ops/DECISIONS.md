@@ -84,3 +84,8 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 - The pilot halted after 1 live call ($0) with model_reload. Cause: expires_at was part of the load fingerprint, and Ollama refreshes it on each request even with keep_alive -1. Digest, VRAM, context and the listener and runner PIDs were unchanged. Classified as a runner false positive, not a real reload. The halt behaved as intended (fail closed).
 - Fix in EXP-000d (Codex): fingerprint without expires_at, using the runner-subprocess PID as the primary reload signal and the canary as secondary. Then re-run the 1-checkpoint pilot and report to the owner before the full run (D-016).
 - Watchdog (20 tests) accepted.
+
+## D-020 (director) Amendment v1.2 draft and EXP-001 sequencing
+- AMD-001 draft committed with pre-written predictions; hash in git. Under review by REV-GA (same independent reviewer, not the drafter). It is not adopted and protocol.md is unchanged until the review passes.
+- EXP-001 runs with F/S/K plus N_v1.1 (labelled N_v1.1_deprecated) once EXP-000d lands and the pilot passes. Its purpose is operational validity plus F/S noise for pinning m_O.
+- If v1.2 is adopted, a small EXP-001b dev mini-run (fresh F alongside N_m in the same model session) validates N_m operationally before any held-out run. This is AMD-001's preferred option; a cross-session contrast is rejected.
