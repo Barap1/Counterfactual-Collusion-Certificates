@@ -1,0 +1,9 @@
+{
+  "label": "DEV/pilot",
+  "phase": "development",
+  "problems": [],
+  "valid": true,
+  "warnings": [
+    "Stage 2 absent: DEV fallback margins; no frozen claim"
+  ]
+}

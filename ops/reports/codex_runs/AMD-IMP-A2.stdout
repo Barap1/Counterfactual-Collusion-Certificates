@@ -1,0 +1,14 @@
+- **IMP-0:** hashes recorded; pre-census commit gate **failed**, disclosed honestly.
+- **IMP-1:** extractor complete; named-agent attribution verified.
+- **IMP-2:** N_m selection/masking, manifests, and hashed S1 selection complete.
+- **IMP-3:** decision rules and frozen exact intervals implemented.
+- **IMP-4:** fault tests **7/7 pass**.
+- **IMP-7:** strict guard/native check pass; default generation retains 10 inactive cells—a disclosed r3 deviation.
+- **Census:** 800 instances each, 740 eligible; fx1 **0/740**, chatter trigger **fired**; fx2 **740/740**. Both reproduced exactly.
+- **Independent contract:** **19 passed, 3 skipped**, file unchanged.
+- **Targeted suites:** audit 104/3 skipped; runner 65; replay 58/4 skipped; fixtures 71; review 9. No failures.
+- **Full suite:** 327 run—317 passed, 7 skipped, **3 missing-pilot-archive errors**.
+- Files cover audit, fixtures, replay, runner, tests, and evidence; stray tmp directories removed.
+- $0; no live calls, Ollama operations, commits, or main-checkout edits.
+
+[Report and deviations](/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ops/reports/AMD-IMP-A.md) · [Exact files touched](/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ops/reports/AMD-IMP-A-evidence/files.txt)

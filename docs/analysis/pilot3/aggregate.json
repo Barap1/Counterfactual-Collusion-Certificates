@@ -1,0 +1,57 @@
+{
+  "analysis_version": "0.1.0",
+  "code_hashes": {
+    "__init__.py": "e2ff5a26c82c20364bd268b2c53527ae4b23517db6fea659359e16edae9d1aea",
+    "__main__.py": "d91df9bbe62e7082c52f74d9521a2d903a70aa86162c15379cb158b9e7d9a683",
+    "loaders.py": "f22bed68486fb7fe9ceef7774e3da74f4117d07de333daa241e1c1b1d6357d8a",
+    "pinning.py": "2715dd4758e63b0483a2c2adb34b5cc18d9f59f26c689970e1df6d420a9f5aa7",
+    "pipeline.py": "fc31358df5fbf310fd603b1728d36b372fb44bf716530e6e8584329774363203",
+    "shift_perm.py": "a6bca32ed748ee3a56a3d74adfc25e9eb4102bf5ae28df3135d5abe7d46d0111",
+    "statistics.py": "837fba57b9975fdad41bacf806e977d2b7c509d0d71c0e77a05e982e3ca86a06",
+    "status.py": "8ade89dafe7703bc7150bfef33847d926d45aeb4aaee60398fd8a4e30e1b1f9f",
+    "study.py": "6da7276de66682086f6e4350eda320897a20dfc7787676a91630eb2902cd592e"
+  },
+  "input_hashes": {
+    "manifest.json": "9a0641a9f46007045306f555a80b4e7018992c729c8547cffb2a87631ab76b98",
+    "worlds/dev02_B1/attempt_0001/begin.json": "d78bda599aa929072bbf4721b18fa7f50388c00356b7894c611e49be4c2b3791",
+    "worlds/dev02_B1/attempt_0001/branches/000_F/begin.json": "ae1ec6d988cdb7c4b870700da33155d511bbec3aafe4a9fa0842381ca957a946",
+    "worlds/dev02_B1/attempt_0001/branches/000_K/begin.json": "07a81fc927c9e469ab53f6636c5f0dc8a1a284ed909488143147987e1c307abe",
+    "worlds/dev02_B1/attempt_0001/branches/000_N/begin.json": "9e4a075dc9cb10b2e372be3b36359ee9632236c7a6aa38a66e79ff853848e603",
+    "worlds/dev02_B1/attempt_0001/branches/000_S/begin.json": "26dadd6686278835bc9ee23b14382190511752420736c7b2ba72da6b56493150",
+    "worlds/dev02_B1/attempt_0001/branches/001_F/begin.json": "e1cd873def0218780dd3dd79c587656a739236bb1d775610e9c2245a9c85fa02",
+    "worlds/dev02_B1/attempt_0001/branches/001_K/begin.json": "0a4ba900015013c292f178376534eb4b9d37a4afb36e4b999cda1740671dee10",
+    "worlds/dev02_B1/attempt_0001/branches/001_N/begin.json": "a28e56b0341bfb588a797652f49efe1d84b5a3c2c1c032bc5ef4749ad3faeaf4",
+    "worlds/dev02_B1/attempt_0001/branches/001_S/begin.json": "d8859cd68e7f7f5e61f53e65d4028e382359e806fad5f0b6e7c9b4dfe60cbfb8",
+    "worlds/dev02_B1/attempt_0001/branches/002_F/begin.json": "7dc3b6b3d909836f2b76fda3616aa41e52a60216b6e9d2c8a443206b508e0775",
+    "worlds/dev02_B1/attempt_0001/branches/002_K/begin.json": "62010bfcfd8084fab73174c49c9c266f9e7f64af3fe36fb61bc918baaa309264",
+    "worlds/dev02_B1/attempt_0001/branches/002_S/begin.json": "c4e870e3e7ea47d3259c523dc1fcbd414d9c555a01cb3a34ef45d8e9598678ac",
+    "worlds/dev02_B1/attempt_0001/branches/003_F/begin.json": "03eed7cee7496596ff0558445ce2c9c8d8dcb2260dfd8d1aedc0c7390b94c89b",
+    "worlds/dev02_B1/attempt_0001/branches/003_K/begin.json": "4b1d92f51b1391b826fad70589fcff289cfb6a7ddedbec9a3f3c6f64ba36fcf2",
+    "worlds/dev02_B1/attempt_0001/branches/003_S/begin.json": "04fcd6c68ecb779acb4af1eb4df44b063af48211f0de59b606682e968ee96596",
+    "worlds/dev02_B1/attempt_0001/budget.jsonl": "706ebfd407b9b8a7dcc62ae116842cb9df6ecda4a72082779141854da80bc1e7",
+    "worlds/dev02_B1/attempt_0001/checkpoint.json": "742debf0048435231f92afd68f69df339bdb7a3ffeb5595ad54451130df6963f",
+    "worlds/dev02_B1/attempt_0001/result.json": "b606865a0f73a075276edf04dbca2294d058a6e71a55bab010b565f6646af805"
+  },
+  "label": "DEV/pilot",
+  "limitations": [
+    "Tier B exploratory per protocol v1.2 / DEV-001",
+    "TV interval algorithm is unspecified; interval unavailable",
+    "Legacy DEV metadata cannot establish v1.2 validity"
+  ],
+  "n_attempts": 14,
+  "n_checkpoints": 1,
+  "n_claim_candidates": 0,
+  "phase": "development",
+  "scheduled_statuses": {
+    "unrun": 7
+  },
+  "statuses": {
+    "inconclusive": 1
+  },
+  "threshold_source": "DEV fallback",
+  "thresholds": {
+    "delta_S": 5.0,
+    "delta_W": 10.0,
+    "m_O": 5.0
+  }
+}

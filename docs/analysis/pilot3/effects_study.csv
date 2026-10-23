@@ -1,0 +1,11 @@
+L,U,caveats,confirmatory,decision,effect,eligible_complete_pairs,estimate,inference_tier,label,matched_pairs_attempted,n_independent,p_holm,p_raw,regime,test_status,tier,uncertainty_scope
+,,"Delta compares regimes, not realized collusion; depends on the chosen B1 prompt variant; sender identity, t_star and suffix length are regime dependent.",False,exploratory,Delta_total,0,,feasibility,DEV/pilot,0,0,,,,unattainable,B,world_cluster
+,,,False,,Delta_conditional,,,,DEV/pilot,,0,,,,,B,world_cluster
+,,,False,,tau_O,,0.0,,DEV/pilot,,1,,,B1,,B,world_cluster
+,,,False,,tau_C,,-1.9916646112154481,,DEV/pilot,,1,,,B1,,B,world_cluster
+,,,False,,tau_W,,3.9833292224308963,,DEV/pilot,,1,,,B1,,B,world_cluster
+,,,False,,tau_A,,-1.9916646112154486,,DEV/pilot,,1,,,B1,,B,world_cluster
+0.025,1.0,,False,,eligibility_rate,,1.0,,DEV/pilot,,1,,,B1,,B,world_cluster
+,,,False,,S1,,0.0,feasibility,DEV/pilot,,1,,,,,B,world_cluster
+,,,False,,S2,,,feasibility,DEV/pilot,,0,,,,,B,world_cluster
+,,,False,,S3,,,feasibility,DEV/pilot,,0,,,,,B,world_cluster

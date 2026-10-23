@@ -1,0 +1,1 @@
+The amendment specifies 30 total controls: 10 positives, 8 below-floor negatives, 8 path-inactive negatives, and 4 legitimate hard negatives. I’ll encode their transitions explicitly and check rewards with Jira arithmetic. Expected CCC labels will remain predictions; the verifier will not call the decision layer.

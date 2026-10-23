@@ -1,0 +1,20 @@
+[
+  {
+    "confirmatory": false,
+    "defined": true,
+    "eligible": true,
+    "imputed_zero": false,
+    "ineligible_reason": null,
+    "label": "DEV/pilot",
+    "n_F": 2,
+    "n_K": 2,
+    "regime": "B1",
+    "tau_A": -15.584746190688163,
+    "tau_C": -15.584746190688163,
+    "tau_O": 0.0,
+    "tau_W": 31.16949238137633,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "2"
+  }
+]

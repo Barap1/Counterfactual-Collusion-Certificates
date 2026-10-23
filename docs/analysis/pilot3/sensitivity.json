@@ -1,0 +1,72 @@
+[
+  {
+    "L": null,
+    "U": null,
+    "analysis": "ineligible_zero",
+    "confirmatory": false,
+    "estimate": null,
+    "label": "DEV/pilot",
+    "n_independent": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": null,
+    "U": null,
+    "analysis": "drop_ineligible",
+    "confirmatory": false,
+    "estimate": null,
+    "label": "DEV/pilot",
+    "n_independent": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": null,
+    "U": null,
+    "analysis": "worst_missing",
+    "confirmatory": false,
+    "estimate": null,
+    "label": "DEV/pilot",
+    "limitation": "fills use observed same-regime arm range; no observed range leaves undefined",
+    "n_independent": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": null,
+    "U": null,
+    "analysis": "best_missing",
+    "confirmatory": false,
+    "estimate": null,
+    "label": "DEV/pilot",
+    "limitation": "fills use observed same-regime arm range; no observed range leaves undefined",
+    "n_independent": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": null,
+    "U": null,
+    "analysis": "noncommit_excluded",
+    "confirmatory": false,
+    "estimate": null,
+    "label": "DEV/pilot",
+    "limitation": "fills use observed same-regime arm range; no observed range leaves undefined",
+    "n_independent": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": null,
+    "U": null,
+    "analysis": "S_pooled_F",
+    "confirmatory": false,
+    "estimate": null,
+    "label": "DEV/pilot",
+    "limitation": "fills use observed same-regime arm range; no observed range leaves undefined",
+    "n_independent": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "check": "V8",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L90": null,
+    "L95": null,
+    "U90": null,
+    "U95": null,
+    "check": "V9",
+    "confirmatory": false,
+    "estimate": 2.364318159360984,
+    "half_width90": null,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B1",
+    "status": "sham_uncertain",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_cluster": {
+      "L": null,
+      "U": null,
+      "estimate": 2.364318159360984,
+      "n_independent": 1
+    }
+  },
+  {
+    "L": null,
+    "U": null,
+    "check": "V10",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "n_independent": 0,
+    "regime": "B1",
+    "status": "not_established",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]
