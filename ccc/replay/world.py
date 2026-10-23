@@ -45,6 +45,7 @@ from ccc import paths
 
 from .canonical import deep_copy_json, request_sha256, sha256_bytes, state_bytes, state_sha256
 from .recorder import CallLedger, RecordingClient
+from .rendering import render_view
 
 ensure_import_path()
 from experiments.collusion import run as run_mod  # noqa: E402
@@ -56,7 +57,7 @@ from terrarium.blackboard import Blackboard, Megaboard, format_blackboard_events
 from terrarium.networks import build_communication_network  # noqa: E402
 
 _NS = uuid.UUID("6b6f3f4e-3c2a-4c1e-9a43-0ccc0ccc0ccc")
-DYNAMIC_SCHEMA = "ccc.colosseum.dynamic.v1"
+DYNAMIC_SCHEMA = "ccc.colosseum.dynamic.v2"
 STATIC_SCHEMA = "ccc.colosseum.static.v1"
 
 ViewHook = Callable[[str, int, Dict[str, List[Dict[str, Any]]]], tuple]
@@ -203,11 +204,12 @@ class CCCProtocol(LocalCommunicationProtocol):
             delivered, diff = self.view_hook(agent_name, self.turn_index, raw)
             if raw != frozen:
                 raise RuntimeError("view hook mutated its input (interventions must be pure)")
-            contexts = {b: format_blackboard_events_for_prompt(delivered.get(b) or []) for b in ids}
+            contexts = render_view(raw, delivered)
         self.observations.append({
             "turn_index": self.turn_index, "agent": agent_name, "phase": phase, "hook": self.hook_name,
             "visible_event_ids": {b: [e.get("id") for e in delivered.get(b) or []] for b in ids},
             "underlying_event_ids": {b: [e.get("id") for e in raw[b]] for b in ids},
+            "raw_events": deep_copy_json(raw), "delivered_events": deep_copy_json(delivered),
             "contexts": dict(contexts), "contexts_sha256": request_sha256(contexts), "diff": diff,
             # what the unmodified upstream path renders for the same state (equals contexts in arm F)
             "upstream_contexts_sha256": request_sha256({b: format_blackboard_events_for_prompt(raw[b]) for b in ids}),
@@ -267,7 +269,10 @@ class ColosseumWorld:
         self.cursor = 0
         self.errors: List[str] = []
         self._ctx: Dict[str, Any] = {}
-        with offline_model_info(self._log_label()):
+        self.prompt_audits = []
+        self.global_rng_state = random.Random(spec.seed).getstate()
+        self._prompt_reference = None
+        with self._rng_scope(), offline_model_info(self._log_label()):
             asyncio.run(self._build())
         self.state_hashes[0] = self.dynamic_sha256()
         if snapshot_every_turn:
@@ -277,7 +282,7 @@ class ColosseumWorld:
     async def _build(self) -> None:
         spec = self.spec
         base_cfg = spec.base_cfg
-        rng = random.Random(int(spec.seed))
+        rng = self.run_rng = random.Random(int(spec.seed))
         knobs = (base_cfg.get("experiment") or {}).get("collusion") or {}
         coalition_prompt_mode = str(knobs.get("coalition_prompt", "auto")).strip().lower()
         extra_channel_members = str(knobs.get("extra_channel_members", "colluders")).strip().lower()
@@ -328,7 +333,8 @@ class ColosseumWorld:
         env_tool_name = str(getattr(env, "tools_environment_name", None) or env.__class__.__name__)
         agents: List[BaseAgent] = []
         for name in agent_names:
-            client = RecordingClient(self.client_factory(name, self), self.ledger, self._call_context)
+            client = RecordingClient(self.client_factory(name, self), self.ledger, self._call_context,
+                                     initial_prompt=self._initial_prompt, prepare_prompt=self._prepare_prompt)
             agents.append(BaseAgent(client, name, self.model_name, max_steps, None, None, env_tool_name,
                                     generation_params=self.generation_params))
         if order_strategy.strip().lower() == "random":
@@ -377,8 +383,69 @@ class ColosseumWorld:
 
     def run_turns(self, stop: Optional[int] = None) -> None:
         stop = len(self.schedule) if stop is None else stop
-        with offline_model_info(self._log_label()):
+        with self._rng_scope(), offline_model_info(self._log_label()):
             asyncio.run(self._run(stop))
+
+    @contextlib.contextmanager
+    def _rng_scope(self):
+        """Virtualize Python's global RNG per serial world, including client retry jitter."""
+        caller_state = random.getstate()
+        random.setstate(self.global_rng_state)
+        try:
+            yield
+        finally:
+            self.global_rng_state = random.getstate()
+            random.setstate(caller_state)
+
+    def _initial_prompt(self, system, user):
+        # Capture the same-state factual prompt before any tool executes in this turn.
+        t = self.schedule[self.cursor]
+        kw = {"planning_round": t.planning_round} if t.phase == "planning" else {}
+        actx = dict(self.env.build_agent_context(t.agent, phase=t.phase, iteration=1, **kw))
+        actx.update(self._extra_fields(t.agent))
+        obs = self.protocol.observations[-1]
+        raw_contexts = {b: format_blackboard_events_for_prompt(e) for b, e in obs["raw_events"].items()}
+        factual = self.env.prompts.get_user_prompt(t.agent, actx, raw_contexts)
+        self._prompt_reference = {"messages": [{"role": "system", "content": system},
+                                                {"role": "user", "content": factual}],
+                                  "raw_events": deep_copy_json(obs["raw_events"])}
+
+    def _prepare_prompt(self, messages, params, ctx):
+        # Apply the view hook again on EVERY provider call (including tool-loop steps).
+        # Raw events are the frozen turn-start view, just as upstream's user prompt is.
+        ref = self._prompt_reference
+        raw = deep_copy_json(ref["raw_events"])
+        delivered = raw
+        if self.protocol.view_hook is not None:
+            before = deep_copy_json(raw)
+            delivered, _ = self.protocol.view_hook(ctx["agent"], ctx["turn_index"], raw)
+            if raw != before:
+                raise RuntimeError("view hook mutated its input (interventions must be pure)")
+        contexts = render_view(raw, delivered) if self.protocol.view_hook is not None else {
+            b: format_blackboard_events_for_prompt(e) for b, e in raw.items()}
+        factual_user = ref["messages"][1]["content"]
+        spans = []
+        offset = 0
+        for board, events in raw.items():
+            original = format_blackboard_events_for_prompt(events)
+            replacement = contexts.get(board, "")
+            if original != replacement:
+                pos = factual_user.find(original, offset)
+                if pos < 0:
+                    raise RuntimeError("factual board context missing from user prompt")
+                spans.append((pos, pos + len(original), replacement))
+                offset = pos + len(original)
+        user = factual_user
+        for start, end, replacement in reversed(spans):
+            user = user[:start] + replacement + user[end:]
+        out = deep_copy_json(messages)
+        out[1]["content"] = user
+        self.prompt_audits.append({"agent": ctx["agent"], "turn_index": ctx["turn_index"], "step": ctx["step"],
+                                  "factual_messages": deep_copy_json(ref["messages"]),
+                                  "raw_events": deep_copy_json(raw), "delivered_events": deep_copy_json(delivered),
+                                  "params": deep_copy_json(params),
+                                  "request": {"messages": deep_copy_json(out), "params": deep_copy_json(params)}})
+        return out
 
     def _log_label(self) -> str:
         return "ccc_" + "".join(c if c.isalnum() else "_" for c in self.spec.model_name)
@@ -408,6 +475,7 @@ class ColosseumWorld:
                                       "agent": t.agent, "tools_executed": resp.get("tools_executed"),
                                       "conversation_steps": resp.get("conversation_steps")})
             self.cursor = t.index + 1
+            self.global_rng_state = random.getstate()
             self.state_hashes[self.cursor] = self.dynamic_sha256()
             if self.snapshot_every_turn:
                 self.snapshots[self.cursor] = self.snapshot()
@@ -436,6 +504,7 @@ class ColosseumWorld:
         mb, env, pr = self.protocol.megaboard, self.env, self.protocol
         return {
             "schema": DYNAMIC_SCHEMA, "cursor": self.cursor,
+            "rng": {"run": self.run_rng.getstate(), "python_global": self.global_rng_state},
             "megaboard": {"clock": mb.ccc_clock, "blackboards": [
                 {"blackboard_id": b.blackboard_id, "participants": list(b.participants),
                  "initial_context": b.initial_context, "agents": sorted(b.agents), "logs": b.logs,
@@ -479,6 +548,13 @@ class ColosseumWorld:
         self.env.assignment = {k: v for k, v in d["env"]["assignment"]}
         st = d["env"]["rng_state"]
         self.env.rng.setstate((st[0], tuple(st[1]), st[2]))
+        for key, attr in (("run", "run_rng"), ("python_global", "global_rng_state")):
+            st = d["rng"][key]
+            state = (st[0], tuple(st[1]), st[2])
+            if key == "run":
+                self.run_rng.setstate(state)
+            else:
+                self.global_rng_state = state
         self.env.joint_reward_history = d["env"]["joint_reward_history"]
         self.env.agent_rewards_history = d["env"]["agent_rewards_history"]
         self.protocol.current_planning_round = d["protocol"]["current_planning_round"]
@@ -503,4 +579,5 @@ class ColosseumWorld:
         o = sum(outs) / len(outs) if outs else None
         return {"status": "complete", "assignment": fs.get("assignment"), "agent_rewards": rewards,
                 "Cmean": c, "Omean": o, "A": (c - o) if c is not None and o is not None else None,
-                "W": fs.get("joint_reward"), "final_summary": fs}
+                "W": sum(rewards.values()), "joint_reward": fs.get("joint_reward"),
+                "joint_reward_minus_W": fs.get("joint_reward", 0) - sum(rewards.values()), "final_summary": fs}

@@ -342,7 +342,7 @@
     "ENG-002",
     "SCI-002"
    ],
-   "status": "ACTIVE",
+   "status": "ACCEPTED (58 replay tests, 11/11 native probes); fixture V07 test update by Haiku pending",
    "brief": "ops/briefs/ENG-003.md"
   },
   {

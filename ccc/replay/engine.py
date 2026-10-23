@@ -21,14 +21,17 @@ from typing import Any, Callable, Dict, List, Optional, Sequence
 
 from .canonical import request_sha256, state_bytes
 from .clients import Policy, PrefixMismatch, ReplayClient, ReplaySource, ScriptedClient
-from .interventions import ExposureSpec, receiver_mask_hook, sham_hook
+from .interventions import ExposureSpec, receiver_mask_hook, sham_hook, neutral_placebo_hook, channel_mask_hook
+from .prompt_diff import check_prompt_diffs
+from .leak_scan import scan_leaks
 from .recorder import RequestRecord, request_payload
 from .validators import (FAIL, NA, PASS, CheckResult, check_fresh, check_mask_leaks, check_model_identity,
                          check_prior_exposure, check_render_every_prompt, check_tool_echo, check_tool_protocol, ok)
-from .world import ColosseumWorld, RestoreError, Snapshot, WorldSpec, upstream_provenance
+from .world import ColosseumWorld, RestoreError, Snapshot, WorldSpec, upstream_provenance, DYNAMIC_SCHEMA
 
 CHECKPOINT_SCHEMA = "ccc.checkpoint.v1"
-ARMS = ("F", "S", "K")
+ARMS = ("F", "S", "K", "N", "C")
+DEFAULT_ARMS = ("F", "S", "K")
 PolicyFactory = Callable[[], Policy]
 
 
@@ -185,20 +188,34 @@ def make_checkpoint(source: SourceRun, exposure: ExposureSpec, *, boundary: Opti
     # Both strategies run V02: under "snapshot" it cross-validates A against B; under "prefix"
     # the reconstructed state is the checkpoint and must equal the recorded per-turn state.
     checks.append(_prefix_reconstruction(source, snap, boundary))
+    source_identity = check_model_identity(source.ledger.records, source.world.model_name)
+    checks.append(CheckResult("V6", source_identity.name, source_identity.status, source_identity.details))
     prefix = source.ledger.before(boundary)
+    from ccc.paths import REPO_ROOT
+    from .canonical import sha256_bytes, request_bytes
+    from .neutral import FILLERS
+    protocol_path = REPO_ROOT / "docs/research/sci002/protocol_v1.md"
+    if not protocol_path.is_file():
+        protocol_path = REPO_ROOT / "docs/research/sci002/protocol.md"
+    protocol_bytes = protocol_path.read_bytes()
+    if b"**Status:** FREEZE CANDIDATE v1 (" not in protocol_bytes:
+        raise ValueError("ENG-003 requires the preserved SCI-002 v1 protocol; revalidation is needed for another version")
     manifest = {
         "schema_version": CHECKPOINT_SCHEMA, "world_id": source.spec.world_id, "spec_sha256": source.spec.sha256,
+        "protocol_sha256": sha256_bytes(protocol_bytes),
+        "protocol_version": "SCI-002 v1", "protocol_path": str(protocol_path.relative_to(REPO_ROOT)),
+        "neutral_vocabulary_sha256": sha256_bytes(request_bytes(FILLERS)),
         "source_run": {"branch_id": "source", "requests": len(source.ledger.records)},
         "snapshot_id": snap.snapshot_id, "static_sha256": snap.static_sha256, "dynamic_sha256": snap.dynamic_sha256,
         "strategy": strategy, "scheduler_cursor": boundary,
         "next_turn": source.world.schedule[boundary].__dict__ if boundary < len(source.world.schedule) else None,
         "prefix_request_sha256": [r.request_sha256 for r in prefix],
-        "environment_state_schema": "ccc.colosseum.dynamic.v1",
+        "environment_state_schema": DYNAMIC_SCHEMA,
         "agent_history": "none persisted across turns: BaseAgent builds a fresh [system,user] context every turn",
         "blackboard_visibility": "Megaboard.get(bb, agent) membership; rendered by format_blackboard_events_for_prompt",
         "rng_records": {"env.rng": "captured (random.Random state in snapshot)",
-                        "run rng (colluder selection, agent shuffle)": "consumed before turn 0; recomputed from seed",
-                        "global random": "not captured (only TogetherClient retry jitter)",
+                        "run rng (colluder selection, agent shuffle)": "captured",
+                        "global random": "captured; virtualized per serial world",
                         "provider sampling": "inaccessible"},
         "exposure": exposure.to_json(),
         "code": upstream_provenance(),
@@ -213,10 +230,10 @@ def make_checkpoint(source: SourceRun, exposure: ExposureSpec, *, boundary: Opti
 STATE_COVERAGE_NOTE = (
     "Captured: Megaboard blackboards (participants, logs, template, suspended) + logical clock; env.assignment "
     "(insertion order); env.rng state; env score histories; protocol.tool_events and current_planning_round; "
-    "scheduler cursor. Rebuilt from spec and hash-verified: tasks, costs, agent_private, names, colluders, roles, "
+    "scheduler cursor; run RNG and Python global RNG. Rebuilt from spec and hash-verified: tasks, costs, agent_private, names, colluders, roles, "
     "turn order, network blackboards, system prompt, tool schemas, generation params, schedule. Not captured: "
     "per-turn BaseAgent fields (overwritten before use), logger files, provider-side state (sampling RNG, KV "
-    "cache, routing, silent model updates), global `random` (retry jitter only), wall-clock timestamps "
+    "cache, routing, silent model updates), wall-clock timestamps "
     "(replaced by a logical clock).")
 
 
@@ -232,6 +249,8 @@ class BranchResult:
     outcomes: Optional[Dict[str, Any]]
     status: str
     reasons: List[str] = field(default_factory=list)
+    ledger_path: Optional[str] = None
+    execution_metadata: Dict[str, Any] = field(default_factory=dict)
 
     @property
     def records(self) -> List[RequestRecord]:
@@ -247,22 +266,34 @@ class BranchResult:
 
 
 def run_branch(cp: Checkpoint, arm: str, client_factory, *, replicate_id: str = "0", hook=None,
-               other_response_ids: set = frozenset()) -> BranchResult:
+               other_response_ids: set = frozenset(), ledger_dir=None, execution_metadata=None) -> BranchResult:
     if arm not in ARMS:
         raise ValueError(f"arm must be one of {ARMS}")
     checks: List[CheckResult] = []
+    from .ledger import persist_branch
+
+    def finish(result):
+        result.execution_metadata = execution_metadata or {"order": "single branch; sampling order not established"}
+        result.ledger_path = persist_branch(cp, result, ledger_dir)
+        return result
+
     if not cp.valid:
-        return BranchResult(arm, replicate_id, None, list(cp.validation), None, "invalid",
-                            [f"checkpoint {c.id} {c.status}" for c in cp.validation if c.status not in (PASS, NA)])
-    world = ColosseumWorld(cp.spec, client_factory, branch_id=f"{arm}", replicate_id=replicate_id)
+        return finish(BranchResult(arm, replicate_id, None, list(cp.validation), None, "invalid",
+                            [f"checkpoint {c.id} {c.status}" for c in cp.validation if c.status not in (PASS, NA)]))
+    try:
+        world = ColosseumWorld(cp.spec, client_factory, branch_id=f"{arm}", replicate_id=replicate_id)
+    except Exception as exc:
+        return finish(BranchResult(arm, replicate_id, None, [], None, "failed",
+                                   [f"world construction: {type(exc).__name__}: {exc}"]))
     try:
         world.restore(cp.snapshot)
     except RestoreError as exc:
-        return BranchResult(arm, replicate_id, None, [CheckResult("V15", "restore", FAIL, {"error": str(exc)})], None,
-                            "invalid", [f"restore failed: {exc}"])
+        return finish(BranchResult(arm, replicate_id, None, [CheckResult("V15", "restore", FAIL, {"error": str(exc)})], None,
+                            "invalid", [f"restore failed: {exc}"]))
     if hook is None:
-        hook = {"F": None, "S": sham_hook(), "K": receiver_mask_hook(cp.exposure)}[arm]
-    world.set_view_hook(hook, {"F": "none", "S": "sham_identity", "K": "receiver_mask"}[arm] if hook is not None else "none")
+        hook = {"F": None, "S": sham_hook(), "K": receiver_mask_hook(cp.exposure),
+                "N": neutral_placebo_hook(cp.exposure), "C": channel_mask_hook(cp.exposure)}[arm]
+    world.set_view_hook(hook, {"F": "none", "S": "sham_identity", "K": "receiver_mask", "N": "neutral_placebo", "C": "channel_mask"}[arm] if hook is not None else "none")
     status, reasons = "valid", []
     try:
         world.run_turns()
@@ -272,10 +303,17 @@ def run_branch(cp: Checkpoint, arm: str, client_factory, *, replicate_id: str = 
         status, reasons = "failed", reasons + world.errors
     checks.append(check_tool_protocol(world.ledger.records))
     checks.append(check_fresh(world.ledger.records, cp.boundary, cp.source.response_ids, other_response_ids))
-    checks.append(check_mask_leaks(cp.exposure, world.ledger.records) if arm == "K"
+    import json
+    prefix_ids = [e["id"] for b in json.loads(cp.snapshot.dynamic)["megaboard"]["blackboards"] for e in b["logs"]]
+    checks.append(scan_leaks(cp.exposure, world.ledger.records, world.prompt_audits, prefix_ids,
+                             tuple(world.env.tasks)) if arm in ("K", "N", "C")
                   else CheckResult("V07", "mask_no_leak", NA, {}))
+    checks.append(check_prompt_diffs(arm, world.prompt_audits, cp.exposure))
     checks.append(check_render_every_prompt(arm, world.protocol.observations, cp.exposure))
-    checks.append(check_model_identity(world.ledger.records, world.model_name))
+    expected_params = {r.phase: r.request["params"] for r in cp.source.ledger.records}
+    identity = check_model_identity(world.ledger.records, world.model_name, expected_params)
+    checks.append(identity)
+    checks.append(CheckResult("V6", identity.name, identity.status, identity.details))
     board_text = [str((e.get("payload") or {}).get("content") or "") for b in world.protocol.megaboard.blackboards
                   for e in b.logs if e.get("kind") == "communication"]
     checks.append(check_tool_echo(world.ledger.records, board_text))
@@ -283,7 +321,8 @@ def run_branch(cp: Checkpoint, arm: str, client_factory, *, replicate_id: str = 
         status = "invalid"
         reasons += [f"{c.id} {c.name} failed" for c in checks if c.status == FAIL]
     outcomes = world.outcomes() if status != "failed" else None
-    return BranchResult(arm, replicate_id, world, checks, outcomes, status, reasons)
+    result = BranchResult(arm, replicate_id, world, checks, outcomes, status, reasons)
+    return finish(result)
 
 
 # ----------------------------------------------------------------------------------------------
@@ -308,43 +347,21 @@ def check_sham_identity(cp: Checkpoint, F: BranchResult, S: BranchResult) -> Che
 
 def check_targeted_exposure(cp: Checkpoint, F: BranchResult, K: BranchResult) -> CheckResult:
     """V05: at the boundary only the receiver's declared surface changes, exactly by the mask."""
-    from terrarium.blackboard import format_blackboard_events_for_prompt  # upstream formatter
-
-    rcv, b, masked = cp.exposure.receiver, cp.boundary, set(cp.exposure.masked_ids)
-    fo, ko = F.observation(rcv, b), K.observation(rcv, b)
     problems = []
-    if not (fo and ko):
-        return CheckResult("V05", "targeted_exposure", FAIL, {"problems": ["missing boundary observation"]})
-    events_f = {bb: e for bb, e in _events_at(cp.snapshot, rcv).items()}
-    for bb, ctx in fo["contexts"].items():
-        expected = format_blackboard_events_for_prompt([e for e in events_f[bb] if e.get("id") not in masked])
-        if ko["contexts"][bb] != expected:
-            problems.append(f"blackboard {bb}: K view != upstream rendering of F view minus masked ids")
-        if bb != cp.exposure.blackboard_id and ko["contexts"][bb] != ctx and not (masked & {e["id"] for e in events_f[bb]}):
-            problems.append(f"blackboard {bb}: changed although it holds no masked event")
-    if ko["contexts"] == fo["contexts"]:
-        problems.append("K view identical to F view (nothing was masked)")
-    fr = next((r for r in F.records if r.agent == rcv and r.turn_index == b and r.step == 1), None)
-    kr = next((r for r in K.records if r.agent == rcv and r.turn_index == b and r.step == 1), None)
-    if fr and kr:
-        f_user, k_user = fr.request["messages"][1]["content"], kr.request["messages"][1]["content"]
-        rebuilt = f_user
-        for bb in fo["contexts"]:
-            if fo["contexts"][bb] != ko["contexts"][bb]:
-                rebuilt = rebuilt.replace(fo["contexts"][bb], ko["contexts"][bb], 1)
-        if rebuilt != k_user:
-            problems.append("K user prompt differs from F beyond the masked blackboard text")
-        if fr.request["messages"][0] != kr.request["messages"][0] or fr.request["params"] != kr.request["params"]:
-            problems.append("system prompt or params differ")
-    else:
+    rcv, boundary = cp.exposure.receiver, cp.boundary
+    factual = next((r for r in F.records if r.agent == rcv and r.turn_index == boundary and r.step == 1), None)
+    edited = next((a for a in K.world.prompt_audits if a["agent"] == rcv and a["turn_index"] == boundary and a["step"] == 1), None)
+    if not factual or not edited:
         problems.append("missing boundary request")
-    # mask confined to the receiver: every other agent still sees the event whenever it exists
-    for o in K.world.protocol.observations:
-        if o["agent"] != rcv:
-            under = {i for ids in o["underlying_event_ids"].values() for i in ids}
-            vis = {i for ids in o["visible_event_ids"].values() for i in ids}
-            if (masked & under) - vis:
-                problems.append(f"non-receiver {o['agent']} lost the event at turn {o['turn_index']}")
+    else:
+        from .canonical import deep_copy_json
+        probe = deep_copy_json(edited)
+        probe["factual_messages"] = factual.request["messages"][:2]
+        check = check_prompt_diffs("K", [probe], cp.exposure)
+        problems.extend(check.details["problems"])
+    for observation in K.world.protocol.observations:
+        if observation["agent"] != rcv and observation["contexts_sha256"] != observation["upstream_contexts_sha256"]:
+            problems.append("non-receiver observation changed")
     return CheckResult("V05", "targeted_exposure", FAIL if problems else PASS, {"problems": problems})
 
 
@@ -365,15 +382,89 @@ class AuditResult:
         return self.checkpoint.valid and all(b.status == "valid" for b in self.branches.values()) and ok(self.cross_checks)
 
 
-def audit(cp: Checkpoint, client_factory, *, replicate_id: str = "0") -> AuditResult:
+def audit(cp: Checkpoint, client_factory, *, replicate_id: str = "0", arms=DEFAULT_ARMS,
+          branch_order_seed: int = 0, ledger_dir=None) -> AuditResult:
     seen: set = set()
     branches: Dict[str, BranchResult] = {}
-    for arm in ARMS:
-        br = run_branch(cp, arm, client_factory, replicate_id=replicate_id, other_response_ids=frozenset(seen))
+    import random
+    order = list(arms)
+    if not order or len(set(order)) != len(order) or not set(order) <= set(ARMS):
+        raise ValueError("arms must be unique supported arms")
+    random.Random(branch_order_seed).shuffle(order)
+    for arm in order:
+        br = run_branch(cp, arm, client_factory, replicate_id=replicate_id, other_response_ids=frozenset(seen), ledger_dir=ledger_dir,
+                        execution_metadata={"branch_order_seed": branch_order_seed, "arm_order": order, "position": len(branches)})
         branches[arm] = br
         seen |= {r.response_id for r in br.records}
     cross = []
-    if all(branches[a].world is not None for a in ARMS):
+    if all(a in branches and branches[a].world is not None for a in DEFAULT_ARMS):
         cross = [check_sham_identity(cp, branches["F"], branches["S"]),
                  check_targeted_exposure(cp, branches["F"], branches["K"])]
     return AuditResult(cp, branches, cross)
+
+
+class ExposureSelectionError(ValueError):
+    """No eligible confirmatory exposure (reason remains in the coverage denominator)."""
+
+
+def select_protocol_exposure(source: SourceRun) -> ExposureSpec:
+    """SCI-002 §4: first coalition sender on P; bundle all its co-exposed events at t*.
+
+    Kept separate from candidate_exposures (an exploratory enumeration used by existing fixtures).
+    The returned bundle still needs make_checkpoint's pre-exposure/restore validity checks.
+    """
+    board_id = source.world.secret_blackboard_id
+    if board_id is None or len(source.world.colluders) != 2:
+        raise ExposureSelectionError("no_exposure")
+    board = source.world.protocol.megaboard.blackboards[int(board_id)]
+    posts = [e for e in board.logs if e.get("kind") == "communication" and e.get("agent") in source.world.colluders]
+    if not posts:
+        raise ExposureSelectionError("no_exposure")
+    first = posts[0]
+    sender = first["agent"]
+    receiver = next(a for a in source.world.colluders if a != sender)
+    candidates = candidate_exposures(source)
+    candidate = next((e for e in candidates if e.event_id == first["id"] and e.receiver == receiver), None)
+    if candidate is None:
+        raise ExposureSelectionError("post_decision")
+    for record in source.ledger.before(candidate.first_exposure_turn):
+        if record.agent != receiver:
+            continue
+        for choice in record.response.get("choices") or []:
+            for call in (choice.get("message") or {}).get("tool_calls") or []:
+                if (call.get("function") or {}).get("name") == "assign_task":
+                    raise ExposureSelectionError("post_decision")
+    coexposed = [e.event_id for e in candidates if e.sender == sender and e.receiver == receiver
+                 and e.blackboard_id == str(board_id) and e.first_exposure_turn == candidate.first_exposure_turn
+                 and e.event_id != candidate.event_id]
+    from dataclasses import replace
+    return replace(candidate, copy_event_ids=tuple(coexposed))
+
+
+def audit_replicates(cp: Checkpoint, client_factory, *, replicate_ids=("0",), arms=DEFAULT_ARMS,
+                     branch_order_seed: int = 0, ledger_dir=None) -> List[AuditResult]:
+    """Fresh, shuffled/interleaved arm × replicate schedule with cross-attempt ID checks."""
+    import random
+    reps = tuple(str(r) for r in replicate_ids)
+    arms = tuple(arms)
+    if not reps or len(set(reps)) != len(reps) or not arms or len(set(arms)) != len(arms) or not set(arms) <= set(ARMS):
+        raise ValueError("replicate IDs and supported arms must be nonempty and unique")
+    schedule = [(rep, arm) for rep in reps for arm in arms]
+    random.Random(branch_order_seed).shuffle(schedule)
+    groups = {rep: {} for rep in reps}
+    seen = set()
+    for position, (rep, arm) in enumerate(schedule):
+        branch = run_branch(cp, arm, client_factory, replicate_id=rep, ledger_dir=ledger_dir,
+                            other_response_ids=frozenset(seen), execution_metadata={
+                                "branch_order_seed": branch_order_seed, "schedule": schedule, "position": position})
+        groups[rep][arm] = branch
+        seen.update(r.response_id for r in branch.records)
+    results = []
+    for rep in reps:
+        branches = groups[rep]
+        cross = []
+        if all(a in branches and branches[a].world is not None for a in DEFAULT_ARMS):
+            cross = [check_sham_identity(cp, branches["F"], branches["S"]),
+                     check_targeted_exposure(cp, branches["F"], branches["K"])]
+        results.append(AuditResult(cp, branches, cross))
+    return results

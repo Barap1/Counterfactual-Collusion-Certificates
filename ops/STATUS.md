@@ -8,7 +8,7 @@
 | BOOT-001, SCI-001, PUB-001 (early), INF-001, FIX-001, ENG-001 | ACCEPTED | done |
 | SCI-002 | ACCEPTED v1 freeze-candidate | done (re-review in STAT-001) |
 | ENG-002 | prototype accepted (46 tests) | done |
-| ENG-003 | active: replay hardening | Codex gpt-6.1-sol/high |
+| ENG-003 | ACCEPTED (58 tests; 11/11 native probes) | done; Haiku updating 1 fixture test |
 | ENG-004 | active: audit layer + baselines + Gate A evidence | Codex gpt-6.1-sol/medium |
 | EXP-000 | ACCEPTED (22 tests) | done |
 | EXP-000b | active: per-arm seeds, live Ollama transport, EXP-001 manifest | Codex gpt-6.1-sol/medium |

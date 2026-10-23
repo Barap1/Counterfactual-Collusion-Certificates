@@ -44,8 +44,17 @@ def request_text(rec_or_payload: Any) -> List[tuple]:
     payload = rec_or_payload.request if isinstance(rec_or_payload, RequestRecord) else rec_or_payload
     out = []
     for i, m in enumerate(payload.get("messages") or []):
-        if isinstance(m.get("content"), str):
-            out.append((f"messages[{i}].{m.get('role')}", m["content"]))
+        surface = f"messages[{i}].{m.get('role')}"
+        def walk(value, location):
+            if isinstance(value, str):
+                out.append((location, value))
+            elif isinstance(value, dict):
+                for key, child in value.items():
+                    walk(child, f"{location}.{key}")
+            elif isinstance(value, list):
+                for n, child in enumerate(value):
+                    walk(child, f"{location}[{n}]")
+        walk(m.get("content"), surface)
         for j, tc in enumerate(m.get("tool_calls") or []):
             out.append((f"messages[{i}].tool_calls[{j}]", json.dumps(tc, sort_keys=True)))
     return out
@@ -181,16 +190,9 @@ def check_prior_exposure(exposure, boundary: int, observations: List[Dict[str, A
 
 
 def check_mask_leaks(exposure, branch_records: Sequence[RequestRecord]) -> CheckResult:
-    """Scan every request the receiver submitted inside the mask horizon (all surfaces)."""
-    hits = []
-    for r in branch_records:
-        if r.agent != exposure.receiver or not exposure.in_horizon(r.turn_index):
-            continue
-        for h in find_content(exposure.content, request_text(r), exposure.masked_ids):
-            hits.append({"seq": r.seq, "turn_index": r.turn_index, "step": r.step, **h})
-    return CheckResult("V07", "mask_no_leak", FAIL if hits else PASS,
-                       {"policy": exposure.repeated_exposure_policy, "leaks": hits,
-                        "note": "string/shingle heuristic; paraphrased copies are not detected"})
+    """Compatibility wrapper; provenance-aware engine callers use scan_leaks directly."""
+    from .leak_scan import scan_leaks
+    return scan_leaks(exposure, branch_records)
 
 
 # ----------------------------------------------------------------------------------------------
@@ -242,23 +244,28 @@ def check_render_every_prompt(arm: str, observations: List[Dict[str, Any]], expo
     masked = set(exposure.masked_ids)
     problems = []
     for o in observations:
-        active = arm == "K" and o["agent"] == exposure.receiver and exposure.in_horizon(o["turn_index"])
+        active = arm in ("K", "C") and o["agent"] == exposure.receiver and exposure.in_horizon(o["turn_index"])
         for bb, under in o["underlying_event_ids"].items():
-            want = [i for i in under if i not in masked] if active else list(under)
+            extra = {e.get("id") for e in o.get("raw_events", {}).get(bb, [])
+                     if arm == "C" and str(bb) == str(exposure.blackboard_id)
+                     and e.get("agent") == exposure.sender and e.get("kind") == "communication"}
+            want = [i for i in under if i not in masked | extra] if active else list(under)
             if o["visible_event_ids"][bb] != want:
                 problems.append(f"turn {o['turn_index']} {o['agent']} bb {bb}: visible ids != expected")
-        if not active and o["contexts_sha256"] != o["upstream_contexts_sha256"]:
+        if not active and arm != "N" and o["contexts_sha256"] != o["upstream_contexts_sha256"]:
             problems.append(f"turn {o['turn_index']} {o['agent']}: render differs from upstream render")
     return CheckResult("V05b", "render_exact_every_prompt", FAIL if problems else PASS,
                        {"prompts_checked": len(observations), "problems": problems[:20]})
 
 
-def check_model_identity(records: Sequence[RequestRecord], configured_model: str) -> CheckResult:
+def check_model_identity(records: Sequence[RequestRecord], configured_model: str, expected_params=None) -> CheckResult:
     bad = [{"seq": r.seq, "requested": r.request["params"].get("model"), "reported": (r.response or {}).get("model")}
            for r in records if r.request["params"].get("model") != configured_model
-           or (r.response or {}).get("model") != configured_model]
-    return CheckResult("V-model", "model_identity", FAIL if bad else PASS,
-                       {"configured": configured_model, "mismatches": bad[:20]})
+           or (r.response or {}).get("model") != configured_model
+           or (expected_params is not None and r.request["params"] != expected_params.get(r.phase))]
+    return CheckResult("V-model", "model_identity", FAIL if bad or any(r.context_overflow for r in records) else PASS,
+                       {"protocol_id": "V6", "configured": configured_model, "mismatches": bad[:20],
+                        "context_overflows": [r.seq for r in records if r.context_overflow]})
 
 
 def check_tool_echo(records: Sequence[RequestRecord], board_contents: Sequence[str]) -> CheckResult:

@@ -1,0 +1,15 @@
+--- a/ccc/adapters/colosseum.py
++++ b/ccc/adapters/colosseum.py
+@@ -29,9 +29,10 @@
+ 
+ def environment_names() -> list[str]:
+     ensure_import_path()
+-    from terrarium.utils import get_implemented_environment_names
++    import envs.dcops
+ 
+-    return list(get_implemented_environment_names())
++    # Query lazy export names without importing optional CoLLAB environments.
++    return sorted(envs.dcops.__all__)
+ 
+ 
+ def import_jira_environment_module():

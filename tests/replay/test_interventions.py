@@ -40,7 +40,7 @@ class InterventionUnits(unittest.TestCase):
         self.assertEqual([e["id"] for e in out["1"]], ["e1", "e3"])
         self.assertEqual(out["0"], VIEW["0"])
         self.assertEqual(diff["removed"], [{"blackboard_id": "1", "event_id": "e2", "rendered_index": 2,
-                                            "later_indices_shift": -1}])
+                                            "later_indices_shift": 0}])
         for agent, turn in (("A", 3), ("B", 2)):  # other agent; before mask_start
             o, d = hook(agent, turn, VIEW)
             self.assertEqual(o, VIEW)

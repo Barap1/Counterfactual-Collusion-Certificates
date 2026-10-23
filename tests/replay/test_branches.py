@@ -31,7 +31,7 @@ class _Fixture(unittest.TestCase):
 class CheckpointTests(_Fixture):
     def test_V01_V02_V06_checkpoint_validation(self):
         st = {c.id: c.status for c in self.cp.validation}
-        self.assertEqual(st, {"V06": "pass", "V01": "pass", "V02": "pass"}, [c.to_json() for c in self.cp.validation])
+        self.assertEqual(st, {"V06": "pass", "V01": "pass", "V02": "pass", "V6": "pass"}, [c.to_json() for c in self.cp.validation])
         self.assertTrue(self.cp.valid)
 
     def _assert_pre_exposure(self, cp, require_prior_turn):

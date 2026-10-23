@@ -1,0 +1,393 @@
+.............................................................................................F..........................................Can't get LLM response: simulated provider timeout
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 111, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/replay/test_corruption.py", line 187, in generate_response
+    raise TimeoutError("simulated provider timeout")
+TimeoutError: simulated provider timeout
+......Failed to continue conversation at step 2: request hash mismatch at seq 2 (Mona turn 0 step 3): recorded 000000000000 got b508e48f790b
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 379, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 111, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 146, in generate_response
+    rec = self.source.next(ccc_context or {}, request_payload(input, params))
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 126, in next
+    self._fail(f"request hash mismatch at seq {rec.seq} ({rec.agent} turn {rec.turn_index} "
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         f"step {rec.step}): recorded {rec.request_sha256[:12]} got {sha[:12]}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 114, in _fail
+    raise PrefixMismatch(msg)
+ccc.replay.clients.PrefixMismatch: request hash mismatch at seq 2 (Mona turn 0 step 3): recorded 000000000000 got b508e48f790b
+Can't get LLM response: order mismatch at seq 2: recorded ('Mona', 0, 3) got ('Layla', 1, 1)
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 111, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 146, in generate_response
+    rec = self.source.next(ccc_context or {}, request_payload(input, params))
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 123, in next
+    self._fail(f"order mismatch at seq {rec.seq}: recorded {(rec.agent, rec.turn_index, rec.step)} "
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         f"got {(ctx.get('agent'), ctx.get('turn_index'), ctx.get('step'))}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 114, in _fail
+    raise PrefixMismatch(msg)
+ccc.replay.clients.PrefixMismatch: order mismatch at seq 2: recorded ('Mona', 0, 3) got ('Layla', 1, 1)
+...............................EEEEEEEEEEEEEEEEEE........
+======================================================================
+ERROR: test_bundle_includes_all_sender_posts_first_seen_at_boundary (tests.runner.test_runner.CollectionTests.test_bundle_includes_all_sender_posts_first_seen_at_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 136, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_failure_retained_no_silent_retry_and_cap_across_resume (tests.runner.test_runner.CollectionTests.test_failure_retained_no_silent_retry_and_cap_across_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 136, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_first_event_selection_bundles_without_effect_search (tests.runner.test_runner.CollectionTests.test_first_event_selection_bundles_without_effect_search)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 136, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_full_collection_and_noop_resume (tests.runner.test_runner.CollectionTests.test_full_collection_and_noop_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 136, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_interrupted_attempt_requires_explicit_retry (tests.runner.test_runner.CollectionTests.test_interrupted_attempt_requires_explicit_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 136, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_live_disabled_before_any_write (tests.runner.test_runner.CollectionTests.test_live_disabled_before_any_write)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 136, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_manifest_change_cannot_resume_existing_collection (tests.runner.test_runner.CollectionTests.test_manifest_change_cannot_resume_existing_collection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 136, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_no_message_world_retained_in_coverage (tests.runner.test_runner.CollectionTests.test_no_message_world_retained_in_coverage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 136, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_transport_failure_is_immutable_and_explicit_retry_succeeds (tests.runner.test_runner.CollectionTests.test_transport_failure_is_immutable_and_explicit_retry_succeeds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 136, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_duplicate_world_does_not_inflate_unit (tests.runner.test_runner.ManifestTests.test_duplicate_world_does_not_inflate_unit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 19, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_holdout_requires_stat001_even_dry_run (tests.runner.test_runner.ManifestTests.test_holdout_requires_stat001_even_dry_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 19, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_holdout_stat_hash_binds_manifest (tests.runner.test_runner.ManifestTests.test_holdout_stat_hash_binds_manifest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 19, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_plan_deterministic_interleaved_and_one_world_unit (tests.runner.test_runner.ManifestTests.test_plan_deterministic_interleaved_and_one_world_unit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 19, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_prompt_model_and_budget_switches_refused (tests.runner.test_runner.ManifestTests.test_prompt_model_and_budget_switches_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 19, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_protocol_drift_refused (tests.runner.test_runner.ManifestTests.test_protocol_drift_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 19, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_random_half_placebo_frozen_before_sources (tests.runner.test_runner.ManifestTests.test_random_half_placebo_frozen_before_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 19, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_seed1_never_holdout (tests.runner.test_runner.ManifestTests.test_seed1_never_holdout)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 19, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+ERROR: test_unfrozen_refused (tests.runner.test_runner.ManifestTests.test_unfrozen_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 19, in setUp
+    self.m = load(EXAMPLE)
+             ~~~~^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 115, in load
+    raise ValueError("world split mismatch; archival seed 1 is development only")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/manifest.py", line 69, in validate
+    type(n) is not int or n < 2 for n in counts.values()):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: continuations_per_arm must be a positive integer
+
+======================================================================
+FAIL: test_native_verbatim_resend_exposes_mask_validator_limitation (tests.fixtures.test_native_replay.NativeReplayBridge.test_native_verbatim_resend_exposes_mask_validator_limitation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/fixtures/test_native_replay.py", line 55, in test_native_verbatim_resend_exposes_mask_validator_limitation
+    self.assertFalse(report.audit.valid)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 199 tests in 62.227s
+
+FAILED (failures=1, errors=18)

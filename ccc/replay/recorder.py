@@ -12,6 +12,8 @@ not part of ``(input, params)``.
 from __future__ import annotations
 
 import time
+import random
+import json
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional
 
@@ -39,6 +41,11 @@ class RequestRecord:
     latency_ms: Optional[float]
     status: str = "complete"
     error: Optional[str] = None
+    model_resolved: Optional[str] = None
+    usage: Optional[Dict[str, Any]] = None
+    api_cost_usd: Optional[float] = None
+    context_overflow: bool = False
+    python_rng_state_after: Any = None
 
     def to_json(self) -> Dict[str, Any]:
         return dict(self.__dict__)
@@ -65,14 +72,19 @@ def request_payload(input_messages: Any, params: Dict[str, Any]) -> Dict[str, An
 class RecordingClient:
     """Transparent wrapper around an upstream-compatible client."""
 
-    def __init__(self, inner: Any, ledger: CallLedger, context: Callable[[], Dict[str, Any]]):
+    def __init__(self, inner: Any, ledger: CallLedger, context: Callable[[], Dict[str, Any]], *,
+                 initial_prompt=None, prepare_prompt=None):
         self._inner = inner
         self._ledger = ledger
         self._context = context
         self._steps: Dict[tuple, int] = {}
+        self._initial_prompt = initial_prompt
+        self._prepare_prompt = prepare_prompt
 
     # --- AbstractClient surface used by BaseAgent ---------------------------------------
     def init_context(self, system_prompt: str, user_prompt: str):
+        if self._initial_prompt:
+            self._initial_prompt(system_prompt, user_prompt)
         return self._inner.init_context(system_prompt, user_prompt)
 
     def get_usage(self, response: Any, current_usage: Dict[str, int]):
@@ -86,6 +98,9 @@ class RecordingClient:
         key = (ctx["turn_index"], ctx["agent"])
         step = self._steps.get(key, 0) + 1
         self._steps[key] = step
+        ctx["step"] = step
+        if self._prepare_prompt:
+            input = self._prepare_prompt(input, params, ctx)
         payload = request_payload(input, params)
         sha = request_sha256(payload)
         ctx["step"] = step
@@ -111,7 +126,11 @@ class RecordingClient:
             request_sha256=sha, response=resp, response_id=resp.get("id"),
             cache_mode=getattr(self._inner, "cache_mode", "fresh"),
             finish_reason=(choices[0] or {}).get("finish_reason"), latency_ms=latency_ms,
-            status=status, error=error))
+            status=status, error=error, model_resolved=resp.get("model"),
+            python_rng_state_after=deep_copy_json(random.getstate()),
+            usage=resp.get("usage"), api_cost_usd=(resp.get("usage") or {}).get("cost"),
+            context_overflow=any(t in ((error or "") + json.dumps(resp.get("error") or {})).lower() for t in
+                ("context_length", "context length", "context window", "maximum context"))))
 
     def __getattr__(self, name):
         return getattr(self._inner, name)

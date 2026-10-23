@@ -81,9 +81,9 @@ def receiver_mask_hook(exposure: ExposureSpec):
             for bb, events in out.items():
                 kept = []
                 for idx, ev in enumerate(events, start=1):
-                    if ev.get("id") in masked:
+                    if ev.get("id") in masked and ev.get("kind") == "communication":
                         removed.append({"blackboard_id": bb, "event_id": ev.get("id"), "rendered_index": idx,
-                                        "later_indices_shift": -1})
+                                        "later_indices_shift": 0})
                     else:
                         kept.append(ev)
                 out[bb] = kept
@@ -107,4 +107,44 @@ def leaky_summary_mask_hook(exposure: ExposureSpec):
         diff["version"] = "LEAKY-TEST-ONLY"
         return out, diff
 
+    return hook
+
+
+def neutral_placebo_hook(exposure: ExposureSpec):
+    """N: replace E* content only, at the same index and exactly matched character length."""
+    from .neutral import FILLERS
+    import hashlib
+
+    def hook(agent, turn_index, view):
+        out = deep_copy_json(view)
+        changed = []
+        if agent == exposure.receiver and exposure.in_horizon(turn_index):
+            for board, events in out.items():
+                for event in events:
+                    if event.get("id") in exposure.masked_ids and event.get("kind") == "communication":
+                        text = str((event.get("payload") or {}).get("content") or "")
+                        slot = int(hashlib.sha256(event["id"].encode()).hexdigest(), 16) % len(FILLERS)
+                        filler = FILLERS[slot]
+                        event["payload"]["content"] = (filler * (len(text) // len(filler) + 1))[:len(text)]
+                        changed.append(event["id"])
+        return out, {"arm": "N", "replaced": changed}
+    return hook
+
+
+def channel_mask_hook(exposure: ExposureSpec):
+    """C: K plus every sender communication on P, including fresh post-fork posts."""
+    def hook(agent, turn_index, view):
+        out = deep_copy_json(view)
+        removed = []
+        if agent == exposure.receiver and exposure.in_horizon(turn_index):
+            for board, events in out.items():
+                kept = []
+                for event in events:
+                    if event.get("kind") == "communication" and (event.get("id") in exposure.masked_ids or
+                            (str(board) == str(exposure.blackboard_id) and event.get("agent") == exposure.sender)):
+                        removed.append(event["id"])
+                    else:
+                        kept.append(event)
+                out[board] = kept
+        return out, {"arm": "C", "removed": removed}
     return hook

@@ -10,6 +10,7 @@ the next request is exactly upstream's.
 from __future__ import annotations
 
 import itertools
+import random
 import json
 import threading
 from dataclasses import dataclass
@@ -144,6 +145,9 @@ class ReplayClient(TogetherClient):
     def generate_response(self, input, params, ccc_context: Optional[Dict[str, Any]] = None):  # noqa: A002
         rec = self.source.next(ccc_context or {}, request_payload(input, params))
         response = deep_copy_json(rec.response)
+        if rec.python_rng_state_after is not None:
+            st = rec.python_rng_state_after
+            random.setstate((st[0], tuple(st[1]), st[2]))
         choices = response.get("choices") or []
         msg = choices[0]["message"] if choices else {"content": ""}
         return response, self._extract_message_content(msg)

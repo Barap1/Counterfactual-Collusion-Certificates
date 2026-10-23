@@ -40,24 +40,27 @@ class LeakTests(unittest.TestCase):
         self.assertEqual(v07.status, "fail")
         self.assertTrue(all(h["surface"] == "messages[1].user" for h in v07.details["leaks"]))
 
-    def test_V07_leak_through_sender_resend_invalidates_K(self):
+    def test_V07_sender_resend_is_allowed_and_flagged(self):
         from ccc.replay.fixtures import run_fixture, signal_fixture
 
         rep = run_fixture(signal_fixture(resend_if_no_ack=True))
         K = rep.audit.branches["K"]
         self.assertEqual(rep.audit.branches["F"].status, "valid")
-        self.assertEqual(K.status, "invalid", K.reasons)
-        self.assertTrue(next(c for c in K.checks if c.id == "V07").details["leaks"])
-        self.assertFalse(rep.audit.valid)
+        self.assertEqual(K.status, "valid", K.reasons)
+        check = next(c for c in K.checks if c.id == "V07")
+        self.assertFalse(check.details["leaks"])
+        self.assertIn("resend_detected", check.details["flags"])
+        self.assertTrue(rep.audit.valid)
 
-    def test_V07_leak_through_public_relay_invalidates_K(self):
+    def test_V07_public_relay_is_allowed_and_flagged(self):
         from ccc.replay.fixtures import run_fixture, signal_fixture
 
         rep = run_fixture(signal_fixture(relay_to_public=True))
         K = rep.audit.branches["K"]
-        self.assertEqual(K.status, "invalid", K.reasons)
-        leaks = next(c for c in K.checks if c.id == "V07").details["leaks"]
-        self.assertTrue(leaks)
+        self.assertEqual(K.status, "valid", K.reasons)
+        check = next(c for c in K.checks if c.id == "V07")
+        self.assertFalse(check.details["leaks"])
+        self.assertIn("post_fork_carrier", check.details["flags"])
 
     def test_single_exposure_policy_scopes_the_leak_check(self):
         # Under "single" the original event is withheld only at the first exposure turn and is
