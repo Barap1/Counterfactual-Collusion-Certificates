@@ -1,0 +1,39 @@
+# SCI-002 Independent design review: findings and resolution
+
+## The review
+
+- **Reviewer:** one bounded child agent with a separate context. It was read-only, made no inference, spent $0 and had no network.
+- **Inputs (and nothing else):** spec 04, spec 05, and the **v0 drafts** of `protocol.md`, `fixture_spec.md`, `baselines.md` and `open_questions.md`.
+- **Brief:** break the design, covering information-loss confounds, leakage, wrong unit, selectable outcomes, fixture circularity, the sham's value, and spec violations.
+- **Date:** 2026-10-23.
+
+**Not self-certified.** The v1 revisions below were made by the SCI-002 author and have **not** been re-reviewed. The director or verifier should check v1 against this table before freeze.
+
+## Findings and resolution
+
+| # | Sev | Finding (summary) | Resolution | Where |
+|---|---|---|---|---|
+| 1 | **P0** | **Circular fixture labels.** A1 was forced to make W drop and A2b to make W rise, so positive/negative coincided with gate (d), and CCC's advantage over B2 held by construction. A2a forced τ_O = 0 | **Accepted.** Labels are now by **policy objective only** (forbidden / legitimate / none). Costs are drawn i.i.d., independent of family, so τ_W and τ_C take both signs within A1 and A2. Outsider preferences are independent. The A2-boundary family was dropped and is now cells within A2. Results are stratified by oracle τ_W class, `info_bearing` and path activity. Predicted CCC error cells (missed A1 W-raising, A1 info-bearing, A1 τ_C ≤ 0; FP on A2 implicit W-flat) are pre-declared | fixture §1.4, §2, §3, §5; baselines table |
+| 2 | **P0** | **Gate (d) is not an information-loss control.** Deconfliction cascades and public "which tasks are free?" questions pass (c) and (d). `supported` on info-bearing content violates spec 04's "R arm or equivalent, otherwise abstain". Gate (e) was vacuous. The boundary was understated | **Accepted.** `info_bearing = true` now **caps the status at `inconclusive: info_loss_untested`** until a validated R arm exists; the outsider-harm dependence estimate is still reported. (c) and (d) are renamed *harm-pattern* gates, with no information-loss claim. The boundary is restated as **every legitimate transfer that does not materially raise W**. Consequence, stated in advance: Tier-B `supported` is expected to be rare or absent | protocol §1, §8; open_questions Q8 |
+| 3 | P1 | **V3 contradicted K.** A verbatim re-send would trip V3 → `invalid`. Task-id substrings also occur legitimately | **Accepted.** V3/G3 are defined over **pre-`t*` `E*` event ids**. Post-`t*` and other-surface content matches go to the §9 flags | protocol V3, §9; fixture G3 |
+| 4 | P1 | **Post-`t*` leakage unflagged:** sender public posts (including the default-to-board-0 path), `CURRENT ASSIGNMENTS`, `action_executed`, outsider quotes | **Accepted.** The leak scan covers every K receiver prompt, on all surfaces, over the whole horizon. A new `post_fork_carrier` flag records the first leak turn and surface. Any flag blocks `not supported` | protocol §9; ENG-002 item 4 |
+| 5 | P1 | **Gate (d) is a knife-edge** (τ̂_O ≥ τ̂_C on point estimates at n = 3) | **Accepted.** (c) and (d) are now **three-way CI-based** with a preregistered tolerance `δ_W = n_O·m_O`. The tolerance slightly changes the norm: W gains below δ_W are not an efficiency excuse. This is stated in §1. Q7 is closed | protocol §1, §8 |
+| 6 | P1 | **The sham cannot detect lesion-induced generic disruption.** It only replicates F. Renumbering creates a K-only artefact | **Accepted.** S is relabelled as the noise-calibration / code-path arm. An **N matched-neutral placebo lesion** is added (same index, matched length, frozen filler) on a preregistered random 50% of Tier-B checkpoints and on all fixtures, with a new gate V10 `lesion_artefact`. K now **preserves original indices** (no renumbering). **Narrowed:** the filler is not information-free, so N supports but does not prove a content effect. I did not adopt the reviewer's alternative of "remove a matched irrelevant event", because no frozen rule can certify that any real event is irrelevant. V9 stays non-blocking (the reviewer judged this defensible) | protocol §3, V9, V10 |
+| 7 | P1 | **A6 mostly tests effect-shrinking defects.** B2's predicted "F" on A6a was wrong | **Accepted.** Added A6g (over-mask: drops an outsider claim or a `CURRENT ASSIGNMENTS` line) and A6h (K-only state perturbation), both effect-inflating. A6c is now split into K-only and F-only. A6e covers the K-only model **or** temperature change. The baselines' A6 rows are corrected. Detection is reported split by direction | fixture §2 A6, §5; baselines |
+| 8 | P1 | **The W identity under collisions is unverified** | **Verified and narrowed.** An exhaustive check over 4,096 assignments with the installed `_rewards` / `_evaluate_assignment` found the identity holds except when ≥ 2 agents claim the same unknown task id (323 cases). **CCC defines `W := Σ r_i`**, and ENG-002 unit-tests it. The check script was run from `/tmp`, outside the repo; it made no inference | protocol F2, §2.2 |
+| 9 | P1 | **Tier B has no usable decision rule.** Δ had no status mapping, the fallback was post hoc, ineligible-world handling was unspecified, and regime-dependent exposures were treated as paired | **Accepted.** Tier B is **labelled exploratory now**. Δ is preregistered as primary over all matched worlds. τ_O := 0 for `no_exposure` / `post_decision` worlds (the mask is a no-op, so this is exact); `pre_exposed` / `restore_fail` worlds are excluded, counted, and get a τ_O := 0 sensitivity analysis. Within-regime means are always reported; **no switching**. The caveats (regime comparison; dependence on the prompt variant; different exposures across "paired" worlds) are printed with Δ. STAT-001 fixes the method and α on dev | protocol §10; open_questions Q5 |
+| 10 | P1 | **Tier A overclaimed as confirmatory.** It is pseudo-replicated, has no near-margin draws, the ε = 0 case is tautological, and the extractor and policies could share code | **Accepted.** Tier A is rescoped to "implementation and predicted-failure validation under known mechanisms". Effects are unconditioned, so draws naturally include near-margin and wrong-sign cases. The headline is n = 3, with n = 50 as a supplement. ε = 0 and ε > 0 are reported separately. The extractor is independent of the policy parser (different worker). G5 is labelled an implementation check | protocol §10; fixture §1.1, §1.5, §3 G5, §5; Q12 |
+| 11 | P2 | Endogenous sender vs spec 05; family-specific turn-order constraints; V3 diff independence; context overflow is treatment-correlated; Δ is conditional on the prompt variant | **All accepted.** The sender departure is recorded (protocol §4.1, Q9). Uniform order applies in every family, with stratification by path activity. The V3 checker is independent. Overflow is reported per arm and the continuation invalidated. Q1 states that Δ is conditional on the prompt variant | protocol §2.3, §4, V3, V6, §10; fixture §1.1 |
+
+## Net effect on the claim
+
+The review **lowered** the expected strength of results.
+
+- Tier B is exploratory and will mostly abstain.
+- CCC's comparison with the strong harm-gated baseline is now a **stratum-by-stratum trade-off**: specificity on benign cooperation and on effect-inflating invalid replays, against sensitivity on info-bearing or W-raising positives. It is not a predicted overall win.
+- This is consistent with SCI-001's narrowed contribution and with fallbacks 1 and 3.
+- No finding was rejected.
+
+## Residual items the reviewer could not check
+
+The reviewer did not see the environment code. Protocol facts F1-F9 rest on the author's code reading. Only F2 was independently executed (finding 8). ENG-002 should unit-test F1, F4, F5 and F6 as part of its harness.

@@ -1,0 +1,13 @@
+Built all six families plus SCI-002 v1 variants. Truth comes from scripted objectives and exact transition/noise enumeration, independently of CCC scores.
+
+- Dev: seeds 12000–12019, G1/G2. Holdout: 87000–87099, G3–G6, untouched.
+- Verified sham identity, harmful dependence, benign cooperation, common-cause nulls, redundancy, invalid replay, and label leakage rejection.
+- Tests: **63 passed, 0 failures/errors**, including contamination tests.
+
+Command: `starter/collusion_hackathon/colosseum/.venv/bin/python -m unittest discover -s tests/fixtures -v`
+
+SCI-002 v1 alignment and limitations are documented: native replay passes 10/11 integrity probes; verbatim resend exposes a V07 mismatch. Inactive fault cells remain reported. No CCC accuracy claim; $0 spend.
+
+[Report and actual output](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/FIX-001.md)
+
+Commit: `6f923cc1df959ba95d776a5e59b21adf32cca193`, preserved in a verified [Git bundle](/Users/aarav/Documents/Projects/ApartSprint/docs/fix/FIX-001.bundle). `.git` writes were blocked, so the checkout branch is unchanged; [import instructions](/Users/aarav/Documents/Projects/ApartSprint/docs/fix/COMMIT_HANDOFF.md) are included.

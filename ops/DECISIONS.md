@@ -25,3 +25,17 @@
 - Owner confirmed the Codex ChatGPT account is correct and asked to prefer Codex workers over Claude workers. New implementation tasks route to Codex via `codex-companion.mjs task --write --background`; Claude agents kept for review/coordination.
 - Owner approved Modal use up to the existing ~$51 credit. Director policy: hard stop at $45 cumulative Modal spend (margin below credit), billing checked before/after each job, no always-on deployments. Out-of-pocket remains $0.
 - Owner approved committing any files (spec pack included). Push/publish/submission still require explicit approval.
+
+## D-011 (2026-10-23 21:15 UTC, director) Wave 2 routing and SCI-002 choices
+- SCI-002 v1 accepted as freeze-candidate (docs/research/sci002/). STAT-001 must re-review before freeze.
+- B1 prompt variant: `deception` for the primary Tier-B stratum. Reason: the frozen estimand is outsider harm (tau_O); the deception variant instantiates an explicit outsider-harming objective, so mechanism-level positives can exist. `simple` may run only as a labelled exploratory stratum if compute remains. `colluder_selection: random`.
+- ENG agent (Claude) stopped on a usage limit after committing ENG-001/002 (46/46 replay tests). Remaining ENG work reassigned to Codex (ENG-003). Owner asked to prefer Codex.
+- INF-001 accepted: primary backend local Ollama gemma4:26b no-think; all arms of one checkpoint in one model-load session; OpenRouter free only as a small corroborating stratum (50 req/day). Modal not used: the `modal billing` check was denied by the permission system; director will not route around it. Local throughput (~1,200 continuations by Oct 25 12:00) suffices.
+- Codex sandbox cannot write .git; Codex workers leave changes in the working tree and the director/integrator commits.
+- Model selection: gpt-6-astra/high for science-critical code (ENG-004 audit), gpt-6.1-sol/high for replay hardening (ENG-003), gpt-6.1-sol/medium for runner plumbing (EXP-000), Claude Opus for STAT-001 judgment (cross-family independence from Codex implementers).
+
+## D-012 (2026-10-23 21:30 UTC, owner via director) Conservative model policy
+- Owner: "be conservative with sub agent choices; don't launch super expensive Claude and Codex". Cancelled ENG-004 on gpt-6-astra/high and STAT-001 on Claude Opus within ~2 min of launch (no partial outputs kept).
+- Relaunched ENG-004 on gpt-6.1-sol/medium; STAT-001 on Claude Sonnet, no child. ENG-003 (gpt-6.1-sol/high) and EXP-000 (gpt-6.1-sol/medium) left running.
+- Default policy from now: Codex gpt-6.1-sol medium (high only when justified), gpt-6-luna for easy tasks; Claude Sonnet/Haiku. No gpt-6-astra or Opus without recording a reason.
+- (owner follow-up) Be stingy with model/reasoning choices; use Claude Haiku for simple builds, edits and checks. Escalate tier only for science-critical judgment, with the reason logged.

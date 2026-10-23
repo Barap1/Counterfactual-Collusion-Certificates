@@ -129,7 +129,7 @@
    "role": "Replay engineer",
    "depends_on": [],
    "acceptance": "Exact hooks and inaccessible state documented",
-   "status": "ACTIVE",
+   "status": "ACCEPTED",
    "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
@@ -146,12 +146,14 @@
     "ENG-001"
    ],
    "acceptance": "Independent design reviewer approves or explicitly narrows",
-   "status": "ACTIVE",
+   "status": "ACCEPTED (freeze-candidate v1; STAT-001 re-review pending)",
    "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
-   "artifacts": []
+   "artifacts": [
+    "docs/research/sci002/"
+   ]
   },
   {
    "id": "ENG-002",
@@ -163,7 +165,7 @@
     "ENG-001"
    ],
    "acceptance": "Offline invariants and corruption tests pass",
-   "status": "ACTIVE",
+   "status": "PROTOTYPE ACCEPTED (46 tests); hardening -> ENG-003",
    "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
@@ -178,12 +180,13 @@
     "SCI-002"
    ],
    "acceptance": "Labels not derived from CCC; hidden labels not leaked",
-   "status": "queued",
-   "owner": null,
+   "status": "ACCEPTED (63 tests; merged 6f923cc)",
+   "owner": "codex gpt-6.1-sol (effort high) via codex-companion, 2026-10-23",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
-   "artifacts": []
+   "artifacts": [],
+   "brief": "ops/briefs/FIX-001.md"
   },
   {
    "id": "INF-001",
@@ -193,12 +196,15 @@
     "GATE-A"
    ],
    "acceptance": "Tool-loop compatibility and zero-new-spend guards demonstrated",
-   "status": "ACTIVE",
+   "status": "ACCEPTED (Modal not exercised: permission denied)",
    "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
-   "artifacts": []
+   "artifacts": [
+    "ops/reports/INF-001.md",
+    "ccc/infra/"
+   ]
   },
   {
    "id": "EXP-001",
@@ -223,8 +229,8 @@
     "GATE-B"
    ],
    "acceptance": "World-level analysis; realistic uncertainty; holdout untouched",
-   "status": "queued",
-   "owner": null,
+   "status": "ACTIVE",
+   "owner": "Claude Sonnet agent (relaunched per D-012)",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
@@ -298,12 +304,17 @@
     "GATE-C"
    ],
    "acceptance": "Numeric/source audit and template preservation",
-   "status": "ACTIVE (early: outline + read-only Drive check)",
+   "status": "EARLY-PHASE ACCEPTED; main phase waits for GATE-C",
    "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
-   "artifacts": []
+   "artifacts": [
+    "paper/outline.md",
+    "paper/author_checklist.md",
+    "paper/references_draft.bib",
+    "ops/reports/PUB-001_early.md"
+   ]
   },
   {
    "id": "REL-001",
@@ -320,6 +331,40 @@
    "attempt": 0,
    "review_state": "none",
    "artifacts": []
+  },
+  {
+   "id": "ENG-003",
+   "objective": "Replay hardening to SCI-002 v1",
+   "owner": "codex gpt-6.1-sol/high",
+   "depends_on": [
+    "ENG-002",
+    "SCI-002"
+   ],
+   "status": "ACTIVE",
+   "brief": "ops/briefs/ENG-003.md"
+  },
+  {
+   "id": "ENG-004",
+   "objective": "Audit decision layer, baselines, Gate A evidence",
+   "owner": "codex gpt-6.1-sol/medium (relaunched per D-012)",
+   "depends_on": [
+    "ENG-002",
+    "FIX-001",
+    "SCI-002"
+   ],
+   "status": "ACTIVE",
+   "brief": "ops/briefs/ENG-004.md"
+  },
+  {
+   "id": "EXP-000",
+   "objective": "Live runner plumbing + offline dry-run",
+   "owner": "codex gpt-6.1-sol/medium",
+   "depends_on": [
+    "INF-001",
+    "ENG-002"
+   ],
+   "status": "ACTIVE",
+   "brief": "ops/briefs/EXP-000.md"
   }
  ]
 }
