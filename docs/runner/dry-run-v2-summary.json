@@ -1,0 +1,43 @@
+{
+  "world_seed": 2,
+  "regime": "B1",
+  "status": "complete",
+  "branches": 8,
+  "branches_by_arm": {
+    "F": 2,
+    "S": 2,
+    "K": 2,
+    "N": 2
+  },
+  "branch_statuses": {
+    "valid": 8
+  },
+  "source_calls": 28,
+  "branch_calls": 152,
+  "guard_attempts": 180,
+  "guard_end_statuses": {
+    "ok": 180
+  },
+  "load_sessions": 1,
+  "checkpoint": {
+    "V01": "pass",
+    "V02": "pass",
+    "V06": "pass",
+    "V6": "pass"
+  },
+  "selection": {
+    "boundary": 3,
+    "bundle_event_ids": [
+      "938f8bac-df11-5d7b-ba83-5c60e9e5fc05"
+    ],
+    "receiver": "Zelda",
+    "rule": "sci002.first_private_bundle.v1",
+    "sender": "Augustina"
+  },
+  "verified_artifacts": 778,
+  "resume_output_identical": true,
+  "source_drift": [],
+  "live_calls": 0,
+  "new_out_of_pocket_usd": 0,
+  "evidence_tier": "scripted_dry_run"
+}

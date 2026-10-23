@@ -20,3 +20,7 @@ results/raw/
 __pycache__/
 *.pyc
 .DS_Store
+
+# generated run artifacts (summaries tracked; raw branch dirs not)
+docs/runner/dry-run-*/
+runs/

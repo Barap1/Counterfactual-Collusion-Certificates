@@ -10,7 +10,8 @@
 | ENG-002 | prototype accepted (46 tests) | done |
 | ENG-003 | active: replay hardening | Codex gpt-6.1-sol/high |
 | ENG-004 | active: audit layer + baselines + Gate A evidence | Codex gpt-6.1-sol/medium |
-| EXP-000 | active: live runner plumbing, dry-run only | Codex gpt-6.1-sol/medium |
+| EXP-000 | ACCEPTED (22 tests) | done |
+| EXP-000b | active: per-arm seeds, live Ollama transport, EXP-001 manifest | Codex gpt-6.1-sol/medium |
 | STAT-001 | draft accepted; freeze blocked on B1/B2/B3 | done |
 | SCI-002b | active: protocol v1.1 (C1–C8) | Claude Haiku |
 | Next | Gate A verifier → EXP-001 Gate B pilot (local gemma4:26b) | - |

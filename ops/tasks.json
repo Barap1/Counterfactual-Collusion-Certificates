@@ -365,7 +365,7 @@
     "INF-001",
     "ENG-002"
    ],
-   "status": "ACTIVE",
+   "status": "ACCEPTED (22 tests; dry-run 8 valid branches, 0 live calls)",
    "brief": "ops/briefs/EXP-000.md"
   },
   {
@@ -376,6 +376,17 @@
    "depends_on": [
     "STAT-001"
    ]
+  },
+  {
+   "id": "EXP-000b",
+   "objective": "Per-arm map + seeds (STAT B2), live Ollama transport with model-reload guard, EXP-001 manifest",
+   "owner": "codex gpt-6.1-sol/medium",
+   "status": "ACTIVE",
+   "depends_on": [
+    "EXP-000",
+    "STAT-001"
+   ],
+   "brief": "ops/briefs/EXP-000b.md"
   }
  ]
 }

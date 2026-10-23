@@ -1,0 +1,23 @@
+Implemented the offline runner with immutable attempts, checkpoint evidence, explicit retries, and holdout protection.
+
+```sh
+python -m ccc.runner plan docs/runner/dev_manifest.json
+python -m ccc.runner run docs/runner/dev_manifest.json --output docs/runner/NAME --dry-run
+python -m ccc.runner status --output docs/runner/NAME
+```
+
+Manifest: frozen worlds/seeds/splits, B1 `deception`, random colluders, F/S/K/N, continuation count, backend/model parameters, protocol hash, budget cap, and STAT-001 approval for holdout. Full schema: [README](docs/runner/README.md).
+
+Verification command:
+
+```sh
+starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner.offline unittest discover -s tests/runner -t .
+```
+
+**22 tests passed.** Requested `sandbox-exec` failed before Python started (`Operation not permitted`); verification used a Python socket/DNS audit guard.
+
+Dry-run: **1 dev world, 8 valid branches, 180 guarded scripted calls, 778 verified artifacts**. Resume added no attempts. Zero live calls; $0 spent.
+
+Before live Gate B: INF-001 must activate live transport/shared logging and enforce an actual single model-load session. Live CLI execution remains disabled. Replay/audit acceptance and a real EXP-001 pilot remain; STAT-001 approval precedes holdout.
+
+Touched only `ccc/runner/`, `tests/runner/`, `docs/runner/`, and [EXP-000 report](ops/reports/EXP-000.md). No commits.
