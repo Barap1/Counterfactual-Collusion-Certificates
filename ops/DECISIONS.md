@@ -44,3 +44,6 @@
 - STAT-001 prereg accepted as draft, NOT frozen. Freeze blockers: B1 protocol v1.1 (C1–C8; Haiku SCI-002b, then spot-check), B2 runner manifest per-arm map {F4,K4,S2,N4} + per-arm/rep/call seeds (follow-up to EXP-000), B3 Stage-2 dev-pinned addendum after EXP-001.
 - Schedule adopted: EXP-001 Gate-B dev pilot (4 dev world-pairs) must finish by 2026-10-24 09:00 UTC hard stop; held-out EXP-002 latest start 2026-10-24 14:12 UTC; collection ends 2026-10-25 12:00 UTC.
 - STAT-001 test-vector reference script copied from /tmp into docs/stats/ref_enumeration.py for reproducibility.
+
+## D-014 (2026-10-23, director) Protocol v1.1 OPEN items resolved
+- SCI-002b (Haiku) applied C1–C8 + P1 to protocol.md (v1 preserved as protocol_v1.md). Three OPENs resolved from existing STAT-001 text, no new values invented: (1) TV_excess null = exact enumeration per checkpoint (analysis_spec §69); (2) Δ_conditional descriptive with interval; (3) S1–S3 confirmatory under Holm (prereg §10). P2 items unapplied (non-blocking). Rehashed protocol_v1.1.sha256. STAT B1 blocker cleared pending Gate-A reviewer spot-check.

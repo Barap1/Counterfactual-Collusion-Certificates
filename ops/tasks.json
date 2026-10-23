@@ -229,7 +229,7 @@
     "GATE-B"
    ],
    "acceptance": "World-level analysis; realistic uncertainty; holdout untouched",
-   "status": "DRAFT ACCEPTED; freeze blocked on B1 (SCI-002b), B2 (runner manifest), B3 (post-EXP-001 addendum)",
+   "status": "DRAFT ACCEPTED; B1 cleared (D-014); B2 in EXP-000b; B3 after EXP-001",
    "owner": "Claude Sonnet agent (relaunched per D-012)",
    "lease": null,
    "attempt": 0,
@@ -372,7 +372,7 @@
    "id": "SCI-002b",
    "objective": "Protocol v1.1 applying STAT-001 C1-C8",
    "owner": "Claude Haiku",
-   "status": "ACTIVE",
+   "status": "ACCEPTED (v1.1 sha 7e3864c7\u2026; D-014)",
    "depends_on": [
     "STAT-001"
    ]

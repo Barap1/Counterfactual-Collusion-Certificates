@@ -13,9 +13,9 @@
 | EXP-000 | ACCEPTED (22 tests) | done |
 | EXP-000b | active: per-arm seeds, live Ollama transport, EXP-001 manifest | Codex gpt-6.1-sol/medium |
 | STAT-001 | draft accepted; freeze blocked on B1/B2/B3 | done |
-| SCI-002b | active: protocol v1.1 (C1–C8) | Claude Haiku |
+| SCI-002b | ACCEPTED (protocol v1.1, D-014) | done |
 | Next | Gate A verifier → EXP-001 Gate B pilot (local gemma4:26b) | - |
 
-**Live agents:** 4 (3 Codex + 1 Claude Haiku) of 6. EXP-001 hard stop 2026-10-24 09:00 UTC; held-out latest start 2026-10-24 14:12 UTC.
+**Live agents:** 3 Codex of 6. EXP-001 hard stop 2026-10-24 09:00 UTC; held-out latest start 2026-10-24 14:12 UTC.
 **Budget:** out-of-pocket $0.00. Modal unused (permission denied on billing check). Local Ollama is the primary backend.
 **Tests:** 128/129 offline pass; 1 error (`problem_layer` import), assigned to ENG-003.
