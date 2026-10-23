@@ -44,17 +44,27 @@ class NativeReplayBridge(unittest.TestCase):
                     for marker in ("colluder", "secret coalition", "L_mech", "world_seed", case):
                         self.assertNotIn(marker,text)
 
-    def test_native_verbatim_resend_exposes_mask_validator_limitation(self):
-        # A post-fork resend is permitted under K. The current engine scans its
-        # text as a leaked original. Preserve this mismatch rather than changing
-        # the ground truth or treating it as successful redundant-case handling.
+    def test_native_verbatim_resend_is_valid_and_flagged_but_masked_rerender_is_invalid(self):
+        # Decided V07 behaviour (ops/reports/ENG-003.md): a new post-fork sender
+        # resend passes K and is flagged as a carrier; a re-render of the masked
+        # original event in the receiver's view is a leak and invalidates K.
+        from ccc.replay.engine import run_branch, scripted_factory
+        from ccc.replay.interventions import leaky_summary_mask_hook
         world=generate_jira("A5a-verbatim",12000)
         self.assertEqual(exact_oracle(world)["L_mech"],"redundant")
         report=self.execute(as_replay_fixture(world))
+        self.assertTrue(report.audit.valid,{a:b.reasons for a,b in report.audit.branches.items()})
         self.assertTrue(all(report.expectations.values()))
-        self.assertFalse(report.audit.valid)
-        self.assertEqual(report.audit.branches["K"].status,"invalid")
-        self.assertIn("V07 mask_no_leak failed",report.audit.branches["K"].reasons)
+        k=report.audit.branches["K"]
+        self.assertEqual(k.status,"valid",k.reasons)
+        v07=next(c for c in k.checks if c.id=="V07")
+        self.assertFalse(v07.details["leaks"])
+        self.assertIn("resend_detected",v07.details["flags"])
+        cp=report.audit.checkpoint
+        leaky=run_branch(cp,"K",scripted_factory(report.fixture.policy_factory),
+                         hook=leaky_summary_mask_hook(cp.exposure),replicate_id="leaky")
+        self.assertEqual(leaky.status,"invalid")
+        self.assertEqual(next(c for c in leaky.checks if c.id=="V07").status,"fail")
 
     def test_native_bridge_refuses_unsupported_stress_or_stochastic_instances(self):
         from fractions import Fraction
