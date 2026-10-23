@@ -65,3 +65,9 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 - Auto-stop on model, resource or spend violations (watchdog).
 - A baseline beating CCC is an acceptable outcome. No optimizing the evaluation for a win.
 - Submission work continues in parallel, with verified and provisional findings kept distinct.
+
+## D-017 (2026-10-23, director) GA-DIAG accepted as diagnosis; fixes pending review
+- A1 0/80: classified FIXTURE DESIGN. 68/80 A1 oracle outsider-harm effects are below m_O=2.5 (54 are zero or negative), and CCC's intervals agree with the oracle in all 80. The other 12 are blocked by the N-placebo veto (PROTOCOL DESIGN); 8 of those also fail coalition benefit. This is a candidate finding: mechanism-labelled "harmful dependence" need not imply estimand-level outsider harm.
+- A5: IMPLEMENTATION BUG (carrier flags not passed to decide) fixed; not-supported down from 100 to 48. The remaining 48 are FIXTURE (24) or PROTOCOL (24 paraphrase carriers).
+- A6: all 350 activated faults detected. The 10 inactive faults produced byte-identical clean branches (FIXTURE activation issue).
+- Gate A stays FAIL. Every proposal in docs/gate_a/diag/proposals.md goes to REV-GA (Claude Sonnet, independent) before adoption. Threshold or semantic changes need a formal amendment.

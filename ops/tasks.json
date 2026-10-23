@@ -392,7 +392,7 @@
    "id": "GA-DIAG",
    "objective": "Diagnose Gate A failures; fix impl bugs only",
    "owner": "codex gpt-6.1-sol/medium",
-   "status": "ACTIVE",
+   "status": "DONE (A5 bug fixed; Gate A still FAIL; proposals to REV-GA)",
    "brief": "ops/briefs/GA-DIAG.md"
   },
   {
@@ -401,6 +401,18 @@
    "owner": "codex gpt-6.1-sol/low",
    "status": "ACCEPTED (38 runner tests)",
    "brief": "ops/briefs/EXP-000c.md"
+  },
+  {
+   "id": "REV-GA",
+   "objective": "Independent review of GA-DIAG fixes/proposals + fault-injection tests",
+   "owner": "Claude Sonnet",
+   "status": "ACTIVE"
+  },
+  {
+   "id": "PUB-002",
+   "objective": "Paper draft methods-first with VERIFIED/PROVISIONAL tags",
+   "owner": "Claude Sonnet",
+   "status": "ACTIVE"
   }
  ]
 }

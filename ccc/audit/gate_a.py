@@ -23,6 +23,25 @@ ROOT=Path(__file__).resolve().parents[2]
 PARAMS=Parameters()
 
 
+def merge_replay_carriers(found, checks):
+    """Carry ENG-003 V07 diagnostics into the §9 decision without re-matching.
+
+    V07 is computed on K receiver requests; carriers are diagnostic flags, not
+    validation failures. Retain its provenance alongside the audit scan evidence.
+    """
+    merged = dict(found)
+    for check in checks:
+        row = asdict(check) if not isinstance(check, dict) else check
+        if row['id'] != 'V07':
+            continue
+        details = row.get('details', {})
+        for flag in details.get('flags', []):
+            if flag in {'redundant_carrier', 'post_fork_carrier', 'resend_detected', 'state_redundant'}:
+                merged.setdefault(flag, {'source': 'V07', 'carriers': [
+                    hit for hit in details.get('carriers', []) if hit.get('flag') == flag]})
+    return merged
+
+
 def require_dev(seed, manifest):
     """Guard runs before generation, RNG construction or native execution."""
     d=manifest['development']['world_seeds']; h=manifest['holdout']['world_seeds']
@@ -211,6 +230,7 @@ def native_case(world):
                 surfaces['state']=[state]
             observations.append({'turn':obs['turn_index'],'surfaces':surfaces})
     found=carriers(texts,observations,cp.boundary,theta=PARAMS.theta)
+    found=merge_replay_carriers(found,checks)
     failures=[c.id+':'+c.name for c in checks if str(c.status).lower()=='fail']
     d=decide(branches,validity=failures,info_bearing=any(information(t) for t in texts),flags=found,
              placebo_run=True,deterministic=True)
@@ -252,14 +272,15 @@ def native_safe(world):
         return {'CCC':{'status':'invalid','reasons':['runner_error:'+type(exc).__name__+':'+str(exc)]},'baselines':{},'checks':{},'eligible':None,'fault_exercised':False}
 
 
-def main():
+def main(out=None):
     from ccc import paths
     from ccc.fixtures.worlds import split_manifest
     from ccc.fixtures.jira import CASES,exact_oracle,run_jira_branch
     manifest=split_manifest()
     initial_sources={str(p.relative_to(ROOT)):sha256(p.read_bytes()).hexdigest() for folder in ('ccc/audit','ccc/baselines','ccc/replay','ccc/fixtures') for p in (ROOT/folder).glob('*.py')}
     rows=[]
-    out=ROOT/'docs/gate_a'; out.mkdir(exist_ok=True)
+    out=Path(out) if out is not None else ROOT/'docs/gate_a'
+    out.mkdir(parents=True,exist_ok=True)
     with ExitStack() as stack:
         stack.enter_context(patch.object(paths,'colosseum_root',return_value=ROOT/'starter/collusion_hackathon/colosseum'))
         stack.enter_context(patch.object(paths,'_local_manifest',side_effect=AssertionError('secret manifest forbidden')))

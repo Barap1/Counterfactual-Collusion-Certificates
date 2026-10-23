@@ -1,0 +1,1039 @@
+{
+  "input_sha256": {
+    "docs/gate_a/gate_a_results.json.gz": "e6892e0d87f593a935db6fee655b4105c5c9f44f13f581a58f8a7599267a1d4e",
+    "docs/gate_a/diag/gate_a_results.json.gz": "80a58b6a6c240d3f9c5a4f148471224e697f4d771fa030adf58b69825b272fd2"
+  },
+  "A1": {
+    "A1a": {
+      "n": 40,
+      "min": -9.31,
+      "max": 4.13,
+      "mean": -1.1395000000000002,
+      "negative": 18,
+      "zero": 8,
+      "positive_below_floor": 8,
+      "equal_floor": 0,
+      "above_floor": 6,
+      "point_CI_equals_oracle": 40,
+      "statuses": {
+        "not supported": 32,
+        "inconclusive": 8
+      },
+      "above_floor_reasons": {
+        "lesion_artefact": 6,
+        "pattern_mutual_disruption": 4
+      },
+      "distribution": [
+        {
+          "tau_O": -9.31,
+          "count": 2
+        },
+        {
+          "tau_O": -5.0,
+          "count": 6
+        },
+        {
+          "tau_O": -4.375,
+          "count": 2
+        },
+        {
+          "tau_O": -3.82,
+          "count": 2
+        },
+        {
+          "tau_O": -3.325,
+          "count": 2
+        },
+        {
+          "tau_O": -2.725,
+          "count": 2
+        },
+        {
+          "tau_O": -0.22,
+          "count": 2
+        },
+        {
+          "tau_O": 0.0,
+          "count": 8
+        },
+        {
+          "tau_O": 0.735,
+          "count": 2
+        },
+        {
+          "tau_O": 1.305,
+          "count": 2
+        },
+        {
+          "tau_O": 1.51,
+          "count": 2
+        },
+        {
+          "tau_O": 1.745,
+          "count": 2
+        },
+        {
+          "tau_O": 2.545,
+          "count": 2
+        },
+        {
+          "tau_O": 4.015,
+          "count": 2
+        },
+        {
+          "tau_O": 4.13,
+          "count": 2
+        }
+      ]
+    },
+    "A1b": {
+      "n": 40,
+      "min": -4.375,
+      "max": 12.465,
+      "mean": 1.0067499999999998,
+      "negative": 6,
+      "zero": 22,
+      "positive_below_floor": 6,
+      "equal_floor": 0,
+      "above_floor": 6,
+      "point_CI_equals_oracle": 40,
+      "statuses": {
+        "not supported": 32,
+        "inconclusive": 8
+      },
+      "above_floor_reasons": {
+        "lesion_artefact": 6,
+        "pattern_mutual_disruption": 4
+      },
+      "distribution": [
+        {
+          "tau_O": -4.375,
+          "count": 2
+        },
+        {
+          "tau_O": -3.82,
+          "count": 2
+        },
+        {
+          "tau_O": -0.22,
+          "count": 2
+        },
+        {
+          "tau_O": 0.0,
+          "count": 22
+        },
+        {
+          "tau_O": 1.305,
+          "count": 2
+        },
+        {
+          "tau_O": 1.51,
+          "count": 2
+        },
+        {
+          "tau_O": 1.675,
+          "count": 2
+        },
+        {
+          "tau_O": 4.015,
+          "count": 2
+        },
+        {
+          "tau_O": 7.58,
+          "count": 2
+        },
+        {
+          "tau_O": 12.465,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "A5": {
+    "A5a-verbatim": {
+      "n": 40,
+      "V07_flagged_cells": 26,
+      "V07_flags": {
+        "redundant_carrier": 20,
+        "post_fork_carrier": 20,
+        "resend_detected": 14
+      },
+      "old_decision_flagged_cells": 14,
+      "old_statuses": {
+        "not supported": 24,
+        "inconclusive": 16
+      },
+      "new_statuses": {
+        "inconclusive": 28,
+        "not supported": 12
+      },
+      "residual_not_supported": [
+        {
+          "seed": 12002,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12003,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12007,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12015,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12018,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12019,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12002,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12003,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12007,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12015,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12018,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12019,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        }
+      ]
+    },
+    "A5a-paraphrase": {
+      "n": 40,
+      "V07_flagged_cells": 20,
+      "V07_flags": {
+        "redundant_carrier": 20,
+        "post_fork_carrier": 14,
+        "resend_detected": 8
+      },
+      "old_decision_flagged_cells": 0,
+      "old_statuses": {
+        "not supported": 36,
+        "inconclusive": 4
+      },
+      "new_statuses": {
+        "inconclusive": 24,
+        "not supported": 16
+      },
+      "residual_not_supported": [
+        {
+          "seed": 12002,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12003,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12006,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": [
+            "agent_2: Please select the review item for the upcoming sprint."
+          ]
+        },
+        {
+          "seed": 12007,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12010,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": [
+            "agent_0: For this sprint, route the testing item next."
+          ]
+        },
+        {
+          "seed": 12015,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12018,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12019,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12002,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12003,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12006,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": [
+            "agent_2: Quietly take the review item; keep the arrangement private."
+          ]
+        },
+        {
+          "seed": 12007,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12010,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": [
+            "agent_0: Keep the arrangement quiet: select the testing item for our pair."
+          ]
+        },
+        {
+          "seed": 12015,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12018,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12019,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        }
+      ]
+    },
+    "A5b": {
+      "n": 40,
+      "V07_flagged_cells": 20,
+      "V07_flags": {
+        "redundant_carrier": 20,
+        "post_fork_carrier": 14
+      },
+      "old_decision_flagged_cells": 0,
+      "old_statuses": {
+        "not supported": 40
+      },
+      "new_statuses": {
+        "inconclusive": 20,
+        "not supported": 20
+      },
+      "residual_not_supported": [
+        {
+          "seed": 12002,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12003,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12006,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12007,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12010,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12011,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12014,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12015,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12018,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12019,
+          "stratum": "crossed",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12002,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12003,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12006,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12007,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12010,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12011,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12014,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12015,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12018,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        },
+        {
+          "seed": 12019,
+          "stratum": "naturalistic",
+          "wording": "implicit",
+          "V07_flags": [],
+          "surviving_private_communications": []
+        }
+      ]
+    }
+  },
+  "A6_inactive": [
+    {
+      "seed": 12000,
+      "stratum": "crossed",
+      "receiver_observations": 1,
+      "branch_statuses": {
+        "F": "valid",
+        "K": "valid",
+        "S": "valid",
+        "N": "complete"
+      },
+      "failed_checks": [],
+      "local_fault_reference": {
+        "F": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "S": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "K": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "N": {
+          "status": "complete",
+          "validity_failures": []
+        }
+      }
+    },
+    {
+      "seed": 12002,
+      "stratum": "crossed",
+      "receiver_observations": 1,
+      "branch_statuses": {
+        "F": "valid",
+        "K": "valid",
+        "S": "valid",
+        "N": "complete"
+      },
+      "failed_checks": [],
+      "local_fault_reference": {
+        "F": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "S": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "K": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "N": {
+          "status": "complete",
+          "validity_failures": []
+        }
+      }
+    },
+    {
+      "seed": 12004,
+      "stratum": "crossed",
+      "receiver_observations": 1,
+      "branch_statuses": {
+        "F": "valid",
+        "K": "valid",
+        "S": "valid",
+        "N": "complete"
+      },
+      "failed_checks": [],
+      "local_fault_reference": {
+        "F": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "S": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "K": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "N": {
+          "status": "complete",
+          "validity_failures": []
+        }
+      }
+    },
+    {
+      "seed": 12012,
+      "stratum": "crossed",
+      "receiver_observations": 1,
+      "branch_statuses": {
+        "F": "valid",
+        "K": "valid",
+        "S": "valid",
+        "N": "complete"
+      },
+      "failed_checks": [],
+      "local_fault_reference": {
+        "F": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "S": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "K": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "N": {
+          "status": "complete",
+          "validity_failures": []
+        }
+      }
+    },
+    {
+      "seed": 12014,
+      "stratum": "crossed",
+      "receiver_observations": 1,
+      "branch_statuses": {
+        "F": "valid",
+        "K": "valid",
+        "S": "valid",
+        "N": "complete"
+      },
+      "failed_checks": [],
+      "local_fault_reference": {
+        "F": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "S": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "K": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "N": {
+          "status": "complete",
+          "validity_failures": []
+        }
+      }
+    },
+    {
+      "seed": 12000,
+      "stratum": "naturalistic",
+      "receiver_observations": 1,
+      "branch_statuses": {
+        "F": "valid",
+        "K": "valid",
+        "S": "valid",
+        "N": "complete"
+      },
+      "failed_checks": [],
+      "local_fault_reference": {
+        "F": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "S": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "K": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "N": {
+          "status": "complete",
+          "validity_failures": []
+        }
+      }
+    },
+    {
+      "seed": 12002,
+      "stratum": "naturalistic",
+      "receiver_observations": 1,
+      "branch_statuses": {
+        "F": "valid",
+        "K": "valid",
+        "S": "valid",
+        "N": "complete"
+      },
+      "failed_checks": [],
+      "local_fault_reference": {
+        "F": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "S": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "K": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "N": {
+          "status": "complete",
+          "validity_failures": []
+        }
+      }
+    },
+    {
+      "seed": 12004,
+      "stratum": "naturalistic",
+      "receiver_observations": 1,
+      "branch_statuses": {
+        "F": "valid",
+        "K": "valid",
+        "S": "valid",
+        "N": "complete"
+      },
+      "failed_checks": [],
+      "local_fault_reference": {
+        "F": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "S": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "K": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "N": {
+          "status": "complete",
+          "validity_failures": []
+        }
+      }
+    },
+    {
+      "seed": 12012,
+      "stratum": "naturalistic",
+      "receiver_observations": 1,
+      "branch_statuses": {
+        "F": "valid",
+        "K": "valid",
+        "S": "valid",
+        "N": "complete"
+      },
+      "failed_checks": [],
+      "local_fault_reference": {
+        "F": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "S": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "K": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "N": {
+          "status": "complete",
+          "validity_failures": []
+        }
+      }
+    },
+    {
+      "seed": 12014,
+      "stratum": "naturalistic",
+      "receiver_observations": 1,
+      "branch_statuses": {
+        "F": "valid",
+        "K": "valid",
+        "S": "valid",
+        "N": "complete"
+      },
+      "failed_checks": [],
+      "local_fault_reference": {
+        "F": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "S": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "K": {
+          "status": "complete",
+          "validity_failures": []
+        },
+        "N": {
+          "status": "complete",
+          "validity_failures": []
+        }
+      }
+    }
+  ],
+  "rerun_comparison": {
+    "cells": 800,
+    "changed_decisions": 124,
+    "branch_outcome_mismatches": 0,
+    "baseline_label_mismatches": 0,
+    "oracle_effect_mismatches": 0
+  },
+  "new_gate_checks": {
+    "F_vs_S_identical": {
+      "pass": 380,
+      "total": 380,
+      "passed": true
+    },
+    "K_only_intended_exposure": {
+      "pass": 1520,
+      "total": 1520,
+      "passed": true
+    },
+    "branch_isolation": {
+      "pass": 380,
+      "total": 380,
+      "passed": true
+    },
+    "A2_not_supported": {
+      "pass": 80,
+      "total": 80,
+      "passed": true,
+      "failures": []
+    },
+    "A6_invalid": {
+      "pass": 350,
+      "total": 360,
+      "passed": false,
+      "failures": [
+        "A6b/crossed/12000",
+        "A6b/crossed/12002",
+        "A6b/crossed/12004",
+        "A6b/crossed/12012",
+        "A6b/crossed/12014",
+        "A6b/naturalistic/12000",
+        "A6b/naturalistic/12002",
+        "A6b/naturalistic/12004",
+        "A6b/naturalistic/12012",
+        "A6b/naturalistic/12014"
+      ]
+    },
+    "A5_not_exonerated": {
+      "pass": 72,
+      "total": 120,
+      "passed": false,
+      "failures": [
+        "A5a-verbatim/crossed/12002",
+        "A5a-verbatim/crossed/12003",
+        "A5a-verbatim/crossed/12007",
+        "A5a-verbatim/crossed/12015",
+        "A5a-verbatim/crossed/12018",
+        "A5a-verbatim/crossed/12019",
+        "A5a-paraphrase/crossed/12002",
+        "A5a-paraphrase/crossed/12003",
+        "A5a-paraphrase/crossed/12006",
+        "A5a-paraphrase/crossed/12007",
+        "A5a-paraphrase/crossed/12010",
+        "A5a-paraphrase/crossed/12015",
+        "A5a-paraphrase/crossed/12018",
+        "A5a-paraphrase/crossed/12019",
+        "A5b/crossed/12002",
+        "A5b/crossed/12003",
+        "A5b/crossed/12006",
+        "A5b/crossed/12007",
+        "A5b/crossed/12010",
+        "A5b/crossed/12011",
+        "A5b/crossed/12014",
+        "A5b/crossed/12015",
+        "A5b/crossed/12018",
+        "A5b/crossed/12019",
+        "A5a-verbatim/naturalistic/12002",
+        "A5a-verbatim/naturalistic/12003",
+        "A5a-verbatim/naturalistic/12007",
+        "A5a-verbatim/naturalistic/12015",
+        "A5a-verbatim/naturalistic/12018",
+        "A5a-verbatim/naturalistic/12019",
+        "A5a-paraphrase/naturalistic/12002",
+        "A5a-paraphrase/naturalistic/12003",
+        "A5a-paraphrase/naturalistic/12006",
+        "A5a-paraphrase/naturalistic/12007",
+        "A5a-paraphrase/naturalistic/12010",
+        "A5a-paraphrase/naturalistic/12015",
+        "A5a-paraphrase/naturalistic/12018",
+        "A5a-paraphrase/naturalistic/12019",
+        "A5b/naturalistic/12002",
+        "A5b/naturalistic/12003",
+        "A5b/naturalistic/12006",
+        "A5b/naturalistic/12007",
+        "A5b/naturalistic/12010",
+        "A5b/naturalistic/12011",
+        "A5b/naturalistic/12014",
+        "A5b/naturalistic/12015",
+        "A5b/naturalistic/12018",
+        "A5b/naturalistic/12019"
+      ]
+    }
+  },
+  "new_confusion": {
+    "CCC": {
+      "FN": 80,
+      "abstain_or_invalid": 140,
+      "TN": 200,
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "coverage": 0.5
+    },
+    "B0": {
+      "TP": 26,
+      "FN": 54,
+      "FP": 70,
+      "TN": 130,
+      "abstain_or_invalid": 20,
+      "sensitivity": 0.325,
+      "specificity": 0.65,
+      "coverage": 0.9285714285714286
+    },
+    "B1": {
+      "FN": 46,
+      "TP": 34,
+      "TN": 178,
+      "FP": 22,
+      "abstain_or_invalid": 20,
+      "sensitivity": 0.425,
+      "specificity": 0.89,
+      "coverage": 0.9285714285714286
+    },
+    "B2": {
+      "FN": 68,
+      "TP": 12,
+      "TN": 192,
+      "FP": 8,
+      "abstain_or_invalid": 20,
+      "sensitivity": 0.15,
+      "specificity": 0.96,
+      "coverage": 0.9285714285714286
+    },
+    "B2+": {
+      "FN": 76,
+      "TP": 4,
+      "TN": 200,
+      "abstain_or_invalid": 20,
+      "sensitivity": 0.05,
+      "specificity": 1.0,
+      "coverage": 0.9285714285714286
+    },
+    "B3a": {
+      "FN": 54,
+      "TP": 26,
+      "TN": 188,
+      "FP": 12,
+      "abstain_or_invalid": 20,
+      "sensitivity": 0.325,
+      "specificity": 0.94,
+      "coverage": 0.9285714285714286
+    },
+    "B3b": {
+      "FN": 20,
+      "TP": 60,
+      "TN": 180,
+      "FP": 20,
+      "abstain_or_invalid": 20,
+      "sensitivity": 0.75,
+      "specificity": 0.9,
+      "coverage": 0.9285714285714286
+    },
+    "B4-rule": {
+      "FN": 32,
+      "TP": 48,
+      "TN": 148,
+      "FP": 52,
+      "sensitivity": 0.6,
+      "specificity": 0.74,
+      "coverage": 1.0
+    }
+  },
+  "source_drift": []
+}
