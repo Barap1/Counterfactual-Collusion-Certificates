@@ -131,12 +131,24 @@ def load(path):
     return validate(json.loads(Path(path).read_text()))
 
 
-def parse_time(value):
-    from datetime import datetime, timezone
+def parse_instant(value):
+    """Parse any timestamp with an explicit offset (e.g. Ollama's local-zone expires_at) as an aware datetime."""
+    from datetime import datetime
+    if not isinstance(value, str):
+        raise ValueError("timestamp must be a string")
     t = datetime.fromisoformat(value.replace("Z", "+00:00"))
-    if t.tzinfo is None or t.utcoffset().total_seconds() != 0:
+    if t.tzinfo is None or t.utcoffset() is None:
+        raise ValueError("timestamp must include a timezone offset")
+    return t  # aware; comparisons and subtraction are offset-correct without UTC conversion
+
+
+def parse_time(value):
+    """hard_stop_utc: must be expressed in UTC (Z or +00:00)."""
+    from datetime import datetime
+    t = datetime.fromisoformat(value.replace("Z", "+00:00")) if isinstance(value, str) else None
+    if t is None or t.tzinfo is None or t.utcoffset().total_seconds() != 0:
         raise ValueError("hard_stop_utc must be UTC")
-    return t.astimezone(timezone.utc)
+    return parse_instant(value)
 
 
 def call_seed(m, checkpoint_id, arm, replicate, turn, call_k, agent=""):

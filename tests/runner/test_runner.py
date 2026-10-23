@@ -161,7 +161,9 @@ class CollectionTests(unittest.TestCase):
             again = run(self.m, self.root, dry_run=True)
             after = {str(p): file_hash(p) for p in self.root.rglob("*") if p.is_file()}
             self.assertEqual(before, after)
-            self.assertEqual(again, report)
+            again_record = again.pop("run_record")
+            self.assertEqual(again_record["checkpoints_launched"], 0)  # no-op resume launches nothing
+            self.assertEqual(again, {k: v for k, v in report.items() if k != "run_record"})
         attempt = self.root / "worlds/dev02_B1/attempt_0001"
         result = get(attempt / "result.json")
         self.assertEqual(len(result["branches"]), 8)
@@ -284,6 +286,76 @@ class CollectionTests(unittest.TestCase):
         report = run(self.m, self.root, dry_run=True, retry_failed=True)
         self.assertEqual([a["status"] for a in report["worlds"][0]["attempts"]], ["failed", "complete"])
         self.assertEqual(failed.read_bytes(), before)
+
+
+class RunPathTimeZoneTests(unittest.TestCase):
+    """Regression: `run` must accept the exact EXP-001 hard_stop under a non-UTC local TZ."""
+
+    EXP001 = ROOT / "docs/runner/exp001_manifest.json"
+
+    def setUp(self):
+        import os
+        import time
+        previous = os.environ.get("TZ")
+
+        def restore():
+            if previous is None:
+                os.environ.pop("TZ", None)
+            else:
+                os.environ["TZ"] = previous
+            time.tzset()
+
+        os.environ["TZ"] = "America/New_York"
+        time.tzset()
+        self.addCleanup(restore)
+        logging_previous = logging.root.manager.disable
+        logging.disable(logging.CRITICAL)
+        self.addCleanup(logging.disable, logging_previous)
+        self.temp = tempfile.TemporaryDirectory(dir=ROOT / "docs/runner")
+        self.addCleanup(self.temp.cleanup)
+        self.dir = Path(self.temp.name)
+
+    def _dry_manifest(self):
+        raw = json.loads(self.EXP001.read_text())
+        self.assertEqual(raw["hard_stop_utc"], "2026-10-24T09:00:00Z")
+        raw["policy"]["live_inference_enabled"] = False  # offline dry-run copy; hard_stop kept exact
+        path = self.dir / "exp001_dry.json"
+        path.write_text(json.dumps(raw))
+        return path
+
+    def test_cli_run_dry_run_with_exact_hard_stop_under_new_york_tz(self):
+        import contextlib
+        import io
+        import time
+        from ccc.runner.__main__ import main
+        self.assertNotEqual(time.localtime().tm_gmtoff, 0)
+        out = io.StringIO()
+        err = io.StringIO()
+        with patch("socket.socket.connect", side_effect=AssertionError("network attempted")), \
+             contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            code = main(["run", str(self._dry_manifest()), "--output", str(self.dir / "out"),
+                         "--dry-run", "--max-checkpoints", "1"])
+        self.assertEqual(err.getvalue(), "")
+        self.assertEqual(code, 0)
+        report = json.loads(out.getvalue())
+        self.assertEqual(report["run_record"], {"max_checkpoints": 1, "checkpoints_launched": 1,
+                                                "dry_run": True, "live": False})
+        self.assertEqual(len(report["worlds"]), 8)
+        self.assertEqual(report["worlds"][0]["attempts"][0]["status"], "complete")
+        self.assertEqual(sum(bool(w["attempts"]) for w in report["worlds"]), 1)
+
+    def test_max_checkpoints_stops_before_next_world_and_rejects_nonpositive(self):
+        from ccc.runner.collector import run
+        m = load(ROOT / "docs/runner/dev_manifest.json")
+        m["worlds"].append({"id": "dev03_B2", "seed": 3, "regime": "B2", "split": "development"})
+        with patch("socket.socket.connect", side_effect=AssertionError("network attempted")):
+            report = run(m, self.dir / "two", dry_run=True, max_checkpoints=1)
+            self.assertEqual(report["run_record"]["checkpoints_launched"], 1)
+            by_world = {w["world"]: w["attempts"] for w in report["worlds"]}
+            self.assertEqual(len(by_world["dev02_B1"]), 1)
+            self.assertEqual(by_world["dev03_B2"], [])
+            with self.assertRaisesRegex(ValueError, "positive integer"):
+                run(m, self.dir / "bad", dry_run=True, max_checkpoints=0)
 
 
 if __name__ == "__main__":

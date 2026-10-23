@@ -18,6 +18,8 @@ def main(argv=None):
     mode.add_argument("--dry-run", action="store_true")
     mode.add_argument("--live", action="store_true")
     execution.add_argument("--retry-failed", action="store_true")
+    execution.add_argument("--max-checkpoints", type=int, default=None,
+                           help="stop launching new checkpoints after N (default: unlimited)")
     inspection = commands.add_parser("status")
     inspection.add_argument("--output", required=True)
     args = parser.parse_args(argv)
@@ -27,7 +29,8 @@ def main(argv=None):
         else:
             from .collector import run, status
             result = status(args.output) if args.command == "status" else run(
-                load(args.manifest), args.output, dry_run=args.dry_run, live=args.live, retry_failed=args.retry_failed)
+                load(args.manifest), args.output, dry_run=args.dry_run, live=args.live, retry_failed=args.retry_failed,
+                max_checkpoints=args.max_checkpoints)
         print(json.dumps(result, sort_keys=True, indent=2))
         return 0
     except (ValueError, OSError, KeyError, TypeError) as exc:

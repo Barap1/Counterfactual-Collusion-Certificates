@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from urllib.parse import urlsplit
 
 from ccc.infra.budget_guard import GuardedChatClient
-from .manifest import digest, parse_time
+from .manifest import digest, parse_instant
 
 KEEP_ALIVE = -1
 CANARY_MESSAGES = [{"role": "user", "content": "Write one short sentence about a copper lighthouse."}]
@@ -50,7 +50,7 @@ class OllamaSession:
         self.history = []
         self.canary_output = None
         self.initial = self.snapshot()
-        if (parse_time(self.initial["expires_at"]) - datetime.now(timezone.utc)).total_seconds() < 6 * 3600:
+        if (parse_instant(self.initial["expires_at"]) - datetime.now(timezone.utc)).total_seconds() < 6 * 3600:
             raise ValueError("resident lease must cover at least six hours; operator must set OLLAMA_KEEP_ALIVE=-1")
         self.identity = self.token(self.initial)
         self.session_id = digest([self.version, self.pids, self.identity])
@@ -75,7 +75,7 @@ class OllamaSession:
         self.history.append({"checked_at": datetime.now(timezone.utc).isoformat(), "ps": data})
         entry = self.entry(data)
         self.verify_digest(entry)
-        if parse_time(entry["expires_at"]) <= datetime.now(timezone.utc):
+        if parse_instant(entry["expires_at"]) <= datetime.now(timezone.utc):
             raise ModelReload("model_reload: residency expired")
         if entry.get("context_length") != 32768:
             raise ValueError("resident Ollama model must have context_length 32768")

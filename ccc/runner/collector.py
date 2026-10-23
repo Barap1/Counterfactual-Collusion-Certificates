@@ -312,8 +312,10 @@ def status(root):
             "evidence_tier": "live_local" if m["policy"]["live_inference_enabled"] else "scripted_dry_run"}
 
 
-def run(m, root, *, dry_run=False, live=False, retry_failed=False):
+def run(m, root, *, dry_run=False, live=False, retry_failed=False, max_checkpoints=None):
     validate(m)
+    if max_checkpoints is not None and (type(max_checkpoints) is not int or max_checkpoints < 1):
+        raise ValueError("--max-checkpoints must be a positive integer")
     if dry_run == live:
         raise ValueError("live execution disabled unless --live is explicit; choose --live or --dry-run")
     if live and not m["policy"]["live_inference_enabled"]:
@@ -340,6 +342,7 @@ def run(m, root, *, dry_run=False, live=False, retry_failed=False):
             put(root / "code.json", code)
             if live_session:
                 put(root / "run_manifest.json", {"manifest_sha256": digest(m), "ollama": live_session.attestation()})
+        launched = 0
         for job in plan(m)["jobs"]:
             wroot = root / "worlds" / job["world"]["id"]
             attempts = sorted(wroot.glob("attempt_*"))
@@ -356,6 +359,9 @@ def run(m, root, *, dry_run=False, live=False, retry_failed=False):
                     raise ValueError("repeated model_reload; preregistered single checkpoint retry exhausted")
             if m.get("hard_stop_utc") and datetime.now(timezone.utc) >= parse_time(m["hard_stop_utc"]):
                 break
+            if max_checkpoints is not None and launched >= max_checkpoints:
+                break
+            launched += 1
             if live:
                 live_session = OllamaSession(m["model"])
             attempt = wroot / f"attempt_{len(attempts) + 1:04}"
@@ -392,4 +398,7 @@ def run(m, root, *, dry_run=False, live=False, retry_failed=False):
                 break
             if result["status"] in ("failed", "invalid"):
                 raise ValueError(f"world attempt {result['status']}; evidence retained at {attempt}")
-    return status(root)
+    report = status(root)
+    report["run_record"] = {"max_checkpoints": max_checkpoints, "checkpoints_launched": launched,
+                            "dry_run": dry_run, "live": live}
+    return report

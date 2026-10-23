@@ -185,6 +185,22 @@ class LiveTests(unittest.TestCase):
             with self.assertRaises(ModelReload):
                 session.check()
 
+    def test_ollama_expires_at_in_local_offset_is_accepted(self):
+        # Ollama serializes /api/ps expires_at in the server's local zone, not UTC.
+        import os, time
+        previous = os.environ.get("TZ")
+        os.environ["TZ"] = "America/New_York"
+        time.tzset()
+        self.addCleanup(lambda: (os.environ.__setitem__("TZ", previous) if previous else os.environ.pop("TZ", None), time.tzset()))
+        with fixture(self.m) as state:
+            state['loaded_at'] = None
+            state['expiry'] = '9999-12-31T19:59:59-05:00'
+            session = OllamaSession(self.m['model'])
+            session.check()
+            state['expiry'] = '2000-01-01T00:00:00-05:00'  # lease in the past, still a valid offset form
+            with self.assertRaisesRegex(ModelReload, "residency expired"):
+                session.check()
+
     def test_real_ps_fingerprint_changes_fail_closed(self):
         with fixture(self.m) as state:
             state['loaded_at'] = None
