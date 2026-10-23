@@ -1,0 +1,1 @@
+The worktree is on `v1.2-impl` at `782bec2` with no initial changes. The task registry predates AMD-IMP-5; your assignment provides scope. The existing Gate A runner still uses the v1.1 filler placebo, so I’ll update that path for v1.2 before evaluating. I’ll also retain the earlier report’s freeze-timing caveat.

@@ -14,3 +14,9 @@ Entries record any change after a Stage 1 or Stage 2 hash (prereg.md section 12)
   - The held-out S-vs-F noise scale may be about 29% above the dev level from which m_O was pinned. m_O is not re-pinned.
   - delta_S, m_O, the TOST rule, alpha, theta, and the n per arm for F, K and N are unchanged.
 - **Claims affected:** not stated in D-022. Whether any claim moves to exploratory under prereg.md section 12 is left to the director and is not decided by this entry.
+
+## DEV-002 (2026-10-23) v1.2 placebo-census pre-registration gate failed
+- Required by protocol v1.2 §§3.2, 9, 11: extractor, alias list, T_chat templates and A6 map hash-committed BEFORE the placebo availability census.
+- What happened: an interrupted worker ran the DEV census (fx1 0/740 → chatter trigger fired → fx2 740/740) before those artifacts were committed. Hashes were committed afterwards (worktree commit 782bec2, ops/v12_freeze_hashes.txt) and establish only unchanged bytes since then, not pre-registration.
+- Consequence: the DEV census results are classified EXPLORATORY. The chatter-trigger decision rests on them, and the trigger rule itself was frozen in the adopted protocol v1.2 before the census. Protection against selection degrees of freedom is claimed only for data generated after the freeze commit (held-out fixtures and any held-out real runs).
+- Identified by: AMD-IMP-A2 (self-report) and the Codex adversarial review of branch v1.2-impl.

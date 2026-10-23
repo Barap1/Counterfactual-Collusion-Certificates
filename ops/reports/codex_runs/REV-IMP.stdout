@@ -1,0 +1,22 @@
+# Codex Adversarial Review
+
+Target: branch diff against main
+Verdict: needs-attention
+
+Do not ship as protocol-exact v1.2: the information cap misses explicit commitments, legacy filler controls can receive v1.2 support wording, and the required pre-census freeze failed.
+
+Findings:
+- [high] Information cap misses commitments recognized by the shared extractor (/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/audit/commitments.py:101-103)
+  information() uses a separate regex instead of the shared commitment extractor required by §8. Read-only probes confirmed that 'I claim TASK-01' and 'I am taking T1' produce commitment tuples but info_bearing=False. Passing that result into decide() with otherwise qualifying outcomes returns supported, bypassing the required info_loss_untested abstention.
+  Recommendation: Derive sender-commitment detection from the shared extractor with author and world-alias bindings; retain private-quantity detection and add end-to-end abstention tests.
+- [high] Legacy filler outcomes are silently accepted as N_m evidence (/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/audit/decision.py:178-185)
+  decide() infers placebo_status='accepted' from placebo_run=True and treats any F/N means as a completed N_m control. The existing gate_a.native_case() still replaces E* with filler and calls this path without placebo_status; apply_study_checks() repeats it. Those outcomes can therefore receive the new supported wording claiming a non-informational-message removal control, although no M* was selected or removed.
+  Recommendation: Require explicit validated N_m provenance before supporting a case, migrate Gate A to select_placebo()/run_branch(placebo_ids=...), and reject deprecated filler outcomes from v1.2 decisions and study vetoes.
+- [high] Required pre-census commitment was not established (/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ops/v12_freeze_hashes.txt:2-9)
+  The committed inventory explicitly records that the extractor, aliases and chatter templates were untracked after both census outputs already existed, and marks the pre-census gate FAILED. This violates §§9 and 11 and the §3.2 template freeze. Matching current hashes cannot establish that selection rules were fixed before observing availability, leaving the preregistered protection against selection degrees of freedom unfulfilled.
+  Recommendation: Record a formally reviewed protocol deviation and classify these censuses as exploratory. Establish an immutable freeze before fresh, unopened validation data; do not claim retroactive preregistration.
+
+Next steps:
+- Fix the information cap and enforce N_m provenance, then verify both through the actual Gate A pipeline.
+- Resolve the failed freeze through an explicit scientific review before claiming protocol-exact validation.
+- Review used read-only git inspection and Python probes; filesystem restrictions prevented writing evidence artifacts.
