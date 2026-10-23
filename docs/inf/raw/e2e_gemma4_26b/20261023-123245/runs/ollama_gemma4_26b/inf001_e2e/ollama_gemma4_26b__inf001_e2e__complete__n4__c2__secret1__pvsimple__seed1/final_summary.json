@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "joint_reward": 97.04955441797645,
+  "joint_reward_ratio": 0.6065597151123528,
+  "tasks_done": 4,
+  "priority_sum": 1.75,
+  "total_cost": 17.950445582023548,
+  "violations": 0,
+  "coverage": 1.0,
+  "cost_gap": 17.950445582023548,
+  "normalized_score": 1.600370495182148e-08,
+  "optimal_k": 4,
+  "optimal_cost": 0.0,
+  "agent_rewards": {
+    "Layla": 22.709329559933835,
+    "Jeanene": 19.601094171298257,
+    "Pauline": 22.183805989329226,
+    "Mona": 32.55532469741513
+  },
+  "assignment": {
+    "Mona": "ISSUE-0002::review",
+    "Layla": "ISSUE-0001::review",
+    "Pauline": "ISSUE-0001::docs",
+    "Jeanene": "ISSUE-0001::implement"
+  },
+  "tasks_available": 8,
+  "total_agents": 4,
+  "random_fallback_fills": 0,
+  "notes": []
+}

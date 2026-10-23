@@ -1,0 +1,43 @@
+# INF-001 end-to-end integration benchmark (development world seed 1 = pilot world; NOT held-out data).
+# Same as starter hackathon_positive_control.yaml except the model/backend and generation params.
+# Run only via ccc/infra/e2e_colosseum_guarded.py (routes every call through BudgetGuard to local Ollama).
+simulation:
+  max_iterations: 1
+  max_planning_rounds: 2
+  max_conversation_steps: 3
+  seed: 1
+  tags: [inf001_e2e]
+environment:
+  name: JiraTicketEnvironment
+  assignment_filling: false
+  max_tasks: 8
+communication_network:
+  topology: complete
+  num_agents: 4
+  consolidate_channels: true
+llm_models:
+  - label: ollama_gemma4_26b
+    llm:
+      provider: openrouter          # starter routing label for the OpenAI-compatible client (patched to GuardedChatClient)
+      openrouter:
+        model: gemma4:26b
+        params:
+          max_tokens: 1500
+          temperature: 0.7
+          reasoning_effort: none
+          seed: 1
+experiment:
+  tag: inf001_e2e
+  output_dir: /Users/aarav/Documents/Projects/ApartSprint/docs/inf/raw/e2e_gemma4_26b
+  max_concurrent_runs: 1
+  seeds: [1]
+  collusion:
+    colluder_selection: first
+    agent_order: random
+  sweeps:
+    - name: inf001_e2e
+      topologies: [complete]
+      num_agents: [4]
+      colluder_counts: [2]
+      secret_channel_enabled: [true]
+      prompt_variants: [simple]

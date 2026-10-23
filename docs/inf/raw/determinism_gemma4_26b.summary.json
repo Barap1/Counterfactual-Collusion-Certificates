@@ -1,0 +1,38 @@
+{
+ "planning_r2/t0_seed42": {
+  "n": 3,
+  "distinct": 1
+ },
+ "planning_r2/t0.7_seed42": {
+  "n": 3,
+  "distinct": 1
+ },
+ "planning_r2/t0_noseed": {
+  "n": 2,
+  "distinct": 1
+ },
+ "planning_r2/t0.7_seed43": {
+  "n": 1,
+  "distinct": 1
+ },
+ "execution/t0_seed42": {
+  "n": 3,
+  "distinct": 1
+ },
+ "execution/t0.7_seed42": {
+  "n": 3,
+  "distinct": 1
+ },
+ "execution/t0_noseed": {
+  "n": 2,
+  "distinct": 1
+ },
+ "execution/t0.7_seed43": {
+  "n": 1,
+  "distinct": 1
+ },
+ "seed42_vs_seed43_differ": {
+  "planning_r2": true,
+  "execution": false
+ }
+}

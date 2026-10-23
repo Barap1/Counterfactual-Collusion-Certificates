@@ -1,0 +1,24 @@
+[
+ {
+  "think": null,
+  "prompt_eval_count": 4897,
+  "eval_count": 400,
+  "prefill_tok_s": 1481.4,
+  "decode_tok_s": 87.9,
+  "load_s": 3.55,
+  "total_s": 11.42,
+  "thinking_chars": 1128,
+  "done_reason": "length"
+ },
+ {
+  "think": false,
+  "prompt_eval_count": 4895,
+  "eval_count": 48,
+  "prefill_tok_s": 1489.0,
+  "decode_tok_s": 106.7,
+  "load_s": 0.19,
+  "total_s": 3.96,
+  "thinking_chars": 0,
+  "done_reason": "stop"
+ }
+]

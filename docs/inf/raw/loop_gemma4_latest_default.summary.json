@@ -1,0 +1,31 @@
+{
+ "run_id": "loop_gemma4_latest_default",
+ "episodes": 8,
+ "passed": 5,
+ "pass_rate": 0.625,
+ "calls": 16,
+ "calls_with_tool_calls": 11,
+ "json_invalid_args": 0,
+ "schema_invalid_args": 2,
+ "empty_responses": 4,
+ "truncated_calls": 2,
+ "episode_errors": 0,
+ "tool_env_errors": 2,
+ "latency_p50_s": 7.911,
+ "latency_p95_s": 35.279,
+ "latency_mean_s": 14.29,
+ "completion_tok_per_s_aggregate": 47.14,
+ "prompt_tokens_max": 5604,
+ "mean_calls_per_episode": 2.0,
+ "mean_episode_wall_s": 28.58,
+ "by_phase": {
+  "planning": {
+   "n": 4,
+   "passed": 1
+  },
+  "execution": {
+   "n": 4,
+   "passed": 4
+  }
+ }
+}

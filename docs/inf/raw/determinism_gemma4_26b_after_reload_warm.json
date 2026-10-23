@@ -1,0 +1,16 @@
+[
+ {
+  "cond": {
+   "temperature": 0.7,
+   "seed": 42
+  },
+  "sha": "971db4a5d8791ae4"
+ },
+ {
+  "cond": {
+   "temperature": 0.7,
+   "seed": 42
+  },
+  "sha": "971db4a5d8791ae4"
+ }
+]
