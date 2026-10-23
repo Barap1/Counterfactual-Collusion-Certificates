@@ -9,7 +9,7 @@
 | STAT-001 | draft accepted; B1 cleared, B2 done (EXP-000b), B3 after EXP-001 | done |
 | ENG-004 | done; Gate A FAIL evidence | done |
 | GA-DIAG | active: root-cause Gate A failures | Codex gpt-6.1-sol/medium |
-| EXP-000c | active: Ollama reload detection | Codex gpt-6.1-sol/low |
-| Next | Haiku operator: live smoke test → EXP-001 DEV pilot (A-replay basis, D-015) | - |
+| EXP-000c | ACCEPTED (38 tests) | done |
+| EXP-001 | launching: smoke → DEV pilot, local gemma4:26b, hard stop 09:00 UTC | Claude Haiku operator |
 
 **Tests:** 213/213 offline OK. **Live agents:** 2 Codex of 6. **Budget:** $0 out-of-pocket; 0 experimental live calls so far.

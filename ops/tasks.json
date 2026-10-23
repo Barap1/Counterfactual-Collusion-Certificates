@@ -214,8 +214,8 @@
     "INF-001"
    ],
    "acceptance": "Real branch validity inspected; all attempted cases retained",
-   "status": "queued",
-   "owner": null,
+   "status": "ACTIVE: Haiku operator launching DEV pilot on local gemma4:26b (D-015 A-replay basis)",
+   "owner": "Claude Haiku operator",
    "lease": null,
    "attempt": 0,
    "review_state": "none",
@@ -399,7 +399,7 @@
    "id": "EXP-000c",
    "objective": "Ollama-compatible reload detection (canary + keep_alive -1)",
    "owner": "codex gpt-6.1-sol/low",
-   "status": "ACTIVE",
+   "status": "ACCEPTED (38 runner tests)",
    "brief": "ops/briefs/EXP-000c.md"
   }
  ]

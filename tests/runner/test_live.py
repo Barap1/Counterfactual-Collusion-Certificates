@@ -35,11 +35,13 @@ class FixtureHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         state = self.server.state
         state['gets'].append(self.path)
+        if self.path == '/api/version':
+            return self.send_json({'version': '0.32.5'})
         if self.path == '/api/tags':
             return self.send_json({'models': [dict(name='gemma4:26b', digest=state['digest'])]})
         if self.path == '/api/ps':
             entry = dict(name='gemma4:26b', digest=state['digest'],
-                         expires_at=state['expiry'], context_length=state['ctx'])
+                         expires_at=state['expiry'], context_length=state['ctx'], size_vram=17661060710)
             if state['loaded_at'] is not None:
                 entry['loaded_at'] = state['loaded_at']
             return self.send_json({'models': [entry]} if state['resident'] else {'models': []})
@@ -51,7 +53,12 @@ class FixtureHandler(BaseHTTPRequestHandler):
             return self.send_error(404)
         payload = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
         state['posts'].append(payload)
-        if state.get('respond'):
+        if payload['messages'] == __import__('ccc.runner.live', fromlist=['CANARY_MESSAGES']).CANARY_MESSAGES:
+            response = {'model': 'gemma4:26b', 'choices': [{'message': {'role': 'assistant', 'content': state.get('canary', 'fixed probe')}}]}
+            state['canary_calls'] = state.get('canary_calls', 0) + 1
+            if state.get('canary_reload') and state['canary_calls'] == 2:
+                response['choices'][0]['message']['content'] = 'reloaded probe'
+        elif state.get('respond'):
             response = state['respond'](payload)
         else:
             response = {'id': str(len(state['posts'])), 'model': 'gemma4:26b',
@@ -100,7 +107,7 @@ def fixture(m):
     server = SimpleNamespace(server_port=19439)
     server.state = {'digest': m['model']['weight_digest'], 'posts': [], 'gets': [],
                     'loaded_at': '2026-10-23T01:00:00Z', 'resident': True, 'ctx': 32768,
-                    'expiry': (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()}
+                    'expiry': '9999-12-31T23:59:59Z'}
     with patch('ccc.runner.live.urllib.request.build_opener', return_value=FixtureOpener(server)), \
          patch('ccc.runner.live.local_listener', return_value=['fixture-pid']):
         m['model']['base_url'] = f'http://127.0.0.1:{server.server_port}/v1'
@@ -148,7 +155,7 @@ class LiveTests(unittest.TestCase):
             self.assertEqual(state['gets'], [])
             self.assertEqual(list(Path(d).iterdir()), [])
 
-    def test_preflight_digest_context_and_missing_identity_refuse(self):
+    def test_preflight_digest_context_refuse_and_real_ps_accepts(self):
         with fixture(self.m) as state:
             state['digest'] = '0' * 64
             with self.assertRaisesRegex(ValueError, 'digest'):
@@ -159,8 +166,7 @@ class LiveTests(unittest.TestCase):
                 OllamaSession(self.m['model'])
             state['ctx'] = 32768
             state['loaded_at'] = None
-            with self.assertRaisesRegex(ValueError, 'cannot attest'):
-                OllamaSession(self.m['model'])
+            OllamaSession(self.m['model'])
             self.assertEqual(state['posts'], [])
 
     def test_residency_reload_expiry_and_loss_fail_closed(self):
@@ -171,13 +177,28 @@ class LiveTests(unittest.TestCase):
             state['loaded_at'] = 'different'
             with self.assertRaises(ModelReload):
                 session.check()
-            state['loaded_at'] = session.identity
+            state['loaded_at'] = session.identity['load_identity']
             state['expiry'] = '2000-01-01T00:00:00Z'
             with self.assertRaises(ModelReload):
                 session.check()
             state['resident'] = False
             with self.assertRaises(ModelReload):
                 session.check()
+
+    def test_real_ps_fingerprint_changes_fail_closed(self):
+        with fixture(self.m) as state:
+            state['loaded_at'] = None
+            session = OllamaSession(self.m['model'])
+            session.check()
+            state['expiry'] = '9999-12-30T23:59:59Z'
+            with self.assertRaises(ModelReload):
+                session.check()
+        for field in ('digest', 'size_vram', 'context_length', 'expires_at', 'loaded_at', 'load_session_id'):
+            entry = dict(digest='a', size_vram=10, context_length=32768,
+                         expires_at='9999-12-31T23:59:59Z')
+            before = OllamaSession.token(entry)
+            entry[field] = 'changed'
+            self.assertNotEqual(before, OllamaSession.token(entry), field)
 
     def test_listener_wildcard_lan_and_missing_refused(self):
         for output in ('p1\nn*:11434\n', 'p1\nn192.168.1.2:11434\n', ''):
@@ -212,11 +233,13 @@ class LiveTests(unittest.TestCase):
             return response
         with tempfile.TemporaryDirectory(dir=ROOT / 'docs/runner') as d, fixture(self.m) as state:
             state['respond'] = respond
+            state['loaded_at'] = None if getattr(self, 'real_ps', False) else state['loaded_at']
+            state['canary_reload'] = getattr(self, 'canary_reload', False)
             # Source = 28 calls. Reload during the second branch after a completed first branch.
             state['reload_on_post'] = getattr(self, 'reload_on_post', 50)
             with patch.object(DurableClient, 'generate_response', call), \
                  patch('ccc.runner.collector.LIVE_LEDGER', Path(d) / 'shared_budget.jsonl'):
-                if state['reload_on_post'] is None:
+                if state['reload_on_post'] is None and not state['canary_reload']:
                     report = run(self.m, Path(d), live=True)
                     self.assertEqual(report['worlds'][0]['attempts'][0]['status'], 'complete')
                     self.assertEqual(report['live_calls'], len(state['posts']))
@@ -225,7 +248,7 @@ class LiveTests(unittest.TestCase):
                         run(self.m, Path(d), live=True)
             attempt = Path(d) / 'worlds/dev02_B1/attempt_0001'
             result = get(attempt / 'result.json')
-            if state['reload_on_post'] is None:
+            if state['reload_on_post'] is None and not state['canary_reload']:
                 self.assertEqual(result['status'], 'complete')
                 self.assertTrue((attempt / 'session_after.json').exists())
             else:
@@ -241,14 +264,27 @@ class LiveTests(unittest.TestCase):
                 self.assertEqual(payload['temperature'], 0.7)
                 self.assertEqual(payload['reasoning_effort'], 'none')
                 self.assertEqual(payload['options']['num_ctx'], 32768)
-                self.assertEqual(payload['keep_alive'], '24h')
+                self.assertEqual(payload['keep_alive'], -1)
                 self.assertIsInstance(payload['seed'], int)
-            self.assertEqual(len({p['seed'] for p in state['posts']}), len(state['posts']))
+            regular = [p for p in state['posts'] if p['max_tokens'] != 16]
+            self.assertEqual(len({p['seed'] for p in regular}), len(regular))
+            print('fixture counts:', len(state['posts']), 'guarded calls;', state.get('canary_calls', 0), 'canaries;', len(result['branches']), 'branches;', result['status'])
             ledger = [json.loads(s) for s in (attempt / 'budget.jsonl').read_text().splitlines()]
             self.assertEqual(sum(r['event'] == 'attempt_begin' for r in ledger), len(state['posts']))
 
     def test_full_guarded_http_collection_no_reload(self):
         self.reload_on_post = None
+        self.test_http_guarded_payload_seeds_and_reload_invalidates_checkpoint()
+
+    def test_real_ps_canary_reload_invalidates_all_branches(self):
+        self.reload_on_post = None
+        self.real_ps = True
+        self.canary_reload = True
+        self.test_http_guarded_payload_seeds_and_reload_invalidates_checkpoint()
+
+    def test_real_ps_no_reload(self):
+        self.reload_on_post = None
+        self.real_ps = True
         self.test_http_guarded_payload_seeds_and_reload_invalidates_checkpoint()
 
     def test_hard_stop_before_transport_or_writes(self):

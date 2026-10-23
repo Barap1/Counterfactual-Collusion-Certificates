@@ -13,26 +13,39 @@ With the INF-001 operator's already running, resident, attested local server:
 starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner run docs/runner/exp001_manifest.json --output docs/runner/exp001-live --live
 ```
 
-The runner does not start or load a model. The operator must configure the server with
-`OLLAMA_HOST=127.0.0.1:11434`, `OLLAMA_NO_CLOUD=1`, `OLLAMA_NUM_PARALLEL=1`,
-`OLLAMA_MAX_LOADED_MODELS=1`, `OLLAMA_CONTEXT_LENGTH=32768`, and
-`OLLAMA_KEEP_ALIVE=24h`. The server must already have `gemma4:26b` resident.
+The runner never starts Ollama or loads a model. The operator starts a dedicated local
+server, then preloads the already-installed model (these commands make local model calls;
+EXP-000c did not execute them):
 
-**Residency attestation limitation:** `/api/ps` must expose a trustworthy `loaded_at` or
-`load_session_id` that changes on every model load, plus `expires_at` and `context_length`.
-If the installed Ollama version exposes only `expires_at`, live mode **refuses pre-flight**.
-Expiry changes on lease renewal and cannot establish absence of a reload. No live server
-was inspected in this task, and compatibility of the operator's server is unverified.
-INF-001 must supply trustworthy session telemetry before this command can collect against
-such a server. The runner does not invent a load identity from expiry.
+```sh
+OLLAMA_HOST=127.0.0.1:11434 OLLAMA_NO_CLOUD=1 OLLAMA_NUM_PARALLEL=1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_CONTEXT_LENGTH=32768 OLLAMA_KEEP_ALIVE=-1 ollama serve
+```
 
-Pre-flight uses OS `lsof` to reject wildcard/LAN listeners (a localhost URL alone is
-insufficient), checks the exact digest in `/api/tags` and `/api/ps`, checks resident ctx
-32768, and requires at least six hours of remaining residency. Requests use the local
-OpenAI-compatible `/v1/chat/completions` endpoint, send a seed, T=0.7, max_tokens=1500,
-reasoning_effort=none, and include `keep_alive: "24h"` and `options.num_ctx: 32768`.
-Server-side context and lease checks remain authoritative if an OpenAI adapter ignores
-these extra fields. HTTP proxies and redirects are disabled.
+In another terminal:
+
+```sh
+curl --fail --silent --show-error http://127.0.0.1:11434/api/generate -H 'Content-Type: application/json' -d '{"model":"gemma4:26b","keep_alive":-1,"options":{"num_ctx":32768},"stream":false}'
+```
+
+Preflight uses OS `lsof` to reject wildcard/LAN listeners, verifies the exact digest in
+`/api/tags` and `/api/ps`, resident context 32768, and at least six hours of residency.
+Requests send `keep_alive: -1` and `options.num_ctx: 32768`; server configuration remains
+necessary if the OpenAI adapter ignores these fields. Proxies and redirects are disabled.
+
+The session fingerprint includes digest, size_vram, context_length, expires_at, server
+`/api/version`, listener PIDs, and loaded_at/load_session_id when supplied. Infinite
+keep-alive keeps expires_at constant. Any change fails closed. Listener inspection remains
+mandatory for local-only safety, including when no PID can be extracted.
+
+Before and after each eligible checkpoint's branch set, a fixed prompt, seed 731921,
+T=0.7, and max_tokens=16 probe passes through OllamaChatClient/GuardedChatClient.
+UTF-8 output content must match byte for byte across this process's session; response IDs
+are excluded. Canary requests/responses and guard attempts are retained in `canary/`,
+counted in both ledgers and the frozen request cap (two extra calls per checkpoint).
+Probe failure or mismatch invalidates every scheduled checkpoint branch as model_reload.
+This detector follows INF-001's observed load-dependent stochastic behavior; it is not a
+proof that every possible reload changes the canary. No real model calls were made for
+EXP-000c; compatibility is verified against an in-process fake server with real-shaped ps.
 
 The observed digest and initial residency are written into immutable `run_manifest.json`,
 linked to the frozen input manifest hash. Each attempt retains all `/api/ps` observations
@@ -106,7 +119,7 @@ cannot resume under changed manifest/code. No runner command makes a commit.
 ## Offline verification and inspection
 
 ```sh
-starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner.offline unittest discover -s tests/runner -t .
+starter/collusion_hackathon/colosseum/.venv/bin/python -m tests.replay.offline_runner -s tests/runner -t .
 starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner plan docs/runner/exp001_manifest.json
 starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner.offline ccc.runner run docs/runner/dev_manifest.json --output docs/runner/my-offline-run --dry-run
 starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner status --output docs/runner/exp001-live

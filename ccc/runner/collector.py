@@ -214,8 +214,6 @@ def collect_world(m, job, root, guard, session, live_session=None):
     if not checkpoint.valid:
         return {"status": "ineligible", "reason": "restore_fail", "outcomes": None,
                 "checks": [c.to_json() for c in checkpoint.validation]}
-    if live_session:
-        put(root / "session_before.json", live_session.check())
     results = []
 
     def invalidate():
@@ -231,6 +229,13 @@ def collect_world(m, job, root, guard, session, live_session=None):
             invalid.append(record)
         put(root / "invalidation.json", {"reason": "model_reload", "scope": "all_checkpoint_branches"})
         return {"status": "invalid", "reason": "model_reload", "branches": invalid, "outcomes": None}
+
+    if live_session:
+        try:
+            live_session.canary(guard, root, "before")
+            put(root / "session_before.json", live_session.check())
+        except ModelReload:
+            return invalidate()
 
     response_ids = set()
     branches = {}
@@ -273,6 +278,7 @@ def collect_world(m, job, root, guard, session, live_session=None):
                 cross.append(check(checkpoint, f, other).to_json())
     if live_session:
         try:
+            live_session.canary(guard, root, "after")
             put(root / "session_after.json", live_session.check())
         except ModelReload:
             return invalidate()

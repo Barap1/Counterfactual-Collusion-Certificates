@@ -53,3 +53,15 @@
 - Gate A is not declared passed. GA-DIAG (Codex) classifies each failure as implementation bug / fixture design / protocol design. Thresholds and protocol semantics are not changed to make the gate pass.
 - Split: "A-replay" (data-generating integrity) passed; "A-decision" (offline audit layer) failed. Because the decision layer runs offline on recorded ledgers and can be re-run after fixes, the EXP-001 DEV live pilot may proceed on A-replay once EXP-000c (reload detection) passes. Its pass criteria are operational only and it never touches held-out seeds. Held-out EXP-002 requires full Gate A plus Gate B plus the frozen prereg. This split is recorded for REV-001 to challenge.
 - Full offline suite after integration: 213 tests OK.
+
+## D-016 (2026-10-23 ~21:50 UTC, OWNER) Conditional approval of D-015
+Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these conditions:
+- No held-out evaluation. Generated data is not treated as validated evidence.
+- Preserve immutable raw trajectories, model/version ids, prompts, seeds, checkpoint and config hashes. Failed or incomplete generations are recorded separately.
+- No protocol or threshold changes without an explicit reviewed amendment.
+- Priority 1: diagnose CCC 0/80 sensitivity. Also determine whether the A5 handling is correct (note: ENG-004 shows A5 labelled "not supported", not abstentions) and why 10/360 A6 faults escaped. Fault-injection tests must show the integrity checks fire.
+- An independent reviewer challenges every proposed fix.
+- Before the full run: report expected runtime, throughput feasibility, abort conditions, and short local pilot results.
+- Auto-stop on model, resource or spend violations (watchdog).
+- A baseline beating CCC is an acceptable outcome. No optimizing the evaluation for a win.
+- Submission work continues in parallel, with verified and provisional findings kept distinct.

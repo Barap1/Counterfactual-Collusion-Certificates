@@ -11,7 +11,9 @@ from urllib.parse import urlsplit
 from ccc.infra.budget_guard import GuardedChatClient
 from .manifest import digest, parse_time
 
-KEEP_ALIVE = "24h"
+KEEP_ALIVE = -1
+CANARY_MESSAGES = [{"role": "user", "content": "Write one short sentence about a copper lighthouse."}]
+CANARY_PARAMS = {"temperature": 0.7, "seed": 731921, "max_tokens": 16, "reasoning_effort": "none"}
 
 
 class ModelReload(ValueError):
@@ -44,12 +46,14 @@ class OllamaSession:
         tags = self.get("/api/tags")
         self.tag = self.entry(tags)
         self.verify_digest(self.tag)
+        self.version = self.get("/api/version")
         self.history = []
+        self.canary_output = None
         self.initial = self.snapshot()
         if (parse_time(self.initial["expires_at"]) - datetime.now(timezone.utc)).total_seconds() < 6 * 3600:
-            raise ValueError("resident lease must cover at least six hours; operator must set OLLAMA_KEEP_ALIVE=24h")
+            raise ValueError("resident lease must cover at least six hours; operator must set OLLAMA_KEEP_ALIVE=-1")
         self.identity = self.token(self.initial)
-        self.session_id = digest([self.pids, self.identity])
+        self.session_id = digest([self.version, self.pids, self.identity])
 
     def get(self, path):
         with self.opener.open(self.origin + path, timeout=30) as response:
@@ -79,22 +83,51 @@ class OllamaSession:
 
     @staticmethod
     def token(entry):
-        # Expiry is a lease, not a load identifier: ordinary calls renew it.
-        token = entry.get("loaded_at") or entry.get("load_session_id")
-        if not token:
-            raise ValueError("/api/ps lacks loaded_at/load_session_id; cannot attest no model reload")
-        return token
+        # With infinite keep_alive the expiry is constant, unlike finite leases.
+        fields = ("digest", "size_vram", "context_length", "expires_at")
+        if any(entry.get(k) is None for k in fields):
+            raise ValueError("/api/ps lacks required fingerprint fields")
+        return {k: entry[k] for k in fields} | {
+            "load_identity": entry.get("loaded_at") or entry.get("load_session_id")}
 
     def check(self):
         try:
             entry = self.snapshot()
-            if local_listener(self.port) != self.pids or self.token(entry) != self.identity:
+            if (local_listener(self.port) != self.pids or self.get("/api/version") != self.version
+                    or self.token(entry) != self.identity):
                 raise ModelReload("model_reload: model-load session changed")
             return entry
         except ModelReload:
             raise
         except Exception as exc:
             raise ModelReload("model_reload: residency cannot be verified") from exc
+
+    def canary(self, guard, root, phase):
+        """Fixed stochastic probe; compare UTF-8 content bytes, never response IDs."""
+        from .storage import put
+        client = OllamaChatClient(guard, backend=self.model["backend"],
+            model=self.model["requested_id"], base_url=self.model["base_url"],
+            transport=self.transport, meta={"purpose": "reload_canary", "phase": phase,
+                                           "load_session": self.session_id})
+        base = root / "canary" / phase
+        put(base.with_suffix(".begin.json"), {"request": client.build_payload(CANARY_MESSAGES, CANARY_PARAMS)})
+        try:
+            self.check()
+            response, output = client.generate_response(CANARY_MESSAGES, CANARY_PARAMS)
+            put(base.with_suffix(".end.json"), {"response": response, "output": output,
+                                                "guard_attempts": client.last_attempt_records})
+            self.check()
+            if response.get("model") != self.model["requested_id"] or not output:
+                raise ModelReload("model_reload: invalid canary response")
+            encoded = output.encode("utf-8")
+            if self.canary_output is None:
+                self.canary_output = encoded
+            elif self.canary_output != encoded:
+                raise ModelReload("model_reload: canary mismatch")
+        except ModelReload:
+            raise
+        except Exception as exc:
+            raise ModelReload("model_reload: canary cannot be verified") from exc
 
     def transport(self, url, headers, body, timeout):
         if url != self.origin + "/v1/chat/completions":
@@ -105,7 +138,7 @@ class OllamaSession:
 
     def attestation(self):
         return {"weight_digest": self.tag["digest"], "load_session_id": self.session_id,
-                "initial_ps": self.initial, "listener_pids": self.pids, "keep_alive": KEEP_ALIVE}
+                "initial_ps": self.initial, "server_version": self.version, "listener_pids": self.pids, "keep_alive": KEEP_ALIVE}
 
 
 class OllamaChatClient(GuardedChatClient):
