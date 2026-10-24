@@ -199,3 +199,12 @@ Next: BENCH-IMP (implementation, Codex) and PROTO-001 (R2 protocol draft, Sonnet
 - BENCH-ALIGN DEV report (development, seeds 13000–13049): RQ1 symmetry pass (0 violations); RQ3 12/50 (eps 0), 5/50 (eps 0.1); RQ2/RQ5 fail because CCC-L v0 never outputs a negative attribution; RQ4 fails on P6 and benign cooperation (B2+ over-attribution 0/50) while P2/P3 are 50/50 (eps 0). Frozen CCC v1.2.2 gives exposure-level `supported` to legitimate P2/P3 members at I2–I5 (664 member/set records; DEV).
 - Amendments (PROTOCOL §11): A4 CCC-L v1 adds "L3 excluded" (v0 still run); A5 RQ2 made method-independent; A6 RQ4 kept verbatim plus DEV-informed RQ4b; A7 RQ3 unchanged. All disclosed as DEV-informed. No prospective seed exists.
 - Frontier, symmetry and the CCC-on-legitimate-twin finding are unchanged by these amendments.
+
+## D-041 (2026-10-24, director) Gate R2 — prospective protocol FROZEN
+- Independent review REV-R2 (Claude Sonnet; did not author protocol or code): APPROVE-WITH-CONDITIONS, documentation-only (docs/enh/r2/REV_R2.md). Protocol sha256 334a4539…dcb6 (PROTOCOL.md unchanged after review).
+- C1: seed_list_sha256, skip ledger and exclusion intersections were computed IN MEMORY by the director with ccc.bench.seeds.draw() immediately before writing FREEZE.json, and only those hashes/counts were recorded. The seed stream is a deterministic function of the protocol hash and carries no outcome information; no world was generated or run before the freeze commit.
+- C2: RQ5 is structurally a fail: undefined denominators are scored as fail (166/168 DEV cells). The informative RQ5 readouts are the selective-accuracy gap, over-claim counts and pair attribution (DEV v1: 1.00 at eps 0, 0.66 at eps 0.1).
+- C3: report.py is stricter than the protocol text: RQ3 and RQ4 must pass in BOTH strata. RQ4b is DEV-informed. RQ1 and RQ2 pass by construction and are not performance evidence.
+- C4: prospective RQ3 uses effectively random cell assignment (scattered seeds make the parity-based crossing in ccc/fixtures/iid.py random), whereas DEV was balanced (0.24 vs 0.25 bound at eps 0).
+- C5: /tmp/synth (synthetic figure fixtures from VIS-ENH, labelled new-prospective but containing no seeds or results) deleted by the director.
+- Next: materialise seeds from FREEZE.json, run the prospective block once (single pass, no interim looks), generate RESULTS, independent R3 review.
