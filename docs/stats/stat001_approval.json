@@ -1,0 +1,17 @@
+{
+  "task_id": "STAT-001",
+  "frozen_manifest_sha256": "49f54b472f4cc6b4610ad5ef924bec4715323f39d6d97f13930ad3467ef31250",
+  "experiment_id": "EXP-002",
+  "reviewer": "REV-FREEZE (independent Claude Sonnet)",
+  "date_utc": "2026-10-24",
+  "verdict": "APPROVED",
+  "checks": {
+    "freeze_md_hashes": "PASS (all 8 file hashes recomputed and equal; canonical manifest digest equal)",
+    "stage2_values": "PASS (sigma_dev 0.9187276506628345, df 49, reproduced from DEV F/S Omean only; m_O 2.5 via floor; delta_W 5.0; delta_S 2.5; theta 0.4 weak_detector, best J 0.4947 < 0.5, DEV seeds 12000-12019 only)",
+    "manifest": "PASS (8 seeds recomputed from compute_plan formula; 8 pairs B1 deception / B2; F4 K4 N4 S1 on hash rule c8651dda recomputed and applied by runner plan(); model+digest equal EXP-001; cap 5981 equals DEV-only derivation; hard stop 2026-10-25T12:00Z; phase holdout)",
+    "no_leakage": "PASS (no held-out seed or H01-H08 output outside the manifest and a unit-test id string; no exp002 output dir)",
+    "budget_time": "PASS (buffer >= 70.7% at p95 from 2026-10-24T02:45Z; budget guard $0 allowlist and watchdog triggers intact; watchdog HARD_DEADLINE constant needs operator change before launch)",
+    "tier_b": "PASS (0/8 handled per frozen protocol 3.2; no environment change; primary F vs K delta estimable)",
+    "deviations": "PASS (DEV-001, DEV-002, extractor re-freeze, dev05_B2 failure all disclosed; no outcome-dependent change found)"
+  }
+}

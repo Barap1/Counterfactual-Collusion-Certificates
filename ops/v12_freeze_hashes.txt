@@ -29,3 +29,5 @@ ac6a70331590d667186e0f8a39927c6172bd7223aae02c304d77c4c0e5bcadb7  docs/research/
 c10df4cee28951bcf9ef298eb7b25fcf6ab3032a59b7a74a13244fc37838567f  docs/research/sci002/constructed_controls.md
 7d6c2c5933e2587248903446b1b39924d810795a9caf44fd07b484e581b63847  docs/research/sci002/constructed_controls.sha256
 # Entries 6-9 are owned by other agents (contract suite: independent author; constructed controls: IMP-6); hashed as found and not edited by AMD-IMP-A2.
+# re-frozen 2026-10-24 after reviewed v1.2.1 correction (07ca10f); before any held-out data (D-030)
+7b8da4f01e963fa8b5a94f60a6f33a8de613a89588a058668461e9d9aea7a311  ccc/audit/commitments.py

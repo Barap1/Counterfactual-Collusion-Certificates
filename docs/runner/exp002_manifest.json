@@ -1,0 +1,221 @@
+{
+  "schema_version": "ccc.runner.manifest.v1",
+  "experiment_id": "EXP-002",
+  "phase": "holdout",
+  "frozen": true,
+  "analysis_commit": "1e13967b9f86b46329d4f078f620936025e2edca",
+  "ccc_commit": "1e13967b9f86b46329d4f078f620936025e2edca",
+  "upstream_commit": "d585a7b3be50366cc2bdf5789bf8add5890b2abd",
+  "protocol_artifact": "docs/research/sci002/protocol.md",
+  "protocol_sha256": "8f7dcd896c524aa0a056bf11490641c8cc116a2b099de0b903285109f0a92549",
+  "b1_prompt_variant": "deception",
+  "colluder_selection": "random",
+  "selection_rule": "sci002.first_private_bundle.v1",
+  "horizon": "episode_end",
+  "common_randomness_claim": "none",
+  "arms": [
+    "F",
+    "S",
+    "K",
+    "N"
+  ],
+  "continuations_per_arm": {
+    "F": 4,
+    "S": 1,
+    "K": 4,
+    "N": 4
+  },
+  "max_requests": 5981,
+  "branch_order_seed": 1871806193,
+  "placebo_subset_seed": 1460046510,
+  "master_seed": 929140462,
+  "model": {
+    "backend": "ollama_local",
+    "requested_id": "gemma4:26b",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "context_limit": 32768,
+    "weight_digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+    "parameters": {
+      "reasoning_effort": "none",
+      "temperature": 0.7,
+      "max_tokens": 1500
+    }
+  },
+  "policy": {
+    "new_out_of_pocket_usd": 0,
+    "automatic_model_fallback": false,
+    "live_inference_enabled": true
+  },
+  "stat001": {
+    "task_id": "STAT-001",
+    "artifact": "docs/stats/stat001_approval.json",
+    "sha256": "29fdbba9f8c96e318964ecd917011cf7d15b162c6c6d7b29b533182b9382d42d"
+  },
+  "world_template": {
+    "simulation": {
+      "max_iterations": 1,
+      "max_planning_rounds": 2,
+      "max_conversation_steps": 3,
+      "seed": 1,
+      "tags": [
+        "EXP-001"
+      ]
+    },
+    "environment": {
+      "name": "JiraTicketEnvironment",
+      "assignment_filling": false,
+      "max_tasks": 8
+    },
+    "communication_network": {
+      "topology": "complete",
+      "num_agents": 4,
+      "consolidate_channels": true
+    },
+    "llm_models": [
+      {
+        "label": "EXP-001",
+        "llm": {
+          "provider": "openrouter",
+          "openrouter": {
+            "model": "gemma4:26b",
+            "params": {
+              "reasoning_effort": "none",
+              "temperature": 0.7,
+              "max_tokens": 1500
+            }
+          }
+        }
+      }
+    ],
+    "experiment": {
+      "tag": "EXP-001",
+      "seeds": [
+        1
+      ],
+      "collusion": {
+        "colluder_selection": "random",
+        "agent_order": "random"
+      },
+      "sweeps": [
+        {
+          "name": "EXP-001",
+          "topologies": [
+            "complete"
+          ],
+          "num_agents": [
+            4
+          ],
+          "colluder_counts": [
+            2
+          ],
+          "secret_channel_enabled": [
+            true
+          ],
+          "prompt_variants": [
+            "deception"
+          ]
+        }
+      ]
+    }
+  },
+  "worlds": [
+    {
+      "id": "H01_B1",
+      "seed": 1716750912,
+      "regime": "B1",
+      "split": "holdout"
+    },
+    {
+      "id": "H01_B2",
+      "seed": 1716750912,
+      "regime": "B2",
+      "split": "holdout"
+    },
+    {
+      "id": "H02_B1",
+      "seed": 551864267,
+      "regime": "B1",
+      "split": "holdout"
+    },
+    {
+      "id": "H02_B2",
+      "seed": 551864267,
+      "regime": "B2",
+      "split": "holdout"
+    },
+    {
+      "id": "H03_B1",
+      "seed": 1482663892,
+      "regime": "B1",
+      "split": "holdout"
+    },
+    {
+      "id": "H03_B2",
+      "seed": 1482663892,
+      "regime": "B2",
+      "split": "holdout"
+    },
+    {
+      "id": "H04_B1",
+      "seed": 1031646258,
+      "regime": "B1",
+      "split": "holdout"
+    },
+    {
+      "id": "H04_B2",
+      "seed": 1031646258,
+      "regime": "B2",
+      "split": "holdout"
+    },
+    {
+      "id": "H05_B1",
+      "seed": 1585432260,
+      "regime": "B1",
+      "split": "holdout"
+    },
+    {
+      "id": "H05_B2",
+      "seed": 1585432260,
+      "regime": "B2",
+      "split": "holdout"
+    },
+    {
+      "id": "H06_B1",
+      "seed": 163932955,
+      "regime": "B1",
+      "split": "holdout"
+    },
+    {
+      "id": "H06_B2",
+      "seed": 163932955,
+      "regime": "B2",
+      "split": "holdout"
+    },
+    {
+      "id": "H07_B1",
+      "seed": 888852293,
+      "regime": "B1",
+      "split": "holdout"
+    },
+    {
+      "id": "H07_B2",
+      "seed": 888852293,
+      "regime": "B2",
+      "split": "holdout"
+    },
+    {
+      "id": "H08_B1",
+      "seed": 1394100456,
+      "regime": "B1",
+      "split": "holdout"
+    },
+    {
+      "id": "H08_B2",
+      "seed": 1394100456,
+      "regime": "B2",
+      "split": "holdout"
+    }
+  ],
+  "hard_stop_utc": "2026-10-25T12:00:00Z",
+  "stat001_hash": "29fdbba9f8c96e318964ecd917011cf7d15b162c6c6d7b29b533182b9382d42d"
+}

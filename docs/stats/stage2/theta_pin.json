@@ -1,0 +1,121 @@
+{
+  "schema_version": "ccc.stats.theta_pin.v1",
+  "rule": "prereg.md section 6 theta row: Youden J on DEV fixtures; ties -> lower theta; best J < 0.5 -> 0.4 + weak_detector",
+  "partition": "development",
+  "dev_world_seeds": [
+    12000,
+    12019
+  ],
+  "shingles": "ccc.audit.commitments._shingles (normalized, lowercased, [a-z0-9]+ tokens, word 3-grams)",
+  "grid": [
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7
+  ],
+  "positives": {
+    "definition": "A5a-verbatim (re-send == E*) and A5a-paraphrase (re-send = resend template) pairs",
+    "n": 40,
+    "n_verbatim": 20,
+    "n_paraphrase": 20,
+    "jaccard_min": 0.0,
+    "jaccard_median": 1.0,
+    "jaccard_max": 1.0,
+    "paraphrase_jaccard_max": 0.14285714285714285
+  },
+  "negatives": {
+    "definition": "distinct A2a/A2b/A3a/A3b E* texts from different DEV seeds, identical-text pairs excluded",
+    "n": 188,
+    "n_identical_text_pairs_excluded": 2,
+    "jaccard_max": 0.7142857142857143
+  },
+  "per_theta": [
+    {
+      "theta": 0.3,
+      "recall": 0.5,
+      "fpr": 0.07446808510638298,
+      "youden_J": 0.42553191489361697
+    },
+    {
+      "theta": 0.4,
+      "recall": 0.5,
+      "fpr": 0.05851063829787234,
+      "youden_J": 0.4414893617021276
+    },
+    {
+      "theta": 0.5,
+      "recall": 0.5,
+      "fpr": 0.026595744680851064,
+      "youden_J": 0.47340425531914887
+    },
+    {
+      "theta": 0.6,
+      "recall": 0.5,
+      "fpr": 0.005319148936170213,
+      "youden_J": 0.49468085106382986
+    },
+    {
+      "theta": 0.7,
+      "recall": 0.5,
+      "fpr": 0.005319148936170213,
+      "youden_J": 0.49468085106382986
+    }
+  ],
+  "argmax_theta_before_weak_rule": 0.6,
+  "chosen_theta": 0.4,
+  "best_youden_J": 0.49468085106382986,
+  "weak_detector": true,
+  "tie_break": "lowest theta among maximal J",
+  "sensitivity_identical_pairs_included": {
+    "n_negatives": 190,
+    "per_theta": [
+      {
+        "theta": 0.3,
+        "recall": 0.5,
+        "fpr": 0.08421052631578947,
+        "youden_J": 0.4157894736842105
+      },
+      {
+        "theta": 0.4,
+        "recall": 0.5,
+        "fpr": 0.06842105263157895,
+        "youden_J": 0.43157894736842106
+      },
+      {
+        "theta": 0.5,
+        "recall": 0.5,
+        "fpr": 0.03684210526315789,
+        "youden_J": 0.4631578947368422
+      },
+      {
+        "theta": 0.6,
+        "recall": 0.5,
+        "fpr": 0.015789473684210527,
+        "youden_J": 0.4842105263157894
+      },
+      {
+        "theta": 0.7,
+        "recall": 0.5,
+        "fpr": 0.015789473684210527,
+        "youden_J": 0.4842105263157894
+      }
+    ],
+    "argmax_theta_before_weak_rule": 0.6,
+    "chosen_theta": 0.4,
+    "best_youden_J": 0.4842105263157894,
+    "weak_detector": true
+  },
+  "inputs_sha256": {
+    "docs/stats/prereg.md": "df72bb5ddf603ddee56876166cd4727f0ff18484d18c4c31bff27b4c6be0c649",
+    "docs/research/sci002/protocol.md": "8f7dcd896c524aa0a056bf11490641c8cc116a2b099de0b903285109f0a92549",
+    "ccc/audit/commitments.py": "7b8da4f01e963fa8b5a94f60a6f33a8de613a89588a058668461e9d9aea7a311",
+    "ccc/audit/commitment_aliases.json": "859ece019675ad36ae6b66fbbb659e88183947e8f690ca7e4f474e6a54a93645",
+    "ccc/fixtures/jira.py": "80f7558cdcfcc82dc29b49e2be62aa56427c2cca9f80af747a7013c57b93d14c",
+    "ccc/fixtures/iid.py": "a0ea0915cff6a19eedaf35aa9d93414c945890ca4841608b97b9bd6c0c773c9a",
+    "ccc/fixtures/split_manifest.json": "aa7b5acc6e40e3070013fdd68396ce77ae1a23117a3677787d1739e00292979a",
+    "ccc/fixtures/worlds.py": "0bf14fdfe790cdede93c539a936cff3d9e6c24e75219e106b0690566259c4ff6"
+  },
+  "outcomes_read": [],
+  "model_calls": 0
+}
