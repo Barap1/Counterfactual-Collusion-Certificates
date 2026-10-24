@@ -1,0 +1,4 @@
+Created [LICENSES.md](/Users/aarav/Documents/Projects/ApartSprint/docs/release/LICENSES.md) and [REL-002 evidence report](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/REL-002.md).
+Inventoried 130 installed package records, used starter components, model metadata, patches, and runtime monkeypatches.
+Local Gemma metadata states Apache-2.0; Colosseum, poseidon-compute, and CoLLAB redistribution terms remain UNVERIFIED.
+Validation passed. Only authorized files written; no network, live calls, secrets, or commits.
