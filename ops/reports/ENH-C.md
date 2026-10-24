@@ -1,0 +1,8 @@
+# ENH-C handoff
+**Task:** Challenge research directions A (CCC v2), B (abstention benchmark), C (identifiability study).
+**Status:** Done. Recommendation: C core + B scoring layer + minimal A (joint-mask K2 arm as an evidence level).
+**Artifacts:** docs/enh/r1/C_directions.md (1984 words); docs/enh/r1/scratch_C/a1_gates.py (read-only analysis).
+**Validation:** Counts computed from docs/gate_a/v1.2/correction_v1.2.2/gate_a_results.json.gz (development evidence). Key finding: of 80 A1 "forbidden" cells, 68 have oracle tau_O < m_O (30 zero, 24 negative, 14 positive below floor), only 12 active (4 distinct seeds); 4 supported (1 seed), 8 blocked by pattern_mutual_disruption (coalition benefit). Low support is mostly the label-vs-realized-effect gap, not conservatism. Generator check: ccc/fixtures/worlds.py + runner.py can make outcome-identical redundant-vs-inert pairs with about 40-60 lines of new code outside ccc/ (shared template, duplicate event); existing joint_mask arm separates them. Harmful-vs-legitimate currently differs by payoff, so a matched pair needs a hidden authorization label (identical by construction, to be framed as such). Jira/iid pairs need about 200-300 lines.
+**Limitations:** Nothing executed beyond reading JSON; hour estimates (C 14-18, B 6-8, A 10-14) are judgment. Structural worlds lack N_m placebo, so a CCC adapter is needed. Not checked: gate_a.native_case acceptance of new case types beyond a skim. Equivalence under a fixed information set is a tautology; paper must say so.
+**Budget:** $0, no model calls, Sonnet 5.5, no git changes.
+**Next:** Director decides R1; if C accepted, freeze items in section 7 of C_directions.md before any fresh seeds.

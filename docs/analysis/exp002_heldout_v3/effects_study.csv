@@ -1,0 +1,17 @@
+L,U,caveats,confirmatory,decision,effect,eligible_complete_pairs,estimate,inference_tier,interval_method,label,matched_pairs_attempted,n_eligibility_unobserved,n_independent,p_holm,p_raw,rate_definition,regime,test_status,tier,uncertainty_scope
+-0.01954964911635066,2.8336288730243204,"Delta compares regimes, not realized collusion; depends on the chosen B1 prompt variant; sender identity, t_star and suffix length are regime dependent.",True,not supported,Delta_total,8,1.354325711018898,A-confirmatory,,A-confirmatory,8,,8,,0.0703125,,,attainable,A-confirmatory,world_cluster
+-0.01954964911635066,2.8336288730243204,,False,,Delta_conditional,,1.354325711018898,,,descriptive; Tier-B case certificates exploratory,,,8,,,,,,B,world_cluster
+0.06873996449487141,1.9710245209502708,,False,,tau_O,,0.9704506454819914,,,descriptive; Tier-B case certificates exploratory,,,8,,,,B1,,B,world_cluster
+-2.1122949227109977,0.42083575594324957,,False,,tau_C,,-0.6947661954806266,,,descriptive; Tier-B case certificates exploratory,,,8,,,,B1,,B,world_cluster
+-0.07121759086454205,7.8438436654331,,False,,tau_W,,3.3304336819252383,,,descriptive; Tier-B case certificates exploratory,,,8,,,,B1,,B,world_cluster
+-0.6394599858052363,1.2940785446605412,,False,,tau_A,,0.27568445000136443,,,descriptive; Tier-B case certificates exploratory,,,8,,,,B1,,B,world_cluster
+0.6305833524471807,1.0,,False,,eligibility_rate,,1.0,,,descriptive; Tier-B case certificates exploratory,,0,8,,,observed eligible / attempted worlds; unobserved eligibility retained in denominator,B1,,B,world_cluster
+-1.2107933918959874,0.36006436151578836,,False,,tau_O,,-0.38387506553690653,,,descriptive; Tier-B case certificates exploratory,,,8,,,,B2,,B,world_cluster
+0.09616244170058108,2.8773498523833827,,False,,tau_C,,1.1253146574146968,,,descriptive; Tier-B case certificates exploratory,,,8,,,,B2,,B,world_cluster
+-7.437057535194453,0.2475209917574217,,False,,tau_W,,-3.0183794459032063,,,descriptive; Tier-B case certificates exploratory,,,8,,,,B2,,B,world_cluster
+-0.5284804295935865,2.336190813442185,,False,,tau_A,,0.7414395918777901,,,descriptive; Tier-B case certificates exploratory,,,8,,,,B2,,B,world_cluster
+0.6305833524471807,1.0,,False,,eligibility_rate,,1.0,,,descriptive; Tier-B case certificates exploratory,,0,8,,,observed eligible / attempted worlds; unobserved eligibility retained in denominator,B2,,B,world_cluster
+-0.42175251622837906,0.42175251622837906,,False,,eligibility_difference,,0.0,,Bonferroni exact binomial rectangle,descriptive; Tier-B case certificates exploratory,,,8,,,,,,B,world_cluster
+0.06873996449487141,1.9710245209502708,,True,,S1,,0.9704506454819914,A-confirmatory,,A-confirmatory,,,8,0.1640625,0.0546875,,,,A-confirmatory,world_cluster
+-1.2107933918959874,0.36006436151578836,,True,,S2,,-0.38387506553690653,A-confirmatory,,A-confirmatory,,,8,0.4375,0.4375,,,,A-confirmatory,world_cluster
+-3.3556801308813413,-0.39131026230419574,,True,,S3,,-1.8200808528953234,A-confirmatory,,A-confirmatory,,,8,0.1640625,0.0625,,,,A-confirmatory,world_cluster

@@ -1,0 +1,9 @@
+L,U,confirmatory,effect,estimate,label,n_independent,regime,tier,uncertainty_scope
+0.06873996449487141,1.9710245209502708,False,tau_O,0.9704506454819914,descriptive; Tier-B case certificates exploratory,8,B1,B,world_cluster
+-2.1122949227109977,0.42083575594324957,False,tau_C,-0.6947661954806266,descriptive; Tier-B case certificates exploratory,8,B1,B,world_cluster
+-0.07121759086454205,7.8438436654331,False,tau_W,3.3304336819252383,descriptive; Tier-B case certificates exploratory,8,B1,B,world_cluster
+-0.6394599858052363,1.2940785446605412,False,tau_A,0.27568445000136443,descriptive; Tier-B case certificates exploratory,8,B1,B,world_cluster
+-1.2107933918959874,0.36006436151578836,False,tau_O,-0.38387506553690653,descriptive; Tier-B case certificates exploratory,8,B2,B,world_cluster
+0.09616244170058108,2.8773498523833827,False,tau_C,1.1253146574146968,descriptive; Tier-B case certificates exploratory,8,B2,B,world_cluster
+-7.437057535194453,0.2475209917574217,False,tau_W,-3.0183794459032063,descriptive; Tier-B case certificates exploratory,8,B2,B,world_cluster
+-0.5284804295935865,2.336190813442185,False,tau_A,0.7414395918777901,descriptive; Tier-B case certificates exploratory,8,B2,B,world_cluster

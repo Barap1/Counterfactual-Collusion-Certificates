@@ -1,6 +1,6 @@
 {
  "schema": "ccc-tasks/1",
- "updated_utc": "2026-10-24T15:00Z",
+ "updated_utc": "2026-10-24T15:20Z",
  "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
  "policy": {
   "max_worker_depth": 3,
@@ -12,12 +12,44 @@
   "initial_remote_inference_concurrency": 1,
   "note": "Codex threads and their native subagents count toward the 6-agent global cap; the Claude env cap does not see them."
  },
- "live_agents": [],
+ "live_agents": [
+  {
+   "id": "ENH-A",
+   "owner": "claude sonnet",
+   "started_utc": "2026-10-24T15:15Z",
+   "writes": "docs/enh/r1/A_*"
+  },
+  {
+   "id": "ENH-B",
+   "owner": "codex gpt-6.1-sol/medium",
+   "started_utc": "2026-10-24T15:15Z",
+   "writes": "docs/enh/r1/B_stats.md, scratch_B/"
+  },
+  {
+   "id": "ENH-C",
+   "owner": "claude sonnet",
+   "started_utc": "2026-10-24T15:15Z",
+   "writes": "docs/enh/r1/C_directions.md, scratch_C/"
+  },
+  {
+   "id": "FIX-001",
+   "owner": "codex gpt-6.1-sol/medium",
+   "started_utc": "2026-10-24T15:15Z",
+   "writes": "ccc/analysis/loaders.py, pipeline.py, tests/test_fix001_*, docs/analysis/exp002_heldout_v3/, docs/enh/fix/"
+  },
+  {
+   "id": "SEC-001",
+   "owner": "claude sonnet",
+   "started_utc": "2026-10-24T15:15Z",
+   "writes": "docs/enh/sec/"
+  }
+ ],
  "gates": {
   "A": "PASSED (D-028; audit docs/review/director_gateA_audit.md; v1.2.2)",
   "B": "MET (D-032)",
   "C": "PASSED with narrowing (D-035)",
-  "D": "technical checks done; owner decisions pending (D-036)"
+  "D": "technical checks done; owner decisions pending (D-036)",
+  "ENH": "R1 pending (enhancement sprint; R1-R5 apply only to ENH, see D-037)"
  },
  "tasks": [
   {
@@ -412,10 +444,50 @@
    "owner": "codex gpt-6.1-sol/low",
    "status": "DONE (superseded/merged; see DECISIONS)",
    "worktree": "/Users/aarav/Documents/Projects/ApartSprint-wt-v12 (branch v1.2-impl)"
+  },
+  {
+   "id": "ENH-A",
+   "objective": "novelty & competition review",
+   "owner": "claude sonnet",
+   "status": "RUNNING",
+   "writes": "docs/enh/r1/A_*",
+   "gate": "ENH-R1"
+  },
+  {
+   "id": "ENH-B",
+   "objective": "adversarial statistical review",
+   "owner": "codex gpt-6.1-sol/medium",
+   "status": "RUNNING",
+   "writes": "docs/enh/r1/B_stats.md, scratch_B/",
+   "gate": "ENH-R1"
+  },
+  {
+   "id": "ENH-C",
+   "objective": "research direction challenger",
+   "owner": "claude sonnet",
+   "status": "RUNNING",
+   "writes": "docs/enh/r1/C_directions.md, scratch_C/",
+   "gate": "ENH-R1"
+  },
+  {
+   "id": "FIX-001",
+   "objective": "certificate validity mapping fix -> exp002_heldout_v3",
+   "owner": "codex gpt-6.1-sol/medium",
+   "status": "RUNNING",
+   "writes": "ccc/analysis/loaders.py, pipeline.py, tests/test_fix001_*, docs/analysis/exp002_heldout_v3/, docs/enh/fix/",
+   "gate": "ENH-R1"
+  },
+  {
+   "id": "SEC-001",
+   "objective": "release safety & reproducibility audit (read-only)",
+   "owner": "claude sonnet",
+   "status": "RUNNING",
+   "writes": "docs/enh/sec/",
+   "gate": "ENH-R1"
   }
  ],
  "handoff": {
-  "running_jobs": "none",
+  "running_jobs": "5 ENH workers (see live_agents)",
   "unpushed_commits": 1,
   "repo_visibility": "PUBLIC (unexpected; see D-036)",
   "worktree": "../ApartSprint-wt-v12 (branch v1.2-impl, fully merged into main; safe to remove after owner OK)"

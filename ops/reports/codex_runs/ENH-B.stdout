@@ -1,0 +1,5 @@
+Completed [B_stats.md](/Users/aarav/Documents/Projects/ApartSprint/docs/enh/r1/B_stats.md) and [ENH-B handoff](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/ENH-B.md).
+
+Reproduced the primary result and all 96 interval endpoints. Flagged sensitivity-category errors, mixed sham signs, and validity metadata defects affecting 16 certificates but zero statuses.
+
+All 42 frozen v2 files remain unchanged. No network or inference calls; $0 spend.

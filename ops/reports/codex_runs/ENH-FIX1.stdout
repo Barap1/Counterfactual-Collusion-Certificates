@@ -1,0 +1,11 @@
+Completed FIX-001.
+
+- All 16 certificates now report `all_valid=true`; five spurious reasons removed.
+- No status changes: 11 not_supported, 5 inconclusive.
+- All numeric outputs unchanged across 39 files.
+- Full offline suite: 415 tests passed, 4 skipped.
+- F-10 documented without changes; provenance hash discrepancy disclosed.
+
+[Handoff](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/FIX-001.md) · [Correction and diff details](/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/exp002_heldout_v3/CORRECTION.md)
+
+$0 spend; no network or model calls.

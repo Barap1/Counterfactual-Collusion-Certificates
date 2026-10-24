@@ -1,0 +1,2 @@
+confirmatory,cost_usd,label,latency_p50,latency_p95,load_sessions,max_requests,n_calls,tier,tokens_completion,tokens_prompt,uncertainty_scope,unknown_count
+False,0.0,descriptive; Tier-B case certificates exploratory,3806.8999999999996,7792.650000000001,1,5981,3516,B,341526,7464654,world_cluster,0

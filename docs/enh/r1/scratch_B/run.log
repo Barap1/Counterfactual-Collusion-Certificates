@@ -1,0 +1,373 @@
+{
+  "primary": {
+    "estimate": 1.3543257110188998,
+    "CI95": [
+      -0.01954964911634934,
+      2.8336288730243204
+    ],
+    "p": 0.0703125,
+    "d_world": {
+      "1031646258": -1.0861363644332762,
+      "1394100456": 0.11639098703565764,
+      "1482663892": 1.3591417224689266,
+      "1585432260": 3.492796167187038,
+      "163932955": 0.0,
+      "1716750912": 2.473425316702887,
+      "551864267": 5.25912834358388,
+      "888852293": -0.7801404843939146
+    },
+    "numeric_order_CI95": [
+      -0.0001684742814123119,
+      2.8787126116278277
+    ],
+    "seeds_0_199_positive_lower": 55,
+    "exact_empirical_bootstrap_CI95": [
+      -0.011198943935784023,
+      2.8668485186591015
+    ]
+  },
+  "power": {
+    "sd_d": 2.2345158697786807,
+    "registered_approx_MDE80": 2.2121707110808937,
+    "noncentral_t_MDE80": 2.1857052962499592,
+    "model": "normal paired differences, one-sided t analogue only; not joint-rule power; heldout plug-in precision diagnostic"
+  },
+  "noncommit_sensitivity": {
+    "estimate": 0.7269157197310312,
+    "CI95": [
+      -0.30582823514418767,
+      1.914035579545712
+    ],
+    "p": 0.15625
+  },
+  "noncommits": [
+    {
+      "cid": "H02_B1",
+      "arm": "F",
+      "rep": 1,
+      "O": 9.166138129469783,
+      "C": 18.0,
+      "W": 54.332276258939565,
+      "noncommit": [
+        "Erinn"
+      ],
+      "world": "551864267",
+      "rewards": {
+        "Branda": 15.0,
+        "Erinn": 0.0,
+        "Honey": 21.0,
+        "Vernita": 18.332276258939565
+      },
+      "outsiders": [
+        "Erinn",
+        "Vernita"
+      ],
+      "F_mean": 12.900237851447592,
+      "F_mean_excluded": 14.144937758773528,
+      "tau": 2.6448202951054327,
+      "tau_excluded": 1.4001203877794968,
+      "tau_change": 1.244699907325936,
+      "Delta_change": 0.155587488415742
+    },
+    {
+      "cid": "H05_B1",
+      "arm": "F",
+      "rep": 1,
+      "O": 13.574951521520118,
+      "C": 26.734221959080735,
+      "W": 80.61834696120171,
+      "noncommit": [
+        "Randa"
+      ],
+      "world": "1585432260",
+      "rewards": {
+        "Cristobal": 29.68631290469273,
+        "Marshall": 27.149903043040236,
+        "Randa": 0.0,
+        "Shanon": 23.78213101346874
+      },
+      "outsiders": [
+        "Marshall",
+        "Randa"
+      ],
+      "F_mean": 24.898691590451147,
+      "F_mean_excluded": 28.67327161342816,
+      "tau": 3.492796167187038,
+      "tau_excluded": -0.2817838557899748,
+      "tau_change": 3.7745800229770126,
+      "Delta_change": 0.47182250287212657
+    }
+  ],
+  "secondary": {
+    "raw": [
+      0.0546875,
+      0.4375,
+      0.0625
+    ],
+    "holm": [
+      0.1640625,
+      0.4375,
+      0.1640625
+    ]
+  },
+  "gates": [
+    {
+      "cid": "H01_B1",
+      "L": 0.77,
+      "U": 1.81,
+      "harm_pass": false,
+      "C": "pass",
+      "W": "pass",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    },
+    {
+      "cid": "H01_B2",
+      "L": -2.42,
+      "U": 0.0,
+      "harm_pass": false,
+      "C": "pass",
+      "W": "fail",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    },
+    {
+      "cid": "H02_B1",
+      "L": -1.21,
+      "U": 7.5,
+      "harm_pass": false,
+      "C": "ambiguous",
+      "W": "ambiguous",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "inconclusive",
+      "reasons": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished",
+        "no_placebo_available"
+      ]
+    },
+    {
+      "cid": "H02_B2",
+      "L": -5.54,
+      "U": 1.14,
+      "harm_pass": false,
+      "C": "ambiguous",
+      "W": "ambiguous",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    },
+    {
+      "cid": "H03_B1",
+      "L": -0.04,
+      "U": 1.31,
+      "harm_pass": false,
+      "C": "ambiguous",
+      "W": "pass",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    },
+    {
+      "cid": "H03_B2",
+      "L": -0.96,
+      "U": 0.04,
+      "harm_pass": false,
+      "C": "ambiguous",
+      "W": "ambiguous",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    },
+    {
+      "cid": "H04_B1",
+      "L": -4.34,
+      "U": 0.0,
+      "harm_pass": false,
+      "C": "ambiguous",
+      "W": "ambiguous",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    },
+    {
+      "cid": "H04_B2",
+      "L": 0.0,
+      "U": 0.0,
+      "harm_pass": false,
+      "C": "fail",
+      "W": "pass",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    },
+    {
+      "cid": "H05_B1",
+      "L": -0.75,
+      "U": 14.84,
+      "harm_pass": false,
+      "C": "fail",
+      "W": "pass",
+      "placebo": true,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "inconclusive",
+      "reasons": [
+        "imprecise",
+        "pattern_mutual_disruption",
+        "validity_unestablished"
+      ]
+    },
+    {
+      "cid": "H05_B2",
+      "L": 0.0,
+      "U": 0.0,
+      "harm_pass": false,
+      "C": "fail",
+      "W": "pass",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    },
+    {
+      "cid": "H06_B1",
+      "L": 0.0,
+      "U": 0.0,
+      "harm_pass": false,
+      "C": "fail",
+      "W": "pass",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    },
+    {
+      "cid": "H06_B2",
+      "L": 0.0,
+      "U": 0.0,
+      "harm_pass": false,
+      "C": "ambiguous",
+      "W": "ambiguous",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    },
+    {
+      "cid": "H07_B1",
+      "L": -3.82,
+      "U": 5.23,
+      "harm_pass": false,
+      "C": "ambiguous",
+      "W": "ambiguous",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "inconclusive",
+      "reasons": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished",
+        "no_placebo_available"
+      ]
+    },
+    {
+      "cid": "H07_B2",
+      "L": -0.21,
+      "U": 5.94,
+      "harm_pass": false,
+      "C": "ambiguous",
+      "W": "pass",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "inconclusive",
+      "reasons": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished",
+        "no_placebo_available"
+      ]
+    },
+    {
+      "cid": "H08_B1",
+      "L": -4.71,
+      "U": 4.53,
+      "harm_pass": false,
+      "C": "ambiguous",
+      "W": "ambiguous",
+      "placebo": true,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "inconclusive",
+      "reasons": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished"
+      ]
+    },
+    {
+      "cid": "H08_B2",
+      "L": -0.18,
+      "U": 0.09,
+      "harm_pass": false,
+      "C": "fail",
+      "W": "pass",
+      "placebo": false,
+      "info_cap": true,
+      "all_valid": false,
+      "status": "not_supported",
+      "reasons": []
+    }
+  ],
+  "sham_summary_S_minus_F": {
+    "B1": {
+      "n": 4,
+      "mean": 1.6406192861415692,
+      "CI90": [
+        -0.5425852124661921,
+        3.8238237847493304
+      ]
+    },
+    "B2": {
+      "n": 3,
+      "mean": 0.030467913682200514,
+      "CI90": [
+        -0.058497954933286925,
+        0.11943378229768796
+      ]
+    },
+    "pooled": {
+      "n": 7,
+      "mean": 0.9505544122304111,
+      "CI90": [
+        -0.2020702834423468,
+        2.103179107903169
+      ]
+    }
+  }
+}
+raw checks {'V08:pass': 143, 'V09:pass': 143, 'V07:not_applicable': 79, 'V3:pass': 143, 'V05b:pass': 143, 'V-model:pass': 143, 'V6:pass': 143, 'V-echo:pass': 143, 'V07:pass': 64} cross checks {'V05:pass': 64, 'V04:pass': 7} frozen keys first {'V-echo': 'pass', 'V-model': 'pass', 'V01': 'pass', 'V02': 'pass', 'V05': 'pass', 'V05b': 'pass', 'V06': 'pass', 'V07': 'not_applicable', 'V08': 'pass', 'V09': 'pass', 'V3': 'pass', 'V6': 'pass'}

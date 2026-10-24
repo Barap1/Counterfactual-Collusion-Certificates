@@ -1,0 +1,17 @@
+confirmatory,defined,eligibility_observed,eligible,imputed_zero,ineligible_reason,label,n_F,n_K,regime,tau_A,tau_C,tau_O,tau_W,tier,uncertainty_scope,world_attempt_status,world_id
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B1,2.8257624823111005,1.535355376410692,1.2904071059004067,-0.4898965410205278,B,world_cluster,complete,1716750912
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B2,5.803593275853062,6.986611486655537,-1.183018210802473,-16.339259394916013,B,world_cluster,complete,1716750912
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B1,1.7609356017424282,-0.8838846933630045,2.6448202951054363,7.057409976936881,B,world_cluster,complete,551864267
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B2,-1.8450085148738014,0.7692995336046486,-2.6143080484784473,-6.767215164166188,B,world_cluster,complete,551864267
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B1,-0.325072731890236,-0.9702827432816683,0.6452100113914341,3.230985509346212,B,world_cluster,complete,1482663892
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B2,-0.24606226823889443,0.467869442838591,-0.7139317110774854,-2.363602307832153,B,world_cluster,complete,1482663892
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B1,-0.899371304715209,0.1867650597180628,-1.0861363644332762,-2.545802848302685,B,world_cluster,complete,1031646258
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B2,0.0,0.0,0.0,0.0,B,world_cluster,complete,1031646258
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B1,-1.617013467869088,-5.109809635056127,3.4927961671870342,17.205211604486323,B,world_cluster,complete,1585432260
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B2,0.0,0.0,0.0,0.0,B,world_cluster,complete,1585432260
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B1,-1.062709065919167,-1.062709065919167,0.0,2.1254181318383374,B,world_cluster,complete,163932955
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B2,0.8945456917803618,0.8945456917803618,0.0,-1.7890913835607236,B,world_cluster,complete,163932955
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B1,1.0331922406544258,0.327373408461888,0.7058188321925414,0.7568908474612925,B,world_cluster,complete,888852293
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B2,1.370150421024893,-0.11580889556156393,1.485959316586456,3.2035364242960327,B,world_cluster,complete,888852293
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B1,0.48975184569666075,0.4190627291843114,0.0706891165123551,-0.6967472253439269,B,world_cluster,complete,1394100456
+False,True,True,True,False,,descriptive; Tier-B case certificates exploratory,4,4,B2,-0.04570187052330077,0.0,-0.045701870523302546,-0.09140374104660509,B,world_cluster,complete,1394100456
