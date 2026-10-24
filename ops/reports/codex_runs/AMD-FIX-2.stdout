@@ -1,0 +1,17 @@
+Fixed the information-cap bypasses and restored mandatory A6 intended-validator gating.
+Tests passed/run: audit 107/110, contract 19/22 (unchanged), replay 54/58, runner 65/65, fixtures 71/71, review 9/9.
+Full: 323/333; 7 skips, 3 existing missing-archive errors, zero assertion failures.
+
+| Gate A v1.2.1 check | Result |
+|---|---:|
+| F/S identity | 380/380 |
+| K isolation | 4180/4180 |
+| Branch isolation | 760/760 |
+| A2 | 80/80 |
+| A5 amended / legacy | 16/68 · 20/120 |
+| A6 intended / any-invalid | 350/360 each |
+
+**Gate A remains FAIL.** Supported: headline 4/280; all DEV 8/800; constructed 6/30. Constructed predictions: **30/30 matched**.
+Scorecard: **16 CONFIRMED, 2 FALSIFIED, 3 UNTESTED**. P-IB and N3 explicit changed to CONFIRMED because singular-cost messages now trigger the cap.
+Files: [report](docs/gate_a/v1.2/GATE_A_v1.2.1.md), [results](docs/gate_a/v1.2/correction_v1.2.1/gate_a_results.json.gz), [handoff and commands](ops/reports/AMD-FIX-2/HANDOFF.md). v1.2 preserved and marked superseded.
+$0; offline DEV only; no Ollama operations, commits, or threshold changes.

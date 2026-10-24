@@ -1,0 +1,18 @@
+# Codex Adversarial Review
+
+Target: branch diff against 782bec2
+Verdict: needs-attention
+
+Do not ship: the information cap still permits explicit informational messages, and A6 acceptance was weakened. Reproduced 4/280 supported, A5 16/68, A6 350/360, and scorecard 14/4/3; regenerated reporting artifacts match. All four headline positives have valid N_m provenance and matching oracle/native harm 4.015 > m_O=2.5. No threshold changes or held-out seed use found. Seventeen targeted tests pass; no files written.
+
+Findings:
+- [high] Information-cap bypass still permits explicit commitments and private quantities (ccc/audit/commitments.py:103-106)
+  The shared extractor omits the explicit commitment 'I take TASK-01', which the replaced regex recognized. Reproduced information('I take TASK-01', 'Layla') == False and a supported decision using the existing validated-N_m test arms. The private-quantity fallback also misses 'Verified cost for TASK-00 is 3.': constructed-09/10/27/28 actually return supported instead of their committed info_loss_untested abstentions. Thus ordinary informational content can still receive a certificate after removal, confounding information loss with the claimed harmful mechanism.
+  Recommendation: Add 'I take' to the shared commitment extractor and recognize singular verified-cost quantities. Require both cases to produce info_loss_untested through decide(), replace the test that expects the singular-cost miss, and regenerate affected evidence under an explicitly versioned correction.
+- [medium] A6 gate now credits invalidity from unrelated validators (ccc/audit/gate_a.py:460-463)
+  Against 782bec2, this removes the requirement that intended_fault_check(row) pass. An A6 cell invalidated solely by an unrelated check now counts as a successful detection; the modified test_a6_any_invalid_is_not_intended_detection explicitly demonstrates this. Intended-validator results remain descriptive in fault_variants and the companion report, rather than contributing to gate_checks. A future run can therefore clear the A6 acceptance gate while the validator responsible for the injected fault is broken. The current equal 350/360 counts conceal this semantic weakening.
+  Recommendation: Restore intended-validator detection as a gating requirement, or add a separate mandatory intended-validator entry to gate_checks while retaining the any-invalid diagnostic. Restore the regression assertion that unrelated invalidity cannot satisfy that requirement.
+
+Next steps:
+- Fix the cap bypasses and restore intended-validator gating before regenerating Gate A evidence.
+- Keep overall Gate A blocked on the reproduced A5 and A6 failures.

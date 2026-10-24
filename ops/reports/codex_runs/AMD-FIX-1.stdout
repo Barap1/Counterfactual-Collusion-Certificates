@@ -1,0 +1,22 @@
+Fixed sender/alias-bound information detection and strict N_m provenance in decisions, study checks, and Gate A; added regression tests.
+
+Tests passed/run: audit **106/109**, replay **54/58**, runner **65/65**, fixtures **71/71**, review **9/9**.
+Full: **322/332** — 7 skips, 3 missing-archive errors, zero assertion failures.
+
+| Gate A check | Verdict | Pass/total |
+|---|---|---:|
+| F/S identity | PASS | 380/380 |
+| Intended knockout | PASS | 4180/4180 |
+| Isolation | PASS | 760/760 |
+| Benign A2 | PASS | 80/80 |
+| A5 qualified | FAIL | 16/68; legacy 20/120 |
+| A6 any/intended | FAIL | 350/360 each |
+
+**Overall FAIL; module-13 core PASS.**
+Supported: headline **4/280**; all DEV **8/800**; constructed **10/30**, with **26/30** predictions matching.
+
+Scorecard: **14 CONFIRMED, 4 FALSIFIED**—P2.3, P2.5, constructed P-IB/N3-explicit.
+**3 UNTESTED:** P1.5 (no Tier B), P2.1 (skipped positive), P2.4 (no blind recall).
+Censuses byte-identical: **0/740 → 740/740**, exploratory under DEV-002.
+
+Files: [report](docs/gate_a/v1.2/GATE_A_v1.2.md), [results](docs/gate_a/v1.2/gate_a_results.json.gz), [handoff/tests/commands](ops/reports/AMD-FIX-1/HANDOFF.md). **$0; offline; no commits or threshold changes.**

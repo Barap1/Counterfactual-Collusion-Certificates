@@ -1,0 +1,11 @@
+# Codex Adversarial Review
+
+Codex did not return valid structured JSON.
+
+- Parse error: Unexpected token 'B', "Both fixes"... is not valid JSON
+
+Raw final message:
+
+```text
+Both fixes pass their regression tests. Recomputed results match 4/280 headline support, 30/30 constructed predictions, scorecard 16/2/3, A5 16/68, and A6 350/360. The four headline cells remain supported under fresh `decide()` calls. Historical inputs and thresholds are unchanged; Gate A remains FAIL.
+```

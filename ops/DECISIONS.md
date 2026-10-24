@@ -114,3 +114,18 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 - The v1.2 placebo census ran before the IMP-0 freeze hashes were committed (Claude worker interrupted). AMD-IMP-A2 must record this honestly; the census is re-run after freezing if needed.
 - Commit budget: 60 of 70 commits used. Commits are batched from here; owner asked whether exceeding 70 or squashing at release is OK.
 - VIS-001a/b: dev figures from v1.1 fixtures (labelled pre-amendment) pass director visual QA. Final figures are regenerated post-v1.2.
+
+## D-026 (2026-10-23 ~23:20 UTC, OWNER request) Squash and push
+- Owner asked to squash to about 40 commits, commit the latest update and push. The 63 local commits were rebuilt with git commit-tree into 37 (38 including the base), folding each bookkeeping "ops:" commit into the preceding substantive commit. The final tree is byte-identical to the pre-squash HEAD (verified with git diff). Old history kept locally as branch backup/pre-squash (not pushed).
+- Pre-push secret scan: no tracked .env/compute.env/*.local.json; regex scan over all commits was clean; exact-value check of local secrets found only OPENROUTER_BASE_URL (public URL) and OPENROUTER_MODEL ("openrouter/free"), both non-secret config. No API keys present.
+- Pushed main to the existing private origin as a fast-forward (097619b..fc7e2ae). Worktree branch v1.2-impl still sits on pre-squash ancestry; it will be rebased with `git rebase --onto main <old-base> v1.2-impl` once AMD-FIX-1 finishes (trees identical, so this is clean).
+
+## D-027 (OWNER) Commit attribution
+- From now on all commits list the owner as sole author, with no Claude/Codex Co-Authored-By trailers. Already-pushed history is unchanged, since a rewrite was not requested. The paper's LLM-usage statement is unaffected and remains truthful per the sprint rules.
+
+## D-028 (2026-10-24 ~00:25 UTC, director) GATE A PASSED on module-13 criteria, with declared limitations
+- Evidence: Gate A v1.2.1 (worktree commit 0c26001; docs/gate_a/v1.2/GATE_A_v1.2.1.md). Module-13 Gate A criteria all PASS on DEV fixtures: F/S identity 380/380, intended-knockout-only 4180/4180, branch isolation 760/760, benign causal cooperation (A2) never supported 80/80. The A2 pass is no longer vacuous: CCC reaches supported on 4/280 headline DEV cells, each with valid N_m provenance and oracle outsider harm 4.015 > m_O.
+- Two stricter checks added in the ENG-004 brief still FAIL and become declared limitations that narrow claims rather than block the gate: A5 (16/68 redundant-carrier cells correctly not exonerated, so a "not supported" verdict is NOT exoneration, and semantic/paraphrase carriers are undetected); A6 (350/360, the 10 misses being A6b cells whose fault is not exercisable).
+- Independent challenge: three Codex adversarial-review rounds; findings fixed in AMD-FIX-1/2; final re-review reproduced every number, no new findings. Pre-written predictions: 16 confirmed / 2 falsified / 3 untested. Constructed controls 30/30 (unit/reachability only).
+- Disclosures carried to the paper: v1.2 motivated by the v1.1 DEV result; DEV-002 census freeze failure (census exploratory); A5/A6 limitations.
+- Next: merge v1.2 into main after EXP-001 ends; Stage-2 pinning on EXP-001 F/S; Tier-B M* availability census on EXP-001 real trajectories; STAT freeze review; held-out EXP-002 needs OWNER approval.
