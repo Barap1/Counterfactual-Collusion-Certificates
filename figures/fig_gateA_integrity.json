@@ -1,21 +1,17 @@
 {
-  "caption": "Gate A integrity checks on DEV fixtures, protocol v1.1. Each cell is a fixture check; this is not a real-world rate. Overall Gate A: FAIL.",
+  "caption": "Gate A integrity checks on DEV fixtures, protocol v1.2.2. Each cell is a fixture check; this is not a real-world rate. Overall Gate A: FAIL.",
   "data_tier": "synthetic DEV fixtures; no real experiment data",
   "figure": "fig_gateA_integrity",
   "generated_by": "figures/scripts/build_publication.py",
   "labels": {
     "overall": "FAIL",
-    "protocol": "v1.1",
+    "protocol": "v1.2.2",
     "tier": "DEV fixtures"
   },
   "source_files": [
     {
-      "path": "docs/gate_a/eng005/gate_a_results.json.gz",
-      "sha256": "e1925956c3c836d3b8b65eac17768103508b26fee5b2718fb79ee59d4d9570dc"
-    },
-    {
-      "path": "docs/gate_a/GATE_A_REPORT.md",
-      "sha256": "e2b0805b7f938522d6b3b1e0f4c33a0f46a3127720ea0749c9e59937978cf2f9"
+      "path": "docs/gate_a/v1.2/correction_v1.2.2/gate_a_results.json.gz",
+      "sha256": "8aa6b1b0b979406dc523f931e1451e75304a599f7f6379f7c6985bcd4a60e54c"
     }
   ]
 }

@@ -1,19 +1,18 @@
-# CCC paper: figures and tables plan (PUB-002)
+# CCC paper: figures and tables plan (PUB-004)
 
-Status 2026-10-23. All numbers are placeholders until the owning task delivers frozen output. Each item must cite an `ops/CLAIMS.md` ID, table field and analysis version before export.
+Owner: sole author. No AI co-author attribution. Status: 2026-10-24; development evidence and frozen design only. No held-out outcomes inspected. Export requires source field, denominator, analysis version and claim mapping.
 
-| ID | Item | Content | Source data path | Owning task | Status |
-|---|---|---|---|---|---|
-| Fig 1 | Arm schematic and fork | Timeline: shared checkpoint at t*, arms F/S/K/N (C optional), mask by event id with preserved indices, fresh continuations, verdict states | `docs/research/sci002/protocol.md` sections 3-4 (diagram only, no data) | VIS-001 | not started |
-| Fig 2 | Flagship contrast: same knockout magnitude, different verdicts (A1 vs A2) | Per-instance tau_O vs verdict, by family | [RESULT-PENDING] STAT-002 fixture table; interim: `docs/gate_a/gate_a_results.json` (dev only) | VIS-001 / STAT-002 | blocked on Gate A diagnosis |
-| Tab 1 | Gate A integrity table | Check, pass/total (F=S, K scope, isolation, A6 invalid detection, fault activation) | `docs/gate_a/GATE_A_REPORT.md`, `docs/gate_a/gate_a_results.json`; diagnosis in `docs/gate_a/diag/` (uncommitted) | ENG-004 / GA-DIAG | integrity rows final; A6/A5 rows provisional |
-| Tab 2 | CCC vs baselines confusion by fixture family | TP/FN/FP/TN for CCC, B0, B1, B2, B2+, B3a, B3b, B4-rule; abstain/invalid column; per family A1-A6, strata by oracle path activity | `docs/gate_a/gate_a_results.json` (dev); held-out: STAT-002 output [RESULT-PENDING] | STAT-002 | dev numbers provisional; held-out pending |
-| Tab 3 | CCC sensitivity loss vs B2, cell by cell | B2 flags without CCC support per stratum | `docs/gate_a/GATE_A_REPORT.md` (appendix table) | STAT-002 | provisional |
-| Tab 4 | Replay validity failure taxonomy | Rate of leakage, protocol corruption, non-regenerated continuations in naive knockout vs gated | [RESULT-PENDING] EXP-001/EXP-002 branch records `runs/exp001/` | EXP-001 / STAT-002 | pending |
-| Tab 5 | Real-trajectory case study status counts | eligible / ineligible / invalid / inconclusive / supported / not supported; abstention reasons; worlds vs branches vs failures separate | [RESULT-PENDING] STAT-002 T2 | STAT-002 | pending |
-| Tab 6 | Dev-pilot validity and throughput | Calls/hour, tool-error rate, missingness per arm, overflow, reload events | `ops/reports/INF-001.md` (benchmark, verified); EXP-001 run logs `runs/exp001/` [RESULT-PENDING] | EXP-001 / INF-001 | benchmark done; pilot pending |
-| Tab 7 | Robustness | Sensitivity to m_O and delta_W; interval method check | [RESULT-PENDING] STAT-002 | STAT-002 | pending |
-| Tab 8 (appendix) | Baseline definitions and fairness rules | B0-B5 table | `docs/research/sci002/baselines.md` | PUB-002 / SCI-002 | draftable now |
-| Tab 9 (appendix) | Fixture families A1-A6 | Mechanism, truth label, predicted verdicts | `docs/research/sci002/fixture_spec.md` | FIX-001 | draftable now |
+| ID / placement | Exact content | Source / status |
+|---|---|---|
+| Figure 1 / Methods | Earliest-exposure fork; regenerated F/K/S/N_m continuations; persistent receiver mask; M* availability; validity and verdict gates. Design schematic, no outcome data. | [VERIFIED: docs/research/sci002/protocol.md]; [VERIFIED: docs/stats/stage2/STAGE2_ADDENDUM.md] |
+| Table 1 / §4.1 | DEV integrity: F/S 380/380; K scope 4180/4180; isolation 760/760; A2 80/80; A6 350/360. Caption states deterministic DEV cells, diagnostic FAIL and separate director module-13 PASS. | [VERIFIED: docs/gate_a/v1.2/correction_v1.2.2/GATE_A_v1.2.2.md]; [VERIFIED: docs/review/director_gateA_audit.md] |
+| Figure 2 / §4.2 | A1/A2 outsider-effect estimates and intervals versus verdict; matched-seed and template-group identifiers; no selection by effect magnitude. | [RESULT-PENDING: STAT-002] |
+| Table 2 / §4.2 | CCC and B0/B1/B2/B2+/B3a/B3b/B4-rule TP/FN/FP/TN, abstention, invalidity, attempted denominator and coverage; family, oracle-path and wording strata; operational and determinate-only views; confirmatory/exploratory designation. Constructed controls excluded. | [RESULT-PENDING: STAT-002] |
+| Table 3 / §4.3 | Attempted/completed world-pairs; eligibility and reasons; complete continuations, failures and unrun work by regime/arm; status counts and all abstention reasons. Worlds, checkpoints, branches and attempts use separate denominators. | [RESULT-PENDING: STAT-002] |
+| Table 4 / §4.3 | Delta_total, Delta_conditional, within-regime tau_O, eligibility-rate difference; world-cluster intervals and paired-test outputs; achieved sample floors; confirmatory/exploratory designation. | [RESULT-PENDING: STAT-002] |
+| Figure 3 / §4.3 | Paired world effects and aggregate interval, identifying excluded/undefined pairs without inventing values. | [RESULT-PENDING: STAT-002] |
+| Table B1 / appendix | Missingness bounds; non-commit exclusion; registered ineligibility alternatives; margin sensitivity; sham interval and attained half-width; placebo availability. | [RESULT-PENDING: STAT-002] |
+| Table B2 / appendix | Requests, retries, failed/unrun work, runtime and inference spend; environment task reward units reported separately. | [RESULT-PENDING: STAT-002] |
+| Figure B1 / appendix | Registered descriptive risk versus coverage, retaining attempted denominator and abstention counts. | [RESULT-PENDING: STAT-002] |
 
-Constraints: main text allows 4-6 pages, so keep Fig 1, Fig 2, Tab 1, Tab 2, Tab 5 in the body and move the rest to the appendix. Dev-only numbers must carry a "development, not held-out" caption. No figure may imply a result not yet frozen.
+Layout target: six main-text pages, subject to template rendering. Keep Figure 1 and Table 1 compact; combine Table 3 status accounting with its reason breakdown. Extended related work, extractor provenance, calibration details and robustness belong in Appendix B. No charts are generated by this task. Held-out items contain no values or expected directions; only STAT-002 frozen output may populate them. Existing DEV values must be captioned “development; deterministic; not held-out.”

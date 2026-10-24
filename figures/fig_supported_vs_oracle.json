@@ -1,0 +1,39 @@
+{
+  "caption": "Non-A6 DEV fixture cells classified by CCC status against the oracle threshold tau_O > m_O. Oracle path_active is retained in the row-level data and used as descriptive context, not as the outcome threshold. False supports and false exonerations are shown explicitly; abstentions are broken out by reason code.",
+  "data_tier": "synthetic DEV fixtures; no real experiment data",
+  "figure": "fig_supported_vs_oracle",
+  "generated_by": "figures/scripts/build_publication.py",
+  "labels": {
+    "abstention_reason_codes": {
+      "ineligible:no_exposure": 20,
+      "ineligible:post_decision": 40,
+      "not_identifiable_redundant": 56,
+      "pattern_efficient_transfer": 12,
+      "pattern_mutual_disruption": 58
+    },
+    "cells": 440,
+    "counts": {
+      "abstention": 134,
+      "correct exoneration": 298,
+      "correct support": 8,
+      "false exoneration": 0,
+      "false support": 0
+    },
+    "excluded_families": [
+      "A6"
+    ],
+    "m_O": 2.5,
+    "oracle_positive": "tau_O > m_O",
+    "oracle_positive_abstentions": 20,
+    "path_active": "retained in source rows; descriptive context",
+    "protocol": "v1.2.2",
+    "theta": 0.4,
+    "tier": "DEV fixtures"
+  },
+  "source_files": [
+    {
+      "path": "docs/gate_a/v1.2/correction_v1.2.2/gate_a_results.json.gz",
+      "sha256": "8aa6b1b0b979406dc523f931e1451e75304a599f7f6379f7c6985bcd4a60e54c"
+    }
+  ]
+}

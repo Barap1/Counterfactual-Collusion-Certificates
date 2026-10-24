@@ -66,7 +66,7 @@ def integrity(data, source):
     rows=[("F vs S identical",checks["F_vs_S_identical"]), ("K-only intended exposure",checks["K_only_intended_exposure"]), ("Branch isolation",checks["branch_isolation"]), ("A2 not supported",checks["A2_not_supported"]), ("A6 invalid detection",checks["A6_invalid"])]
     fig,ax=plt.subplots(figsize=(7.15,2.55)); ax.axis("off")
     ax.text(.02,1.02,"Gate A integrity checks",transform=ax.transAxes,fontsize=11,weight="bold",color=NAVY)
-    ax.text(.98,1.02,"DEV fixtures, protocol v1.1",transform=ax.transAxes,ha="right",fontsize=8,color=AMBER,weight="bold")
+    ax.text(.98,1.02,"DEV fixtures, protocol v1.2.2",transform=ax.transAxes,ha="right",fontsize=8,color=AMBER,weight="bold")
     table=[]
     for label,item in rows:
         passed=item.get("passed",item["pass"]==item["total"])
@@ -78,9 +78,8 @@ def integrity(data, source):
         if r==0: cell.set_facecolor(NAVY); cell.get_text().set_color("white"); cell.get_text().set_weight("bold")
         elif c==2: cell.set_facecolor("#F6E8E8" if table[r-1][2]=="FAIL" else "#E8F3F1"); cell.get_text().set_color(RED if table[r-1][2]=="FAIL" else TEAL); cell.get_text().set_weight("bold")
         else: cell.set_facecolor("#FAFBFC" if r%2 else "white")
-    ax.text(.02,-.04,"A6 sensitivity gate fails (230/360); overall Gate A reported FAIL. Counts are fixture checks, not real-world rates.",transform=ax.transAxes,fontsize=7,color=GREY)
-    report=ROOT/"docs/gate_a/GATE_A_REPORT.md"
-    save(fig,"fig_gateA_integrity",[source,report],"Gate A integrity checks on DEV fixtures, protocol v1.1. Each cell is a fixture check; this is not a real-world rate. Overall Gate A: FAIL.",{"tier":"DEV fixtures","protocol":"v1.1","overall":"FAIL"})
+    ax.text(.02,-.04,"A6 sensitivity gate fails (350/360); overall Gate A reported FAIL. Counts are fixture checks, not real-world rates.",transform=ax.transAxes,fontsize=7,color=GREY)
+    save(fig,"fig_gateA_integrity",[source],"Gate A integrity checks on DEV fixtures, protocol v1.2.2. Each cell is a fixture check; this is not a real-world rate. Overall Gate A: FAIL.",{"tier":"DEV fixtures","protocol":"v1.2.2","overall":"FAIL"})
 
 def classify(label): return label in {"flag","supported"}
 def confusion_panels(data, source):
@@ -91,7 +90,7 @@ def confusion_panels(data, source):
     fig,axs=plt.subplots(3,1,figsize=(7.15,12.4),sharex=True,gridspec_kw={"hspace":.23})
     fig.subplots_adjust(left=.20,right=.88,top=.91,bottom=.06)
     fig.suptitle("Positive-call rate by DEV fixture family and method",x=.20,y=.975,ha="left",fontsize=12,weight="bold",color=NAVY)
-    fig.text(.20,.948,"DEV fixtures · protocol v1.1 · pre-amendment",fontsize=8,color=AMBER,weight="bold",ha="left")
+    fig.text(.20,.948,"DEV fixtures · protocol v1.2.2 · θ=0.4",fontsize=8,color=AMBER,weight="bold",ha="left")
     import numpy as np
     for ax,path,title in zip(axs,paths,titles):
         rates=np.full((len(FAMILIES),len(METHODS)),np.nan)
@@ -114,17 +113,74 @@ def confusion_panels(data, source):
             for xi in range(len(METHODS)):
                 val=rates[yi,xi]
                 # Dark text on pale cells and white text on darker cells maintains contrast.
-                color="white" if val>=.5 else NAVY
+                color=(NAVY if val < .45 else "white") if not np.isnan(val) else NAVY
                 ax.text(xi,yi,annotations[yi][xi],ha="center",va="center",fontsize=7,color=color,weight="bold")
         for spine in ax.spines.values(): spine.set_visible(False)
     cax=fig.add_axes([.905,.18,.022,.68])
     cb=fig.colorbar(im,cax=cax); cb.set_label("Positive-call rate (k/n)",fontsize=8); cb.ax.tick_params(labelsize=7)
-    caption="Each cell shows the positive-call rate for the named method and fixture family, with positive count/eligible fixture count (k/n). Panels show all fixtures under the mechanism-label target, then oracle path_active=false and true strata. CCC is separated visually from baselines. DEV fixtures only; protocol v1.1, pre-amendment; not real observations."
-    save(fig,"fig_confusion_dev",[source],caption,{"tier":"DEV fixtures","protocol":"v1.1","amendment":"pre-amendment","fixture_count":data["instances"],"methods":METHODS,"families":FAMILIES,"cell":"positive-call rate; annotation k/n","panels":["mechanism label","oracle path_active=false","oracle path_active=true"],"colormap":"cividis"})
+    caption="Each cell shows positive-call rate with positive count/eligible fixture count (k/n). Panels show all fixtures and oracle path_active strata. DEV fixtures only; protocol v1.2.2, theta=0.4; not real observations."
+    save(fig,"fig_confusion_dev",[source],caption,{"tier":"DEV fixtures","protocol":"v1.2.2","theta":0.4,"fixture_count":data["instances"],"methods":METHODS,"families":FAMILIES,"cell":"positive-call rate; annotation k/n","panels":["mechanism label","oracle path_active=false","oracle path_active=true"],"colormap":"cividis"})
+
+def supported_vs_oracle(data, source):
+    # Non-A6 fixture cells only. The threshold is inclusive for this descriptive
+    # comparison, matching the registered false-support definition.
+    rows=[r for r in data["rows"] if not r["family"].startswith("A6")]
+    m=data["parameters"]["m_O"]
+    counts={"correct support":0,"false support":0,"not supported below":0,"not supported above":0,"abstention":0}
+    positive_abstentions=[]
+    for r in rows:
+        c=r["native"]["CCC"]
+        status=c["status"].lower()
+        tau=r["oracle_effects"]["tau_O"]
+        positive=tau >= m
+        if status in {"abstain","inconclusive"}:
+            counts["abstention"]+=1
+            if positive and r["oracle_strata"]["path_active"]:
+                positive_abstentions.append(r)
+            continue
+        support=status in {"supported","support"}
+        if support and positive: counts["correct support"]+=1
+        elif support: counts["false support"]+=1
+        elif positive: counts["not supported above"]+=1
+        else: counts["not supported below"]+=1
+
+    # Assign each eligible cell exactly once. A cell with multiple reasons gets
+    # the most directly causal reason first, with the remaining reason noted.
+    priority=("pattern_mutual_disruption","pattern_efficient_transfer","not_identifiable_redundant")
+    primary_counts={key:0 for key in priority}
+    for r in positive_abstentions:
+        reasons=r["native"]["CCC"].get("reasons",[]) or r["native"]["CCC"].get("flags",[])
+        primary=next((key for key in priority if key in reasons),"other")
+        primary_counts[primary]=primary_counts.get(primary,0)+1
+    assert len(positive_abstentions)==20, f"expected 20 oracle-positive path-active abstentions; got {len(positive_abstentions)}"
+    assert sum(primary_counts.values())==len(positive_abstentions)
+    assert sum(counts.values())==len(rows)
+    fig,axs=plt.subplots(1,2,figsize=(7.15,3.45),gridspec_kw={"width_ratios":[1.25,1]})
+    ax=axs[0]
+    cats=list(counts); vals=[counts[k] for k in cats]
+    cols=[TEAL,RED,BLUE,RED,AMBER]
+    bars=ax.bar(range(len(cats)),vals,color=cols,width=.72)
+    ax.set_xticks(range(len(cats)),["Correct support\n(τO ≥ mO)","False support\n(τO < mO)","Not supported,\nτO < mO","Not supported,\nτO ≥ mO","Abstain"],fontsize=6.3)
+    ax.set_ylabel("DEV fixture cells"); ax.set_title("CCC status vs oracle τO",loc="left",weight="bold",color=NAVY)
+    ax.grid(axis="y",color="#E7EBEE",lw=.7); ax.set_axisbelow(True)
+    for b,v in zip(bars,vals): ax.text(b.get_x()+b.get_width()/2,v+2,str(v),ha="center",fontsize=8,weight="bold",color=NAVY)
+    ax=axs[1]; ax.set_title("Oracle-positive abstentions",loc="left",weight="bold",color=NAVY)
+    items=[(key,primary_counts[key]) for key in priority if primary_counts[key]]
+    if items:
+        ax.barh(range(len(items)),[v for _,v in items],color=AMBER)
+        ax.set_yticks(range(len(items)),[f"{k}  ({v})" for k,v in items],fontsize=7); ax.invert_yaxis()
+        for i,(_,v) in enumerate(items): ax.text(v+.15,i,str(v),va="center",fontsize=7,color=NAVY)
+    else: ax.text(.1,.5,"No abstentions",transform=ax.transAxes)
+    ax.set_xlabel("Cells (n=20)"); ax.grid(axis="x",color="#E7EBEE",lw=.7); ax.set_axisbelow(True)
+    ax.text(0,-.25,"Primary reasons; reasons may co-occur. All non-A6 abstentions: n=134.",transform=ax.transAxes,fontsize=6.3,color=GREY,va="top")
+    fig.suptitle("DEV non-A6 fixture cells · CCC vs oracle",x=.04,y=1.02,ha="left",fontsize=11,weight="bold",color=NAVY)
+    fig.tight_layout()
+    caption="Non-A6 DEV fixture cells classified by CCC status against the inclusive oracle threshold tau_O >= m_O. Not supported means the audited exposure is not shown to meet the harm threshold; it is not exoneration. Right panel shows the 20 inconclusive cells with tau_O >= m_O and path_active, assigning each once to a primary reason; reasons may co-occur. All non-A6 abstentions: n=134."
+    save(fig,"fig_supported_vs_oracle",[source],caption,{"tier":"DEV fixtures","protocol":"v1.2.2","theta":0.4,"excluded_families":["A6"],"cells":len(rows),"m_O":m,"oracle_positive":"tau_O >= m_O","oracle_positive_path_active_abstentions":len(positive_abstentions),"path_active":"required for right-panel selection","counts":counts,"primary_abstention_reason_counts":primary_counts,"abstention_reason_note":"primary reason assigned once per cell by priority; source reasons may co-occur","all_non_A6_abstentions":counts["abstention"]})
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True); style()
-    source=ROOT/"docs/gate_a/eng005/gate_a_results.json.gz"
+    source=ROOT/"docs/gate_a/v1.2/correction_v1.2.2/gate_a_results.json.gz"
     data=json.load(gzip.open(source,"rt",encoding="utf-8"))
-    arms(); integrity(data,source); confusion_panels(data,source)
+    arms(); integrity(data,source); confusion_panels(data,source); supported_vs_oracle(data,source)
 if __name__=="__main__": main()

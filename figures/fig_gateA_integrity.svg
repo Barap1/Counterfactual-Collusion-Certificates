@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-23T19:02:21.388822</dc:date>
+    <dc:date>2026-10-24T00:04:39.463732</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -116,7 +116,7 @@ z
 " style="fill: #ffffff; stroke: #d7dee3; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_8">
-     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="232.61805" y="83.032521" transform="rotate(-0 232.61805 83.032521)">1520 / 1520</text>
+     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="232.61805" y="83.032521" transform="rotate(-0 232.61805 83.032521)">4180 / 4180</text>
     </g>
     <g id="patch_10">
      <path d="M 322.3863 90.485441 
@@ -149,7 +149,7 @@ z
 " style="fill: #fafbfc; stroke: #d7dee3; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_11">
-     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="232.61805" y="102.353361" transform="rotate(-0 232.61805 102.353361)">380 / 380</text>
+     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="232.61805" y="102.353361" transform="rotate(-0 232.61805 102.353361)">760 / 760</text>
     </g>
     <g id="patch_13">
      <path d="M 322.3863 109.806281 
@@ -215,7 +215,7 @@ z
 " style="fill: #fafbfc; stroke: #d7dee3; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
     <g id="text_17">
-     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="232.61805" y="140.995041" transform="rotate(-0 232.61805 140.995041)">230 / 360</text>
+     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="232.61805" y="140.995041" transform="rotate(-0 232.61805 140.995041)">350 / 360</text>
     </g>
     <g id="patch_19">
      <path d="M 322.3863 148.447961 
@@ -233,10 +233,10 @@ z
     <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="15.1794" y="15.558281" transform="rotate(-0 15.1794 15.558281)">Gate A integrity checks</text>
    </g>
    <g id="text_20">
-    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d99a28" x="398.1906" y="15.558281" transform="rotate(-0 398.1906 15.558281)">DEV fixtures, protocol v1.1</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d99a28" x="398.1906" y="15.558281" transform="rotate(-0 398.1906 15.558281)">DEV fixtures, protocol v1.2.2</text>
    </g>
    <g id="text_21">
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #72808e" x="15.1794" y="165.412601" transform="rotate(-0 15.1794 165.412601)">A6 sensitivity gate fails (230/360); overall Gate A reported FAIL. Counts are fixture checks, not real-world rates.</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #72808e" x="15.1794" y="165.412601" transform="rotate(-0 15.1794 165.412601)">A6 sensitivity gate fails (350/360); overall Gate A reported FAIL. Counts are fixture checks, not real-world rates.</text>
    </g>
   </g>
  </g>

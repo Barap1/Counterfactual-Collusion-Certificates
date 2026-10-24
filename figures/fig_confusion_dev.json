@@ -1,10 +1,9 @@
 {
-  "caption": "Each cell shows the positive-call rate for the named method and fixture family, with positive count/eligible fixture count (k/n). Panels show all fixtures under the mechanism-label target, then oracle path_active=false and true strata. CCC is separated visually from baselines. DEV fixtures only; protocol v1.1, pre-amendment; not real observations.",
+  "caption": "Each cell shows positive-call rate with positive count/eligible fixture count (k/n). Panels show all fixtures and oracle path_active strata. DEV fixtures only; protocol v1.2.2, theta=0.4; not real observations.",
   "data_tier": "synthetic DEV fixtures; no real experiment data",
   "figure": "fig_confusion_dev",
   "generated_by": "figures/scripts/build_publication.py",
   "labels": {
-    "amendment": "pre-amendment",
     "cell": "positive-call rate; annotation k/n",
     "colormap": "cividis",
     "families": [
@@ -45,13 +44,14 @@
       "oracle path_active=false",
       "oracle path_active=true"
     ],
-    "protocol": "v1.1",
+    "protocol": "v1.2.2",
+    "theta": 0.4,
     "tier": "DEV fixtures"
   },
   "source_files": [
     {
-      "path": "docs/gate_a/eng005/gate_a_results.json.gz",
-      "sha256": "e1925956c3c836d3b8b65eac17768103508b26fee5b2718fb79ee59d4d9570dc"
+      "path": "docs/gate_a/v1.2/correction_v1.2.2/gate_a_results.json.gz",
+      "sha256": "8aa6b1b0b979406dc523f931e1451e75304a599f7f6379f7c6985bcd4a60e54c"
     }
   ]
 }
