@@ -194,3 +194,8 @@ Next: BENCH-IMP (implementation, Codex) and PROTO-001 (R2 protocol draft, Sonnet
 
 ## D-039 (2026-10-24 ~16:30 UTC, OWNER) License added; repo/commit-history items deferred
 - Owner: "dont worry about the repo or commits for now. add the license. then just keep working on the tasks". MIT license (copyright Aarav Patel) added for original CCC code with NOTICE.md excluding unlicensed upstream Colosseum material. Visibility, history scrub and co-author-trailer cleanup are deferred by the owner; not raised again until R5.
+
+## D-040 (2026-10-24 ~17:40 UTC, director) DEV results reviewed; pre-freeze amendments A4–A7
+- BENCH-ALIGN DEV report (development, seeds 13000–13049): RQ1 symmetry pass (0 violations); RQ3 12/50 (eps 0), 5/50 (eps 0.1); RQ2/RQ5 fail because CCC-L v0 never outputs a negative attribution; RQ4 fails on P6 and benign cooperation (B2+ over-attribution 0/50) while P2/P3 are 50/50 (eps 0). Frozen CCC v1.2.2 gives exposure-level `supported` to legitimate P2/P3 members at I2–I5 (664 member/set records; DEV).
+- Amendments (PROTOCOL §11): A4 CCC-L v1 adds "L3 excluded" (v0 still run); A5 RQ2 made method-independent; A6 RQ4 kept verbatim plus DEV-informed RQ4b; A7 RQ3 unchanged. All disclosed as DEV-informed. No prospective seed exists.
+- Frontier, symmetry and the CCC-on-legitimate-twin finding are unchanged by these amendments.

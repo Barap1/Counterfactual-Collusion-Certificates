@@ -14,22 +14,16 @@
  },
  "live_agents": [
   {
-   "id": "BENCH-ALIGN",
+   "id": "BENCH-ALIGN2",
    "owner": "codex gpt-6.1-sol/medium",
-   "started_utc": "2026-10-24T16:55Z",
-   "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/"
+   "started_utc": "2026-10-24T17:40Z",
+   "writes": "ccc/bench/, docs/enh/bench/, regenerated demo outputs"
   },
   {
-   "id": "VIS-ENH",
+   "id": "CITE-CHECK",
    "owner": "claude sonnet",
-   "started_utc": "2026-10-24T16:55Z",
-   "writes": "figures/enh/"
-  },
-  {
-   "id": "DEMO-TWINS",
-   "owner": "claude sonnet (resumed DEMO-UI)",
-   "started_utc": "2026-10-24T16:55Z",
-   "writes": "demo/"
+   "started_utc": "2026-10-24T17:40Z",
+   "writes": "paper/v2/references_v2.bib, CITATION_AUDIT.md"
   }
  ],
  "gates": {
@@ -526,7 +520,7 @@
    "id": "BENCH-ALIGN",
    "objective": "align ccc/bench with PROTOCOL (CRN, seed rule, report generator, strongest baseline)",
    "owner": "codex gpt-6.1-sol/medium",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/",
    "gate": "ENH-R2/R4"
   },
@@ -534,7 +528,7 @@
    "id": "VIS-ENH",
    "objective": "paper v2 figures from benchmark outputs (DEV prototype)",
    "owner": "claude sonnet",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "figures/enh/",
    "gate": "ENH-R2/R4"
   },
@@ -542,13 +536,29 @@
    "id": "DEMO-TWINS",
    "objective": "explorer twin-worlds centrepiece",
    "owner": "claude sonnet (resumed DEMO-UI)",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "demo/",
    "gate": "ENH-R2/R4"
+  },
+  {
+   "id": "BENCH-ALIGN2",
+   "objective": "CCC-L v1, RQ2/RQ4b amendments, demo refresh, twin_exhibit",
+   "owner": "codex gpt-6.1-sol/medium",
+   "status": "RUNNING",
+   "writes": "ccc/bench/, docs/enh/bench/, regenerated demo outputs",
+   "gate": "ENH-R2/R3"
+  },
+  {
+   "id": "CITE-CHECK",
+   "objective": "verify paper v2 references and claim-citation fidelity",
+   "owner": "claude sonnet",
+   "status": "RUNNING",
+   "writes": "paper/v2/references_v2.bib, CITATION_AUDIT.md",
+   "gate": "ENH-R2/R3"
   }
  ],
  "handoff": {
-  "running_jobs": "BENCH-ALIGN, VIS-ENH, DEMO-TWINS",
+  "running_jobs": "BENCH-ALIGN2, CITE-CHECK",
   "unpushed_commits": 1,
   "repo_visibility": "PUBLIC (re-confirmed by SEC-001 2026-10-24); owner decision pending",
   "worktree": "../ApartSprint-wt-v12 (branch v1.2-impl, fully merged into main; safe to remove after owner OK)"
