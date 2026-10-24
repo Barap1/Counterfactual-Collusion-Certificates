@@ -208,3 +208,8 @@ Next: BENCH-IMP (implementation, Codex) and PROTO-001 (R2 protocol draft, Sonnet
 - C4: prospective RQ3 uses effectively random cell assignment (scattered seeds make the parity-based crossing in ccc/fixtures/iid.py random), whereas DEV was balanced (0.24 vs 0.25 bound at eps 0).
 - C5: /tmp/synth (synthetic figure fixtures from VIS-ENH, labelled new-prospective but containing no seeds or results) deleted by the director.
 - Next: materialise seeds from FREEZE.json, run the prospective block once (single pass, no interim looks), generate RESULTS, independent R3 review.
+
+## D-042 (2026-10-24 ~21:00 UTC, OWNER) Modal spend authorized (≤ $51) for a real-agent study; paper to blend it in
+- Owner: "okay yeah do it" (after the director explained Modal's benefit: more independent worlds and/or a second model, and time safety), with "we have up to $51 to spend". Instructions: delegate to a sub-agent allowed to launch its own sub-agents; in the paper, blend the new results into the main story rather than discussing two very different studies at length.
+- Policy: ops/resource_policy.local.json updated (Modal ALLOWED for EXP-003 only; hard cap $51 including estimates; operating stop at $45; hard timeouts and teardown checks; every run in ops/budget_ledger.jsonl). The prior $0 rule is superseded only for this use.
+- Scientific guard (director): EXP-003 is a NEW prospective study with its own frozen protocol and independent freeze review; never pooled with EXP-002, whose confirmatory null stays verbatim. "Blend" applies to narrative and figures, not to statistics.
