@@ -41,7 +41,7 @@ def study_effects(worlds, phase, m_O):
     flip = sign_flip(ds)
     summary = summarize(ds)
     decision = ('supported' if summary['L'] is not None and summary['L'] > 0
-                and flip['p'] is not None and flip['p'] <= .05 else 'not supported')
+                and flip['p'] is not None and flip['p'] <= .05 else 'not supported') if confirmatory else 'exploratory'
     labels = dict(tier=tier, label=tier)
     rows = [dict(effect='Delta_total',**summary,**labels,p_raw=flip['p'],test_status=flip['status'],
                  inference_tier=tier,confirmatory=confirmatory,caveats=CAVEATS,

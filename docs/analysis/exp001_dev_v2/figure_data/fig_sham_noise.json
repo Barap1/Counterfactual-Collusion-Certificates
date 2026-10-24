@@ -1,0 +1,79 @@
+[
+  {
+    "checkpoint_id": "dev02_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "2"
+  },
+  {
+    "checkpoint_id": "dev02_B2",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.6077228517442173,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "2"
+  },
+  {
+    "checkpoint_id": "dev03_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.05162278335239279,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "3"
+  },
+  {
+    "checkpoint_id": "dev03_B2",
+    "confirmatory": false,
+    "h_S_minus_h_F": -0.17601044579532754,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "3"
+  },
+  {
+    "checkpoint_id": "dev04_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": -1.9742607111273571,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "4"
+  },
+  {
+    "checkpoint_id": "dev04_B2",
+    "confirmatory": false,
+    "h_S_minus_h_F": -0.7056537443311832,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "4"
+  },
+  {
+    "checkpoint_id": "dev05_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "5"
+  }
+]

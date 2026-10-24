@@ -1,0 +1,11 @@
+{
+  "label": "DEV/pilot",
+  "phase": "development",
+  "problems": [],
+  "synthetic": false,
+  "valid": true,
+  "warnings": [
+    "stale_lock_ignored: .collector.lock (marker /Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp001-live/WATCHDOG_EXIT.json, run_pid 5196 not alive)",
+    "Stage 2 absent: DEV fallback margins; no frozen claim"
+  ]
+}

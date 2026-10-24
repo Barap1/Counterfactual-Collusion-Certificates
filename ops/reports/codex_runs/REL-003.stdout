@@ -1,0 +1,4 @@
+Updated [reproduce_offline.py](/Users/aarav/Documents/Projects/ApartSprint/scripts/reproduce_offline.py) to keep scientific values strict and report hash-map/warnings differences.  
+`/bin/zsh scripts/reproduce_offline.sh` completed earlier with exit 0: `Reproduction verified: …/reproduction.wqMqKi`; the latest direct reproduction check also exited 0.  
+Later wrapper runs could not exit 0: its preliminary tests now fail because the pinned hard stop (2026-10-24 09:00 UTC) has passed.  
+Recorded results in [REL-003.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/REL-003.md) and removed generated evidence directories.

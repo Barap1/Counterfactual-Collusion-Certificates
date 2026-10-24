@@ -1,0 +1,10 @@
+L,U,analysis,confirmatory,estimate,label,limitation,n_independent,omitted_world,tier,uncertainty_scope
+-0.40242114017803843,-0.07483425291340495,ineligible_zero,False,-0.21775527962892363,DEV/pilot,,3,,B,world_cluster
+-0.40242114017803843,-0.07483425291340495,drop_ineligible,False,-0.21775527962892363,DEV/pilot,,3,,B,world_cluster
+-0.40242114017803843,-0.17601044579532754,leave_one_world_out,False,-0.289215792986683,DEV/pilot,,2,2,B,world_cluster
+-0.40242114017803843,-0.07483425291340495,leave_one_world_out,False,-0.2386276965457217,DEV/pilot,,2,3,B,world_cluster
+-0.17601044579532754,-0.07483425291340495,leave_one_world_out,False,-0.12542234935436625,DEV/pilot,,2,4,B,world_cluster
+-7.520013296878938,-0.12542234935436625,worst_missing,False,-2.655320021531728,DEV/pilot,fills use observed same-regime arm range; no observed range leaves undefined,4,,B,world_cluster
+-0.32052441836188006,7.432008073981274,best_missing,False,2.3286871020883426,DEV/pilot,fills use observed same-regime arm range; no observed range leaves undefined,4,,B,world_cluster
+-0.40242114017803843,-0.07483425291340495,noncommit_excluded,False,-0.21775527962892363,DEV/pilot,fills use observed same-regime arm range; no observed range leaves undefined,3,,B,world_cluster
+-1.0367246235761236,-0.06219383122146738,S_pooled_F,False,-0.4925380445277021,DEV/pilot,fills use observed same-regime arm range; no observed range leaves undefined,3,,B,world_cluster

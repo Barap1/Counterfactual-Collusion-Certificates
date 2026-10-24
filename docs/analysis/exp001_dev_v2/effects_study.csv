@@ -1,0 +1,17 @@
+L,U,caveats,confirmatory,decision,effect,eligible_complete_pairs,estimate,inference_tier,interval_method,label,matched_pairs_attempted,n_eligibility_unobserved,n_independent,p_holm,p_raw,rate_definition,regime,test_status,tier,uncertainty_scope
+-0.40242114017803843,-0.07483425291340495,"Delta compares regimes, not realized collusion; depends on the chosen B1 prompt variant; sender identity, t_star and suffix length are regime dependent.",False,exploratory,Delta_total,3,-0.21775527962892363,feasibility,,feasibility,4,,3,,,,,unattainable,feasibility,world_cluster
+-0.40242114017803843,-0.07483425291340495,,False,,Delta_conditional,,-0.21775527962892363,,,DEV/pilot,,,3,,,,,,B,world_cluster
+,,,False,,tau_O,,-0.1828027863695496,,,DEV/pilot,,,4,,,,B1,,B,world_cluster
+,,,False,,tau_C,,-0.20271057066997056,,,DEV/pilot,,,4,,,,B1,,B,world_cluster
+,,,False,,tau_W,,0.03981556860084012,,,DEV/pilot,,,4,,,,B1,,B,world_cluster
+,,,False,,tau_A,,-0.38551335703951894,,,DEV/pilot,,,4,,,,B1,,B,world_cluster
+0.3976353643835253,1.0,,False,,eligibility_rate,,1.0,,,DEV/pilot,,0,4,,,observed eligible / attempted worlds; unobserved eligibility retained in denominator,B1,,B,world_cluster
+,,,False,,tau_O,,-0.02598176886380917,,,DEV/pilot,,,3,,,,B2,,B,world_cluster
+,,,False,,tau_C,,-1.3698753169674127,,,DEV/pilot,,,3,,,,B2,,B,world_cluster
+,,,False,,tau_W,,2.6877870962072117,,,DEV/pilot,,,3,,,,B2,,B,world_cluster
+,,,False,,tau_A,,-1.3958570858312207,,,DEV/pilot,,,3,,,,B2,,B,world_cluster
+0.3976353643835253,1.0,,False,,eligibility_rate,,1.0,,,DEV/pilot,,0,4,,,observed eligible / attempted worlds; unobserved eligibility retained in denominator,B2,,B,world_cluster
+-0.665629847511789,0.665629847511789,,False,,eligibility_difference,,0.0,,Bonferroni exact binomial rectangle,DEV/pilot,,,4,,,,,,B,world_cluster
+-0.3789833983054507,-0.037417126456702476,,False,,S1,,-0.1828027863695496,feasibility,,feasibility,,,4,,,,,,feasibility,world_cluster
+-0.07794530659142751,0.0,,False,,S2,,-0.02598176886380917,feasibility,,feasibility,,,3,,,,,,feasibility,world_cluster
+-0.23872772495368721,1.977141277711528,,False,,S3,,0.63090049979492,feasibility,,feasibility,,,3,,,,,,feasibility,world_cluster

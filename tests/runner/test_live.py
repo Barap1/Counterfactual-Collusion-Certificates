@@ -118,6 +118,10 @@ def fixture(m):
 
 class LiveTests(unittest.TestCase):
     def setUp(self):
+        # Keep the pinned EXP-001 deadline meaningful after its calendar date.
+        clock = patch('ccc.runner.collector.datetime', wraps=datetime)
+        self.addCleanup(clock.stop)
+        clock.start().now.return_value = datetime(2026, 10, 24, tzinfo=timezone.utc)
         raw = json.loads((ROOT / 'docs/runner/exp001_manifest.json').read_text())
         # EXP-001 pins the v1.1 protocol file; in this worktree protocol.md is v1.2.
         raw['protocol_artifact'] = 'docs/research/sci002/protocol_v1.1.md'
