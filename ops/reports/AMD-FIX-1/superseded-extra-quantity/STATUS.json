@@ -1,0 +1,7 @@
+{
+  "status": "cancelled; excluded from final evidence",
+  "reason": "Unrequested singular Verified cost expansion reverted to preserve the private-quantity pattern verbatim",
+  "exit_code": 130,
+  "completed_case_rows": 241,
+  "final_run_directory": "ops/reports/AMD-FIX-1/final_gate_run"
+}

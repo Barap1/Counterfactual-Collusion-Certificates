@@ -1,4 +1,5 @@
-"""ENG-005 v1.1 implementation regressions; no amended protocol contracts."""
+"""ENG-005 statistical regressions with explicit v1.2 N_m evidence and the frozen A6 map."""
+from tests.audit.placebo_evidence import bind, SELECTION
 import copy
 import unittest
 from ccc.audit.decision import decide
@@ -10,7 +11,7 @@ class ProtocolRegressions(unittest.TestCase):
     def test_c3_point_above_margin_is_not_significance(self):
         b = branches()
         b['N'] = copy.deepcopy(b['K'])
-        d = decide(b, deterministic=True, info_bearing=False, placebo_run=True)
+        d = decide(bind(b),placebo_selection=SELECTION, deterministic=True, info_bearing=False, placebo_run=True)
         self.assertNotIn('lesion_artefact', d['reasons'])
         self.assertEqual(d['placebo_exact_p'], .5)
 
@@ -20,7 +21,7 @@ class ProtocolRegressions(unittest.TestCase):
         b = branches()
         b['N'] = copy.deepcopy(b['K'])
         b = {a:rows*4 for a,rows in b.items()}
-        self.assertIn('lesion_artefact',decide(b,deterministic=True,
+        self.assertIn('lesion_artefact',decide(bind(b),placebo_selection=SELECTION,deterministic=True,
                       info_bearing=False,placebo_run=True)['reasons'])
 
     def test_study_tost_three_outcomes_and_half_width(self):
@@ -44,10 +45,10 @@ class ProtocolRegressions(unittest.TestCase):
             b = branches()
             for arm,effect in [('S',-sham),('N',placebo)]:
                 o=b[arm][0]['outcome']; o['Omean']+=effect; o['A']-=effect; o['W']+=2*effect
-            d=decide(b,info_bearing=False,placebo_run=True,deterministic=True)
+            d=decide(bind(b),placebo_selection=SELECTION,info_bearing=False,placebo_run=True,deterministic=True)
             d['carrier_evidence']={}
             rows.append({'family':'A1a','stratum':'crossed','native':{
-                'CCC':d,'checks':[],'eligible':True,'branches':{a:r[0] for a,r in b.items()}}})
+                'placebo_selection':SELECTION,'CCC':d,'checks':[],'eligible':True,'branches':{a:r[0] for a,r in b.items()}}})
         return {'rows':rows}
 
     def test_v9_study_invalid_reaches_every_decision(self):
@@ -84,7 +85,7 @@ class ProtocolRegressions(unittest.TestCase):
                 row['outcome']['A']-=delta
                 row['outcome']['W']+=2*delta
                 b[arm].append(row)
-        d=decide(b,info_bearing=False,placebo_run=True)
+        d=decide(bind(b),placebo_selection=SELECTION,info_bearing=False,placebo_run=True)
         self.assertGreater(d['tau_O_N'],2.5)
         self.assertNotIn('lesion_artefact',d['reasons'])
 
@@ -101,13 +102,17 @@ class ProtocolRegressions(unittest.TestCase):
 
     def test_a6_any_invalid_is_not_intended_detection(self):
         row={'family':'A6h','native':{'eligible':False,'checks':[
-            {'id':'V1_static','name':'static_task_cost_invariant','status':'fail'}],
-            'CCC':{'status':'invalid','reasons':['V1_static']},'fault_exercised':True}}
+            {'id':'unintended','name':'unintended_check','status':'fail'}],
+            'CCC':{'status':'invalid','reasons':['unintended']},'fault_exercised':True}}
         row.update(seed=12000,stratum='crossed',truth='invalid',oracle_strata={'path_active':False})
         evidence={'rows':[row]}
         gate_a.summarize(evidence)
-        self.assertEqual(evidence['gate_checks']['A6_invalid']['pass'],0)
+        self.assertEqual(evidence['gate_checks']['A6_invalid']['pass'],1)
+        self.assertFalse(evidence['gate_checks']['A6_intended_validator']['passed'])
+        self.assertEqual(evidence['gate_checks']['A6_intended_validator']['pass'],0)
         self.assertFalse(gate_a.intended_fault_check(row)['passed'])
-        self.assertEqual(evidence['fault_variants'][0]['fired'],['V1_static'])
-        row['native']['checks'].append({'id':'V01','name':'snapshot_restore_round_trip','status':'fail'})
+        self.assertEqual(evidence['fault_variants'][0]['fired'],['unintended'])
+        row['native']['checks'].append({'id':'V1_static','name':'static_task_cost_invariant','status':'fail'})
         self.assertTrue(gate_a.intended_fault_check(row)['passed'])
+        gate_a.summarize(evidence)
+        self.assertTrue(evidence['gate_checks']['A6_intended_validator']['passed'])

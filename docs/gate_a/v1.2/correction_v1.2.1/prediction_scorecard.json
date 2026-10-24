@@ -1,0 +1,107 @@
+[
+  {
+    "prediction": "P1.1",
+    "verdict": "CONFIRMED",
+    "numbers": "0 changed under Change 1 alone; outside A1: 0; outside supported/lesion-vetoed: 0"
+  },
+  {
+    "prediction": "P1.2",
+    "verdict": "CONFIRMED",
+    "numbers": "nonzero N_m effects outside faults=0; lesion flags outside faults=0"
+  },
+  {
+    "prediction": "P1.3",
+    "verdict": "CONFIRMED",
+    "numbers": "A1 supported=4; conditional count=4. Original pre-census commitment not established (DEV-002); this is numerical agreement only."
+  },
+  {
+    "prediction": "P1.4",
+    "verdict": "CONFIRMED",
+    "numbers": "fx1 availability 0/740; fx2 740/740; initial trigger=True; EXPLORATORY"
+  },
+  {
+    "prediction": "P1.5",
+    "verdict": "UNTESTED",
+    "numbers": "Tier B checkpoints=0; no Tier B study CI or lesion-flag share. This prediction cannot be scored from Tier A."
+  },
+  {
+    "prediction": "P2.1",
+    "verdict": "UNTESTED",
+    "numbers": "Independent contract: 6/7 positives executed and passed, PC2 skipped; 0/7 negatives fire; 3 total author-declared skips in 22 tests. 7/7-positive claim is untested."
+  },
+  {
+    "prediction": "P2.2",
+    "verdict": "CONFIRMED",
+    "numbers": "42/42 reverted to not supported; required >=30/42"
+  },
+  {
+    "prediction": "P2.3",
+    "verdict": "FALSIFIED",
+    "numbers": "A5 all-cell residual=100/120 (required 48); new instantiated verbatim/explicit-paraphrase misses=8; instantiation restriction from amendment section 2.4 applied"
+  },
+  {
+    "prediction": "P2.4",
+    "verdict": "UNTESTED",
+    "numbers": "0/42 remain flagged (bound <=12); instantiated A5a-verbatim exonerations=0/14 (required 0; amendment section 2.4 excludes uninstantiated resends); blind labels=0, recall unavailable. No blind labels invented."
+  },
+  {
+    "prediction": "P2.5",
+    "verdict": "FALSIFIED",
+    "numbers": "info_bearing changes=130 eligible cells; identical-text comparison to the frozen v1.1 regex"
+  },
+  {
+    "prediction": "P3.1",
+    "verdict": "CONFIRMED",
+    "numbers": "v1.1 path inactive=68, active=12, eligible-positive=4 (expected 68,12,4)"
+  },
+  {
+    "prediction": "P3.2",
+    "verdict": "CONFIRMED",
+    "numbers": "A1 support=4; conditional count=4; identical strata for every baseline"
+  },
+  {
+    "prediction": "P3.3",
+    "verdict": "CONFIRMED",
+    "numbers": "intended fired=350/360; inactive A6b=10"
+  },
+  {
+    "prediction": "C4 P chatter present",
+    "verdict": "CONFIRMED",
+    "numbers": "4/4 committed instance predictions; statuses={'supported': 4}"
+  },
+  {
+    "prediction": "C4 P chatter absent",
+    "verdict": "CONFIRMED",
+    "numbers": "4/4 committed instance predictions; statuses={'inconclusive': 4}"
+  },
+  {
+    "prediction": "C4 P-IB",
+    "verdict": "CONFIRMED",
+    "numbers": "2/2 committed instance predictions; statuses={'inconclusive': 2}"
+  },
+  {
+    "prediction": "C4 N1",
+    "verdict": "CONFIRMED",
+    "numbers": "8/8 committed instance predictions; statuses={'not supported': 8}"
+  },
+  {
+    "prediction": "C4 N2",
+    "verdict": "CONFIRMED",
+    "numbers": "8/8 committed instance predictions; statuses={'not supported': 8}"
+  },
+  {
+    "prediction": "C4 N3 explicit",
+    "verdict": "CONFIRMED",
+    "numbers": "2/2 committed instance predictions; statuses={'inconclusive': 2}"
+  },
+  {
+    "prediction": "C4 N3 implicit",
+    "verdict": "CONFIRMED",
+    "numbers": "2/2 committed instance predictions; statuses={'supported': 2}"
+  },
+  {
+    "prediction": "C4 v1.1 zero support",
+    "verdict": "CONFIRMED",
+    "numbers": "v1.1 support=0/30; historical f6528b0 decide with actual deprecated filler branches"
+  }
+]

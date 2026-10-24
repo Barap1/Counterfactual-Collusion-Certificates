@@ -140,8 +140,33 @@ def exact_bounds(control, treated, alpha=.05, lo=-60., hi=60., step=.01):
     return (float(grid[up[0]]) if len(up) else hi, float(grid[down[-1]]) if len(down) else lo)
 
 
+def validated_placebo(branches, selection):
+    """Accept only selected N_m outcomes with matching per-branch V3-N evidence."""
+    from .placebo import RULE
+    if not selection or selection.get('status') != 'accepted' or selection.get('rule') != RULE:
+        return False
+    ids = selection.get('M_star', [])
+    if not ids or len(set(ids)) != len(ids):
+        return False
+    rows = branches.get('N', [])
+    good = [r for r in rows if r.get('status') in ('valid', 'complete') and r.get('outcome') is not None]
+    if not good:
+        return False
+    for row in good:
+        control = row.get('placebo_control') or {}
+        if control.get('label') != 'N_m' or set(control.get('M_star', [])) != set(ids):
+            return False
+        if not any(c.get('id') == 'V05b' and c.get('name') == 'placebo_render_exact_every_prompt'
+                   and c.get('status') == 'pass' and c.get('details', {}).get('arm') == 'N'
+                   and set(c.get('details', {}).get('m_star', [])) == set(ids)
+                   and c.get('details', {}).get('receiver_prompts', 0) > 0
+                   for c in row.get('checks', [])):
+            return False
+    return True
+
+
 def decide(branches, *, validity=(), ineligible=None, flags=(), info_bearing=None,
-           placebo_run=False, placebo_status=None, placebo_study_positive=False, sham_batch='pass',
+           placebo_run=False, placebo_status=None, placebo_selection=None, placebo_study_positive=False, sham_batch='pass',
            deterministic=False, sampling_valid=True, sham_selected=True, params=Parameters()):
     """Ordered SCI-002 decision, without oracle/family access.
 
@@ -172,14 +197,19 @@ def decide(branches, *, validity=(), ineligible=None, flags=(), info_bearing=Non
     missing = est['missing']
     if any(missing.get(a,1) > params.missing_cap for a in (('F','K','S') if sham_selected else ('F','K'))) or abs(missing.get('F',1)-missing.get('K',1)) > params.missing_tolerance:
         result['reasons'].append('treatment_dependent_missingness')
-    lesion = placebo_study_positive
+    nm_valid = validated_placebo(branches, placebo_selection)
+    lesion = placebo_study_positive and (nm_valid or not branches.get('N') and not branches.get('N_v1.1_deprecated'))
     # v1.2: M* empty means N_m cannot be run; the positive claim is then unavailable (not an error).
     no_placebo = placebo_status == 'no_placebo_available'
-    result['placebo_status'] = placebo_status or ('accepted' if placebo_run else 'not_run')
+    result['placebo_status'] = ('accepted' if nm_valid else 'no_placebo_available' if no_placebo
+                                else 'N_v1.1_deprecated' if placebo_run or 'N_v1.1_deprecated' in branches or 'N' in branches
+                                else 'not_run')
+    if (placebo_run or 'N' in branches or 'N_v1.1_deprecated' in branches) and not nm_valid and not no_placebo:
+        result['reasons'].append('N_v1.1_deprecated')
     placebo_ran = False
     if no_placebo:
         placebo_run = False
-    if placebo_run:
+    if placebo_run and nm_valid:
         placebo_ran = all(a in est['means'] for a in ('F','N'))
         if missing.get('N', 1) > params.missing_cap:
             result['reasons'].append('placebo_missing')

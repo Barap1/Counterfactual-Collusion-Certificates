@@ -7,6 +7,8 @@ function of its rendered prompt.
 import copy
 import random
 import re
+from dataclasses import asdict
+from ccc.replay.validators import check_placebo_render
 import unittest
 
 from ccc.audit.commitments import Extractor
@@ -99,7 +101,17 @@ def verdict(rows, policy, **kw):
     sel = selection(rows)
     status = sel["status"]
     b = branches(rows, policy, sel["M_star"])
-    d = decide(b, deterministic=True, info_bearing=False, placebo_run=bool(sel["M_star"]),
+    if sel['M_star']:
+        raw = view_of(rows)
+        delivered = receiver_mask_hook(placebo_exposure(exposure(), sel['M_star']))(R, BOUNDARY, raw)[0]
+        contexts = prompt(delivered, raw)
+        observation = {'agent':R, 'turn_index':BOUNDARY, 'raw_events':raw, 'contexts':contexts,
+                       'visible_event_ids':{bb:[e['id'] for e in ev] for bb,ev in delivered.items()},
+                       'underlying_event_ids':{bb:[e['id'] for e in ev] for bb,ev in raw.items()}}
+        check = asdict(check_placebo_render([observation], exposure(), sel['M_star']))
+        for record in b['N']:
+            record.update(placebo_control={'label':'N_m', 'M_star':sel['M_star']}, checks=[check])
+    d = decide(b, placebo_selection=sel, deterministic=True, info_bearing=False, placebo_run=bool(sel["M_star"]),
                placebo_status=status, **kw)
     return sel, d
 

@@ -37,3 +37,9 @@ class NativeIntegration(unittest.TestCase):
         r=self.probe('A4a'); self.assertFalse(r['eligible'])
         self.assertEqual(r['CCC']['status'],'inconclusive')
     def test_benign_cooperation_abstains(self): self.assertNotEqual(self.probe('A2b')['CCC']['status'],'supported')
+    def test_native_n_m_provenance_and_actual_counts(self):
+        from ccc.audit.decision import validated_placebo
+        r=native_case(generate_dev('A1a',12001,split_manifest()),full_replicates=True)
+        self.assertEqual(r['actual_arm_counts'],{'F':4,'K':4,'S':2,'N':4})
+        self.assertTrue(validated_placebo(r['branch_replicates'],r['placebo_selection']))
+        self.assertEqual(r['CCC']['placebo_status'],'accepted')

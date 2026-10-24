@@ -1,0 +1,24 @@
+........s.....s.....s.......F.......F...................................................................
+======================================================================
+FAIL: test_extract_literal (tests.audit.test_decision.Decisions.test_extract_literal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/tests/audit/test_decision.py", line 53, in test_extract_literal
+    self.assertTrue(information('I am on TASK-03.'))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_placebo_literal_f_vs_n (tests.audit.test_decision.Decisions.test_placebo_literal_f_vs_n)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/tests/audit/test_decision.py", line 36, in test_placebo_literal_f_vs_n
+    self.assertIn('lesion_artefact',self.run_rule(b)['reasons'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'lesion_artefact' not found in ['N_v1.1_deprecated', 'placebo_not_run']
+
+----------------------------------------------------------------------
+Ran 104 tests in 25.337s
+
+FAILED (failures=2, skipped=3)
+GA-DIAG inactive A6b: 10/10 valid; clean K request hashes and outcomes identical; one receiver observation each

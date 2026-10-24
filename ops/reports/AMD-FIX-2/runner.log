@@ -1,0 +1,9 @@
+.................................................................
+----------------------------------------------------------------------
+Ran 65 tests in 23.120s
+
+OK
+fixture counts: 145 guarded calls; 3 canaries; 8 branches; complete
+fixture counts: 50 guarded calls; 2 canaries; 8 branches; invalid
+fixture counts: 30 guarded calls; 2 canaries; 8 branches; invalid
+fixture counts: 145 guarded calls; 3 canaries; 8 branches; complete

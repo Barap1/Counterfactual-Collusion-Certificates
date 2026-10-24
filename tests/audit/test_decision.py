@@ -1,3 +1,4 @@
+from tests.audit.placebo_evidence import bind, SELECTION
 import copy
 import unittest
 from ccc.audit import decide, estimate, Parameters
@@ -8,12 +9,12 @@ from ccc.baselines import evaluate, js, tv
 def branches(o=10,c=5,w=10):
     f={'Omean':10.,'Cmean':20.,'A':10.,'W':60.}
     k={'Omean':10.+o,'Cmean':20.-c,'A':10.-c-o,'W':60.+2*o-2*c}
-    return {a:[{'status':'complete','outcome':v}] for a,v in [('F',f),('S',f.copy()),('K',k),('N',f.copy())]}
+    return bind({a:[{'status':'complete','outcome':v}] for a,v in [('F',f),('S',f.copy()),('K',k),('N',f.copy())]})
 
 
 class Decisions(unittest.TestCase):
     def run_rule(self,b=None,**kw):
-        return decide(b or branches(),deterministic=True,info_bearing=False,placebo_run=True,**kw)
+        return decide(bind(b or branches()),deterministic=True,info_bearing=False,placebo_run=True,placebo_selection=SELECTION,**kw)
     def test_signs_identities(self):
         e=estimate(branches(),deterministic=True)['effects']
         self.assertEqual(e,dict(tau_O=10.,tau_C=5.,tau_A=15.,tau_W=10.))

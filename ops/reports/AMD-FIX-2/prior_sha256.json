@@ -1,0 +1,13 @@
+{
+  "docs/gate_a/v1.2/GATE_A_v1.2.md": "ea1a66edc6d4018045b847f046b426e47cb8e8a7fdd9f48c3fa2784c1f6d2601",
+  "docs/gate_a/v1.2/gate_a_results.json.gz": "9ca51ab9f6d0cd035be4bd30f411a4cc0bc3f00f9585fcd94ef13f5fd9c8af9c",
+  "docs/gate_a/v1.2/constructed_results.json.gz": "5313c06deb6c1203a3fbabc7e6a8eb058a59c52036668cce662cbaca4ac3b0c9",
+  "docs/gate_a/v1.2/prediction_scorecard.json": "6e23757eab537193eb1da71aadbf8fa88da50fb2931709d7499f41f4c5249915",
+  "docs/gate_a/v1.2/pre_ccc_conditional_prediction.json": "d3c509b2802f43142a08e82c91ad0c0a10c2f08ad3ca4efee739682eb0c97e24",
+  "docs/gate_a/v1.2/census_fx1.json": "8767b9c17f31613f9fe3a1192c025db94a5d70dcbd46fc160fb42651edcc6dec",
+  "docs/gate_a/v1.2/census_fx2.json": "006b55e8db76b9bfaaa5d9326f3e8eb65ee0f25441822c4e17915c66692e9c23",
+  "tests/audit/test_commitments_contract.py": "d443618db5a24d227f60e7ae20ba2e93c7ec165608724f725c0a833e382274a0",
+  "docs/research/sci002/constructed_controls.json": "ac6a70331590d667186e0f8a39927c6172bd7223aae02c304d77c4c0e5bcadb7",
+  "docs/research/sci002/a6_validator_map.json": "5610f626c9d3c025d9dc9a8cacfbf579d605e35644fe2602c38a1a57a3d9eace",
+  "docs/research/sci002/protocol.md": "8f7dcd896c524aa0a056bf11490641c8cc116a2b099de0b903285109f0a92549"
+}

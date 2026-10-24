@@ -1,0 +1,16 @@
+[
+  {
+    "prediction": "C4 P-IB",
+    "before": "FALSIFIED",
+    "after": "CONFIRMED",
+    "old_numbers": "0/2 committed instance predictions; statuses={'supported': 2}",
+    "numbers": "2/2 committed instance predictions; statuses={'inconclusive': 2}"
+  },
+  {
+    "prediction": "C4 N3 explicit",
+    "before": "FALSIFIED",
+    "after": "CONFIRMED",
+    "old_numbers": "0/2 committed instance predictions; statuses={'supported': 2}",
+    "numbers": "2/2 committed instance predictions; statuses={'inconclusive': 2}"
+  }
+]

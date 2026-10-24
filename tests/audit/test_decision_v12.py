@@ -1,4 +1,5 @@
 """AMD-IMP-3: decide() under v1.2 (no_placebo_available, exact lesion test, contrast, record text)."""
+from tests.audit.placebo_evidence import bind, SELECTION
 import unittest
 
 from ccc.audit.decision import decide, exact_bounds, SUPPORTED_RECORD_TEXT
@@ -14,7 +15,7 @@ def arms(f=10., k=20., n=10., c_k=5., spread=0.):
     b = {"F": rows(f, 15.), "S": rows(f, 15.), "K": rows(k, c_k)}
     if n is not None:
         b["N"] = rows(n, 15.)
-    return b
+    return bind(b)
 
 
 class V12(unittest.TestCase):
@@ -25,20 +26,20 @@ class V12(unittest.TestCase):
         self.assertEqual(exact_bounds([3, 5, 8, 6], [4, 6, 7, 5]), (-2.5, 2.5))
 
     def test_supported_prints_required_text_and_mandatory_contrast(self):
-        d = decide(arms(), deterministic=True, info_bearing=False, placebo_run=True, placebo_status="accepted")
+        d = decide(arms(), deterministic=True, info_bearing=False, placebo_run=True, placebo_selection=SELECTION, placebo_status="accepted")
         self.assertEqual(d["status"], "supported")
         self.assertEqual(d["record_text"], SUPPORTED_RECORD_TEXT)
         c = d["tau_O_minus_tau_O_N"]
         self.assertEqual((c["estimate"], c["interval"], c["gating"]), (10., [10., 10.], False))
 
     def test_exact_lesion_test_uses_c3_p_ge_m_O(self):
-        d = decide(arms(n=20.), deterministic=True, info_bearing=False, placebo_run=True, placebo_status="accepted")
+        d = decide(arms(n=20.), deterministic=True, info_bearing=False, placebo_run=True, placebo_selection=SELECTION, placebo_status="accepted")
         self.assertIn("lesion_artefact", d["reasons"])
         self.assertLessEqual(d["placebo_exact_p"], .05)
         self.assertNotEqual(d["status"], "supported")
         # Point rule withdrawn: tau_O^N = 2.0 < m_O is not flagged, 5.0 > m_O is (4v4 deterministic).
         self.assertNotIn("lesion_artefact", decide(arms(n=12.), deterministic=True, info_bearing=False,
-                                                    placebo_run=True, placebo_status="accepted")["reasons"])
+                                                    placebo_run=True, placebo_selection=SELECTION, placebo_status="accepted")["reasons"])
 
     def test_no_placebo_available_blocks_supported_and_is_listed_last(self):
         d = decide(arms(n=None), deterministic=True, info_bearing=False, placebo_run=False,
@@ -60,21 +61,21 @@ class V12(unittest.TestCase):
         b = arms()
         del b["S"]
         d = decide(b, deterministic=True, info_bearing=False, placebo_run=True,
-                   placebo_status="accepted", sham_selected=False, sham_batch="uncertain")
+                   placebo_selection=SELECTION, placebo_status="accepted", sham_selected=False, sham_batch="uncertain")
         self.assertEqual(d["status"], "supported")
         self.assertTrue(d["sham_uncertain"])
         self.assertNotIn("treatment_dependent_missingness", d["reasons"])
         selected = decide(b, deterministic=True, info_bearing=False, placebo_run=True,
-                          placebo_status="accepted", sham_selected=True)
+                          placebo_selection=SELECTION, placebo_status="accepted", sham_selected=True)
         self.assertIn("treatment_dependent_missingness", selected["reasons"])
 
     def test_carrier_flag_preserves_protocol_status_precedence(self):
         # Section 9 caps a would-be "not supported"; it is not a validity failure.
         d = decide(arms(), deterministic=True, info_bearing=False, placebo_run=True,
-                   placebo_status="accepted", flags=["resend_detected"])
+                   placebo_selection=SELECTION, placebo_status="accepted", flags=["resend_detected"])
         self.assertEqual(d["status"], "supported")
         small = decide(arms(k=10.5), deterministic=True, info_bearing=False, placebo_run=True,
-                       placebo_status="accepted", flags=["resend_detected"])
+                       placebo_selection=SELECTION, placebo_status="accepted", flags=["resend_detected"])
         self.assertEqual(small["status"], "inconclusive")
         self.assertIn("not_identifiable_redundant", small["reasons"])
 
@@ -82,13 +83,13 @@ class V12(unittest.TestCase):
         b = arms()
         b["N"][0] = {"status": "failed", "outcome": None}
         d = decide(b, deterministic=True, info_bearing=False, placebo_run=True,
-                   placebo_status="accepted")
+                   placebo_selection=SELECTION, placebo_status="accepted")
         self.assertEqual(d["status"], "inconclusive")
         self.assertIn("placebo_missing", d["reasons"])
 
     def test_case_decisions_use_frozen_exact_intervals(self):
         b = arms(spread=1.)
-        d = decide(b, info_bearing=False, placebo_run=True, placebo_status="accepted")
+        d = decide(b, info_bearing=False, placebo_run=True, placebo_selection=SELECTION, placebo_status="accepted")
         self.assertEqual(d["estimates"]["intervals"]["tau_O"], [8., 12.])
         self.assertEqual(d["estimates"]["interval_method"], "exact shift-permutation (C2)")
 

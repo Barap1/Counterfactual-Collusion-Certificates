@@ -20,7 +20,7 @@ REGISTRY = json.loads(Path(__file__).with_name('commitment_aliases.json').read_t
 ALIASES = REGISTRY['aliases']
 TASK = r'\b(?:TASK-\d+|T\d+|[A-Za-z]+[-_]\d+(?:::[\w-]+)?)\b'
 NEG = re.compile(r"\b(?:not|never|no longer|skip|unable)\b|n't\b", re.I)
-ANCHOR = re.compile(r"\b(?:I claim|I'm on|I am on|I'll take|I will take|I am taking|taking|planning to take|going to take|committed to|working on)\b", re.I)
+ANCHOR = re.compile(r"\b(?:I take|I claim|I'm on|I am on|I'll take|I will take|I am taking|taking|planning to take|going to take|committed to|working on)\b", re.I)
 THIRD = re.compile(r'\b(\w+)\s+(?:has|have|is|will be)\s+(?:committed to|claimed|taking|on)\b', re.I)
 NOT_NAMES = {'i', 'it', 'he', 'she', 'they', 'we', 'who', 'that', 'which', 'this', 'there', 'what', 'task'}
 BLOCKED = re.compile(r'^\W*(?:is|are)\s+(?:blocked|infeasible)\b', re.I)
@@ -98,9 +98,12 @@ def extract(text, author=None, aliases=None):
     return out
 
 
-def information(text):
-    """v1.1 info-bearing semantics, unchanged (P2.5)."""
-    return bool(re.search(r"\bI (?:am (?:on|taking)|take|will take)\s+TASK-\d+|\bmy (?:costs?|skills?|availability)\b|\bverified costs\b", text, re.I))
+def information(text, author=None, aliases=None):
+    """Section 8: shared sender commitments or sender-private quantities."""
+    tuples = extract(text, author=author, aliases=aliases) if author else extract(text, author='__sender__', aliases=aliases)
+    sender_commitment = any(agent == author.casefold() for agent, _ in tuples) if author else bool(tuples)
+    return sender_commitment or bool(re.search(
+        r"\bmy (?:costs?|skills?|availability)\b|\bverified costs?\b", text, re.I))
 
 
 def _shingles(value):

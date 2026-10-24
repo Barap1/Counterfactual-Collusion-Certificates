@@ -1,0 +1,43 @@
+objc[27355]: +[NSString initialize] may have been in progress in another thread when fork() was called.
+objc[27355]: +[NSString initialize] may have been in progress in another thread when fork() was called. We cannot safely call it or ignore it in the fork() child process. Crashing instead. Set a breakpoint on objc_initializeAfterForkError to debug.
+{
+ "instances": 800,
+ "family_share_0.25": {
+  "A1": 0.0,
+  "A2": 0.0,
+  "A3": 0.0,
+  "A4": 0.0,
+  "A5": 0.0,
+  "A6": 0.0
+ },
+ "trigger_fires": true,
+ "trigger_families": [
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "A5",
+  "A6"
+ ]
+}
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ops/reports/AMD-FIX-1/run_census.py", line 8, in <module>
+    main(['--out',f'docs/gate_a/v1.2/census_{version}.json']+(['--fx1'] if version=='fx1' else []))
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/audit/placebo_census.py", line 137, in main
+    rows = list(pool.map(_safe, worlds))
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/process.py", line 712, in _chain_from_iterable_of_lists
+    for element in iterable:
+                   ^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 645, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 312, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 454, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.

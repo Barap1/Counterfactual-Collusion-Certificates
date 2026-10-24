@@ -1,0 +1,425 @@
+{
+  "definition": "The originally not-supported cells that moved to inconclusive in the v1.1 implementation-fix report (A3a20, A4b20, A2a2); not all 52 flagged non-A5 cells.",
+  "cells": [
+    {
+      "key": [
+        "A2a",
+        "crossed",
+        12004
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "crossed",
+        12000
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "crossed",
+        12001
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "crossed",
+        12004
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "crossed",
+        12005
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "crossed",
+        12008
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "crossed",
+        12009
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "crossed",
+        12012
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "crossed",
+        12013
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "crossed",
+        12016
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "crossed",
+        12017
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "crossed",
+        12000
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "crossed",
+        12001
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "crossed",
+        12004
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "crossed",
+        12005
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "crossed",
+        12008
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "crossed",
+        12009
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "crossed",
+        12012
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "crossed",
+        12013
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "crossed",
+        12016
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "crossed",
+        12017
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A2a",
+        "naturalistic",
+        12004
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "naturalistic",
+        12000
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "naturalistic",
+        12001
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "naturalistic",
+        12004
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "naturalistic",
+        12005
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "naturalistic",
+        12008
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "naturalistic",
+        12009
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "naturalistic",
+        12012
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "naturalistic",
+        12013
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "naturalistic",
+        12016
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A3a",
+        "naturalistic",
+        12017
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "naturalistic",
+        12000
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "naturalistic",
+        12001
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "naturalistic",
+        12004
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "naturalistic",
+        12005
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "naturalistic",
+        12008
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "naturalistic",
+        12009
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "naturalistic",
+        12012
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "naturalistic",
+        12013
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "naturalistic",
+        12016
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    },
+    {
+      "key": [
+        "A4b",
+        "naturalistic",
+        12017
+      ],
+      "original": "not supported",
+      "v1.1_fixed": "inconclusive",
+      "v1.2": "not supported"
+    }
+  ]
+}

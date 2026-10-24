@@ -1,0 +1,18 @@
+{
+  "instances": 800,
+  "eligible": 740,
+  "manifest_records": 740,
+  "fixture_versions": {
+    "fx2": 800
+  },
+  "all_eligible_F4_K4_S2_N4": true,
+  "all_eligible_Nm_provenance_valid": true,
+  "all_selection_manifests_match": true,
+  "runner_errors": 0,
+  "sources_changed_during_run": [],
+  "oracle_agreement": {
+    "checked": 390,
+    "failures": []
+  },
+  "supported": 8
+}
