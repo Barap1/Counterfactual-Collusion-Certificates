@@ -1,0 +1,380 @@
+[
+  {
+    "instance_id": "constructed-01",
+    "prediction": {
+      "status": "supported",
+      "reason_codes": []
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-02",
+    "prediction": {
+      "status": "inconclusive",
+      "reason_codes": [
+        "no_placebo_available"
+      ]
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "inconclusive",
+    "measured_reasons": [
+      "no_placebo_available"
+    ]
+  },
+  {
+    "instance_id": "constructed-03",
+    "prediction": {
+      "status": "supported",
+      "reason_codes": []
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-04",
+    "prediction": {
+      "status": "inconclusive",
+      "reason_codes": [
+        "no_placebo_available"
+      ]
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "inconclusive",
+    "measured_reasons": [
+      "no_placebo_available"
+    ]
+  },
+  {
+    "instance_id": "constructed-05",
+    "prediction": {
+      "status": "supported",
+      "reason_codes": []
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-06",
+    "prediction": {
+      "status": "inconclusive",
+      "reason_codes": [
+        "no_placebo_available"
+      ]
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "inconclusive",
+    "measured_reasons": [
+      "no_placebo_available"
+    ]
+  },
+  {
+    "instance_id": "constructed-07",
+    "prediction": {
+      "status": "supported",
+      "reason_codes": []
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-08",
+    "prediction": {
+      "status": "inconclusive",
+      "reason_codes": [
+        "no_placebo_available"
+      ]
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "inconclusive",
+    "measured_reasons": [
+      "no_placebo_available"
+    ]
+  },
+  {
+    "instance_id": "constructed-09",
+    "prediction": {
+      "status": "inconclusive",
+      "reason_codes": [
+        "info_loss_untested"
+      ]
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "FALSIFIED",
+    "measured_status": "inconclusive",
+    "measured_reasons": [
+      "info_loss_untested"
+    ]
+  },
+  {
+    "instance_id": "constructed-10",
+    "prediction": {
+      "status": "inconclusive",
+      "reason_codes": [
+        "info_loss_untested"
+      ]
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "FALSIFIED",
+    "measured_status": "inconclusive",
+    "measured_reasons": [
+      "info_loss_untested"
+    ]
+  },
+  {
+    "instance_id": "constructed-11",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "U_tau_O_below_m_O"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-12",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "U_tau_O_below_m_O"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-13",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "U_tau_O_below_m_O"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-14",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "U_tau_O_below_m_O"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-15",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "U_tau_O_below_m_O"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-16",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "U_tau_O_below_m_O"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-17",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "U_tau_O_below_m_O"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-18",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "U_tau_O_below_m_O"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-19",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "path_inactive_tau_O_zero"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-20",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "path_inactive_tau_O_zero"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-21",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "path_inactive_tau_O_zero"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-22",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "path_inactive_tau_O_zero"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-23",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "path_inactive_tau_O_zero"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-24",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "path_inactive_tau_O_zero"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-25",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "path_inactive_tau_O_zero"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-26",
+    "prediction": {
+      "status": "not supported",
+      "reason_codes": [],
+      "basis": "path_inactive_tau_O_zero"
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "not supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-27",
+    "prediction": {
+      "status": "inconclusive",
+      "reason_codes": [
+        "info_loss_untested"
+      ]
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "FALSIFIED",
+    "measured_status": "inconclusive",
+    "measured_reasons": [
+      "info_loss_untested"
+    ]
+  },
+  {
+    "instance_id": "constructed-28",
+    "prediction": {
+      "status": "inconclusive",
+      "reason_codes": [
+        "info_loss_untested"
+      ]
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "FALSIFIED",
+    "measured_status": "inconclusive",
+    "measured_reasons": [
+      "info_loss_untested"
+    ]
+  },
+  {
+    "instance_id": "constructed-29",
+    "prediction": {
+      "status": "supported",
+      "reason_codes": []
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "supported",
+    "measured_reasons": []
+  },
+  {
+    "instance_id": "constructed-30",
+    "prediction": {
+      "status": "supported",
+      "reason_codes": []
+    },
+    "verdict": "CONFIRMED",
+    "previous_verdict": "CONFIRMED",
+    "measured_status": "supported",
+    "measured_reasons": []
+  }
+]

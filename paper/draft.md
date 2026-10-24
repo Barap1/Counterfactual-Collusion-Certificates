@@ -158,6 +158,7 @@ The overall Gate A decision is FAIL. We report this as a recorded outcome of a d
 
 - **Figure 1 and Table 1** (verdicts by family and method; erroneous harmful-collusion flags on A2; sensitivity on A1): [RESULT-PENDING: STAT-002 / VIS-001].
 - **Development-stage observation.** In the current development run, CCC returned no `supported` record on any A1 instance (0 of 80 forbidden-mechanism instances) and none on A2 (0 of 80 legitimate instances). Because CCC also never returned `supported` on A1, its zero flags on A2 carry no specificity information for now (the decision log calls the A2 pass vacuous). Baselines flagged some A2 instances (for example B0 on 22/40 of one A2 family) and some A1 instances [PROVISIONAL: docs/gate_a/GATE_A_REPORT.md under diagnosis; positives, thresholds and fixtures may change only by reviewed amendment (D-016)]. The cause (fixture design, protocol design, or implementation) is not settled in this draft.
+- **Redundant carriers (A5).** The DEV A5 outcomes are tabulated in the v1.2.2 Gate A report and interpreted under Limitations in Section 5 [VERIFIED: docs/gate_a/v1.2/correction_v1.2.2/GATE_A_v1.2.2.md].
 - **Possible outcomes.** If sensitivity remains near zero after reviewed fixes, the finding is that the protocol, as specified, abstains or returns `not supported` on most harmful mechanisms in this setting, and that one or more baselines achieve higher sensitivity at higher false-positive rates on A2. If a baseline equals or exceeds CCC on both measures, we report that. If CCC achieves lower erroneous flags on A2 at comparable sensitivity, the primary comparison [RESULT-PENDING: STAT-002 primary estimate, interval, number of independent fixtures] will say so with its interval.
 
 ### 4.3 Real Colosseum case study
@@ -180,7 +181,8 @@ The overall Gate A decision is FAIL. We report this as a recorded outcome of a d
 - The method needs an executable, checkpointable simulator and a known suspected pair and exposure.
 - Identification is limited by inaccessible state (provider RNG) and by information-loss confounds: masking removes information as well as intent.
 - Partner and coalition specificity is not identifiable when outsiders never had channel access.
-- A single-exposure null under redundant carriers is "not identifiable", not "no collusion". `not supported` is never evidence of innocence.
+- Redundant carriers (A5). For the single-exposure estimand, CCC's `not supported` on redundant-carrier cases is correct: when another carrier compensates, removing one exposure does not change outsider harm. In every non-A6 `not supported` DEV cell the oracle outsider effect is below m_O (0 exceptions). It must not be read as "no collusion": the record concerns one exposure, not the team, and `not supported` is never evidence of innocence [VERIFIED: docs/gate_a/v1.2/correction_v1.2.2/GATE_A_v1.2.2.md].
+- Paraphrase carriers are not detected. The carrier matcher is shingle-based; the Stage 2 pin records best Youden J 0.495 < 0.5 and falls back to theta 0.4 with `weak_detector` [VERIFIED: docs/stats/stage2/theta_pin.json]. No A5a-paraphrase DEV cell carries a carrier flag under theta 0.4 [VERIFIED: docs/gate_a/v1.2/correction_v1.2.2/GATE_A_v1.2.2.md].
 - Any legitimate transfer that does not materially raise W is outcome-equivalent to collusion under the declared norm; an outcome-only audit cannot separate them.
 - Steganographic, tool and side channels escape text masking [motwani2024secret; rippin2026tooluse].
 - One model and backend (local `gemma4:26b`), Jira-only world generator, small samples, and constructed fixtures. Fixtures validate the implementation, not LLM behavior. Prompted collusion is not spontaneous collusion.
@@ -202,6 +204,7 @@ The overall Gate A decision is FAIL. We report this as a recorded outcome of a d
 
 - Code repository: [OWNER: public release approved? Remove private identifiers before any public artifact.]
 - Data and reproduction bundle: [TODO(REL-001): frozen manifests; immutable branch records]. Offline Gate A reproduction command and captured outputs are in `docs/gate_a/` [VERIFIED: docs/gate_a/GATE_A_REPORT.md].
+- DEV Gate A parameter record (reproducibility): v1.2.2 pins theta to the Stage 2 value 0.4 (previously 0.8) and records the DEV bootstrap as 10000 draws (previously 2000; prereg B=10000). The DEV gate computes deterministic interval endpoints and does not read the bootstrap value, so this change alters no reported number [VERIFIED: docs/gate_a/v1.2/correction_v1.2.2/GATE_A_v1.2.2.md].
 - Preexisting code: Colosseum commit `d585a7b` [VERIFIED: docs/eng/ENG-001_state_map.md]; patches and licenses [TODO(ENG)].
 
 ## LLM Usage Statement

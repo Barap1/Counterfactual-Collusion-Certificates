@@ -25,6 +25,14 @@ PARAMS=Parameters()
 SELECTION_LOG=None
 
 
+def resolve_parameters(theta=None, bootstrap_draws=None):
+    """DEV-only overrides. Only theta and bootstrap_draws are changeable here; None keeps the default."""
+    changes = {}
+    if theta is not None: changes['theta'] = float(theta)
+    if bootstrap_draws is not None: changes['bootstrap_draws'] = int(bootstrap_draws)
+    return replace(Parameters(), **changes)
+
+
 def merge_replay_carriers(found, checks):
     """Carry ENG-003 V07 diagnostics into the §9 decision without re-matching.
 
@@ -128,7 +136,7 @@ def apply_study_checks(e):
             new = decide(branches, validity=failures, flags=old['flags'],
                          info_bearing=old['info_bearing'], placebo_run='N' in branches, placebo_status=n.get('placebo_selection',{}).get('status'), placebo_selection=n.get('placebo_selection'),
                          placebo_study_positive=study['placebo_study_positive'],
-                         sham_batch=study['sham_batch'], deterministic=True)
+                         sham_batch=study['sham_batch'], deterministic=True, params=PARAMS)
             new['carrier_evidence'] = old['carrier_evidence']
             n['CCC'] = new
 
@@ -349,7 +357,7 @@ def native_case(world, *, full_replicates=False):
     found=merge_replay_carriers(found,checks)
     failures=[c.id+':'+c.name for c in checks if str(c.status).lower()=='fail']
     d=decide(branches,validity=failures,info_bearing=any(information(t, author=e.sender, aliases=world_aliases(world.tasks)) for t in texts),flags=found,
-             placebo_run=bool(selection['M_star']),placebo_status=selection['status'],placebo_selection=selection,deterministic=True)
+             placebo_run=bool(selection['M_star']),placebo_status=selection['status'],placebo_selection=selection,deterministic=True,params=PARAMS)
     d['carrier_evidence']=found
     # Same recorded F/K outcomes and first-step tool responses for every baseline.
     taskvals={}; nexttasks={}; nextoutputs={}
@@ -370,7 +378,7 @@ def native_case(world, *, full_replicates=False):
         user=boundary_req.request['messages'][1]['content']
         outsider_tasks=set(re.findall(r'planning to take (TASK-\d+)',user))
     baseline_records={a:[{'status':'complete' if br.outcomes and all(k in br.outcomes for k in ('Omean','Cmean','A','W')) else 'failed','outcome':br.outcomes}] for a,br in ar.branches.items()}
-    baseline_estimates=estimate(baseline_records,deterministic=True)
+    baseline_estimates=estimate(baseline_records,deterministic=True,params=PARAMS)
     b=evaluate(baseline_estimates,receiver_tasks=taskvals,next_tasks=nexttasks,next_outputs=nextoutputs,outsider_tasks=outsider_tasks,transcript=transcript)
     checkrows=[asdict(c) for c in checks]
     return {'CCC':d,'baselines':b,'checks':checkrows,'eligible':True,'fault_exercised':fault,
@@ -399,8 +407,9 @@ def native_safe(world, *, full_replicates=False):
         gc.collect()
 
 
-def main(out=None):
-    global SELECTION_LOG
+def main(out=None, params=None):
+    global SELECTION_LOG, PARAMS
+    if params is not None: PARAMS = params  # set before the worker pool forks
     from ccc import paths
     from ccc.fixtures.worlds import split_manifest
     from ccc.fixtures.jira import CASES,exact_oracle,run_jira_branch
@@ -609,4 +618,11 @@ def write_fixed_report(e,out):
     (out/'GATE_A_v1.1-fixed.md').write_text('\n'.join(lines)+'\n')
 
 
-if __name__=='__main__': main()
+if __name__=='__main__':
+    import argparse
+    ap = argparse.ArgumentParser(description='DEV-only Gate A evaluation')
+    ap.add_argument('--out', default=None)
+    ap.add_argument('--theta', type=float, default=None)
+    ap.add_argument('--bootstrap-draws', type=int, default=None)
+    args = ap.parse_args()
+    main(args.out, params=resolve_parameters(args.theta, args.bootstrap_draws))

@@ -1,3 +1,5 @@
+> **SUPERSEDED by [Gate A v1.2.2](correction_v1.2.2/GATE_A_v1.2.2.md).** This v1.2.1 report was generated with provisional theta=0.8 and bootstrap_draws=2000; pinned theta is 0.4 (`docs/stats/stage2/theta_pin.json`) and the DEV bootstrap is 10000. Its evidence is retained unchanged in `correction_v1.2.1/`.
+
 # DEV Gate A v1.2.1 — AMD-FIX-2 correction
 
 **Overall Gate A: FAIL.** Fresh offline runs: 800 non-constructed DEV cells and 30 constructed controls. F4/K4/S2/N4 at eligible checkpoints; 20 matched DEV seeds, two wording strata, epsilon=0. Deterministic repeats add no independent information. $0, no live/model calls, no Ollama operations, no held-out worlds, no commits.
