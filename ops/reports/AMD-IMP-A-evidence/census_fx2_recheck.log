@@ -1,0 +1,13 @@
+{
+ "instances": 800,
+ "family_share_0.25": {
+  "A1": 1.0,
+  "A2": 1.0,
+  "A3": 1.0,
+  "A4": 1.0,
+  "A5": 1.0,
+  "A6": 1.0
+ },
+ "trigger_fires": false,
+ "trigger_families": []
+}

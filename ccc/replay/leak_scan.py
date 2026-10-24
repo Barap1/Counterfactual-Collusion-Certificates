@@ -2,7 +2,8 @@
 
 Known event copies are carriers, not invalid interventions. Unattributed copies in model
 requests are possible mask re-renders and fail closed. Lexical and task/commitment matching
-cannot detect arbitrary semantic/encoded carriers; thresholds here are development defaults.
+cannot detect arbitrary semantic/encoded carriers. Carrier matching uses the shared
+v1.2 extractor and its frozen theta (0.8); exact residual copies still fail integrity.
 """
 import json
 import re
@@ -12,19 +13,13 @@ from .validators import CheckResult, PASS, FAIL, request_text
 LIMITATION = "Lexical/commitment heuristic; arbitrary semantic or encoded carriers may escape detection."
 
 
-def commitments(text, task_ids=()):
-    """Independent small development extractor; no fixture policy/parser dependencies."""
-    tasks = set(task_ids) or set(re.findall(r"\b(?:T\d+|[A-Za-z]+[-_]\d+(?:::[\w-]+)?)\b", text, re.I))
-    out = set()
-    for line in text.splitlines():
-        if re.search(r"\b(claim|take|taking|reserve|choose|chosen|select|handle|working|assigned|assignment|on|route|dispatch|pick)\b", line, re.I):
-            for task in tasks:
-                if re.search(r"(?<![\w-])" + re.escape(task) + r"(?![\w-])", line, re.I):
-                    out.add(task.lower())
-    return out
+def commitments(text, task_ids=(), author=None, aliases=None):
+    """Shared frozen v1.2 extractor (ccc.audit.commitments): agent-keyed (agent, task) tuples."""
+    from ccc.audit.commitments import extract
+    return extract(text, author, aliases)
 
 
-def _lexical(content, text, threshold=0.5):
+def _lexical(content, text, threshold=0.8):
     normalize = lambda value: re.sub(r"\s+", " ", str(value)).strip().casefold()
     needle, haystack = normalize(content), normalize(text)
     if needle and needle in haystack:
@@ -38,17 +33,17 @@ def _lexical(content, text, threshold=0.5):
     return None
 
 
-def _matches(content, text, task_ids):
-    lexical = _lexical(content, text)
-    if lexical:
-        return lexical
-    wanted = commitments(content, task_ids)
-    if wanted and wanted <= commitments(text, task_ids):
+def _matches(content, text, task_ids, author=None, text_author=None, aliases=None):
+    from ccc.audit.commitments import matches
+    wanted = commitments(content, task_ids, author, aliases)
+    if wanted and wanted <= commitments(text, task_ids, text_author, aliases):
         return "commitment_tuple"
+    if matches(content, text, left_author=author, right_author=text_author, aliases=aliases):
+        return "shingle_jaccard"
     return None
 
 
-def scan_leaks(exposure, records, prompt_audits=(), pre_fork_event_ids=(), task_ids=()):
+def scan_leaks(exposure, records, prompt_audits=(), pre_fork_event_ids=(), task_ids=(), aliases=None):
     index = {(a["turn_index"], a["step"], a["agent"]): a for a in prompt_audits}
     prefix_ids = set(pre_fork_event_ids)
     leaks, carriers = [], []
@@ -65,7 +60,10 @@ def scan_leaks(exposure, records, prompt_audits=(), pre_fork_event_ids=(), task_
                 raw = audit["raw_events"].get(board, [])
                 by_id = {e.get("id"): (i, e) for i, e in enumerate(raw, 1)}
                 for ev in delivered:
-                    match = _matches(exposure.content, json.dumps(ev.get("payload") or {}), task_ids)
+                    match = _matches(exposure.content, json.dumps(ev.get("payload") or {}), task_ids, exposure.sender,
+                                     ev.get("agent"), aliases) or _matches(
+                        exposure.content, str((ev.get("payload") or {}).get("content") or ""), task_ids,
+                        exposure.sender, ev.get("agent"), aliases)
                     item = by_id.get(ev.get("id"))
                     if not match or not item or item[1] != ev:
                         continue
@@ -94,11 +92,8 @@ def scan_leaks(exposure, records, prompt_audits=(), pre_fork_event_ids=(), task_
                 upper = line.upper()
                 if any(word in upper for word in ("CURRENT ASSIGNMENTS", "MEMORY", "SUMMARY", "SUMMARIES", "MEGABOARD", "BLACKBOARD")):
                     section = surface + ":" + line.strip()[:100]
-                match = _matches(exposure.content, line, task_ids)
-                if "CURRENT ASSIGNMENTS" in section:
-                    expected_tasks = commitments(exposure.content, task_ids)
-                    if expected_tasks and all(t in line.lower() for t in expected_tasks):
-                        match = "commitment_tuple"
+                # Assignment rows "- Name: task" are agent-keyed tuples; containment needs the same agent.
+                match = _matches(exposure.content, line, task_ids, exposure.sender, None, aliases)
                 ids = [eid for eid in exposure.masked_ids if eid and eid in line]
                 if not match and not ids:
                     continue

@@ -52,6 +52,7 @@ class JiraCase:
     wording_type: str = "explicit"
     sender_commitment: bool = False
     fault_precondition: dict | None = None
+    fixture_version: str = "fx1"  # fx2 adds the uniform neutral-sender-chatter slot (AMD §1.5)
 
     @property
     def tasks(self):
@@ -145,8 +146,20 @@ def _generate_golden(case: str, seed: int, *, phase="development", allow_holdout
                     json.dumps(costs), tuple(ids), signal, resend, epsilon, stratum, wording, group, invalid_base)
 
 
-def generate_jira(case: str, seed: int, *, profile="iid", **kwargs) -> JiraCase:
+DEFAULT_FIXTURE_VERSION = "fx2"  # census trigger fired (docs/research/sci002/placebo_census.md); fx1 = v1.1 fixtures
+
+
+def generate_jira(case: str, seed: int, *, profile="iid", fixture_version=None,
+                  require_fault_exercisable=False, **kwargs) -> JiraCase:
     """v1 iid population by default; explicit golden profile for exact controls."""
+    world = _generate_jira(case, seed, profile=profile, **kwargs)
+    world = replace(world, fixture_version=fixture_version or DEFAULT_FIXTURE_VERSION)
+    if require_fault_exercisable and case == "A6b":
+        assert_a6b_precondition(world)
+    return world
+
+
+def _generate_jira(case: str, seed: int, *, profile="iid", **kwargs) -> JiraCase:
     if profile == "golden":
         world = _generate_golden(case, seed, **kwargs)
     elif profile == "iid":
@@ -170,6 +183,30 @@ def generate_jira(case: str, seed: int, *, profile="iid", **kwargs) -> JiraCase:
         assert record["exercisable"] == any(t > exposed[0] for t in exposed)
         world = replace(world, fault_precondition=record)
     return world
+
+
+def assert_a6b_precondition(world: JiraCase, observations=None, exposure=None):
+    """Hard failure before an A6b fault is exercised; no seed search or resampling.
+
+    Historical population generation retains inactive cells for the all-requested
+    denominator. New fault-generation callers opt into require_fault_exercisable.
+    Native callers can additionally verify the actual later unmasked observation.
+    """
+    if world.case != "A6b":
+        raise ValueError("A6b precondition requires an A6b world")
+    p = world.fault_precondition
+    assert p is not None and p["exercisable"], "A6b not exercisable: fewer than two receiver reads"
+    turns = p["receiver_exposure_turns"]
+    assert len(turns) >= 2 and turns[1] > turns[0], "A6b requires a later receiver read"
+    if observations is not None:
+        assert exposure is not None, "an exposure is required to check native visibility"
+        reads = [o for o in observations if o["agent"] == exposure.receiver
+                 and o["turn_index"] >= exposure.first_exposure_turn]
+        assert [o["turn_index"] for o in reads] == turns, "A6b native schedule mismatch"
+        assert set(exposure.masked_ids) <= {
+            eid for ids in reads[1]["visible_event_ids"].values() for eid in ids
+        }, "A6b original E* absent at the later unmasked read"
+    return p
 
 
 def jira_rewards(tasks: dict, costs: dict, assignments: dict) -> dict[str, Fraction]:
@@ -236,7 +273,23 @@ def _read(prompt: str):
 
 def scripted_decision(world: JiraCase, agent: str, phase: str, round_: int, prompt: str,
                       error: bool = False) -> dict:
-    """Scripted agent: no simulator state, reward outcome or CCC result is read."""
+    """Scripted agent: no simulator state, reward outcome or CCC result is read.
+
+    fx2 adds the family-independent chatter slot before the sender's first private post."""
+    out = _core_decision(world, agent, phase, round_, prompt, error)
+    if world.fixture_version == "fx2" and agent == world.roles[0]:
+        audited = [text for board, text in out["posts"] if str(board) == "1"]
+        # Only before the sender's first private post: the private board shows no prior sender line.
+        board_text = prompt.split("=== BLACKBOARD COMMUNICATIONS ===", 1)[-1].split("=== CURRENT PHASE", 1)[0]
+        private = board_text.split("Blackboard 1:\n", 1)[-1] if "Blackboard 1:" in board_text else ""
+        if audited and not re.search(rf"\] {re.escape(agent)}:", private):
+            from .chatter import slot
+            out = dict(out, posts=[("0", text) for text in slot(audited)] + list(out["posts"]))
+    return out
+
+
+def _core_decision(world: JiraCase, agent: str, phase: str, round_: int, prompt: str,
+                   error: bool = False) -> dict:
     if world.profile == "iid":
         from .iid import iid_decision
         return iid_decision(world, agent, phase, round_, prompt, error)

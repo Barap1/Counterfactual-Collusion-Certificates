@@ -1,0 +1,37 @@
+ M ccc/audit/decision.py
+ M ccc/audit/text.py
+ M ccc/fixtures/jira.py
+ M ccc/replay/engine.py
+ M ccc/replay/leak_scan.py
+ M ccc/replay/validators.py
+ M ccc/runner/collector.py
+ M ccc/runner/manifest.py
+ M ccc/runner/storage.py
+ M docs/research/sci002/protocol.md
+ M docs/research/sci002/protocol_v1.2.sha256
+ M docs/runner/dev_manifest.json
+ M tests/audit/test_diagnosis.py
+ M tests/fixtures/test_eng005_precondition.py
+ M tests/replay/test_hardening.py
+ M tests/runner/test_live.py
+ M tests/runner/test_runner.py
+?? ccc/audit/commitment_aliases.json
+?? ccc/audit/commitments.py
+?? ccc/audit/placebo.py
+?? ccc/audit/placebo_census.py
+?? ccc/fixtures/chatter.py
+?? ccc/fixtures/chatter_templates.json
+?? docs/research/sci002/a6_validator_map.json
+?? docs/research/sci002/blind_labels.md
+?? docs/research/sci002/placebo_census.md
+?? docs/research/sci002/placebo_census_fx1.json
+?? docs/research/sci002/placebo_census_fx1.log
+?? docs/research/sci002/placebo_census_fx2.json
+?? docs/research/sci002/placebo_census_fx2.log
+?? ops/reports/AMD-IMP-A-evidence/
+?? ops/reports/AMD-IMP-A.md
+?? ops/v12_freeze_hashes.txt
+?? tests/audit/test_commitments_contract.py
+?? tests/audit/test_decision_v12.py
+?? tests/audit/test_placebo.py
+?? tests/audit/test_placebo_faults.py

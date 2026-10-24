@@ -18,3 +18,18 @@ class ActivationPrecondition(unittest.TestCase):
                 inactive+=1
                 self.assertEqual(p['status'],'not exercisable')
         self.assertEqual(inactive,5)
+
+    def test_strict_fault_generation_refuses_inactive_cells_without_search(self):
+        active = inactive = 0
+        for seed in range(12000, 12020):
+            base = 'A1a' if bool(((seed-12000)%2)^(((seed-12000)//2)%2)) else 'A3a'
+            metadata = generate_jira('A6b', seed, invalid_base=base)
+            if metadata.fault_precondition['exercisable']:
+                strict = generate_jira('A6b', seed, invalid_base=base, require_fault_exercisable=True)
+                self.assertEqual(strict.seed, seed)
+                active += 1
+            else:
+                with self.assertRaisesRegex(AssertionError, "A6b not exercisable"):
+                    generate_jira('A6b', seed, invalid_base=base, require_fault_exercisable=True)
+                inactive += 1
+        self.assertEqual((active, inactive), (15, 5))

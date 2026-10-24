@@ -18,7 +18,7 @@ from ccc.replay.fixtures import signal_policy
 from ccc.replay.interventions import ExposureSpec
 from ccc.replay.world import ColosseumWorld, WorldSpec
 
-from .manifest import ROOT, canonical, digest, file_hash, plan, validate, call_seed, parse_time
+from .manifest import ROOT, canonical, digest, file_hash, plan, validate, call_seed, parse_time, sham_selected
 from .live import OllamaSession, OllamaChatClient, ModelReload
 from .storage import get, lock, output_root, put, seal, verify
 
@@ -216,6 +216,27 @@ def collect_world(m, job, root, guard, session, live_session=None):
     if not checkpoint.valid:
         return {"status": "ineligible", "reason": "restore_fail", "outcomes": None,
                 "checks": [c.to_json() for c in checkpoint.validation]}
+    # N_m: M* is computed once from pre-checkpoint events (no outcome, continuation or model output)
+    # and committed before any continuation runs. N is run on every checkpoint where M* is non-empty.
+    from ccc.audit.commitments import Extractor
+    from ccc.audit.placebo import select_placebo
+    outsiders = [a for a in world.env.agent_names if a not in world.colluders]
+    extractor = Extractor(engine._world_aliases(world), outsiders)
+    receiver_boards = [str(b.blackboard_id) for b in world.protocol.megaboard.blackboards
+                       if exposure.receiver in b.agents]
+    placebo = select_placebo(engine.event_rows(source), exposure.masked_ids, exposure.sender, exposure.receiver,
+                             extractor, boundary=exposure.first_exposure_turn,
+                             private_board=exposure.blackboard_id, receiver_boards=receiver_boards)
+    placebo["extractor_sha256"] = file_hash(Path(engine.__file__).parents[1] / "audit" / "commitments.py")
+    from ccc.audit.decision import PLACEBO_SURFACE_NOTE
+    placebo["surface_note"] = PLACEBO_SURFACE_NOTE
+    placebo["checkpoint_id"] = job["world"]["id"]  # one frozen checkpoint slot per world
+    placebo["sham_selected"] = job["sham_selected"]
+    placebo["alias_list_sha256"] = file_hash(Path(engine.__file__).parents[1] / "audit" / "commitment_aliases.json")
+    placebo["arm_counts"] = {a: (0 if a == "N" and placebo["status"] != "accepted" else n)
+                             for a, n in job["arm_counts"].items()}
+    put(root / "placebo.json", placebo)
+    placebo_sha = digest(placebo)
     results = []
 
     def invalidate():
@@ -245,14 +266,19 @@ def collect_world(m, job, root, guard, session, live_session=None):
     for item in job["order"]:
         arm, rep = item["arm"], item["replicate"]
         location = root / "branches" / f"{rep:03}_{arm}"
-        put(location / "begin.json", item | {"load_session": session, "checkpoint_sha256": digest(checkpoint.manifest)})
+        if arm == "N" and placebo["status"] != "accepted":
+            record = item | {"status": "not_run", "reasons": ["no_placebo_available"], "outcomes": None,
+                             "placebo_status": placebo["status"]}
+            results.append(record)
+            continue
+        put(location / "begin.json", item | {"load_session": session, "checkpoint_sha256": digest(checkpoint.manifest),
+                                              "placebo_sha256": placebo_sha})
         if arm not in engine.ARMS:
             raise ValueError(f"replay dependency does not yet support {arm}; ENG-003 integration required")
         kwargs = {}
-        # ENG-003 supplies N's hook and frozen filler API; never generate filler from outcomes.
+        # v1.2: N is the matched non-audited message mask over M*; the v1.1 filler is deprecated.
         if arm == "N":
-            from ccc.replay.interventions import neutral_placebo_hook
-            kwargs["hook"] = neutral_placebo_hook(exposure)
+            kwargs["placebo_ids"] = placebo["M_star"]
         result = engine.run_branch(checkpoint, arm, factory(item["seed"], location, arm, rep),
                                    replicate_id=str(rep), other_response_ids=response_ids, other_request_ids=request_ids,
                                    ledger_dir=location / "replay_ledger",
@@ -289,7 +315,7 @@ def collect_world(m, job, root, guard, session, live_session=None):
     for record in results:
         put(root / "branches" / f"{record['replicate']:03}_{record['arm']}" / "result.json", record)
     put(root / "cross_checks.json", cross)
-    valid = all(r["status"] == "valid" for r in results) and all(c["status"] in ("pass", "na") for c in cross)
+    valid = all(r["status"] in ("valid", "not_run") for r in results) and all(c["status"] in ("pass", "na") for c in cross)
     return {"status": "complete" if valid else "invalid", "branches": results, "cross_checks": cross,
             "evidence_tier": tier, "load_session": session}
 

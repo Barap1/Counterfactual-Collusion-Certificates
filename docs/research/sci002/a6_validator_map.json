@@ -1,0 +1,15 @@
+{
+  "protocol_version": "1.2",
+  "prediction_P3.3": {"intended_fired": 350, "requested": 360, "inactive_A6b": 10},
+  "variants": {
+    "A6a": {"spec": "V2/V3", "accepted": ["V3", "V07", "V05b"]},
+    "A6b": {"spec": "V3", "accepted": ["V3", "V05b"]},
+    "A6c-K": {"spec": "V1", "accepted": ["V1_static"]},
+    "A6c-F": {"spec": "V1", "accepted": ["V1_static"]},
+    "A6d": {"spec": "V4", "accepted": ["V09"]},
+    "A6e": {"spec": "V6", "accepted": ["V-model"]},
+    "A6f": {"spec": "V5", "accepted": ["V08"]},
+    "A6g": {"spec": "V3", "accepted": ["V05b", "V3"]},
+    "A6h": {"spec": "V1", "accepted": ["V1_static"]}
+  }
+}

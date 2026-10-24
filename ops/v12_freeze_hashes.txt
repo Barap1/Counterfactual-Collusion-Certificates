@@ -1,0 +1,31 @@
+# AMD-IMP-0 current hash inventory (sha256 file bytes)
+# PROVENANCE FAILURE: these hashes were NOT git-committed before the census.
+# At takeover this file, extractor, aliases, T_chat and A6 map were untracked;
+# census fx1/fx2 outputs already existed. No commits are authorized in this task.
+# The predecessor claimed a pre-census write time of 2026-10-23T22:20Z. That is
+# an inherited assertion, not independently established chronology or a commit.
+# Original file preserved: ops/reports/AMD-IMP-A-evidence/freeze_inherited.txt.
+# Hash equality can establish unchanged bytes, never retroactive pre-registration.
+# The IMP-0 pre-census hash-commit gate is FAILED and cannot be repaired after results.
+#
+# Inherited spec clarifications recorded with these hashes (r3 underspecified; minimal reading chosen):
+# 1. CURRENT ASSIGNMENTS row syntax: a line "- {Name}: {task}" (task = task id), giving the tuple (Name, task), casefolded.
+# 2. Alias list format: commitment_aliases.json holds the frozen description pattern "the {tag} item", the six tags and the
+#    forbidden description/outsider-description phrases. The binding of a description to a task id is world-specific and is
+#    derived mechanically from that world's own public task table (extract(..., aliases=world_aliases(tasks))). The global
+#    "aliases" map is empty by design; an unbound description yields no tuple (implicit E*, Jaccard only).
+# 3. "attribution" -> "claim": tuples carry no kind. (agent, task) is the whole tuple, so attribution and claim phrasings
+#    ("I claim", "planning to take", "taking", "working on", "committed to", third-person forms) are one kind.
+# 4. Third-person relay ("Layla will be taking T1" authored by Omar) yields ('layla','t1'); the first-person anchor inside a
+#    third-person match is not also attributed to the author.
+# 5. info_bearing: ccc.audit.commitments.information is the v1.1 regex verbatim (semantics unchanged, P2.5).
+5527650c90648b5bb6fb674e4c38bbfb525c44ffc5b8223bc67ac5447f9e2a98  ccc/audit/commitments.py
+859ece019675ad36ae6b66fbbb659e88183947e8f690ca7e4f474e6a54a93645  ccc/audit/commitment_aliases.json
+8f204b6baf2aea9567e11a29ef19ac89b7c89c7122dcc61724b9c53f0de85794  ccc/fixtures/chatter_templates.json
+5610f626c9d3c025d9dc9a8cacfbf579d605e35644fe2602c38a1a57a3d9eace  docs/research/sci002/a6_validator_map.json
+16b38fe3962151a032c1c67d28012f5071af2cf8e9787ecbb7761933a23a9053  docs/research/sci002/blind_labels.md
+d443618db5a24d227f60e7ae20ba2e93c7ec165608724f725c0a833e382274a0  tests/audit/test_commitments_contract.py
+ac6a70331590d667186e0f8a39927c6172bd7223aae02c304d77c4c0e5bcadb7  docs/research/sci002/constructed_controls.json
+c10df4cee28951bcf9ef298eb7b25fcf6ab3032a59b7a74a13244fc37838567f  docs/research/sci002/constructed_controls.md
+7d6c2c5933e2587248903446b1b39924d810795a9caf44fd07b484e581b63847  docs/research/sci002/constructed_controls.sha256
+# Entries 6-9 are owned by other agents (contract suite: independent author; constructed controls: IMP-6); hashed as found and not edited by AMD-IMP-A2.

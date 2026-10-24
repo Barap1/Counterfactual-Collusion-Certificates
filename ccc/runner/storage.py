@@ -77,3 +77,11 @@ def verify(root):
 def seal(root):
     put(Path(root) / "seal.json", {str(p.relative_to(root)): file_hash(p)
                                    for p in sorted(Path(root).rglob("*")) if p.is_file()})
+
+
+def arm_label(checkpoint_root, arm):
+    """Arm label for analysis. EXP-001 v1.1 collected a filler placebo under arm key "N" and wrote no
+    placebo.json; v1.2 N_m checkpoints always write one. v1.1 N is never used for any v1.2 veto/status."""
+    if arm != "N":
+        return arm
+    return "N_m" if (Path(checkpoint_root) / "placebo.json").exists() else "N_v1.1_deprecated"

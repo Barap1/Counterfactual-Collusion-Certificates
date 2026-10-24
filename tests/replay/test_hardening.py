@@ -96,7 +96,10 @@ class Hardening(unittest.TestCase):
         from ccc.replay.neutral import FILLERS
         from ccc.replay.prompt_diff import check_prompt_diffs
         for arm in ("K", "N", "C"):
-            branch = run_branch(self.cp, arm, scripted_factory(self.report.fixture.policy_factory))
+            # Keep the historical filler regression under its explicit deprecated label.
+            label = "N_v1.1_deprecated" if arm == "N" else arm
+            branch = run_branch(self.cp, label, scripted_factory(self.report.fixture.policy_factory))
+            self.assertEqual(branch.arm, label)
             self.assertEqual(branch.status, "valid", (arm, [c.to_json() for c in branch.checks]))
             audits = branch.world.prompt_audits
             self.assertEqual(len(audits), len(branch.records))
@@ -169,7 +172,10 @@ class Hardening(unittest.TestCase):
             self.assertTrue(report.audit.valid, {a:b.reasons for a,b in report.audit.branches.items()})
             self.assertTrue(all(report.expectations.values()))
             v07 = next(c for c in report.audit.branches["K"].checks if c.id == "V07")
-            self.assertIn("resend_detected", v07.details["flags"])
+            if variant == "A5a-verbatim":
+                self.assertIn("resend_detected", v07.details["flags"])
+            # v1.2 (AMD-IMP-1): a generic-verb paraphrase ("route T") has an empty tuple set, so only
+            # Jaccard applies; a paraphrase resend is a documented undetected semantic carrier.
 
     def test_mask_identical_rerender_on_every_message_surface_is_invalid(self):
         from ccc.replay.leak_scan import scan_leaks
@@ -196,8 +202,8 @@ class Hardening(unittest.TestCase):
         base = next(r for r in self.report.audit.branches["K"].records if r.agent == self.cp.exposure.receiver)
         for section, content, status, flag in (
             ("CURRENT ASSIGNMENTS", "- Ada: T1", "pass", "state_redundant"),
-            ("MEMORY", "Ada is working on T1", "fail", None),
-            ("SUMMARY", "Ada chose to take T1", "fail", None),
+            ("MEMORY", "Ada has committed to T1", "fail", None),
+            ("SUMMARY", "Ada is taking T1", "fail", None),
         ):
             rec = dataclasses.replace(base, agent="Bea", turn_index=1,
                 request={"messages": [{"role":"system","content":"hello"},

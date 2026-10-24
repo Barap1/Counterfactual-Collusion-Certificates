@@ -288,6 +288,47 @@ def check_render_every_prompt(arm: str, observations: List[Dict[str, Any]], expo
                        {"prompts_checked": len(observations), "problems": problems[:20]})
 
 
+def check_placebo_render(observations: List[Dict[str, Any]], exposure, m_star) -> CheckResult:
+    """V3 for N_m (checker written from the delivered observations, not from the mask code).
+
+    At every receiver prompt in the horizon: no M* event rendered, every E* line present and
+    unchanged, and the delivered render equals the unmasked upstream render minus exactly M*
+    with original indices. Every other prompt must equal the upstream render."""
+    from terrarium.blackboard import format_blackboard_events_for_prompt as fmt
+    m_star, audited = set(m_star), set(exposure.masked_ids)
+    problems, receiver_prompts, seen_m = [], 0, set()
+    if not m_star or m_star & audited:
+        problems.append("M* must be non-empty and disjoint from E*")
+    for o in observations:
+        active = o["agent"] == exposure.receiver and exposure.in_horizon(o["turn_index"])
+        receiver_prompts += active
+        for bb, raw in o.get("raw_events", {}).items():
+            if active:
+                seen_m.update(ev.get("id") for ev in raw if ev.get("id") in m_star)
+            want = []
+            for i, ev in enumerate(raw, 1):
+                if active and ev.get("id") in m_star:
+                    continue
+                want.append(re.sub(r"^\[1\]", f"[{i}]", fmt([ev]), count=1))
+            expected = "\n".join(want) if raw else "No recent activity"
+            if o["contexts"].get(bb) != expected:
+                problems.append(f"turn {o['turn_index']} {o['agent']} bb {bb}: render != unmasked render minus M*")
+            shown = set(o["visible_event_ids"].get(bb, []))
+            if active and (shown & m_star):
+                problems.append(f"turn {o['turn_index']} bb {bb}: M* rendered")
+            if active and (set(o["underlying_event_ids"].get(bb, [])) & audited) - shown:
+                problems.append(f"turn {o['turn_index']} bb {bb}: E* line removed")
+        if not active and o["contexts_sha256"] != o["upstream_contexts_sha256"]:
+            problems.append(f"turn {o['turn_index']} {o['agent']}: render differs from upstream render")
+    if not receiver_prompts:
+        problems.append("no receiver prompt inside the horizon")
+    if m_star - seen_m:
+        problems.append("M* ids absent from receiver's unmasked observations")
+    return CheckResult("V05b", "placebo_render_exact_every_prompt", FAIL if problems else PASS,
+                       {"arm": "N", "prompts_checked": len(observations), "receiver_prompts": receiver_prompts,
+                        "m_star": sorted(m_star), "problems": problems[:20]})
+
+
 def check_model_identity(records: Sequence[RequestRecord], configured_model: str, expected_params=None) -> CheckResult:
     bad = [{"seq": r.seq, "requested": r.request["params"].get("model"), "reported": (r.response or {}).get("model")}
            for r in records if r.request["params"].get("model") != configured_model

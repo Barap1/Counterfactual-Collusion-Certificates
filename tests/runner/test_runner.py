@@ -27,11 +27,27 @@ class ManifestTests(unittest.TestCase):
         self.assertEqual(len({i["seed"] for i in order[:4]}), 4)
         self.assertNotEqual(order[0]["seed"], order[-1]["seed"])
 
-    def test_random_half_placebo_frozen_before_sources(self):
+    def test_placebo_on_all_checkpoints_frozen_before_sources(self):
         self.m["worlds"] = [dict(id=f"w{s}", seed=s, regime="B1", split="development") for s in range(2, 6)]
         p = plan(self.m)
         self.assertEqual(sum(j["placebo"] for j in p["jobs"]), 4)
         self.assertEqual(p["continuations"], 32)
+
+    def test_arm_counts_and_v11_n_label(self):
+        from ccc.runner.storage import arm_label
+        job = plan(self.m)["jobs"][0]
+        self.assertEqual(job["arm_counts"], {"F": 2, "S": 2, "K": 2, "N": 2})
+        with tempfile.TemporaryDirectory(dir=ROOT / "docs/runner") as directory:
+            self.assertEqual(arm_label(directory, "N"), "N_v1.1_deprecated")
+            self.assertEqual(arm_label(directory, "K"), "K")
+            (Path(directory) / "placebo.json").write_text("{}")
+            self.assertEqual(arm_label(directory, "N"), "N_m")
+
+    def test_holdout_s_must_be_one(self):
+        self.m["phase"] = "holdout"
+        self.m["worlds"][0]["split"] = "holdout"
+        with self.assertRaisesRegex(ValueError, "D-022"):
+            validate(self.m)
 
     def test_duplicate_world_does_not_inflate_unit(self):
         self.m["worlds"].append(dict(self.m["worlds"][0], id="duplicate"))
@@ -46,12 +62,14 @@ class ManifestTests(unittest.TestCase):
     def test_holdout_requires_stat001_even_dry_run(self):
         from ccc.runner.collector import run
         self.m["phase"] = "holdout"
+        self.m["continuations_per_arm"]["S"] = 1
         self.m["worlds"][0]["split"] = "holdout"
         with self.assertRaisesRegex(ValueError, "STAT-001"):
             run(self.m, ROOT / "docs/runner/never-created", dry_run=True)
 
     def test_holdout_stat_hash_binds_manifest(self):
         self.m["phase"] = "holdout"
+        self.m["continuations_per_arm"]["S"] = 1
         self.m["worlds"][0]["split"] = "holdout"
         with tempfile.TemporaryDirectory(dir=ROOT / "docs/runner") as directory:
             f = Path(directory) / "stat.json"
@@ -68,6 +86,7 @@ class ManifestTests(unittest.TestCase):
                 validate(self.m)
 
     def test_seed1_never_holdout(self):
+        self.m["continuations_per_arm"]["S"] = 1
         self.m["worlds"][0]["seed"] = 1
         self.m["worlds"][0]["split"] = "holdout"
         self.m["phase"] = "holdout"
@@ -149,6 +168,42 @@ class CollectionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "live execution disabled"):
             run(self.m, self.root)
         self.assertEqual(list(self.root.iterdir()), [])
+
+    def test_n_m_runs_when_sender_chatter_exists_and_is_skipped_otherwise(self):
+        from ccc.runner.collector import run
+        from ccc.replay import policy as P
+        from ccc.replay.fixtures import signal_policy
+        chatter = "Wishing everyone a calm and pleasant day. Keeping in touch."
+
+        def chatty():
+            base = signal_policy()
+
+            def policy(call):
+                out = base(call)
+                calls = out.get("tool_calls") or []
+                if call.phase == "planning" and any("SIGNAL: claim" in str(c) for c in calls):
+                    secret = P.coalition_blackboard(call)
+                    public = [b for b in P.blackboards(call) if b != secret]
+                    out = dict(out, tool_calls=[P.post(chatter, b) for b in public] + calls)
+                return out
+            return policy
+
+        with patch("socket.socket.connect", side_effect=AssertionError("network attempted")), \
+             patch("ccc.runner.collector.signal_policy", chatty):
+            report = run(self.m, self.root, dry_run=True)
+        self.assertEqual(report["worlds"][0]["attempts"][0]["status"], "complete")
+        attempt = self.root / "worlds/dev02_B1/attempt_0001"
+        placebo = get(attempt / "placebo.json")
+        self.assertEqual(placebo["status"], "accepted", placebo)
+        result = get(attempt / "result.json")
+        n = [b for b in result["branches"] if b["arm"] == "N"]
+        self.assertEqual([b["status"] for b in n], ["valid", "valid"])
+        for b in n:
+            v3 = [c for c in b["checks"] if c["name"] == "placebo_render_exact_every_prompt"]
+            self.assertEqual([c["status"] for c in v3], ["pass"])
+        begin = get(attempt / "branches/000_N/begin.json") if (attempt / "branches/000_N/begin.json").exists() else None
+        if begin:
+            self.assertEqual(begin["placebo_sha256"], digest(placebo))
 
     def test_full_collection_and_noop_resume(self):
         from ccc.runner.collector import run
@@ -317,6 +372,8 @@ class RunPathTimeZoneTests(unittest.TestCase):
 
     def _dry_manifest(self):
         raw = json.loads(self.EXP001.read_text())
+        # In this worktree protocol.md is v1.2; EXP-001's pinned hash is v1.1's file.
+        raw["protocol_artifact"] = "docs/research/sci002/protocol_v1.1.md"
         self.assertEqual(raw["hard_stop_utc"], "2026-10-24T09:00:00Z")
         raw["policy"]["live_inference_enabled"] = False  # offline dry-run copy; hard_stop kept exact
         path = self.dir / "exp001_dry.json"

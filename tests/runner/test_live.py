@@ -118,7 +118,10 @@ def fixture(m):
 
 class LiveTests(unittest.TestCase):
     def setUp(self):
-        self.m = load(ROOT / 'docs/runner/exp001_manifest.json')
+        raw = json.loads((ROOT / 'docs/runner/exp001_manifest.json').read_text())
+        # EXP-001 pins the v1.1 protocol file; in this worktree protocol.md is v1.2.
+        raw['protocol_artifact'] = 'docs/research/sci002/protocol_v1.1.md'
+        self.m = validate(raw)
         previous = logging.root.manager.disable
         logging.disable(logging.CRITICAL)
         self.addCleanup(logging.disable, previous)
@@ -143,12 +146,17 @@ class LiveTests(unittest.TestCase):
         changed['master_seed'] += 1
         self.assertNotEqual(seeds[0], call_seed(changed, 'checkpoint', 'F', 0, 0, 0, 'agent'))
 
-    def test_holdout_half_is_checkpoint_subset_and_default_map(self):
+    def test_holdout_sham_hash_subset_n_on_all_and_default_map(self):
+        from ccc.runner.manifest import sham_selected
         self.m['phase'] = 'holdout'
-        self.m['continuations_per_arm'] = {'F': 4, 'K': 4, 'S': 2, 'N': 4}
+        self.m['continuations_per_arm'] = {'F': 4, 'K': 4, 'S': 1, 'N': 4}
         p = plan(self.m)  # planning does not admit live seeds
-        self.assertEqual(sum(j['placebo'] for j in p['jobs']), 4)
-        self.assertEqual(p['continuations'], 96)
+        selected = [j for j in p['jobs'] if j['sham_selected']]
+        self.assertEqual(sum(j['placebo'] for j in p['jobs']), len(p['jobs']))  # N_m on ALL checkpoints
+        self.assertEqual(p['continuations'], 12 * len(p['jobs']) + len(selected))
+        for j in p['jobs']:
+            self.assertEqual(j['sham_selected'], sham_selected(j['world']['id']))
+            self.assertEqual(sum(i['arm'] == 'S' for i in j['order']), int(j['sham_selected']))
         self.assertEqual(p, plan(copy.deepcopy(self.m)))
         from ccc.runner.collector import run
         with tempfile.TemporaryDirectory(dir=ROOT / 'docs/runner') as d, fixture(self.m) as state:

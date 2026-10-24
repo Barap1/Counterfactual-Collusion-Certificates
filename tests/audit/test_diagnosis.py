@@ -11,7 +11,7 @@ class DiagnosisIntegration(unittest.TestCase):
     setUp = test_native.NativeIntegration.setUp
     probe = test_native.NativeIntegration.probe
     def test_v07_carriers_reach_decision(self):
-        result = self.probe('A5a-verbatim', 12000)
+        result = self.probe('A5a-verbatim', 12005)
         flags = {flag for c in result['checks'] if c['id'] == 'V07'
                  for flag in c['details'].get('flags', [])}
         self.assertTrue(flags)
@@ -49,6 +49,26 @@ class DiagnosisIntegration(unittest.TestCase):
                     count += 1
         self.assertEqual(count, 10)
         print('GA-DIAG inactive A6b: 10/10 valid; clean K request hashes and outcomes identical; one receiver observation each')
+
+    def test_active_a6b_has_later_visible_read_and_intended_validator_fires(self):
+        from ccc.replay import engine
+        from ccc.fixtures.jira import assert_a6b_precondition
+        original = engine.run_branch
+        clean = []
+        def capture(cp, arm, *args, **kwargs):
+            branch = original(cp, arm, *args, **kwargs)
+            if arm == "F":
+                clean.append((cp, branch))
+            return branch
+        world = generate_dev("A6b", 12001, split_manifest(), require_fault_exercisable=True)
+        with patch.object(engine, "run_branch", side_effect=capture):
+            result = native_case(world)
+        self.assertTrue(result["fault_exercised"], result)
+        cp, factual = clean[0]
+        assert_a6b_precondition(world, factual.world.protocol.observations, cp.exposure)
+        self.assertEqual(result["CCC"]["status"], "invalid")
+        self.assertTrue(any(c["id"] in ("V3", "V05b") and c["status"] == "fail"
+                            for c in result["checks"]))
 
     def test_merge_keeps_flags_and_provenance_without_mutation(self):
         found = {'post_fork_carrier': {'turn': 3}}

@@ -24,6 +24,14 @@ def file_hash(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+SHAM_RULE = 'int(sha256("ccc.sham.v1|" + checkpoint_id).hexdigest(), 16) % 2 == 0'
+
+
+def sham_selected(checkpoint_id):
+    """D-022 / amendment §6: held-out S (n = 1) runs on a checkpoint iff the hash parity is even."""
+    return int(hashlib.sha256(("ccc.sham.v1|" + checkpoint_id).encode()).hexdigest(), 16) % 2 == 0
+
+
 def freeze_hash(m):
     normalized = dict(m)
     normalized.setdefault("continuations_per_arm", {"F": 4, "K": 4, "S": 2, "N": 4})
@@ -49,6 +57,8 @@ def validate(m):
         if file_hash(repo_file(m[path_key])) != m.get(hash_key):
             raise ValueError(f"{hash_key} mismatch")
     m.setdefault("continuations_per_arm", {"F": 4, "K": 4, "S": 2, "N": 4})
+    if m.get("phase") == "holdout" and (m["continuations_per_arm"] or {}).get("S") != 1:
+        raise ValueError("held-out S is n = 1 on the hash-selected checkpoints (D-022)")
     if m.get("phase") == "holdout" or any(w.get("split") == "holdout" for w in m.get("worlds", [])):
         freeze = m.get("stat001", {})
         if freeze.get("task_id") != "STAT-001" or not re.fullmatch(r"[0-9a-f]{64}", freeze.get("sha256", "")):
@@ -68,11 +78,13 @@ def validate(m):
         raise ValueError("common_randomness_claim must be none")
     arms = m.get("arms", [])
     if set(arms) != {"F", "S", "K", "N"} or len(arms) != 4:
-        raise ValueError("declare F/S/K/N; N is collected on the frozen random half")
+        raise ValueError("declare F/S/K/N; N_m runs on every checkpoint with M* non-empty (v1.2)")
     counts = m["continuations_per_arm"]
+    floor = {a: (1 if a == "S" and m.get("phase") == "holdout" else 2) for a in arms}
     if not isinstance(counts, dict) or set(counts) != set(arms) or any(
-            type(n) is not int or n < 2 for n in counts.values()):
-        raise ValueError("continuations_per_arm must map F/S/K/N to integers >= 2")
+            type(n) is not int or n < floor[a] for a, n in counts.items()):
+        raise ValueError("continuations_per_arm must map F/S/K/N to integers >= 2 (held-out S >= 1)")
+
     if type(m.get("max_requests")) is not int or m["max_requests"] <= 0:
         raise ValueError("max_requests must be a positive integer")
     for key in ("branch_order_seed", "master_seed", "placebo_subset_seed"):
@@ -112,8 +124,6 @@ def validate(m):
         raise ValueError("world ids must be present and unique")
     if len({(w["seed"], w["regime"]) for w in worlds}) != len(worlds):
         raise ValueError("duplicate world seed/regime")
-    if m["phase"] == "holdout" and len(worlds) % 2:
-        raise ValueError("held-out checkpoint slots must be even for exact 50% N subset")
     seeds = {}
     for w in worlds:
         if not re.fullmatch(r"[A-Za-z0-9_-]+", w["id"]) or type(w["seed"]) is not int:
@@ -161,13 +171,12 @@ def call_seed(m, checkpoint_id, arm, replicate, turn, call_k, agent=""):
 def plan(m):
     import random
 
-    # One fixed checkpoint slot per base trajectory; sample before any source calls/outcomes.
-    ids = sorted(w["id"] for w in m["worlds"])
-    random.Random(m["placebo_subset_seed"]).shuffle(ids)
-    placebo = set(ids[:len(ids) // 2]) if m["phase"] == "holdout" else set(ids)
+    # One fixed checkpoint slot per base trajectory; decided before any source calls/outcomes.
+    # v1.2: N_m on ALL checkpoints (whether M* is non-empty is decided at collection time and
+    # recorded in placebo.json); held-out S runs on the hash-selected checkpoints only (D-022).
     jobs = []
     for w in m["worlds"]:
-        arms = [a for a in m["arms"] if a != "N" or w["id"] in placebo]
+        arms = [a for a in m["arms"] if a != "S" or m["phase"] != "holdout" or sham_selected(w["id"])]
         order = []
         for rep in range(max(m["continuations_per_arm"].values())):
             block = [a for a in arms if rep < m["continuations_per_arm"][a]]
@@ -175,7 +184,9 @@ def plan(m):
             rng.shuffle(block)
             order.extend({"arm": arm, "replicate": rep,
                           "seed": call_seed(m, w["id"], arm, rep, -1, 0)} for arm in block)
-        jobs.append({"world": w, "order": order, "placebo": "N" in arms})
+        counts = {a: sum(i["arm"] == a for i in order) for a in m["arms"]}
+        jobs.append({"world": w, "order": order, "placebo": "N" in arms, "arm_counts": counts,
+                     "sham_selected": sham_selected(w["id"]) if m["phase"] == "holdout" else True})
     return {"manifest_sha256": digest(m), "independent_worlds": len({w["seed"] for w in m["worlds"]}),
             "base_trajectories": len(jobs), "continuations": sum(len(j["order"]) for j in jobs),
             "max_requests": m["max_requests"], "jobs": jobs,

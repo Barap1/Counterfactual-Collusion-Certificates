@@ -26,11 +26,11 @@ from .prompt_diff import check_prompt_diffs
 from .leak_scan import scan_leaks
 from .recorder import RequestRecord, request_payload
 from .validators import (FAIL, NA, PASS, CheckResult, check_fresh, check_mask_leaks, check_model_identity,
-                         check_prior_exposure, check_render_every_prompt, check_tool_echo, check_tool_protocol, ok)
+                         check_prior_exposure, check_placebo_render, check_render_every_prompt, check_tool_echo, check_tool_protocol, ok)
 from .world import ColosseumWorld, RestoreError, Snapshot, WorldSpec, upstream_provenance, DYNAMIC_SCHEMA
 
 CHECKPOINT_SCHEMA = "ccc.checkpoint.v1"
-ARMS = ("F", "S", "K", "N", "C")
+ARMS = ("F", "S", "K", "N", "C", "N_v1.1_deprecated")
 DEFAULT_ARMS = ("F", "S", "K")
 PolicyFactory = Callable[[], Policy]
 
@@ -110,6 +110,33 @@ def candidate_exposures(source: SourceRun, *, kinds=("communication",)) -> List[
                                         content=str((e.get("payload") or {}).get("content") or ""),
                                         posted_turn=posted_turn, first_exposure_turn=min(seen)))
     return out
+
+
+def event_rows(source: SourceRun) -> List[Dict[str, Any]]:
+    """Plain event rows for the placebo selector (AMD §3.1): ``turn_index`` is the turn after which
+    the event first exists, ``seq`` the event-log timestamp. No outcome or model output is read."""
+    import json
+    first_seen = {}
+    for cur in sorted(source.world.snapshots):
+        d = json.loads(source.world.snapshots[cur].dynamic)
+        for b in d["megaboard"]["blackboards"]:
+            for e in b["logs"]:
+                first_seen.setdefault(e["id"], cur)
+    rows = []
+    for b in source.world.protocol.megaboard.blackboards:
+        for e in b.logs:
+            rows.append({"id": e["id"], "agent": e.get("agent"), "kind": e.get("kind"),
+                         "board": str(b.blackboard_id),
+                         "content": str((e.get("payload") or {}).get("content") or ""),
+                         "turn_index": first_seen[e["id"]] - 1, "seq": e.get("ts", 0)})
+    return rows
+
+
+def placebo_exposure(exposure: ExposureSpec, m_star) -> ExposureSpec:
+    """N_m: the K mask code path applied to M* in place of E* (same receiver and horizon)."""
+    import dataclasses
+    m_star = tuple(m_star)
+    return dataclasses.replace(exposure, event_id=m_star[0], copy_event_ids=m_star[1:])
 
 
 # ----------------------------------------------------------------------------------------------
@@ -269,16 +296,32 @@ class BranchResult:
         return next((o for o in self.world.protocol.observations if o["agent"] == agent and o["turn_index"] == turn_index), None)
 
 
+def _world_aliases(world):
+    """Per-world binding of the frozen description pattern to task ids (public task table)."""
+    from ccc.audit.commitments import world_aliases
+    tasks = getattr(world.env, "tasks", None)
+    if not isinstance(tasks, dict):
+        return None
+    try:
+        return world_aliases({k: v for k, v in tasks.items() if isinstance(v, dict)})
+    except Exception:
+        return None
+
+
 def run_branch(cp: Checkpoint, arm: str, client_factory, *, replicate_id: str = "0", hook=None,
                other_response_ids: set = frozenset(), other_request_ids: set = frozenset(), ledger_dir=None,
-               execution_metadata=None) -> BranchResult:
+               execution_metadata=None, placebo_ids=None) -> BranchResult:
     if arm not in ARMS:
         raise ValueError(f"arm must be one of {ARMS}")
     checks: List[CheckResult] = []
     from .ledger import persist_branch
 
     def finish(result):
-        result.execution_metadata = execution_metadata or {"order": "single branch; sampling order not established"}
+        result.execution_metadata = dict(execution_metadata or {"order": "single branch; sampling order not established"})
+        if arm == "N":
+            from ccc.audit.decision import PLACEBO_SURFACE_NOTE
+            result.execution_metadata["placebo_control"] = {
+                "label": "N_m", "M_star": list(placebo_ids or ()), "surface_note": PLACEBO_SURFACE_NOTE}
         result.ledger_path = persist_branch(cp, result, ledger_dir)
         return result
 
@@ -295,10 +338,22 @@ def run_branch(cp: Checkpoint, arm: str, client_factory, *, replicate_id: str = 
     except RestoreError as exc:
         return finish(BranchResult(arm, replicate_id, None, [CheckResult("V15", "restore", FAIL, {"error": str(exc)})], None,
                             "invalid", [f"restore failed: {exc}"]))
+    legacy_placebo = arm == "N_v1.1_deprecated"
+    validation_arm = "N" if legacy_placebo else arm
+    if legacy_placebo and hook is None:
+        hook = neutral_placebo_hook(cp.exposure)
+    n_exposure = None
+    if arm == "N":
+        if not placebo_ids:
+            raise ValueError("arm N is the v1.2 matched message mask: pass placebo_ids (M*); the v1.1 filler "
+                             "placebo is N_v1.1_deprecated and is no longer selected by default")
+        n_exposure = placebo_exposure(cp.exposure, placebo_ids)
+        if hook is None:
+            hook = receiver_mask_hook(n_exposure)
     if hook is None:
         hook = {"F": None, "S": sham_hook(), "K": receiver_mask_hook(cp.exposure),
-                "N": neutral_placebo_hook(cp.exposure), "C": channel_mask_hook(cp.exposure)}[arm]
-    world.set_view_hook(hook, {"F": "none", "S": "sham_identity", "K": "receiver_mask", "N": "neutral_placebo", "C": "channel_mask"}[arm] if hook is not None else "none")
+                "N": None, "C": channel_mask_hook(cp.exposure)}[arm]
+    world.set_view_hook(hook, {"F": "none", "S": "sham_identity", "K": "receiver_mask", "N": "matched_message_mask", "C": "channel_mask", "N_v1.1_deprecated": "neutral_placebo"}[arm] if hook is not None else "none")
     status, reasons = "valid", []
     try:
         world.run_turns()
@@ -312,10 +367,15 @@ def run_branch(cp: Checkpoint, arm: str, client_factory, *, replicate_id: str = 
     import json
     prefix_ids = [e["id"] for b in json.loads(cp.snapshot.dynamic)["megaboard"]["blackboards"] for e in b["logs"]]
     checks.append(scan_leaks(cp.exposure, world.ledger.records, world.prompt_audits, prefix_ids,
-                             tuple(world.env.tasks)) if arm in ("K", "N", "C")
-                  else CheckResult("V07", "mask_no_leak", NA, {}))
-    checks.append(check_prompt_diffs(arm, world.prompt_audits, cp.exposure))
-    checks.append(check_render_every_prompt(arm, world.protocol.observations, cp.exposure))
+                             tuple(world.env.tasks), _world_aliases(world)) if arm in ("K", "C")
+                  else CheckResult("V07", "mask_no_leak", NA, {"arm": arm, "note": "N_m uses V3-N below"}))
+    if n_exposure is not None:
+        # V3 for N: M* never rendered, E* lines unchanged, render = unmasked render minus exactly M*.
+        checks.append(check_prompt_diffs("K", world.prompt_audits, n_exposure))
+        checks.append(check_placebo_render(world.protocol.observations, cp.exposure, placebo_ids))
+    else:
+        checks.append(check_prompt_diffs(validation_arm, world.prompt_audits, cp.exposure))
+        checks.append(check_render_every_prompt(validation_arm, world.protocol.observations, cp.exposure))
     expected_params = {r.phase: r.request["params"] for r in cp.source.ledger.records}
     identity = check_model_identity(world.ledger.records, world.model_name, expected_params)
     checks.append(identity)

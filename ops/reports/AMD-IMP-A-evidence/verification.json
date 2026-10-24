@@ -1,0 +1,876 @@
+{
+  "freeze_hash_checks": [
+    {
+      "path": "ccc/audit/commitments.py",
+      "expected": "5527650c90648b5bb6fb674e4c38bbfb525c44ffc5b8223bc67ac5447f9e2a98",
+      "actual": "5527650c90648b5bb6fb674e4c38bbfb525c44ffc5b8223bc67ac5447f9e2a98",
+      "match": true
+    },
+    {
+      "path": "ccc/audit/commitment_aliases.json",
+      "expected": "859ece019675ad36ae6b66fbbb659e88183947e8f690ca7e4f474e6a54a93645",
+      "actual": "859ece019675ad36ae6b66fbbb659e88183947e8f690ca7e4f474e6a54a93645",
+      "match": true
+    },
+    {
+      "path": "ccc/fixtures/chatter_templates.json",
+      "expected": "8f204b6baf2aea9567e11a29ef19ac89b7c89c7122dcc61724b9c53f0de85794",
+      "actual": "8f204b6baf2aea9567e11a29ef19ac89b7c89c7122dcc61724b9c53f0de85794",
+      "match": true
+    },
+    {
+      "path": "docs/research/sci002/a6_validator_map.json",
+      "expected": "5610f626c9d3c025d9dc9a8cacfbf579d605e35644fe2602c38a1a57a3d9eace",
+      "actual": "5610f626c9d3c025d9dc9a8cacfbf579d605e35644fe2602c38a1a57a3d9eace",
+      "match": true
+    },
+    {
+      "path": "docs/research/sci002/blind_labels.md",
+      "expected": "16b38fe3962151a032c1c67d28012f5071af2cf8e9787ecbb7761933a23a9053",
+      "actual": "16b38fe3962151a032c1c67d28012f5071af2cf8e9787ecbb7761933a23a9053",
+      "match": true
+    },
+    {
+      "path": "tests/audit/test_commitments_contract.py",
+      "expected": "d443618db5a24d227f60e7ae20ba2e93c7ec165608724f725c0a833e382274a0",
+      "actual": "d443618db5a24d227f60e7ae20ba2e93c7ec165608724f725c0a833e382274a0",
+      "match": true
+    },
+    {
+      "path": "docs/research/sci002/constructed_controls.json",
+      "expected": "ac6a70331590d667186e0f8a39927c6172bd7223aae02c304d77c4c0e5bcadb7",
+      "actual": "ac6a70331590d667186e0f8a39927c6172bd7223aae02c304d77c4c0e5bcadb7",
+      "match": true
+    },
+    {
+      "path": "docs/research/sci002/constructed_controls.md",
+      "expected": "c10df4cee28951bcf9ef298eb7b25fcf6ab3032a59b7a74a13244fc37838567f",
+      "actual": "c10df4cee28951bcf9ef298eb7b25fcf6ab3032a59b7a74a13244fc37838567f",
+      "match": true
+    },
+    {
+      "path": "docs/research/sci002/constructed_controls.sha256",
+      "expected": "7d6c2c5933e2587248903446b1b39924d810795a9caf44fd07b484e581b63847",
+      "actual": "7d6c2c5933e2587248903446b1b39924d810795a9caf44fd07b484e581b63847",
+      "match": true
+    }
+  ],
+  "check_fresh_unchanged_from_HEAD": true,
+  "census_fx1_identical": true,
+  "census_fx1_summary": {
+    "errors": [],
+    "family_share_0.25": {
+      "A1": 0.0,
+      "A2": 0.0,
+      "A3": 0.0,
+      "A4": 0.0,
+      "A5": 0.0,
+      "A6": 0.0
+    },
+    "instances": 800,
+    "table": {
+      "case:A1a": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A1b": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A2a": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A2b": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A3a": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A3b": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 20,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 20
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A4a": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 0,
+        "instances": 40,
+        "reasons_0.25": {},
+        "share_1/10": null,
+        "share_1/2": null,
+        "share_1/4": null
+      },
+      "case:A4b": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A5a-paraphrase": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A5a-verbatim": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A5b": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A6a": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A6b": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A6c-F": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A6c-K": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A6d": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A6e": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A6f": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A6g": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "case:A6h": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "family:A1": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 80,
+        "instances": 80,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 80
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "family:A2": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 80,
+        "instances": 80,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 80
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "family:A3": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 60,
+        "instances": 80,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 60
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "family:A4": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 40,
+        "instances": 80,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 40
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "family:A5": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 120,
+        "instances": 120,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 120
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "family:A6": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 360,
+        "instances": 360,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 360
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "stratum:crossed": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 370,
+        "instances": 400,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 370
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "stratum:naturalistic": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 370,
+        "instances": 400,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 370
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "wording:explicit": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 370,
+        "instances": 400,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 370
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      },
+      "wording:implicit": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 370,
+        "instances": 400,
+        "reasons_0.25": {
+          "fewer_than_k_candidates": 370
+        },
+        "share_1/10": 0.0,
+        "share_1/2": 0.0,
+        "share_1/4": 0.0
+      }
+    },
+    "trigger_families": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6"
+    ],
+    "trigger_fires": true
+  },
+  "census_fx2_identical": true,
+  "census_fx2_summary": {
+    "errors": [],
+    "family_share_0.25": {
+      "A1": 1.0,
+      "A2": 1.0,
+      "A3": 1.0,
+      "A4": 1.0,
+      "A5": 1.0,
+      "A6": 1.0
+    },
+    "instances": 800,
+    "table": {
+      "case:A1a": {
+        "available_1/10": 14,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.35,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A1b": {
+        "available_1/10": 14,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.35,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A2a": {
+        "available_1/10": 20,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A2b": {
+        "available_1/10": 5,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.125,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A3a": {
+        "available_1/10": 25,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.625,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A3b": {
+        "available_1/10": 20,
+        "available_1/2": 20,
+        "available_1/4": 20,
+        "eligible": 20,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 20
+        },
+        "share_1/10": 1.0,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A4a": {
+        "available_1/10": 0,
+        "available_1/2": 0,
+        "available_1/4": 0,
+        "eligible": 0,
+        "instances": 40,
+        "reasons_0.25": {},
+        "share_1/10": null,
+        "share_1/2": null,
+        "share_1/4": null
+      },
+      "case:A4b": {
+        "available_1/10": 15,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.375,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A5a-paraphrase": {
+        "available_1/10": 15,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.375,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A5a-verbatim": {
+        "available_1/10": 15,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.375,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A5b": {
+        "available_1/10": 15,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.375,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A6a": {
+        "available_1/10": 20,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A6b": {
+        "available_1/10": 20,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A6c-F": {
+        "available_1/10": 20,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A6c-K": {
+        "available_1/10": 20,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A6d": {
+        "available_1/10": 20,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A6e": {
+        "available_1/10": 20,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A6f": {
+        "available_1/10": 20,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A6g": {
+        "available_1/10": 20,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "case:A6h": {
+        "available_1/10": 20,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 40,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "family:A1": {
+        "available_1/10": 28,
+        "available_1/2": 80,
+        "available_1/4": 80,
+        "eligible": 80,
+        "instances": 80,
+        "reasons_0.25": {
+          "null": 80
+        },
+        "share_1/10": 0.35,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "family:A2": {
+        "available_1/10": 25,
+        "available_1/2": 80,
+        "available_1/4": 80,
+        "eligible": 80,
+        "instances": 80,
+        "reasons_0.25": {
+          "null": 80
+        },
+        "share_1/10": 0.3125,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "family:A3": {
+        "available_1/10": 45,
+        "available_1/2": 60,
+        "available_1/4": 60,
+        "eligible": 60,
+        "instances": 80,
+        "reasons_0.25": {
+          "null": 60
+        },
+        "share_1/10": 0.75,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "family:A4": {
+        "available_1/10": 15,
+        "available_1/2": 40,
+        "available_1/4": 40,
+        "eligible": 40,
+        "instances": 80,
+        "reasons_0.25": {
+          "null": 40
+        },
+        "share_1/10": 0.375,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "family:A5": {
+        "available_1/10": 45,
+        "available_1/2": 120,
+        "available_1/4": 120,
+        "eligible": 120,
+        "instances": 120,
+        "reasons_0.25": {
+          "null": 120
+        },
+        "share_1/10": 0.375,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "family:A6": {
+        "available_1/10": 180,
+        "available_1/2": 360,
+        "available_1/4": 360,
+        "eligible": 360,
+        "instances": 360,
+        "reasons_0.25": {
+          "null": 360
+        },
+        "share_1/10": 0.5,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "stratum:crossed": {
+        "available_1/10": 148,
+        "available_1/2": 370,
+        "available_1/4": 370,
+        "eligible": 370,
+        "instances": 400,
+        "reasons_0.25": {
+          "null": 370
+        },
+        "share_1/10": 0.4,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "stratum:naturalistic": {
+        "available_1/10": 190,
+        "available_1/2": 370,
+        "available_1/4": 370,
+        "eligible": 370,
+        "instances": 400,
+        "reasons_0.25": {
+          "null": 370
+        },
+        "share_1/10": 0.5135135135135135,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "wording:explicit": {
+        "available_1/10": 197,
+        "available_1/2": 370,
+        "available_1/4": 370,
+        "eligible": 370,
+        "instances": 400,
+        "reasons_0.25": {
+          "null": 370
+        },
+        "share_1/10": 0.5324324324324324,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      },
+      "wording:implicit": {
+        "available_1/10": 141,
+        "available_1/2": 370,
+        "available_1/4": 370,
+        "eligible": 370,
+        "instances": 400,
+        "reasons_0.25": {
+          "null": 370
+        },
+        "share_1/10": 0.3810810810810811,
+        "share_1/2": 1.0,
+        "share_1/4": 1.0
+      }
+    },
+    "trigger_families": [],
+    "trigger_fires": false
+  }
+}
