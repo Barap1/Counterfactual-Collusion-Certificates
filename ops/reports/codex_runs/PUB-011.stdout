@@ -1,0 +1,3 @@
+Implemented the four clarity fixes in [paper/draft.md](/Users/aarav/Documents/Projects/ApartSprint/paper/draft.md); rebuilt submission outputs and recorded evidence in [PUB-011.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/PUB-011.md).
+
+The build completed. The existing PUB-009 validator failed on its stale OWNER/TODO baseline check; a comparison against the original draft confirmed numerical claims were unchanged and original VERIFIED and OWNER tags remain. No network calls or commits.
