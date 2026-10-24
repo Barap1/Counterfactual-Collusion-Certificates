@@ -2,6 +2,7 @@
 import copy
 import json
 import logging
+from datetime import datetime, timezone
 from pathlib import Path
 import socket
 import tempfile
@@ -349,6 +350,10 @@ class RunPathTimeZoneTests(unittest.TestCase):
     EXP001 = ROOT / "docs/runner/exp001_manifest.json"
 
     def setUp(self):
+        # Freeze UTC independently of the local TZ; preserve the exact deadline.
+        clock = patch("ccc.runner.collector.datetime", wraps=datetime)
+        self.addCleanup(clock.stop)
+        clock.start().now.return_value = datetime(2026, 10, 24, tzinfo=timezone.utc)
         import os
         import time
         previous = os.environ.get("TZ")

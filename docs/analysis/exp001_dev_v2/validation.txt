@@ -1,0 +1,22 @@
+Analysis suite:
+............................................s.............
+----------------------------------------------------------------------
+Ran 58 tests in 1.067s
+
+OK (skipped=1)
+
+Reproduction shell output:
+Evidence: /Users/aarav/Documents/Projects/ApartSprint/docs/release/reproduction.nTHRiP
+
+Full offline suite summary:
+Ran 407 tests in 116.977s
+OK (skipped=4)
+
+Reproduction final lines:
+  File "/Users/aarav/Documents/Projects/ApartSprint/scripts/reproduce_offline.py", line 94, in <module>
+    if __name__ == '__main__': main_driver()
+                               ~~~~~~~~~~~^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/scripts/reproduce_offline.py", line 84, in main_driver
+    assert p.read_bytes()==baseline.read_bytes(), 'output differs: '+str(relative)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: output differs: stage2.json

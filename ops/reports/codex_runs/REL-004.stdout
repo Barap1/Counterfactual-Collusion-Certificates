@@ -1,0 +1,4 @@
+Fixed `tests/runner/test_live.py` and `test_runner.py`: frozen collector clock; exact deadline and boundary checks preserved.
+Runner command exited 0: `Ran 70 tests in 24.508s` → `OK`.
+Reproduction command exited 0: `Reproduction verified: /Users/aarav/Documents/Projects/ApartSprint/docs/release/reproduction.6QTLQj`.
+Removed that generated directory; no commits or manifest changes. Logs: `/tmp/ccc-runner-clock-tests.log`, `/tmp/ccc-clock-reproduction.log`.

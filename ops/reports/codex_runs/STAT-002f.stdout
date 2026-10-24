@@ -1,0 +1,6 @@
+Fixed the decision guard, added regression coverage, and updated reproduction’s DEV reference. Tests: 58 analysis and 407 offline passed; no commits.
+Held-out: 39 outputs identical except `aggregate.json/code_hashes/study.py`.
+DEV regenerated; numeric fields unchanged. [Correction report](/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/exp001_dev_v2/CORRECTION.md) lists label, metadata, hash, and warning differences. Ignored evidence deleted. Reproduction failed on pre-existing Stage-2 hash/metadata differences:
+`assert p.read_bytes()==baseline.read_bytes(), 'output differs: '+str(relative)`
+`       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`
+`AssertionError: output differs: stage2.json`

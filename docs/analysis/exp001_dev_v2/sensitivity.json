@@ -1,0 +1,108 @@
+[
+  {
+    "L": -0.40242114017803843,
+    "U": -0.07483425291340495,
+    "analysis": "ineligible_zero",
+    "confirmatory": false,
+    "estimate": -0.21775527962892363,
+    "label": "DEV/pilot",
+    "n_independent": 3,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -0.40242114017803843,
+    "U": -0.07483425291340495,
+    "analysis": "drop_ineligible",
+    "confirmatory": false,
+    "estimate": -0.21775527962892363,
+    "label": "DEV/pilot",
+    "n_independent": 3,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -0.40242114017803843,
+    "U": -0.17601044579532754,
+    "analysis": "leave_one_world_out",
+    "confirmatory": false,
+    "estimate": -0.289215792986683,
+    "label": "DEV/pilot",
+    "n_independent": 2,
+    "omitted_world": "2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -0.40242114017803843,
+    "U": -0.07483425291340495,
+    "analysis": "leave_one_world_out",
+    "confirmatory": false,
+    "estimate": -0.2386276965457217,
+    "label": "DEV/pilot",
+    "n_independent": 2,
+    "omitted_world": "3",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -0.17601044579532754,
+    "U": -0.07483425291340495,
+    "analysis": "leave_one_world_out",
+    "confirmatory": false,
+    "estimate": -0.12542234935436625,
+    "label": "DEV/pilot",
+    "n_independent": 2,
+    "omitted_world": "4",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -7.520013296878938,
+    "U": -0.12542234935436625,
+    "analysis": "worst_missing",
+    "confirmatory": false,
+    "estimate": -2.655320021531728,
+    "label": "DEV/pilot",
+    "limitation": "fills use observed same-regime arm range; no observed range leaves undefined",
+    "n_independent": 4,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -0.32052441836188006,
+    "U": 7.432008073981274,
+    "analysis": "best_missing",
+    "confirmatory": false,
+    "estimate": 2.3286871020883426,
+    "label": "DEV/pilot",
+    "limitation": "fills use observed same-regime arm range; no observed range leaves undefined",
+    "n_independent": 4,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -0.40242114017803843,
+    "U": -0.07483425291340495,
+    "analysis": "noncommit_excluded",
+    "confirmatory": false,
+    "estimate": -0.21775527962892363,
+    "label": "DEV/pilot",
+    "limitation": "fills use observed same-regime arm range; no observed range leaves undefined",
+    "n_independent": 3,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -1.0367246235761236,
+    "U": -0.06219383122146738,
+    "analysis": "S_pooled_F",
+    "confirmatory": false,
+    "estimate": -0.4925380445277021,
+    "label": "DEV/pilot",
+    "limitation": "fills use observed same-regime arm range; no observed range leaves undefined",
+    "n_independent": 3,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

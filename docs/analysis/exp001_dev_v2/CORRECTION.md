@@ -1,0 +1,265 @@
+# DEV analysis correction
+
+Non-confirmatory study decisions remain exploratory. All original output files were compared; every pre-existing numeric JSON token and every pre-existing non-label CSV cell is identical (except the disclosed stale-lock warning). Label strings, disclosed source provenance hashes, additive metadata fields, and the stale-lock warning marker path differ. Every pre-existing numeric field is identical; additive fields are listed explicitly below, including n_eligibility_unobserved=0. Thus the expected label-only comparison does not hold against this older archive. ["NUM", token] denotes an exact serialized JSON number. Originals and runner data were preserved.
+
+- `aggregate.json`: 0, 2, __main__.py, loaders.py, pipeline.py, runner_input.py, stage2.py, study.py, synthetic.
+- `attempts.csv`: identical.
+- `attempts.json`: identical.
+- `checkpoint_certificates.csv`: eligibility_observed, info_bearing_source, placebo_contrast_status, theta, weak_detector, world_attempt_status.
+- `checkpoint_certificates.json`: eligibility_observed, info_bearing_source, placebo_contrast_status, theta, weak_detector, world_attempt_status.
+- `claims_candidates.jsonl`: identical.
+- `continuations.csv`: identical.
+- `continuations.json`: identical.
+- `cost_throughput.csv`: identical.
+- `cost_throughput.json`: identical.
+- `coverage.csv`: identical.
+- `coverage.json`: identical.
+- `effects_study.csv`: label, n_eligibility_unobserved, rate_definition, tier.
+- `effects_study.json`: label, n_eligibility_unobserved, rate_definition, tier.
+- `events_accounting.csv`: identical.
+- `events_accounting.json`: identical.
+- `figure_data/fig_delta_by_world.csv`: identical.
+- `figure_data/fig_delta_by_world.json`: identical.
+- `figure_data/fig_missingness.csv`: identical.
+- `figure_data/fig_missingness.json`: identical.
+- `figure_data/fig_sham_noise.csv`: identical.
+- `figure_data/fig_sham_noise.json`: identical.
+- `figure_data/fig_status_stack.csv`: identical.
+- `figure_data/fig_status_stack.json`: identical.
+- `figure_data/fig_tau_vector.csv`: identical.
+- `figure_data/fig_tau_vector.json`: identical.
+- `missingness.csv`: identical.
+- `missingness.json`: identical.
+- `scheduled_statuses.csv`: identical.
+- `scheduled_statuses.json`: identical.
+- `sensitivity.csv`: identical.
+- `sensitivity.json`: identical.
+- `status_crosscheck.csv`: identical.
+- `status_crosscheck.json`: identical.
+- `validation_report.json`: 0, synthetic.
+- `validity_checks.csv`: identical.
+- `validity_checks.json`: identical.
+- `world_effects.csv`: eligibility_observed, world_attempt_status.
+- `world_effects.json`: eligibility_observed, world_attempt_status.
+
+## Every differing DEV field
+39 output files compared.
+- `aggregate.json/synthetic`: "<absent>" → false
+- `aggregate.json/code_hashes/runner_input.py`: "<absent>" → "1d2271e345202c358f1c9399422ee0a1265bdf8114ae93f664c8fe735859241a"
+- `aggregate.json/code_hashes/__main__.py`: "fcbc737366e9e612ad741fd6063a3e63bc2f08f8bf94f0e9e9fdbb517cb3aa60" → "444ee5f0b28d61671f13becf5cc1da78d2cc0e0f1ee264f81d063216f2e41110"
+- `aggregate.json/code_hashes/loaders.py`: "249ca944bbeed3045f5a204d099c54df468a7df1f2af87a169c450d4f78573ac" → "6fba6eddbcf987cb6be242577d0fb791bf1c952d5917ba4f652012356d1f1dd7"
+- `aggregate.json/code_hashes/pipeline.py`: "fc31358df5fbf310fd603b1728d36b372fb44bf716530e6e8584329774363203" → "965092e570b36867281a042260de1ed257c186d01697287aa46becbc730f4329"
+- `aggregate.json/code_hashes/stage2.py`: "bfc3d84753fa2e6839819d3a95cac700a434f0b900918bbd1221683620131acd" → "814e451070d4100b16752d0bba6dac14719d8fda156a418ec077deabcb370a33"
+- `aggregate.json/code_hashes/study.py`: "6da7276de66682086f6e4350eda320897a20dfc7787676a91630eb2902cd592e" → "b0d87bafeef5cfb8dde8f5f726284dd2c1cba40eaf1aef52d69b9c07559366ba"
+- `aggregate.json/limitations/0`: "Tier B exploratory per protocol v1.2 / DEV-001" → "Tier-B case certificates exploratory; study-level confirmatory inference per D-034"
+- `aggregate.json/limitations/2`: "Legacy DEV metadata cannot establish v1.2 validity" → "Runner metadata may leave validity/info_bearing unestablished; no inferred pass"
+- `checkpoint_certificates.csv/0/weak_detector`: "<absent>" → ""
+- `checkpoint_certificates.csv/0/eligibility_observed`: "<absent>" → "True"
+- `checkpoint_certificates.csv/0/world_attempt_status`: "<absent>" → ""
+- `checkpoint_certificates.csv/0/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.csv/0/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.csv/0/theta`: "<absent>" → ""
+- `checkpoint_certificates.csv/1/weak_detector`: "<absent>" → ""
+- `checkpoint_certificates.csv/1/eligibility_observed`: "<absent>" → "True"
+- `checkpoint_certificates.csv/1/world_attempt_status`: "<absent>" → ""
+- `checkpoint_certificates.csv/1/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.csv/1/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.csv/1/theta`: "<absent>" → ""
+- `checkpoint_certificates.csv/2/weak_detector`: "<absent>" → ""
+- `checkpoint_certificates.csv/2/eligibility_observed`: "<absent>" → "True"
+- `checkpoint_certificates.csv/2/world_attempt_status`: "<absent>" → ""
+- `checkpoint_certificates.csv/2/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.csv/2/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.csv/2/theta`: "<absent>" → ""
+- `checkpoint_certificates.csv/3/weak_detector`: "<absent>" → ""
+- `checkpoint_certificates.csv/3/eligibility_observed`: "<absent>" → "True"
+- `checkpoint_certificates.csv/3/world_attempt_status`: "<absent>" → ""
+- `checkpoint_certificates.csv/3/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.csv/3/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.csv/3/theta`: "<absent>" → ""
+- `checkpoint_certificates.csv/4/weak_detector`: "<absent>" → ""
+- `checkpoint_certificates.csv/4/eligibility_observed`: "<absent>" → "True"
+- `checkpoint_certificates.csv/4/world_attempt_status`: "<absent>" → ""
+- `checkpoint_certificates.csv/4/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.csv/4/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.csv/4/theta`: "<absent>" → ""
+- `checkpoint_certificates.csv/5/weak_detector`: "<absent>" → ""
+- `checkpoint_certificates.csv/5/eligibility_observed`: "<absent>" → "True"
+- `checkpoint_certificates.csv/5/world_attempt_status`: "<absent>" → ""
+- `checkpoint_certificates.csv/5/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.csv/5/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.csv/5/theta`: "<absent>" → ""
+- `checkpoint_certificates.csv/6/weak_detector`: "<absent>" → ""
+- `checkpoint_certificates.csv/6/eligibility_observed`: "<absent>" → "True"
+- `checkpoint_certificates.csv/6/world_attempt_status`: "<absent>" → ""
+- `checkpoint_certificates.csv/6/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.csv/6/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.csv/6/theta`: "<absent>" → ""
+- `checkpoint_certificates.csv/7/weak_detector`: "<absent>" → ""
+- `checkpoint_certificates.csv/7/eligibility_observed`: "<absent>" → "True"
+- `checkpoint_certificates.csv/7/world_attempt_status`: "<absent>" → ""
+- `checkpoint_certificates.csv/7/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.csv/7/placebo_contrast_status`: "<absent>" → "unavailable:no_placebo_available"
+- `checkpoint_certificates.csv/7/theta`: "<absent>" → ""
+- `checkpoint_certificates.json/0/weak_detector`: "<absent>" → null
+- `checkpoint_certificates.json/0/eligibility_observed`: "<absent>" → true
+- `checkpoint_certificates.json/0/world_attempt_status`: "<absent>" → null
+- `checkpoint_certificates.json/0/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.json/0/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.json/0/theta`: "<absent>" → null
+- `checkpoint_certificates.json/1/weak_detector`: "<absent>" → null
+- `checkpoint_certificates.json/1/eligibility_observed`: "<absent>" → true
+- `checkpoint_certificates.json/1/world_attempt_status`: "<absent>" → null
+- `checkpoint_certificates.json/1/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.json/1/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.json/1/theta`: "<absent>" → null
+- `checkpoint_certificates.json/2/weak_detector`: "<absent>" → null
+- `checkpoint_certificates.json/2/eligibility_observed`: "<absent>" → true
+- `checkpoint_certificates.json/2/world_attempt_status`: "<absent>" → null
+- `checkpoint_certificates.json/2/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.json/2/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.json/2/theta`: "<absent>" → null
+- `checkpoint_certificates.json/3/weak_detector`: "<absent>" → null
+- `checkpoint_certificates.json/3/eligibility_observed`: "<absent>" → true
+- `checkpoint_certificates.json/3/world_attempt_status`: "<absent>" → null
+- `checkpoint_certificates.json/3/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.json/3/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.json/3/theta`: "<absent>" → null
+- `checkpoint_certificates.json/4/weak_detector`: "<absent>" → null
+- `checkpoint_certificates.json/4/eligibility_observed`: "<absent>" → true
+- `checkpoint_certificates.json/4/world_attempt_status`: "<absent>" → null
+- `checkpoint_certificates.json/4/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.json/4/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.json/4/theta`: "<absent>" → null
+- `checkpoint_certificates.json/5/weak_detector`: "<absent>" → null
+- `checkpoint_certificates.json/5/eligibility_observed`: "<absent>" → true
+- `checkpoint_certificates.json/5/world_attempt_status`: "<absent>" → null
+- `checkpoint_certificates.json/5/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.json/5/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.json/5/theta`: "<absent>" → null
+- `checkpoint_certificates.json/6/weak_detector`: "<absent>" → null
+- `checkpoint_certificates.json/6/eligibility_observed`: "<absent>" → true
+- `checkpoint_certificates.json/6/world_attempt_status`: "<absent>" → null
+- `checkpoint_certificates.json/6/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.json/6/placebo_contrast_status`: "<absent>" → "available"
+- `checkpoint_certificates.json/6/theta`: "<absent>" → null
+- `checkpoint_certificates.json/7/weak_detector`: "<absent>" → null
+- `checkpoint_certificates.json/7/eligibility_observed`: "<absent>" → true
+- `checkpoint_certificates.json/7/world_attempt_status`: "<absent>" → null
+- `checkpoint_certificates.json/7/info_bearing_source`: "<absent>" → "input contract"
+- `checkpoint_certificates.json/7/placebo_contrast_status`: "<absent>" → "unavailable:no_placebo_available"
+- `checkpoint_certificates.json/7/theta`: "<absent>" → null
+- `effects_study.csv/0/rate_definition`: "<absent>" → ""
+- `effects_study.csv/0/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/0/label`: "DEV/pilot" → "feasibility"
+- `effects_study.csv/0/tier`: "B" → "feasibility"
+- `effects_study.csv/1/rate_definition`: "<absent>" → ""
+- `effects_study.csv/1/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/2/rate_definition`: "<absent>" → ""
+- `effects_study.csv/2/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/3/rate_definition`: "<absent>" → ""
+- `effects_study.csv/3/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/4/rate_definition`: "<absent>" → ""
+- `effects_study.csv/4/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/5/rate_definition`: "<absent>" → ""
+- `effects_study.csv/5/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/6/rate_definition`: "<absent>" → "observed eligible / attempted worlds; unobserved eligibility retained in denominator"
+- `effects_study.csv/6/n_eligibility_unobserved`: "<absent>" → "0"
+- `effects_study.csv/7/rate_definition`: "<absent>" → ""
+- `effects_study.csv/7/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/8/rate_definition`: "<absent>" → ""
+- `effects_study.csv/8/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/9/rate_definition`: "<absent>" → ""
+- `effects_study.csv/9/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/10/rate_definition`: "<absent>" → ""
+- `effects_study.csv/10/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/11/rate_definition`: "<absent>" → "observed eligible / attempted worlds; unobserved eligibility retained in denominator"
+- `effects_study.csv/11/n_eligibility_unobserved`: "<absent>" → "0"
+- `effects_study.csv/12/rate_definition`: "<absent>" → ""
+- `effects_study.csv/12/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/13/rate_definition`: "<absent>" → ""
+- `effects_study.csv/13/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/13/label`: "DEV/pilot" → "feasibility"
+- `effects_study.csv/13/tier`: "B" → "feasibility"
+- `effects_study.csv/14/rate_definition`: "<absent>" → ""
+- `effects_study.csv/14/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/14/label`: "DEV/pilot" → "feasibility"
+- `effects_study.csv/14/tier`: "B" → "feasibility"
+- `effects_study.csv/15/rate_definition`: "<absent>" → ""
+- `effects_study.csv/15/n_eligibility_unobserved`: "<absent>" → ""
+- `effects_study.csv/15/label`: "DEV/pilot" → "feasibility"
+- `effects_study.csv/15/tier`: "B" → "feasibility"
+- `effects_study.json/0/label`: "DEV/pilot" → "feasibility"
+- `effects_study.json/0/tier`: "B" → "feasibility"
+- `effects_study.json/6/rate_definition`: "<absent>" → "observed eligible / attempted worlds; unobserved eligibility retained in denominator"
+- `effects_study.json/6/n_eligibility_unobserved`: "<absent>" → ["NUM", "0"]
+- `effects_study.json/11/rate_definition`: "<absent>" → "observed eligible / attempted worlds; unobserved eligibility retained in denominator"
+- `effects_study.json/11/n_eligibility_unobserved`: "<absent>" → ["NUM", "0"]
+- `effects_study.json/13/label`: "DEV/pilot" → "feasibility"
+- `effects_study.json/13/tier`: "B" → "feasibility"
+- `effects_study.json/14/label`: "DEV/pilot" → "feasibility"
+- `effects_study.json/14/tier`: "B" → "feasibility"
+- `effects_study.json/15/label`: "DEV/pilot" → "feasibility"
+- `effects_study.json/15/tier`: "B" → "feasibility"
+- `validation_report.json/synthetic`: "<absent>" → false
+- `validation_report.json/warnings/0`: "stale_lock_ignored: .collector.lock (marker WATCHDOG_EXIT.json, run_pid 5196 not alive)" → "stale_lock_ignored: .collector.lock (marker /Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp001-live/WATCHDOG_EXIT.json, run_pid 5196 not alive)"
+- `world_effects.csv/0/eligibility_observed`: "<absent>" → "True"
+- `world_effects.csv/0/world_attempt_status`: "<absent>" → ""
+- `world_effects.csv/1/eligibility_observed`: "<absent>" → "True"
+- `world_effects.csv/1/world_attempt_status`: "<absent>" → ""
+- `world_effects.csv/2/eligibility_observed`: "<absent>" → "True"
+- `world_effects.csv/2/world_attempt_status`: "<absent>" → ""
+- `world_effects.csv/3/eligibility_observed`: "<absent>" → "True"
+- `world_effects.csv/3/world_attempt_status`: "<absent>" → ""
+- `world_effects.csv/4/eligibility_observed`: "<absent>" → "True"
+- `world_effects.csv/4/world_attempt_status`: "<absent>" → ""
+- `world_effects.csv/5/eligibility_observed`: "<absent>" → "True"
+- `world_effects.csv/5/world_attempt_status`: "<absent>" → ""
+- `world_effects.csv/6/eligibility_observed`: "<absent>" → "True"
+- `world_effects.csv/6/world_attempt_status`: "<absent>" → ""
+- `world_effects.csv/7/eligibility_observed`: "<absent>" → "True"
+- `world_effects.csv/7/world_attempt_status`: "<absent>" → ""
+- `world_effects.json/0/eligibility_observed`: "<absent>" → true
+- `world_effects.json/0/world_attempt_status`: "<absent>" → null
+- `world_effects.json/1/eligibility_observed`: "<absent>" → true
+- `world_effects.json/1/world_attempt_status`: "<absent>" → null
+- `world_effects.json/2/eligibility_observed`: "<absent>" → true
+- `world_effects.json/2/world_attempt_status`: "<absent>" → null
+- `world_effects.json/3/eligibility_observed`: "<absent>" → true
+- `world_effects.json/3/world_attempt_status`: "<absent>" → null
+- `world_effects.json/4/eligibility_observed`: "<absent>" → true
+- `world_effects.json/4/world_attempt_status`: "<absent>" → null
+- `world_effects.json/5/eligibility_observed`: "<absent>" → true
+- `world_effects.json/5/world_attempt_status`: "<absent>" → null
+- `world_effects.json/6/eligibility_observed`: "<absent>" → true
+- `world_effects.json/6/world_attempt_status`: "<absent>" → null
+- `world_effects.json/7/eligibility_observed`: "<absent>" → true
+- `world_effects.json/7/world_attempt_status`: "<absent>" → null
+
+## Held-out comparison
+39 output files compared.
+- `aggregate.json/code_hashes/study.py`: "648c91bb51f42dce8152cd1417f693baeb16b176435a87b54d0acf5549361a23" → "b0d87bafeef5cfb8dde8f5f726284dd2c1cba40eaf1aef52d69b9c07559366ba"
+
+## Commands and validation
+- `export PATH="$PWD/starter/collusion_hackathon/colosseum/.venv/bin:$PATH"` (system Python lacks NumPy).
+- `python -m ccc.analysis run --input docs/runner/exp001-live --out docs/analysis/exp001_dev_v2`
+- `python -m ccc.analysis run --input docs/runner/exp002-live --out /tmp/ccc-heldout-decision-check --watchdog-dir docs/runner/exp002-live.watchdog`
+- `python docs/analysis/exp001_dev_v2/verify_correction.py` (all JSON, JSONL and CSV outputs compared).
+- `PYTHONPATH="$PWD/scripts/offline_guard:$PWD" starter/collusion_hackathon/colosseum/.venv/bin/python -m unittest discover -s tests/analysis -t .`
+- `/bin/zsh scripts/reproduce_offline.sh`
+Initial unittest discovery without the offline guard failed its network-guard expectation (DNS resolution error); rerun with the guard. No experiment/model calls or commits.
+
+## Final validation results
+- Guarded analysis suite: 58 tests, OK (skipped=1).
+- Full offline test phase: 407 tests, OK (skipped=4).
+- `/bin/zsh scripts/reproduce_offline.sh`: exit 1; Gate A decompressed comparison passed and DEV comparisons passed, then archived Stage-2 byte comparison failed.
+- Stage-2 JSON differences: `/rule_hashes/ccc/analysis/stage2.py`: `bfc3d84753fa2e6839819d3a95cac700a434f0b900918bbd1221683620131acd` → `814e451070d4100b16752d0bba6dac14719d8fda156a418ec077deabcb370a33`; `/warnings`: absent → `[]`. No Stage-2 numeric differences. This source file was not modified by this task.
+- Initial unguarded analysis test discovery attempted DNS resolution and failed; all subsequent test/reproduction runs used the offline guard.
+
+Final reproduction log lines:
+```text
+    assert p.read_bytes()==baseline.read_bytes(), 'output differs: '+str(relative)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: output differs: stage2.json
+```
+- Evidence directory `docs/release/reproduction.nTHRiP` confirmed ignored with `git check-ignore docs/release/reproduction.nTHRiP`; removed after recording results.

@@ -29,6 +29,19 @@ class LabelCorrectionTests(unittest.TestCase):
             for row in rows:
                 self.assertFalse(row['confirmatory'])
             self.assertEqual(rows[0]['inference_tier'], 'feasibility')
+            self.assertEqual(rows[0]['decision'], 'exploratory')
+
+    def test_dev_exploratory_and_holdout_not_supported(self):
+        data = worlds()
+        for row in data:
+            row['tau_O'] *= -1
+        for phase, expected in (('development', 'exploratory'), ('holdout', 'not supported')):
+            with self.subTest(phase=phase):
+                rows, _ = study_effects(data, phase, 2.5)
+                self.assertEqual(rows[0]['decision'], expected)
+                self.assertEqual(rows[0]['confirmatory'], phase == 'holdout')
+                self.assertEqual(rows[0]['inference_tier'],
+                                 'A-confirmatory' if phase == 'holdout' else 'feasibility')
 
     def test_both_criteria_and_boundaries(self):
         for lower, p, expected in ((0., .01, 'not supported'),
