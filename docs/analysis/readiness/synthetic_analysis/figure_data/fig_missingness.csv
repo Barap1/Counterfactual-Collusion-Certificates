@@ -1,0 +1,9 @@
+arm,attempt_status_counts,backend,confirmatory,label,missing_L,missing_U,missing_share,n_complete,n_independent,n_infra_missing,n_missing,n_noncommit,n_overflow,n_refusal,n_retry_attempts,n_scheduled,n_unrecorded,regime,status_counts,tier,uncertainty_scope
+F,"{""complete"": 28}",synthetic,False,exploratory (DEV-001),0.0,0.12343611850026383,0.0,28,8,0,0,0,0,0,0,28,0,B1,"{""complete"": 28}",B,world_cluster
+K,"{""complete"": 28}",synthetic,False,exploratory (DEV-001),0.0,0.12343611850026383,0.0,28,8,0,0,0,0,0,0,28,0,B1,"{""complete"": 28}",B,world_cluster
+N,{},synthetic,False,exploratory (DEV-001),,,,0,8,0,0,0,0,0,0,0,0,B1,{},B,world_cluster
+S,"{""complete"": 4}",synthetic,False,exploratory (DEV-001),0.0,0.6023646356164746,0.0,4,8,0,0,0,0,0,0,4,0,B1,"{""complete"": 4}",B,world_cluster
+F,"{""complete"": 24}",synthetic,False,exploratory (DEV-001),0.0,0.14247359772252563,0.0,24,8,0,0,0,0,0,0,24,0,B2,"{""complete"": 24}",B,world_cluster
+K,"{""complete"": 24}",synthetic,False,exploratory (DEV-001),0.0,0.14247359772252563,0.0,24,8,0,0,0,0,0,0,24,0,B2,"{""complete"": 24}",B,world_cluster
+N,{},synthetic,False,exploratory (DEV-001),,,,0,8,0,0,0,0,0,0,0,0,B2,{},B,world_cluster
+S,"{""complete"": 4}",synthetic,False,exploratory (DEV-001),0.0,0.6023646356164746,0.0,4,8,0,0,0,0,0,0,4,0,B2,"{""complete"": 4}",B,world_cluster

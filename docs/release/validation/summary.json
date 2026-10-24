@@ -1,0 +1,29 @@
+{
+  "task": "REL-001a",
+  "status": "preparation complete; release pending",
+  "tests": {
+    "run": 399,
+    "skipped": 4,
+    "failures": 0,
+    "scope_exclusion": "real EXP-002 design manifest test"
+  },
+  "dev_gate": {
+    "cells": 800,
+    "regenerated": true,
+    "archived_decompressed_bytes_match": true,
+    "scientific_status": "FAIL"
+  },
+  "stage2_and_theta_archived_bytes_match": true,
+  "analysis_repeat_bytes_match": true,
+  "archived_scientific_analysis_fields_match": true,
+  "historical_metadata_exclusions": "See analysis_compatibility.json",
+  "fresh_dependency_setup_verified": false,
+  "full_default_command_rerun_after_comparator_fix": false,
+  "final_verifier_exit": 0,
+  "task_new_spend_usd": 0,
+  "model_calls": 0,
+  "network_calls": 0,
+  "commits_made": 0,
+  "priority_lowering_confirmed": false,
+  "authorship": "owner sole author; no AI co-author lines"
+}

@@ -1,0 +1,8 @@
+✅ python >= 3.11 - 3.14.7
+✅ terrarium-agents importable - 0.1.1
+✅ CoLLAB checkout - /Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/external/CoLLAB
+✅ environments load (needs CoLLAB) - HospitalEnvironment, JiraTicketEnvironment, MeetingSchedulingEnvironment, PersonalAssistantEnvironment, SmartGridEnvironment
+✅ inference key set (OPENROUTER_API_KEY or NEBIUS_API_KEY)
+
+All good - try:
+  uv run python -m experiments.collusion.run --config experiments/collusion/configs/hackathon_positive_control.yaml

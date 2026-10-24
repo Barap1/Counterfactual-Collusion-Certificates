@@ -1,0 +1,10 @@
+{
+  "label": "exploratory (DEV-001)",
+  "phase": "holdout",
+  "problems": [],
+  "synthetic": true,
+  "valid": true,
+  "warnings": [
+    "Runner metadata lacks frozen info_bearing output; conservatively true; support blocked when unestablished"
+  ]
+}

@@ -1,0 +1,4 @@
+L,L90,L95,U,U90,U95,check,confirmatory,estimate,half_width90,label,n_independent,regime,status,tier,uncertainty_scope,world_cluster
+,,,,,,V8,False,,,DEV/pilot,,B1,pass,B,world_cluster,
+,,,,,,V9,False,0.0,,DEV/pilot,1,B1,sham_uncertain,B,world_cluster,"{""L"": null, ""U"": null, ""estimate"": 0.0, ""n_independent"": 1}"
+,,,,,,V10,False,,,DEV/pilot,0,B1,not_established,B,world_cluster,

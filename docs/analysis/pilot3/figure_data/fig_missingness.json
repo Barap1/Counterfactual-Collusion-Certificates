@@ -1,0 +1,114 @@
+[
+  {
+    "arm": "F",
+    "attempt_status_counts": {
+      "complete": 4
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.0,
+    "missing_U": 0.6023646356164746,
+    "missing_share": 0.0,
+    "n_complete": 4,
+    "n_independent": 1,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 4,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 4
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "K",
+    "attempt_status_counts": {
+      "complete": 4
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.0,
+    "missing_U": 0.6023646356164746,
+    "missing_share": 0.0,
+    "n_complete": 4,
+    "n_independent": 1,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 4,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 4
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_status_counts": {
+      "complete": 2
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.0,
+    "missing_U": 0.841886116991581,
+    "missing_share": 0.0,
+    "n_complete": 2,
+    "n_independent": 1,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 2,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 2
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "S",
+    "attempt_status_counts": {
+      "complete": 4
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.0,
+    "missing_U": 0.6023646356164746,
+    "missing_share": 0.0,
+    "n_complete": 4,
+    "n_independent": 1,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 4,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 4
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

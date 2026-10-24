@@ -1,0 +1,209 @@
+Failed to continue conversation at step 1: per-run call cap 1 reached
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 379, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 108, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/collector.py", line 108, in generate_response
+    response, text = self.inner.generate_response(input, params)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 605, in generate_response
+    a = self.guard.begin(self.backend, self.model, self.base_url, payload, attempt_no=attempt_no, meta=self.meta)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 399, in begin
+    self.check_request(backend, model, base_url)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 395, in check_request
+    raise BudgetViolation(f"per-run call cap {self.max_calls} reached")
+ccc.infra.budget_guard.BudgetViolation: per-run call cap 1 reached
+Can't get LLM response: per-run call cap 1 reached
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 108, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/collector.py", line 108, in generate_response
+    response, text = self.inner.generate_response(input, params)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 605, in generate_response
+    a = self.guard.begin(self.backend, self.model, self.base_url, payload, attempt_no=attempt_no, meta=self.meta)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 399, in begin
+    self.check_request(backend, model, base_url)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 395, in check_request
+    raise BudgetViolation(f"per-run call cap {self.max_calls} reached")
+ccc.infra.budget_guard.BudgetViolation: per-run call cap 1 reached
+FEFF.Failed to continue conversation at step 1: per-run call cap 1 reached
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 379, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 108, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/collector.py", line 108, in generate_response
+    response, text = self.inner.generate_response(input, params)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 605, in generate_response
+    a = self.guard.begin(self.backend, self.model, self.base_url, payload, attempt_no=attempt_no, meta=self.meta)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 399, in begin
+    self.check_request(backend, model, base_url)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 395, in check_request
+    raise BudgetViolation(f"per-run call cap {self.max_calls} reached")
+ccc.infra.budget_guard.BudgetViolation: per-run call cap 1 reached
+Can't get LLM response: per-run call cap 1 reached
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 108, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/runner/collector.py", line 108, in generate_response
+    response, text = self.inner.generate_response(input, params)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 605, in generate_response
+    a = self.guard.begin(self.backend, self.model, self.base_url, payload, attempt_no=attempt_no, meta=self.meta)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 399, in begin
+    self.check_request(backend, model, base_url)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/infra/budget_guard.py", line 395, in check_request
+    raise BudgetViolation(f"per-run call cap {self.max_calls} reached")
+ccc.infra.budget_guard.BudgetViolation: per-run call cap 1 reached
+..............
+======================================================================
+ERROR: test_first_event_selection_bundles_without_effect_search (tests.runner.test_runner.CollectionTests.test_first_event_selection_bundles_without_effect_search)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 212, in test_first_event_selection_bundles_without_effect_search
+    board = next(b for b in source.world.protocol.megaboard.blackboards
+                 if b.blackboard_id == source.world.secret_blackboard_id)
+StopIteration
+
+======================================================================
+FAIL: test_failure_retained_no_silent_retry_and_cap_across_resume (tests.runner.test_runner.CollectionTests.test_failure_retained_no_silent_retry_and_cap_across_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 183, in test_failure_retained_no_silent_retry_and_cap_across_resume
+    self.assertEqual(len(list(self.root.rglob("*.begin.json"))), 2)  # second request refused before guard admission
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 3 != 2
+
+======================================================================
+FAIL: test_full_collection_and_noop_resume (tests.runner.test_runner.CollectionTests.test_full_collection_and_noop_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 146, in test_full_collection_and_noop_resume
+    self.assertEqual(report["worlds"][0]["attempts"][0]["status"], "complete")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ineligible' != 'complete'
+- ineligible
++ complete
+
+
+======================================================================
+FAIL: test_interrupted_attempt_requires_explicit_retry (tests.runner.test_runner.CollectionTests.test_interrupted_attempt_requires_explicit_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/runner/test_runner.py", line 204, in test_interrupted_attempt_requires_explicit_retry
+    self.assertEqual([a["status"] for a in result["worlds"][0]["attempts"]], ["interrupted", "complete"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['interrupted', 'ineligible'] != ['interrupted', 'complete']
+
+First differing element 1:
+'ineligible'
+'complete'
+
+- ['interrupted', 'ineligible']
+?                  ^^ ^^^^^^
+
++ ['interrupted', 'complete']
+?                  ^^^^^ ^
+
+
+----------------------------------------------------------------------
+Ran 19 tests in 1.381s
+
+FAILED (failures=3, errors=1)

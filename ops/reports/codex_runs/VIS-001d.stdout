@@ -1,0 +1,1 @@
+Updated the figure wording and oracle-positive panel, verified its counts against the Gate A source, and rendered the PDF to `/tmp/ccc_figqa/fig_supported_vs_oracle.png`. The build completed, but the environment denied `nice` priority changes. Only `ops/reports/VIS-001c.md` appears modified in Git status; figure outputs are ignored.

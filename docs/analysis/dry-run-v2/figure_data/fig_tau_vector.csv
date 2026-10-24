@@ -1,0 +1,5 @@
+L,U,confirmatory,effect,estimate,label,n_independent,regime,tier,uncertainty_scope
+,,False,tau_O,0.0,DEV/pilot,1,B1,B,world_cluster
+,,False,tau_C,-15.584746190688163,DEV/pilot,1,B1,B,world_cluster
+,,False,tau_W,31.16949238137633,DEV/pilot,1,B1,B,world_cluster
+,,False,tau_A,-15.584746190688163,DEV/pilot,1,B1,B,world_cluster

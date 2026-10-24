@@ -1,0 +1,17 @@
+{
+  "evidence_tier": "scripted_dry_run",
+  "live_calls": 0,
+  "manifest_sha256": "f97e12e1eb6567659dbaf6c41563a8dac26fddf0accd36d4ad4f44aedfef5fb7",
+  "verified_artifacts": 778,
+  "worlds": [
+    {
+      "attempts": [
+        {
+          "path": "worlds/dev02_B1/attempt_0001",
+          "status": "complete"
+        }
+      ],
+      "world": "dev02_B1"
+    }
+  ]
+}

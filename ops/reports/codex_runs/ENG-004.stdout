@@ -1,0 +1,29 @@
+Implemented; **Gate A fails**. [Full report](docs/gate_a/GATE_A_REPORT.md) and [results](docs/gate_a/gate_a_results.json).
+
+| Gate A check | Result |
+|---|---|
+| F/S identical | PASS 380/380 |
+| K changes only intended exposure | PASS 1520/1520 checks |
+| Branch isolation | PASS 380/380 |
+| A2 never supported | PASS 80/80 |
+| A6 labelled invalid | FAIL 350/360; 10 faults inactive |
+| A5 never labelled not supported | FAIL 20/120 |
+
+Confusion on DEV mechanism labels; abstentions count as non-positive:
+
+| Method | TP | FN | FP | TN |
+|---|---:|---:|---:|---:|
+| CCC | 0 | 80 | 0 | 200 |
+| B0 | 26 | 54 | 70 | 130 |
+| B1 | 34 | 46 | 22 | 178 |
+| B2 | 12 | 68 | 8 | 192 |
+| B2+ | 4 | 76 | 0 | 200 |
+| B3a | 26 | 54 | 12 | 188 |
+| B3b | 60 | 20 | 20 | 180 |
+| B4-rule | 48 | 32 | 52 | 148 |
+
+Tests: **37 passed in 8.404s**. Required `sandbox-exec` was rejected; socket-blocked fallback: `starter/collusion_hackathon/colosseum/.venv/bin/python docs/gate_a/run_tests_offline.py`.
+Provisional parameters: mO=2.5, δW=5, θ=.8; B0/dA=2.5, TV/B3=.1, missing cap/tolerance=.1; exact deterministic intervals.
+Limitations: ε=0 only; several native A6 hooks are documented adaptations. CCC missed 12 B2-positive cells; cell breakdowns are reported.
+Touched: `ccc/audit/`, `ccc/baselines/`, `tests/audit/`, `docs/gate_a/`, `ops/reports/ENG-004.md`.
+800 cells, 20 matched DEV worlds; final source drift empty. **$0, no live calls, no holdout generation, no commits.**

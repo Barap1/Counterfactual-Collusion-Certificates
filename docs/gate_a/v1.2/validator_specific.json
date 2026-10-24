@@ -1,0 +1,5847 @@
+{
+  "map_sha256": "5610f626c9d3c025d9dc9a8cacfbf579d605e35644fe2602c38a1a57a3d9eace",
+  "rows": [
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12000,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12001,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12002,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12003,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12004,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12005,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12006,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12007,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12008,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12009,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12010,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12011,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12012,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12013,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12014,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12015,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12016,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12017,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12018,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "crossed",
+      "seed": 12019,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12000,
+      "fired": [],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": false,
+      "invalid": false,
+      "runner_error": false,
+      "exercised": false
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12001,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12002,
+      "fired": [],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": false,
+      "invalid": false,
+      "runner_error": false,
+      "exercised": false
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12003,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12004,
+      "fired": [],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": false,
+      "invalid": false,
+      "runner_error": false,
+      "exercised": false
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12005,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12006,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12007,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12008,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12009,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12010,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12011,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12012,
+      "fired": [],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": false,
+      "invalid": false,
+      "runner_error": false,
+      "exercised": false
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12013,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12014,
+      "fired": [],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": false,
+      "invalid": false,
+      "runner_error": false,
+      "exercised": false
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12015,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12016,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12017,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12018,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "crossed",
+      "seed": 12019,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12000,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12001,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12002,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12003,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12004,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12005,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12006,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12007,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12008,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12009,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12010,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12011,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12012,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12013,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12014,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12015,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12016,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12017,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12018,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "crossed",
+      "seed": 12019,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12000,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12001,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12002,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12003,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12004,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12005,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12006,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12007,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12008,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12009,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12010,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12011,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12012,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12013,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12014,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12015,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12016,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12017,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12018,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "crossed",
+      "seed": 12019,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12000,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12001,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12002,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12003,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12004,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12005,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12006,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12007,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12008,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12009,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12010,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12011,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12012,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12013,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12014,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12015,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12016,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12017,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12018,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "crossed",
+      "seed": 12019,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12000,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12001,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12002,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12003,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12004,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12005,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12006,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12007,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12008,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12009,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12010,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12011,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12012,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12013,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12014,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12015,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12016,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12017,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12018,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "crossed",
+      "seed": 12019,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12000,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12001,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12002,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12003,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12004,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12005,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12006,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12007,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12008,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12009,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12010,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12011,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12012,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12013,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12014,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12015,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12016,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12017,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12018,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "crossed",
+      "seed": 12019,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12000,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12001,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12002,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12003,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12004,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12005,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12006,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12007,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12008,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12009,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12010,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12011,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12012,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12013,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12014,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12015,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12016,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12017,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12018,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "crossed",
+      "seed": 12019,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12000,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12001,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12002,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12003,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12004,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12005,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12006,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12007,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12008,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12009,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12010,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12011,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12012,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12013,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12014,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12015,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12016,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12017,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12018,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "crossed",
+      "seed": 12019,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12000,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12001,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12002,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12003,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12004,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12005,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12006,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12007,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12008,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12009,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12010,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12012,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12013,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12014,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12015,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12016,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12017,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12018,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6a",
+      "stratum": "naturalistic",
+      "seed": 12019,
+      "fired": [
+        "V05",
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V07",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12000,
+      "fired": [],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": false,
+      "invalid": false,
+      "runner_error": false,
+      "exercised": false
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12001,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12002,
+      "fired": [],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": false,
+      "invalid": false,
+      "runner_error": false,
+      "exercised": false
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12003,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12004,
+      "fired": [],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": false,
+      "invalid": false,
+      "runner_error": false,
+      "exercised": false
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12005,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12006,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12007,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12008,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12009,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12010,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12012,
+      "fired": [],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": false,
+      "invalid": false,
+      "runner_error": false,
+      "exercised": false
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12013,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12014,
+      "fired": [],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": false,
+      "invalid": false,
+      "runner_error": false,
+      "exercised": false
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12015,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12016,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12017,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12018,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6b",
+      "stratum": "naturalistic",
+      "seed": 12019,
+      "fired": [
+        "V05b",
+        "V07",
+        "V3"
+      ],
+      "accepted": [
+        "V3",
+        "V05b"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12000,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12001,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12002,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12003,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12004,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12005,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12006,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12007,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12008,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12009,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12010,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12012,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12013,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12014,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12015,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12016,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12017,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12018,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-K",
+      "stratum": "naturalistic",
+      "seed": 12019,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12000,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12001,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12002,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12003,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12004,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12005,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12006,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12007,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12008,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12009,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12010,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12012,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12013,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12014,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12015,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12016,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12017,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12018,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6c-F",
+      "stratum": "naturalistic",
+      "seed": 12019,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12000,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12001,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12002,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12003,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12004,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12005,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12006,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12007,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12008,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12009,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12010,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12012,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12013,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12014,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12015,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12016,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12017,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12018,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6d",
+      "stratum": "naturalistic",
+      "seed": 12019,
+      "fired": [
+        "V09"
+      ],
+      "accepted": [
+        "V09"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12000,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12001,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12002,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12003,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12004,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12005,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12006,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12007,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12008,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12009,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12010,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12012,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12013,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12014,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12015,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12016,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12017,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12018,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6e",
+      "stratum": "naturalistic",
+      "seed": 12019,
+      "fired": [
+        "V-model",
+        "V6"
+      ],
+      "accepted": [
+        "V-model"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12000,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12001,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12002,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12003,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12004,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12005,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12006,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12007,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12008,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12009,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12010,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12012,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12013,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12014,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12015,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12016,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12017,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12018,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6f",
+      "stratum": "naturalistic",
+      "seed": 12019,
+      "fired": [
+        "V08"
+      ],
+      "accepted": [
+        "V08"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12000,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12001,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12002,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12003,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12004,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12005,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12006,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12007,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12008,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12009,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12010,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12012,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12013,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12014,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12015,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12016,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12017,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12018,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6g",
+      "stratum": "naturalistic",
+      "seed": 12019,
+      "fired": [
+        "V05",
+        "V05b",
+        "V3"
+      ],
+      "accepted": [
+        "V05b",
+        "V3"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12000,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12001,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12002,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12003,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12004,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12005,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12006,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12007,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12008,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12009,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12010,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12012,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12013,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12014,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12015,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12016,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12017,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12018,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    },
+    {
+      "family": "A6h",
+      "stratum": "naturalistic",
+      "seed": 12019,
+      "fired": [
+        "V1_static"
+      ],
+      "accepted": [
+        "V1_static"
+      ],
+      "intended_fired": true,
+      "invalid": true,
+      "runner_error": false,
+      "exercised": true
+    }
+  ],
+  "intended_fired": 350,
+  "requested": 360
+}

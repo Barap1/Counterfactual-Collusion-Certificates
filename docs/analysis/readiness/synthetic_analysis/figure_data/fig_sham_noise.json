@@ -1,0 +1,90 @@
+[
+  {
+    "checkpoint_id": "SYN01_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "101"
+  },
+  {
+    "checkpoint_id": "SYN01_B2",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "101"
+  },
+  {
+    "checkpoint_id": "SYN02_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "102"
+  },
+  {
+    "checkpoint_id": "SYN02_B2",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "102"
+  },
+  {
+    "checkpoint_id": "SYN05_B2",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "105"
+  },
+  {
+    "checkpoint_id": "SYN06_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "106"
+  },
+  {
+    "checkpoint_id": "SYN06_B2",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "106"
+  },
+  {
+    "checkpoint_id": "SYN07_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "107"
+  }
+]

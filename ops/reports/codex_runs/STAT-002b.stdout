@@ -1,0 +1,6 @@
+Implemented `python -m ccc.analysis pin` with DEV-only guards, F/S-only pooling, draft outputs, hashes, and attainability diagnostics.
+All 37 offline analysis tests passed, including K/N exclusion and held-out rejection.
+Pilot3: DEV/pilot, sigma_dev=3.34365, thin_dev=true; draft m_O=5, delta_W=10, delta_S=5; theta UNPINNED pending DEV fixture pairs.
+Outputs: [stage2.json](docs/stats/stage2/pilot3/stage2.json), [draft addendum](docs/stats/stage2/pilot3/stage2_addendum.md).
+Files: `ccc/analysis/stage2.py`, CLI dispatch, `tests/analysis/test_stage2.py`; [handoff](ops/reports/STAT-002b.md).
+No final freeze, live calls, or commits.

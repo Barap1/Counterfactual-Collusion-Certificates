@@ -1,0 +1,9 @@
+L,U,confirmatory,effect,estimate,label,n_independent,regime,tier,uncertainty_scope
+,,False,tau_O,-0.1828027863695496,DEV/pilot,4,B1,B,world_cluster
+,,False,tau_C,-0.20271057066997056,DEV/pilot,4,B1,B,world_cluster
+,,False,tau_W,0.03981556860084012,DEV/pilot,4,B1,B,world_cluster
+,,False,tau_A,-0.38551335703951894,DEV/pilot,4,B1,B,world_cluster
+,,False,tau_O,-0.02598176886380917,DEV/pilot,3,B2,B,world_cluster
+,,False,tau_C,-1.3698753169674127,DEV/pilot,3,B2,B,world_cluster
+,,False,tau_W,2.6877870962072117,DEV/pilot,3,B2,B,world_cluster
+,,False,tau_A,-1.3958570858312207,DEV/pilot,3,B2,B,world_cluster

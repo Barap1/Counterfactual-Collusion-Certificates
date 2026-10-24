@@ -1,0 +1,9 @@
+{
+  "ledger_path": "docs/eng/ENG-003_ledger_evidence/K_1235640d7327467786047ffa6de9e0cc/events.jsonl",
+  "verification": {
+    "records": 25,
+    "artifacts": 60,
+    "last_event_sha256": "de23251dc908a3289a2514a81d417991708adba33b5b9c24879325f81c6036d6"
+  },
+  "hash_manifest_sha256": "529f22141c9f0bd9e419d7e88f36e686e47e897942c62b495d61315de287b3ce"
+}

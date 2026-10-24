@@ -1,0 +1,88 @@
+[
+  {
+    "check": "V8",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "regime": "B1",
+    "status": "treatment_dependent_missingness",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L90": -1.6526715123440736,
+    "L95": -2.065567830878672,
+    "U90": 0.6913525484565914,
+    "U95": 1.1042488669911896,
+    "check": "V9",
+    "confirmatory": false,
+    "estimate": -0.4806594819437411,
+    "half_width90": 1.1720120304003325,
+    "label": "DEV/pilot",
+    "n_independent": 4,
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_cluster": {
+      "L": -1.4806955333455178,
+      "U": 0.03871708751429459,
+      "estimate": -0.4806594819437411,
+      "n_independent": 4
+    }
+  },
+  {
+    "L": null,
+    "U": null,
+    "check": "V10",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "n_independent": 0,
+    "regime": "B1",
+    "status": "not_established",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V8",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "regime": "B2",
+    "status": "treatment_dependent_missingness",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L90": -1.2052792399541552,
+    "L95": -1.7327624775936792,
+    "U90": 1.022651681032626,
+    "U95": 1.55013491867215,
+    "check": "V9",
+    "confirmatory": false,
+    "estimate": -0.09131377946076451,
+    "half_width90": 1.1139654604933906,
+    "label": "DEV/pilot",
+    "n_independent": 3,
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_cluster": {
+      "L": -0.7056537443311832,
+      "U": 0.6077228517442173,
+      "estimate": -0.09131377946076451,
+      "n_independent": 3
+    }
+  },
+  {
+    "L": null,
+    "U": null,
+    "check": "V10",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "n_independent": 0,
+    "regime": "B2",
+    "status": "not_established",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

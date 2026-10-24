@@ -1,0 +1,12 @@
+[
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "dev05_B2",
+    "confirmatory": false,
+    "kind": "world_attempt",
+    "label": "DEV/pilot",
+    "status": "failed",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

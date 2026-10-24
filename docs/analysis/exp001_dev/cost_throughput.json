@@ -1,0 +1,17 @@
+[
+  {
+    "confirmatory": false,
+    "cost_usd": 0.0,
+    "label": "DEV/pilot",
+    "latency_p50": 2556.1499999999996,
+    "latency_p95": 5441.664999999995,
+    "load_sessions": 1,
+    "max_requests": 2470,
+    "n_calls": 2470,
+    "tier": "B",
+    "tokens_completion": 222720,
+    "tokens_prompt": 5206109,
+    "uncertainty_scope": "world_cluster",
+    "unknown_count": 0
+  }
+]

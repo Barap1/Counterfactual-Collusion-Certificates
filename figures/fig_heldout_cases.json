@@ -1,0 +1,15 @@
+{
+  "caption": "Case-level outsider-effect confidence intervals by checkpoint, grouped by regime; dashed reference is mO = 2.5; colour encodes certificate status.",
+  "figure": "fig_heldout_cases",
+  "label": "held-out \u00b7 protocol v1.2 \u00b7 gemma4:26b local",
+  "source_files": [
+    {
+      "path": "docs/analysis/exp002_heldout_v2/checkpoint_certificates.csv",
+      "sha256": "b0cbb24e9fb9a73f296e7414a3c2872b84b717072aa8235b3ff9f0784c23a2f0"
+    },
+    {
+      "path": "docs/analysis/exp002_heldout_v2/aggregate.json",
+      "sha256": "3488d7bcb63307a11f621f593a66ef7baa623b1a9c0e46f5d1a8efde73ddaec4"
+    }
+  ]
+}

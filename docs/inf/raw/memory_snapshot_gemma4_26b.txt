@@ -1,0 +1,13 @@
+Fri Oct 23 16:42:26 UTC 2026
+{"models":[{"name":"gemma4:26b","model":"gemma4:26b","size":17661060710,"digest":"5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251","details":{"parent_model":"","format":"gguf","family":"gemma4","families":["gemma4"],"parameter_size":"25.8B","quantization_level":"Q4_K_M"},"expires_at":"2026-10-23T13:07:01.722917-04:00","size_vram":17661060710,"context_length":32768}]}
+6340 rss_gb=18.22 /Applications/Ollama.app/Contents/Resources/llama-server --model
+99851 rss_gb=0.07 ollama serve
+Pageouts: 8273 
+
+System-wide memory free percentage: 76%
+Mach Virtual Memory Statistics: (page size of 16384 bytes)
+Pages free:                                   371500.
+Pages active:                                 671929.
+Pages inactive:                              1335292.
+Pages speculative:                              7963.
+Pages throttled:                                   0.

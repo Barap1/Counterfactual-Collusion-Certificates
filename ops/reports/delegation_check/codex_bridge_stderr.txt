@@ -1,0 +1,15 @@
+[codex] Starting Codex task thread.
+[codex] Thread ready (01a16983-935e-7c32-ab4d-90e3ade2264a).
+[codex] Turn started (01a16983-983a-7563-9cb3-137601d84205).
+[codex] Assistant message captured: I’ll create the file, have one subagent read it and report its SHA-256, then write the delega...
+[codex] Running command: /bin/zsh -lc "mkdir -p ops/reports/delegation_check printf '%s\\n' 'CCC-BOOT-001 codex nonce ...
+[codex] Command completed: /bin/zsh -lc "mkdir -p ops/reports/delegation_check printf '%s\\n' 'CCC-BOOT-001 codex nonce ... (exit 0)
+[codex] Starting collaboration tool: wait.
+[codex] Collaboration tool wait completed.
+[codex] Running command: /bin/zsh -lc "printf '%s\\n' 'spawned: yes' 'subagent_id: /root/hash_check' 'subagent_reporte...
+[codex] Command completed: /bin/zsh -lc "printf '%s\\n' 'spawned: yes' 'subagent_id: /root/hash_check' 'subagent_reporte... (exit 0)
+[codex] Assistant message captured: Created: - `ops/reports/delegation_check/codex_child.txt` - `ops/reports/delegation_check/cod...
+[codex] Turn completion inferred after the main thread finished and subagent work drained.
+real 23.84
+user 0.24
+sys 0.17

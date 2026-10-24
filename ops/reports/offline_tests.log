@@ -1,0 +1,9 @@
+test_imports_and_environments_without_network (tests.test_offline_adapter.OfflineAdapter.test_imports_and_environments_without_network) ... ok
+test_pilot_archive_matches_manifest (tests.test_offline_adapter.OfflineAdapter.test_pilot_archive_matches_manifest) ... ok
+test_pilot_metrics_recompute (tests.test_offline_adapter.OfflineAdapter.test_pilot_metrics_recompute) ... ok
+test_pilot_model_provenance (tests.test_offline_adapter.OfflineAdapter.test_pilot_model_provenance) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.071s
+
+OK

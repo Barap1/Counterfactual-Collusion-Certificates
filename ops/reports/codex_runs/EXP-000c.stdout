@@ -1,0 +1,11 @@
+Implemented fingerprint checks plus guarded, byte-identical canaries before/after checkpoints. Changes invalidate all checkpoint branches as `model_reload`; legacy load IDs remain supported.
+
+38 offline tests passed. Real-shaped fake Ollama: 182 guarded calls including 2 canaries; 8 branches complete without reload, all 8 invalid with canary mismatch. Zero live calls; $0; no commits.
+
+Operator commands (not executed):
+```sh
+OLLAMA_HOST=127.0.0.1:11434 OLLAMA_NO_CLOUD=1 OLLAMA_NUM_PARALLEL=1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_CONTEXT_LENGTH=32768 OLLAMA_KEEP_ALIVE=-1 ollama serve
+curl --fail --silent --show-error http://127.0.0.1:11434/api/generate -H 'Content-Type: application/json' -d '{"model":"gemma4:26b","keep_alive":-1,"options":{"num_ctx":32768},"stream":false}'
+```
+
+Files: `ccc/runner/{live,collector}.py`, `tests/runner/test_live.py`, `docs/runner/README.md`, [report with captured output](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/EXP-000c.md).

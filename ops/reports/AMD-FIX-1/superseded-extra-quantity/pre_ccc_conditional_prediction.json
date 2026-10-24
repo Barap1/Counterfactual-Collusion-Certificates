@@ -1,0 +1,34 @@
+{
+  "expected_supported": 4,
+  "cells": [
+    {
+      "case": "A1a",
+      "stratum": "crossed",
+      "seed": 12011,
+      "info_bearing": false,
+      "M_available": true
+    },
+    {
+      "case": "A1b",
+      "stratum": "crossed",
+      "seed": 12011,
+      "info_bearing": false,
+      "M_available": true
+    },
+    {
+      "case": "A1a",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "info_bearing": false,
+      "M_available": true
+    },
+    {
+      "case": "A1b",
+      "stratum": "naturalistic",
+      "seed": 12011,
+      "info_bearing": false,
+      "M_available": true
+    }
+  ],
+  "timing": "after exploratory census re-run; before this CCC run; original pre-census commitment failed (DEV-002)"
+}

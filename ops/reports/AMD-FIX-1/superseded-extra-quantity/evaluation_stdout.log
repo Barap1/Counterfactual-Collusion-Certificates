@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ops/reports/AMD-FIX-1/evaluate_dev.py", line 42, in <module>
+    main(OUT)
+    ~~~~^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/audit/gate_a.py", line 431, in main
+    for w,result in zip(worlds,pool.map(native_full_safe,worlds)):
+                    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/process.py", line 712, in _chain_from_iterable_of_lists
+    for element in iterable:
+                   ^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 645, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 312, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 449, in result
+    self._condition.wait(timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/threading.py", line 369, in wait
+    waiter.acquire()
+    ~~~~~~~~~~~~~~^^
+KeyboardInterrupt

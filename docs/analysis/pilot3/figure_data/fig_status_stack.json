@@ -1,0 +1,17 @@
+[
+  {
+    "attempted": 1,
+    "confirmatory": false,
+    "coverage": 0.0,
+    "inconclusive": 1,
+    "ineligible": 0,
+    "invalid": 0,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "not_supported": 0,
+    "regime": "B1",
+    "supported": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

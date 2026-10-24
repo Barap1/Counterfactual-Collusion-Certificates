@@ -1,0 +1,226 @@
+[
+  {
+    "arm": "F",
+    "attempt_status_counts": {
+      "complete": 16
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.0,
+    "missing_U": 0.2059072142078227,
+    "missing_share": 0.0,
+    "n_complete": 16,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 16,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 16
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "K",
+    "attempt_status_counts": {
+      "complete": 16
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.0,
+    "missing_U": 0.2059072142078227,
+    "missing_share": 0.0,
+    "n_complete": 16,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 16,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 16
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_status_counts": {
+      "complete": 8
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.0,
+    "missing_U": 0.3694166475528192,
+    "missing_share": 0.0,
+    "n_complete": 8,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 8,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 8
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "S",
+    "attempt_status_counts": {
+      "complete": 16
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.0,
+    "missing_U": 0.2059072142078227,
+    "missing_share": 0.0,
+    "n_complete": 16,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 16,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 16
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "F",
+    "attempt_status_counts": {
+      "cancelled": 4,
+      "complete": 12
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.07266203825288216,
+    "missing_U": 0.5237708198961273,
+    "missing_share": 0.25,
+    "n_complete": 12,
+    "n_infra_missing": 4,
+    "n_missing": 4,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 16,
+    "n_unrecorded": 0,
+    "regime": "B2",
+    "status_counts": {
+      "cancelled": 4,
+      "complete": 12
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "K",
+    "attempt_status_counts": {
+      "cancelled": 4,
+      "complete": 12
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.07266203825288216,
+    "missing_U": 0.5237708198961273,
+    "missing_share": 0.25,
+    "n_complete": 12,
+    "n_infra_missing": 4,
+    "n_missing": 4,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 16,
+    "n_unrecorded": 0,
+    "regime": "B2",
+    "status_counts": {
+      "cancelled": 4,
+      "complete": 12
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_status_counts": {
+      "cancelled": 2,
+      "complete": 6
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.031854026249944226,
+    "missing_U": 0.6508557944128242,
+    "missing_share": 0.25,
+    "n_complete": 6,
+    "n_infra_missing": 2,
+    "n_missing": 2,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 8,
+    "n_unrecorded": 0,
+    "regime": "B2",
+    "status_counts": {
+      "cancelled": 2,
+      "complete": 6
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "S",
+    "attempt_status_counts": {
+      "cancelled": 4,
+      "complete": 12
+    },
+    "backend": "ollama_local",
+    "confirmatory": false,
+    "label": "DEV/pilot",
+    "missing_L": 0.07266203825288216,
+    "missing_U": 0.5237708198961273,
+    "missing_share": 0.25,
+    "n_complete": 12,
+    "n_infra_missing": 4,
+    "n_missing": 4,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 16,
+    "n_unrecorded": 0,
+    "regime": "B2",
+    "status_counts": {
+      "cancelled": 4,
+      "complete": 12
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

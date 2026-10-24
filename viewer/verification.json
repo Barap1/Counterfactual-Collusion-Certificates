@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "case_renders": 808,
+  "real_cases": 8,
+  "fixture_cells": 800,
+  "default": "dev02_B1",
+  "html_sha256": "cf8d41dfe58868f7eef4572ca79d7db7d2016a553f5948cfb9b56095bc6fbb5e",
+  "checks": [
+    "all case rendering functions executed with minimal DOM stub",
+    "both evidence tier controls switch and reset case selection",
+    "offline resource and network API checks",
+    "CSP, responsive and color scheme rules present"
+  ],
+  "limitation": "Not a browser layout or visual test. Headless Chrome screenshot skipped per user instruction; director render pending."
+}

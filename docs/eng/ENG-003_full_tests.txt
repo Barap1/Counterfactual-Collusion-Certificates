@@ -1,0 +1,142 @@
+................................E.........................................................F..........................................Can't get LLM response: simulated provider timeout
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 111, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/replay/test_corruption.py", line 187, in generate_response
+    raise TimeoutError("simulated provider timeout")
+TimeoutError: simulated provider timeout
+......Failed to continue conversation at step 2: request hash mismatch at seq 2 (Mona turn 0 step 3): recorded 000000000000 got b508e48f790b
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 379, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 111, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 146, in generate_response
+    rec = self.source.next(ccc_context or {}, request_payload(input, params))
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 126, in next
+    self._fail(f"request hash mismatch at seq {rec.seq} ({rec.agent} turn {rec.turn_index} "
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         f"step {rec.step}): recorded {rec.request_sha256[:12]} got {sha[:12]}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 114, in _fail
+    raise PrefixMismatch(msg)
+ccc.replay.clients.PrefixMismatch: request hash mismatch at seq 2 (Mona turn 0 step 3): recorded 000000000000 got b508e48f790b
+Can't get LLM response: order mismatch at seq 2: recorded ('Mona', 0, 3) got ('Layla', 1, 1)
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 111, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 146, in generate_response
+    rec = self.source.next(ccc_context or {}, request_payload(input, params))
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 123, in next
+    self._fail(f"order mismatch at seq {rec.seq}: recorded {(rec.agent, rec.turn_index, rec.step)} "
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         f"got {(ctx.get('agent'), ctx.get('turn_index'), ctx.get('step'))}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 114, in _fail
+    raise PrefixMismatch(msg)
+ccc.replay.clients.PrefixMismatch: order mismatch at seq 2: recorded ('Mona', 0, 3) got ('Layla', 1, 1)
+........................................................
+======================================================================
+ERROR: test_tool_fault_invalid (tests.audit.test_native.NativeIntegration.test_tool_fault_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/audit/test_native.py", line 35, in test_tool_fault_invalid
+    def test_tool_fault_invalid(self): self.assertEqual(self.probe('A6f')['CCC']['status'],'invalid')
+                                                        ~~~~~~~~~~^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/audit/test_native.py", line 20, in probe
+    return native_case(generate_dev(case,seed,split_manifest()))
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/audit/gate_a.py", line 229, in native_case
+    baseline_estimates=estimate(baseline_records,deterministic=True)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/audit/decision.py", line 51, in estimate
+    if not all(math.isfinite(float(row[k])) for k in ('Omean','Cmean','A','W')):
+           ^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/audit/decision.py", line 51, in <genexpr>
+    if not all(math.isfinite(float(row[k])) for k in ('Omean','Cmean','A','W')):
+                                   ~~~^^^
+KeyError: 'Omean'
+
+======================================================================
+FAIL: test_native_verbatim_resend_exposes_mask_validator_limitation (tests.fixtures.test_native_replay.NativeReplayBridge.test_native_verbatim_resend_exposes_mask_validator_limitation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/fixtures/test_native_replay.py", line 55, in test_native_verbatim_resend_exposes_mask_validator_limitation
+    self.assertFalse(report.audit.valid)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 195 tests in 70.524s
+
+FAILED (failures=1, errors=1)

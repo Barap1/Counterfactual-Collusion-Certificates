@@ -1,0 +1,5 @@
+Implemented [offline viewer](/Users/aarav/Documents/Projects/ApartSprint/viewer/index.html): 8 real DEV checkpoints and 800 synthetic cells.
+Default: `dev02_B1`, selected deterministically.
+Archive hash verified; all 808 case-render checks passed.
+Screenshot skipped as instructed; director visual QA pending.
+[Handoff and commands](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/VIS-002.md). $0; no network, model calls, commits, or held-out access.

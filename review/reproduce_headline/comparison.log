@@ -1,0 +1,23 @@
+nice: setpriority: Operation not permitted
+{
+  "synthetic_only": true,
+  "checks": 514,
+  "disagreements": [],
+  "Delta": 3.142857142857143,
+  "sign_flip": {
+    "denominator": 128,
+    "numerator": 2,
+    "p": 0.015625
+  },
+  "d_w": [
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    null
+  ],
+  "reference": "synthetic_blackbox"
+}

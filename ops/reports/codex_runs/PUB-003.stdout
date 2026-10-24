@@ -1,0 +1,7 @@
+## PUB-003 complete
+
+Edited [paper/draft.md](/Users/aarav/Documents/Projects/ApartSprint/paper/draft.md) and created [PUB-003.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/PUB-003.md).
+
+The draft now reflects the related-work corrections and protocol v1.2, including the placebo’s limits, extractor contract, constructed controls, and the requested disclosure. Gazzaev et al. was omitted because the ledger marks it abstract-only.
+
+Word-count delta: **+342** (4,759 → 5,101, using the report’s regex counter). `git diff --check` passed.

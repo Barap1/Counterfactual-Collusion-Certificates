@@ -1,0 +1,31 @@
+{
+ "run_id": "loop_openrouter_north_mini_code_free",
+ "episodes": 2,
+ "passed": 2,
+ "pass_rate": 1.0,
+ "calls": 4,
+ "calls_with_tool_calls": 3,
+ "json_invalid_args": 0,
+ "schema_invalid_args": 0,
+ "empty_responses": 0,
+ "truncated_calls": 0,
+ "episode_errors": 0,
+ "tool_env_errors": 0,
+ "latency_p50_s": 9.511,
+ "latency_p95_s": 12.091,
+ "latency_mean_s": 9.153,
+ "completion_tok_per_s_aggregate": 55.99,
+ "prompt_tokens_max": 2475,
+ "mean_calls_per_episode": 2.0,
+ "mean_episode_wall_s": 18.31,
+ "by_phase": {
+  "planning": {
+   "n": 1,
+   "passed": 1
+  },
+  "execution": {
+   "n": 1,
+   "passed": 1
+  }
+ }
+}

@@ -1,0 +1,4 @@
+B1,B2,confirmatory,d_w,label,n_independent,tier,uncertainty_scope,world_id
+-0.07483425291340495,0.0,False,-0.07483425291340495,DEV/pilot,1,B,world_cluster,2
+-0.17601044579532754,0.0,False,-0.17601044579532754,DEV/pilot,1,B,world_cluster,3
+-0.48036644676946594,-0.07794530659142751,False,-0.40242114017803843,DEV/pilot,1,B,world_cluster,4

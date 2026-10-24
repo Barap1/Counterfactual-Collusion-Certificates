@@ -1,0 +1,8 @@
+checkpoint_id,confirmatory,kind,label,status,tier,uncertainty_scope
+dev02_B2,False,scheduled_world,DEV/pilot,unrun,B,world_cluster
+dev03_B1,False,scheduled_world,DEV/pilot,unrun,B,world_cluster
+dev03_B2,False,scheduled_world,DEV/pilot,unrun,B,world_cluster
+dev04_B1,False,scheduled_world,DEV/pilot,unrun,B,world_cluster
+dev04_B2,False,scheduled_world,DEV/pilot,unrun,B,world_cluster
+dev05_B1,False,scheduled_world,DEV/pilot,unrun,B,world_cluster
+dev05_B2,False,scheduled_world,DEV/pilot,unrun,B,world_cluster

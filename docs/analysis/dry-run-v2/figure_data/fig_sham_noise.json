@@ -1,0 +1,13 @@
+[
+  {
+    "checkpoint_id": "dev02_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "2"
+  }
+]

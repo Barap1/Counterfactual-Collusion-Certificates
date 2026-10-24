@@ -1,0 +1,1034 @@
+[
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempt_no": 1,
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "error": null,
+    "kind": "world_attempt",
+    "label": "exploratory (DEV-001)",
+    "reason": null,
+    "status": "complete",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 0,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 1,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 2,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_no": 1,
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "kind": "unscheduled_arm",
+    "label": "exploratory (DEV-001)",
+    "reasons": [
+      "no_placebo_available"
+    ],
+    "rep": 3,
+    "status": "not_run",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

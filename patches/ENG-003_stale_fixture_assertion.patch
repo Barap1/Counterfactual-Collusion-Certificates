@@ -1,0 +1,26 @@
+--- a/tests/fixtures/test_native_replay.py
++++ b/tests/fixtures/test_native_replay.py
+@@ -44,17 +44,16 @@
+                     for marker in ("colluder", "secret coalition", "L_mech", "world_seed", case):
+                         self.assertNotIn(marker,text)
+ 
+-    def test_native_verbatim_resend_exposes_mask_validator_limitation(self):
+-        # A post-fork resend is permitted under K. The current engine scans its
+-        # text as a leaked original. Preserve this mismatch rather than changing
+-        # the ground truth or treating it as successful redundant-case handling.
++    def test_native_verbatim_resend_is_allowed_and_flagged(self):
+         world=generate_jira("A5a-verbatim",12000)
+         self.assertEqual(exact_oracle(world)["L_mech"],"redundant")
+         report=self.execute(as_replay_fixture(world))
+         self.assertTrue(all(report.expectations.values()))
+-        self.assertFalse(report.audit.valid)
+-        self.assertEqual(report.audit.branches["K"].status,"invalid")
+-        self.assertIn("V07 mask_no_leak failed",report.audit.branches["K"].reasons)
++        self.assertTrue(report.audit.valid)
++        self.assertEqual(report.audit.branches["K"].status,"valid")
++        check=next(c for c in report.audit.branches["K"].checks if c.id=="V07")
++        self.assertIn("resend_detected",check.details["flags"])
++        self.assertFalse(check.details["leaks"])
+ 
+     def test_native_bridge_refuses_unsupported_stress_or_stochastic_instances(self):
+         from fractions import Fraction

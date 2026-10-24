@@ -1,0 +1,1 @@
+Updated the left panel to horizontal bars, preserving all values and colors; visual check shows no overlap. The build regenerated the PDF and JSON sidecar, and the requested PNG render succeeded.

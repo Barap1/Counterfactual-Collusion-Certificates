@@ -1,0 +1,9 @@
+{
+  "status": "running",
+  "total_runs": 1,
+  "completed_runs": 0,
+  "failed_runs": 0,
+  "started_at": "2026-10-23T11:12:33.192396",
+  "config_path": "experiments/collusion/configs/hackathon_positive_control.yaml",
+  "updated_at": "2026-10-23T11:12:33.192438"
+}

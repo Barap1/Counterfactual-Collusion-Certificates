@@ -1,0 +1,98 @@
+[
+  {
+    "L": 0.06873996449487141,
+    "U": 1.9710245209502708,
+    "confirmatory": false,
+    "effect": "tau_O",
+    "estimate": 0.9704506454819914,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 8,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -2.1122949227109977,
+    "U": 0.42083575594324957,
+    "confirmatory": false,
+    "effect": "tau_C",
+    "estimate": -0.6947661954806266,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 8,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -0.07121759086454205,
+    "U": 7.8438436654331,
+    "confirmatory": false,
+    "effect": "tau_W",
+    "estimate": 3.3304336819252383,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 8,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -0.6394599858052363,
+    "U": 1.2940785446605412,
+    "confirmatory": false,
+    "effect": "tau_A",
+    "estimate": 0.27568445000136443,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 8,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -1.2107933918959874,
+    "U": 0.36006436151578836,
+    "confirmatory": false,
+    "effect": "tau_O",
+    "estimate": -0.38387506553690653,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 8,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": 0.09616244170058108,
+    "U": 2.8773498523833827,
+    "confirmatory": false,
+    "effect": "tau_C",
+    "estimate": 1.1253146574146968,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 8,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -7.437057535194453,
+    "U": 0.2475209917574217,
+    "confirmatory": false,
+    "effect": "tau_W",
+    "estimate": -3.0183794459032063,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 8,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": -0.5284804295935865,
+    "U": 2.336190813442185,
+    "confirmatory": false,
+    "effect": "tau_A",
+    "estimate": 0.7414395918777901,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 8,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

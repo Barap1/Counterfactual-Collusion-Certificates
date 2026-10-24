@@ -1,0 +1,9 @@
+{
+  "schema": "ccc.commitment_aliases.v1.2",
+  "description_pattern": "the {tag} item",
+  "tags": ["backend", "frontend", "docs", "testing", "triage", "review"],
+  "aliases": {},
+  "descriptions": ["the backend item", "the frontend item", "the docs item", "the testing item", "the triage item", "the review item"],
+  "outsider_descriptions": ["outsider", "outsiders", "review folks", "other agents", "non-coalition agents"],
+  "note": "Descriptions are forbidden in placebo candidates. The task binding of a description varies by world and is derived from that world's own public task table (world_aliases); no global binding is invented. Unbound implicit commitments remain tuple-empty."
+}

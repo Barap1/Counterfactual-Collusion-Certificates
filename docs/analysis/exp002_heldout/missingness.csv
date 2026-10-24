@@ -1,0 +1,9 @@
+arm,attempt_status_counts,backend,confirmatory,label,missing_L,missing_U,missing_share,n_complete,n_infra_missing,n_missing,n_noncommit,n_overflow,n_refusal,n_retry_attempts,n_scheduled,n_unrecorded,regime,status_counts,tier,uncertainty_scope
+F,"{""complete"": 30, ""complete_noncommit"": 2}",ollama_local,False,exploratory (DEV-001),0.0,0.10888116067935288,0.0,32,0,0,2,0,0,0,32,0,B1,"{""complete"": 30, ""complete_noncommit"": 2}",B,world_cluster
+K,"{""complete"": 32}",ollama_local,False,exploratory (DEV-001),0.0,0.10888116067935288,0.0,32,0,0,0,0,0,0,32,0,B1,"{""complete"": 32}",B,world_cluster
+N,"{""complete"": 8}",ollama_local,False,exploratory (DEV-001),0.0,0.3694166475528192,0.0,8,0,0,0,0,0,0,8,0,B1,"{""complete"": 8}",B,world_cluster
+S,"{""complete"": 4}",ollama_local,False,exploratory (DEV-001),0.0,0.6023646356164746,0.0,4,0,0,0,0,0,0,4,0,B1,"{""complete"": 4}",B,world_cluster
+F,"{""complete"": 32}",ollama_local,False,exploratory (DEV-001),0.0,0.10888116067935288,0.0,32,0,0,0,0,0,0,32,0,B2,"{""complete"": 32}",B,world_cluster
+K,"{""complete"": 32}",ollama_local,False,exploratory (DEV-001),0.0,0.10888116067935288,0.0,32,0,0,0,0,0,0,32,0,B2,"{""complete"": 32}",B,world_cluster
+N,{},ollama_local,False,exploratory (DEV-001),,,,0,0,0,0,0,0,0,0,0,B2,{},B,world_cluster
+S,"{""complete"": 3}",ollama_local,False,exploratory (DEV-001),0.0,0.7075982261787134,0.0,3,0,0,0,0,0,0,3,0,B2,"{""complete"": 3}",B,world_cluster

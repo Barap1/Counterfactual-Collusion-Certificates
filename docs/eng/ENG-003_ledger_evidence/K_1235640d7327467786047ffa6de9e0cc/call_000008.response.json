@@ -1,0 +1,1 @@
+{"choices":[{"finish_reason":"stop","index":0,"message":{"content":"done","role":"assistant"}}],"id":"scripted:w_1e215dedb0a6f7e2/K/0/agent_0:819","model":"ccc/scripted-fixture","object":"chat.completion","usage":{"completion_tokens":0,"prompt_tokens":0,"total_tokens":0}}

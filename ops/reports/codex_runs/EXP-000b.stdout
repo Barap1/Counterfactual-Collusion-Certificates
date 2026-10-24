@@ -1,0 +1,15 @@
+Implemented per-arm counts, distinct call seeds, guarded `--live` transport, reload invalidation, EXP-001 manifest, and hard stop. $0; no live calls, Ollama startup, or commits.
+
+**35 tests passed** under the socket/DNS guard:
+```sh
+starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner.offline unittest discover -s tests/runner -t .
+```
+
+Operator command:
+```sh
+starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.runner run docs/runner/exp001_manifest.json --output docs/runner/exp001-live --live
+```
+
+**Live prerequisite:** `/api/ps` must expose trustworthy `loaded_at` or `load_session_id`; expiry-only servers are refused. Compatibility remains unverified.
+
+Files: `ccc/runner/{__main__,collector,manifest,live}.py`; `tests/runner/{test_runner,test_live}.py`; `docs/runner/{README.md,dev_manifest.json,exp001_manifest.json,exp001-plan.json,exp000b-tests.txt}`; [ops/reports/EXP-000b.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/EXP-000b.md).

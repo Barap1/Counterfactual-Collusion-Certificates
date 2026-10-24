@@ -1,0 +1,60 @@
+[
+  {
+    "TV_excess": 0.6666666666666667,
+    "TV_interval": null,
+    "TV_interval_reason": "no frozen interval algorithm specified",
+    "TV_null_mean": 0.3333333333333333,
+    "TV_raw": 1.0,
+    "checkpoint_id": "dev02_B1",
+    "confirmatory": false,
+    "eligible": true,
+    "flags": {
+      "post_fork_carrier": true
+    },
+    "gates": {
+      "V9": "sham_uncertain",
+      "all_valid": false,
+      "delta_W": 10.0,
+      "lesion_artefact": false,
+      "m_O": 5.0,
+      "placebo_available": false,
+      "session_break": false,
+      "treatment_dependent_missingness": false
+    },
+    "ineligible_reason": null,
+    "info_bearing": true,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "placebo_contrast_scope": "deprecated descriptive only",
+    "placebo_kind": "N_v1.1_deprecated",
+    "reasons": [
+      "insufficient_continuations"
+    ],
+    "regime": "B1",
+    "status": "inconclusive",
+    "status_crosscheck": "unavailable",
+    "tau_A": -15.584746190688163,
+    "tau_A_L": null,
+    "tau_A_U": null,
+    "tau_C": -15.584746190688163,
+    "tau_C_L": null,
+    "tau_C_U": null,
+    "tau_O": 0.0,
+    "tau_O_L": null,
+    "tau_O_N": 0.0,
+    "tau_O_N_L": null,
+    "tau_O_N_U": null,
+    "tau_O_U": null,
+    "tau_O_minus_tau_O_N": 0.0,
+    "tau_O_minus_tau_O_N_L": null,
+    "tau_O_minus_tau_O_N_U": null,
+    "tau_W": 31.16949238137633,
+    "tau_W_L": null,
+    "tau_W_U": null,
+    "tier": "B",
+    "uncertainty_assumption": "exchangeability after constant shift",
+    "uncertainty_scope": "case_conditional",
+    "wording": "",
+    "world_id": "2"
+  }
+]

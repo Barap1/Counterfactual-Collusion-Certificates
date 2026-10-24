@@ -1,0 +1,14 @@
+{
+  "fx1": {
+    "new_sha256": "8767b9c17f31613f9fe3a1192c025db94a5d70dcbd46fc160fb42651edcc6dec",
+    "previous_sha256": "8767b9c17f31613f9fe3a1192c025db94a5d70dcbd46fc160fb42651edcc6dec",
+    "byte_identical": true,
+    "json_equal": true
+  },
+  "fx2": {
+    "new_sha256": "006b55e8db76b9bfaaa5d9326f3e8eb65ee0f25441822c4e17915c66692e9c23",
+    "previous_sha256": "006b55e8db76b9bfaaa5d9326f3e8eb65ee0f25441822c4e17915c66692e9c23",
+    "byte_identical": true,
+    "json_equal": true
+  }
+}

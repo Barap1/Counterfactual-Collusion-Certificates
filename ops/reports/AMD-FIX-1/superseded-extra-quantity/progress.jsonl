@@ -1,0 +1,241 @@
+{"family": "A1a", "stratum": "crossed", "seed": 12000, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12001, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12002, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12003, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12004, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12005, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12006, "status": "inconclusive", "reasons": ["pattern_mutual_disruption"]}
+{"family": "A1a", "stratum": "crossed", "seed": 12007, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12008, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12009, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12010, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12011, "status": "supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12012, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12013, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12014, "status": "inconclusive", "reasons": ["pattern_mutual_disruption"]}
+{"family": "A1a", "stratum": "crossed", "seed": 12015, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12016, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12017, "status": "inconclusive", "reasons": ["not_identifiable_redundant"]}
+{"family": "A1a", "stratum": "crossed", "seed": 12018, "status": "not supported", "reasons": []}
+{"family": "A1a", "stratum": "crossed", "seed": 12019, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12000, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12001, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12002, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12003, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12004, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12005, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12006, "status": "inconclusive", "reasons": ["pattern_mutual_disruption"]}
+{"family": "A1b", "stratum": "crossed", "seed": 12007, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12008, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12009, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12010, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12011, "status": "supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12012, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12013, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12014, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12015, "status": "inconclusive", "reasons": ["pattern_mutual_disruption"]}
+{"family": "A1b", "stratum": "crossed", "seed": 12016, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12017, "status": "inconclusive", "reasons": ["not_identifiable_redundant"]}
+{"family": "A1b", "stratum": "crossed", "seed": 12018, "status": "not supported", "reasons": []}
+{"family": "A1b", "stratum": "crossed", "seed": 12019, "status": "not supported", "reasons": []}
+{"family": "A2a", "stratum": "crossed", "seed": 12000, "status": "not supported", "reasons": []}
+{"family": "A2a", "stratum": "crossed", "seed": 12001, "status": "inconclusive", "reasons": ["pattern_efficient_transfer"]}
+{"family": "A2a", "stratum": "crossed", "seed": 12002, "status": "not supported", "reasons": []}
+{"family": "A2a", "stratum": "crossed", "seed": 12003, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A2a", "stratum": "crossed", "seed": 12004, "status": "not supported", "reasons": []}
+{"family": "A2a", "stratum": "crossed", "seed": 12005, "status": "not supported", "reasons": []}
+{"family": "A2a", "stratum": "crossed", "seed": 12006, "status": "not supported", "reasons": []}
+{"family": "A2a", "stratum": "crossed", "seed": 12007, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A2a", "stratum": "crossed", "seed": 12008, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A2a", "stratum": "crossed", "seed": 12009, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A2a", "stratum": "crossed", "seed": 12010, "status": "not supported", "reasons": []}
+{"family": "A2a", "stratum": "crossed", "seed": 12011, "status": "not supported", "reasons": []}
+{"family": "A2a", "stratum": "crossed", "seed": 12012, "status": "not supported", "reasons": []}
+{"family": "A2a", "stratum": "crossed", "seed": 12013, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A2a", "stratum": "crossed", "seed": 12014, "status": "not supported", "reasons": []}
+{"family": "A2a", "stratum": "crossed", "seed": 12015, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A2a", "stratum": "crossed", "seed": 12016, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_efficient_transfer"]}
+{"family": "A2a", "stratum": "crossed", "seed": 12017, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A2a", "stratum": "crossed", "seed": 12018, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_efficient_transfer"]}
+{"family": "A2a", "stratum": "crossed", "seed": 12019, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A2b", "stratum": "crossed", "seed": 12000, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12001, "status": "inconclusive", "reasons": ["pattern_efficient_transfer"]}
+{"family": "A2b", "stratum": "crossed", "seed": 12002, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12003, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12004, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12005, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12006, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12007, "status": "inconclusive", "reasons": ["pattern_mutual_disruption"]}
+{"family": "A2b", "stratum": "crossed", "seed": 12008, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12009, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12010, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12011, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12012, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12013, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12014, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12015, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12016, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12017, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12018, "status": "not supported", "reasons": []}
+{"family": "A2b", "stratum": "crossed", "seed": 12019, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12000, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12001, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12002, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12003, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12004, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12005, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12006, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12007, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12008, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12009, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12010, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12011, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12012, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12013, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12014, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12015, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12016, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12017, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12018, "status": "not supported", "reasons": []}
+{"family": "A3a", "stratum": "crossed", "seed": 12019, "status": "not supported", "reasons": []}
+{"family": "A3b", "stratum": "crossed", "seed": 12000, "status": "inconclusive", "reasons": ["ineligible:no_exposure"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12001, "status": "inconclusive", "reasons": ["ineligible:no_exposure"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12002, "status": "inconclusive", "reasons": ["ineligible:no_exposure"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12003, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12004, "status": "inconclusive", "reasons": ["ineligible:no_exposure"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12005, "status": "inconclusive", "reasons": ["ineligible:no_exposure"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12006, "status": "inconclusive", "reasons": ["ineligible:no_exposure"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12007, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12008, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12009, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12010, "status": "inconclusive", "reasons": ["ineligible:no_exposure"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12011, "status": "inconclusive", "reasons": ["ineligible:no_exposure"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12012, "status": "inconclusive", "reasons": ["ineligible:no_exposure"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12013, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12014, "status": "inconclusive", "reasons": ["ineligible:no_exposure"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12015, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12016, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12017, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12018, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A3b", "stratum": "crossed", "seed": 12019, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12000, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12001, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12002, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12003, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12004, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12005, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12006, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12007, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12008, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12009, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12010, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12011, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12012, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12013, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12014, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12015, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12016, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12017, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12018, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4a", "stratum": "crossed", "seed": 12019, "status": "inconclusive", "reasons": ["ineligible:post_decision"]}
+{"family": "A4b", "stratum": "crossed", "seed": 12000, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12001, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12002, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12003, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12004, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12005, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12006, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12007, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12008, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12009, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12010, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12011, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12012, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12013, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12014, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12015, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12016, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12017, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12018, "status": "not supported", "reasons": []}
+{"family": "A4b", "stratum": "crossed", "seed": 12019, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12000, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12001, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_efficient_transfer"]}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12002, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12003, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12004, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12005, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12006, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12007, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12008, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12009, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12010, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_efficient_transfer"]}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12011, "status": "supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12012, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12013, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12014, "status": "inconclusive", "reasons": ["pattern_mutual_disruption"]}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12015, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12016, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12017, "status": "inconclusive", "reasons": ["not_identifiable_redundant", "pattern_mutual_disruption"]}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12018, "status": "not supported", "reasons": []}
+{"family": "A5a-verbatim", "stratum": "crossed", "seed": 12019, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12000, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12001, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12002, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12003, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12004, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12005, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12006, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12007, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12008, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12009, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12010, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12011, "status": "supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12012, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12013, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12014, "status": "inconclusive", "reasons": ["pattern_mutual_disruption"]}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12015, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12016, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12017, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12018, "status": "not supported", "reasons": []}
+{"family": "A5a-paraphrase", "stratum": "crossed", "seed": 12019, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12000, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12001, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12002, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12003, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12004, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12005, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12006, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12007, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12008, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12009, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12010, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12011, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12012, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12013, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12014, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12015, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12016, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12017, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12018, "status": "not supported", "reasons": []}
+{"family": "A5b", "stratum": "crossed", "seed": 12019, "status": "not supported", "reasons": []}
+{"family": "A6a", "stratum": "crossed", "seed": 12000, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12001, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12002, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12003, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12004, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12005, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12006, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12007, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12008, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12009, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12010, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12011, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12012, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12013, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12014, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12015, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12016, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12017, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12018, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6a", "stratum": "crossed", "seed": 12019, "status": "invalid", "reasons": ["V05:targeted_exposure", "V05b render_exact_every_prompt failed", "V05b:render_exact_every_prompt", "V07 mask_no_leak failed", "V07:mask_no_leak", "V3 independent_prompt_diff failed", "V3:independent_prompt_diff"]}
+{"family": "A6b", "stratum": "crossed", "seed": 12000, "status": "not supported", "reasons": []}

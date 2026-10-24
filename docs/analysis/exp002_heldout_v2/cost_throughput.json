@@ -1,0 +1,17 @@
+[
+  {
+    "confirmatory": false,
+    "cost_usd": 0.0,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "latency_p50": 3806.8999999999996,
+    "latency_p95": 7792.650000000001,
+    "load_sessions": 1,
+    "max_requests": 5981,
+    "n_calls": 3516,
+    "tier": "B",
+    "tokens_completion": 341526,
+    "tokens_prompt": 7464654,
+    "uncertainty_scope": "world_cluster",
+    "unknown_count": 0
+  }
+]

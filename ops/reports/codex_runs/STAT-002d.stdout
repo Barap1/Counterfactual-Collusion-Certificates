@@ -1,0 +1,5 @@
+Implemented sibling lookup and `--watchdog-dir` for run/pin/Reader; preserved stale rules and recorded full marker paths in warnings.
+Evidence: `ops/reports/watchdog_input_guard_fix.md`. Sealed evidence untouched; no live calls, commits, or EXP-002 analysis.
+Requested offline test command passed; final lines:
+`Ran 54 tests in 1.018s`
+`OK`

@@ -1,0 +1,2 @@
+2026-10-23T22:33:00.353156+00:00 watchdog started run_pid=97225 ollama_pid=57827 ledger_offset=449138 initial_size_vram=17398172220
+2026-10-23T22:54:01.514936+00:00 run pid exited on its own

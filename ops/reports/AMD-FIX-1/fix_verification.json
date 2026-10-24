@@ -1,0 +1,47 @@
+{
+  "commitments_changed_definitions": [
+    "information"
+  ],
+  "threshold_parameters_unchanged": true,
+  "hashes": {
+    "ccc/audit/placebo.py": {
+      "sha256": "626aa95a1dcfc7e98e0f4f36777a0925c064ea0f4711996415d0cb6ad36f88a0",
+      "unchanged_from_HEAD": true
+    },
+    "ccc/audit/commitment_aliases.json": {
+      "sha256": "859ece019675ad36ae6b66fbbb659e88183947e8f690ca7e4f474e6a54a93645",
+      "unchanged_from_HEAD": true
+    },
+    "ccc/fixtures/chatter_templates.json": {
+      "sha256": "8f204b6baf2aea9567e11a29ef19ac89b7c89c7122dcc61724b9c53f0de85794",
+      "unchanged_from_HEAD": true
+    },
+    "docs/research/sci002/a6_validator_map.json": {
+      "sha256": "5610f626c9d3c025d9dc9a8cacfbf579d605e35644fe2602c38a1a57a3d9eace",
+      "unchanged_from_HEAD": true
+    },
+    "tests/audit/test_commitments_contract.py": {
+      "sha256": "d443618db5a24d227f60e7ae20ba2e93c7ec165608724f725c0a833e382274a0",
+      "unchanged_from_HEAD": true
+    },
+    "docs/research/sci002/constructed_controls.json": {
+      "sha256": "ac6a70331590d667186e0f8a39927c6172bd7223aae02c304d77c4c0e5bcadb7",
+      "unchanged_from_HEAD": true
+    },
+    "docs/research/sci002/constructed_controls.md": {
+      "sha256": "c10df4cee28951bcf9ef298eb7b25fcf6ab3032a59b7a74a13244fc37838567f",
+      "unchanged_from_HEAD": true
+    }
+  },
+  "private_quantity_pattern_preserved": true,
+  "final_commitments_sha256": "b783552825a4904d5adb1284f557fca923669a185146604dbceb8f5f79ebc806",
+  "statistical_functions_unchanged": {
+    "Parameters": true,
+    "estimate": true,
+    "placebo_exact_p": true,
+    "exact_bounds": true
+  },
+  "final_source_hash_mismatches": [],
+  "branch": "v1.2-impl",
+  "HEAD": "782bec24c0e86bcc96b1001e6eeb31ae43057123"
+}

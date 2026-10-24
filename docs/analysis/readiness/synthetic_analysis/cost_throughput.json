@@ -1,0 +1,17 @@
+[
+  {
+    "confirmatory": false,
+    "cost_usd": 0,
+    "label": "exploratory (DEV-001)",
+    "latency_p50": null,
+    "latency_p95": null,
+    "load_sessions": 1,
+    "max_requests": null,
+    "n_calls": 13,
+    "tier": "B",
+    "tokens_completion": 0,
+    "tokens_prompt": 0,
+    "uncertainty_scope": "world_cluster",
+    "unknown_count": 0
+  }
+]

@@ -1,0 +1,4 @@
+Updated the arm schematic and confusion figure; sidecars retain SHA-256 provenance for the committed protocol and DEV data.  
+Rendered both PDFs to `/tmp/ccc_figqa/` with `sips` and visually checked the PNGs for overlaps and clipping.  
+Recorded the revisions and validation in [VIS-001a.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/VIS-001a.md).  
+No tests, network calls, or commits.

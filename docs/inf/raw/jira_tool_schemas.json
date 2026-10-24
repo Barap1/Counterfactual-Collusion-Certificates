@@ -1,0 +1,48 @@
+{
+ "planning": [
+  {
+   "type": "function",
+   "function": {
+    "name": "post_message",
+    "description": "Post a communication message to agents on the blackboard",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "message": {
+       "type": "string",
+       "description": "The message to communicate to other agents"
+      },
+      "blackboard_id": {
+       "type": "integer",
+       "description": "ID of the blackboard you are posting to"
+      }
+     },
+     "required": [
+      "message"
+     ]
+    }
+   }
+  }
+ ],
+ "execution": [
+  {
+   "type": "function",
+   "function": {
+    "name": "assign_task",
+    "description": "Claim a task id (or use 'skip' to skip).",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "task_id": {
+       "type": "string",
+       "description": "Task id from your task list (or 'skip')."
+      }
+     },
+     "required": [
+      "task_id"
+     ]
+    }
+   }
+  }
+ ]
+}

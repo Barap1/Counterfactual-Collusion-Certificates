@@ -1,0 +1,11 @@
+{
+  "label": "exploratory (DEV-001)",
+  "phase": "holdout",
+  "problems": [],
+  "synthetic": false,
+  "valid": true,
+  "warnings": [
+    "stale_lock_ignored: .collector.lock (marker /Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live.watchdog/WATCHDOG_EXIT.json, run_pid 98650 not alive)",
+    "Runner metadata lacks frozen info_bearing output; conservatively true; support blocked when unestablished"
+  ]
+}

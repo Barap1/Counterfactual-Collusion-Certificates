@@ -1,0 +1,58 @@
+# DRAFT Stage-2 addendum — DEV/pilot
+
+Not final pinned values. No held-out authorization.
+
+sigma_dev=3.3436508067332933; m_O=5.0; delta_W=10.0; delta_S=5.0; thin_dev=True.
+
+theta: UNPINNED (No DEV A5a positive and A2/A3 negative pair dataset supplied.).
+
+Attainability assumes independent Gaussian outcomes and all other gates pass; these are simulated outsider-gate probabilities, not measured certificate rates.
+
+| effect | supported | not supported | imprecise |
+|---|---|---|---|
+| 0.0 | 0.0 | 0.551 | 0.44899999999999995 |
+| 5.0 | 0.0355 | 0.048 | 0.9165 |
+| 10.0 | 0.546 | 0.0 | 0.45399999999999996 |
+| 20.0 | 1.0 | 0.0 | 0.0 |
+
+A zero simulation frequency does not establish impossibility.
+
+Input and rule SHA256 hashes:
+
+```json
+{
+  "inputs": {
+    "manifest.json": "9a0641a9f46007045306f555a80b4e7018992c729c8547cffb2a87631ab76b98",
+    "worlds/dev02_B1/attempt_0001/begin.json": "d78bda599aa929072bbf4721b18fa7f50388c00356b7894c611e49be4c2b3791",
+    "worlds/dev02_B1/attempt_0001/checkpoint.json": "742debf0048435231f92afd68f69df339bdb7a3ffeb5595ad54451130df6963f",
+    "worlds/dev02_B1/attempt_0001/branches/000_F/begin.json": "ae1ec6d988cdb7c4b870700da33155d511bbec3aafe4a9fa0842381ca957a946",
+    "worlds/dev02_B1/attempt_0001/branches/000_F/result.json": "501f66040f3371bd607eefc95ad64d4fcfe331392c2ae325ca19e56893a928ac",
+    "worlds/dev02_B1/attempt_0001/branches/000_K/begin.json": "07a81fc927c9e469ab53f6636c5f0dc8a1a284ed909488143147987e1c307abe",
+    "worlds/dev02_B1/attempt_0001/branches/000_N/begin.json": "9e4a075dc9cb10b2e372be3b36359ee9632236c7a6aa38a66e79ff853848e603",
+    "worlds/dev02_B1/attempt_0001/branches/000_S/begin.json": "26dadd6686278835bc9ee23b14382190511752420736c7b2ba72da6b56493150",
+    "worlds/dev02_B1/attempt_0001/branches/000_S/result.json": "20ff028198cbc637f09e58d217da9651f5437b91b613eba8e5a6e3b70dd695a1",
+    "worlds/dev02_B1/attempt_0001/branches/001_F/begin.json": "e1cd873def0218780dd3dd79c587656a739236bb1d775610e9c2245a9c85fa02",
+    "worlds/dev02_B1/attempt_0001/branches/001_F/result.json": "4ca0ebfea2e8082c441af42ebb5139a168239a31f7299fec5d03f0a11b027230",
+    "worlds/dev02_B1/attempt_0001/branches/001_K/begin.json": "0a4ba900015013c292f178376534eb4b9d37a4afb36e4b999cda1740671dee10",
+    "worlds/dev02_B1/attempt_0001/branches/001_N/begin.json": "a28e56b0341bfb588a797652f49efe1d84b5a3c2c1c032bc5ef4749ad3faeaf4",
+    "worlds/dev02_B1/attempt_0001/branches/001_S/begin.json": "d8859cd68e7f7f5e61f53e65d4028e382359e806fad5f0b6e7c9b4dfe60cbfb8",
+    "worlds/dev02_B1/attempt_0001/branches/001_S/result.json": "f06b22e56412880c4e775f33fea2076c389201c5261f2a429898a243f829f7b1",
+    "worlds/dev02_B1/attempt_0001/branches/002_F/begin.json": "7dc3b6b3d909836f2b76fda3616aa41e52a60216b6e9d2c8a443206b508e0775",
+    "worlds/dev02_B1/attempt_0001/branches/002_F/result.json": "399eaaf6e0703eac26a88412c42aa97e43ecd3226d8c00a0d67ed8f935617566",
+    "worlds/dev02_B1/attempt_0001/branches/002_K/begin.json": "62010bfcfd8084fab73174c49c9c266f9e7f64af3fe36fb61bc918baaa309264",
+    "worlds/dev02_B1/attempt_0001/branches/002_S/begin.json": "c4e870e3e7ea47d3259c523dc1fcbd414d9c555a01cb3a34ef45d8e9598678ac",
+    "worlds/dev02_B1/attempt_0001/branches/002_S/result.json": "6003d9c3df38d08f6779f0982a73e64138d0f67569411d765fc24210b2083e40",
+    "worlds/dev02_B1/attempt_0001/branches/003_F/begin.json": "03eed7cee7496596ff0558445ce2c9c8d8dcb2260dfd8d1aedc0c7390b94c89b",
+    "worlds/dev02_B1/attempt_0001/branches/003_F/result.json": "1a9cfcde92fdc1cbdc02e2f29f694cb069976fbfb636ebe1da37f8fe6637179d",
+    "worlds/dev02_B1/attempt_0001/branches/003_K/begin.json": "4b1d92f51b1391b826fad70589fcff289cfb6a7ddedbec9a3f3c6f64ba36fcf2",
+    "worlds/dev02_B1/attempt_0001/branches/003_S/begin.json": "04fcd6c68ecb779acb4af1eb4df44b063af48211f0de59b606682e968ee96596",
+    "worlds/dev02_B1/attempt_0001/branches/003_S/result.json": "6dfcd98fb07696b7cb54fc48acb42513b3931f4709ffdd5cf253958ff284860a"
+  },
+  "rules": {
+    "docs/stats/prereg.md": "df72bb5ddf603ddee56876166cd4727f0ff18484d18c4c31bff27b4c6be0c649",
+    "docs/research/sci002/protocol.md": "8f7dcd896c524aa0a056bf11490641c8cc116a2b099de0b903285109f0a92549",
+    "docs/stats/compute_plan.md": "08288d872a5a6e65228dc96015df26cec6243c5f471a0fec5907b4d03d9a9f23",
+    "ccc/analysis/stage2.py": "bfc3d84753fa2e6839819d3a95cac700a434f0b900918bbd1221683620131acd"
+  }
+}
+```

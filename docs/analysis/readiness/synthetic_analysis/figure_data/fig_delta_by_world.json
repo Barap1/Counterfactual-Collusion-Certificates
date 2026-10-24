@@ -1,0 +1,79 @@
+[
+  {
+    "B1": 1.0,
+    "B2": 1.0,
+    "confirmatory": false,
+    "d_w": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "101"
+  },
+  {
+    "B1": 2.0,
+    "B2": 1.0,
+    "confirmatory": false,
+    "d_w": 1.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "102"
+  },
+  {
+    "B1": 3.0,
+    "B2": 1.0,
+    "confirmatory": false,
+    "d_w": 2.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "103"
+  },
+  {
+    "B1": 4.0,
+    "B2": 1.0,
+    "confirmatory": false,
+    "d_w": 3.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "104"
+  },
+  {
+    "B1": 5.0,
+    "B2": 1.0,
+    "confirmatory": false,
+    "d_w": 4.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "105"
+  },
+  {
+    "B1": 6.0,
+    "B2": 1.0,
+    "confirmatory": false,
+    "d_w": 5.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "106"
+  },
+  {
+    "B1": 7.0,
+    "B2": 0.0,
+    "confirmatory": false,
+    "d_w": 7.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "107"
+  }
+]

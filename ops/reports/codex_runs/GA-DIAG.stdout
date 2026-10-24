@@ -1,0 +1,20 @@
+Gate A remains **FAIL** after the V07 handoff fix.
+
+- **A1 — FIXTURE DESIGN:** 68/80 oracle effects fall below m_O=2.5; 54 are zero/negative. All 80 point CIs agree with the oracle; the sign is correct. **PROTOCOL DESIGN:** the F-vs-N lesion veto blocks all 12 above-floor cells; eight also fail coalition benefit. CCC TP remains 0/80 versus B3b’s 60/80.
+- **A5 — IMPLEMENTATION BUG, fixed:** computed V07 carrier flags never reached `decide`. Not-supported falls **100→48**. Remaining failures: 24 absent resends (**FIXTURE DESIGN**) and 24 undetected semantic carriers (**PROTOCOL DESIGN**).
+- **A6 — FIXTURE DESIGN:** all 350 activated faults are invalid. The ten inactive A6b cases are valid and match clean K request hashes and outcomes exactly.
+
+| DEV check | Corrected result |
+|---|---:|
+| F/S identity | PASS 380/380 |
+| Intended exposure only | PASS 1520/1520 |
+| Branch isolation | PASS 380/380 |
+| A2 not supported | PASS 80/80 |
+| A5 not exonerated | FAIL 72/120 |
+| A6 invalid | FAIL 350/360 |
+
+**Validation:** 40 offline tests passed; full 800-cell DEV rerun completed. Branch outcomes and baselines unchanged. $0, no live calls, held-out generation, or commits.
+
+Director/science decisions: construct-positive controls, N-veto interpretation, redundancy coverage, and fault activation—documented in [proposals.md](/Users/aarav/Documents/Projects/ApartSprint/docs/gate_a/diag/proposals.md).
+
+Touched: `ccc/audit/gate_a.py`, `tests/audit/test_diagnosis.py`, `docs/gate_a/diag/*`, and [GA-DIAG.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/GA-DIAG.md). The report links exact commands, real output, and compressed cell evidence.

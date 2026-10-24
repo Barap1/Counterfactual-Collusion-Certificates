@@ -1,0 +1,3 @@
+PUB-005 is blocked at PDF rendering. The HTML preview is built at [draft.html](/Users/aarav/Documents/Projects/ApartSprint/paper/build/draft.html) with a visible draft/pending-results label and print styling; the converter and build script are in [paper/build/](/Users/aarav/Documents/Projects/ApartSprint/paper/build) and [build_pdf.sh](/Users/aarav/Documents/Projects/ApartSprint/paper/build_pdf.sh).
+
+Chrome and Quick Look produced no PDF, so page totals, length limits, visual legibility, and requested PNGs remain unverified. No planned SVGs were present to embed. Details and commands are recorded in [PUB-005.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/PUB-005.md). $0 spent; no network or model calls; no held-out data accessed.

@@ -1,0 +1,61 @@
+{
+  "base_trajectories": 1,
+  "continuations": 8,
+  "independent_worlds": 1,
+  "jobs": [
+    {
+      "order": [
+        {
+          "arm": "F",
+          "replicate": 0,
+          "seed": 1196151925
+        },
+        {
+          "arm": "S",
+          "replicate": 0,
+          "seed": 1196151925
+        },
+        {
+          "arm": "K",
+          "replicate": 0,
+          "seed": 1196151925
+        },
+        {
+          "arm": "N",
+          "replicate": 0,
+          "seed": 1196151925
+        },
+        {
+          "arm": "F",
+          "replicate": 1,
+          "seed": 517081440
+        },
+        {
+          "arm": "S",
+          "replicate": 1,
+          "seed": 517081440
+        },
+        {
+          "arm": "N",
+          "replicate": 1,
+          "seed": 517081440
+        },
+        {
+          "arm": "K",
+          "replicate": 1,
+          "seed": 517081440
+        }
+      ],
+      "placebo": true,
+      "world": {
+        "id": "dev02_B1",
+        "regime": "B1",
+        "seed": 2,
+        "split": "development"
+      }
+    }
+  ],
+  "live_inference_enabled": false,
+  "manifest_sha256": "f97e12e1eb6567659dbaf6c41563a8dac26fddf0accd36d4ad4f44aedfef5fb7",
+  "max_requests": 1000
+}

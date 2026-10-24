@@ -1,0 +1,2 @@
+nice: setpriority: Operation not permitted
+PASS: four opens and two listings rejected before filesystem access; no protected content read

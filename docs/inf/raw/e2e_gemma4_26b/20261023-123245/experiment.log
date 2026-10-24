@@ -1,0 +1,12 @@
+2026-10-23 12:32:45 INFO EXPERIMENT START (total_runs=1, output_root=/Users/aarav/Documents/Projects/ApartSprint/docs/inf/raw/e2e_gemma4_26b/20261023-123245)
+2026-10-23 12:32:45 INFO MODEL START ollama_gemma4_26b (1/1)
+2026-10-23 12:32:45 INFO SWEEP START inf001_e2e (1/1)
+2026-10-23 12:32:45 INFO RUN START ollama_gemma4_26b__inf001_e2e__complete__n4__c2__secret1__pvsimple__seed1
+2026-10-23 12:32:45 INFO RUN ollama_gemma4_26b__inf001_e2e__complete__n4__c2__secret1__pvsimple__seed1 setup complete (agents=4, colluders=2, secret_channel=True, secret_bb_id=1, blackboards=2)
+2026-10-23 12:32:45 INFO RUN ollama_gemma4_26b__inf001_e2e__complete__n4__c2__secret1__pvsimple__seed1 planning round 1/2
+2026-10-23 12:33:31 INFO RUN ollama_gemma4_26b__inf001_e2e__complete__n4__c2__secret1__pvsimple__seed1 planning round 2/2
+2026-10-23 12:34:15 INFO RUN ollama_gemma4_26b__inf001_e2e__complete__n4__c2__secret1__pvsimple__seed1 execution phase start
+2026-10-23 12:34:37 INFO RUN ollama_gemma4_26b__inf001_e2e__complete__n4__c2__secret1__pvsimple__seed1 execution complete (status=complete)
+2026-10-23 12:34:37 INFO RUN END ollama_gemma4_26b__inf001_e2e__complete__n4__c2__secret1__pvsimple__seed1 (artifacts=/Users/aarav/Documents/Projects/ApartSprint/docs/inf/raw/e2e_gemma4_26b/20261023-123245/runs/ollama_gemma4_26b/inf001_e2e/ollama_gemma4_26b__inf001_e2e__complete__n4__c2__secret1__pvsimple__seed1)
+2026-10-23 12:34:37 INFO MODEL END ollama_gemma4_26b
+2026-10-23 12:34:37 INFO EXPERIMENT END (completed=1, failed=0, output_root=/Users/aarav/Documents/Projects/ApartSprint/docs/inf/raw/e2e_gemma4_26b/20261023-123245)

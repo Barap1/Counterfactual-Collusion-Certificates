@@ -1,0 +1,7 @@
+L,L90,L95,U,U90,U95,check,confirmatory,estimate,half_width90,label,n_independent,regime,status,tier,uncertainty_scope,world_cluster
+,,,,,,V8,False,,,DEV/pilot,,B1,treatment_dependent_missingness,B,world_cluster,
+,-1.6526715123440736,-2.065567830878672,,0.6913525484565914,1.1042488669911896,V9,False,-0.4806594819437411,1.1720120304003325,DEV/pilot,4,B1,pass,B,world_cluster,"{""L"": -1.4806955333455178, ""U"": 0.03871708751429459, ""estimate"": -0.4806594819437411, ""n_independent"": 4}"
+,,,,,,V10,False,,,DEV/pilot,0,B1,not_established,B,world_cluster,
+,,,,,,V8,False,,,DEV/pilot,,B2,treatment_dependent_missingness,B,world_cluster,
+,-1.2052792399541552,-1.7327624775936792,,1.022651681032626,1.55013491867215,V9,False,-0.09131377946076451,1.1139654604933906,DEV/pilot,3,B2,pass,B,world_cluster,"{""L"": -0.7056537443311832, ""U"": 0.6077228517442173, ""estimate"": -0.09131377946076451, ""n_independent"": 3}"
+,,,,,,V10,False,,,DEV/pilot,0,B2,not_established,B,world_cluster,

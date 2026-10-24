@@ -1,0 +1,171 @@
+........................................................F...........................................Can't get LLM response: simulated provider timeout
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 108, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/replay/test_corruption.py", line 184, in generate_response
+    raise TimeoutError("simulated provider timeout")
+TimeoutError: simulated provider timeout
+......Failed to continue conversation at step 2: request hash mismatch at seq 2 (Mona turn 0 step 3): recorded 000000000000 got b508e48f790b
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 379, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 108, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 145, in generate_response
+    rec = self.source.next(ccc_context or {}, request_payload(input, params))
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 125, in next
+    self._fail(f"request hash mismatch at seq {rec.seq} ({rec.agent} turn {rec.turn_index} "
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         f"step {rec.step}): recorded {rec.request_sha256[:12]} got {sha[:12]}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 113, in _fail
+    raise PrefixMismatch(msg)
+ccc.replay.clients.PrefixMismatch: request hash mismatch at seq 2 (Mona turn 0 step 3): recorded 000000000000 got b508e48f790b
+Can't get LLM response: order mismatch at seq 2: recorded ('Mona', 0, 3) got ('Layla', 1, 1)
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 108, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 145, in generate_response
+    rec = self.source.next(ccc_context or {}, request_payload(input, params))
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 122, in next
+    self._fail(f"order mismatch at seq {rec.seq}: recorded {(rec.agent, rec.turn_index, rec.step)} "
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         f"got {(ctx.get('agent'), ctx.get('turn_index'), ctx.get('step'))}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 113, in _fail
+    raise PrefixMismatch(msg)
+ccc.replay.clients.PrefixMismatch: order mismatch at seq 2: recorded ('Mona', 0, 3) got ('Layla', 1, 1)
+...........F.......E...
+======================================================================
+ERROR: test_imports_and_environments_without_network (tests.test_offline_adapter.OfflineAdapter.test_imports_and_environments_without_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_offline_adapter.py", line 40, in test_imports_and_environments_without_network
+    names = colosseum.environment_names()
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/adapters/colosseum.py", line 34, in environment_names
+    return list(get_implemented_environment_names())
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/utils.py", line 557, in get_implemented_environment_names
+    return sorted(_get_environment_registry().keys())
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/utils.py", line 540, in _get_environment_registry
+    from envs.dcops.personal_assistant import PersonalAssistantEnvironment
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/envs/dcops/personal_assistant/__init__.py", line 20, in __getattr__
+    module = importlib.import_module(module_path, __name__)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/envs/dcops/personal_assistant/personal_assistant_env.py", line 17, in <module>
+    from problem_layer.personal_assistant import PersonalAssistantConfig, generate_instance
+ModuleNotFoundError: No module named 'problem_layer'
+
+======================================================================
+FAIL: test_native_valid_mechanisms_match_exact_oracle (tests.fixtures.test_native_replay.NativeReplayBridge.test_native_valid_mechanisms_match_exact_oracle) (case='A3b')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/fixtures/test_native_replay.py", line 40, in test_native_valid_mechanisms_match_exact_oracle
+    self.assertTrue(report.audit.valid, {a:b.reasons for a,b in report.audit.branches.items()})
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : {'F': [], 'S': [], 'K': []}
+
+======================================================================
+FAIL: test_mask_is_pure_and_receiver_scoped (tests.replay.test_interventions.InterventionUnits.test_mask_is_pure_and_receiver_scoped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/replay/test_interventions.py", line 42, in test_mask_is_pure_and_receiver_scoped
+    self.assertEqual(diff["removed"], [{"blackboard_id": "1", "event_id": "e2", "rendered_index": 2,
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                        "later_indices_shift": -1}])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [{'bl[22 chars]ent_id': 'e2', 'rendered_index': 2, 'later_indices_shift': 0}] != [{'bl[22 chars]ent_id': 'e2', 'rendered_index': 2, 'later_indices_shift': -1}]
+
+First differing element 0:
+{'bla[20 chars]vent_id': 'e2', 'rendered_index': 2, 'later_indices_shift': 0}
+{'bla[20 chars]vent_id': 'e2', 'rendered_index': 2, 'later_indices_shift': -1}
+
+  [{'blackboard_id': '1',
+    'event_id': 'e2',
+-   'later_indices_shift': 0,
+?                          ^
+
++   'later_indices_shift': -1,
+?                          ^^
+
+    'rendered_index': 2}]
+
+----------------------------------------------------------------------
+Ran 129 tests in 45.950s
+
+FAILED (failures=2, errors=1)

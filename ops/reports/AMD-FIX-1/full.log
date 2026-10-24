@@ -1,0 +1,160 @@
+............s.....s.....s................................................................................................................................................................................................Can't get LLM response: simulated provider timeout
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/replay/recorder.py", line 111, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/tests/replay/test_corruption.py", line 187, in generate_response
+    raise TimeoutError("simulated provider timeout")
+TimeoutError: simulated provider timeout
+......Failed to continue conversation at step 2: request hash mismatch at seq 2 (Mona turn 0 step 3): recorded 000000000000 got b508e48f790b
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 379, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/replay/recorder.py", line 111, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/replay/clients.py", line 146, in generate_response
+    rec = self.source.next(ccc_context or {}, request_payload(input, params))
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/replay/clients.py", line 126, in next
+    self._fail(f"request hash mismatch at seq {rec.seq} ({rec.agent} turn {rec.turn_index} "
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         f"step {rec.step}): recorded {rec.request_sha256[:12]} got {sha[:12]}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/replay/clients.py", line 114, in _fail
+    raise PrefixMismatch(msg)
+ccc.replay.clients.PrefixMismatch: request hash mismatch at seq 2 (Mona turn 0 step 3): recorded 000000000000 got b508e48f790b
+Can't get LLM response: order mismatch at seq 2: recorded ('Mona', 0, 3) got ('Layla', 1, 1)
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/replay/recorder.py", line 111, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/replay/clients.py", line 146, in generate_response
+    rec = self.source.next(ccc_context or {}, request_payload(input, params))
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/replay/clients.py", line 123, in next
+    self._fail(f"order mismatch at seq {rec.seq}: recorded {(rec.agent, rec.turn_index, rec.step)} "
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         f"got {(ctx.get('agent'), ctx.get('turn_index'), ctx.get('step'))}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/replay/clients.py", line 114, in _fail
+    raise PrefixMismatch(msg)
+ccc.replay.clients.PrefixMismatch: order mismatch at seq 2: recorded ('Mona', 0, 3) got ('Layla', 1, 1)
+...........................ssss...........................................................................EEE
+======================================================================
+ERROR: test_pilot_archive_matches_manifest (tests.test_offline_adapter.OfflineAdapter.test_pilot_archive_matches_manifest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/tests/test_offline_adapter.py", line 53, in test_pilot_archive_matches_manifest
+    self.assertEqual(hashlib.sha256((base / rel).read_bytes()).hexdigest(), digest, rel)
+                                    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aarav/Documents/Projects/ApartSprint-wt-v12/results/baselines/colosseum_positive_control_seed1_interrupted/20261023-111229/config.json'
+
+======================================================================
+ERROR: test_pilot_metrics_recompute (tests.test_offline_adapter.OfflineAdapter.test_pilot_metrics_recompute)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/tests/test_offline_adapter.py", line 58, in test_pilot_metrics_recompute
+    run = colosseum.load_run(PILOT)
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/adapters/colosseum.py", line 53, in load_run
+    run = find_run_dir(batch_dir)
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/adapters/colosseum.py", line 48, in find_run_dir
+    raise FileNotFoundError(f"expected exactly one final_summary.json under {batch_dir}, found {len(hits)}")
+FileNotFoundError: expected exactly one final_summary.json under /Users/aarav/Documents/Projects/ApartSprint-wt-v12/results/baselines/colosseum_positive_control_seed1/20261023-111625, found 0
+
+======================================================================
+ERROR: test_pilot_model_provenance (tests.test_offline_adapter.OfflineAdapter.test_pilot_model_provenance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/tests/test_offline_adapter.py", line 70, in test_pilot_model_provenance
+    run = colosseum.load_run(PILOT)
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/adapters/colosseum.py", line 53, in load_run
+    run = find_run_dir(batch_dir)
+  File "/Users/aarav/Documents/Projects/ApartSprint-wt-v12/ccc/adapters/colosseum.py", line 48, in find_run_dir
+    raise FileNotFoundError(f"expected exactly one final_summary.json under {batch_dir}, found {len(hits)}")
+FileNotFoundError: expected exactly one final_summary.json under /Users/aarav/Documents/Projects/ApartSprint-wt-v12/results/baselines/colosseum_positive_control_seed1/20261023-111625, found 0
+
+----------------------------------------------------------------------
+Ran 332 tests in 106.849s
+
+FAILED (errors=3, skipped=7)
+GA-DIAG inactive A6b: 10/10 valid; clean K request hashes and outcomes identical; one receiver observation each
+C4 oracle verifier: 30/30 K effects, 30/30 N_v1.1 effects, 18/18 N_m zero effects; 12/12 absent-placebo refusals
+REV-GA word-reversed paraphrase leak: status=invalid V07=pass
+fixture counts: 145 guarded calls; 3 canaries; 8 branches; complete
+fixture counts: 50 guarded calls; 2 canaries; 8 branches; invalid
+fixture counts: 30 guarded calls; 2 canaries; 8 branches; invalid
+fixture counts: 145 guarded calls; 3 canaries; 8 branches; complete

@@ -1,0 +1,65 @@
+[
+  {
+    "checkpoint_id": "dev02_B2",
+    "confirmatory": false,
+    "kind": "scheduled_world",
+    "label": "DEV/pilot",
+    "status": "unrun",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "checkpoint_id": "dev03_B1",
+    "confirmatory": false,
+    "kind": "scheduled_world",
+    "label": "DEV/pilot",
+    "status": "unrun",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "checkpoint_id": "dev03_B2",
+    "confirmatory": false,
+    "kind": "scheduled_world",
+    "label": "DEV/pilot",
+    "status": "unrun",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "checkpoint_id": "dev04_B1",
+    "confirmatory": false,
+    "kind": "scheduled_world",
+    "label": "DEV/pilot",
+    "status": "unrun",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "checkpoint_id": "dev04_B2",
+    "confirmatory": false,
+    "kind": "scheduled_world",
+    "label": "DEV/pilot",
+    "status": "unrun",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "checkpoint_id": "dev05_B1",
+    "confirmatory": false,
+    "kind": "scheduled_world",
+    "label": "DEV/pilot",
+    "status": "unrun",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "checkpoint_id": "dev05_B2",
+    "confirmatory": false,
+    "kind": "scheduled_world",
+    "label": "DEV/pilot",
+    "status": "unrun",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

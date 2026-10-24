@@ -1,0 +1,210 @@
+[
+  {
+    "arm": "F",
+    "attempt_status_counts": {
+      "complete": 28
+    },
+    "backend": "synthetic",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "missing_L": 0.0,
+    "missing_U": 0.12343611850026383,
+    "missing_share": 0.0,
+    "n_complete": 28,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 28,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 28
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "K",
+    "attempt_status_counts": {
+      "complete": 28
+    },
+    "backend": "synthetic",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "missing_L": 0.0,
+    "missing_U": 0.12343611850026383,
+    "missing_share": 0.0,
+    "n_complete": 28,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 28,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 28
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_status_counts": {},
+    "backend": "synthetic",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "missing_L": null,
+    "missing_U": null,
+    "missing_share": null,
+    "n_complete": 0,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 0,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {},
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "S",
+    "attempt_status_counts": {
+      "complete": 4
+    },
+    "backend": "synthetic",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "missing_L": 0.0,
+    "missing_U": 0.6023646356164746,
+    "missing_share": 0.0,
+    "n_complete": 4,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 4,
+    "n_unrecorded": 0,
+    "regime": "B1",
+    "status_counts": {
+      "complete": 4
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "F",
+    "attempt_status_counts": {
+      "complete": 24
+    },
+    "backend": "synthetic",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "missing_L": 0.0,
+    "missing_U": 0.14247359772252563,
+    "missing_share": 0.0,
+    "n_complete": 24,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 24,
+    "n_unrecorded": 0,
+    "regime": "B2",
+    "status_counts": {
+      "complete": 24
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "K",
+    "attempt_status_counts": {
+      "complete": 24
+    },
+    "backend": "synthetic",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "missing_L": 0.0,
+    "missing_U": 0.14247359772252563,
+    "missing_share": 0.0,
+    "n_complete": 24,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 24,
+    "n_unrecorded": 0,
+    "regime": "B2",
+    "status_counts": {
+      "complete": 24
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "N",
+    "attempt_status_counts": {},
+    "backend": "synthetic",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "missing_L": null,
+    "missing_U": null,
+    "missing_share": null,
+    "n_complete": 0,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 0,
+    "n_unrecorded": 0,
+    "regime": "B2",
+    "status_counts": {},
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "arm": "S",
+    "attempt_status_counts": {
+      "complete": 4
+    },
+    "backend": "synthetic",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "missing_L": 0.0,
+    "missing_U": 0.6023646356164746,
+    "missing_share": 0.0,
+    "n_complete": 4,
+    "n_infra_missing": 0,
+    "n_missing": 0,
+    "n_noncommit": 0,
+    "n_overflow": 0,
+    "n_refusal": 0,
+    "n_retry_attempts": 0,
+    "n_scheduled": 4,
+    "n_unrecorded": 0,
+    "regime": "B2",
+    "status_counts": {
+      "complete": 4
+    },
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

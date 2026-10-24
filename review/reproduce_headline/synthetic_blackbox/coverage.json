@@ -1,0 +1,32 @@
+[
+  {
+    "attempted": 8,
+    "confirmatory": false,
+    "coverage": 0.25,
+    "inconclusive": 5,
+    "ineligible": 1,
+    "invalid": 0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 8,
+    "not_supported": 2,
+    "regime": "B1",
+    "supported": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempted": 8,
+    "confirmatory": false,
+    "coverage": 0.75,
+    "inconclusive": 0,
+    "ineligible": 2,
+    "invalid": 0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 8,
+    "not_supported": 6,
+    "regime": "B2",
+    "supported": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

@@ -1,0 +1,2 @@
+confirmatory,defined,eligible,imputed_zero,ineligible_reason,label,n_F,n_K,regime,tau_A,tau_C,tau_O,tau_W,tier,uncertainty_scope,world_id
+False,True,True,False,,DEV/pilot,4,4,B1,-1.9916646112154486,-1.9916646112154481,0.0,3.9833292224308963,B,world_cluster,2

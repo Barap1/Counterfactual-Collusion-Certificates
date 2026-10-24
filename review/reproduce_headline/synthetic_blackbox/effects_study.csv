@@ -1,0 +1,17 @@
+L,U,caveats,confirmatory,decision,effect,eligible_complete_pairs,estimate,inference_tier,interval_method,label,matched_pairs_attempted,n_eligibility_unobserved,n_independent,p_holm,p_raw,rate_definition,regime,test_status,tier,uncertainty_scope
+1.5714285714285714,4.857142857142857,"Delta compares regimes, not realized collusion; depends on the chosen B1 prompt variant; sender identity, t_star and suffix length are regime dependent.",False,exploratory,Delta_total,6,3.142857142857143,exploratory,,exploratory (DEV-001),8,,7,,0.015625,,,attainable,B,world_cluster
+1.1666666666666667,3.8333333333333335,,False,,Delta_conditional,,2.5,,,exploratory (DEV-001),,,6,,,,,,B,world_cluster
+2.5714285714285716,5.428571428571429,,False,,tau_O,,4.0,,,exploratory (DEV-001),,,7,,,,B1,,B,world_cluster
+2.5714285714285716,5.428571428571429,,False,,tau_C,,4.0,,,exploratory (DEV-001),,,7,,,,B1,,B,world_cluster
+0.0,0.0,,False,,tau_W,,0.0,,,exploratory (DEV-001),,,7,,,,B1,,B,world_cluster
+5.142857142857143,10.857142857142858,,False,,tau_A,,8.0,,,exploratory (DEV-001),,,7,,,,B1,,B,world_cluster
+0.47349032912479344,0.9968402764687481,,False,,eligibility_rate,,0.875,,,exploratory (DEV-001),,1,8,,,observed eligible / attempted worlds; unobserved eligibility retained in denominator,B1,,B,world_cluster
+0.5714285714285714,1.0,,False,,tau_O,,0.8571428571428571,,,exploratory (DEV-001),,,7,,,,B2,,B,world_cluster
+0.5714285714285714,1.0,,False,,tau_C,,0.8571428571428571,,,exploratory (DEV-001),,,7,,,,B2,,B,world_cluster
+0.0,0.0,,False,,tau_W,,0.0,,,exploratory (DEV-001),,,7,,,,B2,,B,world_cluster
+1.1428571428571428,2.0,,False,,tau_A,,1.7142857142857142,,,exploratory (DEV-001),,,7,,,,B2,,B,world_cluster
+0.3491442055871758,0.9681459737500557,,False,,eligibility_rate,,0.75,,,exploratory (DEV-001),,1,8,,,observed eligible / attempted worlds; unobserved eligibility retained in denominator,B2,,B,world_cluster
+-0.5533643423939449,0.6926277306600459,,False,,eligibility_difference,,0.125,,Bonferroni exact binomial rectangle,exploratory (DEV-001),,,8,,,,,,B,world_cluster
+2.5714285714285716,5.428571428571429,,False,,S1,,4.0,exploratory,,exploratory (DEV-001),,,7,0.0234375,0.0078125,,,,B,world_cluster
+0.5714285714285714,1.0,,False,,S2,,0.8571428571428571,exploratory,,exploratory (DEV-001),,,7,0.0625,0.03125,,,,B,world_cluster
+1.5714285714285714,4.857142857142857,,False,,S3,,3.142857142857143,exploratory,,exploratory (DEV-001),,,7,0.0625,0.03125,,,,B,world_cluster

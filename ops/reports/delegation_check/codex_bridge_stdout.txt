@@ -1,0 +1,6 @@
+Created:
+- `ops/reports/delegation_check/codex_child.txt`
+- `ops/reports/delegation_check/codex_nested.txt`
+
+One subagent reported SHA-256: `a72b43c1eca7188cba4e85b825fb467d1f5370a9be66d58a7caa6e084d93b031`
+exit=0

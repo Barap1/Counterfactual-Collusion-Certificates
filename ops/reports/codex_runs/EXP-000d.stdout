@@ -1,0 +1,6 @@
+Implemented EXP-000d: expiry excluded from fingerprint; runner PID detection with recorded fallback; source-end and checkpoint canaries; halted status fixed.
+Confirmed lock release on halt; documented retry and fresh-directory procedures.
+Offline suite: **62 tests passed**; 446 fake calls, 10 canaries. **0 live calls, $0 spent**, no commits.
+Historical pilot status now reports `halted` successfully.
+Files: `ccc/runner/{live,collector,storage}.py`, `tests/runner/test_live.py`, `docs/runner/README.md`.
+Evidence and exact commands: [ops/reports/EXP-000d.md](ops/reports/EXP-000d.md).

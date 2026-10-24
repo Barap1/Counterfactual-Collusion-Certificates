@@ -1,0 +1,7 @@
+L,U,analysis,confirmatory,estimate,label,limitation,n_independent,tier,uncertainty_scope
+,,ineligible_zero,False,,DEV/pilot,,0,B,world_cluster
+,,drop_ineligible,False,,DEV/pilot,,0,B,world_cluster
+,,worst_missing,False,,DEV/pilot,fills use observed same-regime arm range; no observed range leaves undefined,0,B,world_cluster
+,,best_missing,False,,DEV/pilot,fills use observed same-regime arm range; no observed range leaves undefined,0,B,world_cluster
+,,noncommit_excluded,False,,DEV/pilot,fills use observed same-regime arm range; no observed range leaves undefined,0,B,world_cluster
+,,S_pooled_F,False,,DEV/pilot,fills use observed same-regime arm range; no observed range leaves undefined,0,B,world_cluster

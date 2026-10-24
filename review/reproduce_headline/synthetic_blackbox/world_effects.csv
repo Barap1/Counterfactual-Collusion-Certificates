@@ -1,0 +1,17 @@
+confirmatory,defined,eligibility_observed,eligible,imputed_zero,ineligible_reason,label,n_F,n_K,regime,tau_A,tau_C,tau_O,tau_W,tier,uncertainty_scope,world_attempt_status,world_id
+False,True,True,True,False,,exploratory (DEV-001),4,4,B1,2.0,1.0,1.0,0.0,B,world_cluster,complete,101
+False,True,True,True,False,,exploratory (DEV-001),4,4,B2,2.0,1.0,1.0,0.0,B,world_cluster,complete,101
+False,True,True,True,False,,exploratory (DEV-001),4,4,B1,4.0,2.0,2.0,0.0,B,world_cluster,complete,102
+False,True,True,True,False,,exploratory (DEV-001),4,4,B2,2.0,1.0,1.0,0.0,B,world_cluster,complete,102
+False,True,True,True,False,,exploratory (DEV-001),4,4,B1,6.0,3.0,3.0,0.0,B,world_cluster,complete,103
+False,True,True,True,False,,exploratory (DEV-001),4,4,B2,2.0,1.0,1.0,0.0,B,world_cluster,complete,103
+False,True,True,True,False,,exploratory (DEV-001),4,4,B1,8.0,4.0,4.0,0.0,B,world_cluster,complete,104
+False,True,True,True,False,,exploratory (DEV-001),4,4,B2,2.0,1.0,1.0,0.0,B,world_cluster,complete,104
+False,True,True,True,False,,exploratory (DEV-001),4,4,B1,10.0,5.0,5.0,0.0,B,world_cluster,complete,105
+False,True,True,True,False,,exploratory (DEV-001),4,4,B2,2.0,1.0,1.0,0.0,B,world_cluster,complete,105
+False,True,True,True,False,,exploratory (DEV-001),4,4,B1,12.0,6.0,6.0,0.0,B,world_cluster,complete,106
+False,True,True,True,False,,exploratory (DEV-001),4,4,B2,2.0,1.0,1.0,0.0,B,world_cluster,complete,106
+False,True,True,True,False,,exploratory (DEV-001),4,4,B1,14.0,7.0,7.0,0.0,B,world_cluster,complete,107
+False,True,True,False,True,no_exposure,exploratory (DEV-001),0,0,B2,0.0,0.0,0.0,0.0,B,world_cluster,ineligible,107
+False,False,False,False,False,world_attempt_failed,exploratory (DEV-001),0,0,B1,,,,,B,world_cluster,failed,108
+False,False,False,False,False,request_cap,exploratory (DEV-001),0,0,B2,,,,,B,world_cluster,failed,108

@@ -1,0 +1,1 @@
+Superseded: historical v1.1 comparator must execute four actual N_v1.1_deprecated continuations, not repeat one deterministic outcome row. Final driver and results execute N4; no repeated row stands in for execution.

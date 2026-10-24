@@ -1,0 +1,17 @@
+Implemented ENG-003 in the working tree: complete local state/RNG capture, per-call K/N/C hooks, independent V3 checks, leak scanning, V6 enforcement, corrected W, and hashed branch ledgers.
+
+Offline validation commands:
+```sh
+starter/collusion_hackathon/colosseum/.venv/bin/python -m tests.replay.offline_runner -s tests/replay -t .
+starter/collusion_hackathon/colosseum/.venv/bin/python -m tests.replay.offline_runner -s tests -t .
+```
+
+- Replay: **58 tests, OK**. Native probes: **11/11 valid**.
+- Full suite: **199 tests; 1 failure, 18 errors**, in unowned fixture/runner integration.
+- Required `sandbox-exec` was blocked before Python; fallback guards denied network and secret-file access.
+- V07: new post-fork resends pass and receive carrier flags; masked-original re-renders fail.
+- Remaining limits: heuristic semantic matching, inaccessible provider RNG, separate v1.1 revalidation.
+
+Touched `ccc/replay/`, `tests/replay/`, `docs/eng/`, `patches/`, and the report. [Exact files](/Users/aarav/Documents/Projects/ApartSprint/docs/eng/ENG-003_files.txt) · [Handoff and real output](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/ENG-003.md).
+
+$0 spent; no live calls, commits, or baseline edits.

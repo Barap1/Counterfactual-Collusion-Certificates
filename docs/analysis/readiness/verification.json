@@ -1,0 +1,135 @@
+{
+  "analysis_exit_code": 0,
+  "case_statuses": {
+    "inconclusive": 5,
+    "ineligible": 3,
+    "not_supported": 8
+  },
+  "conditional": {
+    "L": 1.1666666666666667,
+    "U": 3.8333333333333335,
+    "estimate": 2.5,
+    "n_independent": 6
+  },
+  "heldout_outcomes_accessed": false,
+  "holm": [
+    {
+      "effect": "S1",
+      "p_holm": 0.0234375,
+      "p_raw": 0.0078125
+    },
+    {
+      "effect": "S2",
+      "p_holm": 0.0625,
+      "p_raw": 0.03125
+    },
+    {
+      "effect": "S3",
+      "p_holm": 0.0625,
+      "p_raw": 0.03125
+    }
+  ],
+  "n_cases": 16,
+  "n_output_files": 39,
+  "n_scheduled_N": 0,
+  "n_skipped_N": 52,
+  "output_sha256": {
+    "aggregate.json": "129375af1ad5bf94f67b763b05b7419a6bcd223ef95808945c218b81b85001b6",
+    "attempts.csv": "ae5059b0d5c13824b0c719462be5215c035b558456d228c4fd0d4a71e7dea74d",
+    "attempts.json": "2b97a105e1a0bd8bef12b5aa055bb83f34128990be2b117d4f7b578572755284",
+    "checkpoint_certificates.csv": "44ab8a2bacdffcbd718bc99cd1d0f8e30171783845a4002bba55809c013dcff5",
+    "checkpoint_certificates.json": "f170fd602cc887e1e054c2061b964391000dba97e1ae6fc77e29f7fde74583a9",
+    "claims_candidates.jsonl": "ce4da4057eea32080e07c645f22220eb53c571b7f1265f53aca987e7f0beff5b",
+    "continuations.csv": "d991f8fba26bfca3188c908f22554d1f0920b2d9b52fabb8d5397f45b2d60624",
+    "continuations.json": "1c84fa2a04b5fd26fc9a3036111a69de6075d6d04b54c0ee5879bb478b2f2b21",
+    "cost_throughput.csv": "7c732fb816833c39d3e2c1f5b08995850c2355f16354275c3f21fb18b35382f1",
+    "cost_throughput.json": "a0a2c332548410606ecc2914ff714f8c4f7628caba60134bc32c59dbcab20ecd",
+    "coverage.csv": "bdf34b577186cd37c91a432fc5f10bface977c1066f23dafc7d832314648d449",
+    "coverage.json": "75615f982c3deea9032afe42d2b998be3902ff57ae0f06be8970b1d822985ed4",
+    "effects_study.csv": "9a16123e1ec4111047ac943281aa087176e7002cb044e0c044916bd8e554b235",
+    "effects_study.json": "5bdcac2a10b7845dc0ce4033bc057e311303fa51ab87a6abcd0f86eac1ffd214",
+    "events_accounting.csv": "7cdbe88cde562c61b44e95692ac38a69af2247cc89a5fc18d7778a52edd49d21",
+    "events_accounting.json": "76632a8763f91565ffba0de465890ebc699b8d7c304a791e57a649aa33cd6957",
+    "figure_data/fig_delta_by_world.csv": "619d1992057e68e4d7d415a09bf2e1080383aca10fa8608587d02f943c963011",
+    "figure_data/fig_delta_by_world.json": "2d23c239c1a4f178a6a4dad705198cf0c74eb276357aa1350f20583adc9f5544",
+    "figure_data/fig_missingness.csv": "aa381eeb8f8a1b5ba0e14fa571cd2caa4044ea0a9d55d4f9484f9811d4e0e58f",
+    "figure_data/fig_missingness.json": "3e0f11bea79d3ed5f21ba8c3017aa45c62c8cd680fdf2802c5a58977e43294ed",
+    "figure_data/fig_sham_noise.csv": "e47fc5e03f47c079f9a10713b10ec0eec856bb1962cfcf76914912b14d5d6617",
+    "figure_data/fig_sham_noise.json": "2b864760d1ff180d76da43cb030b055957b332ed356289e4d61ea14994bf040c",
+    "figure_data/fig_status_stack.csv": "bdf34b577186cd37c91a432fc5f10bface977c1066f23dafc7d832314648d449",
+    "figure_data/fig_status_stack.json": "75615f982c3deea9032afe42d2b998be3902ff57ae0f06be8970b1d822985ed4",
+    "figure_data/fig_tau_vector.csv": "ade4260f1b6ff3660dd1cf47c96bda7befc15d942fdcb7d6858f6a87946a6175",
+    "figure_data/fig_tau_vector.json": "0c25334f059a800456da4e8da57d3b01834e1cbe5b82eb47b76484616d7fc330",
+    "missingness.csv": "ca48ac14a73982bb99cff908a4a09f054fa945d9cf49ebd5c3c8cfd38af63d8d",
+    "missingness.json": "9432c0165dfa36deb6d67bd97252ffffc738aa66c2a633b562cc2dde51027c83",
+    "scheduled_statuses.csv": "f9cfc11a22cd510dfac598e62e47c4d4d28f9159c320fec48685957d4077fc72",
+    "scheduled_statuses.json": "fe15030c90b7338fc82c3a91ff6613aae6e040aa1a650de3dfc2fce23ceffddb",
+    "sensitivity.csv": "e64bb48f637ca942659a778c5500288e21fc68856787100a7d42b8aa3eca18a0",
+    "sensitivity.json": "fccb91d1e90ccc0e70a9eab8876b9ff95ece0398d939c2504b81b4db2e76efd4",
+    "status_crosscheck.csv": "c103207b489fc6783f0603d2ebee5b93e378f4b3280afbead4bd68bf894d274b",
+    "status_crosscheck.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "validation_report.json": "4a3309efe67cc7629a1678f83334f69b1cbcf05418d93f541ae020224cf74fa0",
+    "validity_checks.csv": "ccf6f4e72730c63ad44c71368681b4ce3d0b87e1d9fbca5ce75d3399891488c2",
+    "validity_checks.json": "2d7daf6dfa00087a00ff8e2fc1122fb71f5f9ca10add3a3d0667f5f90b97bd2e",
+    "world_effects.csv": "e3a4c18898da67f185a200d115b10b2963bb4de88342e4c58ee4d09156247d8f",
+    "world_effects.json": "b3cbc7bcc4a1e6626cfae8d5b02442524b58543b7f3d92cd0901ebdd1560e01b"
+  },
+  "primary": {
+    "L": 1.5714285714285714,
+    "U": 4.857142857142857,
+    "eligible_complete_pairs": 6,
+    "estimate": 3.142857142857143,
+    "matched_pairs_attempted": 8,
+    "n_independent": 7,
+    "p_raw": 0.015625
+  },
+  "priority_adjustment": "requested via nice -n 19; host denied setpriority; commands completed",
+  "synthetic_only": true,
+  "test_result": "OK",
+  "v9": [
+    {
+      "L90": 0.0,
+      "L95": 0.0,
+      "U90": 0.0,
+      "U95": 0.0,
+      "check": "V9",
+      "confirmatory": false,
+      "estimate": 0.0,
+      "half_width90": 0.0,
+      "label": "exploratory (DEV-001)",
+      "n_independent": 4,
+      "regime": "B1",
+      "status": "pass",
+      "tier": "B",
+      "uncertainty_scope": "world_cluster",
+      "world_cluster": {
+        "L": 0.0,
+        "U": 0.0,
+        "estimate": 0.0,
+        "n_independent": 4
+      }
+    },
+    {
+      "L90": 0.0,
+      "L95": 0.0,
+      "U90": 0.0,
+      "U95": 0.0,
+      "check": "V9",
+      "confirmatory": false,
+      "estimate": 0.0,
+      "half_width90": 0.0,
+      "label": "exploratory (DEV-001)",
+      "n_independent": 4,
+      "regime": "B2",
+      "status": "pass",
+      "tier": "B",
+      "uncertainty_scope": "world_cluster",
+      "world_cluster": {
+        "L": 0.0,
+        "U": 0.0,
+        "estimate": 0.0,
+        "n_independent": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "L": null,
+    "U": null,
+    "confirmatory": false,
+    "effect": "tau_O",
+    "estimate": 0.0,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": null,
+    "U": null,
+    "confirmatory": false,
+    "effect": "tau_C",
+    "estimate": -15.584746190688163,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": null,
+    "U": null,
+    "confirmatory": false,
+    "effect": "tau_W",
+    "estimate": 31.16949238137633,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L": null,
+    "U": null,
+    "confirmatory": false,
+    "effect": "tau_A",
+    "estimate": -15.584746190688163,
+    "label": "DEV/pilot",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]
