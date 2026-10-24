@@ -143,3 +143,13 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 - Freeze-hash drift: ccc/audit/commitments.py changed in the reviewed v1.2.1 correction (07ca10f) after ops/v12_freeze_hashes.txt was written. It is re-frozen at the current hash before any held-out data, and disclosed.
 - theta (redundancy Jaccard) to be pinned per prereg on DEV fixtures only (A5a positives vs non-redundant negatives), before freeze.
 - Stage-2: sigma_dev 0.92 from 7 DEV checkpoints, giving m_O = 2.5 (construct floor binds), delta_W 5, delta_S 2.5. The dev05_B2 failure is retained.
+
+## D-031 (2026-10-24 02:42 UTC, director as experiment controller) EXP-002 held-out launched
+- All owner conditions met: DEV-only pinning (Stage-2), real-conversation placebo census (Tier-B 0/8 → supported unavailable, handled per frozen protocol), outcome-blind cap change frozen (5981) before any held-out data, independent freeze review APPROVED (docs/review/REV_FREEZE.md; docs/stats/stat001_approval.json bound to manifest digest 49f54b47), watchdog hard-stop made configurable and set to 2026-10-25T12:15Z, $0 guard unchanged, 385/385 tests.
+- Run PID 98650 (python runner), watchdog PID 98683, Ollama 57827 (gemma4:26b digest 5571076f3d70), output docs/runner/exp002-live (gitignored). Expected 5–10 h.
+- No outcome-dependent changes may be made while the run is in progress or after it ends. Analysis follows prereg + Stage-2 addendum exactly.
+
+## D-032 (director) GATE B recorded as met (retroactive record; evidence predates EXP-002 launch)
+- Module-13 Gate B: a complete F/S/K(/N_v1.1) sequence on the real model with preserved request traces, validated state/exposure, accurate model IDs and interpretable metrics, plus a throughput forecast that fits approved resources.
+- Evidence: EXP-001 (docs/runner/exp001-live): 98 branch results, 0 invalid (V09 client-request freshness, V6 model identity, reload canaries all passing), 7/8 base trajectories complete, dev05_B2 failure preserved. DEV analysis valid (docs/analysis/exp001_dev). Throughput re-derived from the EXP-001 ledger (docs/runner/cap_investigation.md) and checked by REV-FREEZE (docs/review/REV_FREEZE.md, buffer ≥71%).
+- This record was omitted at launch time; it is added now with no change to any artifact.

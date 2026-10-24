@@ -1,6 +1,7 @@
 """Out-of-process watchdog for an EXP-001 runner process (stdlib only).
 
-Usage: python -m ccc.runner.watchdog --run-pid PID --output DIR --interval 30
+Usage: python -m ccc.runner.watchdog --run-pid PID --output DIR --interval 30 \
+           [--hard-stop 2026-10-24T09:15:00Z] [--ollama-pid PID]
 
 Polls safety conditions and stops the run PID (SIGTERM, then SIGKILL after 20 s) on any
 trigger, writing DIR/WATCHDOG_STOP.json. If the run PID exits on its own, writes
@@ -28,7 +29,7 @@ BACKEND = "ollama_local"
 DIGEST = "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251"
 MIN_DISK_FREE_GB = 20
 MIN_MEM_FREE_PCT = 10
-HARD_DEADLINE = datetime(2026, 10, 24, 9, 15, 0, tzinfo=timezone.utc)
+HARD_DEADLINE = datetime(2026, 10, 24, 9, 15, 0, tzinfo=timezone.utc)  # default for --hard-stop
 KILL_GRACE_S = 20
 COST_FIELDS = ("api_cost_usd", "new_out_of_pocket_usd")
 
@@ -42,6 +43,20 @@ class Trigger(Exception):
 
 def utc_now():
     return datetime.now(timezone.utc)
+
+
+def parse_hard_stop(text):
+    """Parse an ISO 8601 deadline that must be explicitly UTC (ending in Z or +00:00)."""
+    if not (text.endswith("Z") or text.endswith("+00:00")):
+        raise argparse.ArgumentTypeError(f"--hard-stop must be UTC (end with Z or +00:00): {text!r}")
+    iso = text[:-1] + "+00:00" if text.endswith("Z") else text
+    try:
+        dt = datetime.fromisoformat(iso)
+    except ValueError:
+        raise argparse.ArgumentTypeError(f"--hard-stop is not ISO 8601: {text!r}")
+    if dt.utcoffset() is None or dt.utcoffset().total_seconds() != 0:
+        raise argparse.ArgumentTypeError(f"--hard-stop must be UTC: {text!r}")
+    return dt.astimezone(timezone.utc)
 
 
 def pid_alive(pid):
@@ -110,8 +125,9 @@ def model_entry(ps, name=MODEL):
 class Watchdog:
     def __init__(self, run_pid, output, interval, *, ledger=LEDGER, ollama_pid=None, root=ROOT,
                  fetch=fetch_ps, disk=disk_free_gb, mem=memory_free_pct, alive=pid_alive,
-                 kill=signal_tree, clock=utc_now, sleep=time.sleep, log=print):
+                 kill=signal_tree, clock=utc_now, sleep=time.sleep, log=print, hard_stop=HARD_DEADLINE):
         self.run_pid = run_pid
+        self.hard_stop = hard_stop
         self.output = Path(output)
         self.interval = interval
         self.ledger = Path(ledger)
@@ -209,8 +225,8 @@ class Watchdog:
             raise Trigger("ollama", f"server pid {self.ollama_pid} is gone")
 
     def check_deadline(self):
-        if self.clock() > HARD_DEADLINE:
-            raise Trigger("deadline", f"now past {HARD_DEADLINE.strftime('%Y-%m-%dT%H:%M:%SZ')}")
+        if self.clock() > self.hard_stop:
+            raise Trigger("deadline", f"now past {self.hard_stop.strftime('%Y-%m-%dT%H:%M:%SZ')}")
 
     def check_all(self):
         self.check_ledger()
@@ -265,8 +281,16 @@ def main(argv=None):
     p.add_argument("--output", required=True)
     p.add_argument("--interval", type=float, default=30)
     p.add_argument("--ollama-pid", type=int, default=None, help="default: runs/exp001/ollama.pid")
+    p.add_argument("--hard-stop", type=parse_hard_stop, default=None, metavar="ISO8601_UTC",
+                   help="UTC deadline ending in Z or +00:00 (default: 2026-10-24T09:15:00Z)")
     args = p.parse_args(argv)
+    hard_stop = HARD_DEADLINE
+    if args.hard_stop is not None:
+        if args.hard_stop <= utc_now():
+            p.error(f"--hard-stop {args.hard_stop.strftime('%Y-%m-%dT%H:%M:%SZ')} is in the past")
+        hard_stop = args.hard_stop
     dog = Watchdog(args.run_pid, args.output, args.interval, ollama_pid=args.ollama_pid,
+                   hard_stop=hard_stop,
                    log=lambda msg: print(f"{utc_now().isoformat()} {msg}", flush=True))
     try:
         return dog.run()

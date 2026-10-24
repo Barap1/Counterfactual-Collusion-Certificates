@@ -31,7 +31,7 @@ class Fakes:
         self.sleeps = 0
         self.kill_ignores_term = False
 
-    def build(self, out="out"):
+    def build(self, out="out", hard_stop=None):
         def fetch():
             if isinstance(self.ps, Exception):
                 raise self.ps
@@ -51,7 +51,8 @@ class Fakes:
 
         return wd.Watchdog(111, self.dir / out, 30, ledger=self.ledger, ollama_pid=222, root=self.dir,
                            fetch=fetch, disk=lambda _p: self.disk_gb, mem=lambda: self.mem_pct,
-                           alive=alive, kill=kill, clock=lambda: self.now, sleep=sleep, log=lambda m: None)
+                           alive=alive, kill=kill, clock=lambda: self.now, sleep=sleep, log=lambda m: None,
+                           **({} if hard_stop is None else {"hard_stop": hard_stop}))
 
     def append(self, *recs):
         with self.ledger.open("a") as fh:
@@ -189,6 +190,44 @@ class WatchdogTests(unittest.TestCase):
         dog = self.f.build()
         dog.start()
         dog.check_deadline()
+
+    def test_custom_hard_stop_triggers_after_its_time(self):
+        deadline = wd.parse_hard_stop("2026-10-23T23:00:00Z")
+        self.f.now = datetime(2026, 10, 23, 23, 0, 1, tzinfo=timezone.utc)
+        dog = self.f.build(hard_stop=deadline)
+        dog.start()
+        with self.assertRaises(wd.Trigger) as cm:
+            dog.check_deadline()
+        self.assertEqual(cm.exception.check, "deadline")
+        self.assertIn("2026-10-23T23:00:00Z", cm.exception.reason)
+        stop = self.assert_triggered("deadline", self.f.build(hard_stop=deadline))
+        self.assertIn("2026-10-23T23:00:00Z", stop["reason"])
+
+    def test_custom_hard_stop_does_not_trigger_before_its_time(self):
+        deadline = wd.parse_hard_stop("2026-10-23T23:00:00+00:00")
+        self.f.now = datetime(2026, 10, 23, 22, 59, 59, tzinfo=timezone.utc)
+        dog = self.f.build(hard_stop=deadline)
+        dog.start()
+        dog.check_deadline()  # no exception
+
+    def test_non_utc_hard_stop_is_rejected(self):
+        for bad in ("2026-10-23T23:00:00+02:00", "2026-10-23T23:00:00", "2026-10-23T23:00:00-00:00"):
+            with self.subTest(value=bad), self.assertRaises(SystemExit):
+                wd.main(["--run-pid", "111", "--output", str(self.f.dir / "out"), "--hard-stop", bad])
+
+    def test_hard_stop_in_past_is_rejected_at_startup(self):
+        with self.assertRaises(SystemExit):
+            wd.main(["--run-pid", "111", "--output", str(self.f.dir / "out"), "--hard-stop", "2000-01-01T00:00:00Z"])
+
+    def test_default_hard_stop_is_unchanged(self):
+        self.assertEqual(wd.HARD_DEADLINE, datetime(2026, 10, 24, 9, 15, 0, tzinfo=timezone.utc))
+        self.assertEqual(self.f.build().hard_stop, wd.HARD_DEADLINE)
+        self.f.now = datetime(2026, 10, 24, 9, 15, 1, tzinfo=timezone.utc)
+        dog = self.f.build()
+        dog.start()
+        with self.assertRaises(wd.Trigger) as cm:
+            dog.check_deadline()
+        self.assertIn("2026-10-24T09:15:00Z", cm.exception.reason)
 
     # kill escalation and exit
     def test_sigkill_after_grace_when_term_ignored(self):

@@ -1,14 +1,14 @@
-# CCC STATUS (2026-10-24 00:25 UTC, director). PAUSED for owner break (agent usage limits low)
+# CCC STATUS (2026-10-24 02:45 UTC, director)
 
-**Deadline** 2026-10-26 11:59 UTC. Held-out latest start **2026-10-24 14:12 UTC**; science freeze 2026-10-25 22:00 UTC.
-**GATE A: PASSED** on module-13 core criteria (D-028; Gate A v1.2.1). Declared limitations: A5 redundancy (not-supported is not exoneration), A6 10 non-exercisable faults.
+**Deadline** 2026-10-26 11:59 UTC. Science freeze target 2026-10-25 22:00 UTC.
+**GATE A: PASSED** (D-028). **GATE B: MET** (D-032). **Freeze: APPROVED** (D-031). **Next gate: C** (after EXP-002).
 
 | Item | State |
 |---|---|
-| EXP-001 dev run (v1.1, local gemma4:26b) | RUNNING unattended: run PID 5196, watchdog 5231, output docs/runner/exp001-live; 84/112 branches at 00:25Z, 0 invalid; ETA ~01:00Z |
-| Protocol v1.2 | ADOPTED (sha 8f7dcd89); implementation on branch v1.2-impl in worktree ../ApartSprint-wt-v12 (HEAD 0c26001), NOT yet merged |
-| Analysis | ccc/analysis (37 tests) incl. Stage-2 pinning CLI |
-| Paper | paper/draft.md (v1.2 disclosures in); figures/ dev figures (v1.1, pre-amendment) |
-| Agents | none running. Codex and Claude usage limits low |
+| EXP-002 held-out (protocol v1.2, local gemma4:26b) | RUNNING: run PID 98650, watchdog 98683 (hard stop 2026-10-25T12:15Z), output docs/runner/exp002-live, ETA 5–10 h |
+| EXP-001 dev | done: 7/8 complete, dev05_B2 failed attempt preserved (cap arithmetic miss) |
+| Stage-2 | m_O 2.5, delta_W 5, delta_S 2.5, theta 0.4 (weak_detector) |
+| Tier-B placebo | M* 0/8 on real DEV conversations → case-level supported unavailable on real agents |
+| Paper | paper/draft.md needs results, figures post-v1.2, limitations update |
 
-**Owner decisions pending:** (1) approve held-out EXP-002; (2) LLM-usage statement wording / authorship (paper/author_checklist.md); (3) optional rewrite of pushed history to drop co-author trailers.
+**Next after EXP-002:** STAT-002 confirmatory analysis per prereg (python -m ccc.analysis run), independent REV-001 (reproduce headline from raw), figures regen, paper results + limitations, REL-001 checklist (module 17), owner sign-off. No push or submit without the owner.
