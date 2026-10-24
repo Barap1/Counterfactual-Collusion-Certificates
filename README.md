@@ -93,3 +93,7 @@ Authorship: the owner is the sole author.
 ## Enhancement work in progress
 
 See [docs/enh/](docs/enh/) for ongoing enhancement work; a later task will finalize this presentation.
+
+## License
+
+Original CCC code: MIT (`LICENSE`). Third-party material (Colosseum starter, model, dependencies) is not covered; see `NOTICE.md`.

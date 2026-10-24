@@ -1,6 +1,6 @@
 {
  "schema": "ccc-tasks/1",
- "updated_utc": "2026-10-24T16:40Z",
+ "updated_utc": "2026-10-24T17:20Z",
  "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
  "policy": {
   "max_worker_depth": 3,
@@ -18,24 +18,6 @@
    "owner": "codex gpt-6.1-sol/high (core research artifact; stated reason)",
    "started_utc": "2026-10-24T16:05Z",
    "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/"
-  },
-  {
-   "id": "DEMO-DATA",
-   "owner": "codex gpt-6.1-sol/medium",
-   "started_utc": "2026-10-24T16:05Z",
-   "writes": "demo/build_data.py, demo/data/, tests/test_demo_data.py"
-  },
-  {
-   "id": "REL-ENH1",
-   "owner": "codex gpt-6.1-sol/low",
-   "started_utc": "2026-10-24T16:35Z",
-   "writes": "README.md, scripts/secret_scan.py, 5 redaction files, ops/CLAIMS.md, docs/release/CHECKLIST.md"
-  },
-  {
-   "id": "PAPER-PLAN",
-   "owner": "claude sonnet",
-   "started_utc": "2026-10-24T16:35Z",
-   "writes": "paper/v2/"
   }
  ],
  "gates": {
@@ -492,7 +474,7 @@
    "id": "DEMO-DATA",
    "objective": "explorer evidence data pack",
    "owner": "codex gpt-6.1-sol/medium",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "demo/build_data.py, demo/data/, tests/test_demo_data.py",
    "gate": "ENH-R2"
   },
@@ -508,7 +490,7 @@
    "id": "REL-ENH1",
    "objective": "doc-ID/email redaction in tree, scanner rule, README swap, CLAIMS/CHECKLIST fixes",
    "owner": "codex gpt-6.1-sol/low",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "README.md, scripts/secret_scan.py, 5 redaction files, ops/CLAIMS.md, docs/release/CHECKLIST.md",
    "gate": "ENH-R4"
   },
@@ -516,13 +498,21 @@
    "id": "PAPER-PLAN",
    "objective": "paper v2 architecture + draft with result placeholders",
    "owner": "claude sonnet",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "paper/v2/",
+   "gate": "ENH-R4"
+  },
+  {
+   "id": "DEMO-UI",
+   "objective": "offline evidence explorer UI",
+   "owner": "claude sonnet",
+   "status": "DONE (pending R4 number-trace QA and twins view)",
+   "writes": "demo/explorer/",
    "gate": "ENH-R4"
   }
  ],
  "handoff": {
-  "running_jobs": "BENCH-IMP, DEMO-DATA, REL-ENH1, PAPER-PLAN",
+  "running_jobs": "BENCH-IMP",
   "unpushed_commits": 1,
   "repo_visibility": "PUBLIC (re-confirmed by SEC-001 2026-10-24); owner decision pending",
   "worktree": "../ApartSprint-wt-v12 (branch v1.2-impl, fully merged into main; safe to remove after owner OK)"
