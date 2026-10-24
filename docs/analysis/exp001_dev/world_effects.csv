@@ -1,0 +1,9 @@
+confirmatory,defined,eligible,imputed_zero,ineligible_reason,label,n_F,n_K,regime,tau_A,tau_C,tau_O,tau_W,tier,uncertainty_scope,world_id
+False,True,True,False,,DEV/pilot,4,4,B1,-1.9938795228739186,-1.9190452699605132,-0.07483425291340495,3.6884220340942164,B,world_cluster,2
+False,True,True,False,,DEV/pilot,4,4,B2,-3.8961865476720416,-3.896186547672041,0.0,7.7923730953440895,B,world_cluster,2
+False,True,True,False,,DEV/pilot,4,4,B1,-0.4238903915870713,-0.24787994579174466,-0.17601044579532754,0.14373899999283424,B,world_cluster,3
+False,True,True,False,,DEV/pilot,4,4,B2,-0.009152220838054781,-0.009152220838057445,0.0,0.018304441676121996,B,world_cluster,3
+False,True,True,False,,DEV/pilot,4,4,B1,-0.5303656825346836,-0.04999923576522036,-0.48036644676946594,-0.8607344220084912,B,world_cluster,4
+False,True,True,False,,DEV/pilot,4,4,B2,-0.2822324889835661,-0.2042871823921395,-0.07794530659142751,0.252683751601424,B,world_cluster,4
+False,True,True,False,,DEV/pilot,4,4,B1,1.4060821688375977,1.406082168837596,0.0,-2.812164337675199,B,world_cluster,5
+False,False,True,False,,DEV/pilot,0,0,B2,,,,,B,world_cluster,5

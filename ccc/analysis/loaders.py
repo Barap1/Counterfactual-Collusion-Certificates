@@ -2,6 +2,7 @@
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 
 COMPLETE = {'complete', 'complete_noncommit', 'complete_refusal'}
@@ -16,10 +17,59 @@ class ValidationError(ValueError):
         super().__init__('; '.join(problems))
 
 
+RUNNER_SIGNATURE = ('.collector.lock','run_manifest.json','worlds')
+WATCHDOG_MARKERS = ('WATCHDOG_EXIT.json','WATCHDOG_STOP.json')
+TERMINAL_MARKERS = WATCHDOG_MARKERS + ('run_end.json',)
+
+
+def _pid_alive(pid):
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
+
+
+def _marker_pid(marker):
+    try:
+        pid = json.loads(marker.read_bytes()).get('run_pid')
+    except (OSError, ValueError, AttributeError):
+        return None
+    return pid if isinstance(pid, int) and not isinstance(pid, bool) else None
+
+
+def active_input_problems(root):
+    """Return (problems, warnings) for runner output.
+
+    A lock is stale only when a watchdog marker exists, the run is not alive, and
+    the lock predates the marker (or no pid is recorded and the lock predates the marker).
+    Stale locks are reported as warnings, never refusals.
+    """
+    root = Path(root)
+    if not any((root/name).exists() for name in RUNNER_SIGNATURE): return [], []
+    lock = root/'.collector.lock'
+    if lock.exists():
+        markers = [root/name for name in WATCHDOG_MARKERS if (root/name).exists()]
+        if not markers: return ['active experiment inputs forbidden: .collector.lock present'], []
+        marker = max(markers, key=lambda m: m.stat().st_mtime)
+        pid = _marker_pid(marker)
+        if pid is not None:
+            if _pid_alive(pid): return ['active experiment inputs forbidden: .collector.lock held by live pid %d' % pid], []
+        elif lock.stat().st_mtime >= marker.stat().st_mtime:
+            return ['active experiment inputs forbidden: .collector.lock newer than terminal marker'], []
+        return [], ['stale_lock_ignored: %s (marker %s, run_pid %s not alive)' % (lock.name, marker.name, pid)]
+    if not any((root/name).exists() for name in TERMINAL_MARKERS):
+        return ['active experiment inputs forbidden: no terminal run record'], []
+    return [], []
+
+
 class Reader:
     def __init__(self, root):
         self.root = Path(root).resolve()
-        if 'exp001-live' in self.root.parts: raise ValidationError(['active experiment inputs forbidden'])
+        problems, self.warnings = active_input_problems(self.root)
+        if problems: raise ValidationError(problems)
         self.hashes = {}
 
     def read(self, path, lines=False):
@@ -236,7 +286,7 @@ def load(root):
             if row.get('roles')!=expected: raise ValidationError(['branch roles disagree with world partition'])
         events = reader.read(reader.root/'events.jsonl',lines=True) if (reader.root/'events.jsonl').exists() else []
         scheduled = []
-    warnings = validate(manifest,cps,rows,strict=not manifest.get('legacy'))
+    warnings = list(reader.warnings) + validate(manifest,cps,rows,strict=not manifest.get('legacy'))
     if any(e.get('model_resolved') not in (None,manifest['model']['resolved_id']) for e in events): raise ValidationError(['invalid_batch: mixed model in events'])
     addendum = reader.read(reader.root/'stage2_addendum.json') if (reader.root/'stage2_addendum.json').exists() else None
     if manifest['phase']=='holdout':

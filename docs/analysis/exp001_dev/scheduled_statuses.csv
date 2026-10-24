@@ -1,0 +1,2 @@
+attempt_no,checkpoint_id,confirmatory,kind,label,status,tier,uncertainty_scope
+1,dev05_B2,False,world_attempt,DEV/pilot,failed,B,world_cluster
