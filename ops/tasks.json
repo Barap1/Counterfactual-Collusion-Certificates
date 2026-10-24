@@ -1,6 +1,6 @@
 {
  "schema": "ccc-tasks/1",
- "updated_utc": "2026-10-23T16:13:11Z",
+ "updated_utc": "2026-10-24T15:00Z",
  "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
  "policy": {
   "max_worker_depth": 3,
@@ -12,45 +12,12 @@
   "initial_remote_inference_concurrency": 1,
   "note": "Codex threads and their native subagents count toward the 6-agent global cap; the Claude env cap does not see them."
  },
- "live_agents": [
-  {
-   "id": "SCI-001",
-   "runtime": "claude"
-  },
-  {
-   "id": "BOOT-001",
-   "runtime": "claude",
-   "releasing": true
-  }
- ],
+ "live_agents": [],
  "gates": {
-  "GATE-A": {
-   "after": [
-    "SCI-002",
-    "ENG-002",
-    "FIX-001"
-   ],
-   "criterion": "deterministic integrity and benign-cooperation tests"
-  },
-  "GATE-B": {
-   "after": [
-    "EXP-001"
-   ],
-   "criterion": "valid real branch and feasible collection plan"
-  },
-  "GATE-C": {
-   "after": [
-    "STAT-002",
-    "REV-001"
-   ],
-   "criterion": "claim audit + reproduction"
-  },
-  "GATE-D": {
-   "after": [
-    "PUB-001"
-   ],
-   "criterion": "final PDF, ethics, provenance, owner approval"
-  }
+  "A": "PASSED (D-028; audit docs/review/director_gateA_audit.md; v1.2.2)",
+  "B": "MET (D-032)",
+  "C": "PASSED with narrowing (D-035)",
+  "D": "technical checks done; owner decisions pending (D-036)"
  },
  "tasks": [
   {
@@ -59,7 +26,7 @@
    "role": "Bootstrap Lead",
    "depends_on": [],
    "acceptance": "Module 08 checks pass; no large inference batch",
-   "status": "ACCEPTED",
+   "status": "DONE",
    "owner": "bootstrap-subagent(depth1)",
    "lease": {
     "lock": "ops/locks/BOOT-001.lock",
@@ -111,7 +78,7 @@
    "role": "Source worker + skeptical reviewer",
    "depends_on": [],
    "acceptance": "At least the closest four methods inspected; no unsupported first claim",
-   "status": "ACCEPTED",
+   "status": "DONE",
    "owner": "director-launched read-only agent",
    "lease": null,
    "attempt": 0,
@@ -129,7 +96,7 @@
    "role": "Replay engineer",
    "depends_on": [],
    "acceptance": "Exact hooks and inaccessible state documented",
-   "status": "ACCEPTED",
+   "status": "DONE",
    "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
@@ -146,7 +113,7 @@
     "ENG-001"
    ],
    "acceptance": "Independent design reviewer approves or explicitly narrows",
-   "status": "ACCEPTED (freeze-candidate v1; STAT-001 re-review pending)",
+   "status": "DONE (protocol v1.2 adopted, D-023)",
    "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
@@ -165,7 +132,7 @@
     "ENG-001"
    ],
    "acceptance": "Offline invariants and corruption tests pass",
-   "status": "PROTOTYPE ACCEPTED (46 tests); hardening -> ENG-003",
+   "status": "DONE",
    "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
@@ -180,7 +147,7 @@
     "SCI-002"
    ],
    "acceptance": "Labels not derived from CCC; hidden labels not leaked",
-   "status": "ACCEPTED (63 tests; merged 6f923cc)",
+   "status": "DONE",
    "owner": "codex gpt-6.1-sol (effort high) via codex-companion, 2026-10-23",
    "lease": null,
    "attempt": 0,
@@ -196,7 +163,7 @@
     "GATE-A"
    ],
    "acceptance": "Tool-loop compatibility and zero-new-spend guards demonstrated",
-   "status": "ACCEPTED (Modal not exercised: permission denied)",
+   "status": "DONE",
    "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
@@ -214,7 +181,7 @@
     "INF-001"
    ],
    "acceptance": "Real branch validity inspected; all attempted cases retained",
-   "status": "PILOT: Haiku operator running 1-checkpoint pilot + watchdog; full run awaits pilot report",
+   "status": "DONE (7/8 complete; dev05_B2 failed attempt preserved; D-029)",
    "owner": "Claude Haiku operator",
    "lease": null,
    "attempt": 0,
@@ -229,7 +196,7 @@
     "GATE-B"
    ],
    "acceptance": "World-level analysis; realistic uncertainty; holdout untouched",
-   "status": "DRAFT ACCEPTED; B1 cleared (D-014); B2 in EXP-000b; B3 after EXP-001",
+   "status": "DONE (frozen: docs/stats/FREEZE.md, stat001_approval.json)",
    "owner": "Claude Sonnet agent (relaunched per D-012)",
    "lease": null,
    "attempt": 0,
@@ -246,7 +213,7 @@
     "STAT-001"
    ],
    "acceptance": "No unregistered model/prompt switch or selective reruns",
-   "status": "queued",
+   "status": "DONE (16/16 worlds, 199 records, 0 failed/invalid; D-031)",
    "owner": null,
    "lease": null,
    "attempt": 0,
@@ -261,7 +228,7 @@
     "EXP-002"
    ],
    "acceptance": "Offline rerun agrees; claims follow realized evidence",
-   "status": "queued",
+   "status": "DONE (docs/analysis/exp002_heldout_v2; confirmatory null)",
    "owner": null,
    "lease": null,
    "attempt": 0,
@@ -276,7 +243,7 @@
     "EXP-002"
    ],
    "acceptance": "Data lineage, readable design, no hidden live calls",
-   "status": "queued",
+   "status": "DONE (figures/, viewer/ builder)",
    "owner": null,
    "lease": null,
    "attempt": 0,
@@ -291,7 +258,7 @@
     "STAT-002"
    ],
    "acceptance": "Reproduces key metric and challenges strongest claim",
-   "status": "queued",
+   "status": "DONE (PASS-WITH-NARROWING; docs/review/rev001)",
    "owner": null,
    "lease": null,
    "attempt": 0,
@@ -306,7 +273,7 @@
     "GATE-C"
    ],
    "acceptance": "Numeric/source audit and template preservation",
-   "status": "EARLY-PHASE ACCEPTED; main phase waits for GATE-C",
+   "status": "TECHNICALLY DONE; OWNER placeholders remain (paper/build/submission.md)",
    "owner": "director-launched agent 2026-10-23T17:00Z",
    "lease": null,
    "attempt": 0,
@@ -327,7 +294,7 @@
     "GATE-D"
    ],
    "acceptance": "All mandatory gates pass or limitations explicitly narrow release",
-   "status": "queued",
+   "status": "OWNER-BLOCKED (docs/release/CHECKLIST.md: DONE 21 / PENDING 7 / OWNER 3)",
    "owner": null,
    "lease": null,
    "attempt": 0,
@@ -436,15 +403,21 @@
    "id": "AMD-IMP-A",
    "objective": "v1.2 core impl (IMP-0..4,7) in worktree v1.2-impl",
    "owner": "codex gpt-6.1-sol/medium",
-   "status": "ACTIVE",
+   "status": "DONE (superseded/merged; see DECISIONS)",
    "worktree": "/Users/aarav/Documents/Projects/ApartSprint-wt-v12 (branch v1.2-impl)"
   },
   {
    "id": "AMD-IMP-B",
    "objective": "Constructed controls derivation only (IMP-6a) in worktree",
    "owner": "codex gpt-6.1-sol/low",
-   "status": "ACTIVE",
+   "status": "DONE (superseded/merged; see DECISIONS)",
    "worktree": "/Users/aarav/Documents/Projects/ApartSprint-wt-v12 (branch v1.2-impl)"
   }
- ]
+ ],
+ "handoff": {
+  "running_jobs": "none",
+  "unpushed_commits": 1,
+  "repo_visibility": "PUBLIC (unexpected; see D-036)",
+  "worktree": "../ApartSprint-wt-v12 (branch v1.2-impl, fully merged into main; safe to remove after owner OK)"
+ }
 }
