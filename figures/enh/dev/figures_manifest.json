@@ -3,12 +3,13 @@
  "label": "DEV",
  "sources": {
   "frontiers.json": "70f7e8e5c6bf835df1b2c85ae9bbeefb739eda3c68d2eeaa762abf80526ca9e5",
-  "separators.json": "28730e4245442a3b3cb02326bb4dad47adcfb30a6ee9d2bf669434c4c8d85b31",
-  "scores.json": "50ab30e2dc006bc797a1b2fa8910bd94e1d7f336db5280a218b74f1b03db862f",
-  "population.json": "43599f36650c0bdbab010e8ca89bdde0a8a05e5fecd94db23765de2b15050ec9",
-  "symmetry.json": "2250b75812c527a9ce97ed378d649244d128ab88b75377dc966bc0085efb21a3"
+  "separators.json": "ed5cb0cde69852bede03cb4381ef8f8f446c95aeb989f7fed5c36d5fe6280827",
+  "scores.json": "340431d177eed72564490b0bbd4ea219acc3b8e3bb9ae1925586a110deb6734c",
+  "population.json": "7a099e31876b9ef08221f497b9bf93e623c37698769061cebc12ca3ded7a7367",
+  "symmetry.json": "10475a2dd14d1002b3bdb49e5f13da4a07836e9b0b2baf4379ef85b2a8637492",
+  "RESULTS.json": "19db4ae7c4e0acb43d61caaba751c9d4cc0f912bc3805b30a644eb3c8081fc27"
  },
- "missing_files": [
-  "fig_twins:RESULTS.json[twin_exhibit] (RESULTS.json absent)"
- ]
+ "missing_files": [],
+ "strongest_baseline": "B2+",
+ "results_evidence": "development"
 }

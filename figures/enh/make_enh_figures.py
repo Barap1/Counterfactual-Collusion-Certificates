@@ -33,7 +33,8 @@ ATTR, ATTR_BG = "#6b3fa0", "#efe7f8"
 UNC, UNC_BG = "#8a5a00", "#fbf0d4"
 OK, OK_BG = "#1d6b3a", "#e1f2e6"
 # method colours (Paul Tol bright, CVD-safe), fixed order, never cycled
-MCOL = {"CCC-v1.2.2": "#4477AA", "CCC-L-v0": "#228833", "STRONGEST": "#CC6677", "Bayes-given-S": "#17324D"}
+MCOL = {"CCC-v1.2.2": "#4477AA", "CCC-L-v1": "#228833", "CCC-L-v0": "#66CCEE", "STRONGEST": "#CC6677", "Bayes-given-S": "#17324D"}
+V1_NOTE = "DEV-informed method version"
 FONT = "Arial, Helvetica, sans-serif"
 SETS = ["I0", "I1", "I2", "I3", "I4", "I5"]
 KINDS = ["P1", "P2", "P3", "P4", "P5", "P6"]
@@ -106,7 +107,7 @@ class Svg:
         self.add(f'<polygon points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in p)}" fill="{color}"/>')
 
     def hatch(self, name, color):
-        self.defs.append(f'<pattern id="{name}" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="white"/><line x1="0" y1="0" x2="0" y2="6" stroke="{color}" stroke-width="2"/></pattern>')
+        self.defs.append(f'<pattern id="{name}" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="white"/><line x1="0" y1="0" x2="0" y2="6" stroke="{color}" stroke-width="1" opacity="0.5"/></pattern>')
 
     def render(self):
         return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{self.w}" height="{self.h}" viewBox="0 0 {self.w} {self.h}">'
@@ -255,101 +256,98 @@ def fig_ladder(c: Ctx):
 
 # ---- 2. twins ----------------------------------------------------------------
 def fig_twins(c: Ctx, F, SEP, RES):
-    s = Svg(1060, 640, "One evidence, two verdicts", "P2 twin pair: identical observables under I1-I3, opposite labels; only the I4 incentive probe separates them.", c.label)
-    # deterministic pair choice: lowest seed in the run, eps = 0, P2
+    s = Svg(1060, 716, "One evidence, two verdicts", "P2 twin pair: identical observables under I1-I3, opposite labels; only the I4 incentive probe separates them.", c.label)
     cands = sorted((x["seed"] for x in F if x["epsilon"] == 0 and "P2" in x["pairs"]))
     seed = cands[0]
+    ex = RES.get("twin_exhibit")
+    if not ex:
+        raise SystemExit("FATAL: RESULTS.json twin_exhibit missing")
+    if ex.get("seed") != seed or ex.get("kind") != "P2" or ex.get("epsilon") != 0:
+        raise SystemExit(f"FATAL: twin_exhibit ({ex.get('kind')}, eps {ex.get('epsilon')}, seed {ex.get('seed')}) != rule (P2, eps 0, seed {seed})")
     fr = [x for x in F if x["seed"] == seed and x["epsilon"] == 0][0]["pairs"]["P2"]
     ccc = [x for x in SEP if x["kind"] == "P2" and x["seed"] == seed and x["epsilon"] == 0 and x["method"] == "CCC-v1.2.2"]
     ccc_diff = ccc[0]["observed_first_difference"] if ccc else "missing"
-    ex = (RES or {}).get("twin_exhibit")
-    if RES is not None and ex is None:
-        c.missing.append("fig_twins:RESULTS.json[twin_exhibit]")
-    elif RES is None:
-        c.missing.append("fig_twins:RESULTS.json[twin_exhibit] (RESULTS.json absent)")
-    if ex and ex.get("seed") != seed:
-        c.missing.append(f"fig_twins:twin_exhibit.seed {ex.get('seed')} != rule seed {seed}")
-    s.text(24, 66, f"Pair rule: P2, eps = 0, lowest seed in this run = {seed} (stated rule, not chosen by appearance).", 11, MUTED)
-    members = (ex or {}).get("members", {})
-    worlds = [("A", "World A: colluding allocation", HARM, HARM_BG), ("B", "World B: efficiency-motivated cooperation", OK, OK_BG)]
-    colx = [40, 560]
-    cw = 460
-    allv = [v for k in "AB" for v in members.get(k, {}).get("outcomes", {}).values()] or [1.0]
+    s.text(24, 66, f"Pair rule: P2, eps = 0, lowest seed in this run = {seed} (stated rule, not chosen by appearance). Bars: outsider reward, mean over continuations.", 11, MUTED)
+    members = ex["members"]
+    worlds = [("A", "World A: colluding allocation", HARM, HARM_BG, "forbidden coordination"), ("B", "World B: efficiency-motivated cooperation", OK, OK_BG, "legitimate")]
+    colx, cw = [40, 560], 460
+    allv = [v for k in "AB" for v in members[k]["outcomes"].values()]
     vmax, vmin = max(0.0, max(allv)), min(0.0, min(allv))
     span = (vmax - vmin) or 1.0
-    for (k, title, col, bg), x in zip(worlds, colx):
+    px0, py, ph = 10, 160, 120
+    zy = py + 14 + (ph - 28) * vmax / span
+    def bars(x, o, keys, bx0, col, bg):
+        for j, b in enumerate(keys):
+            bx = x + bx0 + j * 90
+            v = o[b]
+            bh = abs(v) / span * (ph - 28)
+            by = zy - bh if v >= 0 else zy
+            s.rect(bx, by, 46, max(bh, 1.5), bg, col, 1.6)
+            s.text(bx + 23, by - 5 if v >= 0 else by + bh + 13, f"{v:g}", 11, INK, "middle")
+            s.text(bx + 23, py + ph + 18, b, 12, INK, "middle", "bold")
+    for (k, title, col, bg, lab), x in zip(worlds, colx):
+        m = members[k]
         s.rect(x, 82, cw, 34, bg, col, 1.6, 5)
         s.text(x + 12, 104, title, 14, col, weight="bold")
-        s.text(x + cw - 12, 104, "label: " + ("forbidden coordination" if k == "A" else "legitimate"), 11, INK, "end")
-        # bars F/K/S/N under I1-I3
-        s.text(x, 142, "Observed under I1-I3: outsider reward under each branch", 12, NAVY, weight="bold")
-        px, py, ph = x + 10, 160, 130
-        zy = py + 12 + (ph - 24) * vmax / span
-        s.line(px, zy, px + cw - 20, zy, GREY, 1)
-        o = members.get(k, {}).get("outcomes")
-        for j, b in enumerate(["F", "K", "S", "N"]):
-            bx = px + 30 + j * 100
-            if o and b in o:
-                v = o[b]
-                bh = abs(v) / span * (ph - 24)
-                by = zy - bh if v >= 0 else zy
-                s.rect(bx, by, 50, max(bh, 1.5), CAUSAL_BG, CAUSAL, 1.6)
-                s.text(bx + 25, by - 5 if v >= 0 else by + bh + 13, f"{v:g}", 11, INK, "middle")
-            else:
-                s.hatch("hz", GREY)
-                s.rect(bx, py + 50, 50, ph - 50, "url(#hz)", GREY, 1)
-            s.text(bx + 25, py + ph + 18, b, 12, INK, "middle", "bold")
-        if not o:
-            s.text(px + 30, py + 26, "field missing in run outputs: RESULTS.json twin_exhibit.members." + k + ".outcomes", 10, HARM)
-        # CCC verdict
-        s.rect(x, 338, cw, 62, "white", CAUSAL, 1.6, 5)
-        s.text(x + 12, 360, "CCC v1.2.2 verdict (exposure level, L2)", 12, CAUSAL, weight="bold")
-        st = members.get(k, {}).get("ccc_status")
-        s.text(x + 12, 384, st if st else "status text missing in run outputs", 14 if st else 11, INK if st else HARM, weight="bold" if st else "normal")
-        s.text(x + cw - 12, 384, "not an attribution", 11, MUTED, "end", italic=True)
-    # identical sign between worlds
-    s.text(530, 215, "=", 40, NAVY, "middle", "bold")
-    s.text(530, 380, "=", 28, NAVY, "middle", "bold")
-    s.text(530, 416, "same output at every set" if ccc_diff is None else f"CCC first differs at {ccc_diff}", 9, MUTED, "middle")
-    # I1..I3 identical chips (from enumeration)
-    s.text(40, 424, "Enumerated twin distinguishability (exact byte-identical views, this seed):", 12, NAVY, weight="bold")
+        s.text(x + cw - 12, 104, "label: " + lab, 11, INK, "end")
+        s.text(x, 142, "Observed under I1-I3 (F factual, K knockout, S sham, N filler)", 12, NAVY, weight="bold")
+        s.line(x + px0, zy, x + cw - 10, zy, GREY, 1)
+        bars(x, m["outcomes"], ["F", "K", "S", "N"], 30, CAUSAL, CAUSAL_BG)
+        s.rect(x, 330, cw, 62, "white", CAUSAL, 1.6, 5)
+        s.text(x + 12, 352, "CCC v1.2.2 verdict (exposure level, L2)", 12, CAUSAL, weight="bold")
+        s.text(x + 12, 378, m["ccc_status"], 15, INK, weight="bold")
+        s.text(x + cw - 12, 378, "not an attribution", 11, MUTED, "end", italic=True)
+    s.text(530, 225, "=", 40, NAVY, "middle", "bold")
+    s.text(530, 370, "=", 28, NAVY, "middle", "bold")
+    s.text(530, 408, "same output at every set" if ccc_diff is None else f"CCC first differs at {ccc_diff}", 9, MUTED, "middle")
+    s.text(40, 432, "Enumerated twin distinguishability (exact byte-identical views, this seed):", 12, NAVY, weight="bold")
     for i, k in enumerate(SETS):
         d = fr["by_set"][k]["pair_distinct"]
         x = 40 + i * 118
-        s.rect(x, 436, 108, 40, ATTR_BG if d else UNC_BG, ATTR if d else UNC, 1.6, 5)
-        s.text(x + 10, 454, k, 14, ATTR if d else UNC, weight="bold")
-        s.text(x + 10, 469, "distinct" if d else "identical", 11, INK)
-    s.text(40 + 6 * 118 + 4, 461, "-> abstain on attribution through I3", 11, UNC, weight="bold")
-    # I4 probe
-    s.rect(40, 496, 980, 120, ATTR_BG, ATTR, 1.8, 6)
-    s.text(54, 518, "I4 incentive probe: lower an outsider's cost on the contested task (ceding becomes welfare improving)", 13, ATTR, weight="bold")
+        s.rect(x, 442, 108, 40, ATTR_BG if d else UNC_BG, ATTR if d else UNC, 1.6, 5)
+        s.text(x + 10, 460, k, 14, ATTR if d else UNC, weight="bold")
+        s.text(x + 10, 475, "distinct" if d else "identical", 11, INK)
+    s.text(40 + 6 * 118 + 4, 467, "-> abstain on attribution through I3", 11, UNC, weight="bold")
+    s.rect(40, 500, 980, 176, ATTR_BG, ATTR, 1.8, 6)
+    s.text(54, 522, "I4 incentive probe: lower outsider costs on the contested task (ceding becomes welfare improving)", 13, ATTR, weight="bold")
+    pyy = 546
     for k, x in zip("AB", [60, 580]):
-        pr = members.get(k, {}).get("i4_probe")
-        s.text(x, 544, "World " + k + ":", 12, INK, weight="bold")
-        if pr:
-            s.text(x + 70, 544, f"{pr.get('before','?')} -> {pr.get('after','?')}  ({pr.get('metric','')})", 12, INK)
-            s.text(x, 566, pr.get("reading", ""), 12, INK)
-        else:
-            s.text(x + 70, 544, "field missing in run outputs: twin_exhibit.members." + k + ".i4_probe", 10, HARM)
-    s.text(60, 594, "Expected by design: the efficient team cedes, the colluding allocation does not; the pair separates at I4 only (enumeration, minimal_pair_separator).", 11, MUTED)
+        m = members[k]
+        pr = m["i4_probe"]
+        s.text(x, pyy, f"World {k}: {pr['metric']}  {pr['before']} -> {pr['after']}", 12, INK, weight="bold")
+        s.text(x, pyy + 18, pr["reading"], 12, INK)
+        # PF / PK mini bars
+        base = pyy + 96
+        s.line(x, base, x + 200, base, GREY, 1)
+        for j, b in enumerate(["PF", "PK"]):
+            v = m["outcomes"][b]
+            bh = abs(v) / span * 62
+            s.rect(x + 20 + j * 90, base - bh, 46, max(bh, 1.5), "white", ATTR, 1.8)
+            s.text(x + 43 + j * 90, base - bh - 4, f"{v:g}", 11, INK, "middle")
+            s.text(x + 43 + j * 90, base + 14, b, 11, INK, "middle", "bold")
+        s.text(x + 215, base - 30, "PF probe factual, PK probe knockout", 10, MUTED)
+        s.text(x + 215, base - 16, "(outsider reward)", 10, MUTED)
+    s.text(60, 698, "The efficient team cedes when an outsider is cheaper, the colluding allocation does not; the pair separates at I4 only (enumeration, minimal_pair_separator).", 11, MUTED)
     vals = {"pair_rule": "P2, epsilon 0, lowest seed in run", "seed": seed,
             "enumerated_pair_distinct_by_set": {k: fr["by_set"][k]["pair_distinct"] for k in SETS},
             "minimal_pair_separator": fr["minimal_pair_separator"], "ccc_v1.2.2_observed_first_difference": ccc_diff,
-            "twin_exhibit_present": bool(ex), "members": members}
+            "twin_exhibit_information_set_for_ccc_status": ex.get("information_set"),
+            "members": {k: {"label": worlds[i][4], "outcomes_outsider": members[k]["outcomes"], "ccc_status": members[k]["ccc_status"], "i4_probe": members[k]["i4_probe"]} for i, k in enumerate("AB")}}
     c.save("fig_twins", s, f"One evidence, two verdicts. P2 twin pair at seed {seed} (lowest seed rule). Identical observables under I1-I3 (enumeration), opposite labels, frozen CCC v1.2.2 emits the same exposure-level output for both; the I4 incentive probe separates them.",
            vals, ["frontiers.json", "separators.json", "RESULTS.json"])
 
 
 # ---- 3. frontier -------------------------------------------------------------
-def fig_frontier(c: Ctx, F, SEP):
-    s = Svg(1060, 960, "Identifiability frontier: pair type by information set",
-            "Fill = enumeration says the twin members' views differ (share of 50 seed units). Numbers = observed method output differs between members.", c.label)
+def fig_frontier(c: Ctx, F, SEP, RES):
+    s = Svg(1060, 1130, "Identifiability frontier: pair type by information set",
+            "Fill = enumeration says the twin members' views differ (share of seed units). Numbers: Bayes = pair accuracy (T3); others = share of units whose output differs between members.", c.label)
     s.hatch("hd", ATTR)
-    cx0, cy0, cwid, chei = 330, 110, 100, 72
-    methods = [("Bayes-given-S", "B", MCOL["Bayes-given-S"]), ("CCC-L-v0", "L", MCOL["CCC-L-v0"]), ("CCC-v1.2.2", "C", MCOL["CCC-v1.2.2"])]
+    cx0, cy0, cwid, chei = 330, 110, 100, 84
+    methods = [("Bayes-given-S", "B", MCOL["Bayes-given-S"]), ("CCC-L-v1", "L1", MCOL["CCC-L-v1"]), ("CCC-L-v0", "L0", MCOL["CCC-L-v0"]), ("CCC-v1.2.2", "C", MCOL["CCC-v1.2.2"])]
+    T3 = {(r["kind"], r["epsilon"]): r for r in RES["tables"]["T3"]}
     vals = {}
     for pi, eps in enumerate([0, 0.1]):
-        oy = cy0 + pi * 382
+        oy = cy0 + pi * 462
         s.text(24, oy - 24, f"eps = {eps}" + (" (no exploration noise)" if eps == 0 else " (uniform exploration, probability 0.1)"), 13, NAVY, weight="bold")
         for j, k in enumerate(SETS):
             s.text(cx0 + j * cwid + cwid / 2, oy - 8, k, 13, INK, "middle", "bold")
@@ -370,14 +368,19 @@ def fig_frontier(c: Ctx, F, SEP):
                 s.rect(x + 2, yy, cwid - 4, h, "url(#hd)" if definitional else fill, ATTR if definitional else stroke, 1.6 if definitional else 1, 3)
                 cell = {"enumerated_separable_share": share, "n_seed_units": n, "definitional": definitional}
                 for mi, (m, tag, col) in enumerate(methods):
-                    rows = [r for r in SEP if r["kind"] == kind and r["method"] == m and r["epsilon"] == eps]
-                    nm = len(rows)
-                    obs = sum(1 for r in rows if r["observed_first_difference"] is not None and SETS.index(r["observed_first_difference"]) <= j)
-                    r_ = obs / nm if nm else None
+                    if m == "Bayes-given-S":
+                        t3 = T3.get((kind, eps))
+                        r_ = t3["by_set"][k]["bayes_pair_accuracy_one"]["rate"] if t3 else None
+                        leak = False
+                    else:
+                        rows = [r for r in SEP if r["kind"] == kind and r["method"] == m and r["epsilon"] == eps]
+                        nm = len(rows)
+                        obs = sum(1 for r in rows if r["observed_first_difference"] is not None and SETS.index(r["observed_first_difference"]) <= j)
+                        r_ = obs / nm if nm else None
+                        leak = (share < 0.5 and r_ and r_ > 0)
                     cell[m] = r_
-                    leak = (share < 0.5 and r_ and r_ > 0)
                     tx = x + 12
-                    ty = yy + 16 + mi * 14
+                    ty = yy + 15 + mi * 13
                     s.rect(tx, ty - 8, 8, 8, col)
                     s.text(tx + 13, ty, "n/a" if r_ is None else f"{r_:.2f}", 11, HARM if leak else INK, weight="bold" if leak else "normal")
                 if definitional:
@@ -385,22 +388,37 @@ def fig_frontier(c: Ctx, F, SEP):
                 vals[f"eps{eps}/{kind}/{k}"] = cell
     ly = 140 + 640 + 12 - 20
     never = ", ".join(k for k in KINDS if all(vals[f"eps{e}/{k}/{ss}"]["CCC-v1.2.2"] == 0 for e in (0, 0.1) for ss in SETS)) or "none"
-    LY = 880
+    LY = 1038
     s.text(24, LY, "Legend", 12, NAVY, weight="bold")
     s.rect(80, LY-10, 16, 12, CAUSAL_BG, CAUSAL); s.text(100, LY, "separable by enumeration", 11, INK)
     s.rect(250, LY-10, 16, 12, SOFT, LINE); s.text(270, LY, "not separable (byte-identical views)", 11, INK)
     s.rect(490, LY-10, 16, 12, "url(#hd)", ATTR); s.text(510, LY, "definitional, def. (P3 at I5: authorization is the label)", 11, INK)
     x = 80
     for m, tag, col in methods:
-        s.rect(x, LY+11, 9, 9, col); s.text(x + 14, LY+20, {"Bayes-given-S": "Bayes-given-S ceiling", "CCC-L-v0": "CCC-L v0 (ladder-aware)", "CCC-v1.2.2": "CCC v1.2.2 (frozen)"}[m], 11, INK); x += 230
-    s.text(24, LY+42, "Red number = output differs on a not-separable cell (symmetry leak). P5 is a same-label control (transcripts differ, labels agree), not a different-label pair.", 11, MUTED)
+        s.rect(x, LY+11, 9, 9, col); s.text(x + 14, LY+20, {"Bayes-given-S": "Bayes-given-S pair accuracy", "CCC-L-v1": "CCC-L v1 (DEV-informed method version)", "CCC-L-v0": "CCC-L v0", "CCC-v1.2.2": "CCC v1.2.2 (frozen)"}[m], 10, INK); x += {"Bayes-given-S": 170, "CCC-L-v1": 250, "CCC-L-v0": 100, "CCC-v1.2.2": 150}[m]
+    s.text(24, LY+42, "n/a = no T3 row (P5 is a same-label control). Red number = output differs on a not-separable cell (symmetry leak). P5 is a same-label control (transcripts differ, labels agree), not a different-label pair.", 11, MUTED)
     s.text(24, LY+58, "Share = seed units whose method output differs between twin members at that set or an earlier one; pair types CCC v1.2.2 never separates: " + never, 11, MUTED)
-    c.save("fig_frontier", s, "Frontier heat map, pair type P1-P6 by information set I0-I5, both noise strata. Fill from exact enumeration; overlaid share of seed units on which Bayes-given-S, CCC-L v0 and frozen CCC v1.2.2 emit different outputs for the two twin members. P3 at I5 is definitional.",
-           vals, ["frontiers.json", "separators.json"])
+    c.save("fig_frontier", s, "Frontier heat map, pair type P1-P6 by information set I0-I5, both noise strata. Fill from exact enumeration; overlaid: Bayes-given-S pair accuracy (RQ2, T3) and the share of seed units on which CCC-L v1 (DEV-informed method version), CCC-L v0 and frozen CCC v1.2.2 emit different outputs for the two twin members. P3 at I5 is definitional.",
+           vals, ["frontiers.json", "separators.json", "RESULTS.json"])
 
 
 # ---- 4. risk-coverage ----------------------------------------------------------
-def strongest_baseline(SC, axis):
+def frozen_strongest(c, RES):
+    """The protocol's frozen strongest baseline, read from the run (never computed here)."""
+    sb = None
+    if RES and isinstance(RES.get("dev_derived"), dict):
+        sb = RES["dev_derived"].get("strongest_baseline")
+    if not sb:
+        p = c.run / "strongest_baseline.json"
+        if p.exists():
+            c.sources["strongest_baseline.json"] = sha(p)
+            sb = json.loads(p.read_text()).get("strongest_baseline")
+    if not sb:
+        raise SystemExit("FATAL: frozen strongest baseline missing (RESULTS.json dev_derived.strongest_baseline / strongest_baseline.json)")
+    return sb
+
+
+def _unused_strongest_baseline(SC, axis):
     best = None
     for b in BASELINES:
         v = []
@@ -414,14 +432,13 @@ def strongest_baseline(SC, axis):
     return best
 
 
-def fig_risk(c: Ctx, SC, axis, name, axname):
-    sb = strongest_baseline(SC, axis)
-    methods = [("CCC-v1.2.2", MCOL["CCC-v1.2.2"], "CCC v1.2.2"), ("CCC-L-v0", MCOL["CCC-L-v0"], "CCC-L v0"),
-               (sb[0] if sb else "B0", MCOL["STRONGEST"], f"strongest baseline ({sb[0] if sb else 'n/a'})"), ("Bayes-given-S", MCOL["Bayes-given-S"], "Bayes-given-S")]
+def fig_risk(c: Ctx, SC, axis, name, axname, sbn):
+    methods = [("CCC-v1.2.2", MCOL["CCC-v1.2.2"], "CCC v1.2.2"), ("CCC-L-v1", MCOL["CCC-L-v1"], f"CCC-L v1 ({V1_NOTE})"), ("CCC-L-v0", MCOL["CCC-L-v0"], "CCC-L v0"),
+               (sbn, MCOL["STRONGEST"], f"strongest baseline ({sbn}, frozen)"), ("Bayes-given-S", MCOL["Bayes-given-S"], "Bayes-given-S")]
     pw, ph, gx, gy = 138, 104, 14, 28
     left, top = 92, 96
     W = left + 6 * (pw + gx) + 14
-    H = top + 4 * (ph + gy) + 130
+    H = top + 4 * (ph + gy) + 170
     s = Svg(W, H, f"Risk-coverage by information set ({axname})", "Risk = error + c * abstention (lower is better); coverage = share of members answered. Rows: noise stratum x abstention cost c.", c.label)
     # y max
     ymax = 0.0
@@ -430,8 +447,7 @@ def fig_risk(c: Ctx, SC, axis, name, axname):
             for p in x["risk_coverage"]:
                 ymax = max(ymax, p["risk"]["0.25"], p["risk"]["0.5"])
     ymax = math.ceil(ymax * 10 + 1e-9) / 10 or 0.5
-    vals = {"strongest_baseline_rule": "lowest mean over (eps, set) of min-over-curve risk at c=0.5 on this axis, DEV-derived; ties by name",
-            "strongest_baseline": sb[0] if sb else None, "strongest_baseline_mean_min_risk_c05": sb[1] if sb else None, "panels": {}}
+    vals = {"strongest_baseline_source": "RESULTS.json dev_derived.strongest_baseline (protocol-frozen)", "strongest_baseline": sbn, "panels": {}}
     na = []
     for ri, (eps, cc) in enumerate([(0, "0.25"), (0, "0.5"), (0.1, "0.25"), (0.1, "0.5")]):
         for ci, k in enumerate(SETS):
@@ -483,135 +499,143 @@ def fig_risk(c: Ctx, SC, axis, name, axname):
     ly = top + 4 * (ph + gy) + 8
     x = left
     for m, col, nm in methods:
+        if x + 28 + 6.3 * len(nm) > W - 10:
+            x = left
+            ly += 18
         s.line(x, ly + 4, x + 22, ly + 4, col, 2.2, "5 3" if m == "Bayes-given-S" else "")
         s.circle(x + 11, ly + 4, 3.5, col)
         s.text(x + 28, ly + 8, nm, 11, INK)
-        x += 28 + 7.2 * len(nm) + 22
-    s.add(f'<polygon points="{x:.1f},{ly-2:.1f} {x+6:.1f},{ly+9:.1f} {x-6:.1f},{ly+9:.1f}" fill="white" stroke="{GREY}" stroke-width="1.8"/>')
-    s.text(x + 12, ly + 8, "always-abstain (coverage 0, risk c)", 11, INK)
-    x = left
+        x += 28 + 6.3 * len(nm) + 22
+    x = left + 6
     ly += 20
+    s.add(f'<polygon points="{x:.1f},{ly-2:.1f} {x+6:.1f},{ly+9:.1f} {x-6:.1f},{ly+9:.1f}" fill="white" stroke="{GREY}" stroke-width="1.8"/>')
+    s.text(x + 14, ly + 8, "always-abstain (coverage 0, risk c)", 11, INK)
+    x = left + 260
     s.add(f'<rect x="{x:.1f}" y="{ly-1:.1f}" width="10" height="10" fill="white" stroke="{GREY}" stroke-width="1.8"/>')
     s.text(x + 15, ly + 8, "always-answer", 11, INK)
     notes = []
     if na:
         notes.append(f"Not plotted (method emits no {axname} output): {', '.join(sorted(set(na)))}.")
-    notes.append("Where curves coincide, the top-drawn marker is CCC v1.2.2 (largest dot); coincident methods emitted identical outputs. Native binary methods have one or two curve points (confidence ties kept whole). Weighted risk has no binomial CI.")
+    notes.append("Where curves coincide, the top-drawn marker is CCC v1.2.2 (largest dot); coincident methods emitted identical outputs.")
+    notes.append("Native binary methods have one or two curve points (confidence ties kept whole). Weighted risk has no binomial CI.")
     notes.append("Bayes-given-S uses only the design class prior given the view; it is a ceiling for methods restricted to that set, under the uniform design prior.")
     for i, t in enumerate(notes):
         s.text(left, ly + 28 + i * 16, t, 11, MUTED)
     vals["not_plotted_on_this_axis"] = sorted(set(na))
-    c.save(name, s, f"Risk-coverage curves on the {axname} axis, per information set, both noise strata, abstention cost c in 0.25 and 0.5; CCC v1.2.2, CCC-L v0, strongest DEV baseline, Bayes-given-S and always-answer/abstain anchors.",
+    c.save(name, s, f"Risk-coverage curves on the {axname} axis, per information set, both noise strata, abstention cost c in 0.25 and 0.5; CCC v1.2.2, CCC-L v1 (DEV-informed method version), CCC-L v0, frozen strongest baseline, Bayes-given-S and always-answer/abstain anchors.",
            vals, ["scores.json"])
 
 
 # ---- 5. over-attribution -------------------------------------------------------
-def fig_overattr(c: Ctx, SC):
-    meths = BASELINES + ["CCC-L-v0", "Bayes-given-S"]
-    rows = meths + ["CCC-v1.2.2*"]
-    pw, rh = 150, 17
-    left, top = 175, 125
-    ph = rh * len(rows)
-    gx = 14
-    W = left + 6 * (pw + gx) + 10
-    H = top + 2 * (ph + 62) + 70
-    s = Svg(W, H, "Over-attribution on legitimate members", "Rate at which a method flags a legitimate member (P2, P3, P6, benign cooperation); dots = unit rate, bars = Clopper-Pearson 95% over independent seed units.", c.label)
-    vals = {}
+def fig_overattr(c: Ctx, RES, sbn):
+    T5, T5b = RES["tables"]["T5"], RES["tables"]["T5b"]
+    classes = [("P2", "P2 efficient cooperation"), ("P3", "P3 authorized transfer"), ("P6", "P6 useful information"), ("benign-cooperation", "benign cooperation")]
+    for r in T5 + T5b:
+        if r["method"] != sbn:
+            raise SystemExit(f"FATAL: T5/T5b method {r['method']} != frozen strongest baseline {sbn}")
+    pw, rh, left, top = 300, 74, 190, 120
+    W = left + 2 * (pw + 130) + 20
+    H = top + 4 * rh + 130
+    s = Svg(W, H, "Over-attribution on legitimate members, per class",
+            f"Frozen strongest baseline ({sbn}) under I1; rate of attributable-collusion output on legitimate members; CP95 over independent seed units. No pooling.", c.label)
+    vals = {"strongest_baseline": sbn, "information_set": "I1 (RQ4/RQ4b protocol set)", "rows": {}}
     for ei, eps in enumerate([0, 0.1]):
-        y0 = top + ei * (ph + 62)
-        s.text(24, y0 - 28, f"eps = {eps}", 13, NAVY, weight="bold")
-        for ci, k in enumerate(SETS):
-            x0 = left + ci * (pw + gx)
-            s.text(x0 + pw / 2, y0 - 8, k, 13, INK, "middle", "bold")
-            s.rect(x0, y0, pw, ph, "white", LINE, 1)
-            for t in (0, .25, .5, .75, 1):
-                s.line(x0 + t * pw, y0, x0 + t * pw, y0 + ph, "#eceae3", .8)
-                if ei == 1 or True:
-                    s.text(x0 + t * pw, y0 + ph + 12, f"{t:g}" if t in (0, .5, 1) else "", 10, MUTED, "middle")
-            for ri, m in enumerate(rows):
-                yy = y0 + ri * rh + rh / 2
-                if ci == 0:
-                    s.text(x0 - 6, yy + 4, "CCC v1.2.2 (L2 exposure)" if m.endswith("*") else m, 11, HARM if m.endswith("*") else INK, "end", "bold" if m.endswith("*") else "normal")
-                axis, mm = ("E", "CCC-v1.2.2") if m.endswith("*") else ("M", m)
-                e = [q for q in SC if q["method"] == mm and q["axis"] == axis and q["epsilon"] == eps and q["information_set"] == k]
-                met = e[0]["metrics"].get("accusation_on_legitimate") if e and "metrics" in e[0] else None
-                if not isinstance(met, dict):
-                    s.text(x0 + 6, yy + 4, "n/a", 10, MUTED)
-                    vals[f"eps{eps}/{k}/{m}"] = None
-                    continue
-                r, (lo, hi) = met["unit_rate"], met["unit_cp95"]
-                vals[f"eps{eps}/{k}/{m}"] = {"unit_rate": r, "cp95": [lo, hi], "unit_k": met["unit_k"], "independent_n": met["independent_n"], "member_rate_descriptive": met["member_rate"], "axis": axis}
-                col = HARM if m.endswith("*") else NAVY
-                s.line(x0 + lo * pw, yy, x0 + hi * pw, yy, col, 2)
-                if m.endswith("*"):
-                    s.add(f'<polygon points="{x0+r*pw:.1f},{yy-5.5:.1f} {x0+r*pw+5.5:.1f},{yy:.1f} {x0+r*pw:.1f},{yy+5.5:.1f} {x0+r*pw-5.5:.1f},{yy:.1f}" fill="white" stroke="{HARM}" stroke-width="1.8"/>')
+        x0 = left + ei * (pw + 130)
+        s.text(x0, top - 38, f"eps = {eps}", 13, NAVY, weight="bold")
+        for t_ in (0, .25, .5, .75, 1):
+            s.line(x0 + t_ * pw, top - 12, x0 + t_ * pw, top + 4 * rh - 14, "#eceae3", .8)
+            s.text(x0 + t_ * pw, top + 4 * rh - 2, f"{t_:g}", 10, MUTED, "middle")
+        s.line(x0 + .5 * pw, top - 16, x0 + .5 * pw, top + 4 * rh - 14, UNC, 1.6, "6 4")
+        s.text(x0 + .5 * pw, top - 20, "0.5 (RQ4; RQ4b for P2/P3)", 10, UNC, "middle", "bold")
+        for ci, (k, name) in enumerate(classes):
+            yy = top + ci * rh
+            if ei == 0:
+                s.text(left - 12, yy + 22, name, 12, INK, "end", "bold")
+            r5 = [r for r in T5 if r["kind"] == k and r["epsilon"] == eps][0]
+            r5b = [r for r in T5b if r["kind"] == k and r["epsilon"] == eps][0]
+            oa, l2 = r5["over_attribution"], r5["CCC_L2_supported"]
+            for off, mk, met, col in [(10, "dot", oa, NAVY), (34, "dia", l2, HARM)]:
+                lo, hi = met["unit_cp95"]
+                y = yy + off
+                s.line(x0 + lo * pw, y, x0 + hi * pw, y, col, 2.4)
+                s.line(x0 + lo * pw, y - 4, x0 + lo * pw, y + 4, col, 1.6)
+                s.line(x0 + hi * pw, y - 4, x0 + hi * pw, y + 4, col, 1.6)
+                px = x0 + met["unit_rate"] * pw
+                if mk == "dot":
+                    s.circle(px, y, 5, col)
                 else:
-                    s.circle(x0 + r * pw, yy, 3.6, NAVY)
-            s.line(x0, y0 + len(meths) * rh, x0 + pw, y0 + len(meths) * rh, UNC, 1, "3 3")
-    ly = H - 48
-    s.circle(30, ly, 4, NAVY); s.text(40, ly + 4, "attribution claim on a legitimate member (axis M)", 11, INK)
-    s.add(f'<polygon points="380,{ly-6} 386,{ly} 380,{ly+6} 374,{ly}" fill="white" stroke="{HARM}" stroke-width="1.8"/>')
-    s.text(394, ly + 4, "CCC v1.2.2 exposure-level 'supported' (axis E): L2 harmful exposure, not attribution; legitimate members can be E-positive", 11, INK)
-    s.text(24, ly + 24, "Unit endpoint: any flagged member within a seed. Member-averaged rates are in the sidecar (descriptive, no interval). Bayes-given-S shown as a reference, not a competitor.", 11, MUTED)
-    c.save("fig_overattribution", s, "Over-attribution rate on legitimate members (P2, P3, P6, benign cooperation) by method and information set with Clopper-Pearson 95% intervals over independent seed units; CCC v1.2.2 exposure-level supported rate shown separately as L2, not attribution.",
-           vals, ["scores.json"])
+                    s.add(f'<polygon points="{px:.1f},{y-6:.1f} {px+6:.1f},{y:.1f} {px:.1f},{y+6:.1f} {px-6:.1f},{y:.1f}" fill="white" stroke="{HARM}" stroke-width="2"/>')
+                s.text(x0 + pw + 8, y + 4, f"{met['unit_k']}/{met['independent_n']}", 10, INK)
+            if k in ("P6", "benign-cooperation"):
+                s.line(x0 + .05 * pw, yy - 4, x0 + .05 * pw, yy + 46, ATTR, 1.6, "2 3")
+                s.text(x0 + .05 * pw + 4, yy + 58, "0.05 (RQ4b)", 9, ATTR, weight="bold")
+            ok4b = r5b["pass_criterion"]
+            ok4 = r5["pass_criterion"]
+            s.text(x0 + pw + 44, yy + 18, f"RQ4 {'ok' if ok4 else 'no'}", 10, OK if ok4 else HARM, weight="bold")
+            s.text(x0 + pw + 44, yy + 32, f"RQ4b {'ok' if ok4b else 'no'}", 10, OK if ok4b else HARM, weight="bold")
+            vals["rows"][f"eps{eps}/{k}"] = {"baseline_over_attribution": oa, "ccc_v1.2.2_L2_supported": l2, "RQ4_class_pass": ok4, "RQ4b_class_pass": ok4b}
+    ly = H - 56
+    s.circle(30, ly, 5, NAVY); s.text(42, ly + 4, f"{sbn}: attributable-collusion output on a legitimate member (T5 / T5b)", 11, INK)
+    s.add(f'<polygon points="{W/2+20:.0f},{ly-6} {W/2+26:.0f},{ly} {W/2+20:.0f},{ly+6} {W/2+14:.0f},{ly}" fill="white" stroke="{HARM}" stroke-width="2"/>')
+    s.text(W / 2 + 36, ly + 4, "CCC v1.2.2 exposure-level 'supported' (L2 harmful exposure, not attribution)", 11, INK)
+    s.text(24, ly + 24, "Unit endpoint: any flagged member within a seed unit; k/n = units. RQ4 needs all four classes above 0.5; RQ4b needs P2/P3 above 0.5 and P6/benign at most 0.05. 'ok/no' = class-level criterion met.", 10, MUTED)
+    c.save("fig_overattribution", s, "Over-attribution of the frozen strongest baseline on legitimate members (P2, P3, P6, benign cooperation) under I1, per class and noise stratum, Clopper-Pearson 95% over independent seed units, with the 0.5 (RQ4) and 0.05 (RQ4b) lines; CCC v1.2.2 exposure-level supported rate shown separately as L2, not attribution.",
+           vals, ["RESULTS.json"])
 
 
 # ---- 6. prevalence --------------------------------------------------------------
-def fig_prevalence(c: Ctx, POP):
-    s = Svg(960, 420, "RQ3 label-effect gap: prevalence", "Share of mechanism-'forbidden' iid worlds whose oracle exposure effect tau_O is at least m_O = 2.5.", c.label)
-    k, n = POP["k"], POP["n"]
-    rate, (lo, hi) = POP["rate"], POP["cp95"]
-    # left panel interval
-    x0, x1, y = 70, 480, 170
+def fig_prevalence(c: Ctx, RES):
+    strata = RES["tables"]["T4"]["strata"]
+    s = Svg(1000, 420, "RQ3 label-effect gap: prevalence", "Share of mechanism-'forbidden' iid worlds whose oracle exposure effect tau_O is at least m_O = 2.5; noise strata kept separate.", c.label)
+    x0, x1 = 70, 480
     s.text(24, 80, "Prevalence with Clopper-Pearson 95% interval", 13, NAVY, weight="bold")
-    s.line(x0, y, x1, y, GREY, 1)
-    for t in (0, .25, .5, .75, 1):
-        xx = x0 + t * (x1 - x0)
-        s.line(xx, y, xx, y + 5, GREY)
-        s.text(xx, y + 20, f"{int(t*100)}%", 10, MUTED, "middle")
-    s.line(x0 + lo * (x1 - x0), y - 30, x0 + hi * (x1 - x0), y - 30, CAUSAL, 3)
-    s.line(x0 + lo * (x1 - x0), y - 36, x0 + lo * (x1 - x0), y - 24, CAUSAL, 2)
-    s.line(x0 + hi * (x1 - x0), y - 36, x0 + hi * (x1 - x0), y - 24, CAUSAL, 2)
-    s.circle(x0 + rate * (x1 - x0), y - 30, 6, CAUSAL)
+    yax = 250
+    s.line(x0, yax, x1, yax, GREY, 1)
+    for t_ in (0, .25, .5, .75, 1):
+        xx = x0 + t_ * (x1 - x0)
+        s.line(xx, yax, xx, yax + 5, GREY)
+        s.text(xx, yax + 20, f"{int(t_*100)}%", 10, MUTED, "middle")
     px = x0 + .25 * (x1 - x0)
-    s.line(px, y - 72, px, y, UNC, 1.8, "6 4")
-    s.text(px + 6, y - 66, "25% pre-registered line", 11, UNC, weight="bold")
-    s.text(x0 + rate * (x1 - x0) + 10, y - 44, f"{k}/{n} = {rate*100:.0f}%  [{lo*100:.1f}, {hi*100:.1f}]", 12, INK, "middle", "bold")
-    s.text(24, y + 52, f"n = {n} independent seeds, one forbidden world per seed; k = {k} with tau_O >= 2.5.", 11, MUTED)
-    cases = {}
-    for case in sorted({r["case"] for r in POP["rows"]}):
-        rr = [r for r in POP["rows"] if r["case"] == case]
-        kk = sum(1 for r in rr if r["tau_O"] >= 2.5)
-        a, b = clopper_pearson(kk, len(rr))
-        cases[case] = {"k": kk, "n": len(rr), "rate": kk / len(rr), "cp95": [a, b]}
-        yy = y + 85 + 26 * (len(cases) - 1)
-        s.text(24, yy + 4, f"{case} (descriptive)", 11, INK)
-        s.line(x0 + 80 + a * (x1 - x0 - 80), yy, x0 + 80 + b * (x1 - x0 - 80), yy, GREY, 2)
-        s.circle(x0 + 80 + kk / len(rr) * (x1 - x0 - 80), yy, 4, GREY)
-        s.text(x1 + 10, yy + 4, f"{kk}/{len(rr)}", 11, INK)
-    # right strip of tau_O
-    sx0, sx1, sy = 590, 920, 80
-    s.text(sx0, sy, "Oracle tau_O per world", 13, NAVY, weight="bold")
-    vals_t = sorted(r["tau_O"] for r in POP["rows"])
-    lo_t, hi_t = min(vals_t + [0]), max(vals_t + [2.5])
+    s.line(px, 108, px, yax, UNC, 1.8, "6 4")
+    s.text(px + 6, 118, "25% pre-registered line", 11, UNC, weight="bold")
+    out = {}
+    for i, eps in enumerate(["0", "0.1"]):
+        st = strata[eps]
+        k, n, rate, (lo, hi) = st["k"], st["n"], st["rate"], st["cp95"]
+        y = 170 + i * 52
+        s.text(24, y + 4, f"eps {eps}", 12, INK, weight="bold")
+        s.line(x0 + lo * (x1 - x0), y, x0 + hi * (x1 - x0), y, CAUSAL, 3)
+        s.line(x0 + lo * (x1 - x0), y - 6, x0 + lo * (x1 - x0), y + 6, CAUSAL, 2)
+        s.line(x0 + hi * (x1 - x0), y - 6, x0 + hi * (x1 - x0), y + 6, CAUSAL, 2)
+        s.circle(x0 + rate * (x1 - x0), y, 6, CAUSAL)
+        s.text(x0 + hi * (x1 - x0) + 10, y + 4, f"{k}/{n} = {rate*100:.0f}%  [{lo*100:.1f}, {hi*100:.1f}]", 11, INK, weight="bold")
+        out[eps] = {"k": k, "n": n, "rate": rate, "cp95": [lo, hi], "tau_O_sorted": sorted(r["tau_O"] for r in st["rows"]),
+                    "status": RES["rq"]["RQ3"]["by_epsilon"][eps]["status"], "supported_with_margin": RES["rq"]["RQ3"]["by_epsilon"][eps]["supported_with_margin"]}
+    s.text(24, yax + 48, "n = 50 independent seeds per stratum, one forbidden world per seed;", 11, MUTED)
+    s.text(24, yax + 64, "k = worlds with tau_O >= 2.5. Strata share seeds and are not pooled.", 11, MUTED)
+    allt = [v for o in out.values() for v in o["tau_O_sorted"]]
+    lo_t, hi_t = min(allt + [0]), max(allt + [2.5])
     top, bot = 110, 320
     def ty(v): return bot - (v - lo_t) / (hi_t - lo_t) * (bot - top)
+    s.text(560, 80, "Oracle tau_O per world", 13, NAVY, weight="bold")
+    sx0 = 590
     s.line(sx0, bot, sx0, top, GREY)
-    for t in range(int(math.ceil(lo_t / 5) * 5), int(hi_t) + 1, 5):
-        s.line(sx0 - 4, ty(t), sx0, ty(t), GREY)
-        s.text(sx0 - 8, ty(t) + 4, f"{t}", 10, MUTED, "end")
-    s.line(sx0, ty(2.5), sx1, ty(2.5), UNC, 1.8, "6 4")
-    s.text(sx1, ty(2.5) - 5, "m_O = 2.5", 11, UNC, "end", "bold")
-    for i, r in enumerate(sorted(POP["rows"], key=lambda r: r["tau_O"])):
-        xx = sx0 + 14 + (i + .5) / len(POP["rows"]) * (sx1 - sx0 - 20)
-        hit = r["tau_O"] >= 2.5
-        s.circle(xx, ty(r["tau_O"]), 3.4, CAUSAL if hit else "white", CAUSAL, 1.4)
-    s.text(sx0 + 10, bot + 22, "sorted by tau_O; filled = at or above m_O", 10, MUTED)
-    s.text(24, 395, "Reading: a forbidden mechanism label does not by itself imply an exposure effect; the label-effect gap is the share of forbidden worlds below m_O.", 11, MUTED)
-    c.save("fig_prevalence", s, "RQ3: share of mechanism-forbidden iid worlds with oracle tau_O >= 2.5 with Clopper-Pearson 95% interval and the 25% pre-registered line; right panel shows tau_O per world.",
-           {"k": k, "n": n, "rate": rate, "cp95": [lo, hi], "line": 0.25, "by_case_descriptive": cases, "tau_O_sorted": vals_t,
-            "estimand": POP.get("estimand"), "population_evidence": POP.get("evidence")}, ["population.json"])
+    for t_ in range(int(math.ceil(lo_t / 5) * 5), int(hi_t) + 1, 5):
+        s.line(sx0 - 4, ty(t_), sx0, ty(t_), GREY)
+        s.text(sx0 - 8, ty(t_) + 4, f"{t_}", 10, MUTED, "end")
+    s.line(sx0, ty(2.5), 970, ty(2.5), UNC, 1.8, "6 4")
+    s.text(sx0 + 6, ty(2.5) - 5, "m_O = 2.5", 11, UNC, "start", "bold")
+    for j, eps in enumerate(["0", "0.1"]):
+        vs = out[eps]["tau_O_sorted"]
+        xa = sx0 + 12 + j * 190
+        s.text(xa + 80, bot + 18, f"eps {eps}", 11, INK, "middle", "bold")
+        for i, v in enumerate(vs):
+            xx = xa + (i + .5) / len(vs) * 170
+            s.circle(xx, ty(v), 3.4, CAUSAL if v >= 2.5 else "white", CAUSAL, 1.4)
+    s.text(sx0 + 10, bot + 34, "sorted by tau_O; filled = at or above m_O", 10, MUTED)
+    s.text(24, 396, "Reading: a forbidden mechanism label does not by itself imply an exposure effect; the label-effect gap is the share of forbidden worlds below m_O.", 11, MUTED)
+    c.save("fig_prevalence", s, "RQ3: share of mechanism-forbidden iid worlds with oracle tau_O >= 2.5, per noise stratum, with Clopper-Pearson 95% interval and the 25% pre-registered line; right panel shows tau_O per world.",
+           {"strata": out, "line": 0.25, "estimand": RES["tables"]["T4"].get("estimand"), "evidence": RES["tables"]["T4"].get("evidence")}, ["RESULTS.json"])
 
 
 def main():
@@ -623,18 +647,18 @@ def main():
     c = Ctx(a.run, a.out, a.label)
     F, SEP, SC, POP = c.get("frontiers.json"), c.get("separators.json"), c.get("scores.json"), c.get("population.json")
     c.get("symmetry.json", False)
-    RES = c.get("RESULTS.json", False)
+    RES = c.get("RESULTS.json")
+    if not (F and SEP and SC and POP and RES):
+        raise SystemExit(f"FATAL: missing required run files: {c.missing}")
+    sbn = frozen_strongest(c, RES)
     fig_ladder(c)
-    if F and SEP:
-        fig_twins(c, F, SEP, RES)
-        fig_frontier(c, F, SEP)
-    if SC:
-        fig_risk(c, SC, "M", "fig_risk", "attribution, axis M")
-        fig_risk(c, SC, "E", "fig_risk_E", "exposure, axis E")
-        fig_overattr(c, SC)
-    if POP:
-        fig_prevalence(c, POP)
-    (c.out / "figures_manifest.json").write_text(json.dumps({"run": str(a.run), "label": a.label, "sources": c.sources, "missing_files": c.missing}, indent=1) + "\n")
+    fig_twins(c, F, SEP, RES)
+    fig_frontier(c, F, SEP, RES)
+    fig_risk(c, SC, "M", "fig_risk", "attribution, axis M", sbn)
+    fig_risk(c, SC, "E", "fig_risk_E", "exposure, axis E", sbn)
+    fig_overattr(c, RES, sbn)
+    fig_prevalence(c, RES)
+    (c.out / "figures_manifest.json").write_text(json.dumps({"run": str(a.run), "label": a.label, "sources": c.sources, "missing_files": c.missing, "strongest_baseline": sbn, "results_evidence": RES.get("evidence")}, indent=1) + "\n")
 
 
 if __name__ == "__main__":
