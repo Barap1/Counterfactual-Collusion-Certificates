@@ -1,0 +1,6 @@
+Command: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$PWD/scripts/offline_guard:$PWD" starter/collusion_hackathon/colosseum/.venv/bin/python - <<'PY'
+from ccc.bench.__main__ import main
+main(['run','--block','prospective','--out','docs/enh/bench/prospective-refusal-output'])
+PY
+Observed exit: 2
+Observed stderr: prospective refused: docs/enh/r2/FREEZE.json is absent

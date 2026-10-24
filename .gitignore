@@ -30,3 +30,4 @@ docs/runner/exp002-*/
 viewer/index.html
 docs/runner/exp00*-live.log
 docs/runner/exp00*-live.watchdog.log
+docs/enh/bench/*/cache/

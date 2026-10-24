@@ -1,0 +1,59 @@
+{
+  "evidence": "development",
+  "records": 12600,
+  "independent_seed_blocks": 50,
+  "methods": 12,
+  "symmetry_violation_unit_events": 0,
+  "full_seed_replay": {
+    "seed": 13000,
+    "epsilon": [
+      0,
+      0.1
+    ],
+    "records": 252,
+    "canonical_bytes_identical": true
+  },
+  "frozen_files_unchanged": 24,
+  "population": {
+    "k": 12,
+    "n": 50,
+    "rate": 0.24,
+    "cp95": [
+      0.13060991619745688,
+      0.38169074810403925
+    ]
+  },
+  "pairwise_separator_counts": [
+    {
+      "kind": "P1",
+      "separator": "I3",
+      "seed_stratum_count": 100
+    },
+    {
+      "kind": "P2",
+      "separator": "I4",
+      "seed_stratum_count": 100
+    },
+    {
+      "kind": "P3",
+      "separator": "I5",
+      "seed_stratum_count": 100
+    },
+    {
+      "kind": "P4",
+      "separator": "I1",
+      "seed_stratum_count": 100
+    },
+    {
+      "kind": "P5",
+      "separator": "I0",
+      "seed_stratum_count": 100
+    },
+    {
+      "kind": "P6",
+      "separator": "I1",
+      "seed_stratum_count": 100
+    }
+  ]
+}
+PASS: DEV artifact invariants, frozen sources and complete seed replay

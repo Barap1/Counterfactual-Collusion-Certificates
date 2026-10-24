@@ -1,0 +1,10 @@
+{
+  "stochastic=False,intervals=False,N=False": 22,
+  "stochastic=False,intervals=False,N=True": 9,
+  "stochastic=False,intervals=True,N=False": 22,
+  "stochastic=False,intervals=True,N=True": 22,
+  "stochastic=True,intervals=False,N=False": 235,
+  "stochastic=True,intervals=False,N=True": 90,
+  "stochastic=True,intervals=True,N=False": 280,
+  "stochastic=True,intervals=True,N=True": 280
+}
