@@ -1,6 +1,6 @@
 {
  "schema": "ccc-tasks/1",
- "updated_utc": "2026-10-24T15:20Z",
+ "updated_utc": "2026-10-24T16:40Z",
  "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
  "policy": {
   "max_worker_depth": 3,
@@ -14,34 +14,28 @@
  },
  "live_agents": [
   {
-   "id": "ENH-A",
-   "owner": "claude sonnet",
-   "started_utc": "2026-10-24T15:15Z",
-   "writes": "docs/enh/r1/A_*"
+   "id": "BENCH-IMP",
+   "owner": "codex gpt-6.1-sol/high (core research artifact; stated reason)",
+   "started_utc": "2026-10-24T16:05Z",
+   "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/"
   },
   {
-   "id": "ENH-B",
+   "id": "DEMO-DATA",
    "owner": "codex gpt-6.1-sol/medium",
-   "started_utc": "2026-10-24T15:15Z",
-   "writes": "docs/enh/r1/B_stats.md, scratch_B/"
+   "started_utc": "2026-10-24T16:05Z",
+   "writes": "demo/build_data.py, demo/data/, tests/test_demo_data.py"
   },
   {
-   "id": "ENH-C",
+   "id": "REL-ENH1",
+   "owner": "codex gpt-6.1-sol/low",
+   "started_utc": "2026-10-24T16:35Z",
+   "writes": "README.md, scripts/secret_scan.py, 5 redaction files, ops/CLAIMS.md, docs/release/CHECKLIST.md"
+  },
+  {
+   "id": "PAPER-PLAN",
    "owner": "claude sonnet",
-   "started_utc": "2026-10-24T15:15Z",
-   "writes": "docs/enh/r1/C_directions.md, scratch_C/"
-  },
-  {
-   "id": "FIX-001",
-   "owner": "codex gpt-6.1-sol/medium",
-   "started_utc": "2026-10-24T15:15Z",
-   "writes": "ccc/analysis/loaders.py, pipeline.py, tests/test_fix001_*, docs/analysis/exp002_heldout_v3/, docs/enh/fix/"
-  },
-  {
-   "id": "SEC-001",
-   "owner": "claude sonnet",
-   "started_utc": "2026-10-24T15:15Z",
-   "writes": "docs/enh/sec/"
+   "started_utc": "2026-10-24T16:35Z",
+   "writes": "paper/v2/"
   }
  ],
  "gates": {
@@ -49,7 +43,7 @@
   "B": "MET (D-032)",
   "C": "PASSED with narrowing (D-035)",
   "D": "technical checks done; owner decisions pending (D-036)",
-  "ENH": "R1 pending (enhancement sprint; R1-R5 apply only to ENH, see D-037)"
+  "ENH": "R1 ACCEPTED (D-038); R2 in progress"
  },
  "tasks": [
   {
@@ -449,7 +443,7 @@
    "id": "ENH-A",
    "objective": "novelty & competition review",
    "owner": "claude sonnet",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "docs/enh/r1/A_*",
    "gate": "ENH-R1"
   },
@@ -457,7 +451,7 @@
    "id": "ENH-B",
    "objective": "adversarial statistical review",
    "owner": "codex gpt-6.1-sol/medium",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "docs/enh/r1/B_stats.md, scratch_B/",
    "gate": "ENH-R1"
   },
@@ -465,31 +459,72 @@
    "id": "ENH-C",
    "objective": "research direction challenger",
    "owner": "claude sonnet",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "docs/enh/r1/C_directions.md, scratch_C/",
    "gate": "ENH-R1"
   },
   {
-   "id": "FIX-001",
+   "id": "ENH-FIX1",
    "objective": "certificate validity mapping fix -> exp002_heldout_v3",
    "owner": "codex gpt-6.1-sol/medium",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "ccc/analysis/loaders.py, pipeline.py, tests/test_fix001_*, docs/analysis/exp002_heldout_v3/, docs/enh/fix/",
-   "gate": "ENH-R1"
+   "gate": "ENH-R1",
+   "note": "report ops/reports/ENH-FIX1.md (artifacts internally call it FIX-001; the older FIX-001 report was restored)"
   },
   {
    "id": "SEC-001",
    "objective": "release safety & reproducibility audit (read-only)",
    "owner": "claude sonnet",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "docs/enh/sec/",
    "gate": "ENH-R1"
+  },
+  {
+   "id": "BENCH-IMP",
+   "objective": "ccc/bench identifiability benchmark build + DEV run",
+   "owner": "codex gpt-6.1-sol/high (core research artifact; stated reason)",
+   "status": "RUNNING",
+   "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/",
+   "gate": "ENH-R2"
+  },
+  {
+   "id": "DEMO-DATA",
+   "objective": "explorer evidence data pack",
+   "owner": "codex gpt-6.1-sol/medium",
+   "status": "RUNNING",
+   "writes": "demo/build_data.py, demo/data/, tests/test_demo_data.py",
+   "gate": "ENH-R2"
+  },
+  {
+   "id": "PROTO-001",
+   "objective": "R2 prospective protocol draft",
+   "owner": "claude sonnet",
+   "status": "DONE",
+   "writes": "docs/enh/r2/PROTOCOL.md, FREEZE_TEMPLATE.json",
+   "gate": "ENH-R2"
+  },
+  {
+   "id": "REL-ENH1",
+   "objective": "doc-ID/email redaction in tree, scanner rule, README swap, CLAIMS/CHECKLIST fixes",
+   "owner": "codex gpt-6.1-sol/low",
+   "status": "RUNNING",
+   "writes": "README.md, scripts/secret_scan.py, 5 redaction files, ops/CLAIMS.md, docs/release/CHECKLIST.md",
+   "gate": "ENH-R4"
+  },
+  {
+   "id": "PAPER-PLAN",
+   "objective": "paper v2 architecture + draft with result placeholders",
+   "owner": "claude sonnet",
+   "status": "RUNNING",
+   "writes": "paper/v2/",
+   "gate": "ENH-R4"
   }
  ],
  "handoff": {
-  "running_jobs": "5 ENH workers (see live_agents)",
+  "running_jobs": "BENCH-IMP, DEMO-DATA, REL-ENH1, PAPER-PLAN",
   "unpushed_commits": 1,
-  "repo_visibility": "PUBLIC (unexpected; see D-036)",
+  "repo_visibility": "PUBLIC (re-confirmed by SEC-001 2026-10-24); owner decision pending",
   "worktree": "../ApartSprint-wt-v12 (branch v1.2-impl, fully merged into main; safe to remove after owner OK)"
  }
 }

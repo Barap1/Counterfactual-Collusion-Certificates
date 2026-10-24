@@ -19,6 +19,8 @@ patterns=[
     re.compile(rb'\bAKIA[0-9A-Z]{16}\b'),
     re.compile(rb'(?i)(?:api[_-]?key|access[_-]?token|secret)\s*[=:]\s*[\x22\x27]?[A-Za-z0-9_/-]{24,}'),
     re.compile(rb'https://docs\.google\.com/(?:document|spreadsheets|presentation)/d/[A-Za-z0-9_-]+'),
+    # Drive IDs: /d/ tokens, mixed-case/digit quoted tokens, or known 1-prefixed format.
+    re.compile(rb'''(?<![A-Za-z0-9_-])(?:/d/[A-Za-z0-9_-]{44}|[\x22\x27](?=[A-Za-z0-9_-]{0,43}[A-Z])(?=[A-Za-z0-9_-]{0,43}[a-z])(?=[A-Za-z0-9_-]{0,43}[0-9])[A-Za-z0-9_-]{44})(?![A-Za-z0-9_-])|(?<![A-Za-z0-9_-])1(?=[A-Za-z0-9_-]{0,43}[G-Zg-z_-])[A-Za-z0-9_-]{43}(?![A-Za-z0-9_-])'''),
 ]
 secrets=[]
 env=ROOT/'.env'

@@ -32,7 +32,7 @@ The sprint page requires no AI-use statement, but the template includes one, and
 ## E. Google Doc sync (working copy `CCC - Counterfactual Collusion Certificates - Submission Working Draft`)
 - [ ] **Approve PUB-001 writing to the working copy** once the claims are frozen. Writes are revision-aware, a local backup is taken first, and the template structure is preserved.
 - [ ] Confirm no sharing changes. The working copy currently has the owner as its only listed owner. Sharing was not inspected or changed in this phase.
-- [ ] Note: the connected Drive account also reports **edit** access to the *official* Apart template (`1Y5wd3VR…`, owned by apartresearch.com). Agents will never write to it. Please be aware of this as well.
+- [ ] Note: the connected Drive account also reports **edit** access to the *official* Apart template (`[REDACTED-DOC-ID]…`, owned by apartresearch.com). Agents will never write to it. Please be aware of this as well.
 - [ ] Approve or deny including private Doc IDs in any public artifact (default: omit).
 
 ## F. Public release and optional artifacts

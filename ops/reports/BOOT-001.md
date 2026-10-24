@@ -18,7 +18,7 @@ Lock: `ops/locks/BOOT-001.lock`
 
 ## A. Workspace and pilot
 
-- Root `/Users/aarav/Documents/Projects/ApartSprint`, branch `main` tracking `origin/main`. Remote `Barap1/Counterfactual-Collusion-Certificates`, PRIVATE (gh account Barap1, ADMIN). Git author `Aarav Patel <aarav.patel.1@icloud.com>` was left unchanged.
+- Root `/Users/aarav/Documents/Projects/ApartSprint`, branch `main` tracking `origin/main`. Remote `Barap1/Counterfactual-Collusion-Certificates`, PRIVATE (gh account Barap1, ADMIN). Git author `Aarav Patel <[REDACTED-EMAIL]>` was left unchanged.
 - `project_start_commit = 097619b24a748b543d332eb010f25d9081f5bb72`. The only tracked file at start was `README.md`. Git history contains no key-like strings (`git log --all -p | grep -c` returned 0).
 - Starter is at `d585a7b3be50366cc2bdf5789bf8add5890b2abd`, the same as the reviewed upstream, with 0 tracked modifications. Local additions are ignored only: venvs, outputs, logs, compute.env.
 - Pilot: 27 files across two batches, hashed in `ops/pilot_manifest.sha256` (sha256 of the manifest is `2b99fa29…013310`).

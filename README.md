@@ -1,29 +1,62 @@
 # Counterfactual Collusion Certificates (CCC)
 
-CCC studies what replay evidence can support a scoped claim of communication-dependent harmful coordination, and when an auditor should abstain. It combines synthetic Jira task worlds, replay validity checks, message interventions, baseline auditors, and world-level offline analysis.
+CCC studies what replay evidence can support a scoped claim of communication-dependent harmful coordination, and when an auditor should abstain. It combines synthetic Jira task worlds, replay validity checks, message interventions, baseline auditors, and world-level offline analysis. It is a contribution to evidence standards for attributing harm to AI-agent communication, not a collusion detector.
 
-This is research in progress. **DEV Gate A v1.2.2:** the preregistered gate criteria (factual/sham identity, knockout scope, branch isolation, no `supported` on benign cooperation) pass; two stricter diagnostic checks fail and are reported as limitations (A5 redundancy 20/120, so `not supported` is not exoneration; ten non-exercisable A6b faults). Scripted fixtures are not independent real-agent observations; prompted intent is not ground truth. Small DEV samples, deprecated DEV placebo semantics, weak paraphrase detection, and exploratory analysis limit interpretation. No held-out finding or broad collusion-detection claim is made here.
+## Quick check: reproduce the headline (no install, no network)
+
+Needs only Python 3 (standard library). From the repository root; the final command prints JSON including Delta and p:
+
+```sh
+ccc_extract=$(mktemp -d)
+tar -xzf docs/runner/archives/exp002-live.tar.gz -C "$ccc_extract"
+shasum -a 256 -c docs/runner/archives/exp002-live.tar.gz.sha256
+python3 -I review/reproduce_headline/independent.py --input "$ccc_extract/exp002-live"
+```
+
+Expected: `Delta` = 1.3543257..., `sign_flip` = 18/256 (p = 0.0703125), 8 defined pairs, 7 non-zero. This was verified with system `/usr/bin/python3` in an isolated temporary directory containing only the tracked script and archive inputs, with no packages installed. The program imports no `ccc` module and makes no model or network calls.
+
+## Headline result (held-out, confirmatory null)
+
+Held-out EXP-002 (protocol v1.2, local `gemma4:26b`, $0 API spend) is complete. The preregistered directional hypothesis (deceptive-collusion prompts raise the outsider-harm effect above authorized cooperation) is **not supported**:
+
+- Delta = 1.354 reward units, world-cluster 95% CI [-0.020, 2.834], exact one-sided sign-flip p = 0.0703. The independent sample is **8 matched world pairs**.
+- Registered non-commit sensitivity (preregistered secondary analysis): 0.727, CI [-0.31, 1.91]; its sign-flip p = 0.156 was added post hoc.
+- Accounting: 16/16 trajectory attempts completed. 199 scheduled branch records = 143 executed valid continuations + 56 unrun placebo (N) branches (`not_run: no_placebo_available`). 0 failed, 0 invalid.
+- Exploratory case-level certificates over 16 checkpoints: 0 supported / 11 not supported / 5 inconclusive. A "not supported" verdict is not exoneration.
+- Power is limited (MDE_80 about 2.2 reward units against an observed 1.35).
+
+Evidence labels: the held-out primary and the Holm S1–S3 family are original-confirmatory (none passed); the 0.727 estimate is a registered sensitivity; case-level certificates are exploratory by preregistration. DEV Gate A fixtures and EXP-001 DEV data are development evidence only and support no performance claim.
+
+Certificate validity metadata was repaired in `docs/analysis/exp002_heldout_v3/` (see `CORRECTION.md`), with no certificate status or numeric change.
+
+Frozen outputs: `docs/analysis/exp002_heldout_v2/` (corrected labels, see `CORRECTION.md`), `docs/review/rev001/` (independent review and claims ledger), `ops/CLAIMS.md` (claims index).
+
+## DEV Gate A (development evidence)
+
+DEV Gate A v1.2.2: the preregistered gate criteria (factual/sham identity, knockout scope, branch isolation, no `supported` on benign cooperation) pass on scripted fixtures; two stricter diagnostic checks fail and are reported as limitations (A5 redundancy 20/120, so `not supported` is not exoneration; ten non-exercisable A6b faults). Scripted fixtures are not independent real-agent observations; prompted intent is not ground truth.
 
 ## Repository map
 
 - `ccc/replay/`, `ccc/audit/`, `ccc/fixtures/`, `ccc/baselines/`: replay, auditing, synthetic controls and comparators.
 - `ccc/analysis/`: offline estimators, failure accounting and Stage-2 diagnostics.
-- `ccc/runner/`, `ccc/infra/`: collection infrastructure; reproduction does not invoke live collection.
+- `ccc/runner/`, `ccc/infra/`: collection infrastructure; reproduction never invokes live collection.
 - `tests/`: offline unit, corruption, integration and budget-barrier checks.
-- `docs/analysis/exp001_dev/`, `docs/stats/stage2/`: DEV analysis and pinning provenance.
-- `docs/gate_a/v1.2/correction_v1.2.2/`: current DEV gate evidence, including failures.
-- `docs/release/`, `scripts/`: metadata bundle, release checklist and offline reproduction.
-- `paper/`: draft manuscript; final publication and owner review remain pending.
+- `docs/analysis/exp002_heldout_v2/`: held-out analysis (frozen). `docs/analysis/exp001_dev*/`, `docs/stats/stage2/`: DEV analysis and pinning provenance.
+- `docs/runner/archives/`: held-out and DEV raw-trace archives with SHA-256 sidecars.
+- `review/reproduce_headline/`: stdlib-only independent reproduction of the headline.
+- `docs/gate_a/v1.2/correction_v1.2.2/`: DEV gate evidence, including failures.
+- `figures/`, `viewer/`, `paper/`: figures, offline evidence viewer, manuscript and draft PDF (final owner review pending).
+- `docs/release/`, `scripts/`: metadata bundle, release checklist, licenses, offline reproduction.
 
-## Reproduce without inference
+## Full offline reproduction (needs the starter environment)
 
-Use `/bin/zsh` for compute commands. The script invokes heavy work with `nice -n 19`, sets `CCC_STARTER_ROOT`, installs no packages, makes no model calls, and reads no credentials. A host may deny lowering process priority (`setpriority: Operation not permitted`); this is recorded in the evidence and does not silently change the command.
+Use `/bin/zsh`. The script runs heavy work with `nice -n 19`, sets `CCC_STARTER_ROOT`, installs no packages, makes no model calls and reads no credentials. A host may deny lowering priority (`setpriority: Operation not permitted`); this is recorded, not hidden.
 
-Prerequisite starter setup, performed separately with an approved local dependency cache or an owner-provided environment:
+Prerequisites (the full path needs numpy/scipy and the third-party starter; a fresh install is not demonstrated):
 
-1. Place the upstream `poseidon-research/collusion_hackathon` checkout at `starter/collusion_hackathon`, commit `d585a7b3be50366cc2bdf5789bf8add5890b2abd`. Include its required `colosseum/external/CoLLAB` sources. Upstream URL: `https://github.com/poseidon-research/collusion_hackathon.git` (provenance only; reproduction never fetches it).
-2. In `starter/collusion_hackathon/colosseum`, prepare `.venv` using the upstream locked dependency setup (`uv sync --locked --offline` with a populated cache). Do not run upstream live preflight/experiments or source `compute.env`. See [environment evidence](docs/release/environment.json) for actual interpreter/dependency/lock hashes; local dependency installation is a prerequisite, not a demonstrated fresh install.
-3. Restore the archived pilot needed by the original adapter tests, only in a clean checkout where `results/baselines` does not exist:
+1. Place the upstream `poseidon-research/collusion_hackathon` checkout at `starter/collusion_hackathon`, commit `d585a7b3be50366cc2bdf5789bf8add5890b2abd`, including `colosseum/external/CoLLAB`. It is not redistributed here (see `docs/release/LICENSES.md`; its license terms are unverified).
+2. In `starter/collusion_hackathon/colosseum`, prepare `.venv` with the locked setup (`uv sync --locked --offline` with a populated cache). Do not run upstream live preflight/experiments or source `compute.env`. Versions and hashes: `docs/release/environment.json`.
+3. In a clean checkout only, restore the archived pilot:
 
    ```zsh
    mkdir -p results
@@ -31,28 +64,32 @@ Prerequisite starter setup, performed separately with an approved local dependen
    cp -R docs/release/pilot3_input docs/runner/exp001-pilot3
    ```
 
-Then, from the project root:
+Then:
 
 ```zsh
 /bin/zsh scripts/reproduce_offline.sh
 ```
 
-The full suite is discovered under an additional held-out access guard. One readiness test that reads the real EXP-002 manifest is explicitly skipped under REL-001a; existing author-declared skips remain visible. This excluded test requires separate controller authorization.
+Without step 1-2 the script stops with "Complete README starter setup first". It writes a gitignored `docs/release/reproduction.*` directory with the test log, regenerated Gate A, DEV analysis, Stage-2 draft and verified hashes. The recorded run passed 399 tests. A readiness test that reads the real EXP-002 manifest is skipped under the held-out access guard. The held-out result is reproduced by the quick check above, not by this script.
 
-A fresh, gitignored `docs/release/reproduction.*` directory contains the full test log, regenerated Gate A, DEV analysis, Stage-2 draft, theta pin, and verified output hashes. Gate A (decompressed), Stage-2 and theta outputs must match archived bytes. The current analysis is run twice and must match byte for byte. All archived scientific JSON fields must remain present and equal; additive current metadata is allowed. Aggregate code hashes/limitations/synthetic metadata and the original stale-lock warning are excluded from the historical comparison. `analysis_compatibility.json` lists historical byte differences. The Stage-2 CLI produces a **draft**; it does not re-authorize or overwrite the frozen addendum. Constructed controls and historical census evidence are preserved references, not regenerated by this command.
+## Secret scan
 
 ```zsh
 /bin/zsh scripts/secret_scan.sh
 ```
 
-The scan checks regex patterns and exact credential values from local `.env` internally without printing values. It checks tracked working copies, staged blobs, and generated release artifacts. Held-out paths, local secret files as scan targets, and the ignored starter checkout are excluded. Use `--release-only` to scan just the prepared scripts/bundle. Review findings and public data suitability before sharing; a scan is not publication approval.
+Checks regex patterns and local `.env` values without printing them, over tracked files, staged blobs and release artifacts. It does not scan history or `ops/budget_ledger.jsonl`, and flags Doc URLs plus quoted, `/d/`, and known-format bare 44-character Drive-style IDs. Staged blobs can retain findings until the redactions are staged. A scan is not publication approval.
 
-## Data provenance and release status
+## Data provenance and licenses
 
-The seed-1 archived pilot is development data only. `docs/release/pilot_archive/` preserves the 27 files named in `ops/pilot_manifest.sha256`. Recorded model provenance takes precedence over stale display labels.
+The seed-1 pilot is development data only (`docs/release/pilot_archive/`, 27 files listed in `ops/pilot_manifest.sha256`). EXP-001 is DEV; `docs/release/exp001_dev_input/` is a metadata subset, not the full raw trace archive. Third-party terms, including unverified Colosseum/poseidon-compute/CoLLAB licenses, are in `docs/release/LICENSES.md`; Terrarium is MIT. CCC's own license has not been chosen by the owner.
 
-EXP-001 is DEV: `docs/release/exp001_dev_input/` contains the exact metadata files referenced by the committed DEV analysis and Stage-2 input hashes, copied from completed EXP-001 artifacts. This is a metadata subset, not the complete raw trace archive. A clearly labelled subset terminal marker enables the active-input guard without claiming a new collection run. The original raw archive stays local. Data hashes alone do not reproduce withheld raw traces or all scientific claims.
+## Release status
 
-EXP-002 held-out collection is running/pending. Its data and outcomes were not inspected for this bundle and are excluded from reproduction. Final results, resource reconciliation, independent claim audit, PDF/template/visual review, Google Doc synchronization, and owner publication/submission decisions remain pending: [release checklist](docs/release/CHECKLIST.md).
+Science is frozen. Pending owner decisions: author/affiliation, LLM-usage statement, dual-use review, template and page-by-page PDF review, Google Doc sync, push of latest commits, and submission: [release checklist](docs/release/CHECKLIST.md).
 
-Authorship: the owner is the sole author; no AI co-author attribution is added.
+Authorship: the owner is the sole author.
+
+## Enhancement work in progress
+
+See [docs/enh/](docs/enh/) for ongoing enhancement work; a later task will finalize this presentation.

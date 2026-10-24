@@ -5,7 +5,7 @@ Paste to start:
 
 ## Standing rules (owner instructions)
 - $0 out-of-pocket; no paid fallback.
-- The owner (Aarav Patel, aarav.patel.1@icloud.com git identity) is the SOLE commit author; never add Claude/Codex Co-Authored-By trailers (D-027).
+- The owner (Aarav Patel, [REDACTED-EMAIL] git identity) is the SOLE commit author; never add Claude/Codex Co-Authored-By trailers (D-027).
 - Be stingy with subagents: Codex gpt-6.1-sol medium or low, gpt-6-luna for easy work; Claude Sonnet or Haiku; no Opus or gpt-6-astra without a stated reason. Prefer Codex when credits allow (Codex cannot write .git or run headless Chrome; the director commits).
 - Push, Google Doc writes, sharing/visibility changes, publication and submission require explicit owner approval each time.
 - Keep about 40 commits per push; squash local unpushed history with git commit-tree (trees identical, backup branch) if asked.
