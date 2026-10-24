@@ -1,0 +1,1333 @@
+{
+ "caption": "[DEV] Over-attribution rate on legitimate members (P2, P3, P6, benign cooperation) by method and information set with Clopper-Pearson 95% intervals over independent seed units; CCC v1.2.2 exposure-level supported rate shown separately as L2, not attribution.",
+ "evidence_category": "development",
+ "figure": "fig_overattribution",
+ "missing_fields": [],
+ "pdf_written": true,
+ "plotted_values": {
+  "eps0.1/I0/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I0/B1": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I0/B2": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I0/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I0/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I0/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I0/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I0/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I0/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I0/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I1/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I1/B1": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I1/B2": {
+   "axis": "M",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I1/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I1/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I1/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I1/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I1/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.25,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I1/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I1/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I2/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I2/B1": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I2/B2": {
+   "axis": "M",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I2/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I2/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I2/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I2/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I2/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.25,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I2/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I2/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I3/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I3/B1": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I3/B2": {
+   "axis": "M",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I3/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I3/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I3/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I3/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I3/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.25,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I3/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I3/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I4/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I4/B1": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I4/B2": {
+   "axis": "M",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I4/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I4/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I4/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I4/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I4/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I4/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I4/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I5/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I5/B1": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I5/B2": {
+   "axis": "M",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I5/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0.1/I5/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I5/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0.1/I5/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I5/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I5/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0.1/I5/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.5123475122784111,
+    0.7879452865646186
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.33,
+   "unit_k": 33,
+   "unit_rate": 0.66
+  },
+  "eps0/I0/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I0/B1": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I0/B2": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I0/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I0/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I0/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I0/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I0/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I0/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I0/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I1/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I1/B1": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I1/B2": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I1/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I1/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I1/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I1/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I1/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.25,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I1/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I1/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I2/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I2/B1": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I2/B2": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I2/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I2/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I2/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I2/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I2/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.25,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I2/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I2/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I3/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I3/B1": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I3/B2": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I3/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I3/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I3/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I3/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I3/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.25,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I3/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I3/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I4/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I4/B1": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I4/B2": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I4/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I4/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I4/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I4/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I4/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I4/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I4/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I5/B0": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I5/B1": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I5/B2": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I5/B2+": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I5/B3a": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I5/B3b": {
+   "axis": "M",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 1.0,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  },
+  "eps0/I5/B4": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I5/Bayes-given-S": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I5/CCC-L-v0": {
+   "axis": "M",
+   "cp95": [
+    0.0,
+    0.07112173646419767
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.0,
+   "unit_k": 0,
+   "unit_rate": 0.0
+  },
+  "eps0/I5/CCC-v1.2.2*": {
+   "axis": "E",
+   "cp95": [
+    0.9288782635358024,
+    1.0
+   ],
+   "independent_n": 50,
+   "member_rate_descriptive": 0.5,
+   "unit_k": 50,
+   "unit_rate": 1.0
+  }
+ },
+ "run_label": "DEV",
+ "source_files": {
+  "scores.json": "50ab30e2dc006bc797a1b2fa8910bd94e1d7f336db5280a218b74f1b03db862f"
+ }
+}

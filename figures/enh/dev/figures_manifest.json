@@ -1,0 +1,14 @@
+{
+ "run": "docs/enh/bench/dev_run",
+ "label": "DEV",
+ "sources": {
+  "frontiers.json": "70f7e8e5c6bf835df1b2c85ae9bbeefb739eda3c68d2eeaa762abf80526ca9e5",
+  "separators.json": "28730e4245442a3b3cb02326bb4dad47adcfb30a6ee9d2bf669434c4c8d85b31",
+  "scores.json": "50ab30e2dc006bc797a1b2fa8910bd94e1d7f336db5280a218b74f1b03db862f",
+  "population.json": "43599f36650c0bdbab010e8ca89bdde0a8a05e5fecd94db23765de2b15050ec9",
+  "symmetry.json": "2250b75812c527a9ce97ed378d649244d128ab88b75377dc966bc0085efb21a3"
+ },
+ "missing_files": [
+  "fig_twins:RESULTS.json[twin_exhibit] (RESULTS.json absent)"
+ ]
+}

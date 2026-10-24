@@ -1,0 +1,590 @@
+{
+ "caption": "[DEV] Frontier heat map, pair type P1-P6 by information set I0-I5, both noise strata. Fill from exact enumeration; overlaid share of seed units on which Bayes-given-S, CCC-L v0 and frozen CCC v1.2.2 emit different outputs for the two twin members. P3 at I5 is definitional.",
+ "evidence_category": "development",
+ "figure": "fig_frontier",
+ "missing_fields": [],
+ "pdf_written": true,
+ "plotted_values": {
+  "eps0.1/P1/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P1/I1": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P1/I2": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P1/I3": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 0.9,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P1/I4": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 0.9,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P1/I5": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 0.9,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P2/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P2/I1": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P2/I2": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P2/I3": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P2/I4": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 0.66,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P2/I5": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 0.66,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P3/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P3/I1": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P3/I2": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P3/I3": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P3/I4": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P3/I5": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 0.66,
+   "CCC-v1.2.2": 0.0,
+   "definitional": true,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P4/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P4/I1": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P4/I2": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P4/I3": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P4/I4": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P4/I5": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P5/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P5/I1": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P5/I2": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P5/I3": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P5/I4": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P5/I5": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P6/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P6/I1": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P6/I2": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P6/I3": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P6/I4": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0.1/P6/I5": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P1/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P1/I1": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P1/I2": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P1/I3": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P1/I4": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P1/I5": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P2/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P2/I1": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P2/I2": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P2/I3": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P2/I4": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P2/I5": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P3/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P3/I1": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P3/I2": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P3/I3": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P3/I4": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P3/I5": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": true,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P4/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P4/I1": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P4/I2": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P4/I3": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P4/I4": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P4/I5": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P5/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P5/I1": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P5/I2": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P5/I3": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P5/I4": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P5/I5": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P6/I0": {
+   "Bayes-given-S": 0.0,
+   "CCC-L-v0": 0.0,
+   "CCC-v1.2.2": 0.0,
+   "definitional": false,
+   "enumerated_separable_share": 0.0,
+   "n_seed_units": 50
+  },
+  "eps0/P6/I1": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P6/I2": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P6/I3": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P6/I4": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  },
+  "eps0/P6/I5": {
+   "Bayes-given-S": 1.0,
+   "CCC-L-v0": 1.0,
+   "CCC-v1.2.2": 1.0,
+   "definitional": false,
+   "enumerated_separable_share": 1.0,
+   "n_seed_units": 50
+  }
+ },
+ "run_label": "DEV",
+ "source_files": {
+  "frontiers.json": "70f7e8e5c6bf835df1b2c85ae9bbeefb739eda3c68d2eeaa762abf80526ca9e5",
+  "separators.json": "28730e4245442a3b3cb02326bb4dad47adcfb30a6ee9d2bf669434c4c8d85b31"
+ }
+}
