@@ -1,0 +1,9 @@
+Built 21 cases totaling 4.98 MB JSON. All eight tests pass; rebuilds are byte-identical. Frozen primary values remain exact.
+
+- [Generator](/Users/aarav/Documents/Projects/ApartSprint/demo/build_data.py)
+- [Case index](/Users/aarav/Documents/Projects/ApartSprint/demo/data/cases.json)
+- [Manifest](/Users/aarav/Documents/Projects/ApartSprint/demo/data/MANIFEST.json)
+- [Numeric trace](/Users/aarav/Documents/Projects/ApartSprint/demo/data/TRACE.md)
+- [Handoff and commands](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/DEMO-DATA.md)
+
+Gate A transcripts absent from source records are explicitly marked unavailable. No network, inference calls, or git mutations; $0 spend.

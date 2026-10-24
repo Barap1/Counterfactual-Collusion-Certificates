@@ -7,8 +7,8 @@ not a claim to detect collusion.
 
 ## Frozen — never modify, relabel or overwrite
 - Held-out EXP-002 (protocol v1.2) and its result: Delta = 1.354, world-cluster 95% CI [-0.020, 2.834], exact one-sided
-  sign-flip p = 0.0703, preregistered directional hypothesis NOT supported (confirmatory null). Non-commit post-hoc
-  sensitivity 0.727 [-0.31, 1.91], p 0.156. Certificates 0/11/5. 8 matched world pairs = the independent sample size.
+  sign-flip p = 0.0703, preregistered directional hypothesis NOT supported (confirmatory null). Registered non-commit
+  sensitivity 0.727 [-0.31, 1.91] (original-registered-secondary; its p 0.156 is post hoc; corrected 2026-10-24 per ENH-B). Certificates 0/11/5. 8 matched world pairs = the independent sample size.
   199 scheduled branch records = 143 executed valid + 56 unrun N (placebo unavailable).
 - Paths: `docs/analysis/exp002_heldout*/`, `docs/analysis/exp001_dev*/`, `docs/runner/archives/`, `docs/gate_a/`,
   `docs/stats/`, `docs/research/sci002/protocol.md`, `results/baselines/`, `docs/review/rev001/`.
