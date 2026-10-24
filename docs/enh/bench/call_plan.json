@@ -1,0 +1,12 @@
+{
+  "evidence": "development",
+  "seed_block": [
+    13000,
+    13049
+  ],
+  "unique_pure_decide_calls": 960,
+  "strata": {
+    "stochastic": 885,
+    "deterministic": 75
+  }
+}

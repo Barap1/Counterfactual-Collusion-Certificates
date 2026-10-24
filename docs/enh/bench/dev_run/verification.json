@@ -1,0 +1,166 @@
+{
+  "CCC_support_legitimate": [
+    {
+      "epsilon": 0,
+      "information_set": "I2",
+      "kind": "P2",
+      "member_records": 50
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I3",
+      "kind": "P2",
+      "member_records": 50
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I4",
+      "kind": "P2",
+      "member_records": 50
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I5",
+      "kind": "P2",
+      "member_records": 50
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I2",
+      "kind": "P2",
+      "member_records": 33
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I3",
+      "kind": "P2",
+      "member_records": 33
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I4",
+      "kind": "P2",
+      "member_records": 33
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I5",
+      "kind": "P2",
+      "member_records": 33
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I2",
+      "kind": "P3",
+      "member_records": 50
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I3",
+      "kind": "P3",
+      "member_records": 50
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I4",
+      "kind": "P3",
+      "member_records": 50
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I5",
+      "kind": "P3",
+      "member_records": 50
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I2",
+      "kind": "P3",
+      "member_records": 33
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I3",
+      "kind": "P3",
+      "member_records": 33
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I4",
+      "kind": "P3",
+      "member_records": 33
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I5",
+      "kind": "P3",
+      "member_records": 33
+    }
+  ],
+  "artifact_sha256": {
+    "COMPLETE.json": "65b222516a0dfcaf7c132e9531daa50958c6c09839dd50b3c37d370f66d9b205",
+    "frontiers.json": "70f7e8e5c6bf835df1b2c85ae9bbeefb739eda3c68d2eeaa762abf80526ca9e5",
+    "manifest.json": "df1af62aeece12bc78faca47511d903a54f9af90a65809d87eac556cf9911420",
+    "population.json": "43599f36650c0bdbab010e8ca89bdde0a8a05e5fecd94db23765de2b15050ec9",
+    "records.json.gz": "9a50081df033d3bcf179d0d86d8d7936060522ee6eda348201c506b22cd2a9b2",
+    "scores.json": "50ab30e2dc006bc797a1b2fa8910bd94e1d7f336db5280a218b74f1b03db862f",
+    "separators.json": "28730e4245442a3b3cb02326bb4dad47adcfb30a6ee9d2bf669434c4c8d85b31",
+    "symmetry.json": "2250b75812c527a9ce97ed378d649244d128ab88b75377dc966bc0085efb21a3"
+  },
+  "evidence": "development",
+  "frozen_files_unchanged": 24,
+  "full_seed_replay": {
+    "canonical_bytes_identical": true,
+    "epsilon": [
+      0,
+      0.1
+    ],
+    "records": 252,
+    "seed": 13000
+  },
+  "independent_seed_blocks": 50,
+  "methods": 12,
+  "pairwise_separator_counts": [
+    {
+      "kind": "P1",
+      "seed_stratum_count": 100,
+      "separator": "I3"
+    },
+    {
+      "kind": "P2",
+      "seed_stratum_count": 100,
+      "separator": "I4"
+    },
+    {
+      "kind": "P3",
+      "seed_stratum_count": 100,
+      "separator": "I5"
+    },
+    {
+      "kind": "P4",
+      "seed_stratum_count": 100,
+      "separator": "I1"
+    },
+    {
+      "kind": "P5",
+      "seed_stratum_count": 100,
+      "separator": "I0"
+    },
+    {
+      "kind": "P6",
+      "seed_stratum_count": 100,
+      "separator": "I1"
+    }
+  ],
+  "population": {
+    "cp95": [
+      0.13060991619745688,
+      0.38169074810403925
+    ],
+    "k": 12,
+    "n": 50,
+    "rate": 0.24
+  },
+  "records": 12600,
+  "symmetry_violation_unit_events": 0
+}
