@@ -11,7 +11,7 @@ Paste to start:
 - Keep about 40 commits per push; squash local unpushed history with git commit-tree (trees identical, backup branch) if asked.
 
 ## Key paths
-- Paper (tagged audit copy): paper/draft.md. Submission: paper/build/submission.{md,html}; PDF paper/build/CCC_submission_draft.pdf (+ .sha256). Rebuild: `python3 paper/build/make_submission.py`, then `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer --print-to-pdf=paper/build/CCC_submission_draft.pdf file://$PWD/paper/build/submission.html`. Page QA: `swift /tmp/ccc_pdfqa/pages.swift <pdf> <outdir>` (recreate if /tmp was cleared; it is a PDFKit page splitter).
+- Paper (tagged audit copy): paper/draft.md. Submission: paper/build/submission.{md,html}; PDF paper/build/CCC_submission_draft.pdf (+ .sha256). Rebuild: `python3 paper/build/make_submission.py`, then `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer --print-to-pdf=paper/build/CCC_submission_draft.pdf file://$PWD/paper/build/submission.html`. Page QA: `swift paper/build/pdf_pages.swift <pdf> <outdir>` (PDFKit: page count, section-per-page, PNG per page).
 - Results: docs/analysis/exp002_heldout_v2/ (+CORRECTION.md); DEV docs/analysis/exp001_dev_v2/; review docs/review/rev001/, docs/review/REV_FREEZE.md, docs/review/director_gateA_audit.md, docs/review/cold_read.md.
 - Protocol/prereg: docs/research/sci002/protocol.md (v1.2), docs/stats/prereg.md, docs/stats/stage2/STAGE2_ADDENDUM.md, docs/stats/deviation_log.md, docs/stats/FREEZE.md.
 - Raw traces: docs/runner/archives/exp00{1,2}-live.tar.gz (+.sha256); live dirs are gitignored.
