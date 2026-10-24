@@ -1,0 +1,7 @@
+{
+  "study_current_sha256": "b0d87bafeef5cfb8dde8f5f726284dd2c1cba40eaf1aef52d69b9c07559366ba",
+  "study_HEAD_sha256": "b0d87bafeef5cfb8dde8f5f726284dd2c1cba40eaf1aef52d69b9c07559366ba",
+  "study_matches_HEAD": true,
+  "study_v2_recorded_sha256": "648c91bb51f42dce8152cd1417f693baeb16b176435a87b54d0acf5549361a23",
+  "note": "FIX-001 did not edit study.py; baseline recorded hash differs from current unchanged HEAD source. Scientific outputs compared separately."
+}

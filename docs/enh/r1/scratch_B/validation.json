@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "report_words": 1499,
+  "handoff_words": 210,
+  "frozen_v2_files_hash_checked": 42,
+  "executed_branches": 143,
+  "interval_endpoints_matched": 96,
+  "network_calls": 0,
+  "inference_calls": 0
+}

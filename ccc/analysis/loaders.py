@@ -121,6 +121,25 @@ def final_attempts(rows):
     return [selected[k] for k in sorted(selected)]
 
 
+def _runner_validity(checks):
+    """Keep engine evidence and add protocol IDs (see audit/gate_a.py mapping).
+
+    Engine V08/V09 mean tool syntax/fresh continuation, not batch V8/V9.
+    Absent checks stay absent; failure or unknown evidence cannot become a pass.
+    """
+    aliases = {'V01':'V1', 'V02':'V2',
+               'V05':'V3', 'V05b':'V3', 'V06':'V6', 'V07':'V7',
+               'V08':'V5', 'V09':'V4', 'V-model':'V6'}
+    result = {}
+    rank = {'na':0, 'pass':1, 'unknown':2, 'fail':3}
+    for check_id, status in checks:
+        status = 'na' if status == 'not_applicable' else status
+        for key in {check_id, aliases.get(check_id, check_id)}:
+            if key not in result or rank.get(status, 2) > rank.get(result[key], 2):
+                result[key] = status
+    return result
+
+
 def _legacy(reader, manifest):
     if manifest.get('phase') != 'development':
         raise ValidationError(['legacy adapter is DEV only'])
@@ -160,7 +179,7 @@ def _legacy(reader, manifest):
                 if status not in STATUSES: status = 'infra_crash'
                 checks = branch.get('checks',[])
                 for check in checks:
-                    if check['status']=='fail': cp['v_checks'][check['id']]='fail'
+                    cp['v_checks'] = _runner_validity([*cp['v_checks'].items(), (check['id'], check['status'])])
                     cp['flags'].update({f:True for f in check.get('details',{}).get('flags',[])})
                 rows.append({'attempt_id':f'{cid}/{attempt_no}/{branch["arm"]}/{branch["replicate"]}',
                     'checkpoint_id':cid,'arm':branch['arm'],'rep':branch['replicate'],'attempt_no':attempt_no,
@@ -271,6 +290,8 @@ def load(root, watchdog_dir=None):
         if manifest.get('phase') in ('holdout','synthetic_readiness'):
             from .runner_input import adapt
             manifest,cps,rows,events,scheduled,runner_addendum = adapt(reader,manifest)
+            for cp in cps:
+                cp['v_checks'] = _runner_validity(cp['v_checks'].items())
         else:
             manifest, cps, rows, events, scheduled = _legacy(reader,manifest)
     else:

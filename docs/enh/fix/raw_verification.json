@@ -1,0 +1,22 @@
+{
+  "archive_sha256": "83bf451dad54c773afbc3e775acc13e08bd97fbe92dee4d1a21307cc60625831",
+  "regular_files_compared": 15728,
+  "apple_metadata_skipped": 16471,
+  "mismatches": [],
+  "branch_statuses": {
+    "valid": 143,
+    "not_run": 56
+  },
+  "branch_checks": {
+    "V08:pass": 143,
+    "V09:pass": 143,
+    "V07:not_applicable": 79,
+    "V3:pass": 143,
+    "V05b:pass": 143,
+    "V-model:pass": 143,
+    "V6:pass": 143,
+    "V-echo:pass": 143,
+    "V07:pass": 64
+  },
+  "extraction": "none; streamed in memory"
+}

@@ -1,0 +1,87 @@
+.FFFFFF.F
+======================================================================
+FAIL: test_engine_passes_establish_validity (tests.test_fix001_validity_mapping.ValidityMappingTests.test_engine_passes_establish_validity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_fix001_validity_mapping.py", line 47, in test_engine_passes_establish_validity
+    self.assertTrue(cert['gates']['all_valid'])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_failures_dominate_later_passes (tests.test_fix001_validity_mapping.ValidityMappingTests.test_failures_dominate_later_passes) (cid='V01')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_fix001_validity_mapping.py", line 63, in test_failures_dominate_later_passes
+    self.assertEqual(cert['status'],'invalid')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'inconclusive' != 'invalid'
+- inconclusive
++ invalid
+
+
+======================================================================
+FAIL: test_failures_dominate_later_passes (tests.test_fix001_validity_mapping.ValidityMappingTests.test_failures_dominate_later_passes) (cid='V09')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_fix001_validity_mapping.py", line 63, in test_failures_dominate_later_passes
+    self.assertEqual(cert['status'],'invalid')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'inconclusive' != 'invalid'
+- inconclusive
++ invalid
+
+
+======================================================================
+FAIL: test_failures_dominate_later_passes (tests.test_fix001_validity_mapping.ValidityMappingTests.test_failures_dominate_later_passes) (cid='V08')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_fix001_validity_mapping.py", line 63, in test_failures_dominate_later_passes
+    self.assertEqual(cert['status'],'invalid')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'inconclusive' != 'invalid'
+- inconclusive
++ invalid
+
+
+======================================================================
+FAIL: test_failures_dominate_later_passes (tests.test_fix001_validity_mapping.ValidityMappingTests.test_failures_dominate_later_passes) (cid='V07')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_fix001_validity_mapping.py", line 63, in test_failures_dominate_later_passes
+    self.assertEqual(cert['status'],'invalid')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'inconclusive' != 'invalid'
+- inconclusive
++ invalid
+
+
+======================================================================
+FAIL: test_legacy_runner_passes (tests.test_fix001_validity_mapping.ValidityMappingTests.test_legacy_runner_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_fix001_validity_mapping.py", line 71, in test_legacy_runner_passes
+    self.assertTrue(self.analyze(phase='development',style='canonical')[1]['gates']['all_valid'])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_zero_padded_restore_ids_normalize (tests.test_fix001_validity_mapping.ValidityMappingTests.test_zero_padded_restore_ids_normalize)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_fix001_validity_mapping.py", line 56, in test_zero_padded_restore_ids_normalize
+    self.assertEqual([cp['v_checks'].get(k) for k in ('V1','V2')],['pass','pass'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [None, None] != ['pass', 'pass']
+
+First differing element 0:
+None
+'pass'
+
+- [None, None]
++ ['pass', 'pass']
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.116s
+
+FAILED (failures=7)

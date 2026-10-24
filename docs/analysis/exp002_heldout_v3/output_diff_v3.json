@@ -1,0 +1,3681 @@
+{
+  "files": [
+    {
+      "file": "aggregate.json",
+      "byte_identical": false,
+      "changed_fields": 2
+    },
+    {
+      "file": "attempts.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "attempts.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "checkpoint_certificates.csv",
+      "byte_identical": false,
+      "changed_fields": 21
+    },
+    {
+      "file": "checkpoint_certificates.json",
+      "byte_identical": false,
+      "changed_fields": 21
+    },
+    {
+      "file": "claims_candidates.jsonl",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "continuations.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "continuations.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "cost_throughput.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "cost_throughput.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "coverage.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "coverage.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "effects_study.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "effects_study.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "events_accounting.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "events_accounting.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "figure_data/fig_delta_by_world.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "figure_data/fig_delta_by_world.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "figure_data/fig_missingness.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "figure_data/fig_missingness.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "figure_data/fig_sham_noise.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "figure_data/fig_sham_noise.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "figure_data/fig_status_stack.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "figure_data/fig_status_stack.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "figure_data/fig_tau_vector.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "figure_data/fig_tau_vector.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "missingness.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "missingness.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "scheduled_statuses.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "scheduled_statuses.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "sensitivity.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "sensitivity.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "status_crosscheck.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "status_crosscheck.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "validation_report.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "validity_checks.csv",
+      "byte_identical": false,
+      "changed_fields": 89
+    },
+    {
+      "file": "validity_checks.json",
+      "byte_identical": false,
+      "changed_fields": 89
+    },
+    {
+      "file": "world_effects.csv",
+      "byte_identical": true,
+      "changed_fields": 0
+    },
+    {
+      "file": "world_effects.json",
+      "byte_identical": true,
+      "changed_fields": 0
+    }
+  ],
+  "changes": [
+    {
+      "path": "aggregate.json/code_hashes/loaders.py",
+      "old": "6fba6eddbcf987cb6be242577d0fb791bf1c952d5917ba4f652012356d1f1dd7",
+      "new": "9770b490bbfe89b11141c7f46f8dae96d81df7c471c3011f913a1e51069a20b9"
+    },
+    {
+      "path": "aggregate.json/code_hashes/study.py",
+      "old": "648c91bb51f42dce8152cd1417f693baeb16b176435a87b54d0acf5549361a23",
+      "new": "b0d87bafeef5cfb8dde8f5f726284dd2c1cba40eaf1aef52d69b9c07559366ba"
+    },
+    {
+      "path": "checkpoint_certificates.csv/0/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/1/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/2/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/2/reasons",
+      "old": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished",
+        "no_placebo_available"
+      ],
+      "new": [
+        "imprecise",
+        "pattern_ambiguous",
+        "no_placebo_available"
+      ]
+    },
+    {
+      "path": "checkpoint_certificates.csv/3/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/4/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/5/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/6/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/7/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/8/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/8/reasons",
+      "old": [
+        "imprecise",
+        "pattern_mutual_disruption",
+        "validity_unestablished"
+      ],
+      "new": [
+        "imprecise",
+        "pattern_mutual_disruption"
+      ]
+    },
+    {
+      "path": "checkpoint_certificates.csv/9/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/10/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/11/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/12/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/12/reasons",
+      "old": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished",
+        "no_placebo_available"
+      ],
+      "new": [
+        "imprecise",
+        "pattern_ambiguous",
+        "no_placebo_available"
+      ]
+    },
+    {
+      "path": "checkpoint_certificates.csv/13/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/13/reasons",
+      "old": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished",
+        "no_placebo_available"
+      ],
+      "new": [
+        "imprecise",
+        "pattern_ambiguous",
+        "no_placebo_available"
+      ]
+    },
+    {
+      "path": "checkpoint_certificates.csv/14/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.csv/14/reasons",
+      "old": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished"
+      ],
+      "new": [
+        "imprecise",
+        "pattern_ambiguous"
+      ]
+    },
+    {
+      "path": "checkpoint_certificates.csv/15/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/0/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/1/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/2/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/2/reasons",
+      "old": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished",
+        "no_placebo_available"
+      ],
+      "new": [
+        "imprecise",
+        "pattern_ambiguous",
+        "no_placebo_available"
+      ]
+    },
+    {
+      "path": "checkpoint_certificates.json/3/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/4/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/5/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/6/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/7/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/8/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/8/reasons",
+      "old": [
+        "imprecise",
+        "pattern_mutual_disruption",
+        "validity_unestablished"
+      ],
+      "new": [
+        "imprecise",
+        "pattern_mutual_disruption"
+      ]
+    },
+    {
+      "path": "checkpoint_certificates.json/9/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/10/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/11/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/12/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/12/reasons",
+      "old": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished",
+        "no_placebo_available"
+      ],
+      "new": [
+        "imprecise",
+        "pattern_ambiguous",
+        "no_placebo_available"
+      ]
+    },
+    {
+      "path": "checkpoint_certificates.json/13/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/13/reasons",
+      "old": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished",
+        "no_placebo_available"
+      ],
+      "new": [
+        "imprecise",
+        "pattern_ambiguous",
+        "no_placebo_available"
+      ]
+    },
+    {
+      "path": "checkpoint_certificates.json/14/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "checkpoint_certificates.json/14/reasons",
+      "old": [
+        "imprecise",
+        "pattern_ambiguous",
+        "validity_unestablished"
+      ],
+      "new": [
+        "imprecise",
+        "pattern_ambiguous"
+      ]
+    },
+    {
+      "path": "checkpoint_certificates.json/15/gates/all_valid",
+      "old": false,
+      "new": true
+    },
+    {
+      "path": "validity_checks.csv/H01_B1|B1|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.csv/H01_B1|B1|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H01_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H01_B1|B1|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H01_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H01_B1|B1|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H01_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H01_B1|B1|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H01_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H01_B1|B1|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H01_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H01_B2|B2|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.csv/H01_B2|B2|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H01_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H01_B2|B2|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H01_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H01_B2|B2|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H01_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H01_B2|B2|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H01_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H01_B2|B2|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H01_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H02_B1|B1|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H02_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H02_B1|B1|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H02_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H02_B1|B1|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H02_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H02_B1|B1|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H02_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H02_B1|B1|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H02_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H02_B2|B2|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H02_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H02_B2|B2|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H02_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H02_B2|B2|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H02_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H02_B2|B2|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H02_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H02_B2|B2|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H02_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H03_B1|B1|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H03_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H03_B1|B1|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H03_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H03_B1|B1|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H03_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H03_B1|B1|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H03_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H03_B1|B1|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H03_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H03_B2|B2|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.csv/H03_B2|B2|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H03_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H03_B2|B2|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H03_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H03_B2|B2|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H03_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H03_B2|B2|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H03_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H03_B2|B2|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H03_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H04_B1|B1|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.csv/H04_B1|B1|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H04_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H04_B1|B1|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H04_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H04_B1|B1|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H04_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H04_B1|B1|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H04_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H04_B1|B1|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H04_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H04_B2|B2|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H04_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H04_B2|B2|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H04_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H04_B2|B2|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H04_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H04_B2|B2|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H04_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H04_B2|B2|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H04_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H05_B1|B1|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.csv/H05_B1|B1|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H05_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H05_B1|B1|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H05_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H05_B1|B1|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H05_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H05_B1|B1|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H05_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H05_B1|B1|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H05_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H05_B2|B2|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H05_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H05_B2|B2|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H05_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H05_B2|B2|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H05_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H05_B2|B2|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H05_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H05_B2|B2|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H05_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H06_B1|B1|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.csv/H06_B1|B1|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H06_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H06_B1|B1|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H06_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H06_B1|B1|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H06_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H06_B1|B1|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H06_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H06_B1|B1|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H06_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H06_B2|B2|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.csv/H06_B2|B2|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H06_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H06_B2|B2|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H06_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H06_B2|B2|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H06_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H06_B2|B2|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H06_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H06_B2|B2|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H06_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H07_B1|B1|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.csv/H07_B1|B1|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H07_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H07_B1|B1|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H07_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H07_B1|B1|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H07_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H07_B1|B1|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H07_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H07_B1|B1|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H07_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H07_B2|B2|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H07_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H07_B2|B2|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H07_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H07_B2|B2|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H07_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H07_B2|B2|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H07_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H07_B2|B2|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H07_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H08_B1|B1|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H08_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H08_B1|B1|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H08_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H08_B1|B1|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H08_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H08_B1|B1|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H08_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H08_B1|B1|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H08_B1",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H08_B2|B2|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.csv/H08_B2|B2|V1",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V1",
+        "checkpoint_id": "H08_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H08_B2|B2|V2",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V2",
+        "checkpoint_id": "H08_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H08_B2|B2|V4",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V4",
+        "checkpoint_id": "H08_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H08_B2|B2|V5",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V5",
+        "checkpoint_id": "H08_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.csv/H08_B2|B2|V7",
+      "old": null,
+      "new": {
+        "L": "",
+        "L90": "",
+        "L95": "",
+        "U": "",
+        "U90": "",
+        "U95": "",
+        "check": "V7",
+        "checkpoint_id": "H08_B2",
+        "confirmatory": "False",
+        "estimate": "",
+        "half_width90": "",
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "n_independent": "",
+        "regime": "B2",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster",
+        "world_cluster": ""
+      }
+    },
+    {
+      "path": "validity_checks.json/H01_B1|B1|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.json/H01_B1|B1|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H01_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H01_B1|B1|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H01_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H01_B1|B1|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H01_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H01_B1|B1|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H01_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H01_B1|B1|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H01_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H01_B2|B2|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.json/H01_B2|B2|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H01_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H01_B2|B2|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H01_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H01_B2|B2|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H01_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H01_B2|B2|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H01_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H01_B2|B2|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H01_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H02_B1|B1|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H02_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H02_B1|B1|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H02_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H02_B1|B1|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H02_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H02_B1|B1|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H02_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H02_B1|B1|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H02_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H02_B2|B2|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H02_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H02_B2|B2|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H02_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H02_B2|B2|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H02_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H02_B2|B2|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H02_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H02_B2|B2|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H02_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H03_B1|B1|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H03_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H03_B1|B1|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H03_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H03_B1|B1|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H03_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H03_B1|B1|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H03_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H03_B1|B1|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H03_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H03_B2|B2|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.json/H03_B2|B2|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H03_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H03_B2|B2|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H03_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H03_B2|B2|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H03_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H03_B2|B2|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H03_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H03_B2|B2|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H03_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H04_B1|B1|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.json/H04_B1|B1|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H04_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H04_B1|B1|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H04_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H04_B1|B1|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H04_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H04_B1|B1|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H04_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H04_B1|B1|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H04_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H04_B2|B2|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H04_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H04_B2|B2|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H04_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H04_B2|B2|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H04_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H04_B2|B2|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H04_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H04_B2|B2|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H04_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H05_B1|B1|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.json/H05_B1|B1|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H05_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H05_B1|B1|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H05_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H05_B1|B1|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H05_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H05_B1|B1|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H05_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H05_B1|B1|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H05_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H05_B2|B2|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H05_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H05_B2|B2|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H05_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H05_B2|B2|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H05_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H05_B2|B2|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H05_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H05_B2|B2|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H05_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H06_B1|B1|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.json/H06_B1|B1|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H06_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H06_B1|B1|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H06_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H06_B1|B1|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H06_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H06_B1|B1|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H06_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H06_B1|B1|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H06_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H06_B2|B2|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.json/H06_B2|B2|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H06_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H06_B2|B2|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H06_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H06_B2|B2|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H06_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H06_B2|B2|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H06_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H06_B2|B2|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H06_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H07_B1|B1|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.json/H07_B1|B1|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H07_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H07_B1|B1|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H07_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H07_B1|B1|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H07_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H07_B1|B1|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H07_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H07_B1|B1|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H07_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H07_B2|B2|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H07_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H07_B2|B2|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H07_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H07_B2|B2|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H07_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H07_B2|B2|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H07_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H07_B2|B2|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H07_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H08_B1|B1|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H08_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H08_B1|B1|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H08_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H08_B1|B1|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H08_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H08_B1|B1|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H08_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H08_B1|B1|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H08_B1",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B1",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H08_B2|B2|V07/status",
+      "old": "not_applicable",
+      "new": "na"
+    },
+    {
+      "path": "validity_checks.json/H08_B2|B2|V1",
+      "old": null,
+      "new": {
+        "check": "V1",
+        "checkpoint_id": "H08_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H08_B2|B2|V2",
+      "old": null,
+      "new": {
+        "check": "V2",
+        "checkpoint_id": "H08_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H08_B2|B2|V4",
+      "old": null,
+      "new": {
+        "check": "V4",
+        "checkpoint_id": "H08_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H08_B2|B2|V5",
+      "old": null,
+      "new": {
+        "check": "V5",
+        "checkpoint_id": "H08_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "pass",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    },
+    {
+      "path": "validity_checks.json/H08_B2|B2|V7",
+      "old": null,
+      "new": {
+        "check": "V7",
+        "checkpoint_id": "H08_B2",
+        "confirmatory": false,
+        "label": "descriptive; Tier-B case certificates exploratory",
+        "regime": "B2",
+        "status": "na",
+        "tier": "B",
+        "uncertainty_scope": "world_cluster"
+      }
+    }
+  ],
+  "status_changes": [],
+  "numeric_tokens_compared": 33292,
+  "numeric_tokens_byte_identical": true,
+  "baseline_sha256": {
+    "aggregate.json": "3488d7bcb63307a11f621f593a66ef7baa623b1a9c0e46f5d1a8efde73ddaec4",
+    "attempts.csv": "ced30650e4d0b61a52229a71713b457f18ece0c21b3b1760ad3b7b6c86a479fb",
+    "attempts.json": "94c988af6ed6a62252552c7d1fd57eceb0e34dbc15413669f3ffd677f32dadee",
+    "checkpoint_certificates.csv": "b0cbb24e9fb9a73f296e7414a3c2872b84b717072aa8235b3ff9f0784c23a2f0",
+    "checkpoint_certificates.json": "585fd1f65e6273e24a1e311ebb71b9e0495ea59f9261902da24fa6c76e8f725f",
+    "claims_candidates.jsonl": "9f44a020b5122e14ffa996090a5ec74a9a33dcea4cb0e5567f7baa8990cb1788",
+    "continuations.csv": "d5e69f4f2c3b0b3885445cbc18dca63852820ff5078b1792c01b37d201e3f4b8",
+    "continuations.json": "62e5e46f8454b6cce335aae25da6c9a83241d379c59ede5efca60c088cc62df8",
+    "cost_throughput.csv": "cbacfb2e99c5437e2608009945cb07552170d5d098787d360fdfee7941125c36",
+    "cost_throughput.json": "919c3ddbdcb4f5c8e17346e6569eb28622a8c220bb1242c6201f847b66d55c66",
+    "coverage.csv": "8b2eb4195630315940080225f1829cfa79b5ab4ff177435f59dbad91f6cfe25b",
+    "coverage.json": "908497712ca3d2157d4b1693935cb9f6bf9b16ddbde080279ee1f925c640b346",
+    "effects_study.csv": "66cd03789cd03cb0d935c6300412e8095f3527b4b3759b3a69204d93a500ec7e",
+    "effects_study.json": "c4a40ed884cc57d5e9a3ee851c5fe23e3c2b96e00610c030f3544b944bfaaba9",
+    "events_accounting.csv": "4cfc4d313b2291293a82399814bd4de85762e6f9ee0c174e8de8fb0e7df1bcf5",
+    "events_accounting.json": "a96f722e53a855fc8ac4cb63291b58edb5a94da28a8c529dca3144286a59edf5",
+    "figure_data/fig_delta_by_world.csv": "0972b849120dae39936ef6218d083d9dca430440c3858ba2cda69611ecae901e",
+    "figure_data/fig_delta_by_world.json": "34adbe86d15c8035c8720e6dc5a64dd6696d72d5722bcf38af3ee6d07a1a14d6",
+    "figure_data/fig_missingness.csv": "0201194b2bfb71c29f611fc506d08f90d4a1a6a11b73d4db696e06023456f1d7",
+    "figure_data/fig_missingness.json": "72a72d6481f55996ed83952fed857299a4f303fdeec88a082fcd47884216d62f",
+    "figure_data/fig_sham_noise.csv": "865ec24ece41b151a937b0e8dec957d4dc32d4b3a4c336f58ba2c7e055affced",
+    "figure_data/fig_sham_noise.json": "1a37647e632700ca3c23194fb661d34d80f5467dc25a06930189b6ae4c037e8f",
+    "figure_data/fig_status_stack.csv": "8b2eb4195630315940080225f1829cfa79b5ab4ff177435f59dbad91f6cfe25b",
+    "figure_data/fig_status_stack.json": "908497712ca3d2157d4b1693935cb9f6bf9b16ddbde080279ee1f925c640b346",
+    "figure_data/fig_tau_vector.csv": "ab771db5088ab284186b2b556cc5e3156653f3578f6677b3ad1950e98268f119",
+    "figure_data/fig_tau_vector.json": "5e1d01b91c6f1585616b1084cb2790da75faae3ee1c3c25fe9af8dd64f2aa1ac",
+    "missingness.csv": "323ca341b1edf8cfabfb01f71746ebac6a012387b86a13f1d2aa1c84032ef73d",
+    "missingness.json": "066b5e8d7c461cc2c11bf03db9d07b98fddb37d38489447ef79bd51f0046d9a8",
+    "scheduled_statuses.csv": "1254d9928b747610c56774d80441742cbda6272168fc90447a377e24080fb9c6",
+    "scheduled_statuses.json": "d1a0c716e371a5fa81f49622f558cd61b3adf65c1c12f4e376f38989cfbd926a",
+    "sensitivity.csv": "a069aff84d37d76a871b48d03026a49e2948abd50b5ba501f59c78d9989c071e",
+    "sensitivity.json": "60ff432c2269fb58015405393077c9c4cfb92b5b4c8cbdb49692fa327700b739",
+    "status_crosscheck.csv": "c103207b489fc6783f0603d2ebee5b93e378f4b3280afbead4bd68bf894d274b",
+    "status_crosscheck.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "validation_report.json": "e663bdcc02d5ae99786f441f1e8c6c16766b7c1ba6c916c0c4eafbeef8088cec",
+    "validity_checks.csv": "00df883225ef475f228eb88562bc27b83c9f0a6f3033288b613302caabae5858",
+    "validity_checks.json": "76cf773791e59586519db14c0023abf6c7a47bfb1b537d672c2938a61a4a48a8",
+    "world_effects.csv": "2ecd7adbaa4d6354f164c89e102ba23754154340407372a92aaf3339b42ad27e",
+    "world_effects.json": "54ddd48e9a054955f466ba3a4540293f1c4ee2c408b9e717698c4946aefe6a19"
+  },
+  "statuses": {
+    "not_supported": 11,
+    "inconclusive": 5
+  }
+}
