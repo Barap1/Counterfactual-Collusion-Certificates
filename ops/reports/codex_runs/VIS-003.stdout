@@ -1,0 +1,1 @@
+Created the two held-out figures and SHA-256 sidecars in `figures/`; added the handoff at [VIS-003.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/VIS-003.md). Script compilation, SVG parsing, and source-hash checks passed. Visual raster QA remains incomplete: `sips` cannot read SVG, and Quick Look conversion was blocked by the sandbox.

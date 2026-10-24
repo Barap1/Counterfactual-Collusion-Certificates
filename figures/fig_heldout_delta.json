@@ -1,0 +1,27 @@
+{
+  "caption": "Per-world-pair B1\u2212B2 outsider-reward differences; diamond and interval show mean Delta and world-cluster 95% CI. Outlined H02/H05 are post-hoc sensitivity, not primary.",
+  "figure": "fig_heldout_delta",
+  "label": "held-out \u00b7 protocol v1.2 \u00b7 gemma4:26b local",
+  "source_files": [
+    {
+      "path": "docs/analysis/exp002_heldout_v2/figure_data/fig_delta_by_world.csv",
+      "sha256": "0972b849120dae39936ef6218d083d9dca430440c3858ba2cda69611ecae901e"
+    },
+    {
+      "path": "docs/analysis/exp002_heldout_v2/checkpoint_certificates.csv",
+      "sha256": "b0cbb24e9fb9a73f296e7414a3c2872b84b717072aa8235b3ff9f0784c23a2f0"
+    },
+    {
+      "path": "docs/analysis/exp002_heldout_v2/aggregate.json",
+      "sha256": "3488d7bcb63307a11f621f593a66ef7baa623b1a9c0e46f5d1a8efde73ddaec4"
+    },
+    {
+      "path": "docs/review/rev001/rev001_repro.json",
+      "sha256": "35c8fd5f93ff65d68df6ff7209d9cff1e05cfe64ef462f7c99770cd7ef040dc4"
+    },
+    {
+      "path": "docs/review/rev001/CLAIMS_LEDGER.md",
+      "sha256": "cdea80dd5c9d41faf6892ad8a06639fdc989202ff03e6cca2e9d20d69520f88f"
+    }
+  ]
+}
