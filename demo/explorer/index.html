@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'">
+<meta name="color-scheme" content="light dark">
+<title>CCC Evidence Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top" role="banner">
+  <div class="brand">
+    <span class="mark" aria-hidden="true">CCC</span>
+    <div>
+      <h1>Evidence Explorer</h1>
+      <p class="tag">A knockout measures what a message did, not whether it should have done it.</p>
+    </div>
+  </div>
+  <nav class="views" aria-label="Views">
+    <a href="#/start" data-view="start">Start here</a>
+    <a href="#/study" data-view="study">Study</a>
+    <a href="#/twins" data-view="twins" id="twins-nav" hidden>Twin worlds</a>
+    <a href="#/about" data-view="about">Concepts &amp; sources</a>
+  </nav>
+</header>
+<div class="shell">
+  <aside class="side" aria-label="Case selection">
+    <details id="case-menu" open>
+      <summary>Cases <span id="case-current" class="muted"></span></summary>
+      <div id="case-list"></div>
+    </details>
+  </aside>
+  <main id="main" tabindex="-1" aria-live="polite"></main>
+</div>
+<footer class="foot">
+  <p>Offline, no network requests. Every number is read from the frozen JSON pack in <code>demo/data/</code> (bundled by <code>bundle_data.py</code>); nothing is simulated. Held-out data are descriptive; development data are scripted fixtures.</p>
+</footer>
+<script src="data/index.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
