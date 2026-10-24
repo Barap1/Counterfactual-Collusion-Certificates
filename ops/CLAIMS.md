@@ -18,6 +18,7 @@
 | C-H04 | Case certificates 0 supported / 11 not supported / 5 inconclusive; max case CI_lower 0.77 < m_O 2.5; N_m ran on 2/16 | VERIFIED | checkpoint_certificates.json; REV001.md §4 |
 | C-H05 | "Not supported" means no collusion | **REJECTED** (estimand-level statement only) | paper Discussion/Conclusion |
 | C-H06 | Integrity: 143/143 executed branches pass V3/V6/V05b/V08/V09/V-echo; 0 failed/invalid; one model digest; $0 | VERIFIED | REV001.md §5; docs/runner/archives/exp002-live.tar.gz(.sha256) |
+| C-H08 | 199 scheduled branch records = 143 executed valid continuations + 56 unrun placebo (N) branches; 8 independent matched world pairs | VERIFIED | docs/review/rev001/CLAIMS_LEDGER.md C30 |
 | C-H07 | Post-hoc sensitivity (excluding non-commit F runs H02_B1, H05_B1): Delta 0.727, CI [-0.31, 1.91], p 0.156 | VERIFIED, labelled POST HOC (not primary) | REV001.md F-2 |
 | C-D01 | DEV Gate A v1.2.2: F/S 380/380, K scope 4180/4180, isolation 760/760, A2 never supported 80/80; 8/800 supported, all with oracle harm 4.015; 0 false supports; 0 estimand-level false negatives | VERIFIED (director recount) | docs/gate_a/v1.2/correction_v1.2.2/; docs/review/director_gateA_audit.md |
 | C-D02 | A5 redundancy check 20/120 (16/68 amended) and A6 350/360 fail as stricter diagnostics | VERIFIED (limitation) | same |

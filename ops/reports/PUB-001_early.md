@@ -8,8 +8,8 @@ Tool: the claude.ai Google Drive connector (`get_file_metadata` and `read_file_c
 | Field | Working copy | Official Apart template (S01 link) |
 |---|---|---|
 | Title | CCC - Counterfactual Collusion Certificates - Submission Working Draft | Apart Research hackathon submission template |
-| ID | `1zsYXLll5dKl4MmCcXI0WwFp1ThiKDxkDKQsPDX3rSHM` (matches module 12) | `1Y5wd3VRbXU5N08BvAGiJUQTaWbMCSPjhzXsR-ozuehg` |
-| Owner | aarav.patel280@gmail.com | kamil@apartresearch.com |
+| ID | `[REDACTED-DOC-ID]` (matches module 12) | `[REDACTED-DOC-ID]` |
+| Owner | [REDACTED-EMAIL] | [REDACTED-EMAIL] |
 | Created / modified | 2026-10-23T15:31:23.120Z / **same, so unedited since copy** | 2026-09-21T14:50Z / 2026-10-22T13:37:56Z |
 | Size | 8519 | 8519 (identical snippet) |
 | Revision ID | not exposed by the connector. Use modifiedTime as the revision anchor before the first write. | — |

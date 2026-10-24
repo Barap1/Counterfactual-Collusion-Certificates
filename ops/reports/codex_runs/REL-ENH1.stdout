@@ -1,0 +1,8 @@
+Completed the scoped working-tree edits.
+
+- Tracked working files: **0 Doc-ID flags**.
+- Full scan: 3,595 blobs; exit 1 solely for three unchanged staged blobs containing old IDs. No exact-credential matches.
+- System Python reproduction passed: Delta **1.354325711018899**, p **0.0703125**, 8 pairs.
+- `git diff --check` passed. No network or Git state changes.
+
+Full file list and validation: [REL-ENH1 handoff](ops/reports/REL-ENH1.md).

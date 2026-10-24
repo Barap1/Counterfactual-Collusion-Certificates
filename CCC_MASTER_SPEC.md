@@ -1327,16 +1327,16 @@ The original template in the owner's Drive was found and copied during specifica
 Original owner template:
 
 ```text
-ID: 16N0UsxWEU9zZHE49Q_IUb2yLmOh16TCoTu34Kb9sATI
-https://docs.google.com/document/d/16N0UsxWEU9zZHE49Q_IUb2yLmOh16TCoTu34Kb9sATI/edit
+ID: [REDACTED-DOC-ID]
+[REDACTED-DOC-ID]
 ```
 
 Prepared working destination:
 
 ```text
 Title: CCC - Counterfactual Collusion Certificates - Submission Working Draft
-ID: 1zsYXLll5dKl4MmCcXI0WwFp1ThiKDxkDKQsPDX3rSHM
-https://docs.google.com/document/d/1zsYXLll5dKl4MmCcXI0WwFp1ThiKDxkDKQsPDX3rSHM/edit
+ID: [REDACTED-DOC-ID]
+[REDACTED-DOC-ID]
 ```
 
 The copy was verified as not shared at preparation time. Do not change sharing or create repeated new copies. Store these identifiers in `ops/doc_target.local.json` for the local workflow. They are not credentials, but omit private working-document identifiers from a public release unless the owner approves their inclusion.

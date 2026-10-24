@@ -1,7 +1,7 @@
 # CCC paper outline (PUB-001 early, working skeleton)
 
 **Status:** working skeleton from 2026-10-23. **No results exist yet.** Every quantitative or empirical slot is a labeled placeholder. Nothing here is a finding.
-**Template:** this follows the official *Apart Research hackathon submission template* (Drive ID `1Y5wd3VR…`). The prepared working copy is a verbatim instance of that template (see `ops/reports/PUB-001_early.md`).
+**Template:** this follows the official *Apart Research hackathon submission template* (Drive ID `[REDACTED-DOC-ID]…`). The prepared working copy is a verbatim instance of that template (see `ops/reports/PUB-001_early.md`).
 **Authoritative inputs:** `docs/research/sci001/claim_review.md` (allowed and forbidden claims) and `source_ledger.md` (citable sources). Citation keys refer to `paper/references_draft.bib`.
 
 ### Placeholder grammar (to be removed before export)
