@@ -1,8 +1,9 @@
 # CCC identifiability-frontier benchmark v0
 
 This package implements `docs/enh/r2/BENCH_SPEC.md` as **development** evidence.
-It has no inference clients, network calls, prospective seed generator, or frozen
-module mutations. The full implementation is in `ccc/bench/`; the regression
+It has no inference clients, network calls, or frozen module mutations. The
+R2 seed CLI is gated on a director-owned freeze; no prospective list is drawn
+in this task. See ALIGNMENT.md for the updated R2 contract. The full implementation is in `ccc/bench/`; the regression
 suite is `tests/test_bench_core.py`.
 
 Use the existing interpreter and release guard, from the repository root:
@@ -134,14 +135,20 @@ new private globals dictionary binding only seed bounds. It never mutates the
 frozen module or manifest and never runs an old seed to manufacture a new one.
 A separate named RNG chooses A1a/A1b fairly, independently of cost generation;
 one forbidden world per seed is evaluated with the frozen exact Jira oracle.
-Jira H is `n/a`: this population estimates the label/exposure gap only.
+For A1a/A1b, Jira H compares F to the frozen exact J arm, which removes every
+sender directive and its induced public reservation/block relay. Strict loss
+>2.5 defines H; RQ3 retains the separate K-F exposure threshold >=2.5.
 
-`python -m ccc.bench run --block prospective --out DIR` refuses before world
-construction unless director-owned `docs/enh/r2/FREEZE.json` exists and exactly
-matches `hashes`. The schema is documented in `ccc/bench/__main__.py`. It requires
-200 seeds per pair type, 100 per remaining class, and 200 population seeds,
-plus a declared complete prior-seed exclusion ledger. Known old blocks are
-always excluded. The director must include EXP-002 and all other prior seeds in
-that ledger and supply post-freeze draws; the CLI never reads EXP-002 to discover
-them. Seeds can be shared across types, but then the shared seed remains one
-unit for pooled analyses. No prospective run or freeze file is created here.
+`python -m ccc.bench run --block prospective --out docs/enh/r2/run/NAME`
+refuses before construction unless the director-owned R2 FREEZE.json, full code
+manifest, protocol hash, parameters, enumeration hash and frozen seed file pass
+validation. The seed file is materialised only after freeze and checked against
+the full historical exclusion census. See [ALIGNMENT.md](ALIGNMENT.md) for the
+schema, seed commands and exact roster. Prospective N is 200 per P1–P6 and iid
+population, 100 per remaining class; eps=0/.1 and R=8 are fixed.
+
+`python -m ccc.bench report --run docs/enh/bench/dev_run` writes the clearly
+marked development RESULTS_dev.json/.md and DEV-only strongest_baseline.json.
+Prospective reports are RESULTS.json/.md; they retain all RQ1–RQ6 verdicts,
+T1–T10, figures data, failures and negative results. No prospective run or freeze
+file was created here.

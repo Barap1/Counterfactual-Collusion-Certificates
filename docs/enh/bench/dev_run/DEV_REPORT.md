@@ -1,44 +1,50 @@
-# BENCH-IMP DEV report
+# DEV evidence — BENCH-ALIGN
 
-All results below are **development** evidence. Only benchmark seeds
-**13000–13049** were used. The complete run contains **12,600** instance/set
-records, **12 methods**, and **50 independent seed blocks**. Twins, copies,
-epsilon strata and continuations at a seed are nested.
+All numbers in this report are **development** evidence, never prospective.
+Seeds: 13000–13049 only. 13800 instance/set records; 50 independent
+seed blocks per pair/stratum (members, copies and 8 continuations are nested).
 
-| Pair | Minimal observable separator, both epsilon strata |
-|---|---|
-| P1 redundancy/inert | I3 |
-| P2 allocation/efficiency | I4 |
-| P3 unauthorized/authorized | I5, definitional |
-| P4 common cause/message cause | I1 |
-| P5 suspicious/plain inert | I0, same-label control |
-| P6 useful information/harmful steering | I1 |
+Pairwise minimal separators at seed 13000, eps=0: {'P1': 'I3', 'P2': 'I4', 'P3': 'I5', 'P4': 'I1', 'P5': 'I0', 'P6': 'I1'}.
+Full per-seed/stratum frontiers and global class identifiability are in
+frontiers.json; exact canonical partitions are in partitions/.
 
-These separators hold in all 100 seed/stratum combinations per pair. Pairwise
-separation differs from global identifiability: P1's inert and P4's common-cause
-members remain globally ambiguous in the full crossed policy space.
+Surprises retained: P1's inert and P4's common-cause
+members remain globally ambiguous in the full crossed policy space even after
+their twin separates. Equivalence is definitional relative to these observables.
+P6's initial generator exposed different factual payoffs; it was corrected to
+share all F traces and model useful-information loss under K (see VALIDATION.md).
 
-There were **zero identical-view twin symmetry violations**. A complete seed
-13000 replay reproduced all **252** records byte-for-byte in canonical JSON.
-All **24 frozen source/data files** retain their initial hashes.
+Identical-view twin symmetry violation unit-events, summed across method/set/
+stratum cells (not an independent sample count): 0.
+CCC supported on legitimate members: 664 member/set records
+(an exposure L2 claim, not collusion attribution). First examples:
+- 13000/P2/1, eps=0, I2
+- 13000/P2/1, eps=0, I3
+- 13000/P2/1, eps=0, I4
+- 13000/P2/1, eps=0, I5
+- 13000/P3/1, eps=0, I2
+- 13000/P3/1, eps=0, I3
+- 13000/P3/1, eps=0, I4
+- 13000/P3/1, eps=0, I5
+- 13000/P2/1, eps=0.1, I2
+- 13000/P2/1, eps=0.1, I3
+- 13000/P2/1, eps=0.1, I4
+- 13000/P2/1, eps=0.1, I5
 
-Frozen CCC supported legitimate P2/P3 members at I2–I5: **50/50 seed units** per
-type/set at eps=0 and **33/50** at eps=.1. This yields **664 member/set records**,
-not 664 independent units. The verdict is an **L2 exposure claim**, not an M
-collusion attribution. These results were retained without changing CCC.
+Fresh iid Jira RQ3 at eps=0, exact oracle, iid fair A1a/A1b mixture: 12/50
+= 0.240, CP95 [0.13060991619745688, 0.38169074810403925]; one world per seed.
+Both epsilon strata, their separate intervals and H truth are in population.json.
 
-Fresh iid Jira RQ3: **12/50 = .24**, CP95 **[.1306, .3817]**, one forbidden world
-per seed. No method output defines these oracle labels or effects.
+Scope: all P1–P6 and the nine protocol remaining classes, including three
+actual trace corruptions nested in one invalid-class unit. Public read/state/tool checks are
+structural checks, not native Jira replay certificates. Population is the
+frozen iid code with a locally bound seed-range dependency, no frozen mutation.
+Stochastic oracle is exact; observed equivalence is conditional on the fixed
+8-continuation random schedule. Priors are uniform over finite policy recipes.
+Benign E-positive cases remain E-positive. CCC's M/H axes are inapplicable.
+Member rates are descriptive; CP intervals label unit-any or unit-all events.
+Risk costs .25/.5 receive no invalid binomial intervals.
 
-All requested classes were retained. P6's initial factual-payoff mismatch was
-corrected with an explicit information-gated productivity model; other benchmark
-corrections and exact commands are in [VALIDATION.md](../VALIDATION.md).
-
-Validation: **19 benchmark tests passed**. The full offline suite ran **442**
-tests: **437 passed, 1 unrelated stale demo/MISSION hash failure, 4 skipped**.
-The failure remains outside this task's write scope.
-
-Limits: structural replay checks are not native Jira certificates; stochastic
-partitions condition on the fixed continuation schedule; Bayes uses uniform
-finite-policy priors. CP intervals label independent unit-any/unit-all events,
-not fractional member counts. No prospective run occurred; new spend **$0**.
+Benchmark corrections and final validation commands/results are recorded in
+VALIDATION.md. No method was tuned or changed. No prospective block was run.
+The criterion report is RESULTS_dev.json/.md; it retains RQ2/RQ4/RQ5 failures.

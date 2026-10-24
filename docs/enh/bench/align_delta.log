@@ -1,0 +1,107 @@
+{
+  "evidence": "development",
+  "before_records": 12600,
+  "after_records": 13800,
+  "matched_records": 11400,
+  "changed_matched_records": [],
+  "removed_records": 1200,
+  "added_records": 2400,
+  "before_class_counts": {
+    "P1": 1200,
+    "P2": 1200,
+    "P3": 1200,
+    "P4": 1200,
+    "P5": 1200,
+    "P6": 1200,
+    "relayed": 600,
+    "paraphrased": 600,
+    "harmful": 600,
+    "useful": 600,
+    "harm-without-dependence": 600,
+    "inert": 600,
+    "invalid-state": 600,
+    "invalid-replay": 600,
+    "invalid-mask": 600
+  },
+  "after_class_counts": {
+    "P1": 1200,
+    "P2": 1200,
+    "P3": 1200,
+    "P4": 1200,
+    "P5": 1200,
+    "P6": 1200,
+    "relayed-harmful": 600,
+    "common-cause-single": 600,
+    "redundant-single": 600,
+    "legitimate-useful": 600,
+    "harm-without-dependence": 600,
+    "suspicious-language-no-harm": 600,
+    "inert": 600,
+    "info-bearing": 600,
+    "invalid-corrupted-trace": 1800
+  },
+  "population_identical": false,
+  "population_exposure_identical": true,
+  "frontiers_identical": true,
+  "CCC_supported_legitimate": {
+    "before": 664,
+    "after": 664
+  },
+  "strongest_baseline": {
+    "before": {
+      "dev_block": "13000-13049",
+      "strongest_baseline": "B2+",
+      "dev_balanced_accuracy": {
+        "B2+": 0.5997596153846154,
+        "B3b": 0.5432692307692308
+      },
+      "computed_on_dev_only": true,
+      "information_set": "I1",
+      "axis": "attributable mechanism",
+      "epsilon_weighting": "equal-size strata, member descriptive; no pooled interval",
+      "by_epsilon": {
+        "0": {
+          "B2+": 0.6201923076923077,
+          "B3b": 0.5432692307692308
+        },
+        "0.1": {
+          "B2+": 0.5793269230769231,
+          "B3b": 0.5432692307692308
+        }
+      },
+      "ties": "B2+"
+    },
+    "after": {
+      "dev_block": "13000-13049",
+      "strongest_baseline": "B2+",
+      "dev_balanced_accuracy": {
+        "B2+": 0.6074553571428571,
+        "B3b": 0.5357142857142857
+      },
+      "computed_on_dev_only": true,
+      "information_set": "I1",
+      "axis": "attributable mechanism",
+      "epsilon_weighting": "equal-size strata, member descriptive; no pooled interval",
+      "by_epsilon": {
+        "0": {
+          "B2+": 0.6294642857142857,
+          "B3b": 0.5357142857142857
+        },
+        "0.1": {
+          "B2+": 0.5854464285714286,
+          "B3b": 0.5357142857142857
+        }
+      },
+      "ties": "B2+"
+    }
+  },
+  "aggregate_score_cells_changed": 396,
+  "RQ_verdicts": {
+    "RQ1": "pass",
+    "RQ2": "fail",
+    "RQ3": "pass",
+    "RQ4": "fail",
+    "RQ5": "fail",
+    "RQ6": "descriptive"
+  }
+}

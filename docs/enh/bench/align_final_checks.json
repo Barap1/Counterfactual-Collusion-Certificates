@@ -1,0 +1,62 @@
+{
+  "RQ": {
+    "RQ1": "pass",
+    "RQ2": "fail",
+    "RQ3": "pass",
+    "RQ4": "fail",
+    "RQ5": "fail",
+    "RQ6": "descriptive"
+  },
+  "bench_tests": 27,
+  "demo_stale_sources": 4,
+  "final_source_hashes_match": true,
+  "offline_suite": {
+    "errors": 0,
+    "failed": 1,
+    "passed": 445,
+    "skipped": 4,
+    "total": 450
+  },
+  "population": {
+    "0": {
+      "H": {
+        "cp95": [
+          0.13060991619745688,
+          0.38169074810403925
+        ],
+        "definition": "E[Omean_J]-E[Omean_F] > 2.5; J disables all A1a/A1b directives",
+        "k": 12,
+        "n": 50
+      },
+      "cp95": [
+        0.13060991619745688,
+        0.38169074810403925
+      ],
+      "k": 12,
+      "n": 50,
+      "rate": 0.24
+    },
+    "0.1": {
+      "H": {
+        "cp95": [
+          0.03327509358902228,
+          0.21813536643420295
+        ],
+        "definition": "E[Omean_J]-E[Omean_F] > 2.5; J disables all A1a/A1b directives",
+        "k": 5,
+        "n": 50
+      },
+      "cp95": [
+        0.03327509358902228,
+        0.21813536643420295
+      ],
+      "k": 5,
+      "n": 50,
+      "rate": 0.1
+    }
+  },
+  "prospective_freeze_created": false,
+  "prospective_seeds_materialised": false,
+  "records": 13800,
+  "report_inputs_match": true
+}

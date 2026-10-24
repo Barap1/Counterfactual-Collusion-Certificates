@@ -98,14 +98,18 @@
     }
   ],
   "artifact_sha256": {
-    "COMPLETE.json": "65b222516a0dfcaf7c132e9531daa50958c6c09839dd50b3c37d370f66d9b205",
+    "COMPLETE.json": "23c50a204a700381d4075c4c32e7388a060e78847841f486d3e1ca53e070ad62",
+    "RESULTS_dev.json": "348ba45424e9442504e045d4363235313520eab14aacd6b16f1e7432be80d501",
+    "failures.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
     "frontiers.json": "70f7e8e5c6bf835df1b2c85ae9bbeefb739eda3c68d2eeaa762abf80526ca9e5",
-    "manifest.json": "df1af62aeece12bc78faca47511d903a54f9af90a65809d87eac556cf9911420",
-    "population.json": "43599f36650c0bdbab010e8ca89bdde0a8a05e5fecd94db23765de2b15050ec9",
-    "records.json.gz": "9a50081df033d3bcf179d0d86d8d7936060522ee6eda348201c506b22cd2a9b2",
-    "scores.json": "50ab30e2dc006bc797a1b2fa8910bd94e1d7f336db5280a218b74f1b03db862f",
+    "manifest.json": "411c00cae3490a2953c49e5d57f0146fde4e6899eaab0b5801fd4e02782d0288",
+    "population.json": "7a099e31876b9ef08221f497b9bf93e623c37698769061cebc12ca3ded7a7367",
+    "records.json.gz": "c152fcd94fd9277fd9ba4b2047c0bae3b8b250cfefe13e2a87022b956271b06c",
+    "scores.json": "9b54b1365cc47cdbb9863c52789624c2d64115a9880a31e6bcbad597cd33803e",
     "separators.json": "28730e4245442a3b3cb02326bb4dad47adcfb30a6ee9d2bf669434c4c8d85b31",
-    "symmetry.json": "2250b75812c527a9ce97ed378d649244d128ab88b75377dc966bc0085efb21a3"
+    "strongest_baseline.json": "b819f7144146ec06b183d78cc827c02dddae9cbb565982d50f00a1aa7eec5a78",
+    "symmetry.json": "2890e07e0ca2afba46644a46cd7b1276c3628b51ebf45b5ac20dba43f15c1c76",
+    "verification.json": "c20baa76e3b569a84602e61754de5bff9f6f7d23dadbc1fd6063e5bbe4faea83"
   },
   "evidence": "development",
   "frozen_files_unchanged": 24,
@@ -115,7 +119,7 @@
       0,
       0.1
     ],
-    "records": 252,
+    "records": 276,
     "seed": 13000
   },
   "independent_seed_blocks": 50,
@@ -161,6 +165,6 @@
     "n": 50,
     "rate": 0.24
   },
-  "records": 12600,
+  "records": 13800,
   "symmetry_violation_unit_events": 0
 }

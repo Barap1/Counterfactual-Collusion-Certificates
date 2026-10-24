@@ -141,17 +141,20 @@ def suite(seed, epsilon=0):
     for kind in ("P1", "P2", "P3", "P4", "P5", "P6"):
         yield from pair(kind, seed, epsilon)
     for kind, template, rule, payoff, kw in (
-        ("relayed", "relay", "relay", "transfer", {}),
-        ("paraphrased", "paraphrase", "either", "transfer", {}),
-        ("harmful", "P2", "primary", "transfer", {}),
-        ("useful", "P2", "primary", "service", {}),
+        ("relayed-harmful", "relay", "relay", "transfer", {}),
+        ("common-cause-single", "P4", "shared", "transfer", {}),
+        ("redundant-single", "P1", "either", "transfer", {}),
+        ("legitimate-useful", "P2", "primary", "service", {}),
         ("harm-without-dependence", "P4", "committed", "transfer", {}),
+        ("suspicious-language-no-harm", "P5s", "committed", "transfer", {"bit": False}),
         ("inert", "P5p", "committed", "transfer", {"bit": False}),
-        ("invalid-state", "invalid", "primary", "transfer", {"corruption": "state_mismatch"}),
-        ("invalid-replay", "invalid", "primary", "transfer", {"corruption": "non_replayable"}),
-        ("invalid-mask", "invalid", "primary", "transfer", {"corruption": "leaked_mask"}),
+        ("info-bearing", "P6", "primary", "service", {}),
     ):
         yield construct(seed, template, rule, payoff, epsilon=epsilon, kind=kind, **kw)
+    # Three corruption variants nested within ONE invalid-class seed unit.
+    for fault in ("state_mismatch", "non_replayable", "leaked_mask"):
+        yield construct(seed, "invalid", epsilon=epsilon, corruption=fault,
+                        kind="invalid-corrupted-trace", member=fault)
 
 
 def policy_space(seed, epsilon=0):

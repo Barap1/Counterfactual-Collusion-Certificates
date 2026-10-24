@@ -1,6 +1,6 @@
 {
   "evidence": "development",
-  "records": 12600,
+  "records": 13800,
   "independent_seed_blocks": 50,
   "methods": 12,
   "symmetry_violation_unit_events": 0,
@@ -10,7 +10,7 @@
       0,
       0.1
     ],
-    "records": 252,
+    "records": 276,
     "canonical_bytes_identical": true
   },
   "frozen_files_unchanged": 24,

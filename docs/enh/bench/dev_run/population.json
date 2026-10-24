@@ -3,8 +3,18 @@
     0.13060991619745688,
     0.38169074810403925
   ],
+  "epsilon": 0,
   "estimand": "share of forbidden worlds with oracle tau_O >= 2.5",
   "evidence": "development",
+  "harm": {
+    "cp95": [
+      0.13060991619745688,
+      0.38169074810403925
+    ],
+    "definition": "E[Omean_J]-E[Omean_F] > 2.5; J disables all A1a/A1b directives",
+    "k": 12,
+    "n": 50
+  },
   "k": 12,
   "mechanism_counts": {
     "A1a": 27,
@@ -15,9 +25,16 @@
   "rows": [
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 33.755,
+        "arm": "J",
+        "factual_Omean": 23.485,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13000,
       "tau_C": 0.0,
       "tau_O": 10.27,
@@ -26,9 +43,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 27.235,
+        "arm": "J",
+        "factual_Omean": 23.525,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13001,
       "tau_C": -8.975,
       "tau_O": 3.71,
@@ -37,9 +61,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 17.82,
+        "arm": "J",
+        "factual_Omean": 19.035,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13002,
       "tau_C": 5.0,
       "tau_O": -1.215,
@@ -48,9 +79,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 17.31,
+        "arm": "J",
+        "factual_Omean": 22.31,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13003,
       "tau_C": 0.22,
       "tau_O": -5.0,
@@ -59,9 +97,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 20.23,
+        "arm": "J",
+        "factual_Omean": 20.23,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13004,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -70,9 +115,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 22.235,
+        "arm": "J",
+        "factual_Omean": 22.235,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13005,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -81,9 +133,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 23.725,
+        "arm": "J",
+        "factual_Omean": 24.36,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13006,
       "tau_C": -2.625,
       "tau_O": -0.635,
@@ -92,9 +151,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 21.57,
+        "arm": "J",
+        "factual_Omean": 21.57,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13007,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -103,9 +169,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 25.83,
+        "arm": "J",
+        "factual_Omean": 25.83,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13008,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -114,9 +187,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 27.44,
+        "arm": "J",
+        "factual_Omean": 26.75,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13009,
       "tau_C": -0.715,
       "tau_O": 0.69,
@@ -125,9 +205,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 24.685,
+        "arm": "J",
+        "factual_Omean": 24.685,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13010,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -136,9 +223,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 20.195,
+        "arm": "J",
+        "factual_Omean": 20.195,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13011,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -147,9 +241,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 29.12,
+        "arm": "J",
+        "factual_Omean": 29.12,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13012,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -158,9 +259,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 28.695,
+        "arm": "J",
+        "factual_Omean": 25.965,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13013,
       "tau_C": -4.43,
       "tau_O": 2.73,
@@ -169,9 +277,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 22.8,
+        "arm": "J",
+        "factual_Omean": 17.175,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13014,
       "tau_C": -7.87,
       "tau_O": 5.625,
@@ -180,9 +295,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 22.575,
+        "arm": "J",
+        "factual_Omean": 22.575,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13015,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -191,9 +313,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 22.38,
+        "arm": "J",
+        "factual_Omean": 22.38,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13016,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -202,9 +331,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 27.25,
+        "arm": "J",
+        "factual_Omean": 26.165,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13017,
       "tau_C": 0.0,
       "tau_O": 1.085,
@@ -213,9 +349,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 12.54,
+        "arm": "J",
+        "factual_Omean": 12.54,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13018,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -224,9 +367,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 16.11,
+        "arm": "J",
+        "factual_Omean": 21.945,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13019,
       "tau_C": -6.215,
       "tau_O": -5.835,
@@ -235,9 +385,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 17.555,
+        "arm": "J",
+        "factual_Omean": 17.555,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13020,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -246,9 +403,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 12.71,
+        "arm": "J",
+        "factual_Omean": 12.71,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13021,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -257,9 +421,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 22.05,
+        "arm": "J",
+        "factual_Omean": 22.05,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13022,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -268,9 +439,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 22.435,
+        "arm": "J",
+        "factual_Omean": 26.67,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13023,
       "tau_C": 5.0,
       "tau_O": -4.235,
@@ -279,9 +457,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 20.81,
+        "arm": "J",
+        "factual_Omean": 18.6,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13024,
       "tau_C": 0.0,
       "tau_O": 2.21,
@@ -290,9 +475,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 21.42,
+        "arm": "J",
+        "factual_Omean": 23.015,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13025,
       "tau_C": 2.875,
       "tau_O": -1.595,
@@ -301,9 +493,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 22.54,
+        "arm": "J",
+        "factual_Omean": 22.54,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13026,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -312,9 +511,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 27.695,
+        "arm": "J",
+        "factual_Omean": 25.74,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13027,
       "tau_C": 0.0,
       "tau_O": 1.955,
@@ -323,9 +529,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 32.835,
+        "arm": "J",
+        "factual_Omean": 29.15,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13028,
       "tau_C": 0.0,
       "tau_O": 3.685,
@@ -334,9 +547,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 13.97,
+        "arm": "J",
+        "factual_Omean": 13.765,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13029,
       "tau_C": -13.92,
       "tau_O": 0.205,
@@ -345,9 +565,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 28.765,
+        "arm": "J",
+        "factual_Omean": 24.86,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13030,
       "tau_C": -6.28,
       "tau_O": 3.905,
@@ -356,9 +583,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 16.67,
+        "arm": "J",
+        "factual_Omean": 16.67,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13031,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -367,9 +601,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 28.39,
+        "arm": "J",
+        "factual_Omean": 25.14,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13032,
       "tau_C": 2.06,
       "tau_O": 3.25,
@@ -378,9 +619,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 28.91,
+        "arm": "J",
+        "factual_Omean": 25.985,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13033,
       "tau_C": -5.455,
       "tau_O": 2.925,
@@ -389,9 +637,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 23.32,
+        "arm": "J",
+        "factual_Omean": 23.32,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13034,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -400,9 +655,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 28.78,
+        "arm": "J",
+        "factual_Omean": 24.02,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13035,
       "tau_C": 0.0,
       "tau_O": 4.76,
@@ -411,9 +673,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 18.28,
+        "arm": "J",
+        "factual_Omean": 18.28,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13036,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -422,9 +691,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 29.13,
+        "arm": "J",
+        "factual_Omean": 22.115,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13037,
       "tau_C": -5.955,
       "tau_O": 7.015,
@@ -433,9 +709,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 26.285,
+        "arm": "J",
+        "factual_Omean": 28.615,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13038,
       "tau_C": 5.0,
       "tau_O": -2.33,
@@ -444,9 +727,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 23.005,
+        "arm": "J",
+        "factual_Omean": 18.105,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13039,
       "tau_C": -2.96,
       "tau_O": 4.9,
@@ -455,9 +745,16 @@
     },
     {
       "E": true,
-      "H": "n/a",
+      "H": true,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 26.925,
+        "arm": "J",
+        "factual_Omean": 22.715,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13040,
       "tau_C": -2.22,
       "tau_O": 4.21,
@@ -466,9 +763,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 37.63,
+        "arm": "J",
+        "factual_Omean": 35.83,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13041,
       "tau_C": -6.845,
       "tau_O": 1.8,
@@ -477,9 +781,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 19.555,
+        "arm": "J",
+        "factual_Omean": 25.69,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13042,
       "tau_C": -0.83,
       "tau_O": -6.135,
@@ -488,9 +799,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 26.45,
+        "arm": "J",
+        "factual_Omean": 26.45,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13043,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -499,9 +817,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 30.005,
+        "arm": "J",
+        "factual_Omean": 28.365,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13044,
       "tau_C": -4.94,
       "tau_O": 1.64,
@@ -510,9 +835,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 27.995,
+        "arm": "J",
+        "factual_Omean": 30.14,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13045,
       "tau_C": 5.0,
       "tau_O": -2.145,
@@ -521,9 +853,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 21.59,
+        "arm": "J",
+        "factual_Omean": 21.205,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13046,
       "tau_C": 0.0,
       "tau_O": 0.385,
@@ -532,9 +871,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 17.24,
+        "arm": "J",
+        "factual_Omean": 17.24,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13047,
       "tau_C": 0.0,
       "tau_O": 0.0,
@@ -543,9 +889,16 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1a",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 28.845,
+        "arm": "J",
+        "factual_Omean": 27.225,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13048,
       "tau_C": -10.085,
       "tau_O": 1.62,
@@ -554,14 +907,1877 @@
     },
     {
       "E": false,
-      "H": "n/a",
+      "H": false,
       "M": "forbidden",
       "case": "A1b",
+      "epsilon": 0.0,
+      "harm_reference": {
+        "Omean": 19.155,
+        "arm": "J",
+        "factual_Omean": 19.155,
+        "interpretation": "no sender directives or induced relay"
+      },
       "seed": 13049,
       "tau_C": 0.0,
       "tau_O": 0.0,
       "tau_W": 0.0,
       "unit": "population-13049"
     }
-  ]
+  ],
+  "strata": {
+    "0": {
+      "cp95": [
+        0.13060991619745688,
+        0.38169074810403925
+      ],
+      "epsilon": 0,
+      "estimand": "share of forbidden worlds with oracle tau_O >= 2.5",
+      "evidence": "development",
+      "harm": {
+        "cp95": [
+          0.13060991619745688,
+          0.38169074810403925
+        ],
+        "definition": "E[Omean_J]-E[Omean_F] > 2.5; J disables all A1a/A1b directives",
+        "k": 12,
+        "n": 50
+      },
+      "k": 12,
+      "mechanism_counts": {
+        "A1a": 27,
+        "A1b": 23
+      },
+      "n": 50,
+      "rate": 0.24,
+      "rows": [
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 33.755,
+            "arm": "J",
+            "factual_Omean": 23.485,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13000,
+          "tau_C": 0.0,
+          "tau_O": 10.27,
+          "tau_W": 20.54,
+          "unit": "population-13000"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 27.235,
+            "arm": "J",
+            "factual_Omean": 23.525,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13001,
+          "tau_C": -8.975,
+          "tau_O": 3.71,
+          "tau_W": 25.37,
+          "unit": "population-13001"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 17.82,
+            "arm": "J",
+            "factual_Omean": 19.035,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13002,
+          "tau_C": 5.0,
+          "tau_O": -1.215,
+          "tau_W": -12.43,
+          "unit": "population-13002"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 17.31,
+            "arm": "J",
+            "factual_Omean": 22.31,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13003,
+          "tau_C": 0.22,
+          "tau_O": -5.0,
+          "tau_W": -10.44,
+          "unit": "population-13003"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 20.23,
+            "arm": "J",
+            "factual_Omean": 20.23,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13004,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13004"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 22.235,
+            "arm": "J",
+            "factual_Omean": 22.235,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13005,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13005"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 23.725,
+            "arm": "J",
+            "factual_Omean": 24.36,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13006,
+          "tau_C": -2.625,
+          "tau_O": -0.635,
+          "tau_W": 3.98,
+          "unit": "population-13006"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 21.57,
+            "arm": "J",
+            "factual_Omean": 21.57,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13007,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13007"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 25.83,
+            "arm": "J",
+            "factual_Omean": 25.83,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13008,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13008"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 27.44,
+            "arm": "J",
+            "factual_Omean": 26.75,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13009,
+          "tau_C": -0.715,
+          "tau_O": 0.69,
+          "tau_W": 2.81,
+          "unit": "population-13009"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 24.685,
+            "arm": "J",
+            "factual_Omean": 24.685,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13010,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13010"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 20.195,
+            "arm": "J",
+            "factual_Omean": 20.195,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13011,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13011"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 29.12,
+            "arm": "J",
+            "factual_Omean": 29.12,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13012,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13012"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 28.695,
+            "arm": "J",
+            "factual_Omean": 25.965,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13013,
+          "tau_C": -4.43,
+          "tau_O": 2.73,
+          "tau_W": 14.32,
+          "unit": "population-13013"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 22.8,
+            "arm": "J",
+            "factual_Omean": 17.175,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13014,
+          "tau_C": -7.87,
+          "tau_O": 5.625,
+          "tau_W": 26.99,
+          "unit": "population-13014"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 22.575,
+            "arm": "J",
+            "factual_Omean": 22.575,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13015,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13015"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 22.38,
+            "arm": "J",
+            "factual_Omean": 22.38,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13016,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13016"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 27.25,
+            "arm": "J",
+            "factual_Omean": 26.165,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13017,
+          "tau_C": 0.0,
+          "tau_O": 1.085,
+          "tau_W": 2.17,
+          "unit": "population-13017"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 12.54,
+            "arm": "J",
+            "factual_Omean": 12.54,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13018,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13018"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 16.11,
+            "arm": "J",
+            "factual_Omean": 21.945,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13019,
+          "tau_C": -6.215,
+          "tau_O": -5.835,
+          "tau_W": 0.76,
+          "unit": "population-13019"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 17.555,
+            "arm": "J",
+            "factual_Omean": 17.555,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13020,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13020"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 12.71,
+            "arm": "J",
+            "factual_Omean": 12.71,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13021,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13021"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 22.05,
+            "arm": "J",
+            "factual_Omean": 22.05,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13022,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13022"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 22.435,
+            "arm": "J",
+            "factual_Omean": 26.67,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13023,
+          "tau_C": 5.0,
+          "tau_O": -4.235,
+          "tau_W": -18.47,
+          "unit": "population-13023"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 20.81,
+            "arm": "J",
+            "factual_Omean": 18.6,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13024,
+          "tau_C": 0.0,
+          "tau_O": 2.21,
+          "tau_W": 4.42,
+          "unit": "population-13024"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 21.42,
+            "arm": "J",
+            "factual_Omean": 23.015,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13025,
+          "tau_C": 2.875,
+          "tau_O": -1.595,
+          "tau_W": -8.94,
+          "unit": "population-13025"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 22.54,
+            "arm": "J",
+            "factual_Omean": 22.54,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13026,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13026"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 27.695,
+            "arm": "J",
+            "factual_Omean": 25.74,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13027,
+          "tau_C": 0.0,
+          "tau_O": 1.955,
+          "tau_W": 3.91,
+          "unit": "population-13027"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 32.835,
+            "arm": "J",
+            "factual_Omean": 29.15,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13028,
+          "tau_C": 0.0,
+          "tau_O": 3.685,
+          "tau_W": 7.37,
+          "unit": "population-13028"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 13.97,
+            "arm": "J",
+            "factual_Omean": 13.765,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13029,
+          "tau_C": -13.92,
+          "tau_O": 0.205,
+          "tau_W": 28.25,
+          "unit": "population-13029"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 28.765,
+            "arm": "J",
+            "factual_Omean": 24.86,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13030,
+          "tau_C": -6.28,
+          "tau_O": 3.905,
+          "tau_W": 20.37,
+          "unit": "population-13030"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 16.67,
+            "arm": "J",
+            "factual_Omean": 16.67,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13031,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13031"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 28.39,
+            "arm": "J",
+            "factual_Omean": 25.14,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13032,
+          "tau_C": 2.06,
+          "tau_O": 3.25,
+          "tau_W": 2.38,
+          "unit": "population-13032"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 28.91,
+            "arm": "J",
+            "factual_Omean": 25.985,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13033,
+          "tau_C": -5.455,
+          "tau_O": 2.925,
+          "tau_W": 16.76,
+          "unit": "population-13033"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 23.32,
+            "arm": "J",
+            "factual_Omean": 23.32,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13034,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13034"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 28.78,
+            "arm": "J",
+            "factual_Omean": 24.02,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13035,
+          "tau_C": 0.0,
+          "tau_O": 4.76,
+          "tau_W": 9.52,
+          "unit": "population-13035"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 18.28,
+            "arm": "J",
+            "factual_Omean": 18.28,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13036,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13036"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 29.13,
+            "arm": "J",
+            "factual_Omean": 22.115,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13037,
+          "tau_C": -5.955,
+          "tau_O": 7.015,
+          "tau_W": 25.94,
+          "unit": "population-13037"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 26.285,
+            "arm": "J",
+            "factual_Omean": 28.615,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13038,
+          "tau_C": 5.0,
+          "tau_O": -2.33,
+          "tau_W": -14.66,
+          "unit": "population-13038"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 23.005,
+            "arm": "J",
+            "factual_Omean": 18.105,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13039,
+          "tau_C": -2.96,
+          "tau_O": 4.9,
+          "tau_W": 15.72,
+          "unit": "population-13039"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 26.925,
+            "arm": "J",
+            "factual_Omean": 22.715,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13040,
+          "tau_C": -2.22,
+          "tau_O": 4.21,
+          "tau_W": 12.86,
+          "unit": "population-13040"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 37.63,
+            "arm": "J",
+            "factual_Omean": 35.83,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13041,
+          "tau_C": -6.845,
+          "tau_O": 1.8,
+          "tau_W": 17.29,
+          "unit": "population-13041"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 19.555,
+            "arm": "J",
+            "factual_Omean": 25.69,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13042,
+          "tau_C": -0.83,
+          "tau_O": -6.135,
+          "tau_W": -10.61,
+          "unit": "population-13042"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 26.45,
+            "arm": "J",
+            "factual_Omean": 26.45,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13043,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13043"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 30.005,
+            "arm": "J",
+            "factual_Omean": 28.365,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13044,
+          "tau_C": -4.94,
+          "tau_O": 1.64,
+          "tau_W": 13.16,
+          "unit": "population-13044"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 27.995,
+            "arm": "J",
+            "factual_Omean": 30.14,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13045,
+          "tau_C": 5.0,
+          "tau_O": -2.145,
+          "tau_W": -14.29,
+          "unit": "population-13045"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 21.59,
+            "arm": "J",
+            "factual_Omean": 21.205,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13046,
+          "tau_C": 0.0,
+          "tau_O": 0.385,
+          "tau_W": 0.77,
+          "unit": "population-13046"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 17.24,
+            "arm": "J",
+            "factual_Omean": 17.24,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13047,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13047"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 28.845,
+            "arm": "J",
+            "factual_Omean": 27.225,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13048,
+          "tau_C": -10.085,
+          "tau_O": 1.62,
+          "tau_W": 23.41,
+          "unit": "population-13048"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.0,
+          "harm_reference": {
+            "Omean": 19.155,
+            "arm": "J",
+            "factual_Omean": 19.155,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13049,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13049"
+        }
+      ]
+    },
+    "0.1": {
+      "cp95": [
+        0.03327509358902228,
+        0.21813536643420295
+      ],
+      "epsilon": 0.1,
+      "estimand": "share of forbidden worlds with oracle tau_O >= 2.5",
+      "evidence": "development",
+      "harm": {
+        "cp95": [
+          0.03327509358902228,
+          0.21813536643420295
+        ],
+        "definition": "E[Omean_J]-E[Omean_F] > 2.5; J disables all A1a/A1b directives",
+        "k": 5,
+        "n": 50
+      },
+      "k": 5,
+      "mechanism_counts": {
+        "A1a": 27,
+        "A1b": 23
+      },
+      "n": 50,
+      "rate": 0.1,
+      "rows": [
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 32.58411952,
+            "arm": "J",
+            "factual_Omean": 26.44631834485,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13000,
+          "tau_C": 0.0,
+          "tau_O": 6.13780117515,
+          "tau_W": 12.2756023503,
+          "unit": "population-13000"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 24.47362,
+            "arm": "J",
+            "factual_Omean": 22.36630618,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13001,
+          "tau_C": -6.753559696,
+          "tau_O": 2.10731382,
+          "tau_W": 17.721747032,
+          "unit": "population-13001"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 18.2495,
+            "arm": "J",
+            "factual_Omean": 19.350488,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13002,
+          "tau_C": 1.73106378825,
+          "tau_O": -1.100988,
+          "tau_W": -5.6641035765,
+          "unit": "population-13002"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 19.6161828,
+            "arm": "J",
+            "factual_Omean": 22.1873439525,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13003,
+          "tau_C": -1.74749559285,
+          "tau_O": -2.5711611525,
+          "tau_W": -1.6473311193,
+          "unit": "population-13003"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 19.26008098,
+            "arm": "J",
+            "factual_Omean": 18.62325121615,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13004,
+          "tau_C": -0.4211601885,
+          "tau_O": 0.63682976385,
+          "tau_W": 2.1159799047,
+          "unit": "population-13004"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 22.599999,
+            "arm": "J",
+            "factual_Omean": 23.11820808355,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13005,
+          "tau_C": -0.9869629515,
+          "tau_O": -0.51820908355,
+          "tau_W": 0.9375077359,
+          "unit": "population-13005"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 21.83524992,
+            "arm": "J",
+            "factual_Omean": 22.623713397,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13006,
+          "tau_C": -3.25071075,
+          "tau_O": -0.788463477,
+          "tau_W": 4.924494546,
+          "unit": "population-13006"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 21.38849728,
+            "arm": "J",
+            "factual_Omean": 21.38849728,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13007,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13007"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 25.3793502,
+            "arm": "J",
+            "factual_Omean": 25.283831892,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13008,
+          "tau_C": -0.834421617,
+          "tau_O": 0.095518308,
+          "tau_W": 1.85987985,
+          "unit": "population-13008"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 25.9363369,
+            "arm": "J",
+            "factual_Omean": 25.180103819,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13009,
+          "tau_C": -0.5746745,
+          "tau_O": 0.756233081,
+          "tau_W": 2.661815162,
+          "unit": "population-13009"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 23.8904566,
+            "arm": "J",
+            "factual_Omean": 23.684523577,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13010,
+          "tau_C": -0.0236698281,
+          "tau_O": 0.205933023,
+          "tau_W": 0.4592057022,
+          "unit": "population-13010"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 18.81995794,
+            "arm": "J",
+            "factual_Omean": 18.81995794,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13011,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13011"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 27.75275039,
+            "arm": "J",
+            "factual_Omean": 27.6100498352,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13012,
+          "tau_C": -0.63839295,
+          "tau_O": 0.1427005548,
+          "tau_W": 1.5621870096,
+          "unit": "population-13012"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 26.4123892,
+            "arm": "J",
+            "factual_Omean": 25.070204818,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13013,
+          "tau_C": -3.10516432785,
+          "tau_O": 1.342184382,
+          "tau_W": 8.8946974197,
+          "unit": "population-13013"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 19.364718,
+            "arm": "J",
+            "factual_Omean": 17.00210676,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13014,
+          "tau_C": -6.2857667785,
+          "tau_O": 2.36261124,
+          "tau_W": 17.296756037,
+          "unit": "population-13014"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 22.0320721,
+            "arm": "J",
+            "factual_Omean": 22.0320721,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13015,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13015"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 21.7543958,
+            "arm": "J",
+            "factual_Omean": 21.719260242,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13016,
+          "tau_C": -0.49018695,
+          "tau_O": 0.035135558,
+          "tau_W": 1.050645016,
+          "unit": "population-13016"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 25.387595255,
+            "arm": "J",
+            "factual_Omean": 25.2685177949,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13017,
+          "tau_C": 0.174361896,
+          "tau_O": 0.1190774601,
+          "tau_W": -0.1105688718,
+          "unit": "population-13017"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 15.94186595,
+            "arm": "J",
+            "factual_Omean": 14.6110289435,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13018,
+          "tau_C": -0.9654762276,
+          "tau_O": 1.3308370065,
+          "tau_W": 4.5926264682,
+          "unit": "population-13018"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 19.2544893,
+            "arm": "J",
+            "factual_Omean": 19.962298539,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13019,
+          "tau_C": -3.4150813,
+          "tau_O": -0.707809239,
+          "tau_W": 5.414544122,
+          "unit": "population-13019"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 17.58339776,
+            "arm": "J",
+            "factual_Omean": 17.391654398,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13020,
+          "tau_C": 0.02499012,
+          "tau_O": 0.191743362,
+          "tau_W": 0.333506484,
+          "unit": "population-13020"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 18.45959361,
+            "arm": "J",
+            "factual_Omean": 18.45959361,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13021,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13021"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 21.75992772,
+            "arm": "J",
+            "factual_Omean": 21.8591244882,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13022,
+          "tau_C": -1.923784795,
+          "tau_O": -0.0991967682,
+          "tau_W": 3.6491760536,
+          "unit": "population-13022"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 22.960262,
+            "arm": "J",
+            "factual_Omean": 24.9383267165,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13023,
+          "tau_C": 1.7517607452,
+          "tau_O": -1.9780647165,
+          "tau_W": -7.4596509234,
+          "unit": "population-13023"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 21.2827,
+            "arm": "J",
+            "factual_Omean": 19.07282398,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13024,
+          "tau_C": -0.1635368616,
+          "tau_O": 2.20987602,
+          "tau_W": 4.7468257632,
+          "unit": "population-13024"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 20.5593711,
+            "arm": "J",
+            "factual_Omean": 21.773766111,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13025,
+          "tau_C": 0.600620436,
+          "tau_O": -1.214395011,
+          "tau_W": -3.630030894,
+          "unit": "population-13025"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 23.76498068,
+            "arm": "J",
+            "factual_Omean": 23.273693,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13026,
+          "tau_C": -0.018797265,
+          "tau_O": 0.49128768,
+          "tau_W": 1.02016989,
+          "unit": "population-13026"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 26.1709398,
+            "arm": "J",
+            "factual_Omean": 25.0234132455,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13027,
+          "tau_C": -0.63532791,
+          "tau_O": 1.1475265545,
+          "tau_W": 3.565708929,
+          "unit": "population-13027"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 31.21483244,
+            "arm": "J",
+            "factual_Omean": 28.9644548324,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13028,
+          "tau_C": -0.56794284,
+          "tau_O": 2.2503776076,
+          "tau_W": 5.6366408952,
+          "unit": "population-13028"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 13.734918,
+            "arm": "J",
+            "factual_Omean": 13.0897088535,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13029,
+          "tau_C": -10.97044379605,
+          "tau_O": 0.6452091465,
+          "tau_W": 23.2313058851,
+          "unit": "population-13029"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 28.301245,
+            "arm": "J",
+            "factual_Omean": 25.47208085,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13030,
+          "tau_C": -5.2259543648,
+          "tau_O": 2.82916415,
+          "tau_W": 16.1102370296,
+          "unit": "population-13030"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 17.70032594,
+            "arm": "J",
+            "factual_Omean": 17.4097318871,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13031,
+          "tau_C": 0.017673147,
+          "tau_O": 0.2905940529,
+          "tau_W": 0.5458418118,
+          "unit": "population-13031"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 26.440806405,
+            "arm": "J",
+            "factual_Omean": 24.54637338705,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13032,
+          "tau_C": 0.85615218,
+          "tau_O": 1.89443301795,
+          "tau_W": 2.0765616759,
+          "unit": "population-13032"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 28.112026,
+            "arm": "J",
+            "factual_Omean": 26.24288418,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13033,
+          "tau_C": -4.923646,
+          "tau_O": 1.86914182,
+          "tau_W": 13.58557564,
+          "unit": "population-13033"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 23.08424828,
+            "arm": "J",
+            "factual_Omean": 23.3588567743,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13034,
+          "tau_C": -2.7158015,
+          "tau_O": -0.2746084943,
+          "tau_W": 4.8823860114,
+          "unit": "population-13034"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 26.673778455,
+            "arm": "J",
+            "factual_Omean": 24.00099954135,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13035,
+          "tau_C": -0.00752895,
+          "tau_O": 2.67277891365,
+          "tau_W": 5.3606157273,
+          "unit": "population-13035"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 19.037818,
+            "arm": "J",
+            "factual_Omean": 19.36700281,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13036,
+          "tau_C": -1.72130714415,
+          "tau_O": -0.32918481,
+          "tau_W": 2.7842446683,
+          "unit": "population-13036"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 26.55382018,
+            "arm": "J",
+            "factual_Omean": 21.8709550039,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13037,
+          "tau_C": -5.6022636075,
+          "tau_O": 4.6828651761,
+          "tau_W": 20.5702575672,
+          "unit": "population-13037"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 26.2970348,
+            "arm": "J",
+            "factual_Omean": 27.029168042,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13038,
+          "tau_C": 2.2940807688,
+          "tau_O": -0.732133242,
+          "tau_W": -6.0524280216,
+          "unit": "population-13038"
+        },
+        {
+          "E": true,
+          "H": true,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 21.291696,
+            "arm": "J",
+            "factual_Omean": 18.4850715645,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13039,
+          "tau_C": -0.9947613402,
+          "tau_O": 2.8066244355,
+          "tau_W": 7.6027715514,
+          "unit": "population-13039"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 24.22232112,
+            "arm": "J",
+            "factual_Omean": 21.779293768,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13040,
+          "tau_C": -2.82214,
+          "tau_O": 2.443027352,
+          "tau_W": 10.530334704,
+          "unit": "population-13040"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 35.61022098,
+            "arm": "J",
+            "factual_Omean": 34.772940252,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13041,
+          "tau_C": -5.37830935,
+          "tau_O": 0.837280728,
+          "tau_W": 12.431180156,
+          "unit": "population-13041"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 19.876694,
+            "arm": "J",
+            "factual_Omean": 23.45225705,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13042,
+          "tau_C": -1.663521883,
+          "tau_O": -3.57556305,
+          "tau_W": -3.824082334,
+          "unit": "population-13042"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 26.210006,
+            "arm": "J",
+            "factual_Omean": 26.210006,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13043,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13043"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 28.546895,
+            "arm": "J",
+            "factual_Omean": 26.853212,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13044,
+          "tau_C": -2.6521030494,
+          "tau_O": 1.693683,
+          "tau_W": 8.6915720988,
+          "unit": "population-13044"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 27.98211545,
+            "arm": "J",
+            "factual_Omean": 28.936095587,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13045,
+          "tau_C": 1.22887980765,
+          "tau_O": -0.953980137,
+          "tau_W": -4.3657198893,
+          "unit": "population-13045"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 21.15335653,
+            "arm": "J",
+            "factual_Omean": 20.8380103513,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13046,
+          "tau_C": -0.0035559,
+          "tau_O": 0.3153461787,
+          "tau_W": 0.6378041574,
+          "unit": "population-13046"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 20.0855482,
+            "arm": "J",
+            "factual_Omean": 19.678046677,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13047,
+          "tau_C": -0.1062917478,
+          "tau_O": 0.407501523,
+          "tau_W": 1.0275865416,
+          "unit": "population-13047"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1a",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 26.56051948,
+            "arm": "J",
+            "factual_Omean": 24.8970219274,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13048,
+          "tau_C": -9.90468069,
+          "tau_O": 1.6634975526,
+          "tau_W": 23.1363564852,
+          "unit": "population-13048"
+        },
+        {
+          "E": false,
+          "H": false,
+          "M": "forbidden",
+          "case": "A1b",
+          "epsilon": 0.1,
+          "harm_reference": {
+            "Omean": 19.97862262,
+            "arm": "J",
+            "factual_Omean": 19.97862262,
+            "interpretation": "no sender directives or induced relay"
+          },
+          "seed": 13049,
+          "tau_C": 0.0,
+          "tau_O": 0.0,
+          "tau_W": 0.0,
+          "unit": "population-13049"
+        }
+      ]
+    }
+  }
 }
