@@ -1,0 +1,61 @@
+{
+ "caption": "[DEV] Evidence ladder L0 suspicious text, L1 causal influence, L2 harmful exposure, L3 attribution, with the information set (I0-I5) each rung needs. Concept colours: causal effect (blue), harm (red), attribution (purple), uncertainty (amber).",
+ "evidence_category": "development",
+ "figure": "fig_ladder",
+ "missing_fields": [],
+ "pdf_written": true,
+ "plotted_values": {
+  "colours": {
+   "attribution": "#6b3fa0",
+   "causal": "#0b5cad",
+   "harm": "#b3261e",
+   "uncertainty": "#8a5a00"
+  },
+  "info_sets": {
+   "I0": "transcript + factual",
+   "I1": "+ single knockout K",
+   "I2": "+ sham / placebo",
+   "I3": "+ joint knockout, same-sender",
+   "I4": "+ incentive / environment probe",
+   "I5": "+ external normative record"
+  },
+  "rungs": [
+   {
+    "info_sets": [
+     "I0"
+    ],
+    "name": "Suspicious text",
+    "needs": "transcript + factual outcome",
+    "rung": "L0"
+   },
+   {
+    "info_sets": [
+     "I1"
+    ],
+    "name": "Causal influence",
+    "needs": "+ single-message knockout K",
+    "rung": "L1"
+   },
+   {
+    "info_sets": [
+     "I2",
+     "I3"
+    ],
+    "name": "Harmful exposure",
+    "needs": "+ sham/placebo; + joint knockout of all same-sender carriers",
+    "rung": "L2"
+   },
+   {
+    "info_sets": [
+     "I4",
+     "I5"
+    ],
+    "name": "Attribution",
+    "needs": "+ incentive probe (I4) or external normative record (I5)",
+    "rung": "L3"
+   }
+  ]
+ },
+ "run_label": "DEV",
+ "source_files": {}
+}

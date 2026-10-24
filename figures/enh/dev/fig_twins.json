@@ -1,0 +1,30 @@
+{
+ "caption": "[DEV] One evidence, two verdicts. P2 twin pair at seed 13000 (lowest seed rule). Identical observables under I1-I3 (enumeration), opposite labels, frozen CCC v1.2.2 emits the same exposure-level output for both; the I4 incentive probe separates them.",
+ "evidence_category": "development",
+ "figure": "fig_twins",
+ "missing_fields": [
+  "fig_twins:RESULTS.json[twin_exhibit] (RESULTS.json absent)"
+ ],
+ "pdf_written": true,
+ "plotted_values": {
+  "ccc_v1.2.2_observed_first_difference": null,
+  "enumerated_pair_distinct_by_set": {
+   "I0": false,
+   "I1": false,
+   "I2": false,
+   "I3": false,
+   "I4": true,
+   "I5": true
+  },
+  "members": {},
+  "minimal_pair_separator": "I4",
+  "pair_rule": "P2, epsilon 0, lowest seed in run",
+  "seed": 13000,
+  "twin_exhibit_present": false
+ },
+ "run_label": "DEV",
+ "source_files": {
+  "frontiers.json": "70f7e8e5c6bf835df1b2c85ae9bbeefb739eda3c68d2eeaa762abf80526ca9e5",
+  "separators.json": "28730e4245442a3b3cb02326bb4dad47adcfb30a6ee9d2bf669434c4c8d85b31"
+ }
+}
