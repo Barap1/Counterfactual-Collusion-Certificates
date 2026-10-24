@@ -1,6 +1,6 @@
 {
  "schema": "ccc-tasks/1",
- "updated_utc": "2026-10-24T17:00Z",
+ "updated_utc": "2026-10-24T21:05Z",
  "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
  "policy": {
   "max_worker_depth": 3,
@@ -14,16 +14,16 @@
  },
  "live_agents": [
   {
-   "id": "BENCH-ALIGN2",
-   "owner": "codex gpt-6.1-sol/medium",
-   "started_utc": "2026-10-24T17:40Z",
-   "writes": "ccc/bench/, docs/enh/bench/, regenerated demo outputs"
+   "id": "RA-LEAD",
+   "owner": "claude sonnet (lead; may spawn \u22643 children, depth 2)",
+   "started_utc": "2026-10-24T21:05Z",
+   "writes": "docs/enh/exp003/, ccc/exp003/, tests/test_exp003_*, ops/budget_ledger.jsonl, docs/runner/exp003-*/"
   },
   {
-   "id": "CITE-CHECK",
-   "owner": "claude sonnet",
-   "started_utc": "2026-10-24T17:40Z",
-   "writes": "paper/v2/references_v2.bib, CITATION_AUDIT.md"
+   "id": "WRITE-RES",
+   "owner": "claude sonnet (may run 1 helper at a time)",
+   "started_utc": "2026-10-24T21:15Z",
+   "writes": "docs/enh/writing/"
   }
  ],
  "gates": {
@@ -31,7 +31,7 @@
   "B": "MET (D-032)",
   "C": "PASSED with narrowing (D-035)",
   "D": "technical checks done; owner decisions pending (D-036)",
-  "ENH": "R1 ACCEPTED (D-038); R2 in progress"
+  "ENH": "R1 ACCEPTED (D-038); R2 FROZEN (D-041); prospective run started 19:58Z"
  },
  "tasks": [
   {
@@ -544,7 +544,7 @@
    "id": "BENCH-ALIGN2",
    "objective": "CCC-L v1, RQ2/RQ4b amendments, demo refresh, twin_exhibit",
    "owner": "codex gpt-6.1-sol/medium",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "ccc/bench/, docs/enh/bench/, regenerated demo outputs",
    "gate": "ENH-R2/R3"
   },
@@ -552,13 +552,43 @@
    "id": "CITE-CHECK",
    "objective": "verify paper v2 references and claim-citation fidelity",
    "owner": "claude sonnet",
-   "status": "RUNNING",
+   "status": "DONE",
    "writes": "paper/v2/references_v2.bib, CITATION_AUDIT.md",
    "gate": "ENH-R2/R3"
+  },
+  {
+   "id": "REV-R2",
+   "objective": "independent freeze review",
+   "owner": "claude sonnet",
+   "status": "DONE (APPROVE-WITH-CONDITIONS)",
+   "gate": "ENH-R2"
+  },
+  {
+   "id": "RUN-R2",
+   "objective": "prospective benchmark run (single pass)",
+   "owner": "director (CLI)",
+   "status": "RUNNING",
+   "writes": "docs/enh/r2/run/",
+   "gate": "ENH-R3"
+  },
+  {
+   "id": "RA-LEAD",
+   "objective": "EXP-003 real-agent twin probe on Modal (cap $51)",
+   "owner": "claude sonnet lead",
+   "status": "RUNNING",
+   "gate": "ENH-EXP003",
+   "brief": "docs/enh/exp003/BRIEF.md"
+  },
+  {
+   "id": "WRITE-RES",
+   "objective": "research on winning paper writing; Apart winners analysis; writing playbook",
+   "owner": "claude sonnet",
+   "status": "RUNNING",
+   "gate": "ENH-R4"
   }
  ],
  "handoff": {
-  "running_jobs": "BENCH-ALIGN2, CITE-CHECK",
+  "running_jobs": "RUN-R2 prospective benchmark (background CLI); RA-LEAD (+ its children)",
   "unpushed_commits": 1,
   "repo_visibility": "PUBLIC (re-confirmed by SEC-001 2026-10-24); owner decision pending",
   "worktree": "../ApartSprint-wt-v12 (branch v1.2-impl, fully merged into main; safe to remove after owner OK)"
