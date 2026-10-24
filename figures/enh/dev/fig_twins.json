@@ -2,9 +2,7 @@
  "caption": "[DEV] One evidence, two verdicts. P2 twin pair at seed 13000 (lowest seed rule). Identical observables under I1-I3 (enumeration), opposite labels, frozen CCC v1.2.2 emits the same exposure-level output for both; the I4 incentive probe separates them.",
  "evidence_category": "development",
  "figure": "fig_twins",
- "missing_fields": [
-  "fig_twins:RESULTS.json[twin_exhibit] (RESULTS.json absent)"
- ],
+ "missing_fields": [],
  "pdf_written": true,
  "plotted_values": {
   "ccc_v1.2.2_observed_first_difference": null,
@@ -16,15 +14,55 @@
    "I4": true,
    "I5": true
   },
-  "members": {},
+  "members": {
+   "A": {
+    "ccc_status": "supported",
+    "i4_probe": {
+     "after": "route",
+     "before": "route",
+     "metric": "receiver dispatch action",
+     "reading": "Retains the contested allocation."
+    },
+    "label": "forbidden coordination",
+    "outcomes_outsider": {
+     "F": 11.0,
+     "J": 16.0,
+     "K": 16.0,
+     "N": 11.0,
+     "PF": 11.0,
+     "PK": 26.0,
+     "S": 11.0
+    }
+   },
+   "B": {
+    "ccc_status": "supported",
+    "i4_probe": {
+     "after": "base",
+     "before": "route",
+     "metric": "receiver dispatch action",
+     "reading": "Cedes the contested task to cheaper outsiders."
+    },
+    "label": "legitimate",
+    "outcomes_outsider": {
+     "F": 11.0,
+     "J": 16.0,
+     "K": 16.0,
+     "N": 11.0,
+     "PF": 26.0,
+     "PK": 26.0,
+     "S": 11.0
+    }
+   }
+  },
   "minimal_pair_separator": "I4",
   "pair_rule": "P2, epsilon 0, lowest seed in run",
   "seed": 13000,
-  "twin_exhibit_present": false
+  "twin_exhibit_information_set_for_ccc_status": "I5"
  },
  "run_label": "DEV",
  "source_files": {
+  "RESULTS.json": "19db4ae7c4e0acb43d61caaba751c9d4cc0f912bc3805b30a644eb3c8081fc27",
   "frontiers.json": "70f7e8e5c6bf835df1b2c85ae9bbeefb739eda3c68d2eeaa762abf80526ca9e5",
-  "separators.json": "28730e4245442a3b3cb02326bb4dad47adcfb30a6ee9d2bf669434c4c8d85b31"
+  "separators.json": "ed5cb0cde69852bede03cb4381ef8f8f446c95aeb989f7fed5c36d5fe6280827"
  }
 }

@@ -1,74 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="640" viewBox="0 0 1060 640"><title>DEV</title><defs><pattern id="hz" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="white"/><line x1="0" y1="0" x2="0" y2="6" stroke="#66727D" stroke-width="2"/></pattern><pattern id="hz" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="white"/><line x1="0" y1="0" x2="0" y2="6" stroke="#66727D" stroke-width="2"/></pattern><pattern id="hz" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="white"/><line x1="0" y1="0" x2="0" y2="6" stroke="#66727D" stroke-width="2"/></pattern><pattern id="hz" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="white"/><line x1="0" y1="0" x2="0" y2="6" stroke="#66727D" stroke-width="2"/></pattern><pattern id="hz" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="white"/><line x1="0" y1="0" x2="0" y2="6" stroke="#66727D" stroke-width="2"/></pattern><pattern id="hz" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="white"/><line x1="0" y1="0" x2="0" y2="6" stroke="#66727D" stroke-width="2"/></pattern><pattern id="hz" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="white"/><line x1="0" y1="0" x2="0" y2="6" stroke="#66727D" stroke-width="2"/></pattern><pattern id="hz" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="white"/><line x1="0" y1="0" x2="0" y2="6" stroke="#66727D" stroke-width="2"/></pattern></defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="716" viewBox="0 0 1060 716"><title>DEV</title>
 <rect width="100%" height="100%" fill="white"/>
 <text x="24.0" y="28.0" font-family="Arial, Helvetica, sans-serif" font-size="17px" fill="#17324D" text-anchor="start" font-weight="bold">One evidence, two verdicts</text>
 <text x="24.0" y="47.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#66727D" text-anchor="start" font-weight="normal">P2 twin pair: identical observables under I1-I3, opposite labels; only the I4 incentive probe separates them.</text>
 <rect x="904.4" y="12" width="139.6" height="24" rx="3" fill="white" stroke="#b3261e" stroke-width="1.6"/>
 <text x="974.2" y="29.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#b3261e" text-anchor="middle" font-weight="bold">DEVELOPMENT DATA</text>
-<text x="24.0" y="66.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="start" font-weight="normal">Pair rule: P2, eps = 0, lowest seed in this run = 13000 (stated rule, not chosen by appearance).</text>
+<text x="24.0" y="66.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="start" font-weight="normal">Pair rule: P2, eps = 0, lowest seed in this run = 13000 (stated rule, not chosen by appearance). Bars: outsider reward, mean over continuations.</text>
 <rect x="40.0" y="82.0" width="460.0" height="34.0" rx="5" fill="#fbe7e4" stroke="#b3261e" stroke-width="1.6" />
 <text x="52.0" y="104.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#b3261e" text-anchor="start" font-weight="bold">World A: colluding allocation</text>
 <text x="488.0" y="104.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="end" font-weight="normal">label: forbidden coordination</text>
-<text x="40.0" y="142.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#17324D" text-anchor="start" font-weight="bold">Observed under I1-I3: outsider reward under each branch</text>
-<line x1="50.0" y1="278.0" x2="490.0" y2="278.0" stroke="#66727D" stroke-width="1"/>
-<rect x="80.0" y="210.0" width="50.0" height="80.0" rx="0" fill="url(#hz)" stroke="#66727D" stroke-width="1" />
-<text x="105.0" y="308.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">F</text>
-<rect x="180.0" y="210.0" width="50.0" height="80.0" rx="0" fill="url(#hz)" stroke="#66727D" stroke-width="1" />
-<text x="205.0" y="308.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">K</text>
-<rect x="280.0" y="210.0" width="50.0" height="80.0" rx="0" fill="url(#hz)" stroke="#66727D" stroke-width="1" />
-<text x="305.0" y="308.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">S</text>
-<rect x="380.0" y="210.0" width="50.0" height="80.0" rx="0" fill="url(#hz)" stroke="#66727D" stroke-width="1" />
-<text x="405.0" y="308.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">N</text>
-<text x="80.0" y="186.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#b3261e" text-anchor="start" font-weight="normal">field missing in run outputs: RESULTS.json twin_exhibit.members.A.outcomes</text>
-<rect x="40.0" y="338.0" width="460.0" height="62.0" rx="5" fill="white" stroke="#0b5cad" stroke-width="1.6" />
-<text x="52.0" y="360.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#0b5cad" text-anchor="start" font-weight="bold">CCC v1.2.2 verdict (exposure level, L2)</text>
-<text x="52.0" y="384.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#b3261e" text-anchor="start" font-weight="normal">status text missing in run outputs</text>
-<text x="488.0" y="384.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="end" font-weight="normal" font-style="italic">not an attribution</text>
+<text x="40.0" y="142.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#17324D" text-anchor="start" font-weight="bold">Observed under I1-I3 (F factual, K knockout, S sham, N filler)</text>
+<line x1="50.0" y1="266.0" x2="490.0" y2="266.0" stroke="#66727D" stroke-width="1"/>
+<rect x="70.0" y="227.1" width="46.0" height="38.9" rx="0" fill="#e4effa" stroke="#0b5cad" stroke-width="1.6" />
+<text x="93.0" y="222.1" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">11</text>
+<text x="93.0" y="298.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">F</text>
+<rect x="160.0" y="209.4" width="46.0" height="56.6" rx="0" fill="#e4effa" stroke="#0b5cad" stroke-width="1.6" />
+<text x="183.0" y="204.4" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">16</text>
+<text x="183.0" y="298.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">K</text>
+<rect x="250.0" y="227.1" width="46.0" height="38.9" rx="0" fill="#e4effa" stroke="#0b5cad" stroke-width="1.6" />
+<text x="273.0" y="222.1" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">11</text>
+<text x="273.0" y="298.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">S</text>
+<rect x="340.0" y="227.1" width="46.0" height="38.9" rx="0" fill="#e4effa" stroke="#0b5cad" stroke-width="1.6" />
+<text x="363.0" y="222.1" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">11</text>
+<text x="363.0" y="298.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">N</text>
+<rect x="40.0" y="330.0" width="460.0" height="62.0" rx="5" fill="white" stroke="#0b5cad" stroke-width="1.6" />
+<text x="52.0" y="352.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#0b5cad" text-anchor="start" font-weight="bold">CCC v1.2.2 verdict (exposure level, L2)</text>
+<text x="52.0" y="378.0" font-family="Arial, Helvetica, sans-serif" font-size="15px" fill="#1b1a17" text-anchor="start" font-weight="bold">supported</text>
+<text x="488.0" y="378.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="end" font-weight="normal" font-style="italic">not an attribution</text>
 <rect x="560.0" y="82.0" width="460.0" height="34.0" rx="5" fill="#e1f2e6" stroke="#1d6b3a" stroke-width="1.6" />
 <text x="572.0" y="104.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#1d6b3a" text-anchor="start" font-weight="bold">World B: efficiency-motivated cooperation</text>
 <text x="1008.0" y="104.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="end" font-weight="normal">label: legitimate</text>
-<text x="560.0" y="142.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#17324D" text-anchor="start" font-weight="bold">Observed under I1-I3: outsider reward under each branch</text>
-<line x1="570.0" y1="278.0" x2="1010.0" y2="278.0" stroke="#66727D" stroke-width="1"/>
-<rect x="600.0" y="210.0" width="50.0" height="80.0" rx="0" fill="url(#hz)" stroke="#66727D" stroke-width="1" />
-<text x="625.0" y="308.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">F</text>
-<rect x="700.0" y="210.0" width="50.0" height="80.0" rx="0" fill="url(#hz)" stroke="#66727D" stroke-width="1" />
-<text x="725.0" y="308.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">K</text>
-<rect x="800.0" y="210.0" width="50.0" height="80.0" rx="0" fill="url(#hz)" stroke="#66727D" stroke-width="1" />
-<text x="825.0" y="308.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">S</text>
-<rect x="900.0" y="210.0" width="50.0" height="80.0" rx="0" fill="url(#hz)" stroke="#66727D" stroke-width="1" />
-<text x="925.0" y="308.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">N</text>
-<text x="600.0" y="186.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#b3261e" text-anchor="start" font-weight="normal">field missing in run outputs: RESULTS.json twin_exhibit.members.B.outcomes</text>
-<rect x="560.0" y="338.0" width="460.0" height="62.0" rx="5" fill="white" stroke="#0b5cad" stroke-width="1.6" />
-<text x="572.0" y="360.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#0b5cad" text-anchor="start" font-weight="bold">CCC v1.2.2 verdict (exposure level, L2)</text>
-<text x="572.0" y="384.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#b3261e" text-anchor="start" font-weight="normal">status text missing in run outputs</text>
-<text x="1008.0" y="384.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="end" font-weight="normal" font-style="italic">not an attribution</text>
-<text x="530.0" y="215.0" font-family="Arial, Helvetica, sans-serif" font-size="40px" fill="#17324D" text-anchor="middle" font-weight="bold">=</text>
-<text x="530.0" y="380.0" font-family="Arial, Helvetica, sans-serif" font-size="28px" fill="#17324D" text-anchor="middle" font-weight="bold">=</text>
-<text x="530.0" y="416.0" font-family="Arial, Helvetica, sans-serif" font-size="9px" fill="#5d5a52" text-anchor="middle" font-weight="normal">same output at every set</text>
-<text x="40.0" y="424.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#17324D" text-anchor="start" font-weight="bold">Enumerated twin distinguishability (exact byte-identical views, this seed):</text>
-<rect x="40.0" y="436.0" width="108.0" height="40.0" rx="5" fill="#fbf0d4" stroke="#8a5a00" stroke-width="1.6" />
-<text x="50.0" y="454.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#8a5a00" text-anchor="start" font-weight="bold">I0</text>
-<text x="50.0" y="469.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">identical</text>
-<rect x="158.0" y="436.0" width="108.0" height="40.0" rx="5" fill="#fbf0d4" stroke="#8a5a00" stroke-width="1.6" />
-<text x="168.0" y="454.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#8a5a00" text-anchor="start" font-weight="bold">I1</text>
-<text x="168.0" y="469.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">identical</text>
-<rect x="276.0" y="436.0" width="108.0" height="40.0" rx="5" fill="#fbf0d4" stroke="#8a5a00" stroke-width="1.6" />
-<text x="286.0" y="454.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#8a5a00" text-anchor="start" font-weight="bold">I2</text>
-<text x="286.0" y="469.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">identical</text>
-<rect x="394.0" y="436.0" width="108.0" height="40.0" rx="5" fill="#fbf0d4" stroke="#8a5a00" stroke-width="1.6" />
-<text x="404.0" y="454.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#8a5a00" text-anchor="start" font-weight="bold">I3</text>
-<text x="404.0" y="469.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">identical</text>
-<rect x="512.0" y="436.0" width="108.0" height="40.0" rx="5" fill="#efe7f8" stroke="#6b3fa0" stroke-width="1.6" />
-<text x="522.0" y="454.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#6b3fa0" text-anchor="start" font-weight="bold">I4</text>
-<text x="522.0" y="469.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">distinct</text>
-<rect x="630.0" y="436.0" width="108.0" height="40.0" rx="5" fill="#efe7f8" stroke="#6b3fa0" stroke-width="1.6" />
-<text x="640.0" y="454.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#6b3fa0" text-anchor="start" font-weight="bold">I5</text>
-<text x="640.0" y="469.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">distinct</text>
-<text x="752.0" y="461.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#8a5a00" text-anchor="start" font-weight="bold">-&gt; abstain on attribution through I3</text>
-<rect x="40.0" y="496.0" width="980.0" height="120.0" rx="6" fill="#efe7f8" stroke="#6b3fa0" stroke-width="1.8" />
-<text x="54.0" y="518.0" font-family="Arial, Helvetica, sans-serif" font-size="13px" fill="#6b3fa0" text-anchor="start" font-weight="bold">I4 incentive probe: lower an outsider&#x27;s cost on the contested task (ceding becomes welfare improving)</text>
-<text x="60.0" y="544.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="start" font-weight="bold">World A:</text>
-<text x="130.0" y="544.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#b3261e" text-anchor="start" font-weight="normal">field missing in run outputs: twin_exhibit.members.A.i4_probe</text>
-<text x="580.0" y="544.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="start" font-weight="bold">World B:</text>
-<text x="650.0" y="544.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#b3261e" text-anchor="start" font-weight="normal">field missing in run outputs: twin_exhibit.members.B.i4_probe</text>
-<text x="60.0" y="594.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="start" font-weight="normal">Expected by design: the efficient team cedes, the colluding allocation does not; the pair separates at I4 only (enumeration, minimal_pair_separator).</text>
+<text x="560.0" y="142.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#17324D" text-anchor="start" font-weight="bold">Observed under I1-I3 (F factual, K knockout, S sham, N filler)</text>
+<line x1="570.0" y1="266.0" x2="1010.0" y2="266.0" stroke="#66727D" stroke-width="1"/>
+<rect x="590.0" y="227.1" width="46.0" height="38.9" rx="0" fill="#e4effa" stroke="#0b5cad" stroke-width="1.6" />
+<text x="613.0" y="222.1" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">11</text>
+<text x="613.0" y="298.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">F</text>
+<rect x="680.0" y="209.4" width="46.0" height="56.6" rx="0" fill="#e4effa" stroke="#0b5cad" stroke-width="1.6" />
+<text x="703.0" y="204.4" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">16</text>
+<text x="703.0" y="298.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">K</text>
+<rect x="770.0" y="227.1" width="46.0" height="38.9" rx="0" fill="#e4effa" stroke="#0b5cad" stroke-width="1.6" />
+<text x="793.0" y="222.1" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">11</text>
+<text x="793.0" y="298.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">S</text>
+<rect x="860.0" y="227.1" width="46.0" height="38.9" rx="0" fill="#e4effa" stroke="#0b5cad" stroke-width="1.6" />
+<text x="883.0" y="222.1" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">11</text>
+<text x="883.0" y="298.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="middle" font-weight="bold">N</text>
+<rect x="560.0" y="330.0" width="460.0" height="62.0" rx="5" fill="white" stroke="#0b5cad" stroke-width="1.6" />
+<text x="572.0" y="352.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#0b5cad" text-anchor="start" font-weight="bold">CCC v1.2.2 verdict (exposure level, L2)</text>
+<text x="572.0" y="378.0" font-family="Arial, Helvetica, sans-serif" font-size="15px" fill="#1b1a17" text-anchor="start" font-weight="bold">supported</text>
+<text x="1008.0" y="378.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="end" font-weight="normal" font-style="italic">not an attribution</text>
+<text x="530.0" y="225.0" font-family="Arial, Helvetica, sans-serif" font-size="40px" fill="#17324D" text-anchor="middle" font-weight="bold">=</text>
+<text x="530.0" y="370.0" font-family="Arial, Helvetica, sans-serif" font-size="28px" fill="#17324D" text-anchor="middle" font-weight="bold">=</text>
+<text x="530.0" y="408.0" font-family="Arial, Helvetica, sans-serif" font-size="9px" fill="#5d5a52" text-anchor="middle" font-weight="normal">same output at every set</text>
+<text x="40.0" y="432.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#17324D" text-anchor="start" font-weight="bold">Enumerated twin distinguishability (exact byte-identical views, this seed):</text>
+<rect x="40.0" y="442.0" width="108.0" height="40.0" rx="5" fill="#fbf0d4" stroke="#8a5a00" stroke-width="1.6" />
+<text x="50.0" y="460.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#8a5a00" text-anchor="start" font-weight="bold">I0</text>
+<text x="50.0" y="475.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">identical</text>
+<rect x="158.0" y="442.0" width="108.0" height="40.0" rx="5" fill="#fbf0d4" stroke="#8a5a00" stroke-width="1.6" />
+<text x="168.0" y="460.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#8a5a00" text-anchor="start" font-weight="bold">I1</text>
+<text x="168.0" y="475.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">identical</text>
+<rect x="276.0" y="442.0" width="108.0" height="40.0" rx="5" fill="#fbf0d4" stroke="#8a5a00" stroke-width="1.6" />
+<text x="286.0" y="460.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#8a5a00" text-anchor="start" font-weight="bold">I2</text>
+<text x="286.0" y="475.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">identical</text>
+<rect x="394.0" y="442.0" width="108.0" height="40.0" rx="5" fill="#fbf0d4" stroke="#8a5a00" stroke-width="1.6" />
+<text x="404.0" y="460.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#8a5a00" text-anchor="start" font-weight="bold">I3</text>
+<text x="404.0" y="475.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">identical</text>
+<rect x="512.0" y="442.0" width="108.0" height="40.0" rx="5" fill="#efe7f8" stroke="#6b3fa0" stroke-width="1.6" />
+<text x="522.0" y="460.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#6b3fa0" text-anchor="start" font-weight="bold">I4</text>
+<text x="522.0" y="475.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">distinct</text>
+<rect x="630.0" y="442.0" width="108.0" height="40.0" rx="5" fill="#efe7f8" stroke="#6b3fa0" stroke-width="1.6" />
+<text x="640.0" y="460.0" font-family="Arial, Helvetica, sans-serif" font-size="14px" fill="#6b3fa0" text-anchor="start" font-weight="bold">I5</text>
+<text x="640.0" y="475.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">distinct</text>
+<text x="752.0" y="467.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#8a5a00" text-anchor="start" font-weight="bold">-&gt; abstain on attribution through I3</text>
+<rect x="40.0" y="500.0" width="980.0" height="176.0" rx="6" fill="#efe7f8" stroke="#6b3fa0" stroke-width="1.8" />
+<text x="54.0" y="522.0" font-family="Arial, Helvetica, sans-serif" font-size="13px" fill="#6b3fa0" text-anchor="start" font-weight="bold">I4 incentive probe: lower outsider costs on the contested task (ceding becomes welfare improving)</text>
+<text x="60.0" y="546.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="start" font-weight="bold">World A: receiver dispatch action  route -&gt; route</text>
+<text x="60.0" y="564.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="start" font-weight="normal">Retains the contested allocation.</text>
+<line x1="60.0" y1="642.0" x2="260.0" y2="642.0" stroke="#66727D" stroke-width="1"/>
+<rect x="80.0" y="615.8" width="46.0" height="26.2" rx="0" fill="white" stroke="#6b3fa0" stroke-width="1.8" />
+<text x="103.0" y="611.8" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">11</text>
+<text x="103.0" y="656.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="bold">PF</text>
+<rect x="170.0" y="580.0" width="46.0" height="62.0" rx="0" fill="white" stroke="#6b3fa0" stroke-width="1.8" />
+<text x="193.0" y="576.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">26</text>
+<text x="193.0" y="656.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="bold">PK</text>
+<text x="275.0" y="612.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="start" font-weight="normal">PF probe factual, PK probe knockout</text>
+<text x="275.0" y="626.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="start" font-weight="normal">(outsider reward)</text>
+<text x="580.0" y="546.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="start" font-weight="bold">World B: receiver dispatch action  route -&gt; base</text>
+<text x="580.0" y="564.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1b1a17" text-anchor="start" font-weight="normal">Cedes the contested task to cheaper outsiders.</text>
+<line x1="580.0" y1="642.0" x2="780.0" y2="642.0" stroke="#66727D" stroke-width="1"/>
+<rect x="600.0" y="580.0" width="46.0" height="62.0" rx="0" fill="white" stroke="#6b3fa0" stroke-width="1.8" />
+<text x="623.0" y="576.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">26</text>
+<text x="623.0" y="656.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="bold">PF</text>
+<rect x="690.0" y="580.0" width="46.0" height="62.0" rx="0" fill="white" stroke="#6b3fa0" stroke-width="1.8" />
+<text x="713.0" y="576.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="normal">26</text>
+<text x="713.0" y="656.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="middle" font-weight="bold">PK</text>
+<text x="795.0" y="612.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="start" font-weight="normal">PF probe factual, PK probe knockout</text>
+<text x="795.0" y="626.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="start" font-weight="normal">(outsider reward)</text>
+<text x="60.0" y="698.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="start" font-weight="normal">The efficient team cedes when an outsider is cheaper, the colluding allocation does not; the pair separates at I4 only (enumeration, minimal_pair_separator).</text>
 </svg>
