@@ -1,0 +1,5 @@
+Implemented [independent.py](/Users/aarav/Documents/Projects/ApartSprint/review/reproduce_headline/independent.py) with usage docs and tests.
+
+11 tests pass; all 514 synthetic black-box comparisons agree. Synthetic Δ = 22/7; exact one-sided p = 1/64.
+
+Evidence and commands: [REV-001a report](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/REV-001a.md). Held-out paths untouched; no network, model calls, spending, or commits.

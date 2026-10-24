@@ -1,0 +1,11 @@
+{
+  "cases": 808,
+  "real_cases": 8,
+  "fixture_cells": 800,
+  "default": "dev02_B1",
+  "source_files": 245,
+  "archive_sha256": "0963303f6c67b5a32278ca7470515f8942fd011bed0b610a956865d87a8f26dc",
+  "html_sha256": "cf8d41dfe58868f7eef4572ca79d7db7d2016a553f5948cfb9b56095bc6fbb5e",
+  "html_bytes": 35663241,
+  "screenshot": "Skipped per task instruction; director render pending."
+}

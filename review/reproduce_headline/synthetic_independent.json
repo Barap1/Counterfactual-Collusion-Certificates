@@ -1,0 +1,2817 @@
+{
+  "Delta": 3.142857142857143,
+  "attempts": [
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 1.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 1.0,
+      "world": {
+        "id": "SYN01_B1",
+        "regime": "B1",
+        "seed": 101,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN01_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 1.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 1.0,
+      "world": {
+        "id": "SYN01_B2",
+        "regime": "B2",
+        "seed": 101,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN01_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 2.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 2.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 2.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 2.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 2.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 2.0,
+      "world": {
+        "id": "SYN02_B1",
+        "regime": "B1",
+        "seed": 102,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN02_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 1.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 1.0,
+      "world": {
+        "id": "SYN02_B2",
+        "regime": "B2",
+        "seed": 102,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN02_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 3.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 3.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 3.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 3.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 3.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 3.0,
+      "world": {
+        "id": "SYN03_B1",
+        "regime": "B1",
+        "seed": 103,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN03_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 1.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 1.0,
+      "world": {
+        "id": "SYN03_B2",
+        "regime": "B2",
+        "seed": 103,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN03_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 4.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 4.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 4.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 4.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 4.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 4.0,
+      "world": {
+        "id": "SYN04_B1",
+        "regime": "B1",
+        "seed": 104,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN04_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 1.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 1.0,
+      "world": {
+        "id": "SYN04_B2",
+        "regime": "B2",
+        "seed": 104,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN04_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 5.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 5.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 5.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 5.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 5.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 5.0,
+      "world": {
+        "id": "SYN05_B1",
+        "regime": "B1",
+        "seed": 105,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN05_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 1.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 1.0,
+      "world": {
+        "id": "SYN05_B2",
+        "regime": "B2",
+        "seed": 105,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN05_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 6.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 6.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 6.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 6.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 6.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 6.0,
+      "world": {
+        "id": "SYN06_B1",
+        "regime": "B1",
+        "seed": 106,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN06_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 1.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 1.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 1.0,
+      "world": {
+        "id": "SYN06_B2",
+        "regime": "B2",
+        "seed": 106,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN06_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 0.0,
+        "K": 7.0
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 7.0,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 7.0,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 7.0,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 0.0,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 7.0,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 7.0,
+      "world": {
+        "id": "SYN07_B1",
+        "regime": "B1",
+        "seed": 107,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN07_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": null,
+        "K": null
+      },
+      "attempt": "attempt_0001",
+      "branches": [],
+      "counts": {
+        "F": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "no_op_zero",
+      "ineligible_reason": "no_exposure",
+      "tau_O": 0.0,
+      "world": {
+        "id": "SYN07_B2",
+        "regime": "B2",
+        "seed": 107,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN07_B2",
+      "world_status": "ineligible"
+    },
+    {
+      "arm_Omean": {
+        "F": null,
+        "K": null
+      },
+      "attempt": "attempt_0001",
+      "branches": [],
+      "counts": {
+        "F": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "undefined",
+      "ineligible_reason": null,
+      "tau_O": null,
+      "world": {
+        "id": "SYN08_B1",
+        "regime": "B1",
+        "seed": 108,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN08_B1",
+      "world_status": "failed"
+    },
+    {
+      "arm_Omean": {
+        "F": null,
+        "K": null
+      },
+      "attempt": "attempt_0001",
+      "branches": [],
+      "counts": {
+        "F": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "undefined",
+      "ineligible_reason": null,
+      "tau_O": null,
+      "world": {
+        "id": "SYN08_B2",
+        "regime": "B2",
+        "seed": 108,
+        "split": "synthetic_readiness"
+      },
+      "world_id": "SYN08_B2",
+      "world_status": "failed"
+    }
+  ],
+  "input": "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input",
+  "input_sha256": {
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/manifest.json": "7f2e4b20eb21a5938e3147cb598b1fe03d1260ab48db62751a5d3caaa59e9a09",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/begin.json": "979893a01b32e7daf67c698493f294482c131c022ef4f607b2f51d9ac49c9fab",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/000_K/result.json": "890da748134edd8597ed9208fb78315b0c5c6ce2bf6bcaca512093c0e6f651bb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/000_S/result.json": "4b327a923503ec928b78f50be9ba383ba578aa78bbb2fb59767d79cae43e8069",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/001_K/result.json": "1cca9c08d263505b82e80abf048109b1e4299eed41fa3777433b62b026585a5f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/002_K/result.json": "9f6bb638d70b8ac75aa6fea55e26626acb5150efd8cfc974bdd8541918253c0c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/003_K/result.json": "8d7fde3ebcd090e1665178c1bf6fd2839f034ff32e4787ca6966592f4a48fea6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B1/attempt_0001/result.json": "84b7a481529e12995899c423575ef4b90388a5936e899652116a9e767516f9da",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/begin.json": "fc08b05cc07f15bee6910a9354a888e6007fb7086027410a195445773cc766fa",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/000_K/result.json": "890da748134edd8597ed9208fb78315b0c5c6ce2bf6bcaca512093c0e6f651bb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/000_S/result.json": "4b327a923503ec928b78f50be9ba383ba578aa78bbb2fb59767d79cae43e8069",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/001_K/result.json": "1cca9c08d263505b82e80abf048109b1e4299eed41fa3777433b62b026585a5f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/002_K/result.json": "9f6bb638d70b8ac75aa6fea55e26626acb5150efd8cfc974bdd8541918253c0c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/003_K/result.json": "8d7fde3ebcd090e1665178c1bf6fd2839f034ff32e4787ca6966592f4a48fea6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN01_B2/attempt_0001/result.json": "84b7a481529e12995899c423575ef4b90388a5936e899652116a9e767516f9da",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/begin.json": "242b4692f75041a9d1adeaf082df0a64ff2d9a549153fd7b6cf55862546e5238",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/000_K/result.json": "6dadd2b548944cd594fa32e2bfd1d60216e6e48ca8c38661518639cd4807e2a8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/000_S/result.json": "4b327a923503ec928b78f50be9ba383ba578aa78bbb2fb59767d79cae43e8069",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/001_K/result.json": "9c6fbf344c0f4920873ef799d69fdb2dbd3a7c59dabebfcde74f6e7ea886ceda",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/002_K/result.json": "aa9826e0ef71ab03df30603f4145463d60939e4b35241c2df90558513a7e6650",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/003_K/result.json": "7ef309f19a01bc55879e51382ca4859e1a921ee9b9c60f18c9ff8de2d4082776",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B1/attempt_0001/result.json": "58d72e01cf0bf85dceea0140a8fc25906122d797d884d4dbcdd5cdc50436d0f4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/begin.json": "e216cae17d86c937c06ef909581ed7bd12cf1d43fc63764bc7f0956cc78774e5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/000_K/result.json": "890da748134edd8597ed9208fb78315b0c5c6ce2bf6bcaca512093c0e6f651bb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/000_S/result.json": "4b327a923503ec928b78f50be9ba383ba578aa78bbb2fb59767d79cae43e8069",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/001_K/result.json": "1cca9c08d263505b82e80abf048109b1e4299eed41fa3777433b62b026585a5f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/002_K/result.json": "9f6bb638d70b8ac75aa6fea55e26626acb5150efd8cfc974bdd8541918253c0c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/003_K/result.json": "8d7fde3ebcd090e1665178c1bf6fd2839f034ff32e4787ca6966592f4a48fea6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN02_B2/attempt_0001/result.json": "84b7a481529e12995899c423575ef4b90388a5936e899652116a9e767516f9da",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/begin.json": "eb8232e182f7c9e55d60723fe8cdb2710cbff42c92542794eaab79d965795e64",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/000_K/result.json": "89e57482fd224845fba75b5f8a52b19667aa15f47f28e445680b783fc429929a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/001_K/result.json": "fece2c0d83b10a9cf15e40e948e8513d25c03dc9dbeb58237a42e3fa5bc2d54b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/002_K/result.json": "e6cee3b2fcbc621eb5f9cd368272ce5e4138a5b436685ba79eff5d80fccd8226",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/003_K/result.json": "59f87a3081f5f03371e9218ddd7a7f6bf6df26e27cc4c4dfa819ef64e5962776",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B1/attempt_0001/result.json": "6c5adcae89a8a4a4034cf93280beb93fe1512c65fdc1f2c911ba8660d0a0435a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/begin.json": "38c01391ad74a5750e3f86e8b4368c9f9f0905539ad455f9a458bbddc2104080",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/000_K/result.json": "890da748134edd8597ed9208fb78315b0c5c6ce2bf6bcaca512093c0e6f651bb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/001_K/result.json": "1cca9c08d263505b82e80abf048109b1e4299eed41fa3777433b62b026585a5f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/002_K/result.json": "9f6bb638d70b8ac75aa6fea55e26626acb5150efd8cfc974bdd8541918253c0c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/003_K/result.json": "8d7fde3ebcd090e1665178c1bf6fd2839f034ff32e4787ca6966592f4a48fea6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN03_B2/attempt_0001/result.json": "81f275cc04b827b0c54691e579314c6c4cb12355731e0e7f54dce2d85751a927",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/begin.json": "b21025a5d4fd01ad5c232d0b0ccf3e4427795519e6243f646096f4f898d98bfb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/000_K/result.json": "0e67d2375bfd592a02daecf70e05dc9c5ef2610625f0abb1f907ebfb9d1cb4aa",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/001_K/result.json": "a1d9a29ae9492e7d6adcd755826e333388aebb5bfe009fb8ffdd9cd6f9303a26",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/002_K/result.json": "2080d45c799bdd6a236422b6aea4bc16b180524899c3caefaf3cf207204d64ea",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/003_K/result.json": "be8a5af9358e560360b3a9a5e26ca9a1439391c5e2c3ecef86f8cc63a09662fe",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B1/attempt_0001/result.json": "1dd18e6fa0cabd6829adbf18bd67261a562af470762cc2beec709d60e19fd505",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/begin.json": "8c491422a18c2d2e1ca506862c2f7011c63d4bc8b134845fdd438f60f6560e90",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/000_K/result.json": "890da748134edd8597ed9208fb78315b0c5c6ce2bf6bcaca512093c0e6f651bb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/001_K/result.json": "1cca9c08d263505b82e80abf048109b1e4299eed41fa3777433b62b026585a5f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/002_K/result.json": "9f6bb638d70b8ac75aa6fea55e26626acb5150efd8cfc974bdd8541918253c0c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/003_K/result.json": "8d7fde3ebcd090e1665178c1bf6fd2839f034ff32e4787ca6966592f4a48fea6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN04_B2/attempt_0001/result.json": "81f275cc04b827b0c54691e579314c6c4cb12355731e0e7f54dce2d85751a927",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/begin.json": "2f991c52bfdb8bb5e6c73607b9dbabd90900f64726ee9e76efbd8c5598f90f51",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/000_K/result.json": "1f6d76d4aac5322bc77def5ea6b9ed987362dfcb9b0b6f9521c636722a5b3676",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/001_K/result.json": "8ba3c515bb7faadb5cbfbfc9455112cc2e5c4825f07bac1265918e53966dfc1b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/002_K/result.json": "eb5846cf413ef75a55986e50b4ceaae247df9f43e17a1f8dbe1b6acea48a916c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/003_K/result.json": "bd094f37403032e386a2d1dd96279796efd15c588848f75035690eb178bcf4c9",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B1/attempt_0001/result.json": "dca4fd3b4a20c9f0a07181f2d7f5820b1b8b52e80eec8bda60b956d07e0cb15f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/begin.json": "11b7e30e42ce409e20235b8b3ea397d506a9a88b638ce455dd34a9f8c3a62e2b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/000_K/result.json": "890da748134edd8597ed9208fb78315b0c5c6ce2bf6bcaca512093c0e6f651bb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/000_S/result.json": "4b327a923503ec928b78f50be9ba383ba578aa78bbb2fb59767d79cae43e8069",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/001_K/result.json": "1cca9c08d263505b82e80abf048109b1e4299eed41fa3777433b62b026585a5f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/002_K/result.json": "9f6bb638d70b8ac75aa6fea55e26626acb5150efd8cfc974bdd8541918253c0c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/003_K/result.json": "8d7fde3ebcd090e1665178c1bf6fd2839f034ff32e4787ca6966592f4a48fea6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN05_B2/attempt_0001/result.json": "84b7a481529e12995899c423575ef4b90388a5936e899652116a9e767516f9da",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/begin.json": "c43ab6c419df51c73ffcbab8f9f323e36f366ddce026ddb58402ae2079969699",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/000_K/result.json": "ff4a6117c15727ec144582db7cb14b5c10c32c8ca88471893bfe5d192b0f75ea",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/000_S/result.json": "4b327a923503ec928b78f50be9ba383ba578aa78bbb2fb59767d79cae43e8069",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/001_K/result.json": "b7ba432ef21afa3393a50b6add47ab0464008d0bb365a4ea3bea67470fcd50fc",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/002_K/result.json": "b7dfbfb4ba96d42fb656d047a73612fbc386c5dd0add39c824f48f9431a625cb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/003_K/result.json": "38a7f349593aefa5c557804cf9cefc33240c6722c5b95f0c087ac2151330dd2a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B1/attempt_0001/result.json": "eb1673734f814a0ba8de951ff7bc02ae653017f946a76c2f9d796c967e1f6d10",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/begin.json": "1e79535e3adf4824a53ec05603801637a5111955c69efda4703ac6846bfa8b9d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/000_K/result.json": "890da748134edd8597ed9208fb78315b0c5c6ce2bf6bcaca512093c0e6f651bb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/000_S/result.json": "4b327a923503ec928b78f50be9ba383ba578aa78bbb2fb59767d79cae43e8069",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/001_K/result.json": "1cca9c08d263505b82e80abf048109b1e4299eed41fa3777433b62b026585a5f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/002_K/result.json": "9f6bb638d70b8ac75aa6fea55e26626acb5150efd8cfc974bdd8541918253c0c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/003_K/result.json": "8d7fde3ebcd090e1665178c1bf6fd2839f034ff32e4787ca6966592f4a48fea6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN06_B2/attempt_0001/result.json": "84b7a481529e12995899c423575ef4b90388a5936e899652116a9e767516f9da",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/begin.json": "d9993fd56abfb3e1b69ccefc0001427c6f6912e39219f381405b24c5e2d80a9a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/000_F/result.json": "0c6376e4f784a880c7bfcc0a6a94d0fe9e9ec1862abe8ca664f6050a7f5685c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/000_K/result.json": "d9001a52592148f16168a06366f53efdc9e950734dda3f92db6ffaf3b184e377",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/000_N/result.json": "f753c635b7ad2cdfac32f19ab49dff9ec4f510a2354e4fbf3b4c774c5c8b257f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/000_S/result.json": "4b327a923503ec928b78f50be9ba383ba578aa78bbb2fb59767d79cae43e8069",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/001_F/result.json": "4bcdd03850e43435148b5203b009ed9ffddb1e8ea256b3952b35a114e4fe4c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/001_K/result.json": "cdc0c0521003807196b71c99c4cc8d3e66ca333cd4c53e57bc27ee17620baf4c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/001_N/result.json": "90ec0eb10b07aacbd70bac0c1bc2a2a04b44a80719bf3dca01a6e5ee2746cc37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/002_F/result.json": "55d03f58ca81b7fbe48273c3993b2b3685a104f163c6819e3d144d992845d878",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/002_K/result.json": "c72bf39569d31174e0d9f9b4025f180b0a12727ff68dd4eb6a363da729ceabdf",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/002_N/result.json": "c1e472ea859699fcb1f0bcd5836852b2da0e808d117376b7b6dcdcec82b311c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/003_F/result.json": "c9e059fea7d15c33cf5bac4ddffc8e5b5873ca9f8d3547338c523d01d6e5229f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/003_K/result.json": "57ffa60add898fbcf7a2afdbcb8cc90087081dbfa42eecb7de3729a51f968c78",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/branches/003_N/result.json": "2ecdf6f773517a77e55c54436b73726b185905cccac4218b1ba455b22249d495",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/checkpoint.json": "8f0e79de37a6ce6e2e46f8b08271bd2b8c25678bce7eac554c4f0e23cdaeb555",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B1/attempt_0001/result.json": "27f9da5a402110aeb182a713516f2a74e9503316866f6a3ad1eaba7cb0d04d50",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B2/attempt_0001/begin.json": "3bc309ccb1aa253a2906277ce29eb999901b72eca7498de22c58d46621dc4481",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B2/attempt_0001/result.json": "d27ac7e9137ce1c01cbecfeafb6bfe16e7b27a44d46aad025e2fb70f82ea550c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN07_B2/attempt_0001/selection.json": "117e5503b7be3be259993f66be53250a005bf280e5d8182dbc4132117dcbb0f7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN08_B1/attempt_0001/begin.json": "813726b3ad1155ecee56d3ef2413b5c19c482362fa7ebe0d2c6f66525c218c01",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN08_B1/attempt_0001/result.json": "42690a8cdfc24e7f09f3ea8e19244ea1d104a27bafd86cf612960517a73b7b18",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN08_B2/attempt_0001/begin.json": "8944cce4fff995a1d7a50129497c356716bdb764af78a3de81c386582681a563",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/readiness/synthetic_input/worlds/SYN08_B2/attempt_0001/result.json": "87a444b68e722b128257b6f62cc5345365b4b7ba1e0a2132951d6183b47cd473"
+  },
+  "label": "exploratory; numeric reproduction only",
+  "n_defined_pairs": 7,
+  "n_nonzero_pairs": 6,
+  "pairs": [
+    {
+      "d_w": 0.0,
+      "pair_id": "101"
+    },
+    {
+      "d_w": 1.0,
+      "pair_id": "102"
+    },
+    {
+      "d_w": 2.0,
+      "pair_id": "103"
+    },
+    {
+      "d_w": 3.0,
+      "pair_id": "104"
+    },
+    {
+      "d_w": 4.0,
+      "pair_id": "105"
+    },
+    {
+      "d_w": 5.0,
+      "pair_id": "106"
+    },
+    {
+      "d_w": 7.0,
+      "pair_id": "107"
+    },
+    {
+      "d_w": null,
+      "pair_id": "108"
+    }
+  ],
+  "schema": "rev001a.independent.v1",
+  "sign_flip": {
+    "denominator": 128,
+    "numerator": 2,
+    "p": 0.015625
+  },
+  "within_regime_tau_O": {
+    "B1": 4.0,
+    "B2": 0.8571428571428571
+  },
+  "worlds": [
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "101",
+      "regime": "B1",
+      "tau_O": 1.0,
+      "world_id": "SYN01_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "101",
+      "regime": "B2",
+      "tau_O": 1.0,
+      "world_id": "SYN01_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "102",
+      "regime": "B1",
+      "tau_O": 2.0,
+      "world_id": "SYN02_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "102",
+      "regime": "B2",
+      "tau_O": 1.0,
+      "world_id": "SYN02_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "103",
+      "regime": "B1",
+      "tau_O": 3.0,
+      "world_id": "SYN03_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "103",
+      "regime": "B2",
+      "tau_O": 1.0,
+      "world_id": "SYN03_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "104",
+      "regime": "B1",
+      "tau_O": 4.0,
+      "world_id": "SYN04_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "104",
+      "regime": "B2",
+      "tau_O": 1.0,
+      "world_id": "SYN04_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "105",
+      "regime": "B1",
+      "tau_O": 5.0,
+      "world_id": "SYN05_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "105",
+      "regime": "B2",
+      "tau_O": 1.0,
+      "world_id": "SYN05_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "106",
+      "regime": "B1",
+      "tau_O": 6.0,
+      "world_id": "SYN06_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "106",
+      "regime": "B2",
+      "tau_O": 1.0,
+      "world_id": "SYN06_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "107",
+      "regime": "B1",
+      "tau_O": 7.0,
+      "world_id": "SYN07_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "no_op_zero",
+      "final_attempt": "attempt_0001",
+      "pair_id": "107",
+      "regime": "B2",
+      "tau_O": 0.0,
+      "world_id": "SYN07_B2",
+      "world_status": "ineligible"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "undefined",
+      "final_attempt": "attempt_0001",
+      "pair_id": "108",
+      "regime": "B1",
+      "tau_O": null,
+      "world_id": "SYN08_B1",
+      "world_status": "failed"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "undefined",
+      "final_attempt": "attempt_0001",
+      "pair_id": "108",
+      "regime": "B2",
+      "tau_O": null,
+      "world_id": "SYN08_B2",
+      "world_status": "failed"
+    }
+  ]
+}

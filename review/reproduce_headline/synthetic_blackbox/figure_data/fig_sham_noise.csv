@@ -1,0 +1,9 @@
+checkpoint_id,confirmatory,h_S_minus_h_F,label,n_independent,regime,tier,uncertainty_scope,world_id
+SYN01_B1,False,0.0,exploratory (DEV-001),1,B1,B,world_cluster,101
+SYN01_B2,False,0.0,exploratory (DEV-001),1,B2,B,world_cluster,101
+SYN02_B1,False,0.0,exploratory (DEV-001),1,B1,B,world_cluster,102
+SYN02_B2,False,0.0,exploratory (DEV-001),1,B2,B,world_cluster,102
+SYN05_B2,False,0.0,exploratory (DEV-001),1,B2,B,world_cluster,105
+SYN06_B1,False,0.0,exploratory (DEV-001),1,B1,B,world_cluster,106
+SYN06_B2,False,0.0,exploratory (DEV-001),1,B2,B,world_cluster,106
+SYN07_B1,False,0.0,exploratory (DEV-001),1,B1,B,world_cluster,107
