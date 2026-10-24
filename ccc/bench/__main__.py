@@ -217,7 +217,7 @@ def safe_methods(view, reference, instance, information_set, failures):
                              epsilon=float(instance.epsilon), information_set=information_set,
                              error_type=type(exc).__name__, error=str(exc)))
         names=('CCC-v1.2.2','B0','B1','B2','B2+','B3a','B3b','B4',
-               'always-answer','always-abstain','Bayes-given-S','CCC-L-v0')
+               'always-answer','always-abstain','Bayes-given-S','CCC-L-v0','CCC-L-v1')
         return {name:prediction('failed',m=None,h=None,e=None) for name in names}
 
 
@@ -267,7 +267,7 @@ Member rates are descriptive; CP intervals label unit-any or unit-all events.
 Risk costs .25/.5 receive no invalid binomial intervals.
 
 Benchmark corrections and final validation commands/results are recorded in
-VALIDATION.md. No method was tuned or changed. No prospective block was run.
+VALIDATION.md. CCC-L v1 is the DEV-informed A4 exploratory extension; v0 is retained. No prospective block was run.
 The criterion report is RESULTS_dev.json/.md; it retains RQ2/RQ4/RQ5 failures.
 '''
     (out/'DEV_REPORT.md').write_text(text)

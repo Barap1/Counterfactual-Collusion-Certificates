@@ -1,0 +1,28 @@
+{
+  "evidence": "development",
+  "records": 13800,
+  "seeds": "13000-13049",
+  "original_12_method_outputs_and_all_observations_identical": true,
+  "methods_before": 12,
+  "methods_after": 13,
+  "rq_before": {
+    "RQ1": "pass",
+    "RQ2": "fail",
+    "RQ3": "pass",
+    "RQ4": "fail",
+    "RQ5": "fail",
+    "RQ6": "descriptive"
+  },
+  "rq_after": {
+    "RQ1": "pass",
+    "RQ2": "pass",
+    "RQ3": "pass",
+    "RQ4": "fail",
+    "RQ4b": "pass",
+    "RQ5": "fail",
+    "RQ6": "descriptive"
+  },
+  "numeric_changed_fields": 57443,
+  "numeric_path_rule": "semantic list ids when unique, positional otherwise; added/removed numbers use null; booleans excluded"
+}
+v1 excluded member/set records: 600

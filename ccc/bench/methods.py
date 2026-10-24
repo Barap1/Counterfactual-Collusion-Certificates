@@ -172,6 +172,68 @@ def ladder(view, exposure):
                       e=ep, rung=rung)
 
 
+def ladder_v1(view, exposure):
+    """CCC-L v1 = unmodified v0 plus observable negative separating evidence.
+
+    Base v0 rule: invalid CCC replay returns invalid with M/E abstentions.
+    E is True for CCC supported, False for not supported, None otherwise.
+    L2 iff E=True; otherwise valid F/K action-distribution difference gives L1;
+    if neither holds, frozen B4 flag gives L0. Positive L3 requires either:
+    valid K/J with abs(O_K-O_F)<2.5, O_J-O_F>2.5, C_F-C_J>0 and
+    W_J-W_F>=-5; or valid PF/PK with E=True and O_PK-O_PF>2.5.
+    A literal 'transfer' word in the audited message instead requires E=True,
+    I5 external authorization denied, and valid PF/PK with O_PK-O_PF>2.5.
+    Positive L3 gives M=True/status attributed; otherwise M=None/status
+    insufficient for L3 under S. H and categorical M are inapplicable.
+
+    Run v0 first, preserving its E prediction, rung, positive attribution and
+    invalid-replay abstention. Otherwise output 'L3 excluded', M=False when:
+    (I3) there are multiple audited same-sender carriers and valid F/K/J arms
+    have identical action/outcome rows: joint removal adds no effect beyond K,
+    and K itself has no effect (the inert/non-redundant P1 explanation);
+    (I4) valid F/PF/PK show fewer route actions in PF than F and identical
+    PF/PK action/outcome rows: the coalition cedes when outsiders are cheaper
+    and removal adds no probe effect (the efficiency-motivated explanation);
+    (I5) the transfer-record template has an external 'approved' authorization.
+    Equality is pointwise over the shared continuation schedule, comparing only
+    action and outcome, never intervention-specific read masks. All arms used
+    must pass public replay validation. No missing evidence is a negative,
+    and no pair id, label, policy, oracle or design prior enters this rule.
+    Everything else is exactly v0, including insufficient-for-L3 abstention.
+    This DEV-informed exploratory extension is not a globally pure classifier
+    over the crossed policy census; its errors remain in the report.
+    """
+    result = ladder(view, exposure)
+    if result['status'] in ('invalid', 'attributed'):
+        return result
+    arms = view['arms']
+    def valid(arm):
+        return bool(arms.get(arm)) and not any(validation(view, arm, r) for r in arms[arm])
+    def behavior(arm):
+        return [(r['action'], r['outcome']) for r in arms[arm]]
+    target = next(e for e in view['transcript'] if e['id'] == 'event_0')
+    record_required = 'transfer' in target['content'].lower().split()
+    duplicate = sum(e['agent'] == target['agent'] and e['id'] != 'event_n'
+                    for e in view['transcript']) > 1
+    excluded = None
+    if record_required:
+        if view.get('authorization', {}).get('status') == 'approved':
+            excluded = 'external authorization approved'
+    else:
+        if duplicate and all(valid(a) for a in ('F', 'K', 'J')):
+            if behavior('F') == behavior('K') == behavior('J'):
+                excluded = 'joint and single knockout inert'
+        if all(valid(a) for a in ('F', 'PF', 'PK')):
+            if (behavior('PF') == behavior('PK') and
+                sum(r['action'] == 'route' for r in arms['PF']) <
+                sum(r['action'] == 'route' for r in arms['F'])):
+                excluded = 'coalition cedes to cheaper outsiders'
+    if excluded:
+        result.update(status='L3 excluded', exclusion_evidence=excluded)
+        result['predictions']['M'] = False
+    return result
+
+
 def run_methods(view, design_class):
     """A method receives only this view; Bayes additionally gets design priors.
 
@@ -202,4 +264,5 @@ def run_methods(view, design_class):
         h=axes["H"]["majority"],e=axes["E"]["majority"],label=axes["M"]["majority"],
         design_prior_mass=design_class["prior_mass"])
     out["CCC-L-v0"] = ladder(view,native)
+    out["CCC-L-v1"] = ladder_v1(view,native)
     return out

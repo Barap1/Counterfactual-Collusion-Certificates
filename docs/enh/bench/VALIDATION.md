@@ -259,3 +259,84 @@ Additional final lineage/sample/integration check:
 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$PWD/scripts/offline_guard:$PWD" starter/collusion_hackathon/colosseum/.venv/bin/python docs/enh/bench/final_checks.py > docs/enh/bench/align_final_checks.log 2>&1
 git diff --check -- ccc/bench tests/test_bench_core.py tests/test_bench_alignment.py docs/enh/bench ops/reports/BENCH-ALIGN.md
 ```
+
+## BENCH-ALIGN2 — A4–A6, DEV only
+
+Final source run: `align2_dev_run_figure_final.log`. Two earlier attempts were
+interrupted for report/docstring completion. `align2_dev_run_complete.log` is a
+completed intermediate development run, superseded to match the existing figure
+consumer's A/B field contract and RESULTS.json path. The prefigure targeted
+suite passed 30 tests; its full-suite attempt was interrupted for that change.
+Prefigure logs are retained as align2_prefigure_*.log. No world, noise,
+threshold or outcome changed. Only the final complete run supplies the
+regenerated artifacts and final validation below.
+
+Commands run from the repo root (existing interpreter and offline guard):
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 docs/enh/bench/align2_snapshot.py
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$PWD/scripts/offline_guard:$PWD" starter/collusion_hackathon/colosseum/.venv/bin/python -m unittest tests.test_bench_alignment.AlignmentTests.test_v1_negative_separator_evidence_and_v0_preserved tests.test_bench_alignment.AlignmentTests.test_rq2_is_independent_of_ladder_correctness > docs/enh/bench/align2_focused_tests.log 2>&1
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$PWD/scripts/offline_guard:$PWD" starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.bench run --block dev --out docs/enh/bench/dev_run > docs/enh/bench/align2_dev_run_figure_final.log 2>&1
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$PWD/scripts/offline_guard:$PWD" starter/collusion_hackathon/colosseum/.venv/bin/python -m ccc.bench enumerate --out docs/enh/bench/enumeration > docs/enh/bench/align2_enumeration_final.log 2>&1
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$PWD/scripts/offline_guard:$PWD" starter/collusion_hackathon/colosseum/.venv/bin/python docs/enh/bench/audit_seed_exclusions.py > docs/enh/bench/align2_seed_audit.log 2>&1
+sh docs/enh/bench/align2_validate.sh > docs/enh/bench/align2_validation_pipeline.log 2>&1
+```
+
+`align2_validate.sh` records the exact report, hashes, replay, numeric comparison,
+three authorized demo regeneration commands, targeted tests, full guarded suite,
+and final lineage/integration checks. No demo source was edited. The hashes
+command's complete stdout is `hash_manifest.json`. Read-only review used cat,
+sed, rg, ls, du, git diff and JSON/gzip readers. The process-list attempt was
+sandbox-denied; interruptions used the owned execution sessions. There were no
+git mutations, network requests, experimental model/API calls or new spend.
+
+Results from the complete run: 13,800 records, 50 seed blocks (13000–13049),
+both epsilon strata, 13 methods (previously 12). All observations and the
+12 original method outputs are identical to `bench_align_snapshot/`. All 24
+frozen files are unchanged. Complete seed-13000 replay matches all 276 records;
+method crashes and symmetry violations are zero. The historical exclusion
+census reproduces 27,209 sources and 6,247 seeds, with zero prospective draws.
+
+V1 adds 600 `L3 excluded` member/set outputs: 50 for each P1/I3–I5,
+P2/I4–I5 and P3/I5 cell, separately in each epsilon stratum. P2/I4 and P3/I5
+pair correctness changes from v0's 0/50 to v1's 50/50 at eps=0 and 33/50
+at eps=.1 (each type separately). CP95 changes from [0,.0711217] to
+[.9288783,1] and [.5123475,.7879453], respectively. RQ2 now passes using
+Bayes frontiers P1 I3, P2 I4, P3 I5, P4/P6 I1; relay remains unresolved at I3.
+No method beats Bayes on both members below the frontier. Original RQ4 and
+its T5 are unchanged (fail). New RQ4b passes: P2/P3 50/50 and 33/50,
+P6/benign cooperation 0/50 in both strata. RQ5 still fails, v1 primary and
+v0 retained; noisy pair correctness misses .95 and all failed/undefined cells
+remain visible. RQ1/RQ3 pass and RQ6 stays descriptive. Population counts,
+intervals, strongest-baseline selection and frozen CCC legitimate supports
+remain unchanged. `twin_exhibit` stores P2/eps=0/seed=13000, all seven arm
+outcome means, CCC status and I4 before/after probe actions.
+
+`align2_numeric_delta.json` exhaustively lists 57,457 changed/added/removed
+numeric fields with artifact, semantic path, before and after (null for absent
+fields), including every new v1/comparison metric. Boolean verdict changes
+are summarized separately. This ledger and the compressed pre-change artifacts
+make the full numeric change set reviewable without treating unchanged
+original-method outputs as new findings. Every result here is development.
+
+The DEV `RESULTS.json` alias is byte-identical to RESULTS_dev.json and retains
+both explicit development labels. Its A/B `twin_exhibit` includes full means,
+outsider-only figure values, CCC status, and I4 before/after action readings.
+`align2_figure_smoke.py` exercises the existing figure consumer into owned
+`figure_compat/`, with browser/PDF generation disabled.
+
+The initial optional figure-smoke harness had a syntax typo (retained in
+align2_figure_smoke_initial_error.log); it was corrected before the final
+pipeline. The final consumer check passes with no missing fields and writes
+only SVG/JSON in figure_compat/. Benchmark sources/run hashes were unaffected.
+
+Final validation is green: targeted **30/30 passed** (101.632 seconds);
+full guarded suite **453 tests, 449 passed, 4 skipped, 0 failures/errors**
+(216.691 seconds). The demo manifest has zero stale sources. The existing
+figure consumer reports no missing fields. Final code/enumeration/run hashes,
+report input hashes, DEV-only schedule, unchanged original RQ4/T5, unchanged
+v0 T8, population and RQ6 all pass `align2_checks.py`. RESULTS.json and
+RESULTS_dev.json are byte-identical. See align2_final_checks.json/.log,
+align2_targeted_tests.log and align2_offline_suite.log. No FREEZE.json or
+prospective seed list was created. The sole earlier demo integration failure
+is resolved by the authorized regeneration scripts.

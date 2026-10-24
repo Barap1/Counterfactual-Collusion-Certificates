@@ -1,0 +1,36 @@
+{
+  "evidence": "development",
+  "methods": 13,
+  "original_RQ4_verbatim_and_T5_unchanged": true,
+  "population_and_RQ6_unchanged": true,
+  "prospective_seed_list_or_freeze_created": false,
+  "records": 13800,
+  "report_input_hashes_match": true,
+  "rq": {
+    "RQ1": "pass",
+    "RQ2": "pass",
+    "RQ3": "pass",
+    "RQ4": "fail",
+    "RQ4b": "pass",
+    "RQ5": "fail",
+    "RQ6": "descriptive"
+  },
+  "seeds": "13000-13049",
+  "source_hashes_match": true,
+  "stale_demo_sources": [],
+  "v0_T8_unchanged": true,
+  "validation": {
+    "offline_suite": {
+      "failed": 0,
+      "passed": 449,
+      "skipped": 4,
+      "total": 453
+    },
+    "targeted_tests": {
+      "failed": 0,
+      "passed": 30,
+      "skipped": 0,
+      "total": 30
+    }
+  }
+}

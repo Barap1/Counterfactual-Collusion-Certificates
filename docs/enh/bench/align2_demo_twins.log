@@ -1,0 +1,1 @@
+wrote /Users/aarav/Documents/Projects/ApartSprint/demo/data/twins.json pairs: [('P1', 13000, 'I3', 'I3'), ('P2', 13000, 'I4', 'I4'), ('P3', 13000, 'I5', 'I5'), ('P4', 13000, 'I1', 'I1'), ('P5', 13000, 'I0', 'I0'), ('P6', 13000, 'I1', 'I1')] baseline B2+ {'B2+': 0.6074553571428571, 'B3b': 0.5357142857142857}

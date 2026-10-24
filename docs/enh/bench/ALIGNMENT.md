@@ -118,3 +118,23 @@ strata run on the same 50 DEV / 200 prospective seeds, with separate CP interval
 Population noise is marginalized by the frozen exact iid oracle, so there is no
 extra independent continuation sample. The registered exposure threshold remains
 K-F >=2.5, and all original eps=0 exposure values are unchanged.
+
+## BENCH-ALIGN2: director amendments A4–A6
+
+The previous discussion of v0-only negative decisions and RQ2's ladder-based
+estimand is historical. CCC-L v0 is unchanged; exploratory v1 adds observable
+`L3 excluded` decisions for I3 inert joint/single removals, I4 ceding to cheaper
+outsiders, and I5 approved authorization. Full rules are in README.md and
+`ladder_v1`'s docstring. Both methods run on every view; RQ5 uses v1 as primary,
+retaining the complete v0 comparison in T8_v0. RQ2 uses Bayes-given-S pair
+correctness and counts below-frontier successes beyond Bayes independently of
+ladder correctness. Original RQ4/T5 remain unchanged; DEV-informed RQ4b/T5b
+apply >.5 to P2/P3 and <=.05 to P6/benign cooperation using B2+ under I1,
+separately by epsilon. No threshold, policy, noise, prior, or seed law changed.
+
+Pre-change DEV artifacts are preserved in bench_align_snapshot/. The exact
+numeric changes, including added metrics, are in align2_numeric_delta.json;
+original observations and all twelve original methods are compared byte for
+byte after removing only the new v1 entry. The report's twin_exhibit selects
+P2, eps=0, lowest seed and copies stored public partition outcomes/actions.
+See the BENCH-ALIGN2 section of VALIDATION.md for final commands and outcomes.
