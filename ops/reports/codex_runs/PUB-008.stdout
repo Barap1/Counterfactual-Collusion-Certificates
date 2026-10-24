@@ -1,0 +1,3 @@
+Created the offline builder and updated the HTML converter. It produced [submission.md](/Users/aarav/Documents/Projects/ApartSprint/paper/build/submission.md) and [submission.html](/Users/aarav/Documents/Projects/ApartSprint/paper/build/submission.html); checks found no evidence tags, 18 resolved citations, and no broken figure paths. No planned SVGs were present: Figures 1 and 2 are reported missing in [PUB-008.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/PUB-008.md).
+
+Remaining owner tags: `[OWNER]`, `[OWNER: approve final wording.]`, `[OWNER: update after review.]`, `[OWNER: final dual-use and release review.]`

@@ -1,0 +1,7 @@
+Completed PUB-010. Rebuilt `paper/build/submission.md` and `submission.html`; figure sizing, centering, and caption keep-together rules are in the renderer, with Figure 4 capped at 4 inches. No PDF was rendered.
+
+Fixed both “All numeric cells:” carrier phrases in the draft by moving their verification tags to substantive sentences. The builder also cleans leftover ` .`, `: .`, `()`, and doubled spaces.
+
+Both commands passed: `python3 paper/build/make_submission.py` and `python3 paper/build/validate_pub009.py`. Numeric inventory and citation occurrences are unchanged; all 63 original verification tags remain in the draft.
+
+Handoff: [PUB-010.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/PUB-010.md). Unrelated concurrent workspace changes were left untouched.

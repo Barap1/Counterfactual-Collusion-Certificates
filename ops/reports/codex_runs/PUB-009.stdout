@@ -1,0 +1,6 @@
+Completed PUB-009: prose polished, section order corrected, and six SVGs embedded with numbered captions and in-text references.
+Rebuilt [Markdown](paper/build/submission.md) and [HTML](paper/build/submission.html).
+Validation passed: 18 citations resolve; zero evidence tags or internal-ID matches in either output.
+Numbers, citations, OWNER/TODO placeholders, and all 63 original VERIFIED tags are preserved.
+Full wording map and commands: [PUB-009 report](ops/reports/PUB-009.md).
+No network, live calls, commits, or PDF rendering.
