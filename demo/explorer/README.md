@@ -14,5 +14,8 @@ Rules the UI derives (stated in the UI too): evidence-ladder rung comes only fro
 ## Rebuild
 `python3 -I demo/explorer/bundle_data.py` (rerun after any change to `demo/data/`; picks up `twins.json` automatically).
 
+## Twin worlds
+`python3 -I demo/build_twins.py --run docs/enh/bench/dev_run --label DEV` writes `demo/data/twins.json` from benchmark outputs only (records, per-seed partitions with canonical auditor views, separators); then rerun `bundle_data.py` and `demo/build_data.py` (manifest). The provenance badge and the DEV banner come from the JSON. Deep link: `#/twins/P2/4`. For PROSPECTIVE use `--label PROSPECTIVE --dev-run <DEV run>`.
+
 ## QA
 Screenshots in `qa/` (headless Chrome; 390 px shots use a 390 px iframe because headless windows are at least 500 px wide).

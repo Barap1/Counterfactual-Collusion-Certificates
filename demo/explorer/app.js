@@ -669,6 +669,7 @@
       holder.appendChild(box);
     };
     show();
+    if (D.twins) main.appendChild(h('div', { class: 'card twins-flag' }, h('h3', null, 'Twin worlds'), h('p', null, 'Two worlds with identical observables and different labels. Step the evidence I0 \u2192 I5 and watch when verdicts diverge.'), h('a', { class: 'btn', href: '#/twins' }, 'Open Twin worlds')));
     main.appendChild(h('p', { class: 'muted' }, 'Or pick any case from the list on the left: 16 held-out checkpoints (8 worlds × B1/B2) and 5 scripted development fixtures.'));
   }
 
@@ -690,17 +691,116 @@
   }
 
   /* ---------- twins (hidden unless data/twins.js exists) ---------- */
+  var twinState = { pair: 0, set: 0 };
+  function vtxt(v) {
+    if (!v) return '—';
+    var s2 = v.status + (v.rung ? ' · ' + v.rung : '');
+    if (v.M_label && v.M_label !== 'n/a') s2 += ' · ' + v.M_label;
+    return s2;
+  }
+  function vsame(a, b) { return JSON.stringify(a) === JSON.stringify(b); }
+  function labelStrip(t) {
+    var tr = t.truth;
+    return h('div', { class: 'truth' }, h('div', { class: 'muted' }, 'Private label (evaluator only, never in the auditor view)'),
+      h('div', { class: 'chips' }, h('span', { class: 'chip' }, 'mechanism: ' + tr.M), h('span', { class: 'chip' }, 'harm H: ' + String(tr.H)), h('span', { class: 'chip' }, 'exposure effect E: ' + String(tr.E)),
+        h('span', { class: 'chip' }, 'tau_O ' + fmt(tr.tau_O, 2)), h('span', { class: 'chip' }, 'tau_C ' + fmt(tr.tau_C, 2)), h('span', { class: 'chip' }, 'tau_W ' + fmt(tr.tau_W, 2))));
+  }
+  function twinColumn(P, mem, si, other) {
+    var S = SETS_T[si], bs = mem.by_set[S], col = h('div', { class: 'card twin' });
+    col.appendChild(h('h3', null, 'Twin ' + (P.members.indexOf(mem) === 0 ? 'A' : P.members.indexOf(mem) === 1 ? 'B' : '') + ' ' , h('span', { class: 'muted' }, 'seed ' + P.seed + ', member ' + mem.member)));
+    col.appendChild(labelStrip(mem));
+    col.appendChild(h('h4', null, 'Auditor-visible transcript (' + bs.sender + ' → ' + bs.receiver + ' is the exposure edge)'));
+    var tl = h('div', { class: 'log short', tabindex: '0', role: 'region', 'aria-label': 'Auditor-visible transcript' });
+    bs.transcript.forEach(function (e) {
+      var isExp = e.agent === bs.sender && e.id === 'event_0';
+      tl.appendChild(h('div', { class: 'rec' + (isExp ? ' exp' : '') }, isExp ? h('div', { class: 'xtag' }, 'Exposure message') : null,
+        h('div', { class: 'who' }, e.agent, ' ', h('span', null, 'board ' + e.board + ' · ' + e.id)), h('div', { class: 'body' }, e.content)));
+    });
+    col.appendChild(tl);
+    col.appendChild(h('h4', null, 'Continuations visible at ' + S));
+    var rows = [];
+    Object.keys(bs.arms).forEach(function (arm) {
+      var a = bs.arms[arm];
+      var nm = { F: 'F factual', K: 'K knockout', S: 'S sham', N: 'N placebo', J: 'J joint knockout', PF: 'PF probe, factual', PK: 'PK probe, knocked out' }[arm] || arm;
+      if (!a) rows.push(h('tr', null, h('td', null, nm), h('td', { colspan: 4 }, h('em', null, 'not run: no eligible placebo'))));
+      else rows.push(h('tr', null, h('td', null, nm), h('td', { class: 'r num' }, fmt(a.Omean)), h('td', { class: 'r num' }, fmt(a.Cmean)), h('td', { class: 'r num' }, fmt(a.W)), h('td', null, a.actions.join(', '))));
+    });
+    col.appendChild(tw(h('table', null, h('thead', null, h('tr', null, h('th', null, 'Arm'), h('th', { class: 'r' }, 'Outsider mean'), h('th', { class: 'r' }, 'Coalition mean'), h('th', { class: 'r' }, 'W'), h('th', null, 'Action'))), h('tbody', null, rows),
+      h('caption', null, 'Structural benchmark, epsilon = 0: one deterministic continuation per arm.'))));
+    var ex = [];
+    if (bs.probe) ex.push('Probe: ' + bs.probe.intervention + ' (by ' + fmt(bs.probe.outsider_cost_reduction, 0) + ').');
+    if (bs.authorization) ex.push('Authorization record: ' + bs.authorization.status + ' (' + bs.authorization.source + ').');
+    if (bs.placebo) ex.push('Placebo selection: ' + bs.placebo.status + '.');
+    if (ex.length) col.appendChild(h('p', { class: 'muted' }, ex.join(' ')));
+    col.appendChild(h('div', { class: 'hash' }, 'view sha256 ' + bs.view_sha256));
+    return col;
+  }
+  var SETS_T = ['I0', 'I1', 'I2', 'I3', 'I4', 'I5'];
   function renderTwins() {
     clear(main);
-    var T = D.twins;
-    main.appendChild(h('div', { class: 'head' }, h('h2', null, 'Twin worlds'), h('span', { class: 'badge dev' }, 'schema pending')));
-    main.appendChild(h('p', { class: 'note' }, 'Loaded from demo/data/twins.json. The schema is not final, so this view prints the data as received. Nothing is added or inferred.'));
-    main.appendChild(h('div', { class: 'card twins-flag' }, h('pre', { tabindex: '0', class: 'tool' }, JSON.stringify(T, null, 2))));
+    var T = D.twins, P = T.pairs[twinState.pair], si = twinState.set;
+    var dev = T.label === 'DEV';
+    main.appendChild(h('div', { class: 'head' }, h('h2', null, 'Twin worlds: same evidence, same verdict'), h('span', { class: 'badge ' + (dev ? 'dev' : 'held'), title: T.provenance_label }, T.provenance_label)));
+    if (T.banner) main.appendChild(h('div', { class: 'note warn banner', role: 'status' }, h('strong', null, T.banner), ' Selection rule: ' + T.selection_rule));
+    main.appendChild(h('p', null, 'Two worlds are built so that the auditor sees identical observables up to a stated information set, yet their private labels differ. A method that sees only the same evidence must give the same output; only new evidence can separate them. Pick a pair, then step the evidence from I0 to I5.'));
+    var tabs = h('div', { class: 'steps', role: 'group', 'aria-label': 'Twin pair types' });
+    T.pairs.forEach(function (p, i) { tabs.appendChild(h('button', { type: 'button', class: 'tabbtn', 'aria-pressed': i === twinState.pair ? 'true' : 'false', on: { click: function () { twinState.pair = i; renderTwins(); } } }, p.kind)); });
+    main.appendChild(tabs);
+    main.appendChild(h('h3', null, P.kind + ' · ' + P.title), h('p', null, P.description));
+    // stepper
+    var slider = h('input', { type: 'range', min: 0, max: 5, step: 1, value: si, id: 'tw-range', 'aria-valuetext': SETS_T[si] + ': ' + T.sets[si].adds, 'aria-label': 'Information set, I0 to I5' });
+    slider.addEventListener('input', function () { twinState.set = +slider.value; renderTwins(); $('tw-range').focus(); });
+    var btns = h('div', { class: 'steps', role: 'group', 'aria-label': 'Information set' });
+    SETS_T.forEach(function (s2, i) { btns.appendChild(h('button', { type: 'button', class: 'tabbtn', 'aria-pressed': i === si ? 'true' : 'false', on: { click: function () { twinState.set = i; renderTwins(); } } }, s2)); });
+    main.appendChild(h('div', { class: 'card' }, h('div', { class: 'stepper' }, h('label', { for: 'tw-range' }, 'Evidence revealed: ', h('strong', null, SETS_T[si])), slider, btns),
+      h('p', null, h('strong', null, SETS_T[si] + ' adds: '), T.sets[si].adds, si > 0 ? h('span', { class: 'muted' }, ' (cumulative: everything from earlier sets is still shown)') : null)));
+    // columns
+    var A = P.members[0], B = P.members[1];
+    var cols = h('div', { class: 'grid2' });
+    P.members.forEach(function (m) { cols.appendChild(twinColumn(P, m, si)); });
+    main.appendChild(cols);
+    // verdicts at this set
+    var sameView = B ? A.by_set[SETS_T[si]].view_sha256 === B.by_set[SETS_T[si]].view_sha256 : null;
+    var banner;
+    if (!B) banner = h('div', { class: 'verdict' }, h('div', { class: 'big' }, 'Single case, no twin'), h('p', null, P.description));
+    else if (sameView) banner = h('div', { class: 'verdict same' }, h('div', { class: 'big' }, 'At ' + SETS_T[si] + ' the two auditor views are byte-identical.'), h('p', null, 'Identical evidence → identical verdict. Every method below must, and does, give the same output for both worlds.'));
+    else banner = h('div', { class: 'verdict diff' }, h('div', { class: 'big' }, 'At ' + SETS_T[si] + ' the auditor views differ.'), h('p', null, 'New evidence has entered, so outputs may differ. See which methods actually do.'));
+    main.appendChild(h('h3', null, 'Verdicts at ' + SETS_T[si]));
+    main.appendChild(banner);
+    var vr = T.methods.map(function (mt) {
+      var va = A.by_set[SETS_T[si]].verdicts[mt.id], vb = B ? B.by_set[SETS_T[si]].verdicts[mt.id] : null;
+      var lab = mt.id === 'baseline' ? mt.label + ' (' + T.strongest_baseline.id + ')' : mt.label;
+      return h('tr', null, h('th', { scope: 'row' }, lab), h('td', null, vtxt(va)), B ? h('td', null, vtxt(vb)) : null, B ? h('td', null, vsame(va, vb) ? h('span', { class: 'pf n' }, 'same') : h('span', { class: 'pf f' }, 'DIFFERENT')) : null);
+    });
+    main.appendChild(tw(h('table', null, h('thead', null, h('tr', null, h('th', null, 'Method'), h('th', null, 'Twin A'), B ? h('th', null, 'Twin B') : null, B ? h('th', null, 'Same?') : null)), h('tbody', null, vr))));
+    // matrix
+    if (B) {
+      var head = h('tr', null, h('th', null, 'Method'));
+      SETS_T.forEach(function (s2, i) { head.appendChild(h('th', { class: i === si ? 'cur' : '' }, s2)); });
+      var vrows = [h('tr', null, h('th', { scope: 'row' }, 'Auditor view'), SETS_T.map(function (s2, i) { var d = A.by_set[s2].view_sha256 !== B.by_set[s2].view_sha256; return h('td', { class: i === si ? 'cur' : '' }, d ? h('span', { class: 'pf f' }, 'differs') : h('span', { class: 'pf n' }, 'identical')); }))];
+      T.methods.forEach(function (mt) {
+        vrows.push(h('tr', null, h('th', { scope: 'row' }, mt.label), SETS_T.map(function (s2, i) {
+          var d = !vsame(A.by_set[s2].verdicts[mt.id], B.by_set[s2].verdicts[mt.id]);
+          return h('td', { class: i === si ? 'cur' : '' }, d ? h('span', { class: 'pf f' }, 'differs') : h('span', { class: 'pf n' }, 'same'));
+        })));
+      });
+      main.appendChild(h('h3', null, 'Where do the verdicts diverge? I0 → I5'));
+      main.appendChild(tw(h('table', { class: 'matrix' }, h('thead', null, head), h('tbody', null, vrows), h('caption', null, 'Computed in the browser from the stored per-set verdicts. A verdict row can differ only from the set at which the auditor view differs.'))));
+      var fs = P.first_separating_set;
+      main.appendChild(h('p', { class: 'twinline' }, h('strong', null, 'Identical evidence → identical verdict; only new evidence (' + (fs || 'none in this pair') + ') separates them.'),
+        fs ? ' First set where the auditor views differ: ' + fs + (P.enumerated_pair_separator ? ' (enumerated minimal separator: ' + P.enumerated_pair_separator + ').' : '.') : ' The two worlds are not separated by any information set in this run.'));
+      var cc = T.methods.filter(function (m) { return m.id !== 'baseline' || true; }).map(function (m) { return m.label + ': ' + (P.first_divergence[m.id] || 'never'); }).join(' · ');
+      main.appendChild(h('p', null, concept('unc', 'First verdict divergence'), ' ' + cc));
+      main.appendChild(h('p', { class: 'note' }, concept('causal'), ' ', concept('harm'), ' CCC v1.2.2 makes exposure-level (L2) claims only. When it gives the same L2 “supported” to a legitimate twin, that is the point of the benchmark: ', concept('attr'), ' a knockout measures what a message did, not whether it should have done it.'));
+    }
+    main.appendChild(h('details', { class: 'd' }, h('summary', null, 'Sources and sha256 (' + T.sources.length + ' files)'), h('div', null,
+      h('p', null, 'Run: ', h('code', null, T.run_dir), '. Strongest-baseline rule: ' + T.strongest_baseline.rule + ' Balanced accuracy B2+ ' + fmt(T.strongest_baseline.balanced_accuracy['B2+'], 3) + ', B3b ' + fmt(T.strongest_baseline.balanced_accuracy['B3b'], 3) + '.'),
+      T.sources.map(function (x) { return h('p', null, h('code', null, x.path), h('br'), sha(x.sha256)); }))));
   }
   function probeTwins() {
     var sc = document.createElement('script');
     sc.src = 'data/twins.js';
-    sc.onload = function () { if (D.twins) { var a = $('twins-nav'); a.hidden = false; if (location.hash === '#/twins') route(); } };
+    sc.onload = function () { if (D.twins) { var a = $('twins-nav'); a.hidden = false; if (/^#\/twins/.test(location.hash) || location.hash === '#/start' || !location.hash) route(); } };
     sc.onerror = function () { /* absent: show nothing */ };
     document.head.appendChild(sc);
   }
@@ -736,7 +836,11 @@
     if (m && byId[m[1]]) { mark('case', m[1]); renderCase(m[1]); }
     else if (hash === '#/study') { mark('study'); curId = null; renderStudy(); }
     else if (hash === '#/about') { mark('about'); curId = null; renderAbout(); }
-    else if (hash === '#/twins' && D.twins) { mark('twins'); curId = null; renderTwins(); }
+    else if (/^#\/twins(\/|$)/.test(hash) && D.twins) {
+      var tm = hash.match(/^#\/twins\/(\w+)(?:\/([0-5]))?$/);
+      if (tm) { D.twins.pairs.forEach(function (p, i) { if (p.kind === tm[1]) twinState.pair = i; }); if (tm[2] !== undefined) twinState.set = +tm[2]; }
+      mark('twins'); curId = null; renderTwins();
+    }
     else { mark('start'); curId = null; renderStart(); }
     if (!m) window.scrollTo(0, 0);
   }

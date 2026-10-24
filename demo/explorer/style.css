@@ -187,3 +187,17 @@ select{font:inherit;padding:.3rem .5rem;border:1px solid var(--ink);border-radiu
   .big-num{font-size:1.8rem}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+.tabbtn{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:20px;padding:.3rem .9rem;font:inherit;font-size:.9rem;cursor:pointer;margin:0 .3rem .3rem 0}
+.tabbtn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.stepper{display:flex;flex-direction:column;gap:.5rem}
+.stepper input[type=range]{width:100%;accent-color:var(--causal)}
+.banner{font-size:1rem;border-left-width:8px}
+.truth{margin:.4rem 0}
+.log.short{max-height:240px}
+.verdict.same{border-color:var(--ok);background:var(--ok-bg)}
+.verdict.diff{border-color:var(--harm);background:var(--harm-bg)}
+.verdict .big{font:600 1.15rem var(--serif)}
+.twinline{font-size:1.08rem;border:2px solid var(--ink);border-radius:6px;padding:.7rem .9rem;background:var(--panel)}
+.matrix th.cur,.matrix td.cur{background:var(--causal-bg);outline:2px solid var(--causal);outline-offset:-2px}
+h4{font:700 .85rem var(--sans);margin:.9rem 0 .3rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}

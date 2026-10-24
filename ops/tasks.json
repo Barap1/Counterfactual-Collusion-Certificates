@@ -1,6 +1,6 @@
 {
  "schema": "ccc-tasks/1",
- "updated_utc": "2026-10-24T17:20Z",
+ "updated_utc": "2026-10-24T17:00Z",
  "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
  "policy": {
   "max_worker_depth": 3,
@@ -14,10 +14,22 @@
  },
  "live_agents": [
   {
-   "id": "BENCH-IMP",
-   "owner": "codex gpt-6.1-sol/high (core research artifact; stated reason)",
-   "started_utc": "2026-10-24T16:05Z",
+   "id": "BENCH-ALIGN",
+   "owner": "codex gpt-6.1-sol/medium",
+   "started_utc": "2026-10-24T16:55Z",
    "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/"
+  },
+  {
+   "id": "VIS-ENH",
+   "owner": "claude sonnet",
+   "started_utc": "2026-10-24T16:55Z",
+   "writes": "figures/enh/"
+  },
+  {
+   "id": "DEMO-TWINS",
+   "owner": "claude sonnet (resumed DEMO-UI)",
+   "started_utc": "2026-10-24T16:55Z",
+   "writes": "demo/"
   }
  ],
  "gates": {
@@ -466,7 +478,7 @@
    "id": "BENCH-IMP",
    "objective": "ccc/bench identifiability benchmark build + DEV run",
    "owner": "codex gpt-6.1-sol/high (core research artifact; stated reason)",
-   "status": "RUNNING",
+   "status": "DONE (DEV run; commit 1c055a8)",
    "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/",
    "gate": "ENH-R2"
   },
@@ -509,10 +521,34 @@
    "status": "DONE (pending R4 number-trace QA and twins view)",
    "writes": "demo/explorer/",
    "gate": "ENH-R4"
+  },
+  {
+   "id": "BENCH-ALIGN",
+   "objective": "align ccc/bench with PROTOCOL (CRN, seed rule, report generator, strongest baseline)",
+   "owner": "codex gpt-6.1-sol/medium",
+   "status": "RUNNING",
+   "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/",
+   "gate": "ENH-R2/R4"
+  },
+  {
+   "id": "VIS-ENH",
+   "objective": "paper v2 figures from benchmark outputs (DEV prototype)",
+   "owner": "claude sonnet",
+   "status": "RUNNING",
+   "writes": "figures/enh/",
+   "gate": "ENH-R2/R4"
+  },
+  {
+   "id": "DEMO-TWINS",
+   "objective": "explorer twin-worlds centrepiece",
+   "owner": "claude sonnet (resumed DEMO-UI)",
+   "status": "RUNNING",
+   "writes": "demo/",
+   "gate": "ENH-R2/R4"
   }
  ],
  "handoff": {
-  "running_jobs": "BENCH-IMP",
+  "running_jobs": "BENCH-ALIGN, VIS-ENH, DEMO-TWINS",
   "unpushed_commits": 1,
   "repo_visibility": "PUBLIC (re-confirmed by SEC-001 2026-10-24); owner decision pending",
   "worktree": "../ApartSprint-wt-v12 (branch v1.2-impl, fully merged into main; safe to remove after owner OK)"

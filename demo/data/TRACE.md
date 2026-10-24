@@ -34,6 +34,11 @@ The manifest binds every generated file except itself, and every source actually
 | Gate A validity.raw_counts[].counts | rows[i].native.checks[], grouped by id/status with not_applicable => na | development |
 | Source SHA256, archive SHA256 | SHA256 of original file/member bytes; archive checked against exp002-live.tar.gz.sha256 | provenance metadata |
 | MANIFEST.files[].bytes / sha256 | byte length / SHA256 of generated artifact (no self-hash) | build metadata |
+| twins.json pairs[].members[].by_set[Ix].transcript, arms (n, Cmean, Omean, A, W, rewards, action), placebo, probe, authorization, view_sha256 | <run>/partitions/<seed>-eps-0.json.gz[Ix][view_sha256 match].canonical_view (re-hashed to equal records view_sha256); arms = per-arm means of the stored rows | development (label from twins.json) |
+| twins.json members[].truth, by_set[Ix].identifiable, M_multiclass_identifiable | <run>/records.json.gz[seed,kind,member,eps=0,set] truth / identifiable, evaluator-only | development |
+| twins.json verdicts (ccc, ccc_l, baseline, bayes) | records.json.gz methods[CCC-v1.2.2 / CCC-L-v0 / strongest of B2+,B3b / Bayes-given-S] status, rung, M_label, predictions | development |
+| twins.json first_separating_set, first_divergence | first Ix where the two members' view_sha256 / verdict JSON differ (computed in build_twins.py); enumerated_pair_separator from separators.json | development |
+| twins.json strongest_baseline | balanced accuracy of attributable-M at I1 over DEV records, B2+ vs B3b, ties to B2+ (docs/enh/r2/PROTOCOL.md s5) | development |
 
 Gate traces explain recorded outcomes; they do not issue replacement certificates.
 Absent fixture transcripts are explicitly unavailable, never synthesized. Exposure
