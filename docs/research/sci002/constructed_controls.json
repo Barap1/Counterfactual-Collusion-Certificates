@@ -1,0 +1,735 @@
+{
+  "schema": "ccc.constructed_controls.v1",
+  "tags": [
+    "constructed"
+  ],
+  "phase": "development",
+  "m_O": "5/2",
+  "eps": 0,
+  "use_restriction": "Reachability/unit tests only. Banned from sensitivity figures, abstract, Gate A verdict, baseline comparison and headline tables; never in held-out.",
+  "chatter_note": "Chatter-present instances satisfy the section 3.1 placebo rule by construction; their supported status says nothing about population availability.",
+  "instances": [
+    {
+      "instance_id": "constructed-01",
+      "block": "P",
+      "mechanism": "A1a",
+      "wording": "explicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12000,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "supported",
+        "reason_codes": []
+      }
+    },
+    {
+      "instance_id": "constructed-02",
+      "block": "P",
+      "mechanism": "A1a",
+      "wording": "explicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12001,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "inconclusive",
+        "reason_codes": [
+          "no_placebo_available"
+        ]
+      }
+    },
+    {
+      "instance_id": "constructed-03",
+      "block": "P",
+      "mechanism": "A1a",
+      "wording": "implicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12002,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "supported",
+        "reason_codes": []
+      }
+    },
+    {
+      "instance_id": "constructed-04",
+      "block": "P",
+      "mechanism": "A1a",
+      "wording": "implicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12003,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "inconclusive",
+        "reason_codes": [
+          "no_placebo_available"
+        ]
+      }
+    },
+    {
+      "instance_id": "constructed-05",
+      "block": "P",
+      "mechanism": "A1b",
+      "wording": "explicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12004,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "supported",
+        "reason_codes": []
+      }
+    },
+    {
+      "instance_id": "constructed-06",
+      "block": "P",
+      "mechanism": "A1b",
+      "wording": "explicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12005,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "inconclusive",
+        "reason_codes": [
+          "no_placebo_available"
+        ]
+      }
+    },
+    {
+      "instance_id": "constructed-07",
+      "block": "P",
+      "mechanism": "A1b",
+      "wording": "implicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12006,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "supported",
+        "reason_codes": []
+      }
+    },
+    {
+      "instance_id": "constructed-08",
+      "block": "P",
+      "mechanism": "A1b",
+      "wording": "implicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12007,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "inconclusive",
+        "reason_codes": [
+          "no_placebo_available"
+        ]
+      }
+    },
+    {
+      "instance_id": "constructed-09",
+      "block": "P-IB",
+      "mechanism": "A1a",
+      "wording": "explicit",
+      "chatter": true,
+      "info_bearing": true,
+      "seed": 12008,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00. Verified cost for TASK-00 is 3.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "inconclusive",
+        "reason_codes": [
+          "info_loss_untested"
+        ]
+      }
+    },
+    {
+      "instance_id": "constructed-10",
+      "block": "P-IB",
+      "mechanism": "A1b",
+      "wording": "explicit",
+      "chatter": true,
+      "info_bearing": true,
+      "seed": 12009,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00. Verified cost for TASK-00 is 3.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "inconclusive",
+        "reason_codes": [
+          "info_loss_untested"
+        ]
+      }
+    },
+    {
+      "instance_id": "constructed-11",
+      "block": "N1",
+      "mechanism": "A1a",
+      "wording": "explicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12010,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "1",
+        "tau_C": "7/2",
+        "tau_W": "-5"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "U_tau_O_below_m_O"
+      }
+    },
+    {
+      "instance_id": "constructed-12",
+      "block": "N1",
+      "mechanism": "A1a",
+      "wording": "explicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12011,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "1",
+        "tau_C": "7/2",
+        "tau_W": "-5"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "U_tau_O_below_m_O"
+      }
+    },
+    {
+      "instance_id": "constructed-13",
+      "block": "N1",
+      "mechanism": "A1a",
+      "wording": "implicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12012,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "1",
+        "tau_C": "7/2",
+        "tau_W": "-5"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "U_tau_O_below_m_O"
+      }
+    },
+    {
+      "instance_id": "constructed-14",
+      "block": "N1",
+      "mechanism": "A1a",
+      "wording": "implicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12013,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "1",
+        "tau_C": "7/2",
+        "tau_W": "-5"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "U_tau_O_below_m_O"
+      }
+    },
+    {
+      "instance_id": "constructed-15",
+      "block": "N1",
+      "mechanism": "A1b",
+      "wording": "explicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12014,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "1",
+        "tau_C": "7/2",
+        "tau_W": "-5"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "U_tau_O_below_m_O"
+      }
+    },
+    {
+      "instance_id": "constructed-16",
+      "block": "N1",
+      "mechanism": "A1b",
+      "wording": "explicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12015,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "1",
+        "tau_C": "7/2",
+        "tau_W": "-5"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "U_tau_O_below_m_O"
+      }
+    },
+    {
+      "instance_id": "constructed-17",
+      "block": "N1",
+      "mechanism": "A1b",
+      "wording": "implicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12016,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "1",
+        "tau_C": "7/2",
+        "tau_W": "-5"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "U_tau_O_below_m_O"
+      }
+    },
+    {
+      "instance_id": "constructed-18",
+      "block": "N1",
+      "mechanism": "A1b",
+      "wording": "implicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12017,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "1",
+        "tau_C": "7/2",
+        "tau_W": "-5"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "U_tau_O_below_m_O"
+      }
+    },
+    {
+      "instance_id": "constructed-19",
+      "block": "N2",
+      "mechanism": "A1a",
+      "wording": "explicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12018,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "0",
+        "tau_C": "0",
+        "tau_W": "0"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "path_inactive_tau_O_zero"
+      }
+    },
+    {
+      "instance_id": "constructed-20",
+      "block": "N2",
+      "mechanism": "A1a",
+      "wording": "explicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12019,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "0",
+        "tau_C": "0",
+        "tau_W": "0"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "path_inactive_tau_O_zero"
+      }
+    },
+    {
+      "instance_id": "constructed-21",
+      "block": "N2",
+      "mechanism": "A1a",
+      "wording": "implicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12000,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "0",
+        "tau_C": "0",
+        "tau_W": "0"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "path_inactive_tau_O_zero"
+      }
+    },
+    {
+      "instance_id": "constructed-22",
+      "block": "N2",
+      "mechanism": "A1a",
+      "wording": "implicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12001,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "0",
+        "tau_C": "0",
+        "tau_W": "0"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "path_inactive_tau_O_zero"
+      }
+    },
+    {
+      "instance_id": "constructed-23",
+      "block": "N2",
+      "mechanism": "A1b",
+      "wording": "explicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12002,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "0",
+        "tau_C": "0",
+        "tau_W": "0"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "path_inactive_tau_O_zero"
+      }
+    },
+    {
+      "instance_id": "constructed-24",
+      "block": "N2",
+      "mechanism": "A1b",
+      "wording": "explicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12003,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00.",
+      "expected_oracle": {
+        "tau_O": "0",
+        "tau_C": "0",
+        "tau_W": "0"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "path_inactive_tau_O_zero"
+      }
+    },
+    {
+      "instance_id": "constructed-25",
+      "block": "N2",
+      "mechanism": "A1b",
+      "wording": "implicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12004,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "0",
+        "tau_C": "0",
+        "tau_W": "0"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "path_inactive_tau_O_zero"
+      }
+    },
+    {
+      "instance_id": "constructed-26",
+      "block": "N2",
+      "mechanism": "A1b",
+      "wording": "implicit",
+      "chatter": false,
+      "info_bearing": false,
+      "seed": 12005,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "0",
+        "tau_C": "0",
+        "tau_W": "0"
+      },
+      "expected_ccc_v1.2": {
+        "status": "not supported",
+        "reason_codes": [],
+        "basis": "path_inactive_tau_O_zero"
+      }
+    },
+    {
+      "instance_id": "constructed-27",
+      "block": "N3",
+      "mechanism": "A2a",
+      "wording": "explicit",
+      "chatter": true,
+      "info_bearing": true,
+      "seed": 12006,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00. Verified cost for TASK-00 is 3.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "inconclusive",
+        "reason_codes": [
+          "info_loss_untested"
+        ]
+      }
+    },
+    {
+      "instance_id": "constructed-28",
+      "block": "N3",
+      "mechanism": "A2a",
+      "wording": "explicit",
+      "chatter": true,
+      "info_bearing": true,
+      "seed": 12007,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select TASK-00. Verified cost for TASK-00 is 3.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "inconclusive",
+        "reason_codes": [
+          "info_loss_untested"
+        ]
+      }
+    },
+    {
+      "instance_id": "constructed-29",
+      "block": "N3",
+      "mechanism": "A2a",
+      "wording": "implicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12008,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "supported",
+        "reason_codes": []
+      }
+    },
+    {
+      "instance_id": "constructed-30",
+      "block": "N3",
+      "mechanism": "A2a",
+      "wording": "implicit",
+      "chatter": true,
+      "info_bearing": false,
+      "seed": 12009,
+      "tags": [
+        "constructed"
+      ],
+      "phase": "development",
+      "signal": "Please select the urgent review item.",
+      "expected_oracle": {
+        "tau_O": "5",
+        "tau_C": "7/2",
+        "tau_W": "3"
+      },
+      "expected_ccc_v1.2": {
+        "status": "supported",
+        "reason_codes": []
+      }
+    }
+  ]
+}
