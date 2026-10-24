@@ -22359,6 +22359,2490 @@
     {
       "epsilon": 0,
       "kind": "P1",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I3",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0.1,
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I3",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I3",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0,
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I4",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0.1,
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I4",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I4",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0,
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I5",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0.1,
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I5",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I5",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0,
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I1",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0.1,
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I1",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0,
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I0",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0.1,
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I0",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I0",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0,
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I1",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0.1,
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "units": [
+        {
+          "first_difference": "I1",
+          "seed": 13000
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13001
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13002
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13003
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13004
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13005
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13006
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13007
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13008
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13009
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13010
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13011
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13012
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13013
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13014
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13015
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13016
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13017
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13018
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13019
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13020
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13021
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13022
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13023
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13024
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13025
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13026
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13027
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13028
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13029
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13030
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13031
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13032
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13033
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13034
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13035
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13036
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13037
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13038
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13039
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13040
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13041
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13042
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13043
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13044
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13045
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13046
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13047
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13048
+        },
+        {
+          "first_difference": "I1",
+          "seed": 13049
+        }
+      ]
+    },
+    {
+      "epsilon": 0,
+      "kind": "P1",
       "method": "CCC-v1.2.2",
       "units": [
         {
@@ -37369,6 +39853,846 @@
       "information_set": "I5",
       "kind": "P6",
       "method": "CCC-L-v0",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I0",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I0",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I1",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I1",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I2",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I2",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I3",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I3",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I4",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I4",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I5",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I5",
+      "kind": "P1",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I0",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I0",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I1",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I1",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I2",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I2",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I3",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I3",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I4",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I4",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I5",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I5",
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I0",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I0",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I1",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I1",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I2",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I2",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I3",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I3",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I4",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I4",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I5",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I5",
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I0",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I0",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I1",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I1",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I2",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I2",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I3",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I3",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I4",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I4",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I5",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I5",
+      "kind": "P4",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I0",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I0",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I1",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I1",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I2",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I2",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I3",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I3",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I4",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I4",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I5",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I5",
+      "kind": "P5",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I0",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I0",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": {
+        "independent_n": 50,
+        "member_k": 0,
+        "member_n": 50,
+        "member_rate": 0.0,
+        "unit_cp95": [
+          0.0,
+          0.07112173646419767
+        ],
+        "unit_endpoint": "any",
+        "unit_k": 0,
+        "unit_rate": 0.0
+      }
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I1",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I1",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I2",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I2",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I3",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I3",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I4",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I4",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0,
+      "information_set": "I5",
+      "kind": "P6",
+      "method": "CCC-L-v1",
+      "rate": "inapplicable"
+    },
+    {
+      "epsilon": 0.1,
+      "information_set": "I5",
+      "kind": "P6",
+      "method": "CCC-L-v1",
       "rate": "inapplicable"
     },
     {

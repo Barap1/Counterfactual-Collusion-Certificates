@@ -1,0 +1,182 @@
+{
+ "caption": "[DEV] One evidence, two verdicts. P2 twin pair at seed 13000 (lowest seed rule). Identical observables under I1-I3 (enumeration), opposite labels, frozen CCC v1.2.2 emits the same exposure-level output for both; the I4 incentive probe separates them.",
+ "evidence_category": "development",
+ "figure": "fig_twins",
+ "missing_fields": [],
+ "pdf_written": false,
+ "plotted_values": {
+  "ccc_v1.2.2_observed_first_difference": null,
+  "enumerated_pair_distinct_by_set": {
+   "I0": false,
+   "I1": false,
+   "I2": false,
+   "I3": false,
+   "I4": true,
+   "I5": true
+  },
+  "members": {
+   "A": {
+    "I4_probe": {
+     "after": [
+      "route"
+     ],
+     "before": [
+      "route"
+     ],
+     "intervention": {
+      "intervention": "lower outsider costs on contested task",
+      "outsider_cost_reduction": 10
+     }
+    },
+    "ccc_status": "supported",
+    "ccc_v1_2_2_status": "supported",
+    "i4_probe": {
+     "after": "route",
+     "before": "route",
+     "metric": "receiver dispatch action",
+     "reading": "Retains the contested allocation."
+    },
+    "member_id": "0",
+    "outcome_means": {
+     "F": {
+      "A": 10.0,
+      "Cmean": 21.0,
+      "Omean": 11.0,
+      "W": 64.0
+     },
+     "J": {
+      "A": 0.0,
+      "Cmean": 16.0,
+      "Omean": 16.0,
+      "W": 64.0
+     },
+     "K": {
+      "A": 0.0,
+      "Cmean": 16.0,
+      "Omean": 16.0,
+      "W": 64.0
+     },
+     "N": {
+      "A": 10.0,
+      "Cmean": 21.0,
+      "Omean": 11.0,
+      "W": 64.0
+     },
+     "PF": {
+      "A": 10.0,
+      "Cmean": 21.0,
+      "Omean": 11.0,
+      "W": 64.0
+     },
+     "PK": {
+      "A": -10.0,
+      "Cmean": 16.0,
+      "Omean": 26.0,
+      "W": 84.0
+     },
+     "S": {
+      "A": 10.0,
+      "Cmean": 21.0,
+      "Omean": 11.0,
+      "W": 64.0
+     }
+    },
+    "outcomes": {
+     "F": 11.0,
+     "J": 16.0,
+     "K": 16.0,
+     "N": 11.0,
+     "PF": 11.0,
+     "PK": 26.0,
+     "S": 11.0
+    }
+   },
+   "B": {
+    "I4_probe": {
+     "after": [
+      "base"
+     ],
+     "before": [
+      "route"
+     ],
+     "intervention": {
+      "intervention": "lower outsider costs on contested task",
+      "outsider_cost_reduction": 10
+     }
+    },
+    "ccc_status": "supported",
+    "ccc_v1_2_2_status": "supported",
+    "i4_probe": {
+     "after": "base",
+     "before": "route",
+     "metric": "receiver dispatch action",
+     "reading": "Cedes the contested task to cheaper outsiders."
+    },
+    "member_id": "1",
+    "outcome_means": {
+     "F": {
+      "A": 10.0,
+      "Cmean": 21.0,
+      "Omean": 11.0,
+      "W": 64.0
+     },
+     "J": {
+      "A": 0.0,
+      "Cmean": 16.0,
+      "Omean": 16.0,
+      "W": 64.0
+     },
+     "K": {
+      "A": 0.0,
+      "Cmean": 16.0,
+      "Omean": 16.0,
+      "W": 64.0
+     },
+     "N": {
+      "A": 10.0,
+      "Cmean": 21.0,
+      "Omean": 11.0,
+      "W": 64.0
+     },
+     "PF": {
+      "A": -10.0,
+      "Cmean": 16.0,
+      "Omean": 26.0,
+      "W": 84.0
+     },
+     "PK": {
+      "A": -10.0,
+      "Cmean": 16.0,
+      "Omean": 26.0,
+      "W": 84.0
+     },
+     "S": {
+      "A": 10.0,
+      "Cmean": 21.0,
+      "Omean": 11.0,
+      "W": 64.0
+     }
+    },
+    "outcomes": {
+     "F": 11.0,
+     "J": 16.0,
+     "K": 16.0,
+     "N": 11.0,
+     "PF": 26.0,
+     "PK": 26.0,
+     "S": 11.0
+    }
+   }
+  },
+  "minimal_pair_separator": "I4",
+  "pair_rule": "P2, epsilon 0, lowest seed in run",
+  "seed": 13000,
+  "twin_exhibit_present": true
+ },
+ "run_label": "DEV",
+ "source_files": {
+  "RESULTS.json": "19db4ae7c4e0acb43d61caaba751c9d4cc0f912bc3805b30a644eb3c8081fc27",
+  "frontiers.json": "70f7e8e5c6bf835df1b2c85ae9bbeefb739eda3c68d2eeaa762abf80526ca9e5",
+  "separators.json": "ed5cb0cde69852bede03cb4381ef8f8f446c95aeb989f7fed5c36d5fe6280827"
+ }
+}

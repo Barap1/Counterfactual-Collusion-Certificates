@@ -24,7 +24,7 @@ rows=json.loads(gzip.decompress((out/'records.json.gz').read_bytes()))
 assert len(rows)==13800==complete['records']
 assert {r['seed'] for r in rows}==set(DEV_SEEDS)
 assert len({r['unit'] for r in rows})==50
-assert all(len(r['methods'])==12 for r in rows)
+assert all(len(r['methods'])==13 for r in rows)
 assert all(r['placebo_availability']=='accepted' for r in rows)
 assert all(r['truth']['H']==r['truth']['E']=='n/a' for r in rows if r['kind'].startswith('invalid-'))
 assert all(r['methods']['CCC-v1.2.2']['status']=='invalid' for r in rows if r['kind'].startswith('invalid-') and r['set']!='I0')
@@ -66,7 +66,7 @@ legit=Counter((r['kind'],r['epsilon'],r['set']) for r in rows
 frontiers=json.loads((out/'frontiers.json').read_text())
 frontier_counts=Counter((kind,entry['minimal_pair_separator']) for f in frontiers for kind,entry in f['pairs'].items())
 result=dict(evidence='development',records=len(rows),independent_seed_blocks=50,
-    methods=12,symmetry_violation_unit_events=violations,
+    methods=13,symmetry_violation_unit_events=violations,
     full_seed_replay=dict(seed=13000,epsilon=[0,.1],records=276,canonical_bytes_identical=True),
     frozen_files_unchanged=len(before),population=dict(k=pop['k'],n=pop['n'],rate=pop['rate'],cp95=pop['cp95']),
     CCC_support_legitimate=[dict(kind=k,epsilon=e,information_set=s,member_records=n) for (k,e,s),n in sorted(legit.items())],

@@ -1,0 +1,4 @@
+  File "/Users/aarav/Documents/Projects/ApartSprint/docs/enh/bench/align2_figure_smoke.py", line 17
+    assert 'missing in run outputs' not (out/'fig_twins.svg').read_text()
+                                        ^
+SyntaxError: invalid syntax

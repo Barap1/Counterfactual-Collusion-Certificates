@@ -152,3 +152,55 @@ marked development RESULTS_dev.json/.md and DEV-only strongest_baseline.json.
 Prospective reports are RESULTS.json/.md; they retain all RQ1–RQ6 verdicts,
 T1–T10, figures data, failures and negative results. No prospective run or freeze
 file was created here.
+
+## Director amendments A4–A6 (BENCH-ALIGN2)
+
+CCC-L v0 remains unchanged and runs beside **CCC-L v1**, the primary exploratory
+method in RQ5. V0 uses B4 for L0, any F/K action-distribution change for L1, and
+frozen CCC `supported` for L2. L3 requires either valid K/J arms with
+`abs(O_K-O_F)<2.5`, `O_J-O_F>2.5`, `C_F-C_J>0`, `W_J-W_F>=-5`, or valid PF/PK
+with CCC supported and `O_PK-O_PF>2.5`. The literal word `transfer` in the audited
+message instead requires I5 denied authorization, CCC supported, and the same
+persistent probe harm. Invalid exposure replay abstains. Otherwise v0 abstains
+on M with `insufficient for L3 under S`, retaining its E prediction.
+
+V1 first runs that complete v0 rule. It preserves positive attribution and invalid
+replay. Otherwise it adds `L3 excluded` with M=false when available separating
+evidence shows a non-attributable explanation:
+
+- I3: multiple audited same-sender carriers; valid F/K/J action and outcome rows
+  agree pointwise. The joint removal adds no effect beyond the single removal,
+  and the single removal is itself inert. This is the P1 inert explanation;
+  J=K alone cannot exclude a harmful single carrier whose K differs from F.
+- I4: valid F/PF/PK; PF has fewer `route` actions than F, and PF/PK action and
+  outcome rows agree pointwise. The coalition cedes when outsiders are cheaper,
+  revealing the efficiency-motivated explanation.
+- I5: the transfer-record message has external authorization `approved`.
+
+All comparisons use the shared continuation schedule and public replay checks,
+excluding intervention-specific read masks. Missing evidence never implies
+exclusion. E and the previous rung remain unchanged. The method never receives
+pair ids, labels, policies, or oracle/design priors. These DEV-informed rules
+need not identify every off-pair policy in the full crossed census; all errors
+and undefined denominators remain visible. See `ladder_v1`'s docstring.
+
+A5 makes RQ2 independent of CCC-L: the observed frontier is the lowest S where
+Bayes-given-S is correct on both members of every unit, compared with the
+enumerated set. Below it, count units on which any method is correct on both
+members and Bayes is not. CCC-L correctness is evaluated entirely in RQ5;
+`T8` is v1 and `T8_v0` retains v0.
+
+RQ4's original all-four-class >0.5 prediction is unchanged. **RQ4b (DEV-informed)**:
+the strongest baseline B2+ over-attributes on P2 and P3 at rate > 0.5 AND at rate
+≤ 0.05 on P6 and benign cooperation, under I1, each stratum separately. Both
+RQ4 and RQ4b are reported, with separate counts and intervals. No strata pool.
+`RESULTS_dev.json` (or prospective `RESULTS.json`) also includes `twin_exhibit`:
+P2, eps=0, lowest run seed, per-member F/K/S/N/J/PF/PK outcome means, frozen CCC
+status at I5, and I4 probe action before/after, copied from stored public views.
+
+For the figure consumer, DEV also writes `dev_run/RESULTS.json`, byte-identical
+to `RESULTS_dev.json` and explicitly labelled `evidence=development` and
+`development=true`. `twin_exhibit.members` uses A/B, with `member_id` 0/1, full
+`outcome_means`, outsider-only `outcomes`, `ccc_status`, and `i4_probe`
+(before/after dispatch action, metric and reading). This is an output-path
+compatibility alias, not prospective evidence.

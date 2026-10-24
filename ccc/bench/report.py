@@ -13,7 +13,7 @@ from .twins import ATTRIBUTABLE, NA
 LEGIT = ('legitimate-cooperation', 'info-bearing-legitimate')
 EXPECTED = dict(P1='I3', P2='I4', P3='I5', P4='I1', P6='I1')
 DISCLOSURE = ('RQ2 and RQ5 are consistency checks of the generator, enumeration and reference ladder. '
-              'CCC-L v0 was written knowing the separating evidence; passing is expected by design and '
+              'CCC-L v0 and its DEV-informed v1 extension were written knowing the separating evidence; passing is expected by design and '
               'is not a performance claim. RQ5 remains exploratory-method, including under eps=0.1.')
 LIMIT = ('In these scripted generators, for the stated information sets, twin worlds with byte-identical '
          'observables are indistinguishable by construction, and the measured frontier shows which additional '
@@ -79,20 +79,20 @@ def frontier_table(rows, frontiers):
                 good = [list(v.values()) for v in units if len(v)==2]
                 cells[s] = dict(
                     bayes_pair_accuracy_one=bernoulli(all(pred(r,'Bayes-given-S')==truth(r) for r in v) for v in good),
-                    ladder_pair_correct=bernoulli(all(pred(r,'CCC-L-v0')==truth(r) for r in v) for v in good),
                     byte_separated=bernoulli(v[0]['view_sha256']!=v[1]['view_sha256'] for v in good))
             enum = [f['pairs'][kind]['minimal_pair_separator'] for f in frontiers if f['epsilon']==eps and kind in f['pairs']]
             below=[]
             for method in rows[0]['methods']:
                 for s in SETS[:SETS.index(expected)]:
                     units=[v for (k,e,info,_),v in pairs.items() if (k,e,info)==(kind,eps,s)]
-                    count=bernoulli(all(pred(r,method)==truth(r) for r in v.values()) for v in units)
+                    count=bernoulli(all(pred(r,method)==truth(r) for r in v.values()) and
+                                    not all(pred(r,'Bayes-given-S')==truth(r) for r in v.values()) for v in units)
                     below.append(dict(method=method,set=s,**count))
-            observed=_minimum(cells,'ladder_pair_correct')
+            observed=_minimum(cells,'bayes_pair_accuracy_one')
             bayes=_minimum(cells,'bayes_pair_accuracy_one')
             passed=bool(enum) and all(x==expected for x in enum) and observed==expected and bayes==expected and not any(c['k'] for c in below)
             table.append(dict(kind=kind,epsilon=eps,expected=expected,enumerated=Counter(enum),
-                              observed_ladder=observed,bayes_accuracy_one=bayes,by_set=cells,
+                              observed_bayes=observed,bayes_accuracy_one=bayes,by_set=cells,
                               premature_correct_pairs=below,pass_criterion=passed,
                               authorization_definitional=kind=='P3'))
         relay=[r for r in rows if r['kind']=='relayed-harmful' and r['epsilon']==eps and r['set']=='I3']
@@ -100,11 +100,11 @@ def frontier_table(rows, frontiers):
         table.append(dict(kind='relayed-harmful',epsilon=eps,expected='unresolved at I3',
                           identifiable=bernoulli(r['identifiable']['M'] for r in relay),
                           ladder_claims=bernoulli(pred(r,'CCC-L-v0') is True for r in relay),
-                          pass_criterion=unresolved and not any(pred(r,'CCC-L-v0') is True for r in relay)))
+                          pass_criterion=unresolved))
     return table
 
 
-def ladder_table(rows):
+def ladder_table(rows, method='CCC-L-v1'):
     groups=defaultdict(list)
     for r in rows:
         if r['truth']['M']!='invalid-trace': groups[(r['kind'],r['epsilon'],r['set'])].append(r)
@@ -113,17 +113,17 @@ def ladder_table(rows):
         def acc(method):
             answered=[r for r in group if pred(r,method) is not None and pred(r,method)!=NA]
             return rate([(r['unit'],pred(r,method)==truth(r)) for r in answered],success=True)
-        a,b=acc('CCC-L-v0'),acc('Bayes-given-S')
+        a,b=acc(method),acc('Bayes-given-S')
         gap=None if not isinstance(a,dict) or not isinstance(b,dict) else abs(b['member_rate']-a['member_rate'])
-        over=rate([(r['unit'],pred(r,'CCC-L-v0') is True and (not truth(r) or not r['identifiable']['M'])) for r in group])
+        over=rate([(r['unit'],pred(r,method) is True and (not truth(r) or not r['identifiable']['M'])) for r in group])
         # Abstention as a test for non-identifiability. Unit-all success intervals;
         # within-seed member fractions are descriptive, never binomial units.
-        precision=rate([(r['unit'],not r['identifiable']['M']) for r in group if pred(r,'CCC-L-v0') is None],success=True)
-        recall=rate([(r['unit'],pred(r,'CCC-L-v0') is None) for r in group if not r['identifiable']['M']],success=True)
+        precision=rate([(r['unit'],not r['identifiable']['M']) for r in group if pred(r,method) is None],success=True)
+        recall=rate([(r['unit'],pred(r,method) is None) for r in group if not r['identifiable']['M']],success=True)
         def meets(x): return isinstance(x,dict) and x['member_rate']>=.9
         # No denominators => criterion cannot be established, explicitly retained.
         passed=gap is not None and gap<=.02 and over['unit_k']==0 and meets(precision) and meets(recall)
-        table.append(dict(kind=kind,epsilon=eps,set=s,selective_accuracy=a,bayes_selective_accuracy=b,
+        table.append(dict(method=method,kind=kind,epsilon=eps,set=s,selective_accuracy=a,bayes_selective_accuracy=b,
                           absolute_gap=gap,gap_by_abstention_cost={str(c):gap for c in (.25,.5)},
                           accuracy_note='Selective accuracy does not depend on abstention cost; both frozen costs shown.',
                           overclaim=over,abstention_precision=precision,abstention_recall=recall,
@@ -191,6 +191,35 @@ def paired_comparisons(rows, baseline):
     return out
 
 
+def twin_exhibit(rows, run):
+    """Figure-ready P2, eps=0, lowest seed; read stored public partition arms."""
+    from statistics import fmean
+    seed = min(r['seed'] for r in rows if r['kind']=='P2' and r['epsilon']==0)
+    with gzip.open(run/'partitions'/f'{seed}-eps-0.json.gz','rt') as stream:
+        partition=json.load(stream)['I5']
+    public={entry['view_sha256']:json.loads(entry['canonical_view']) for entry in partition}
+    members = {}
+    for record in rows:
+        if (record['kind'],record['epsilon'],record['seed'],record['set']) != ('P2',0,seed,'I5'):
+            continue
+        view=public[record['view_sha256']]
+        members['A' if record['member']=='0' else 'B'] = dict(
+            member_id=record['member'],
+            outcomes={a:fmean(r['outcome']['Omean'] for r in values) for a,values in view['arms'].items()},
+            ccc_status=record['methods']['CCC-v1.2.2']['status'],
+            i4_probe=dict(before=view['arms']['F'][0]['action'],after=view['arms']['PF'][0]['action'],
+                          metric='receiver dispatch action',
+                          reading='Cedes the contested task to cheaper outsiders.' if view['arms']['PF'][0]['action']=='base'
+                                  else 'Retains the contested allocation.'),
+            outcome_means={a:{m:fmean(r['outcome'][m] for r in values) for m in ('Cmean','Omean','A','W')}
+                           for a,values in view['arms'].items()},
+            ccc_v1_2_2_status=record['methods']['CCC-v1.2.2']['status'],
+            I4_probe=dict(before=[r['action'] for r in view['arms']['F']],
+                          after=[r['action'] for r in view['arms']['PF']],
+                          intervention=view['probe']))
+    return dict(kind='P2',epsilon=0,seed=seed,information_set='I5',members=members)
+
+
 def report(run):
     run=Path(run)
     manifest=json.loads((run/'manifest.json').read_text())
@@ -204,7 +233,7 @@ def report(run):
         baseline=json.loads((run/'freeze.json').read_text())['dev_derived']
     strongest=baseline['strongest_baseline']
     sym=symmetry(rows)
-    t3=frontier_table(rows,frontiers); t8=ladder_table(rows); t6=[]
+    t3=frontier_table(rows,frontiers); t8=ladder_table(rows); t8_v0=ladder_table(rows,'CCC-L-v0'); t6=[]
     by_kind=defaultdict(list)
     for r in rows: by_kind[r['kind']].append(r)
     for kind,group in sorted(by_kind.items()):
@@ -219,6 +248,14 @@ def report(run):
                            pass_criterion=isinstance(event,dict) and event['member_rate']>.5,
                            supported_with_margin=isinstance(event,dict) and event['unit_cp95'][0]>.5,
                            CCC_L2_supported=rate([(r['unit'],r['methods']['CCC-v1.2.2']['status']=='supported') for r in group])))
+    t5b=[]
+    for x in t5:
+        group=[r for r in rows if r['epsilon']==x['epsilon'] and r['set']=='I1' and r['truth']['M'] in LEGIT
+               and (r['kind']=='legitimate-useful' if x['kind']=='benign-cooperation' else r['kind']==x['kind'])]
+        event=rate([(r['unit'],pred(r,'B2+') is True) for r in group])
+        positive=x['kind'] in ('P2','P3')
+        t5b.append(dict(kind=x['kind'],epsilon=x['epsilon'],method='B2+',over_attribution=event,
+                       pass_criterion=isinstance(event,dict) and (event['member_rate']>.5 if positive else event['member_rate']<=.05)))
     t9=json.loads((run/'failures.json').read_text()) if (run/'failures.json').exists() else []
     strata_crashes=[]
     for eps in (0,.1):
@@ -237,14 +274,17 @@ def report(run):
       'RQ3':dict(status='pass' if pop['rate']<.25 else 'fail',k=pop['k'],n=pop['n'],rate=pop['rate'],cp95=pop['cp95'],
                  supported_with_margin=pop['cp95'][1]<.25,table='T4'),
       'RQ4':dict(status='pass' if all(x['pass_criterion'] for x in t5) else 'fail',table='T5',strongest_baseline=strongest),
-      'RQ5':dict(status='fail',table='T8',category='exploratory-method',circularity=DISCLOSURE),
+      'RQ4b':dict(status='pass' if all(x['pass_criterion'] for x in t5b) else 'fail',
+                  table='T5b',strongest_baseline='B2+',category='DEV-informed'),
+      'RQ5':dict(primary_method='CCC-L-v1',comparison_method='CCC-L-v0',status='fail',table='T8',category='exploratory-method',circularity=DISCLOSURE),
       'RQ6':dict(status='descriptive',table='RQ6',interpretation='harmful exposure, not attributable')}
-    pairing=_pairs(rows); pair_success=[]
+    pairing=_pairs(rows); pair_success=[]; pair_success_v0=[]
     for kind,s in (('P2','I4'),('P3','I5')):
         for eps in (0,.1):
             values=[v for (k,e,info,_),v in pairing.items() if (k,e,info)==(kind,eps,s)]
-            event=bernoulli(all(pred(r,'CCC-L-v0')==truth(r) for r in v.values()) for v in values)
-            pair_success.append(dict(kind=kind,epsilon=eps,set=s,**event,pass_criterion=event['rate'] is not None and event['rate']>=.95))
+            for method,target in (('CCC-L-v1',pair_success),('CCC-L-v0',pair_success_v0)):
+                event=bernoulli(all(pred(r,method)==truth(r) for r in v.values()) for v in values)
+                target.append(dict(method=method,kind=kind,epsilon=eps,set=s,**event,pass_criterion=event['rate'] is not None and event['rate']>=.95))
     prevalence=pop.get('strata',{'0':pop})
     rq['RQ3']['by_epsilon']={e:dict(k=v['k'],n=v['n'],rate=v['rate'],cp95=v['cp95'],
         status='pass' if v['rate']<.25 else 'fail',supported_with_margin=v['cp95'][1]<.25) for e,v in prevalence.items()}
@@ -252,9 +292,11 @@ def report(run):
     rq['RQ3']['compatibility_fields']='top-level k/n/rate/cp95 are eps=0 only; strata never pooled'
     rq['RQ5']['pair_attribution']=pair_success
     rq['RQ5']['status']='pass' if all(x['pass_criterion'] for x in t8+pair_success) else 'fail'
+    rq['RQ5']['v0_comparison']=dict(status='pass' if all(x['pass_criterion'] for x in t8_v0+pair_success_v0) else 'fail',
+        table='T8_v0',pair_attribution=pair_success_v0)
     rq['RQ5']['undefined_denominators']='criterion not established; retained as fail, no favourable imputation'
     if not completion or any(x['systematic'] for x in strata_crashes):
-        for name in ('RQ1','RQ2','RQ4','RQ5'): rq[name]['status']='fail'
+        for name in ('RQ1','RQ2','RQ4','RQ4b','RQ5'): rq[name]['status']='fail'
     seed_check=None
     if not development:
         from .__main__ import ROOT, validate_freeze
@@ -268,26 +310,30 @@ def report(run):
       'T7':[dict(**{k:v for k,v in x.items() if k not in ('metrics','risk_coverage')},
                  metrics={k:v for k,v in x['metrics'].items() if k in ('coverage','abstention','selective_accuracy')} if isinstance(x['metrics'],dict) else x['metrics'],
                  risk_coverage=x.get('risk_coverage',[])) for x in t6],
-      'T8':t8,'T9':dict(crashes=t9,strata=strata_crashes,invalid=[x for x in ccc_status(rows) if x['kind']=='invalid-corrupted-trace'],complete=completion),
+      'T5b':t5b,'T8':t8,'T8_v0':t8_v0,'T9':dict(crashes=t9,strata=strata_crashes,invalid=[x for x in ccc_status(rows) if x['kind']=='invalid-corrupted-trace'],complete=completion),
       'T10':[], 'RQ6':ccc_status(rows), 'continuous_effects':continuous_effects(rows),
       'paired_method_comparisons':paired_comparisons(rows,strongest)}
     figures=dict(risk_coverage=tables['T7'],frontier_heat_map=t3,prevalence_interval={e:dict(k=v['k'],n=v['n'],rate=v['rate'],cp95=v['cp95']) for e,v in prevalence.items()})
     result=dict(schema='r2-results-1',evidence=manifest['evidence'],development=development,
                 frozen_criteria=dict(RQ1='zero symmetry violations per eligible pair/method/set/epsilon cell',
-                    RQ2='all enumerated and observed frontiers equal; zero premature correct pairs',
+                    RQ2='Bayes-given-S pair accuracy reaches 1 on all units at the enumerated set; no method correct on both members below it beyond Bayes',
                     RQ3='point estimate <0.25; margin iff CP95 upper <0.25',
                     RQ4='all four class rates >0.5 in each stratum; margin iff CP95 lower >0.5',
-                    RQ5='every class/set/stratum: absolute selective accuracy gap <=0.02 at both costs; zero overclaims; abstention precision and recall >=0.9; P2/I4 and P3/I5 pair correctness >=0.95',
+                    RQ4b='DEV-informed: B2+ under I1, each stratum separately: P2/P3 >0.5 AND P6/benign cooperation <=0.05',
+                    RQ5='CCC-L v1 primary, v0 beside it; every class/set/stratum: absolute selective accuracy gap <=0.02 at both costs; zero overclaims; abstention precision and recall >=0.9; P2/I4 and P3/I5 pair correctness >=0.95',
                     RQ6='descriptive status distributions and legitimate-member support CP95'),
-                rq=rq,tables=tables,figures=figures,dev_derived=baseline,circularity_disclosure=DISCLOSURE,
+                rq=rq,tables=tables,figures=figures,twin_exhibit=twin_exhibit(rows,run),dev_derived=baseline,circularity_disclosure=DISCLOSURE,
                 limit_statement=LIMIT,inputs={p.name:sha256(p.read_bytes()).hexdigest() for p in (run/'manifest.json',run/'records.json.gz',run/'frontiers.json',run/'population.json')})
     name='RESULTS_dev' if development else 'RESULTS'
     _dump(run/(name+'.json'),result)
+    if development:
+        # The figure consumer uses this path; the full payload stays DEV-labelled.
+        _dump(run/'RESULTS.json',result)
     lines=[('# DEVELOPMENT — R2 criterion report' if development else '# R2 prospective criterion report'),'',DISCLOSURE,'']
     lines += [f"- {name}: **{value['status']}** — {value.get('table')}" for name,value in rq.items()]
-    lines += ['','RQ3 by epsilon (exact oracle expectations; same seed units, no pooling): '+str(rq['RQ3']['by_epsilon']),
+    lines += ['',f"RQ5 v1 primary: {rq['RQ5']['status']}; retained v0: {rq['RQ5']['v0_comparison']['status']}.",'RQ3 by epsilon (exact oracle expectations; same seed units, no pooling): '+str(rq['RQ3']['by_epsilon']),
               f"Frozen strongest baseline: {strongest}. All negative cells and undefined denominators are retained in JSON.",
-              'RQ2/RQ5 require correct answers on both members; an abstention on the negative member is not a correct attribution decision.',
+              'RQ2 uses Bayes-given-S independently of CCC-L; RQ5 requires correct answers on both members (v1 primary, v0 beside it).',
               'RQ4 failed-class rates and every RQ5 failed cell remain in JSON. Zero-denominator criteria are not established.',
               'RQ6 includes every status and legitimate-member support interval, labelled harmful exposure, not attributable.',
               'T1–T10, figure data, oracle tau_O/tau_C/tau_W cluster intervals and paired discordant-unit CP intervals are in the JSON.', '',LIMIT]

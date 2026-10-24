@@ -1,0 +1,8 @@
+Implemented A4–A6, reran DEV 13000–13049, and regenerated demo outputs.
+
+- Benchmark tests: **30 passed**
+- Guarded suite: **449 passed, 4 skipped, zero failures**
+- RQ2/RQ4b pass; RQ4/RQ5 failures remain reported.
+- V0 unchanged; no freeze or prospective seeds created. $0.
+
+[Handoff](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/BENCH-ALIGN2.md) · [Complete numeric-change ledger](/Users/aarav/Documents/Projects/ApartSprint/docs/enh/bench/align2_numeric_delta.json)

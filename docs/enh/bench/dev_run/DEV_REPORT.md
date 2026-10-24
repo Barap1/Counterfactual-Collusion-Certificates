@@ -46,5 +46,5 @@ Member rates are descriptive; CP intervals label unit-any or unit-all events.
 Risk costs .25/.5 receive no invalid binomial intervals.
 
 Benchmark corrections and final validation commands/results are recorded in
-VALIDATION.md. No method was tuned or changed. No prospective block was run.
+VALIDATION.md. CCC-L v1 is the DEV-informed A4 exploratory extension; v0 is retained. No prospective block was run.
 The criterion report is RESULTS_dev.json/.md; it retains RQ2/RQ4/RQ5 failures.

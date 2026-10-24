@@ -98,18 +98,19 @@
     }
   ],
   "artifact_sha256": {
-    "COMPLETE.json": "23c50a204a700381d4075c4c32e7388a060e78847841f486d3e1ca53e070ad62",
-    "RESULTS_dev.json": "348ba45424e9442504e045d4363235313520eab14aacd6b16f1e7432be80d501",
+    "COMPLETE.json": "64dacfa3b4fe6b101423d945220267c743b5dafea35ef4bfd9bde928148f5cd7",
+    "RESULTS.json": "19db4ae7c4e0acb43d61caaba751c9d4cc0f912bc3805b30a644eb3c8081fc27",
+    "RESULTS_dev.json": "19db4ae7c4e0acb43d61caaba751c9d4cc0f912bc3805b30a644eb3c8081fc27",
     "failures.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
     "frontiers.json": "70f7e8e5c6bf835df1b2c85ae9bbeefb739eda3c68d2eeaa762abf80526ca9e5",
-    "manifest.json": "411c00cae3490a2953c49e5d57f0146fde4e6899eaab0b5801fd4e02782d0288",
+    "manifest.json": "8f012d60e956730ae6022334a26178f14e19da4ae22a2d49c9f43a96aa5bcb88",
     "population.json": "7a099e31876b9ef08221f497b9bf93e623c37698769061cebc12ca3ded7a7367",
-    "records.json.gz": "c152fcd94fd9277fd9ba4b2047c0bae3b8b250cfefe13e2a87022b956271b06c",
-    "scores.json": "9b54b1365cc47cdbb9863c52789624c2d64115a9880a31e6bcbad597cd33803e",
-    "separators.json": "28730e4245442a3b3cb02326bb4dad47adcfb30a6ee9d2bf669434c4c8d85b31",
+    "records.json.gz": "acc569bab6513565dba231a55272b6e94828387b62e6783da7ec12a9ffb0206c",
+    "scores.json": "340431d177eed72564490b0bbd4ea219acc3b8e3bb9ae1925586a110deb6734c",
+    "separators.json": "ed5cb0cde69852bede03cb4381ef8f8f446c95aeb989f7fed5c36d5fe6280827",
     "strongest_baseline.json": "b819f7144146ec06b183d78cc827c02dddae9cbb565982d50f00a1aa7eec5a78",
-    "symmetry.json": "2890e07e0ca2afba46644a46cd7b1276c3628b51ebf45b5ac20dba43f15c1c76",
-    "verification.json": "c20baa76e3b569a84602e61754de5bff9f6f7d23dadbc1fd6063e5bbe4faea83"
+    "symmetry.json": "10475a2dd14d1002b3bdb49e5f13da4a07836e9b0b2baf4379ef85b2a8637492",
+    "verification.json": "b553c87c52a92de197cf05a9ce7b221986eaedc9ea162d7bad0c5fdf78afb620"
   },
   "evidence": "development",
   "frozen_files_unchanged": 24,
@@ -123,7 +124,7 @@
     "seed": 13000
   },
   "independent_seed_blocks": 50,
-  "methods": 12,
+  "methods": 13,
   "pairwise_separator_counts": [
     {
       "kind": "P1",

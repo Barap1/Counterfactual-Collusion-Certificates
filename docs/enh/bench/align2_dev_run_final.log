@@ -1,0 +1,69 @@
+dev: seed 13000, eps=0, 138 instance/set records complete
+dev: seed 13000, eps=0.1, 138 instance/set records complete
+dev: seed 13001, eps=0, 138 instance/set records complete
+dev: seed 13001, eps=0.1, 138 instance/set records complete
+dev: seed 13002, eps=0, 138 instance/set records complete
+dev: seed 13002, eps=0.1, 138 instance/set records complete
+dev: seed 13003, eps=0, 138 instance/set records complete
+dev: seed 13003, eps=0.1, 138 instance/set records complete
+dev: seed 13004, eps=0, 138 instance/set records complete
+dev: seed 13004, eps=0.1, 138 instance/set records complete
+dev: seed 13005, eps=0, 138 instance/set records complete
+dev: seed 13005, eps=0.1, 138 instance/set records complete
+dev: seed 13006, eps=0, 138 instance/set records complete
+dev: seed 13006, eps=0.1, 138 instance/set records complete
+dev: seed 13007, eps=0, 138 instance/set records complete
+dev: seed 13007, eps=0.1, 138 instance/set records complete
+dev: seed 13008, eps=0, 138 instance/set records complete
+dev: seed 13008, eps=0.1, 138 instance/set records complete
+dev: seed 13009, eps=0, 138 instance/set records complete
+dev: seed 13009, eps=0.1, 138 instance/set records complete
+dev: seed 13010, eps=0, 138 instance/set records complete
+dev: seed 13010, eps=0.1, 138 instance/set records complete
+dev: seed 13011, eps=0, 138 instance/set records complete
+dev: seed 13011, eps=0.1, 138 instance/set records complete
+dev: seed 13012, eps=0, 138 instance/set records complete
+dev: seed 13012, eps=0.1, 138 instance/set records complete
+dev: seed 13013, eps=0, 138 instance/set records complete
+dev: seed 13013, eps=0.1, 138 instance/set records complete
+dev: seed 13014, eps=0, 138 instance/set records complete
+dev: seed 13014, eps=0.1, 138 instance/set records complete
+dev: seed 13015, eps=0, 138 instance/set records complete
+dev: seed 13015, eps=0.1, 138 instance/set records complete
+dev: seed 13016, eps=0, 138 instance/set records complete
+dev: seed 13016, eps=0.1, 138 instance/set records complete
+dev: seed 13017, eps=0, 138 instance/set records complete
+dev: seed 13017, eps=0.1, 138 instance/set records complete
+dev: seed 13018, eps=0, 138 instance/set records complete
+dev: seed 13018, eps=0.1, 138 instance/set records complete
+dev: seed 13019, eps=0, 138 instance/set records complete
+dev: seed 13019, eps=0.1, 138 instance/set records complete
+dev: seed 13020, eps=0, 138 instance/set records complete
+dev: seed 13020, eps=0.1, 138 instance/set records complete
+dev: seed 13021, eps=0, 138 instance/set records complete
+dev: seed 13021, eps=0.1, 138 instance/set records complete
+dev: seed 13022, eps=0, 138 instance/set records complete
+dev: seed 13022, eps=0.1, 138 instance/set records complete
+dev: seed 13023, eps=0, 138 instance/set records complete
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/bench/__main__.py", line 308, in <module>
+    if __name__=='__main__': main()
+                             ~~~~^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/bench/__main__.py", line 303, in main
+    else: run(args.block,args.out or (ROOT/('docs/enh/bench/dev_run' if args.block=='dev' else 'docs/enh/r2/run')))
+          ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/bench/__main__.py", line 158, in run
+    tables=census(seed,eps)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/bench/enumerate.py", line 33, in census
+    entries.append((instance.key, instance, observe(instance, "I5"), oracle(instance)))
+                                                                     ~~~~~~^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/bench/twins.py", line 254, in oracle
+    for a in total: total[a] += mass*vals[a]
+                                ~~~~^~~~~~~~
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/fractions.py", line 701, in forward
+    return monomorphic_operator(a, Fraction(b))
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/fractions.py", line 834, in _mul
+    g2 = math.gcd(nb, da)
+KeyboardInterrupt
