@@ -1,0 +1,15 @@
+L,U,analysis,confirmatory,estimate,label,limitation,n_independent,omitted_world,tier,uncertainty_scope
+-0.01954964911635066,2.8336288730243204,ineligible_zero,False,1.354325711018898,descriptive; Tier-B case certificates exploratory,,8,,B,world_cluster
+-0.01954964911635066,2.8336288730243204,drop_ineligible,False,1.354325711018898,descriptive; Tier-B case certificates exploratory,,8,,B,world_cluster
+0.3101321335164628,3.2238700917118925,leave_one_world_out,False,1.7029631503692086,descriptive; Tier-B case certificates exploratory,,7,1031646258,B,world_cluster
+0.004749689652613702,3.145230267525315,leave_one_world_out,False,1.5311735287307895,descriptive; Tier-B case certificates exploratory,,7,1394100456,B,world_cluster
+-0.1798754829930717,3.032775308971455,leave_one_world_out,False,1.3536377093831806,descriptive; Tier-B case certificates exploratory,,7,1482663892,B,world_cluster
+-0.30109135415863264,2.658966163352879,leave_one_world_out,False,1.048829931566307,descriptive; Tier-B case certificates exploratory,,7,1585432260,B,world_cluster
+-0.0009965080565760129,3.157836518558883,leave_one_world_out,False,1.5478008125930263,descriptive; Tier-B case certificates exploratory,,7,163932955,B,world_cluster
+-0.3224315697356864,2.894040851425331,leave_one_world_out,False,1.194454338778329,descriptive; Tier-B case certificates exploratory,,7,1716750912,B,world_cluster
+-0.33503782076925404,1.9815323746253384,leave_one_world_out,False,0.7964967635096143,descriptive; Tier-B case certificates exploratory,,7,551864267,B,world_cluster
+0.1305854150905666,3.2422225404546503,leave_one_world_out,False,1.6592494532207283,descriptive; Tier-B case certificates exploratory,,7,888852293,B,world_cluster
+-0.01954964911635066,2.8336288730243204,worst_missing,False,1.354325711018898,descriptive; Tier-B case certificates exploratory,fills use observed same-regime arm range; no observed range leaves undefined,8,,B,world_cluster
+-0.01954964911635066,2.8336288730243204,best_missing,False,1.354325711018898,descriptive; Tier-B case certificates exploratory,fills use observed same-regime arm range; no observed range leaves undefined,8,,B,world_cluster
+-0.30582823514418855,1.9140355795457116,noncommit_excluded,False,0.7269157197310299,descriptive; Tier-B case certificates exploratory,fills use observed same-regime arm range; no observed range leaves undefined,8,,B,world_cluster
+-0.030078618679886482,2.4841014115855917,S_pooled_F,False,1.1925488759309057,descriptive; Tier-B case certificates exploratory,fills use observed same-regime arm range; no observed range leaves undefined,8,,B,world_cluster

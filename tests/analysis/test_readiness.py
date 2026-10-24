@@ -49,7 +49,11 @@ class ReadinessTests(unittest.TestCase):
             v9=[r for r in read('validity_checks') if r['check']=='V9']
             self.assertTrue(all(r['status']=='pass' and r['L90']==r['U90']==0 for r in v9))
             self.assertEqual(sum(r['n_independent'] for r in v9),sum(r['arm']=='S' for r in rows))
-            self.assertFalse(any(r['confirmatory'] for r in effects))
+            self.assertEqual({r['effect'] for r in effects if r['confirmatory']},
+                             {'Delta_total', 'S1', 'S2', 'S3'})
+            self.assertFalse(by['Delta_conditional']['confirmatory'])
+            self.assertTrue(all(not r['confirmatory'] and r['tier']=='B'
+                                for r in read('checkpoint_certificates')))
             self.assertEqual(run(src,root/'repeat'),0)
             first={str(p.relative_to(out)):p.read_bytes() for p in out.rglob('*') if p.is_file()}
             second={str(p.relative_to(root/'repeat')):p.read_bytes() for p in (root/'repeat').rglob('*') if p.is_file()}

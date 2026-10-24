@@ -1,0 +1,32 @@
+[
+  {
+    "attempted": 8,
+    "confirmatory": false,
+    "coverage": 0.5,
+    "inconclusive": 4,
+    "ineligible": 0,
+    "invalid": 0,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 8,
+    "not_supported": 4,
+    "regime": "B1",
+    "supported": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "attempted": 8,
+    "confirmatory": false,
+    "coverage": 0.875,
+    "inconclusive": 1,
+    "ineligible": 0,
+    "invalid": 0,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 8,
+    "not_supported": 7,
+    "regime": "B2",
+    "supported": 0,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

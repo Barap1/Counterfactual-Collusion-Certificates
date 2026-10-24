@@ -157,3 +157,15 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 ## D-033 (director) Analysis readiness (STAT-002c) accepted
 - A synthetic held-out-shaped rehearsal found and fixed real gaps: runner-format loading, skipped-N handling, retry isolation and failure accounting. 50 analysis tests pass; 39 synthetic outputs reproduce byte-identically. Exact post-run command: docs/analysis/readiness/READINESS.md.
 - Disclosed scope deviation: one early filename search by the Codex worker was broader than its brief and returned only protocol filenames. No held-out output contents were opened. Logged for REV-001.
+
+## D-034 (2026-10-24 ~07:40 UTC, director) Gate C review outcome; labelling correction
+- REV-001 (independent Claude Sonnet): PASS-WITH-NARROWING, no P0. It reproduced every number from RAW: Delta 1.354, sign-flip p 0.0703 (18/256), bootstrap CI [-0.0195, 2.8336], 16/16 worlds, 143 valid executed branches + 56 N not_run, 0 failed, 0 invalid, $0.
+- Governing-text decision: the protocol v1.2 §10 sentence "Tier B is labelled exploratory now" governs Tier-B CASE-LEVEL verdicts only. The study-level primary Delta and the S1–S3 Holm family are preregistered confirmatory (prereg §10 floors met: 8/7/8; D-030; REV-FREEZE). The pipeline's hard-coded "exploratory (DEV-001)" label (ccc/analysis/study.py L38–44, 62–66; pipeline.py L131) is an implementation error: DEV-001 affects only the S arm/V9. It is corrected as a disclosed correction (labels only; no number, threshold or data change). This makes the result a CONFIRMATORY NULL, the conservative reading.
+- Preregistered decision: Delta > 0 NOT supported (bootstrap lower bound -0.02 ≤ 0; p 0.070 > 0.05; both required). Holm S1/S2/S3 adjusted 0.164/0.4375/0.164: none significant.
+- Post-hoc sensitivity (labelled post hoc): excluding the two F-arm non-commit runs (H02_B1, H05_B1) gives Delta 0.727, CI [-0.31, 1.91], p 0.156. Reported alongside, never as the primary.
+- Zero supported is NOT attributed only to placebo unavailability: no checkpoint's CI_lower exceeds m_O (max 0.77). N_m ran on 2/16 checkpoints.
+- V9: by-regime B1 sham_uncertain, B2 pass; pooled study rule passes. Both reported; no sham-equivalence certification claimed.
+
+## D-035 (director) GATE C PASSED (with narrowing)
+- Analysis is frozen; every attempted run is accounted for (16/16 worlds; 143 valid + 56 N not_run; 0 failed or invalid). The headline Delta was independently reproduced twice (REV-001a script; REV-001 raw reproduction). The label correction (exp002_heldout_v2) was verified by the director: 0 numeric diffs across 15 JSON outputs.
+- Claims follow the realized evidence (docs/review/rev001/CLAIMS_LEDGER.md): a confirmatory null on the primary (Delta > 0 not supported, n=8); no Holm secondary significant; 0 case-level supported, not attributed only to placebo unavailability; post-hoc sensitivity 0.73 disclosed; DEV Gate A method-validation findings; and the limitations.

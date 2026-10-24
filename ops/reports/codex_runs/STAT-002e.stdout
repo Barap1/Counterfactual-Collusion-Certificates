@@ -1,0 +1,5 @@
+Fixed confirmatory labels and preregistered decision logic; primary result: **not supported**.
+Delta_conditional remains descriptive; Tier-B certificates remain exploratory.
+Regenerated v2; compared all 39 original outputs. Every numeric field is byte-identical.
+Exception: two source provenance hashes necessarily changed, disclosed in [CORRECTION.md](/Users/aarav/Documents/Projects/ApartSprint/docs/analysis/exp002_heldout_v2/CORRECTION.md).
+Analysis tests: 57 run, OK, one guard-required skip. No live calls or commits; original outputs preserved.

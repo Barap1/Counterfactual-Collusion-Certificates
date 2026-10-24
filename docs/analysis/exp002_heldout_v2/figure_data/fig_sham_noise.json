@@ -1,0 +1,79 @@
+[
+  {
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": -3.765900278022194,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "551864267"
+  },
+  {
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": -0.173232054585732,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "1482663892"
+  },
+  {
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 1,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "1031646258"
+  },
+  {
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": -2.6233448119583436,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "1585432260"
+  },
+  {
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 1,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "1585432260"
+  },
+  {
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "h_S_minus_h_F": 0.0,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 1,
+    "regime": "B1",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "163932955"
+  },
+  {
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "h_S_minus_h_F": -0.09140374104659799,
+    "label": "descriptive; Tier-B case certificates exploratory",
+    "n_independent": 1,
+    "regime": "B2",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "1394100456"
+  }
+]

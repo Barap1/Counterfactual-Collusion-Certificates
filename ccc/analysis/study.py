@@ -35,13 +35,17 @@ def study_effects(worlds, phase, m_O):
     attempted = sum('B1' in g and 'B2' in g for g in groups.values())
     good = sum(all(r in g and g[r]['eligible'] and min(g[r]['n_F'],g[r]['n_K'])>=3 for r in ('B1','B2')) for g in groups.values())
     floor = attempted>=8 and sum(abs(x)>1e-12 for x in ds)>=6 and good>=4
-    # DEV-001 leaves Tier B exploratory; floors cannot undo this deviation.
-    confirmatory = False
-    tier = 'feasibility' if not floor or phase=='development' else 'exploratory'
+    # D-034: Tier-B case verdicts are exploratory; study inference follows the preregistered floors.
+    confirmatory = floor and phase == 'holdout'
+    tier = 'A-confirmatory' if confirmatory else 'feasibility'
     flip = sign_flip(ds)
-    rows = [dict(effect='Delta_total',**summarize(ds),p_raw=flip['p'],test_status=flip['status'],
+    summary = summarize(ds)
+    decision = ('supported' if summary['L'] is not None and summary['L'] > 0
+                and flip['p'] is not None and flip['p'] <= .05 else 'not supported')
+    labels = dict(tier=tier, label=tier)
+    rows = [dict(effect='Delta_total',**summary,**labels,p_raw=flip['p'],test_status=flip['status'],
                  inference_tier=tier,confirmatory=confirmatory,caveats=CAVEATS,
-                 decision='exploratory',matched_pairs_attempted=attempted,eligible_complete_pairs=good)]
+                 decision=decision,matched_pairs_attempted=attempted,eligible_complete_pairs=good)]
     rows.append(dict(effect='Delta_conditional',**summarize([x['d_w'] for x in paired(worlds,conditional=True)]),confirmatory=False))
     for regime in sorted({w['regime'] for w in worlds}):
         ws = [w for w in worlds if w['regime']==regime]
@@ -63,7 +67,7 @@ def study_effects(worlds, phase, m_O):
     svalues.append([p['d_w'] for p in paired(worlds,metric='tau_C')])
     ps=[sign_flip(vals,two_sided=i>0)['p'] for i,vals in enumerate(svalues)]
     for i,(vals,p,adj) in enumerate(zip(svalues,ps,holm(ps)),1):
-        rows.append(dict(effect=f'S{i}',**summarize(vals),p_raw=p,p_holm=adj,confirmatory=False,inference_tier=tier))
+        rows.append(dict(effect=f'S{i}',**summarize(vals),p_raw=p,p_holm=adj,confirmatory=confirmatory,inference_tier=tier,**labels))
     return rows,pairs
 
 

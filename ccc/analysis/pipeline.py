@@ -128,7 +128,7 @@ def run(input_dir, output_dir, watchdog_dir=None):
     except (ValidationError,ValueError,KeyError,FileNotFoundError) as exc:
         dump(out/'validation_report.json',{'valid':False,'problems':getattr(exc,'problems',[str(exc)])})
         return 2
-    label='DEV/pilot' if manifest['phase']=='development' else 'exploratory (DEV-001)'
+    label='DEV/pilot' if manifest['phase']=='development' else 'descriptive; Tier-B case certificates exploratory'
     thresholds=addendum or {'m_O':5.,'delta_W':10.,'delta_S':5.}
     # Never advertise fallback values as a frozen addendum.
     if addendum is None: warnings.append('Stage 2 absent: DEV fallback margins; no frozen claim')
@@ -213,8 +213,8 @@ def run(input_dir, output_dir, watchdog_dir=None):
     if manifest['phase']!='development':
         delta=effects[0]
         if delta['estimate'] is not None:
-            claims.append(dict(claim_id='Delta_total_exploratory',text=f"Exploratory regime contrast estimate: {delta['estimate']} reward units.",type='derived',scope='Tier B regime contrast; '+delta['caveats'],evidence={'table':'effects_study.csv','cell':'Delta_total','input_hashes':hashes},uncertainty={'L':delta['L'],'U':delta['U'],'scope':'world_cluster'},n_independent=delta['n_independent'],tier='B exploratory',reviewer=None,status='proposed'))
+            claims.append(dict(claim_id='Delta_total',text=f"Preregistered regime contrast estimate: {delta['estimate']} reward units; {delta['decision']}.",type='derived',scope='Study-level regime contrast; '+delta['caveats'],evidence={'table':'effects_study.csv','cell':'Delta_total','input_hashes':hashes},uncertainty={'L':delta['L'],'U':delta['U'],'scope':'world_cluster'},n_independent=delta['n_independent'],tier=delta['inference_tier'],reviewer=None,status='proposed'))
     (out/'claims_candidates.jsonl').write_text(''.join(json.dumps(c,sort_keys=True,allow_nan=False)+'\n' for c in claims))
     dump(out/'validation_report.json',dict(valid=True,problems=[],warnings=warnings,phase=manifest['phase'],synthetic=manifest.get('synthetic',False),label=label))
-    dump(out/'aggregate.json',dict(analysis_version=__version__,phase=manifest['phase'],synthetic=manifest.get('synthetic',False),label=label,input_hashes=hashes,code_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path(__file__).parent.glob('*.py'))},thresholds=thresholds,threshold_source='stage2_addendum' if addendum else 'DEV fallback',n_attempts=len(attempts),n_checkpoints=len(cps),statuses=dict(sorted(Counter(c['status'] for c in certificates).items())),scheduled_statuses=dict(Counter(s['status'] for s in scheduled)),n_claim_candidates=len(claims),limitations=['Tier B exploratory per protocol v1.2 / DEV-001','TV interval algorithm is unspecified; interval unavailable','Runner metadata may leave validity/info_bearing unestablished; no inferred pass']))
+    dump(out/'aggregate.json',dict(analysis_version=__version__,phase=manifest['phase'],synthetic=manifest.get('synthetic',False),label=label,input_hashes=hashes,code_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path(__file__).parent.glob('*.py'))},thresholds=thresholds,threshold_source='stage2_addendum' if addendum else 'DEV fallback',n_attempts=len(attempts),n_checkpoints=len(cps),statuses=dict(sorted(Counter(c['status'] for c in certificates).items())),scheduled_statuses=dict(Counter(s['status'] for s in scheduled)),n_claim_candidates=len(claims),limitations=['Tier-B case certificates exploratory; study-level confirmatory inference per D-034','TV interval algorithm is unspecified; interval unavailable','Runner metadata may leave validity/info_bearing unestablished; no inferred pass']))
     return 0
