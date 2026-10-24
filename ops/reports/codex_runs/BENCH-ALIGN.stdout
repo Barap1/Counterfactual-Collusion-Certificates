@@ -1,0 +1,6 @@
+Implemented. [Handoff](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/BENCH-ALIGN.md) records artifacts, commands and limitations.
+
+- 27 bench tests pass.
+- Full suite: 445 passed, 1 failed, 4 skipped. Failure: stale demo manifest hashes.
+- DEV: RQ1/RQ3 pass; RQ2/RQ4/RQ5 fail; RQ6 descriptive. Failures are retained.
+- No prospective seeds generated. $0 spend; no network or git mutations.

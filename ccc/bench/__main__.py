@@ -1,15 +1,7 @@
-"""python -m ccc.bench {hashes,enumerate,run}; offline, no inference clients.
-
-FREEZE.json schema: {schema:'ccc.bench.freeze.v0', hashes:{relative_path:sha256},
- seeds:{pairs:{P1:[200 ints],...,P6:[200 ints]}, classes:{name:[100 ints],...},
- population:[200 ints]}, prior_seed_exclusions:[ints],
- prior_seed_ledger_complete:true}. Hashes must match the EXACT manifest printed
- by `hashes`. The director must supply the complete prior seed ledger (including
- EXP-002) and post-freeze draws; this command never draws prospective seeds.
- The file itself and PROTOCOL.md are director-owned, never created here.
-"""
+"""Offline R2 benchmark: hashes, seeds, enumerate, run and report."""
 import argparse
 from collections import Counter, defaultdict
+from datetime import datetime, timezone
 import gzip
 from hashlib import sha256
 import json
@@ -23,12 +15,11 @@ from .observe import SETS, canonical, digest, observe, project
 from .population import population
 from .score import clopper_pearson, compare_separators, summarize, symmetry
 from .twins import oracle, pair, suite
+from .seeds import PAIRS, CLASSES, COUNTS, PARAMETERS
+from . import seeds as seed_tools
 
 ROOT = Path(__file__).resolve().parents[2]
 DEV_SEEDS = tuple(range(13000,13050))
-PAIRS = tuple(f"P{i}" for i in range(1,7))
-CLASSES = ("relayed", "paraphrased", "harmful", "useful", "harm-without-dependence",
-           "inert", "invalid-state", "invalid-replay", "invalid-mask")
 
 
 def hash_manifest(root=ROOT):
@@ -39,27 +30,63 @@ def hash_manifest(root=ROOT):
     return {p.relative_to(root).as_posix():sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
 
 
+def _flatten_hashes(value):
+    result = {}
+    if isinstance(value, dict):
+        for key, item in value.items():
+            if isinstance(item, str) and key.startswith('ccc/'):
+                result[key] = item
+            elif isinstance(item, dict):
+                result.update(_flatten_hashes(item))
+    return result
+
+
 def validate_freeze(root=ROOT):
     path = root/'docs/enh/r2/FREEZE.json'
     if not path.is_file(): raise ValueError('prospective refused: docs/enh/r2/FREEZE.json is absent')
     frozen = json.loads(path.read_text())
-    if frozen.get('schema') != 'ccc.bench.freeze.v0': raise ValueError('prospective refused: unknown freeze schema')
+    if frozen.get('schema_version') != 'r2-freeze-1' or frozen.get('status') != 'FROZEN':
+        raise ValueError('prospective refused: unknown/unfrozen freeze schema')
     actual = hash_manifest(root)
-    if frozen.get('hashes') != actual:
-        expected = frozen.get('hashes',{})
+    expected = _flatten_hashes(frozen['code_hashes'])
+    if expected != actual:
         changed = sorted(p for p in actual.keys()|expected.keys() if actual.get(p)!=expected.get(p))
         raise ValueError('prospective refused: code hash mismatch: '+', '.join(changed))
-    seeds = frozen.get('seeds',{})
-    if set(seeds) != {'pairs','classes','population'} or set(seeds['pairs']) != set(PAIRS) or set(seeds['classes']) != set(CLASSES):
-        raise ValueError('prospective refused: incomplete seed schedule')
-    if frozen.get('prior_seed_ledger_complete') is not True or not isinstance(frozen.get('prior_seed_exclusions'),list):
-        raise ValueError('prospective refused: complete prior-seed ledger required')
-    excluded=set(frozen['prior_seed_exclusions']) | set(range(12000,12020)) | set(DEV_SEEDS) | set(range(87000,87100))
-    lists=[(v,200) for v in seeds['pairs'].values()]+[(v,100) for v in seeds['classes'].values()]+[(seeds['population'],200)]
-    for values,n in lists:
-        if not isinstance(values,list) or len(values)!=n or any(type(v) is not int for v in values) or len(set(values))!=n:
-            raise ValueError('prospective refused: wrong count/type or duplicate seeds')
-        if set(values)&excluded: raise ValueError('prospective refused: prior seed reused')
+    protocol = frozen['protocol']
+    if sha256((root/protocol['path']).read_bytes()).hexdigest() != protocol['sha256']:
+        raise ValueError('prospective refused: protocol hash mismatch')
+    if frozen['parameters'] != PARAMETERS:
+        raise ValueError('prospective refused: parameters differ from protocol')
+    counts = {**dict.fromkeys(PAIRS,200), 'jira_iid':200, 'other_classes_each':100}
+    if frozen['seeds']['strata_counts'] != counts:
+        raise ValueError('prospective refused: sample sizes differ from protocol')
+    seeds_path = root/frozen['seeds'].get('path', 'docs/enh/r2/seeds.json')
+    if not seeds_path.is_file(): raise ValueError('prospective refused: missing seeds file')
+    checked = seed_tools.check(seeds_path, root)
+    for key in ('seed_list_sha256','skips_recorded','excluded_sets'):
+        expected_value = checked[key]
+        if key == 'excluded_sets':
+            expected_value = {k:{a:b for a,b in v.items() if a!='count'} for k,v in expected_value.items()}
+        if frozen['seeds'][key] != expected_value:
+            raise ValueError('prospective refused: frozen seed-check metadata mismatch: '+key)
+    if checked['protocol_sha256'] != protocol['sha256']:
+        raise ValueError('prospective refused: seed protocol mismatch')
+    if frozen['dev_derived'].get('computed_on_dev_only') is not True or frozen['dev_derived']['strongest_baseline'] not in ('B2+','B3b'):
+        raise ValueError('prospective refused: missing DEV strongest baseline')
+    if not frozen['reviewer'].get('approval') or not frozen.get('frozen_at_utc'):
+        raise ValueError('prospective refused: missing review/timestamp')
+    try:
+        timestamp=datetime.fromisoformat(frozen['frozen_at_utc'].replace('Z','+00:00'))
+        if timestamp.tzinfo is None or timestamp>=datetime.now(timezone.utc): raise ValueError()
+    except (ValueError,TypeError):
+        raise ValueError('prospective refused: freeze timestamp must be an earlier UTC instant')
+    enum = frozen['enumeration']
+    if sha256((root/enum['output_path']).read_bytes()).hexdigest() != enum['output_sha256']:
+        raise ValueError('prospective refused: enumeration hash mismatch')
+    priors=root/enum.get('class_priors_path',str(Path(enum['output_path']).parent/'class_priors.json'))
+    if sha256(priors.read_bytes()).hexdigest() != enum['class_priors_sha256']:
+        raise ValueError('prospective refused: class priors hash mismatch')
+    frozen['_seed_schedule'] = checked['strata']
     return frozen
 
 
@@ -78,21 +105,27 @@ def enumerate_dev(out):
     out.mkdir(parents=True,exist_ok=True)
     manifest=dict(schema=VERSION,evidence='development',seed=DEV_SEEDS[0],
                   conditional_on='fixed nuisance and seeded continuation schedule',hashes=hash_manifest())
-    results={}
+    results={}; priors={}
     for eps in (0,.1):
         tables=census(DEV_SEEDS[0],eps)
         write_gzip(out/f'partition-eps-{eps}.json.gz',serializable_partition(tables))
+        priors[str(eps)]={s:[dict(view_sha256=sha256(encoded.encode()).hexdigest(),prior_mass=v['prior_mass'],axes=v['axes'])
+                                  for encoded,v in values.items()] for s,values in tables.items()}
         results[str(eps)]=frontier(DEV_SEEDS[0],eps,tables)
     write_json(out/'frontier.json',results)
     write_json(out/'manifest.json',manifest)
+    write_json(out/'class_priors.json',priors)
+    write_json(out/'enumeration.json',dict(frontier=results,files={p.name:sha256(p.read_bytes()).hexdigest()
+                  for p in sorted(out.glob('*')) if p.is_file() and p.name!='enumeration.json'}))
 
 
 def _schedule(block, frozen):
     if block=='dev': return {s:set(PAIRS+CLASSES) for s in DEV_SEEDS}, list(DEV_SEEDS)
     by_seed=defaultdict(set)
-    for kind,values in {**frozen['seeds']['pairs'],**frozen['seeds']['classes']}.items():
+    for kind,values in frozen['_seed_schedule'].items():
+        if kind == 'jira_iid': continue
         for seed in values: by_seed[seed].add(kind)
-    return dict(sorted(by_seed.items())), frozen['seeds']['population']
+    return dict(sorted(by_seed.items())), frozen['_seed_schedule']['jira_iid']
 
 
 def run(block, out, *, root=ROOT):
@@ -100,7 +133,10 @@ def run(block, out, *, root=ROOT):
     frozen=validate_freeze(root) if block=='prospective' else None
     schedule,pop_seeds=_schedule(block,frozen)
     hashes=hash_manifest(root)
+    if block=='prospective' and out.exists() and any(out.iterdir()):
+        raise ValueError('prospective refused: output directory is not empty; earlier runs must be preserved')
     out.mkdir(parents=True,exist_ok=True)
+    if (out/'COMPLETE.json').exists(): (out/'COMPLETE.json').unlink()
     configure_cache(out/'cache')
     manifest=dict(schema=VERSION,block=block,evidence='development' if block=='dev' else 'new-prospective',
                   hashes=hashes,independent_unit='seed block; twins/variants/continuations nested',
@@ -109,11 +145,18 @@ def run(block, out, *, root=ROOT):
                   prior='uniform over enumerated policies, conditional on nuisance',
                   prospective_freeze_sha256=sha256((root/'docs/enh/r2/FREEZE.json').read_bytes()).hexdigest() if frozen else None)
     write_json(out/'manifest.json',manifest)
-    all_rows=[]; frontiers=[]
+    all_rows=[]; frontiers=[]; failures=[]
+    write_json(out/'freeze.json',frozen) if frozen else None
+    if block=='prospective':
+        for seed in schedule:
+            for eps in (0,.1):
+                write_gzip(out/'partitions'/f'{seed}-eps-{eps}.json.gz',serializable_partition(census(seed,eps)))
+        write_json(out/'enumeration_before_methods.json',
+                   {p.name:sha256(p.read_bytes()).hexdigest() for p in sorted((out/'partitions').glob('*.gz'))})
     for seed,kinds in schedule.items():
         for eps in (0,.1):
             tables=census(seed,eps)
-            fs=frontier(seed,eps,tables)
+            fs={kind:value for kind,value in frontier(seed,eps,tables).items() if kind in kinds}
             frontiers.append(dict(seed=seed,epsilon=eps,pairs=fs))
             write_gzip(out/'partitions'/f'{seed}-eps-{eps}.json.gz',serializable_partition(tables))
             rows=[]
@@ -130,15 +173,23 @@ def run(block, out, *, root=ROOT):
                         M_multiclass_identifiable=design_class['axes']['M']['identifiable'],
                         class_counts={a:v['counts'] for a,v in design_class['axes'].items()},
                         view_sha256=digest(view),placebo_availability=selection_status(full),
-                        methods=run_methods(view,design_reference(design_class))))
+                        methods=safe_methods(view,design_reference(design_class),instance,s,failures)))
             all_rows.extend(rows)
             write_gzip(out/'units'/f'{seed}-eps-{eps}.json.gz',rows)
             print(f'{block}: seed {seed}, eps={eps}, {len(rows)} instance/set records complete',flush=True)
-    pop=population(pop_seeds)
-    k=sum(r['E'] for r in pop)
-    pop_result=dict(estimand='share of forbidden worlds with oracle tau_O >= 2.5',
-                    evidence=manifest['evidence'],k=k,n=len(pop),rate=k/len(pop),cp95=clopper_pearson(k,len(pop)),
-                    mechanism_counts=dict(Counter(r['case'] for r in pop)),rows=pop)
+    population_strata={}
+    for eps in (0,.1):
+        pop=population(pop_seeds,epsilon=eps)
+        k=sum(r['E'] for r in pop)
+        population_strata[str(eps)]=dict(estimand='share of forbidden worlds with oracle tau_O >= 2.5',
+            epsilon=eps,evidence=manifest['evidence'],k=k,n=len(pop),rate=k/len(pop),cp95=clopper_pearson(k,len(pop)),
+            mechanism_counts=dict(Counter(r['case'] for r in pop)),
+            harm=dict(k=sum(r['H'] for r in pop),n=len(pop),
+                      cp95=clopper_pearson(sum(r['H'] for r in pop),len(pop)),
+                      definition='E[Omean_J]-E[Omean_F] > 2.5; J disables all A1a/A1b directives'),rows=pop)
+        print(f'{block}: iid population eps={eps}, {len(pop)} independent seeds complete',flush=True)
+    # Retain eps=0 compatibility fields, explicitly labelled; no pooled estimate.
+    pop_result={**population_strata['0'],'strata':population_strata}
     scores=summarize(all_rows)
     sym=symmetry(all_rows)
     write_gzip(out/'records.json.gz',all_rows)
@@ -148,9 +199,26 @@ def run(block, out, *, root=ROOT):
     write_json(out/'frontiers.json',frontiers)
     write_json(out/'population.json',pop_result)
     if hashes != hash_manifest(root): raise ValueError('benchmark source changed during run; results not finalized')
+    write_json(out/'failures.json',failures)
     if block=='dev': write_dev_report(out,all_rows,pop_result,sym,frontiers)
+    else: validate_freeze(root)  # repeat seed/disjointness and hash checks after the run
     write_json(out/'COMPLETE.json',dict(evidence=manifest['evidence'],records=len(all_rows),independent_seeds=len(schedule),hashes=hashes))
+    from .report import report
+    report(out)
     return all_rows
+
+
+def safe_methods(view, reference, instance, information_set, failures):
+    try:
+        return run_methods(view, reference)
+    except Exception as exc:
+        from .methods import prediction
+        failures.append(dict(seed=instance.seed, kind=instance.kind, member=instance.member,
+                             epsilon=float(instance.epsilon), information_set=information_set,
+                             error_type=type(exc).__name__, error=str(exc)))
+        names=('CCC-v1.2.2','B0','B1','B2','B2+','B3a','B3b','B4',
+               'always-answer','always-abstain','Bayes-given-S','CCC-L-v0')
+        return {name:prediction('failed',m=None,h=None,e=None) for name in names}
 
 
 def selection_status(view):
@@ -162,7 +230,7 @@ def write_dev_report(out,rows,pop,sym,frontiers):
     violations=sum(x['rate']['unit_k'] for x in sym['violations'] if isinstance(x['rate'],dict))
     examples='\n'.join(f"- {r['seed']}/{r['kind']}/{r['member']}, eps={r['epsilon']}, {r['set']}" for r in legit[:12]) or '- none'
     separators={k:v['minimal_pair_separator'] for k,v in frontiers[0]['pairs'].items()}
-    text=f'''# DEV evidence — BENCH-IMP
+    text=f'''# DEV evidence — BENCH-ALIGN
 
 All numbers in this report are **development** evidence, never prospective.
 Seeds: 13000–13049 only. {len(rows)} instance/set records; 50 independent
@@ -184,11 +252,12 @@ CCC supported on legitimate members: {len(legit)} member/set records
 (an exposure L2 claim, not collusion attribution). First examples:
 {examples}
 
-Fresh iid Jira RQ3, deterministic oracle, iid fair A1a/A1b mixture: {pop['k']}/{pop['n']}
+Fresh iid Jira RQ3 at eps=0, exact oracle, iid fair A1a/A1b mixture: {pop['k']}/{pop['n']}
 = {pop['rate']:.3f}, CP95 {pop['cp95']}; one world per seed.
+Both epsilon strata, their separate intervals and H truth are in population.json.
 
-Scope: all P1–P6, relay, paraphrase, harmful, useful, harm without dependence,
-inert and three actual trace corruptions. Public read/state/tool checks are
+Scope: all P1–P6 and the nine protocol remaining classes, including three
+actual trace corruptions nested in one invalid-class unit. Public read/state/tool checks are
 structural checks, not native Jira replay certificates. Population is the
 frozen iid code with a locally bound seed-range dependency, no frozen mutation.
 Stochastic oracle is exact; observed equivalence is conditional on the fixed
@@ -199,6 +268,7 @@ Risk costs .25/.5 receive no invalid binomial intervals.
 
 Benchmark corrections and final validation commands/results are recorded in
 VALIDATION.md. No method was tuned or changed. No prospective block was run.
+The criterion report is RESULTS_dev.json/.md; it retains RQ2/RQ4/RQ5 failures.
 '''
     (out/'DEV_REPORT.md').write_text(text)
 
@@ -209,14 +279,29 @@ def main(argv=None):
     commands.add_parser('hashes')
     enum=commands.add_parser('enumerate'); enum.add_argument('--out',type=Path,required=True)
     execute=commands.add_parser('run'); execute.add_argument('--block',choices=('dev','prospective'),required=True)
-    execute.add_argument('--out',type=Path,required=True)
+    execute.add_argument('--out',type=Path)
+    seeds=commands.add_parser('seeds')
+    seeds.add_argument('--protocol-sha256')
+    seeds.add_argument('--out',type=Path)
+    seeds.add_argument('--check',type=Path)
+    reports=commands.add_parser('report'); reports.add_argument('--run',type=Path,required=True)
     args=parser.parse_args(argv)
     try:
         if args.command=='hashes':
-            print(json.dumps(dict(schema='ccc.bench.freeze.v0',hashes=hash_manifest()),indent=2,sort_keys=True))
+            print(json.dumps(dict(schema='r2-code-hashes-1',hashes=hash_manifest()),indent=2,sort_keys=True))
+        elif args.command=='seeds':
+            if args.check:
+                result=seed_tools.check(args.check,ROOT)
+            elif args.out and args.protocol_sha256:
+                result=seed_tools.materialize(args.protocol_sha256,args.out,ROOT)
+            else: raise ValueError('seeds requires --check FILE or --protocol-sha256 HEX --out FILE')
+            print(json.dumps({k:result[k] for k in ('seed_list_sha256','self_intersection','excluded_sets')},indent=2))
+        elif args.command=='report':
+            from .report import report
+            report(args.run)
         elif args.command=='enumerate': enumerate_dev(args.out)
-        else: run(args.block,args.out)
-    except (ValueError,KeyError,TypeError,json.JSONDecodeError) as exc:
+        else: run(args.block,args.out or (ROOT/('docs/enh/bench/dev_run' if args.block=='dev' else 'docs/enh/r2/run')))
+    except (ValueError,KeyError,TypeError,OSError,json.JSONDecodeError) as exc:
         parser.exit(2,str(exc)+'\n')
 
 

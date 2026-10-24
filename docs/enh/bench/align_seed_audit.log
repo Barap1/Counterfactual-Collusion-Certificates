@@ -1,0 +1,24 @@
+{
+  "sources": 27209,
+  "historical_seeds": 6247,
+  "excluded_sets": {
+    "gate_a_12000_12019": {
+      "count": 20,
+      "sha256": "3dfa2c97a704503e28dc18255c2d0fd713b0a2fd5c6213e29e9dba5c69050445"
+    },
+    "dev_13000_13049": {
+      "count": 50,
+      "sha256": "1dbd02b5b903d4bddcc37b39cddfcb46196e8cde45268e8e6b61dc11e247d493"
+    },
+    "exp002_exp001_pilot_seeds": {
+      "count": 6247,
+      "sha256": "2bc4f7e4130f7fddf7405e0095a0f778eb9ac4268a4ddeb78dfce7082fd53a28"
+    },
+    "integers_0_99999": {
+      "count": 100000,
+      "sha256": "ef440f29f9463eac65fda8b2e1214628852802516a2b06ae1a1b020743b78a20"
+    }
+  },
+  "prospective_seeds_drawn": 0,
+  "pass_census_replay": true
+}

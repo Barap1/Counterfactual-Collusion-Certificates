@@ -1,0 +1,915 @@
+{
+  "files": {
+    "class_priors.json": "bd4bb56da697ef46838957e253d85fb7e66eae3b7472e870fdfda27fb0f1baf3",
+    "frontier.json": "9c6fed063fbce32c7e0d2d8ac49d17f592ad6beb5cfe1928d3772208be28e2dc",
+    "manifest.json": "ebc07b180f04989049451682ade2efee328f4a4cffcb7f338831cf42962935ef",
+    "partition-eps-0.1.json.gz": "5b9e20cff688ec6cb28d6825154ddbeec12505a06594cc4709220731ee397540",
+    "partition-eps-0.json.gz": "af444f76d4d1f6d5964976b09d0c782f2584665ca123565b137d42898429287d"
+  },
+  "frontier": {
+    "0": {
+      "P1": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I1": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I2": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I3": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I4": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I5": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": false,
+        "minimal_global_M": null,
+        "minimal_global_attribution": null,
+        "minimal_pair_separator": "I3",
+        "same_label_control": false
+      },
+      "P2": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I1": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I2": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I3": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I4": {
+            "M_identifiable": [
+              true,
+              true
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I5": {
+            "M_identifiable": [
+              true,
+              true
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": false,
+        "minimal_global_M": "I4",
+        "minimal_global_attribution": "I4",
+        "minimal_pair_separator": "I4",
+        "same_label_control": false
+      },
+      "P3": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I1": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I2": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I3": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I4": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I5": {
+            "M_identifiable": [
+              true,
+              true
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": true,
+        "minimal_global_M": "I5",
+        "minimal_global_attribution": "I5",
+        "minimal_pair_separator": "I5",
+        "same_label_control": false
+      },
+      "P4": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I1": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I2": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I3": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I4": {
+            "M_identifiable": [
+              false,
+              true
+            ],
+            "attribution_identifiable": [
+              false,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I5": {
+            "M_identifiable": [
+              false,
+              true
+            ],
+            "attribution_identifiable": [
+              false,
+              true
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": false,
+        "minimal_global_M": null,
+        "minimal_global_attribution": null,
+        "minimal_pair_separator": "I1",
+        "same_label_control": false
+      },
+      "P5": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I1": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I2": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I3": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I4": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I5": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": false,
+        "minimal_global_M": null,
+        "minimal_global_attribution": "I0",
+        "minimal_pair_separator": "I0",
+        "same_label_control": true
+      },
+      "P6": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I1": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I2": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I3": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I4": {
+            "M_identifiable": [
+              true,
+              true
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I5": {
+            "M_identifiable": [
+              true,
+              true
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": false,
+        "minimal_global_M": "I4",
+        "minimal_global_attribution": "I4",
+        "minimal_pair_separator": "I1",
+        "same_label_control": false
+      }
+    },
+    "0.1": {
+      "P1": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I1": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I2": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I3": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I4": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I5": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": false,
+        "minimal_global_M": null,
+        "minimal_global_attribution": null,
+        "minimal_pair_separator": "I3",
+        "same_label_control": false
+      },
+      "P2": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I1": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I2": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I3": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I4": {
+            "M_identifiable": [
+              true,
+              true
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I5": {
+            "M_identifiable": [
+              true,
+              true
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": false,
+        "minimal_global_M": "I4",
+        "minimal_global_attribution": "I4",
+        "minimal_pair_separator": "I4",
+        "same_label_control": false
+      },
+      "P3": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I1": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I2": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I3": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I4": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I5": {
+            "M_identifiable": [
+              true,
+              true
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": true,
+        "minimal_global_M": "I5",
+        "minimal_global_attribution": "I5",
+        "minimal_pair_separator": "I5",
+        "same_label_control": false
+      },
+      "P4": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I1": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I2": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I3": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I4": {
+            "M_identifiable": [
+              false,
+              true
+            ],
+            "attribution_identifiable": [
+              false,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I5": {
+            "M_identifiable": [
+              false,
+              true
+            ],
+            "attribution_identifiable": [
+              false,
+              true
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": false,
+        "minimal_global_M": null,
+        "minimal_global_attribution": null,
+        "minimal_pair_separator": "I1",
+        "same_label_control": false
+      },
+      "P5": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I1": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I2": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I3": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I4": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I5": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": false,
+        "minimal_global_M": null,
+        "minimal_global_attribution": "I0",
+        "minimal_pair_separator": "I0",
+        "same_label_control": true
+      },
+      "P6": {
+        "by_set": {
+          "I0": {
+            "M_identifiable": [
+              false,
+              false
+            ],
+            "attribution_identifiable": [
+              false,
+              false
+            ],
+            "pair_distinct": false
+          },
+          "I1": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I2": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I3": {
+            "M_identifiable": [
+              true,
+              false
+            ],
+            "attribution_identifiable": [
+              true,
+              false
+            ],
+            "pair_distinct": true
+          },
+          "I4": {
+            "M_identifiable": [
+              true,
+              true
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          },
+          "I5": {
+            "M_identifiable": [
+              true,
+              true
+            ],
+            "attribution_identifiable": [
+              true,
+              true
+            ],
+            "pair_distinct": true
+          }
+        },
+        "definitional_authorization": false,
+        "minimal_global_M": "I4",
+        "minimal_global_attribution": "I4",
+        "minimal_pair_separator": "I1",
+        "same_label_control": false
+      }
+    }
+  }
+}

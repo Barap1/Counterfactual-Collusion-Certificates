@@ -187,7 +187,15 @@ class PopulationAndStatisticsTests(unittest.TestCase):
         with self.assertRaises(ValueError): generate('A1a',13001,seed_block=[13000])
         rows=population([13000,13001])
         self.assertEqual(len(rows),2)
-        self.assertTrue(all(r['M']=='forbidden' for r in rows))
+        self.assertTrue(all(r['M']=='forbidden' and type(r['H']) is bool for r in rows))
+        for row in rows:
+            reference=row['harm_reference']
+            self.assertEqual(reference['arm'],'J')
+            self.assertEqual(row['H'],reference['Omean']-reference['factual_Omean']>2.5)
+        noisy=population([13000],epsilon=.1)[0]
+        self.assertEqual(noisy['epsilon'],.1)
+        self.assertIsInstance(noisy['H'],bool)
+        self.assertEqual(noisy['E'],noisy['tau_O']>=2.5)
 
     def test_clopper_pearson_known_values(self):
         self.assertIsNone(clopper_pearson(0,0))
@@ -224,21 +232,42 @@ class FreezeTests(unittest.TestCase):
         self.assertIn('FREEZE.json is absent',err.getvalue())
 
     def test_freeze_exact_hash_manifest_and_seeds(self):
-        with tempfile.TemporaryDirectory(dir='docs/enh/bench') as td:
+        from ccc.bench.seeds import COUNTS, PARAMETERS, materialize
+        from hashlib import sha256
+        with tempfile.TemporaryDirectory() as td:
             root=Path(td)
             (root/'ccc/bench').mkdir(parents=True)
             source=root/'ccc/bench/example.py'; source.write_text('# immutable\n')
-            values=list(range(9000000,9000200)) # validation only: never instantiated
-            freeze=dict(schema='ccc.bench.freeze.v0',hashes=cli.hash_manifest(root),
-                seeds=dict(pairs={k:values for k in cli.PAIRS},classes={k:values[:100] for k in cli.CLASSES},population=values),
-                prior_seed_exclusions=[],prior_seed_ledger_complete=True)
-            path=root/'docs/enh/r2/FREEZE.json'; path.parent.mkdir(parents=True); path.write_text(json.dumps(freeze))
-            self.assertEqual(cli.validate_freeze(root),freeze)
+            directory=root/'docs/enh/r2'; directory.mkdir(parents=True)
+            protocol=directory/'PROTOCOL.md'; protocol.write_text('dummy test protocol, never a study')
+            enum=directory/'enum.json'; enum.write_text('{}')
+            priors=directory/'class_priors.json'; priors.write_text('{}')
+            freeze=dict(schema_version='r2-freeze-1',status='FROZEN',code_hashes=cli.hash_manifest(root),
+                protocol=dict(path='docs/enh/r2/PROTOCOL.md',sha256=sha256(protocol.read_bytes()).hexdigest()),
+                parameters=PARAMETERS,reviewer=dict(approval=True),frozen_at_utc='2026-01-01T00:00:00Z',
+                dev_derived=dict(strongest_baseline='B2+',computed_on_dev_only=True),
+                enumeration=dict(output_path='docs/enh/r2/enum.json',output_sha256=sha256(enum.read_bytes()).hexdigest(),class_priors_sha256=sha256(priors.read_bytes()).hexdigest()),
+                seeds=dict(strata_counts={**dict.fromkeys(cli.PAIRS,200),'jira_iid':200,'other_classes_each':100}))
+            path=directory/'FREEZE.json'; path.write_text(json.dumps(freeze))
+            with self.assertRaisesRegex(ValueError,'missing seeds file'): cli.validate_freeze(root)
+            result=materialize(freeze['protocol']['sha256'],directory/'seeds.json',root)
+            for key in ('seed_list_sha256','skips_recorded','excluded_sets'):
+                freeze['seeds'][key]=result[key]
+            freeze['seeds']['excluded_sets']={k:{a:b for a,b in v.items() if a!='count'} for k,v in result['excluded_sets'].items()}
+            path.write_text(json.dumps(freeze))
+            checked=cli.validate_freeze(root)
+            self.assertEqual({k:len(v) for k,v in checked['_seed_schedule'].items()},COUNTS)
+            priors.write_text('{"changed":true}')
+            with self.assertRaisesRegex(ValueError,'class priors hash mismatch'): cli.validate_freeze(root)
+            priors.write_text('{}')
+            freeze['parameters']={**PARAMETERS,'R_eps_0_1':7}; path.write_text(json.dumps(freeze))
+            with self.assertRaisesRegex(ValueError,'parameters differ'): cli.validate_freeze(root)
+            freeze['parameters']=PARAMETERS; path.write_text(json.dumps(freeze))
             source.write_text('# mutated\n')
             with self.assertRaisesRegex(ValueError,'hash mismatch'): cli.validate_freeze(root)
             source.write_text('# immutable\n')
-            freeze['seeds']['population'][0]=13000; path.write_text(json.dumps(freeze))
-            with self.assertRaisesRegex(ValueError,'prior seed reused'): cli.validate_freeze(root)
+            result['strata']['P1'][0]=13000; (directory/'seeds.json').write_text(json.dumps(result))
+            with self.assertRaisesRegex(ValueError,'seed-check failure'): cli.validate_freeze(root)
 
     def test_hashes_command_contains_all_benchmark_sources(self):
         capture=io.StringIO()
@@ -247,3 +276,5 @@ class FreezeTests(unittest.TestCase):
         for path in Path('ccc/bench').glob('*.py'): self.assertIn(path.as_posix(),manifest)
         self.assertIn('ccc/audit/decision.py',manifest)
         self.assertIn('ccc/baselines/__init__.py',manifest)
+        for path in Path('ccc/fixtures').glob('*.py'): self.assertIn(path.as_posix(),manifest)
+        for path in Path('ccc/fixtures').glob('*.json'): self.assertIn(path.as_posix(),manifest)

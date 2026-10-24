@@ -1,0 +1,23 @@
+{
+  "axis": "attributable mechanism",
+  "by_epsilon": {
+    "0": {
+      "B2+": 0.6294642857142857,
+      "B3b": 0.5357142857142857
+    },
+    "0.1": {
+      "B2+": 0.5854464285714286,
+      "B3b": 0.5357142857142857
+    }
+  },
+  "computed_on_dev_only": true,
+  "dev_balanced_accuracy": {
+    "B2+": 0.6074553571428571,
+    "B3b": 0.5357142857142857
+  },
+  "dev_block": "13000-13049",
+  "epsilon_weighting": "equal-size strata, member descriptive; no pooled interval",
+  "information_set": "I1",
+  "strongest_baseline": "B2+",
+  "ties": "B2+"
+}

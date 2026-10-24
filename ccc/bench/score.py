@@ -127,12 +127,13 @@ def symmetry(rows):
         a,b=members['0'],members['1']
         for method in a['methods']:
             different=canonical(a['methods'][method])!=canonical(b['methods'][method])
+            events[(method,kind,s,eps)]  # retain cells with no equivalent twins
             if a['view_sha256']==b['view_sha256']:
-                events[(method,s,eps)].append((a['unit'],different))
+                events[(method,kind,s,eps)].append((a['unit'],different))
             per_seed[(method,kind,seed,eps)][s]=different
     for (method,kind,seed,eps), sets in per_seed.items():
         observed[(method,kind,eps)].append(dict(seed=seed,first_difference=next((s for s in SETS if sets.get(s)),None)))
-    return dict(violations=[dict(method=m,information_set=s,epsilon=e,rate=rate(v)) for (m,s,e),v in sorted(events.items())],
+    return dict(randomness='common random numbers across twin members and arms', violations=[dict(method=m,kind=k,information_set=s,epsilon=e,rate=rate(v)) for (m,k,s,e),v in sorted(events.items())],
                 observed_separators=[dict(method=m,kind=k,epsilon=e,units=v) for (m,k,e),v in sorted(observed.items())])
 
 

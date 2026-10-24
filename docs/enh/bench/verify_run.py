@@ -21,7 +21,7 @@ assert manifest['hashes']==hash_manifest()==complete['hashes']
 assert {int(s) for s in manifest['seeds']}==set(DEV_SEEDS)
 assert manifest['population_seeds']==list(DEV_SEEDS)
 rows=json.loads(gzip.decompress((out/'records.json.gz').read_bytes()))
-assert len(rows)==12600==complete['records']
+assert len(rows)==13800==complete['records']
 assert {r['seed'] for r in rows}==set(DEV_SEEDS)
 assert len({r['unit'] for r in rows})==50
 assert all(len(r['methods'])==12 for r in rows)
@@ -32,7 +32,7 @@ assert all(r['methods']['CCC-v1.2.2']['predictions']['M']=='n/a' for r in rows)
 assert all(r['identifiable']['M'] and r['truth']['M'] in ATTRIBUTABLE for r in rows
            if r['methods']['CCC-L-v0']['predictions']['M'] is True)
 sym=json.loads((out/'symmetry.json').read_text())
-violations=sum(v['rate']['unit_k'] for v in sym['violations'])
+violations=sum(v['rate']['unit_k'] for v in sym['violations'] if isinstance(v['rate'],dict))
 assert violations==0
 separators=json.loads((out/'separators.json').read_text())
 assert not any(r['earlier_than_observable_separator'] for r in separators)
@@ -67,7 +67,7 @@ frontiers=json.loads((out/'frontiers.json').read_text())
 frontier_counts=Counter((kind,entry['minimal_pair_separator']) for f in frontiers for kind,entry in f['pairs'].items())
 result=dict(evidence='development',records=len(rows),independent_seed_blocks=50,
     methods=12,symmetry_violation_unit_events=violations,
-    full_seed_replay=dict(seed=13000,epsilon=[0,.1],records=252,canonical_bytes_identical=True),
+    full_seed_replay=dict(seed=13000,epsilon=[0,.1],records=276,canonical_bytes_identical=True),
     frozen_files_unchanged=len(before),population=dict(k=pop['k'],n=pop['n'],rate=pop['rate'],cp95=pop['cp95']),
     CCC_support_legitimate=[dict(kind=k,epsilon=e,information_set=s,member_records=n) for (k,e,s),n in sorted(legit.items())],
     pairwise_separator_counts=[dict(kind=k,separator=s,seed_stratum_count=n) for (k,s),n in sorted(frontier_counts.items())],
