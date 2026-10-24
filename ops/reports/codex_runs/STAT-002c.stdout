@@ -1,0 +1,7 @@
+STAT-002c complete: fixed runner-format loading, skipped-N handling, retry isolation, and failure accounting.
+
+50 offline tests pass; all 39 synthetic outputs reproduce byte-for-byte. $0, no network/model calls or commits. No held-out outcomes read.
+
+[READINESS.md](docs/analysis/readiness/READINESS.md) lists every output and the exact post-completion command. [Handoff](ops/reports/STAT-002c.md) records evidence and limitations.
+
+Scope deviation disclosed: one early filename search was broader than allowed; it returned only protocol filenames. No protected output contents were opened.

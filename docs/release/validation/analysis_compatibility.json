@@ -1,0 +1,13 @@
+{
+  "archived_byte_differences": [
+    "aggregate.json",
+    "checkpoint_certificates.csv",
+    "checkpoint_certificates.json",
+    "effects_study.csv",
+    "effects_study.json",
+    "validation_report.json",
+    "world_effects.csv",
+    "world_effects.json"
+  ],
+  "method": "Current analysis repeated with exact byte/hash agreement. Archived scientific fields retained and equal; additive fields allowed. aggregate code_hashes/limitations/synthetic and original stale-lock warning excluded from archived comparison."
+}

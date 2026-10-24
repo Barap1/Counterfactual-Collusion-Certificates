@@ -1,0 +1,42 @@
+nice: setpriority: Operation not permitted
+{
+  "chosen_theta": 0.4,
+  "argmax_theta_before_weak_rule": 0.6,
+  "best_youden_J": 0.49468085106382986,
+  "weak_detector": true,
+  "n_pos": 40,
+  "n_neg": 188,
+  "per_theta": [
+    {
+      "theta": 0.3,
+      "recall": 0.5,
+      "fpr": 0.07446808510638298,
+      "youden_J": 0.42553191489361697
+    },
+    {
+      "theta": 0.4,
+      "recall": 0.5,
+      "fpr": 0.05851063829787234,
+      "youden_J": 0.4414893617021276
+    },
+    {
+      "theta": 0.5,
+      "recall": 0.5,
+      "fpr": 0.026595744680851064,
+      "youden_J": 0.47340425531914887
+    },
+    {
+      "theta": 0.6,
+      "recall": 0.5,
+      "fpr": 0.005319148936170213,
+      "youden_J": 0.49468085106382986
+    },
+    {
+      "theta": 0.7,
+      "recall": 0.5,
+      "fpr": 0.005319148936170213,
+      "youden_J": 0.49468085106382986
+    }
+  ]
+}
+Verified DEV inputs, analysis, Stage-2 draft, theta pin and Gate A; Gate A remains FAIL.

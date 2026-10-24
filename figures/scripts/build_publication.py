@@ -155,15 +155,16 @@ def supported_vs_oracle(data, source):
     assert len(positive_abstentions)==20, f"expected 20 oracle-positive path-active abstentions; got {len(positive_abstentions)}"
     assert sum(primary_counts.values())==len(positive_abstentions)
     assert sum(counts.values())==len(rows)
-    fig,axs=plt.subplots(1,2,figsize=(7.15,3.45),gridspec_kw={"width_ratios":[1.25,1]})
+    fig,axs=plt.subplots(1,2,figsize=(7.15,3.45),gridspec_kw={"width_ratios":[1.35,1]})
     ax=axs[0]
     cats=list(counts); vals=[counts[k] for k in cats]
     cols=[TEAL,RED,BLUE,RED,AMBER]
-    bars=ax.bar(range(len(cats)),vals,color=cols,width=.72)
-    ax.set_xticks(range(len(cats)),["Correct support\n(τO ≥ mO)","False support\n(τO < mO)","Not supported,\nτO < mO","Not supported,\nτO ≥ mO","Abstain"],fontsize=6.3)
-    ax.set_ylabel("DEV fixture cells"); ax.set_title("CCC status vs oracle τO",loc="left",weight="bold",color=NAVY)
-    ax.grid(axis="y",color="#E7EBEE",lw=.7); ax.set_axisbelow(True)
-    for b,v in zip(bars,vals): ax.text(b.get_x()+b.get_width()/2,v+2,str(v),ha="center",fontsize=8,weight="bold",color=NAVY)
+    bars=ax.barh(range(len(cats)),vals,color=cols,height=.72)
+    labels=["Correct support (τO ≥ mO)","False support (τO < mO)","Not supported, τO < mO","Not supported, τO ≥ mO","Abstain"]
+    ax.set_yticks(range(len(cats)),labels,fontsize=6.3)
+    ax.invert_yaxis(); ax.set_xlabel("DEV fixture cells"); ax.set_title("CCC status vs oracle τO",loc="left",weight="bold",color=NAVY)
+    ax.grid(axis="x",color="#E7EBEE",lw=.7); ax.set_axisbelow(True)
+    for b,v in zip(bars,vals): ax.text(v+.8,b.get_y()+b.get_height()/2,str(v),va="center",fontsize=8,weight="bold",color=NAVY)
     ax=axs[1]; ax.set_title("Oracle-positive abstentions",loc="left",weight="bold",color=NAVY)
     items=[(key,primary_counts[key]) for key in priority if primary_counts[key]]
     if items:

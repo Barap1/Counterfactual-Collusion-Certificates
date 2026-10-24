@@ -1,0 +1,3 @@
+VIS-001c complete. Regenerated the DEV figures from Gate A v1.2.2, added `fig_supported_vs_oracle`, and kept `fig_arms`. The oracle figure shows 0 false supports, 0 false exonerations, and 20 oracle-positive abstentions with reason codes.
+
+Sidecars include source paths and SHA-256. Rendered PDFs to `/tmp/ccc_figqa` and visually checked them for clipping and overlap. Handoff: [VIS-001c.md](/Users/aarav/Documents/Projects/ApartSprint/ops/reports/VIS-001c.md). No held-out data accessed; $0 spend, no network or model calls.

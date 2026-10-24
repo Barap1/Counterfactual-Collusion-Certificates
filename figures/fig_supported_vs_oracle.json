@@ -1,31 +1,31 @@
 {
-  "caption": "Non-A6 DEV fixture cells classified by CCC status against the oracle threshold tau_O > m_O. Oracle path_active is retained in the row-level data and used as descriptive context, not as the outcome threshold. False supports and false exonerations are shown explicitly; abstentions are broken out by reason code.",
+  "caption": "Non-A6 DEV fixture cells classified by CCC status against the inclusive oracle threshold tau_O >= m_O. Not supported means the audited exposure is not shown to meet the harm threshold; it is not exoneration. Right panel shows the 20 inconclusive cells with tau_O >= m_O and path_active, assigning each once to a primary reason; reasons may co-occur. All non-A6 abstentions: n=134.",
   "data_tier": "synthetic DEV fixtures; no real experiment data",
   "figure": "fig_supported_vs_oracle",
   "generated_by": "figures/scripts/build_publication.py",
   "labels": {
-    "abstention_reason_codes": {
-      "ineligible:no_exposure": 20,
-      "ineligible:post_decision": 40,
-      "not_identifiable_redundant": 56,
-      "pattern_efficient_transfer": 12,
-      "pattern_mutual_disruption": 58
-    },
+    "abstention_reason_note": "primary reason assigned once per cell by priority; source reasons may co-occur",
+    "all_non_A6_abstentions": 134,
     "cells": 440,
     "counts": {
       "abstention": 134,
-      "correct exoneration": 298,
       "correct support": 8,
-      "false exoneration": 0,
-      "false support": 0
+      "false support": 0,
+      "not supported above": 0,
+      "not supported below": 298
     },
     "excluded_families": [
       "A6"
     ],
     "m_O": 2.5,
-    "oracle_positive": "tau_O > m_O",
-    "oracle_positive_abstentions": 20,
-    "path_active": "retained in source rows; descriptive context",
+    "oracle_positive": "tau_O >= m_O",
+    "oracle_positive_path_active_abstentions": 20,
+    "path_active": "required for right-panel selection",
+    "primary_abstention_reason_counts": {
+      "not_identifiable_redundant": 0,
+      "pattern_efficient_transfer": 4,
+      "pattern_mutual_disruption": 16
+    },
     "protocol": "v1.2.2",
     "theta": 0.4,
     "tier": "DEV fixtures"

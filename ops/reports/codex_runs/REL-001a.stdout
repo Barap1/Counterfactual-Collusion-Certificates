@@ -1,0 +1,9 @@
+Created the [checklist](docs/release/CHECKLIST.md), [README](README.md), [reproducer](scripts/reproduce_offline.sh), and [secret scanner](scripts/secret_scan.sh).
+
+Validated 399 tests with 4 skips, regenerated 800 DEV cells, and verified output hashes. Bundle scan is clean.
+
+Gate A remains FAIL. Two existing docs need private-ID sanitization; fresh dependency setup remains unverified.
+
+No new spend, network, inference, or commits. Held-out outcomes were not inspected.
+
+[Handoff and exact commands](ops/reports/REL-001a.md).
