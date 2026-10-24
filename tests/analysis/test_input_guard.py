@@ -4,6 +4,7 @@ import os
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from ccc.analysis.loaders import load, ValidationError
@@ -87,6 +88,55 @@ class InputGuardTests(unittest.TestCase):
             os.utime(root/'.collector.lock', (3_000_000_000, 3_000_000_000))
             with self.assertRaises(ValidationError):
                 load(root)
+
+    def test_sibling_marker_dead_pid_warns_in_validation_report(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = self._locked_run(Path(d)/'in', 98650)
+            sidecar = Path(str(root) + '.watchdog')
+            sidecar.mkdir()
+            marker = sidecar/'WATCHDOG_EXIT.json'
+            (root/marker.name).rename(marker)
+            with patch('ccc.analysis.loaders._pid_alive', return_value=False):
+                self.assertEqual(run(root, Path(d)/'out'), 0)
+            report = json.loads((Path(d)/'out'/'validation_report.json').read_text())
+            self.assertTrue(any(w.startswith('stale_lock_ignored') and str(marker) in w
+                                for w in report['warnings']))
+
+    def test_sibling_marker_live_pid_is_refused(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = self._locked_run(Path(d)/'in', os.getpid())
+            sidecar = Path(str(root) + '.watchdog')
+            sidecar.mkdir()
+            (root/'WATCHDOG_EXIT.json').rename(sidecar/'WATCHDOG_EXIT.json')
+            with self.assertRaisesRegex(ValidationError, 'held by live pid'):
+                load(root)
+
+    def test_explicit_watchdog_directory_uses_same_stale_rules(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = self._locked_run(Path(d)/'in', None)
+            sidecar = Path(d)/'custom'
+            sidecar.mkdir()
+            marker = sidecar/'WATCHDOG_STOP.json'
+            (root/'WATCHDOG_EXIT.json').rename(marker)
+            with self.assertRaises(ValidationError):
+                load(root)
+            self.assertTrue(load(root, watchdog_dir=sidecar)[6][0].startswith('stale_lock_ignored'))
+            os.utime(root/'.collector.lock', (3_000_000_000, 3_000_000_000))
+            with self.assertRaisesRegex(ValidationError, 'newer than terminal marker'):
+                load(root, watchdog_dir=sidecar)
+            marker.write_text(json.dumps({'run_pid': os.getpid()}))
+            with self.assertRaisesRegex(ValidationError, 'held by live pid'):
+                load(root, watchdog_dir=sidecar)
+
+    def test_cli_forwards_watchdog_directory(self):
+        from ccc.analysis.__main__ import main
+        for command, target in [('run', 'ccc.analysis.__main__.run'),
+                                ('pin', 'ccc.analysis.stage2.run')]:
+            with self.subTest(command=command), patch('sys.argv', [
+                    'ccc.analysis', command, '--input', 'in', '--out', 'out',
+                    '--watchdog-dir', 'custom']), patch(target, return_value=0) as execute:
+                self.assertEqual(main(), 0)
+                execute.assert_called_once_with('in', 'out', watchdog_dir='custom')
 
     def test_holdout_refusal_unchanged(self):
         with tempfile.TemporaryDirectory() as d:

@@ -1,0 +1,2078 @@
+[
+  {
+    "check": "V8",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L90": -3.8238237847493317,
+    "L95": -4.592960173029756,
+    "U90": 0.542585212466197,
+    "U95": 1.3117216007466213,
+    "check": "V9",
+    "confirmatory": false,
+    "estimate": -1.6406192861415674,
+    "half_width90": 2.1832044986077643,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 4,
+    "regime": "B1",
+    "status": "sham_uncertain",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_cluster": {
+      "L": -3.1946225449902688,
+      "U": -0.086616027292866,
+      "estimate": -1.6406192861415674,
+      "n_independent": 4
+    }
+  },
+  {
+    "L": -7.364529259975411,
+    "U": 11.708468185675839,
+    "check": "V10",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 2,
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V8",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L90": -0.11943378229768332,
+    "L95": -0.16156076565668526,
+    "U90": 0.05849795493328468,
+    "U95": 0.1006249382922866,
+    "check": "V9",
+    "confirmatory": false,
+    "estimate": -0.030467913682199328,
+    "half_width90": 0.088965868615484,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 3,
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_cluster": {
+      "L": -0.09140374104659799,
+      "U": 0.0,
+      "estimate": -0.030467913682199328,
+      "n_independent": 3
+    }
+  },
+  {
+    "L": null,
+    "U": null,
+    "check": "V10",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 0,
+    "regime": "B2",
+    "status": "not_established",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "not_applicable",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "not_applicable",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V04",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V04",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "not_applicable",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "not_applicable",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V04",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V04",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "not_applicable",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V04",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V04",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "not_applicable",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "not_applicable",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "not_applicable",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H07_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H08_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-echo",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V-model",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V01",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V02",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V04",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V05b",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V06",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V07",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "not_applicable",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V08",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V09",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "H08_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

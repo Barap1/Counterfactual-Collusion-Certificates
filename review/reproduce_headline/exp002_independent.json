@@ -1,0 +1,3226 @@
+{
+  "Delta": 1.354325711018899,
+  "attempts": [
+    {
+      "arm_Omean": {
+        "F": 35.53726957689752,
+        "K": 36.827676682797936
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 35.21780070373816,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 36.93998247846014,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 35.85673845005688,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 36.62051360530078,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 35.21780070373816,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 36.62051360530078,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 35.85673845005688,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 37.12969704213005,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 1.2904071059004139,
+      "world": {
+        "id": "H01_B1",
+        "regime": "B1",
+        "seed": 1716750912,
+        "split": "holdout"
+      },
+      "world_id": "H01_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 37.130926267271114,
+        "K": 35.94790805646864
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 37.449165915289406,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 35.53235267633326,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 36.17620732321624,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 35.02316923950399,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 37.449165915289406,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 37.449165915289406,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 37.449165915289406,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 35.78694439474789,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": -1.1830182108024756,
+      "world": {
+        "id": "H01_B2",
+        "regime": "B2",
+        "seed": 1716750912,
+        "split": "holdout"
+      },
+      "world_id": "H01_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 12.90023785144759,
+        "K": 15.545058146553023
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 14.103329823176336,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 16.666138129469783,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 16.666138129469783,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 9.166138129469783,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 11.66534532367446,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 16.666138129469783,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 17.18261100359807,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 11.66534532367446,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 16.666138129469783,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 2.644820295105433,
+      "world": {
+        "id": "H02_B1",
+        "regime": "B1",
+        "seed": 551864267,
+        "split": "holdout"
+      },
+      "world_id": "H02_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 18.15896979213381,
+        "K": 15.544661743655363
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 17.18261100359807,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 16.66534532367446,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 15.516472874128286,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 16.66534532367446,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 18.270657161339106,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 16.666138129469783,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 21.666138129469783,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 12.181818197802746,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": -2.6143080484784487,
+      "world": {
+        "id": "H02_B2",
+        "regime": "B2",
+        "seed": 551864267,
+        "split": "holdout"
+      },
+      "world_id": "H02_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 34.939974653027015,
+        "K": 35.58518466441845
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 35.11320670761275,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 36.0810217246999,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 35.11320670761275,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 34.42027848926981,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 35.065488500661246,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 35.11320670761275,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 36.0810217246999,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 35.11320670761275,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 35.11320670761275,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 0.6452100113914347,
+      "world": {
+        "id": "H03_B1",
+        "regime": "B1",
+        "seed": 1482663892,
+        "split": "holdout"
+      },
+      "world_id": "H03_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 35.82713841869024,
+        "K": 35.11320670761275
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 36.0810217246999,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 35.11320670761275,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 35.065488500661246,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 35.11320670761275,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 36.0810217246999,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 35.11320670761275,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 36.0810217246999,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 35.11320670761275,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": -0.7139317110774889,
+      "world": {
+        "id": "H03_B2",
+        "regime": "B2",
+        "seed": 1482663892,
+        "split": "holdout"
+      },
+      "world_id": "H03_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 31.823213059312184,
+        "K": 30.73707669487891
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 31.823213059312184,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 27.478667601579083,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": -1.0861363644332755,
+      "world": {
+        "id": "H04_B1",
+        "regime": "B1",
+        "seed": 1031646258,
+        "split": "holdout"
+      },
+      "world_id": "H04_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 31.823213059312184,
+        "K": 31.823213059312184
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 31.823213059312184,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 31.823213059312184,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 0.0,
+      "world": {
+        "id": "H04_B2",
+        "regime": "B2",
+        "seed": 1031646258,
+        "split": "holdout"
+      },
+      "world_id": "H04_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 24.898691590451147,
+        "K": 28.391487757638185
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 28.42046320205006,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.42046320205006,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.304561424402564,
+          "arm": "N",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 27.522036402409494,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 13.574951521520118,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.42046320205006,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 29.17888843618436,
+          "arm": "N",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.42046320205006,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.304561424402564,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.42046320205006,
+          "arm": "N",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 29.17888843618436,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.42046320205006,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.42046320205006,
+          "arm": "N",
+          "replicate": 3,
+          "status": "complete"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 3.4927961671870356,
+      "world": {
+        "id": "H05_B1",
+        "regime": "B1",
+        "seed": 1585432260,
+        "split": "holdout"
+      },
+      "world_id": "H05_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 28.304561424402564,
+        "K": 28.304561424402564
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 28.304561424402564,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.304561424402564,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 28.304561424402564,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.304561424402564,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.304561424402564,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 28.304561424402564,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.304561424402564,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 28.304561424402564,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.304561424402564,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 0.0,
+      "world": {
+        "id": "H05_B2",
+        "regime": "B2",
+        "seed": 1585432260,
+        "split": "holdout"
+      },
+      "world_id": "H05_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 14.602077236655925,
+        "K": 14.602077236655925
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 14.602077236655925,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 0.0,
+      "world": {
+        "id": "H06_B1",
+        "regime": "B1",
+        "seed": 163932955,
+        "split": "holdout"
+      },
+      "world_id": "H06_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 14.602077236655925,
+        "K": 14.602077236655925
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 14.602077236655925,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 14.602077236655925,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 0.0,
+      "world": {
+        "id": "H06_B2",
+        "regime": "B2",
+        "seed": 163932955,
+        "split": "holdout"
+      },
+      "world_id": "H06_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 26.241756332321035,
+        "K": 26.947575164513573
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 24.722100067273544,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.858865934347218,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 22.527193393316164,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 27.5453753960437,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 28.858865934347218,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 22.527193393316164,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 28.858865934347218,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 28.858865934347218,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 0.7058188321925385,
+      "world": {
+        "id": "H07_B1",
+        "regime": "B1",
+        "seed": 888852293,
+        "split": "holdout"
+      },
+      "world_id": "H07_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 24.7815627073829,
+        "K": 26.267522023969352
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 24.67210516252427,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 24.67210516252427,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 25.109935341958778,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 25.109935341958778,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 24.67210516252427,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 24.67210516252427,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 24.67210516252427,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 30.615942428870092,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 1.485959316586455,
+      "world": {
+        "id": "H07_B2",
+        "regime": "B2",
+        "seed": 888852293,
+        "split": "holdout"
+      },
+      "world_id": "H07_B2",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 22.478244385517414,
+        "K": 22.548933502029765
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 23.611853398481756,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 18.894609864531173,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 24.077417346624376,
+          "arm": "N",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.611853398481756,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.611853398481756,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.611853398481756,
+          "arm": "N",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.611853398481756,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 24.077417346624376,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 21.257999198401045,
+          "arm": "N",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 19.077417346624376,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.611853398481756,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.611853398481756,
+          "arm": "N",
+          "replicate": 3,
+          "status": "complete"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": 0.070689116512354,
+      "world": {
+        "id": "H08_B1",
+        "regime": "B1",
+        "seed": 1394100456,
+        "split": "holdout"
+      },
+      "world_id": "H08_B1",
+      "world_status": "complete"
+    },
+    {
+      "arm_Omean": {
+        "F": 23.520449657435154,
+        "K": 23.474747786911855
+      },
+      "attempt": "attempt_0001",
+      "branches": [
+        {
+          "Omean": 23.429045916388556,
+          "arm": "F",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.611853398481756,
+          "arm": "K",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 0,
+          "status": "not_run"
+        },
+        {
+          "Omean": 23.611853398481756,
+          "arm": "S",
+          "replicate": 0,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.611853398481756,
+          "arm": "F",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.429045916388556,
+          "arm": "K",
+          "replicate": 1,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 1,
+          "status": "not_run"
+        },
+        {
+          "Omean": 23.611853398481756,
+          "arm": "F",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.429045916388556,
+          "arm": "K",
+          "replicate": 2,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 2,
+          "status": "not_run"
+        },
+        {
+          "Omean": 23.429045916388556,
+          "arm": "F",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": 23.429045916388556,
+          "arm": "K",
+          "replicate": 3,
+          "status": "complete"
+        },
+        {
+          "Omean": null,
+          "arm": "N",
+          "replicate": 3,
+          "status": "not_run"
+        }
+      ],
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "ineligible_reason": null,
+      "tau_O": -0.045701870523300624,
+      "world": {
+        "id": "H08_B2",
+        "regime": "B2",
+        "seed": 1394100456,
+        "split": "holdout"
+      },
+      "world_id": "H08_B2",
+      "world_status": "complete"
+    }
+  ],
+  "input": "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live",
+  "input_sha256": {
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/manifest.json": "8497796f0f437de7adc688a4b52e8ceebd310953eb23699b3eddea0447f24aee",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/begin.json": "44accd76a612b2f7168147ce94cbf38e256d06b843f735be14590ed844d579ca",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/000_F/begin.json": "7b4363d39885e772b53f1982cdc7a3e3fc0c682d312c775d0dfaaa2491f9d8ee",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/000_F/result.json": "482f7e90febe9d36ea7b9305f2a3c56ef355fa90c85b48fc109f0a4614f4d16d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/000_K/begin.json": "7959e58da878c13e698da3e1124df74b9bcef4ee2495e1d61cd3fb778968eb24",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/000_K/result.json": "68a97d9dd6db07eaaa946e35cad8bf7e6089b6642383efb12b39633c602e1ff6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/000_N/result.json": "4f2315f15423c88ec2f3f5114d53a6963211aee92be1978f7bbb28dd6da81753",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/001_F/begin.json": "84577d7a16a43fba4797fa86d971a369f09b3d3a9ea38eceb08d78a3b6cf82cd",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/001_F/result.json": "8e227d2a2777d40a08a508f13a11768555348d8099ed51fe2a2d6e198f30eabe",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/001_K/begin.json": "f119dcb67084c1006207f43d15dc4dd10be10a73da26cc6612b3024e55b83994",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/001_K/result.json": "7a5d437c98f7d90492362945c8427cbad8686b1539d26a81df0e6df037f30a92",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/001_N/result.json": "8fa326932f7a3135761225ae931dac1e10e41c3a0ccf8bbdcc5f5a07f70246f4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/002_F/begin.json": "f50afa0a43eb6bc7cc40098eb4914052b190fda65c3710e82ce8ab1e897d03ef",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/002_F/result.json": "2bb26dbf796e79f075301ccddaf0dd70c785499d30601363c35dff040f08953c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/002_K/begin.json": "17a27eb7bd4fcb6eca4f85621a48ad7cbc223f37abcf05477da7a7657d0b6793",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/002_K/result.json": "bd2b886fa0a2d474df6a1c234f8a33a0f0730f44df46b4dd79e4ac21a6ff45fb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/002_N/result.json": "056d4bfc55f8b41682b8b49d5e4e8730afcf455b829cea14733aa54fe423b19c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/003_F/begin.json": "ff74553dbf836cd767f04e5c019b3425764ca83f771b628a09e79b06a3f28049",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/003_F/result.json": "4e5faefb2c4536f0cf05726e79ee7b2e4a8f7763c4a48dedc42493fd41f9655a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/003_K/begin.json": "53c2ebea7b63d8094ff8afb32b7699caccb38616bbb6ae480bc7c118160b5d6d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/003_K/result.json": "41d43f4198eee4d7c5a6112294a20fef37742c0857335ae8491f4f0927f1e8a3",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/branches/003_N/result.json": "c0ef7893ff79cdcc18d66227970454a13b215619611d2c2a5d301b6d9ecef7de",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/checkpoint.json": "a739ac266c15061a6a89fbe2927a78e0df1d2a8082d4d22b9d086fd24cff1c2d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/result.json": "10e98bec39cdce884b833b9c0f4052e926fd2e76c0c8c80a4417b8ec931f7b1d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B1/attempt_0001/selection.json": "8a29638b2218a5cccfbeaf33a38c93f72645978c6842f8d33568dcdbc672610e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/begin.json": "3e74803ea75d7299bf7e7e4f1c033dd0f50b1a68a6c0a434f849aca74ecc5358",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/000_F/begin.json": "3efdda886777bcc136d74ac1fb9895afcd112b698c3a98d4eef83440e8bf7ad7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/000_F/result.json": "cf78652be962ff8511bb92e38ee556ef69455a64bef3c7ae8eeec58eb9ce7a5b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/000_K/begin.json": "7550c1f7cd270265dd4741063498493882b29366fe91d5704d8b66942b2cdac6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/000_K/result.json": "3a6223a1d5c1abfaa0b3fb4c51f879a5100872161546c3c04142c091bd976d07",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/000_N/result.json": "846092ef2238c8079ff045d9c6556a6fab231a89d263e4465eec9188f0a0e906",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/001_F/begin.json": "41bce20fd1f4557fa4961ccf6c576dbf9297c02c788bfb82ecffb0343858427d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/001_F/result.json": "e02ad39fa5f52a82ced5a418cdf35327253e62ce07bb34b17d6020625c3bc9fe",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/001_K/begin.json": "71ea8a79f246f7f973eaccbd7b9e7c7411aa77fc55a36d5588c6d17cdda15f12",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/001_K/result.json": "e800850d9d253d4f058f8849cbef401a3726ceee39ce190ede6e6e541f872adf",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/001_N/result.json": "0b34faf91b182c595b4061874a90339178222801bad9e0846f0b498150c2b1db",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/002_F/begin.json": "f3674e4e92d6170f1e518333ea076057055e8b102b628c5953fc4b95fdf3d6c9",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/002_F/result.json": "9898b90db9b699efcd305784e94850c81ca0492da952b4c13f01a639640ef863",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/002_K/begin.json": "b12815851d6981b8b1374fb0ca1aa5a4902b50399f3883fd0d875e7da123fa9e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/002_K/result.json": "548f70cd8d3988bc7b6c5f0399eb6c37dda19b576bb7cf5acb7ad8cdfea71ef9",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/002_N/result.json": "1ba5469113b2c94259898103a4921ea8c2a21119a560f8da22f1960fe2109654",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/003_F/begin.json": "bb62ac05643773148564a5556a228a2a272823813c0e7b6b050a7568ea7e89c2",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/003_F/result.json": "1f438f057a1b2877f937f07a95a37443711a94187157b59fcd48e68e34447a9c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/003_K/begin.json": "3fd6a02b13f57bc76d7b6a5413f202fc7af2f314678df8922a4682efeebc4851",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/003_K/result.json": "92f70a45a2eb035b9ca252bdadad24b74dde3b2b11cce0716c717f538ad45ae2",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/branches/003_N/result.json": "0da4201c8e1fb4faea079894d45ee0503720140ad68a0084e70b079bee426ae5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/checkpoint.json": "4836db210f3299a59a4abea45461a54c55e0330d78e6845a4fb54158924e4576",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/result.json": "9f637f3919edee2836180b9bb9b9d42bc966bb0187dff603c71155e0fd475854",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H01_B2/attempt_0001/selection.json": "80004878915cdb2af9f9ec168ead349a04539224f703e3d527f2f8175c42a488",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/begin.json": "e8a3398dd74231a8272f126b5c77cd3bfa5321713417e497acba1d7c0b7c103f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/000_F/begin.json": "f628ef17387f9da36c84afd2341bd60e9275d16c3d884855ac73585a2fd27bb0",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/000_F/result.json": "fcf0c768e5dbfb7471336c76632d918199f7ed26d3839f010dc082b73115d15d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/000_K/begin.json": "e619ffed30dbf758923aa089943bd71991ed7b742b59c82dea445ff7af45e158",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/000_K/result.json": "ceb7e13debac3ab9ffbae264ac9967b02eb5545c046205b097549e1c8b8d6a0d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/000_N/result.json": "f0d427bfb4541d9913ad54f00d561e9a79f7e760c05d0aa9cc22b727d0abb5e1",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/000_S/begin.json": "2306e85604d2f54bd1d9c7af0fe17419eba4833a25a459b9c669eaa158c83c80",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/000_S/result.json": "cbea532551354e3d3754b469fdbc69be989695ce08d5bf015d844d44e508d10d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/001_F/begin.json": "08c2676f87e154155e01153522b738e40be990ce0ac8d547f369675ebb413c3c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/001_F/result.json": "ee523aaf79e82c48c1676d1cf1591179d30d4595cf476ac937d65238cc7beec0",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/001_K/begin.json": "db3a0c57a2184e73d84fb26b7eb13c01d4ee987e3d9abb1a49ccf3b307b8a24c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/001_K/result.json": "f84c336d25ed68c4e1871a9000c22b1408a78c36aaaeeda0953c9cb8ca6f81c6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/001_N/result.json": "c97d0ff1ff1d828e1ae2ffbcf24289d03f0b6b7e3a279f3b3f5da80d677d9f30",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/002_F/begin.json": "f4772561378798147ecf617e3ff23003b192ffd42aaf8c8b0e56ff624f088b77",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/002_F/result.json": "02d398fd6c39d1313b36c5d1ff394657f48140941e5c90ead2021edbc6cb05f4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/002_K/begin.json": "46cf9c9611f78d6b4cac436e231f7771899de3dd635d9b8608bf7e2fd18c16d8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/002_K/result.json": "87b0eacdee91699971988b8d4cb0afa36a278aad05d76c3a0641d25c5eae4fe9",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/002_N/result.json": "186e71fcf3f8c8520f5d2eded60f3d9ed65d9bac1a59ccb32e6af06cbec19d30",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/003_F/begin.json": "ef95e59661618e91ae67b34b22937e7fa933ac9b5b0ddf54a8281877816de98d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/003_F/result.json": "d11fe8945c66151d6e44f6ad98b38573646f816070c79e6073330337e3e36860",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/003_K/begin.json": "8e2d67ac85c7698b8c3d98041291e1abae39314c45ef342769d75a2ee77640a5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/003_K/result.json": "9497fd6eb88843ce95e4166c92167fcdabef8bd30254044765883ed643f78c51",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/branches/003_N/result.json": "6e66196804f8ebf531de196863c6f3c681828e574d1ea36e0825a8a2c7aec973",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/checkpoint.json": "18f1a0ab8d30c90275f4715f9216f7b4530d13a7995fc4656c2041a61d53111a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/result.json": "43dd8a8aa11eac24d1fe7fba77c9366c8d72b62db9ceee9b29c066e1696a3483",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B1/attempt_0001/selection.json": "06da1332d8ca331c8124e172ef9ccc53c60d46f94db317dc7af792fbbcc0393c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/begin.json": "13e34633261dbe9ed3ceb231791dd8dd09ef4fb61a621bf99d0066864c2139f5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/000_F/begin.json": "e65e6f65748285ae5f82d9a18987a4cac3cea52f997f9e1a1c3a98c1397eee97",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/000_F/result.json": "a5e0669d492a9bc7c45696b83d210c67dc6f5d52f13495b4d336bfa369486973",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/000_K/begin.json": "64945722dc4c7c7d65d1d7db9accaa40b88dfe547f5438659d148e03c03b2871",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/000_K/result.json": "2134d3266ea9ff796f3a99cec7a5b9017add7bc23e87c47e856c42eb7a8e42b6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/000_N/result.json": "012455781d1f8ec39fa795695f8d5ec14f5678e03e0f24ac29ea7aeacbd2c08d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/001_F/begin.json": "3ccf8d16f1eb522ff98cbf21e0e67e2a2d139880d3e3dc0925fa2bdf7b6da5a4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/001_F/result.json": "81cda8d3c792a0d41f626a1c38cc18b83f4670dffc62291fab157858dd7e07d2",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/001_K/begin.json": "4f276eeea1f45f28fcd4e4730997161f34684ab4f3fd06f261c271f804d8b357",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/001_K/result.json": "8dff25e3a3225819a6c5b0d5629ebe05f2bd6b69ec7a09f61b4bec69b39a345b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/001_N/result.json": "47547c378a44787175c09bad5f6aa8cba13aa73a0f8379d3fa07bce511814acf",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/002_F/begin.json": "55128c659c326a77844ed11ece2253d18a3339c12e2dc962db784ee8f9e11a6a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/002_F/result.json": "1d4e6e3c25cf7674a467a70b294a54d95ce605a59e68ca8dfae24f7412902493",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/002_K/begin.json": "b6bf8389f5530991f8c8d2b033a0f5a5ece402f38fc3aeb305360bbca539d74f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/002_K/result.json": "b9b71baa3cb46e01169be4b1bfa8446b9b7ee576c408818584e226fce45c3f41",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/002_N/result.json": "f5fa4c0694c3fefee15f8fb89f7fa946f1bd8235e2355d2a25fe12991c867335",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/003_F/begin.json": "e848cf5ccd46a4405b1d4c644ff2834c22d1f4464d9e52786c5c9df88913b92a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/003_F/result.json": "881dc274e7c2aa033d75b885d0761f1140a92cc64a04ddb613972151e1397779",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/003_K/begin.json": "eba0bdcdd8f4f101c65c6063e7d592567ce60e88b344d346edd49e04288be339",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/003_K/result.json": "177d68594d981e637b10eba833b0be724e3f7902bca11df6f13829988fe64c32",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/branches/003_N/result.json": "7e76dc6f371cf2e742672269b2a582c8e97501858a0f95dd24e0166b804e7a0b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/checkpoint.json": "531baa7bfda49d1bb05c7d86a9430bfa88de03150519bf6e797e35454bfc268d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/result.json": "1dcd10e420e09b3d0cde174e06846cf80744b6a89c47228fc68052bb09d0acd4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H02_B2/attempt_0001/selection.json": "8f15931ad7320d09d30b6640c759b8dc5c4c0474bb406930f1ff08bc0db91ea7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/begin.json": "b43c3bf613046170f610991308a8dfe5b01757529fadf77f791d14a71835a23f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/000_F/begin.json": "3490188e368eb1de7f594470ebce127e391c5c76de560649f5249b681b93cd4f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/000_F/result.json": "9091e2635ba19189804575346840bd20fd662aae6cbe28d8475e0ddb193f8a38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/000_K/begin.json": "12b78c70577ac98aba8c2042564f34eee4f915c561d8d7f6a9d1c59cda1b7004",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/000_K/result.json": "0c31cf479e1cc3bfd1f22a94e5d59ee71c210a45de4a3edf82ecb96f03d3050e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/000_N/result.json": "adad41d2285b25d30c22a5f60ba1ec8a5e62f6af5c1ebcf475ced0bc687432ea",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/000_S/begin.json": "2e8af1ea6f6eefe0a140cfd49f958c01c3e75e41186e37a8f557d24586bb75b3",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/000_S/result.json": "358d0c56a0199d9f68172c4d4857b0af6caffd430ea6662beadfdf839c7cdab8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/001_F/begin.json": "1156dc1f16ce01a5534ce0aaa039660dc05281efba3f7fb0cdaadbf85cbe066d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/001_F/result.json": "d7f6826678ff917adb81e97249fba645066a6511909eaa291402405bc198235d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/001_K/begin.json": "a0bb1bb53a94ebd11da3070efb267367e1f46d58ad9205a72145b9d5248cd483",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/001_K/result.json": "8fd1f60feb44165f4090abe753de7fd7cb0f03c5b50a1708e3c5055414515c38",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/001_N/result.json": "364cbf4b319a7f88d37822e5694d63d6f90e972b8aa6b29fd428d61a1d801a23",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/002_F/begin.json": "d202a3c35592781260ecb290ec1c7a54dd1af9cf10f0e53b71591f9a1c7b7050",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/002_F/result.json": "89fdc55f5db59075b2f7c69ca282f1ff2693e4e71d33f7b6f7f9874f5a86291a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/002_K/begin.json": "2ad7f90dedee4e025120160fcf078b6e2ecdd03814d9d68721a1b0d9d2c4f32d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/002_K/result.json": "d75fe9412839a179f8eb07b8b987e198221f8447f89288da36834aeb21ea1869",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/002_N/result.json": "cb5bf8fc0e1c802a27703b1aea51ba2916ad4a2d87dca84a7fb06ffb86579973",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/003_F/begin.json": "d220ddb7ac1b11f4d85575e45dadcbb8ec2e1bc7e629705906af2b48a3bfeddc",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/003_F/result.json": "904946fd8bbe5ee505ae257d864006d04a83ffa256d7685fa499caf77eff4819",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/003_K/begin.json": "68ee4477c52703a2d9114d687c4121f6db232d0d8344ef566681cf3880b6a5e1",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/003_K/result.json": "43c38b5316d370b60629dd973fd7f063e812c772ecc900938728fbe12eef2622",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/branches/003_N/result.json": "39a5cbfcd7b273f0f2681b7b6a45e13a887643b21592c6af47576d935e5e5127",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/checkpoint.json": "0a1e16794493257fc3f2e53c216662f22a08fe4bee8c1e2df79933276aaeaca7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/result.json": "83eea1b1227afbb09b46975c166d3456404d0d887343317ff5d47d04ccd1664f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B1/attempt_0001/selection.json": "a3b9170f023894dc47ade95ecae0a417ff3ace9e14e81b58487c4ca2455a1b37",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/begin.json": "0c3cf5030f662506e7f2341475f6353fd7443e8aef2f46776bedefc57f1e2279",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/000_F/begin.json": "38ce13b897753d347e0cce9da811ed9bc70476dfc8a3e0bec212ce352d4d51fc",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/000_F/result.json": "eef9c85e248dd591a34c0dc7277886295044febb9861b9df25d1df17f55e9163",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/000_K/begin.json": "0d73c9642d3ab47889254c408227c50f791608b9eb67815b0ddb59fc478ef8cc",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/000_K/result.json": "858c9c1d7a474d7b2212d69bdd18b73efd891cc32634e7a5f2471f1c3e958d09",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/000_N/result.json": "6e1feede8fb4c859886190c93a1c168007d93eeedfc9a26411edfb37fbbbe5d6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/001_F/begin.json": "580d237796791f9cb10c3762c6d65bce0dccf3d12733f7b7fe77d1812b914faa",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/001_F/result.json": "d6b8c3a21aeefefbbe7c9cb7ce4d21c9fe52bf0cef10a8155336fc9be5471b75",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/001_K/begin.json": "cb161aa534724c5dcbb73586665c596c2ec0d54e3f897281599a5880c13a7448",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/001_K/result.json": "d15896a6665740bb9a4c32707498e46de53e7b03c3777f482e7b3d0d975b47db",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/001_N/result.json": "eafa511376426e9c3cc2c11f72060737c3d54bca61abb014eef6390db94b55fc",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/002_F/begin.json": "31e7aeae74bacf82fffcdc8ea60f3f08b13b3a89ac93c683d93bf8091ac2929c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/002_F/result.json": "d1b70f6eaecdf1ba4e996e960958303737535d2f1e8c60b028e7ee1975b1c44f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/002_K/begin.json": "cb9040f41f29641903467e6d5ac2c01a9b38084835aed82d8d18c97d59519004",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/002_K/result.json": "c4c7888dc00ed5353188db06fb89e1241b3d2103f86fff6546b5d6232816b55f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/002_N/result.json": "c3e100e5959a9b0ab60005cf2099b6198e9c824af75c002e76e1c6d484a10377",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/003_F/begin.json": "ca4a0e8227c73151b9600dae23d23030c0681d8e32115c0bfe1bf42da5e9e9f4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/003_F/result.json": "5fb1f78c973ec9bbebb093b1126ad679b9217f3ad741ea79848e69277ac49d81",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/003_K/begin.json": "3922bd25857dd4e1305051cc3f2c23292d7b01d976bda33abd946349b0c62c07",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/003_K/result.json": "4d33a79d568956d7879ae3e160e977ff191fad19566487405667499c364b6ef4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/branches/003_N/result.json": "f747fb716af553576b76381c85f82d1d187b37307677a0e60e02933a3a2cf3e2",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/checkpoint.json": "b7bd92f3cbef30c5cc61db6527544201016926a7f496553bc0c2c14d00603ee7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/result.json": "cbc57fdcbb9d295310fb3a47a1692a52e4c92cfe724b6e8b84fa91ceaf61f091",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H03_B2/attempt_0001/selection.json": "f864db62f8e1d73914fb13a6ba32adce7be86f97291fb370352f47cfccf06d06",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/begin.json": "6d40a7a4d522594b7fa9c06b0e749484cbfa660a075368b93d0148a4f15dc30b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/000_F/begin.json": "8189bb3438016c69c7eb481900f0e89308738f460da8b6fa1de313580553d6dc",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/000_F/result.json": "c7ecf098cd7f5ae700f52ef040a2d7a4c97bd054102a2eb79f4c83e8fcf418f1",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/000_K/begin.json": "0e09ef784efcf8ef332e189da464787662a731088c188af49bb5f1c1f119752a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/000_K/result.json": "b35dabdd27a7392ce3357cfb0bca262dc5a7a0120b255f632cafb07faa2d7746",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/000_N/result.json": "10d713c0eb4095cb802db07715362c9767cb04051674a38921f1ba659826ff04",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/001_F/begin.json": "6b4d66916c31abb88ff6c20527d80d1a83dc4d416bfc65f6333e3386014f98e8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/001_F/result.json": "26feaa767c2c3c8fbcff9ebdcbeac908a65513c25e1d2021d8f96fb54beed962",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/001_K/begin.json": "577447389d209a30de039e3ae01e59f65c43f63fee33eb3e5f2c3b0030726212",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/001_K/result.json": "dc8d9ead7b0afc74508de42d4eb9a4a032411d0c6b551699db0fc93e5c1fbbf5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/001_N/result.json": "10ead27e211a57150d4b4d9bb8cb7118712f216f74e47301ca1a5524662da8ba",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/002_F/begin.json": "78d501b996754c3df1453224f1ce9f84eba732d02d05e09df6db5cbeac02330b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/002_F/result.json": "849f4397738e796c13883adff890197b04ad1283c071bbe05bbbd4d889a1c3f3",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/002_K/begin.json": "676bb1f4dfbc19cd7bed34edd9659249dbc03e2c840161c877d0296053fc207e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/002_K/result.json": "9c91d22d5d783b1f4b445478e8d5f3db6132cdc81ca858c91266fc9b4fd4acee",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/002_N/result.json": "3d88f2b81b093956b029c71debbd1e3129952c8e08ce53b0061ec18f1e53179f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/003_F/begin.json": "0b111dbdb61e102d70f8369cc027d2450bd4c5ad94d983fd576d1a407b55bcc2",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/003_F/result.json": "f082c873e3efa87bdec399975f4f4e062323fd2c9f0e3cffd34b85179b897310",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/003_K/begin.json": "5da82a2b5f5882f6b3deef6e995f9429823c1d2c1e48723d1eb83ad8614ca9e3",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/003_K/result.json": "f2a5f71b1c04de4dbc629cc0ba7003e9e548942fe30f634112d5b81f67011c1b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/branches/003_N/result.json": "41a9857d7ae2f64fdb306a10fa83499faacb15f4d382068f0847d761263e6202",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/checkpoint.json": "25ae166ae2bb1473bcf21848c9710cedb3fdc645fe9b58d47ef7be89dca02038",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/result.json": "5d60f74fd78bb30797f182f9c67b71c8c7c099225ff06831b716e483a0457278",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B1/attempt_0001/selection.json": "6648331d6ca962c341487bb3c1b132580a5006af53ae1ea0644a259779de0b26",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/begin.json": "a78f7f6f2067254eaf618124ec98e8e5de0eb2dc01f3c45e1cddbd2a0a5f02c7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/000_F/begin.json": "3b7293c4e109a73e7460788651973fdf64db066d8d1ac99a8e39aae7af1a0e30",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/000_F/result.json": "5245a8924617eb079ecae0aff82f4f2145a0912357e6b410d48e37bf8f3fce8a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/000_K/begin.json": "16545f3b19de9b0474068a1ec8a17a161fa6326f3cb317083dc4496515afcbbd",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/000_K/result.json": "597fe4ccd4d7b3722c0788dc1fbf6029ed51744a147086fd50b32c2f35384783",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/000_N/result.json": "e682b7dddc18e1d246047e2a69e2b3ea3609c69a6749b8da8c1703d3e7360a17",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/000_S/begin.json": "7f9c96a93999a426e9588a689b25785ebb4444858c20510ede89441968ed3626",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/000_S/result.json": "87b5c1dd3b1e41542cde0db74d576f8fcc54e939bad3f495a42fd98c22b2eeec",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/001_F/begin.json": "a64857cdaeb5eb5367afe01d8a6da5757da1f5e0ee12ad26e21af9584ce5357d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/001_F/result.json": "dd46d819a629aaf37b958e17863998a40855fe63f0e5703fda1698512afb644f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/001_K/begin.json": "930d004bbaae8241fdfebb90235c81ff16cea4784a9ee63e1c7e823096e59e20",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/001_K/result.json": "0f4d24e0781712657dd57218edad8f5acd6ba5709f87f2190cc168cfa4283877",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/001_N/result.json": "e16fc6675c606d6f53c580b75a6ab3077312ec041c5e8d4a1a65d58f8f77eefa",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/002_F/begin.json": "1f653598d9c69d618fb3f0519b2972dbb43bb7b82a5170bcb563a4d1eab3939c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/002_F/result.json": "1644a05b6270ef35c5e734c856bb3c911a7d6444b3fc77a73d46e5f50d747e81",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/002_K/begin.json": "8f204042e7ee959fbb4fbbaea33956794f976f378e286d6f5e47a9506ebfd07b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/002_K/result.json": "29d9d23eb5bdf73b33115ba181dc8cf90e840dbfe558731e9040a2f774fc6615",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/002_N/result.json": "61b0758cfccbd1d129b98992e4bde44c0362e8e6806d3bc234d4e02823b64e07",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/003_F/begin.json": "d0414a2724bb946391d5f926de192eae91e80b7e243c3824b36efbd7d5a2659b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/003_F/result.json": "55628373329415a50a48ad6d69fbeb67f1b049332e33192e66100a4e42293cee",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/003_K/begin.json": "f0fc4082c06a67eb1151ae2c94dd058e4cbfa8e78deefcf598a51fac4e4691ea",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/003_K/result.json": "4cee02906ce3f03d223f37822954c8fc7ef9cfdd6aa82a321bacf28be847916a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/branches/003_N/result.json": "9d2b1bc4cec4415bbc621882e013b17cb811cd6647dd44818959786a5feafcc6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/checkpoint.json": "f2a5386a5734f8f9f14dc1b9e25c071b6da6df2e799a1a0001a02b2c967627a2",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/result.json": "2c7d22a0e7d83686ac38bd26a2769db31e44db7c6c91b0020999c4532d31c271",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H04_B2/attempt_0001/selection.json": "ab3765f1ccad9728cd18373d8241d671dfdad32d3117187e9fa7de2c512fdbca",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/begin.json": "3c581ddb7e328fe807f31878caf0a09507ea1d25c0deda3ca5cecb056fff03da",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/000_F/begin.json": "31894b5337f55b2d110f342ae59f3d300644abdace780834f3284ae4a74517e0",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/000_F/result.json": "fffc314e47b7b8094995f7565f6b144076fe52990418226139696a5a1cf69b9e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/000_K/begin.json": "80d013c354c476a75627f9a537d78b8cf297c3a3f053f4ea4314210d84e5f328",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/000_K/result.json": "a752ad85c23489a18bb66c92f9a85fac904782098758599138b5fb3f936ccfb5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/000_N/begin.json": "0fdb8c6ee58db8dc1a6071fa177182ce07c124ba5f74d37cc8a8f6c58b31b674",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/000_N/result.json": "c62b08b18738b8134d5c6c65b15824b80c2c7b7c70a2908441bbc38b7e15e80e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/000_S/begin.json": "26ed42767b3ef19db277492d9802fd72975541a80550f413d0d55e25b5c19f55",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/000_S/result.json": "de372fc933468624a416aed15ac3ee9ca2c3e20ed434da4437ee922c2ffe852c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/001_F/begin.json": "bdcc515d59b35ed131c530d2861a941123a74b4924c7c495bbd7272d4882a9f9",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/001_F/result.json": "23464e2b9af1e9bb56ae7f9d345d24a9855e7f7cfde916c5a65eed9c880efa79",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/001_K/begin.json": "c8cad66ccd0f4b3c5347ba196e3f7db204119d1f52b53b744e45c3b0d54a4459",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/001_K/result.json": "1a2cd0fff437f943559609bdf8c3e9a6a7cd14511ed2dc4a90007aad728a5b66",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/001_N/begin.json": "73a73853724bef98314db6f2afe75a27296d7e7e49a84ef33ceee12ac7912127",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/001_N/result.json": "ccf11e8be6f86258bcd698ae1431e027b37157d8492cadc68416376fc825e74d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/002_F/begin.json": "2a571f0749e1becc45dda55de12303f492e8200f801ffbca02d3c36ace85d7f1",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/002_F/result.json": "838f4291fc0920efcab72a4772468af6521939623407e233c2cf89224abee33a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/002_K/begin.json": "8250463f7808c352b8b7cc58984184fe753c6ab1ba273a409c9f3863af6696cb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/002_K/result.json": "763b5f2755279d6a1440a2d12ecb4996fedcf0213bb814fa4a165a7076c199c5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/002_N/begin.json": "643623af8d680367d6cfa29091a77f56bcd34334ff5c53ac2493c5d97c9c4dc3",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/002_N/result.json": "fcd0d18c24b20f4183306c07ea87ced428d6f6f81469d343bb112cec9ec7bed4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/003_F/begin.json": "defe4b03fcf001e61401ee5fb543f0e1f95be768bfff9386ba5ef1a0297827a4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/003_F/result.json": "46f5c4390b6edf81b13cf32aa42070a0b89402b64dacf9638c54332934fcb3c8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/003_K/begin.json": "afa4d126d63b0cba43c287d291741edefb2e8f47a36ed3fb69177493fa08bb8a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/003_K/result.json": "fd31c0d0497affe88bf3290dd2111eb55f608a00b7743f19a786cf68c872f570",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/003_N/begin.json": "e9104e744d1f7eeda3e029a4fd26fc83964e52175a6f111a97a90bfeb2090ebf",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/branches/003_N/result.json": "4c05185d1fecd4ce3df67708895d9fd0b1ee29ff08214361a7051ea396c0735c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/checkpoint.json": "be888fdc5958f663f4b09046262c2941c311b6dbaf80f4d23501ea2c80c7a49e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/result.json": "d3907df83953e6d2e5c7460b689e34746f53d86f98570acd81a68c2f71c9109e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B1/attempt_0001/selection.json": "00d0d626c69d42c336cc9183acfd60eb81774c23bb59b6c671238708e9fe2f73",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/begin.json": "da1bc3cc246bd6b180c354dbf049b69c1e84f9ad7e202edf8eb4492c71ad5603",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/000_F/begin.json": "6b59d303685c660ad6113ed53649dac9e29d8f832fefc8fcaedefbbc8e6ff8b1",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/000_F/result.json": "d5fca37040e5257835c6688fbb91fc34d2a3421fd05d124d55f80cd7abfeeb76",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/000_K/begin.json": "c6fe9925ce902f9d7b77bb4f6babdeb2bb60901e2b5f6d8f3339e90a9c757f19",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/000_K/result.json": "91c1ce12a8a6a30726aa8737cf648bd1c9f17ec023f237b3ce7a0204b6b9c1a5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/000_N/result.json": "3febd5e226888ff6c833b051ea590d94b0f7cff85e299e1d3fb08cc6af744fbc",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/000_S/begin.json": "913d958c3753ee381073e2685e4c7b73b6907fb4fa9a18299071fd926d1fc971",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/000_S/result.json": "b68572ab463ebb9a8e28596fc77ea476d29c5bdff6bcca1c88920bd24483e51d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/001_F/begin.json": "c7deecb5d3c10a6ab8673d56770c43a8c13a7c51e0bc195b0023a642d7e5649b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/001_F/result.json": "439255071c49f88e0547f2e805fc288a29762a030ddb8563c87ac07377e1b772",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/001_K/begin.json": "18aef6dbb752fd3b44aaa219baae9884c77a5b3b69be9df3b9ba80be18ab521f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/001_K/result.json": "934032513464de1d3e67300504b61d26b3d5adc0863858ecb3404d7201252b65",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/001_N/result.json": "b2ac2bfbfec897423097ba956fd574ccb0d03fd13e0941cb341fbde1d61d83eb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/002_F/begin.json": "115dda7f46c69753a8a04c30593a312bfd68a791c5ce2218d253100a75397faa",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/002_F/result.json": "b01a0db2a3723fd362f4e9cc4b2d37c4cfcd82cb3708f72f130ffa473c2dea4b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/002_K/begin.json": "4f884e5d7b93a6a6d266dc7f21b6273aeb6e5c2b38a2cc24add3834b2f832d1e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/002_K/result.json": "badde25a434ea43e0135f7d7bc7eb00f51ecbad62ef26f2511862b4a395bcc4b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/002_N/result.json": "1bd27a9a3031c170f783ee47206e05ea753dac25a2866087424bf330289f2578",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/003_F/begin.json": "bf69b8cc3241cafec29b12705d86f64308c3324900fc57047f6d8420d8f52789",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/003_F/result.json": "54234bd8b7043c834c5ebc7ebeae4194167831994c843d2ffad57109392a4845",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/003_K/begin.json": "3bf419918fc39f454ffa3223d4eb282789a822c108d9d26119245a4a8295c523",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/003_K/result.json": "67ca4a81f44f926c1e191c1044bf801a6ed4bd6933849da26a6ed2246d569d21",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/branches/003_N/result.json": "3a315aaa880b07b5e0a2f7bf5523d67033310775951da3b59acb515cfdcb1de1",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/checkpoint.json": "5b28f7c364cac038ed1d08f60bf9a575f994b95e8d4fcc4bf9062ecd2adef2ab",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/result.json": "edca096088725a311f900844ebbccd17982d2c4f4ed264bb944f6f21388d67c4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H05_B2/attempt_0001/selection.json": "5159b77ac5cffcec9947cd97e39261f174e0698485a06af50d08fc1c57b590ff",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/begin.json": "5dfa2437b914229eeffa1cbedbbb7544a3b5380799d1e7cb4cb3830b35744dfc",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/000_F/begin.json": "1013d655fd0f3763aeb12d1ae824e8c4b09b7db67086e26a20eea0e3d97dd8ee",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/000_F/result.json": "53f26fca945f3c460818e0ecbf7f7641934f8f67f09ffc96db509ed7221eed9a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/000_K/begin.json": "cf6a29f5341b9108a9d4de9ef4fb81dc88cd017379bd188890b4de236a518705",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/000_K/result.json": "c3f26eea83a714c38d315894920cc3ed2e8742eba9c90466515e0299005a4f0a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/000_N/result.json": "ed31eb2aaa7bcdad4266d483c214137b2ba3a14be89f3d9dfd07ff84d6e1fed5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/000_S/begin.json": "443781959e591eedffe9c3f39dc268400aeb5219000391ca006788fed7bd65cb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/000_S/result.json": "033b324fdab29202ac38a5d99306cac3f478b9486958fe4e900e27c95b7e57b3",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/001_F/begin.json": "53a54e026deea36cf2006f11050cf32eb095bc45b9bfefd41e8ccf6bd9863b91",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/001_F/result.json": "61f4bd0eef617c1f27192f25ba91db016977510aae52a81f9c0d2c0b48a9bcc7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/001_K/begin.json": "5c07e64c1f4d235ab4736a310f82a1ae2d7fe034e12e1b88ae7b6ecc43bdd885",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/001_K/result.json": "094d4a08aa4ab0d7cb6042190f11a33b9507ead7a7366b3e036a484763e7a670",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/001_N/result.json": "aa8b32852f9039537fb56fa1ab6a3fb1f6b39c80bbd795969783a20033185ded",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/002_F/begin.json": "f93d26b7e43b2f65023b5ec959ea40085d979673671950574c9594d503bf23be",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/002_F/result.json": "58dc2fe34b5186b4aa865c5a4f2e70dc074d427b1dbc6fa860ab4898b4b18acf",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/002_K/begin.json": "cde08a8d2252432d1045c98c51e3ebac5038e0f08729cc8ed972798b789fd957",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/002_K/result.json": "7a5eaa85c90416e8e1a7d825c6347cb398dc694c5ea7019c5c9bf81ff2f16b28",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/002_N/result.json": "bab114142e423503c6b1d125f446c900c87ab0646ec8fc70f552f6f176e5116e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/003_F/begin.json": "9cbe4a5db883842107a11b656b19f670e187a46c5278310423c84ea8861b72e1",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/003_F/result.json": "6fcf3a4257842a5abd01a754fe9bba50082ad89f1985366c446be499ebd9166c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/003_K/begin.json": "a5649f58d9edd63ae0f0edfd4f61c22fa45392bd7bc1513db2d042fdb26b399c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/003_K/result.json": "c5c82e70cc523bfc215abbca98e4bba36edb2061677b82284e692cdcbd8a772c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/branches/003_N/result.json": "e06432f2cdfe2d4f23c4319cea6e81206d44e794960596168a3011e25df87244",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/checkpoint.json": "dabc6cd211e99e4f19633cef9b4bb82fe9743e75f4cf0621d8c7516be3c06d98",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/result.json": "ea9abdbc10e59afcc2ac3eeb02cc28a67ca1acd0d0724ad1d0a5f60d6091e536",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B1/attempt_0001/selection.json": "98ba7b2dd940f980f679499c88ed9d99af3a0a678b3ff509bae7a33312b3c24d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/begin.json": "b9ee27c0e9d07a02f4e7f48c48340b5206e445910db0ef1ae6a2bbf290625351",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/000_F/begin.json": "c71c90fdf973cab13d59653ca6fd2f96f4add999a6e3593ff07935dadbeda955",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/000_F/result.json": "0e06a17ad63a23aa5180d6e1ce50af0fb80291d804c8360447e5d8e39e9e3472",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/000_K/begin.json": "1dba79266411893a38b4755bdd53e6784503e639d728d076fca0aa74204d71f0",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/000_K/result.json": "281a256a58f034d0821ef4bbeb09fa3a4e82a90dfda1b737d1e7744039a2baec",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/000_N/result.json": "723e3d79afe33d60e58e44bb25f6ab99c231779732a1f86bf7cf690cd6c69b52",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/001_F/begin.json": "67d0c603230e968e6b8fe1f5f1e4b17d282450e478bbf089e7b575a672f387d9",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/001_F/result.json": "1fede2b16ab3eb9979e3c8c1cfd4a108d27f82f5f4547a6e52e59f7701a0190d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/001_K/begin.json": "47af923cdfb4e2d59d822dd957e1e36fd18b8d158d782d5e6bd13b8dec231cde",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/001_K/result.json": "3aef9b190dc74b219a4ac004e5fc323646b05408793fb587764058a466c42db4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/001_N/result.json": "09aa28cb1e459844501c010c34a090044394ba338bfc0af22ba02c55ba6d47c3",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/002_F/begin.json": "3c9f62663b2424d8f069ac5160ae1e58931682e3f818e51fbe6e0ad98ee10dd7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/002_F/result.json": "0123e1c8f0353b9aea40383028e80f814ad2958dcfcb25a7fd091e081adf5a9d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/002_K/begin.json": "ed3b1c6e685baeea026835131d81f2f4dbc8177edb82c7df64abac512598ebc6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/002_K/result.json": "7f5bbc5ca5b006bbb0a5a6a558a12445d252ba78edf1b7b5df8a50b42d7d4363",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/002_N/result.json": "7eddd57f7fc6b701db83850a89c879fc92612e05bdede8fc7de4358ffa83bf3e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/003_F/begin.json": "a309f341cea75a16e29f133afd45696fcaeaffde61aacc5b51743e883572bbc7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/003_F/result.json": "c6d0f74c0196c87955d3576497c065777b3dac955301987b0ec5fc6fbdf1a386",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/003_K/begin.json": "5d17254741db49442dd8085e47afd1d40147743bee425a2e616dd1dd6fb56901",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/003_K/result.json": "d3c9d8229b5f7fb638ad24f8f71a8e7e4116573212bf22742292506c70e0c941",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/branches/003_N/result.json": "9dffd925b0ee1ea9d6eff8cd756048f3b947655d5f26dd1e9062d6444c1712ac",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/checkpoint.json": "fd05ea25f7218d6ffd1debe35072015b82860e3c5eb327894b153ff98d81d3c5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/result.json": "743d4ea748c38db9eb820aa5a15baea12e2fe8e1f0da2f5ff746c82a79dc3fce",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H06_B2/attempt_0001/selection.json": "a42cc6322318123305be611eca9e500e91369953b3e29ed53d32390139683713",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/begin.json": "293a7e0735f6dffe6a1ad1fc629b070600c3f572479a458b6a1c1d50198ee404",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/000_F/begin.json": "d501912d76a69386946997d7a4283f7f5478de72f951f5b0b847fb18289f6b6a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/000_F/result.json": "bede4cd189caac5a24096dffa99b48fa6707e10286b666c57432f90af06df41f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/000_K/begin.json": "252e1db1f13eb3c212c85995bff489d90c1b3859b8ce87e69b7151a846c2201a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/000_K/result.json": "4bc04332add35ca5b03d1a2f33b6773a67026261a354631329892ba8779a572d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/000_N/result.json": "259f03db7b25f56af153c8359d717b9a1ef6a1ac004105420ebc4231a734346b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/001_F/begin.json": "a108ee8d973f6158b7b92f8d9d905159c531b14de84d516dd3d196ec9f0cca25",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/001_F/result.json": "601acda0fdff199008bc06273a656072a16c6e74306af99291a5b3c327d130cb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/001_K/begin.json": "6dc5c941829a02cb6b9423dc00f5176b5172de21f433e1d9a4c0246b4d6d4e3d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/001_K/result.json": "79faf4b6ce453c1dd32bcb827271e16380569e1930e691fdf164831b0156798c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/001_N/result.json": "0b61ca24884a5eee7894c8e74cbbfd333c4a01a2d4f3a8d9f1f8b16ea11818f0",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/002_F/begin.json": "88e17af826baa451a413e78472a97da83f91c3bc97c949394f7b05481cc1b01a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/002_F/result.json": "9494aacad21ea66dfcdb5db939dbb514017e196edc7b9132bfa90e31bd0549a6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/002_K/begin.json": "da7f5539c6703d1b03f039e0a3a5e9c14befa432f517786e154547375d0702a6",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/002_K/result.json": "e13ac4cc4476543e654502d9e20c555b52a3bfab01c566df9796f16652d2b426",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/002_N/result.json": "88a3a1210906e8c2f4973007d595e936ae774e316d3d0d720b911f359c628bc9",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/003_F/begin.json": "53ea650bf4b39f39eed3e8024c13047ffa468f2fcc6ab63b18e042f00ed8b5b8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/003_F/result.json": "6fb21f71290faeb9ecd57496c7c8723380d2838531f1530b46f5cbcff7e107b4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/003_K/begin.json": "a6163eae0fc561586b4778970a133fdb8d8a2549e01053f69a091b582e4e4d66",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/003_K/result.json": "c31919296bf38b6b84b702458d657ade68aa8d5a4b48708b115fea669886e90b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/branches/003_N/result.json": "b02595112b2a0deda63032a2d59a9b81077d0679ef45daf43bf652a1c82758fb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/checkpoint.json": "d4f640be16c29eda1e09c30528b39169d627829a2d6f662cb423a19afee76983",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/result.json": "89283120ec0d4b17094f137abaa08ab63ee4fbc927bd86a980465be93288bb2f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B1/attempt_0001/selection.json": "7c283fbd0c4b15f695d5ce6517146e5002fabe42852fe0279f01b2682c3751ce",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/begin.json": "801daee4ec6ca4bb400a4c731b6712b9285cf97dc658989b0c2b1424f8a7b02d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/000_F/begin.json": "f49804d0d2da2c779280c7f12f2521ba916adab6d41aca52240f6ce73a16f35e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/000_F/result.json": "f0d4b205b8cadb9de0e987cb5046d7735ce2214078430b7b2c927f5ce2fae68f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/000_K/begin.json": "74092c08c6f7066347514e17a9557c0de2c447b8a160d22dffdfcaec9395ec42",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/000_K/result.json": "01090de96269b72758061c5d384585226dbd98790ca0797713cd8417d8097fa2",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/000_N/result.json": "47b4a668f06b94cda5894a1de3eb5960346f5417c0a6c9b90ccc020b78ce32c5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/001_F/begin.json": "dffaef8f6bb24c094719188c4c6dece9a1a163c5a0cfe4dc4fe7f2ce3949484c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/001_F/result.json": "358417081467c4855aaf2de3ffc0001bbe4bd9150e64b329f1dc2334abaed0e5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/001_K/begin.json": "b66815edb3570365417094fba7bba8eea650d77f192506ea2a59806e93a11472",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/001_K/result.json": "d311ff02fc09b8708be6bf7c7093cca8681e11cd5b7bbaeae8996e2e040d37a7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/001_N/result.json": "7c74de19b9885980270bb72985a772b3dcdf89b76fb5c1cb973adfee10fd2ff0",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/002_F/begin.json": "157e74280a8013de28ac7c923926c9be655527a5fbd2c0d24f61764e2af7e245",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/002_F/result.json": "8fc5bd9240fbd8a0dce372e763c26d917617e8f1ca152c4921f03b6ad161632c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/002_K/begin.json": "8210064042174a0c43c3351fba4e18a1d6df99e2ba6b655e54eb759b4d679025",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/002_K/result.json": "c9d0016f88c04e18679365480198cae7f9545426a09b47f2ee0e84b5cd928d0f",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/002_N/result.json": "e001c02d420cf180f1e37de8329aa2d35ee1c0d14cf68893349f4644dde7f199",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/003_F/begin.json": "5fb1fde45df1dc87d706c9aead0568b4e6a995f00e6b739ab7ba2ee4ddd1ac12",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/003_F/result.json": "1cc1fa5a4c3531e8dd392518e0c95cd297aad944dba9491028fb773be0132395",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/003_K/begin.json": "e639ad5f571d57115a8e9cec6d0c41b8b8556f88120f80c83fff6678cf8d98af",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/003_K/result.json": "3641938d3fd18fa9d13164e4510f0f380ef22ad13e0a26d517dbb791ac4441bb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/branches/003_N/result.json": "2f28a20883f5ffce75a1beb8e85577ed0664e6b07486b6e6f15f02300441886d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/checkpoint.json": "e85d221df3d8deda3f1710f673b874740baf63342ea66f92504ca9005e1ecd96",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/result.json": "10d09e12bc0a964ddb9ddaa11645e6e32a0e071f3b8e8c918ae06a671afa37a0",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H07_B2/attempt_0001/selection.json": "5fbd040e44dc5bd8d4f389df1f3340f382710b288037fccae0366ca55737a336",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/begin.json": "0521bfe911a533c723b114926472afaa8c90fc52db1bc09a830d55bad3ae38ef",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/000_F/begin.json": "6390275aa06bb44e77afe869a65ff3f535b95380edca8711cc3c9766fbd44633",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/000_F/result.json": "fbe7b31372bf8bcef8fea61d981e149b590686910ae54d2860dc2d2b7fa96dd2",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/000_K/begin.json": "d8a405b6228f707e9da79d74d419222b2ac89a9794ae0dc8a0dc6f68eb5e4d8e",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/000_K/result.json": "06db567557c6cdca408e027a658a79734d62cf1708b0d43122fb2ea6c0795035",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/000_N/begin.json": "0c147a4ce40f4c47842353a8c51c1f8b83ddc2df03bd40843fa9debe810522a8",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/000_N/result.json": "d1dd9619e6229218187fc84e5c1dd17c38b079ebea370167a8e6cde4e2604ebb",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/001_F/begin.json": "406656a7b2b96f63182e0b6af5f95f97d8c8290acfd58683e0c47d74e8654b75",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/001_F/result.json": "9dd01a218425e628b8efc7fbe8884866159cdd8405759e70c2db1742f09ea389",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/001_K/begin.json": "8ff257dfd104444f90030f956b227f76e823e8a7819ac7112bee576bf40f77c2",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/001_K/result.json": "4c9b792aa7b68d737d4cab2b9002586c24253e754c1cfef72d8f71672ee9c628",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/001_N/begin.json": "1aa2a53dd46c343cba71f5ecf932784042751553b1ae8c517811938831453b93",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/001_N/result.json": "672c4ff218555ac402e74a55529e186556d417a6a8b2077870ebd41033779faa",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/002_F/begin.json": "39335c0ceb3e61fb8663c3ef7db6bfcd550fee7c4ea7e28cce2ed493ace05855",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/002_F/result.json": "ec90039b1a87417472d6d5dad2c039100872a3c5e38f2d7bf648859dd75d3644",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/002_K/begin.json": "07f8aca70a0cffe29c214d1a1d7de70785910654b85515d14cc975775ac0462d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/002_K/result.json": "1360d402e2bf81152fb89c3030516eec8b74862f6037068614a3785900937347",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/002_N/begin.json": "6c5de219cc92008fd719a958b78cfdf0a67f609c76c985e86163598dbc49a9e3",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/002_N/result.json": "5805bd8b10570762c61aa4933022a7ae746068ee3e7654339c1a4891b28b84e1",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/003_F/begin.json": "c69aee08c655e0f986e135d37b7091d94013bdb6e0a4d6d6aeda61cd09b0fc02",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/003_F/result.json": "9df3fceb77265e0439d73ebe85990a9b070b6285764f61253ec25de5839f5da7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/003_K/begin.json": "203f5452b4bcda99ec253d88b4697eaecb51ccbeb9110b1742198d6a8eaae922",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/003_K/result.json": "3024a5d2a3a5627778da8f52ec9c8778a560089334dffd94aad827c41a38390d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/003_N/begin.json": "841d989f2a995116935d012334738c9f2dd4adf5ed65668c04ddff34e72990a5",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/branches/003_N/result.json": "39c46c7f403e863b02b0be080030cec700c026ad4d60584017735342eb6b1872",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/checkpoint.json": "9b7cd3cf809058f2dd87cab96d5aaad42b60dd9f93cd130158743629e63a8525",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/result.json": "d19c9e94b0d19c3399f4dccb018ebfac4b50d30231c6305a0c08b08d9a9eb3ff",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B1/attempt_0001/selection.json": "d1f9f8d4298a8d23b38e4f9dfd101cc79d7585d5b30142646ca76ac7dddd1c15",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/begin.json": "50bc28fca38888222bb000f9f21deede3e9caa8a347a79c6461aac6f17b0adef",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/000_F/begin.json": "ec52bf53164289eff52dde1ad77bed97d97d3b561cfec5927270bd5a9cb25999",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/000_F/result.json": "21566037dba3cf3eef5aedf71b6d70ecc6ab071b1a17f7ff50cfe146a69013dd",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/000_K/begin.json": "7b220d63109cc409a86d35cbd5bc3f7902e6b58895bc6c4b30a873395d02ed0c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/000_K/result.json": "957388f640d2d7dc20a610de5677f6a34d96047167d51c6ee33cdc47e7555464",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/000_N/result.json": "fd1c5530dd35b8aecc1b06a88ab348d53d7357a1ae9ab173eef6301c2fe38894",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/000_S/begin.json": "8dc56eab98b963128f793cbf9231147f98ef850d7de5b63c1b8ad4b69060f79b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/000_S/result.json": "8f859bc4beac8739e67bf017da190544329e75ff077c63256991ea7ac78c064d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/001_F/begin.json": "fdb1c47d29f58d30c5f1eaac862aaec81793958934562399d37c5984c33fafc7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/001_F/result.json": "1f46e21e2645d8f9d147f161e9881441cc3017cff5e4678ce521314e645c4066",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/001_K/begin.json": "f9b16f5f09394e7446729a1ea16872f06dbbe4bc55f356a82def51c9fb6782ee",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/001_K/result.json": "8183f8316b77d607246aa2d98bf2b1be730b4017a31f741896052c749ad27ae4",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/001_N/result.json": "cd91c347b612e922f47cab76d85a019ea96fa4e0c5cc7a85faaefdae28fb59ac",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/002_F/begin.json": "3eb81177bfa989e9dad79731081d1f230fbc37eee416710074190e5399f5b98b",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/002_F/result.json": "aba77db1b5619802afb8fbfe958906f60df46b63f1706de895b4c0273377fb16",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/002_K/begin.json": "e48bbc1b3a9ac215f6815d3323bd03a6a5d61caae5afaec6b802a80fc5523dea",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/002_K/result.json": "e613b247acf5ff19bab355c7d4b4d8236b7021b63ed0575542e9f060ebce066d",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/002_N/result.json": "72f44da5c7862e4f5397e0fc5dc4bb004fdeb05eb97087df49dad0cd3007fc89",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/003_F/begin.json": "26af6204eee4ca89baac1e7df2bd7db0ae6ff0d1cbeaa666da0dae89e1128268",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/003_F/result.json": "dcf4cdeb2eaf41eedd3ae714422dbf8efc40cec2db95a6436ed3b83b397f40e7",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/003_K/begin.json": "197934b9158ff760f801210b07472ef78b1acae9af3f4fc14253882d395108ac",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/003_K/result.json": "e1848afc843694aa25178296722e6a44e5ff59e8ca05e6e3404b85ef6179563c",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/branches/003_N/result.json": "ad6051b374e7e403abe7943ecac48dfbbace0431571b217343c1e5f032c9a07a",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/checkpoint.json": "922edfe2301aa0bd640e00b1f309f388175200c395b38ccd92ba93f7f9135a82",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/result.json": "6371cc64c270db36183955daf51257d1e27a20b472f595b4369c183bd106a146",
+    "/Users/aarav/Documents/Projects/ApartSprint/docs/runner/exp002-live/worlds/H08_B2/attempt_0001/selection.json": "e0476fe985f8c2467f05670a8f72a37f5f47ca3c8e13f9a4270e99ab067790d7"
+  },
+  "label": "exploratory; numeric reproduction only",
+  "n_defined_pairs": 8,
+  "n_nonzero_pairs": 7,
+  "pairs": [
+    {
+      "d_w": -1.0861363644332755,
+      "pair_id": "1031646258"
+    },
+    {
+      "d_w": 0.11639098703565462,
+      "pair_id": "1394100456"
+    },
+    {
+      "d_w": 1.3591417224689237,
+      "pair_id": "1482663892"
+    },
+    {
+      "d_w": 3.4927961671870356,
+      "pair_id": "1585432260"
+    },
+    {
+      "d_w": 0.0,
+      "pair_id": "163932955"
+    },
+    {
+      "d_w": 2.4734253167028895,
+      "pair_id": "1716750912"
+    },
+    {
+      "d_w": 5.259128343583882,
+      "pair_id": "551864267"
+    },
+    {
+      "d_w": -0.7801404843939165,
+      "pair_id": "888852293"
+    }
+  ],
+  "schema": "rev001a.independent.v1",
+  "sign_flip": {
+    "denominator": 256,
+    "numerator": 18,
+    "p": 0.0703125
+  },
+  "within_regime_tau_O": {
+    "B1": 0.9704506454819918,
+    "B2": -0.38387506553690737
+  },
+  "worlds": [
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "1716750912",
+      "regime": "B1",
+      "tau_O": 1.2904071059004139,
+      "world_id": "H01_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "1716750912",
+      "regime": "B2",
+      "tau_O": -1.1830182108024756,
+      "world_id": "H01_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "551864267",
+      "regime": "B1",
+      "tau_O": 2.644820295105433,
+      "world_id": "H02_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "551864267",
+      "regime": "B2",
+      "tau_O": -2.6143080484784487,
+      "world_id": "H02_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "1482663892",
+      "regime": "B1",
+      "tau_O": 0.6452100113914347,
+      "world_id": "H03_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "1482663892",
+      "regime": "B2",
+      "tau_O": -0.7139317110774889,
+      "world_id": "H03_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "1031646258",
+      "regime": "B1",
+      "tau_O": -1.0861363644332755,
+      "world_id": "H04_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "1031646258",
+      "regime": "B2",
+      "tau_O": 0.0,
+      "world_id": "H04_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "1585432260",
+      "regime": "B1",
+      "tau_O": 3.4927961671870356,
+      "world_id": "H05_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "1585432260",
+      "regime": "B2",
+      "tau_O": 0.0,
+      "world_id": "H05_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "163932955",
+      "regime": "B1",
+      "tau_O": 0.0,
+      "world_id": "H06_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "163932955",
+      "regime": "B2",
+      "tau_O": 0.0,
+      "world_id": "H06_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "888852293",
+      "regime": "B1",
+      "tau_O": 0.7058188321925385,
+      "world_id": "H07_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "888852293",
+      "regime": "B2",
+      "tau_O": 1.485959316586455,
+      "world_id": "H07_B2",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "S": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "1394100456",
+      "regime": "B1",
+      "tau_O": 0.070689116512354,
+      "world_id": "H08_B1",
+      "world_status": "complete"
+    },
+    {
+      "attempted": true,
+      "counts": {
+        "F": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "K": {
+          "attempted": 4,
+          "complete": 4,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        },
+        "N": {
+          "attempted": 0,
+          "complete": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 4
+        },
+        "S": {
+          "attempted": 1,
+          "complete": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "invalid": 0,
+          "not_run": 0
+        }
+      },
+      "definition": "complete_continuations",
+      "final_attempt": "attempt_0001",
+      "pair_id": "1394100456",
+      "regime": "B2",
+      "tau_O": -0.045701870523300624,
+      "world_id": "H08_B2",
+      "world_status": "complete"
+    }
+  ]
+}

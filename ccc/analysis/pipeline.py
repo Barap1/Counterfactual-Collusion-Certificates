@@ -118,13 +118,13 @@ def _sensitivities(cps, analysis, worlds):
     return output
 
 
-def run(input_dir, output_dir):
+def run(input_dir, output_dir, watchdog_dir=None):
     out=Path(output_dir).resolve(); source=Path(input_dir).resolve()
     if out==source or source.is_relative_to(out) or out.is_relative_to(source):
         raise ValueError('output must not contain input artifacts')
     out.mkdir(parents=True,exist_ok=True)
     try:
-        manifest,cps,attempts,events,scheduled,hashes,warnings,addendum=load(source)
+        manifest,cps,attempts,events,scheduled,hashes,warnings,addendum=load(source, watchdog_dir=watchdog_dir)
     except (ValidationError,ValueError,KeyError,FileNotFoundError) as exc:
         dump(out/'validation_report.json',{'valid':False,'problems':getattr(exc,'problems',[str(exc)])})
         return 2

@@ -40,18 +40,22 @@ def _marker_pid(marker):
     return pid if isinstance(pid, int) and not isinstance(pid, bool) else None
 
 
-def active_input_problems(root):
+def active_input_problems(root, watchdog_dir=None):
     """Return (problems, warnings) for runner output.
 
     A lock is stale only when a watchdog marker exists, the run is not alive, and
-    the lock predates the marker (or no pid is recorded and the lock predates the marker).
+    the lock predates the marker when no pid is recorded.
     Stale locks are reported as warnings, never refusals.
     """
     root = Path(root)
     if not any((root/name).exists() for name in RUNNER_SIGNATURE): return [], []
+    marker_dirs = [root, root.with_name(root.name + '.watchdog')]
+    if watchdog_dir is not None:
+        marker_dirs.append(Path(watchdog_dir))
+    markers = [directory/name for directory in marker_dirs for name in WATCHDOG_MARKERS
+               if (directory/name).exists()]
     lock = root/'.collector.lock'
     if lock.exists():
-        markers = [root/name for name in WATCHDOG_MARKERS if (root/name).exists()]
         if not markers: return ['active experiment inputs forbidden: .collector.lock present'], []
         marker = max(markers, key=lambda m: m.stat().st_mtime)
         pid = _marker_pid(marker)
@@ -59,16 +63,16 @@ def active_input_problems(root):
             if _pid_alive(pid): return ['active experiment inputs forbidden: .collector.lock held by live pid %d' % pid], []
         elif lock.stat().st_mtime >= marker.stat().st_mtime:
             return ['active experiment inputs forbidden: .collector.lock newer than terminal marker'], []
-        return [], ['stale_lock_ignored: %s (marker %s, run_pid %s not alive)' % (lock.name, marker.name, pid)]
-    if not any((root/name).exists() for name in TERMINAL_MARKERS):
+        return [], ['stale_lock_ignored: %s (marker %s, run_pid %s not alive)' % (lock.name, marker.resolve(), pid)]
+    if not markers and not (root/'run_end.json').exists():
         return ['active experiment inputs forbidden: no terminal run record'], []
     return [], []
 
 
 class Reader:
-    def __init__(self, root):
+    def __init__(self, root, watchdog_dir=None):
         self.root = Path(root).resolve()
-        problems, self.warnings = active_input_problems(self.root)
+        problems, self.warnings = active_input_problems(self.root, watchdog_dir=watchdog_dir)
         if problems: raise ValidationError(problems)
         self.hashes = {}
 
@@ -258,8 +262,8 @@ def validate(manifest, checkpoints, rows, strict=True):
     return sorted(set(warnings))
 
 
-def load(root):
-    reader = Reader(root)
+def load(root, watchdog_dir=None):
+    reader = Reader(root, watchdog_dir=watchdog_dir)
     manifest = reader.read(reader.root/'manifest.json')
     manifest.pop('runner_adapter', None)  # Only the checked adapter may set this internal marker.
     runner_addendum = None

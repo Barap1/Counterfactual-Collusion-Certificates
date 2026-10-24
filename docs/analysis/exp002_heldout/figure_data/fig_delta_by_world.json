@@ -1,0 +1,90 @@
+[
+  {
+    "B1": -1.0861363644332762,
+    "B2": 0.0,
+    "confirmatory": false,
+    "d_w": -1.0861363644332762,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "1031646258"
+  },
+  {
+    "B1": 0.0706891165123551,
+    "B2": -0.045701870523302546,
+    "confirmatory": false,
+    "d_w": 0.11639098703565764,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "1394100456"
+  },
+  {
+    "B1": 0.6452100113914341,
+    "B2": -0.7139317110774854,
+    "confirmatory": false,
+    "d_w": 1.3591417224689195,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "1482663892"
+  },
+  {
+    "B1": 3.4927961671870342,
+    "B2": 0.0,
+    "confirmatory": false,
+    "d_w": 3.4927961671870342,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "1585432260"
+  },
+  {
+    "B1": 0.0,
+    "B2": 0.0,
+    "confirmatory": false,
+    "d_w": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "163932955"
+  },
+  {
+    "B1": 1.2904071059004067,
+    "B2": -1.183018210802473,
+    "confirmatory": false,
+    "d_w": 2.4734253167028797,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "1716750912"
+  },
+  {
+    "B1": 2.6448202951054363,
+    "B2": -2.6143080484784473,
+    "confirmatory": false,
+    "d_w": 5.259128343583884,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "551864267"
+  },
+  {
+    "B1": 0.7058188321925414,
+    "B2": 1.485959316586456,
+    "confirmatory": false,
+    "d_w": -0.7801404843939146,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 1,
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_id": "888852293"
+  }
+]

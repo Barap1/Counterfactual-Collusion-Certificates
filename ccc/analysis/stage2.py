@@ -93,8 +93,8 @@ def attainability(sigma, margin, draws=2000):
                 caveat='Zero simulated frequency is not mathematical impossibility; Gaussian tails permit rare outcomes. Full certificate probabilities are not identified by sigma alone.', table=table)
 
 
-def run(input_path, output_path):
-    reader=Reader(input_path)
+def run(input_path, output_path, watchdog_dir=None):
+    reader=Reader(input_path, watchdog_dir=watchdog_dir)
     def read(path, lines=False):
         value=reader.read(path,lines=lines); guard(value); return value
     manifest=read(reader.root/'manifest.json')
@@ -129,7 +129,7 @@ def run(input_path, output_path):
     pairs=read(reader.root/'dev_fixture_pairs.json') if (reader.root/'dev_fixture_pairs.json').exists() else []
     result=calculate(cps,rows,pairs)
     result.update(schema='ccc.stage2.draft.v1',status='DRAFT',frozen=False,label='DEV/pilot' if 'pilot' in reader.root.name else 'DEV',
-                  input_hashes=reader.hashes,attainability=attainability(result['sigma_dev'],result['m_O']))
+                  input_hashes=reader.hashes,warnings=reader.warnings,attainability=attainability(result['sigma_dev'],result['m_O']))
     result['rule_hashes']={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in
         (ROOT/'docs/stats/prereg.md',ROOT/'docs/research/sci002/protocol.md',ROOT/'docs/stats/compute_plan.md',Path(__file__).resolve())}
     out=Path(output_path)
