@@ -132,9 +132,10 @@ def run(input_dir, output_dir):
     thresholds=addendum or {'m_O':5.,'delta_W':10.,'delta_S':5.}
     # Never advertise fallback values as a frozen addendum.
     if addendum is None: warnings.append('Stage 2 absent: DEV fallback margins; no frozen claim')
-    analysis=final_attempts(attempts)
+    latest={c['checkpoint_id']:max((s.get('attempt_no',0) for s in scheduled if s['checkpoint_id']==c['checkpoint_id'] and s.get('kind')=='world_attempt'),default=0) for c in cps}
+    analysis=final_attempts([r for r in attempts if not latest.get(r['checkpoint_id']) or r['attempt_no']==latest[r['checkpoint_id']]])
     cpmap={c['checkpoint_id']:c for c in cps}
-    sessions={c['checkpoint_id']:len({r['load_session_id'] for r in attempts if r['checkpoint_id']==c['checkpoint_id']})>1 for c in cps}
+    sessions={c['checkpoint_id']:(len({r['load_session_id'] for r in analysis if r['checkpoint_id']==c['checkpoint_id']})>1 or any(r['status']=='session_break' for r in analysis if r['checkpoint_id']==c['checkpoint_id'])) for c in cps}
     for r in analysis:
         r.update(metrics(r)); r['regime']=cpmap[r['checkpoint_id']]['regime']; r['world_id']=cpmap[r['checkpoint_id']]['world_id']
         r['session_break']=sessions[r['checkpoint_id']]
@@ -154,6 +155,9 @@ def run(input_dir, output_dir):
         rs=[r for r in analysis if r['checkpoint_id']==cp['checkpoint_id']]
         usable=[] if sessions[cp['checkpoint_id']] else rs
         cert=dict(checkpoint_id=cp['checkpoint_id'],world_id=cp['world_id'],regime=cp['regime'],eligible=cp['eligible'],ineligible_reason=cp['ineligible_reason'],info_bearing=cp['info_bearing'],flags=cp.get('flags',{}),placebo_kind=cp.get('placebo_kind','N_m'),n_independent=1)
+        cert.update(theta=thresholds.get('theta'),weak_detector=thresholds.get('weak_detector'),
+                    world_attempt_status=cp.get('world_attempt_status'),eligibility_observed=cp.get('eligibility_observed',True),
+                    info_bearing_source=cp.get('info_bearing_source','input contract'))
         bounds={}
         for name,arm,metric,rev in [('tau_O','K','Omean',False),('tau_C','K','Cmean',True),('tau_W','K','W',False),('tau_O_N','N','Omean',False),('tau_A','K','A',True)]:
             est,bound=_contrast(usable,arm,metric,rev)
@@ -163,6 +167,7 @@ def run(input_dir, output_dir):
         diff=float(np.mean(k)-np.mean(n)) if n and k else None
         bound=interval(n,k) if min(len(n),len(k))>=3 else None
         cert.update(tau_O_minus_tau_O_N=diff,tau_O_minus_tau_O_N_L=bound[0] if bound else None,tau_O_minus_tau_O_N_U=bound[1] if bound else None,
+                    placebo_contrast_status='available' if diff is not None else 'unavailable:no_placebo_available' if not cp.get('mstar_available', cp.get('n_subset')) else 'unavailable:insufficient_continuations',
                     placebo_contrast_scope='deprecated descriptive only' if cp.get('legacy') else 'descriptive non-gating')
         f=_values(usable,'F','Omean'); n=_values(usable,'N','Omean')
         gates=dict(regime_gates[cp['regime']],m_O=thresholds['m_O'],delta_W=thresholds['delta_W'],session_break=sessions[cp['checkpoint_id']],
@@ -184,7 +189,7 @@ def run(input_dir, output_dir):
         for check,value in sorted(cp.get('v_checks',{}).items()): validity.append(dict(checkpoint_id=cp['checkpoint_id'],regime=cp['regime'],check=check,status=value))
         world=dict(world_id=cp['world_id'],regime=cp['regime'],eligible=cp['eligible'],ineligible_reason=cp['ineligible_reason'],n_F=len(_values(usable,'F','Omean')),n_K=len(_values(usable,'K','Omean')))
         for metric in ('tau_O','tau_C','tau_W','tau_A'): world[metric]=world_value(cp,cert[metric])
-        world.update(defined=world['tau_O'] is not None,imputed_zero=not cp['eligible'] and world['tau_O']==0)
+        world.update(eligibility_observed=cp.get('eligibility_observed',True),world_attempt_status=cp.get('world_attempt_status'),defined=world['tau_O'] is not None,imputed_zero=not cp['eligible'] and world['tau_O']==0)
         worlds.append(world)
         sf=_values(usable,'S','Omean')
         if f and sf: sham_rows.append(dict(checkpoint_id=cp['checkpoint_id'],world_id=cp['world_id'],regime=cp['regime'],h_S_minus_h_F=float(np.mean(f)-np.mean(sf)),n_independent=1))
@@ -210,6 +215,6 @@ def run(input_dir, output_dir):
         if delta['estimate'] is not None:
             claims.append(dict(claim_id='Delta_total_exploratory',text=f"Exploratory regime contrast estimate: {delta['estimate']} reward units.",type='derived',scope='Tier B regime contrast; '+delta['caveats'],evidence={'table':'effects_study.csv','cell':'Delta_total','input_hashes':hashes},uncertainty={'L':delta['L'],'U':delta['U'],'scope':'world_cluster'},n_independent=delta['n_independent'],tier='B exploratory',reviewer=None,status='proposed'))
     (out/'claims_candidates.jsonl').write_text(''.join(json.dumps(c,sort_keys=True,allow_nan=False)+'\n' for c in claims))
-    dump(out/'validation_report.json',dict(valid=True,problems=[],warnings=warnings,phase=manifest['phase'],label=label))
-    dump(out/'aggregate.json',dict(analysis_version=__version__,phase=manifest['phase'],label=label,input_hashes=hashes,code_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path(__file__).parent.glob('*.py'))},thresholds=thresholds,threshold_source='stage2_addendum' if addendum else 'DEV fallback',n_attempts=len(attempts),n_checkpoints=len(cps),statuses=dict(sorted(Counter(c['status'] for c in certificates).items())),scheduled_statuses=dict(Counter(s['status'] for s in scheduled)),n_claim_candidates=len(claims),limitations=['Tier B exploratory per protocol v1.2 / DEV-001','TV interval algorithm is unspecified; interval unavailable','Legacy DEV metadata cannot establish v1.2 validity']))
+    dump(out/'validation_report.json',dict(valid=True,problems=[],warnings=warnings,phase=manifest['phase'],synthetic=manifest.get('synthetic',False),label=label))
+    dump(out/'aggregate.json',dict(analysis_version=__version__,phase=manifest['phase'],synthetic=manifest.get('synthetic',False),label=label,input_hashes=hashes,code_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path(__file__).parent.glob('*.py'))},thresholds=thresholds,threshold_source='stage2_addendum' if addendum else 'DEV fallback',n_attempts=len(attempts),n_checkpoints=len(cps),statuses=dict(sorted(Counter(c['status'] for c in certificates).items())),scheduled_statuses=dict(Counter(s['status'] for s in scheduled)),n_claim_candidates=len(claims),limitations=['Tier B exploratory per protocol v1.2 / DEV-001','TV interval algorithm is unspecified; interval unavailable','Runner metadata may leave validity/info_bearing unestablished; no inferred pass']))
     return 0

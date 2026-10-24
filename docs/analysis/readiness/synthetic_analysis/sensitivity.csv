@@ -1,0 +1,14 @@
+L,U,analysis,confirmatory,estimate,label,limitation,n_independent,omitted_world,tier,uncertainty_scope
+1.25,4.375,ineligible_zero,False,2.75,exploratory (DEV-001),,8,,B,world_cluster
+1.1666666666666667,3.8333333333333335,drop_ineligible,False,2.5,exploratory (DEV-001),,6,,B,world_cluster
+2.1666666666666665,5.333333333333333,leave_one_world_out,False,3.6666666666666665,exploratory (DEV-001),,6,101,B,world_cluster
+1.6666666666666667,5.333333333333333,leave_one_world_out,False,3.5,exploratory (DEV-001),,6,102,B,world_cluster
+1.5,5.333333333333333,leave_one_world_out,False,3.3333333333333335,exploratory (DEV-001),,6,103,B,world_cluster
+1.3333333333333333,5.166666666666667,leave_one_world_out,False,3.1666666666666665,exploratory (DEV-001),,6,104,B,world_cluster
+1.1666666666666667,5.0,leave_one_world_out,False,3.0,exploratory (DEV-001),,6,105,B,world_cluster
+1.1666666666666667,4.833333333333333,leave_one_world_out,False,2.8333333333333335,exploratory (DEV-001),,6,106,B,world_cluster
+1.1666666666666667,3.8333333333333335,leave_one_world_out,False,2.5,exploratory (DEV-001),,6,107,B,world_cluster
+1.5714285714285714,4.857142857142857,worst_missing,False,3.142857142857143,exploratory (DEV-001),fills use observed same-regime arm range; no observed range leaves undefined,7,,B,world_cluster
+1.5714285714285714,4.857142857142857,best_missing,False,3.142857142857143,exploratory (DEV-001),fills use observed same-regime arm range; no observed range leaves undefined,7,,B,world_cluster
+1.5714285714285714,4.857142857142857,noncommit_excluded,False,3.142857142857143,exploratory (DEV-001),fills use observed same-regime arm range; no observed range leaves undefined,7,,B,world_cluster
+1.5714285714285714,4.857142857142857,S_pooled_F,False,3.142857142857143,exploratory (DEV-001),fills use observed same-regime arm range; no observed range leaves undefined,7,,B,world_cluster

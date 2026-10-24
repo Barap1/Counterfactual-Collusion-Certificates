@@ -194,7 +194,7 @@ def validate(manifest, checkpoints, rows, strict=True):
         require(manifest,['stat001_hash','frozen','arms','n_subset_seed','branch_order_seed','sampling_seed'],'manifest')
         require(manifest.get('model',{}),['requested_id','resolved_id','parameters'],'model')
     if manifest.get('policy',{}).get('new_out_of_pocket_usd') != 0: problems.append('budget policy must be zero')
-    if manifest.get('phase') == 'holdout':
+    if manifest.get('phase') == 'holdout' and not manifest.get('runner_adapter'):
         if manifest.get('frozen') is not True: problems.append('holdout must be frozen')
         for key, path in [('stat001_hash',ROOT/'docs/stats/stage2_addendum.json'),('protocol_sha256',ROOT/'docs/research/sci002/protocol.md')]:
             if not path.exists() or manifest.get(key) != hashlib.sha256(path.read_bytes()).hexdigest():
@@ -236,7 +236,9 @@ def validate(manifest, checkpoints, rows, strict=True):
             if any(v not in ('pass','fail','na') for v in cp.get('v_checks',{}).values()): problems.append('invalid V check value')
         if not isinstance(cp.get('eligible'),bool) or not isinstance(cp.get('info_bearing'),bool): problems.append('eligibility/info_bearing must be boolean')
         if bool(cp.get('eligible')) == bool(cp.get('ineligible_reason')): problems.append('inconsistent eligibility reason')
-        if cp.get('ineligible_reason') not in (None,'no_exposure','post_decision','pre_exposed','restore_fail'): problems.append('invalid ineligible reason')
+        allowed_reasons = {None,'no_exposure','post_decision','pre_exposed','restore_fail'}
+        if manifest.get('runner_adapter'): allowed_reasons |= {'request_cap','world_attempt_failed','world_attempt_interrupted','world_attempt_stopped_hard_stop','world_attempt_cancelled'}
+        if cp.get('ineligible_reason') not in allowed_reasons: problems.append('invalid ineligible reason')
         rs = [r for r in rows if r.get('checkpoint_id')==cp['checkpoint_id']]
         if len({r.get('load_session_id') for r in rs}) > 1: warnings.append(cp['checkpoint_id']+': session_break')
         if not cp.get('eligible'): continue
@@ -259,8 +261,14 @@ def validate(manifest, checkpoints, rows, strict=True):
 def load(root):
     reader = Reader(root)
     manifest = reader.read(reader.root/'manifest.json')
+    manifest.pop('runner_adapter', None)  # Only the checked adapter may set this internal marker.
+    runner_addendum = None
     if manifest.get('schema_version') == 'ccc.runner.manifest.v1':
-        manifest, cps, rows, events, scheduled = _legacy(reader,manifest)
+        if manifest.get('phase') in ('holdout','synthetic_readiness'):
+            from .runner_input import adapt
+            manifest,cps,rows,events,scheduled,runner_addendum = adapt(reader,manifest)
+        else:
+            manifest, cps, rows, events, scheduled = _legacy(reader,manifest)
     else:
         cps = reader.read(reader.root/'checkpoints.json')
         worlds=reader.read(reader.root/'worlds.json')
@@ -286,10 +294,10 @@ def load(root):
             if row.get('roles')!=expected: raise ValidationError(['branch roles disagree with world partition'])
         events = reader.read(reader.root/'events.jsonl',lines=True) if (reader.root/'events.jsonl').exists() else []
         scheduled = []
-    warnings = list(reader.warnings) + validate(manifest,cps,rows,strict=not manifest.get('legacy'))
+    warnings = list(reader.warnings) + validate(manifest,cps,rows,strict=not (manifest.get('legacy') or manifest.get('runner_adapter')))
     if any(e.get('model_resolved') not in (None,manifest['model']['resolved_id']) for e in events): raise ValidationError(['invalid_batch: mixed model in events'])
-    addendum = reader.read(reader.root/'stage2_addendum.json') if (reader.root/'stage2_addendum.json').exists() else None
-    if manifest['phase']=='holdout':
+    addendum = runner_addendum or (reader.read(reader.root/'stage2_addendum.json') if (reader.root/'stage2_addendum.json').exists() else None)
+    if manifest['phase']=='holdout' and not manifest.get('runner_adapter'):
         if addendum is None: raise ValidationError(['input must include stage2_addendum.json'])
         if reader.hashes['stage2_addendum.json'] != manifest['stat001_hash']: raise ValidationError(['input addendum hash mismatch'])
     return manifest,cps,rows,events,scheduled,reader.hashes,warnings,addendum

@@ -85,7 +85,8 @@ class RequiredTests(unittest.TestCase):
             covered+=lower(f,k)<=3
         rate=covered/n
         self.assertGreaterEqual(rate,.95)
-        evidence=Path(__file__).resolve().parents[2]/'docs/analysis/coverage_simulation.json'
+        evidence=Path(__file__).resolve().parents[2]/'docs/analysis/readiness/coverage_simulation.json'
+        evidence.parent.mkdir(parents=True,exist_ok=True)
         evidence.write_text(json.dumps({'seed':20261025,'n':n,'covered':covered,'realized_lower_coverage':rate},sort_keys=True)+'\n')
 
     def test_05_bootstrap_world_unit(self):

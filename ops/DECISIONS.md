@@ -153,3 +153,7 @@ Owner approved the overnight DEVELOPMENT-ONLY local run at $0, subject to these 
 - Module-13 Gate B: a complete F/S/K(/N_v1.1) sequence on the real model with preserved request traces, validated state/exposure, accurate model IDs and interpretable metrics, plus a throughput forecast that fits approved resources.
 - Evidence: EXP-001 (docs/runner/exp001-live): 98 branch results, 0 invalid (V09 client-request freshness, V6 model identity, reload canaries all passing), 7/8 base trajectories complete, dev05_B2 failure preserved. DEV analysis valid (docs/analysis/exp001_dev). Throughput re-derived from the EXP-001 ledger (docs/runner/cap_investigation.md) and checked by REV-FREEZE (docs/review/REV_FREEZE.md, buffer ≥71%).
 - This record was omitted at launch time; it is added now with no change to any artifact.
+
+## D-033 (director) Analysis readiness (STAT-002c) accepted
+- A synthetic held-out-shaped rehearsal found and fixed real gaps: runner-format loading, skipped-N handling, retry isolation and failure accounting. 50 analysis tests pass; 39 synthetic outputs reproduce byte-identically. Exact post-run command: docs/analysis/readiness/READINESS.md.
+- Disclosed scope deviation: one early filename search by the Codex worker was broader than its brief and returned only protocol filenames. No held-out output contents were opened. Logged for REV-001.

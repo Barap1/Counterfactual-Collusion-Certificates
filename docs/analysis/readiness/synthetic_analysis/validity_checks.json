@@ -1,0 +1,998 @@
+[
+  {
+    "check": "V8",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L90": 0.0,
+    "L95": 0.0,
+    "U90": 0.0,
+    "U95": 0.0,
+    "check": "V9",
+    "confirmatory": false,
+    "estimate": 0.0,
+    "half_width90": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 4,
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_cluster": {
+      "L": 0.0,
+      "U": 0.0,
+      "estimate": 0.0,
+      "n_independent": 4
+    }
+  },
+  {
+    "L": null,
+    "U": null,
+    "check": "V10",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 0,
+    "regime": "B1",
+    "status": "not_established",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V8",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "L90": 0.0,
+    "L95": 0.0,
+    "U90": 0.0,
+    "U95": 0.0,
+    "check": "V9",
+    "confirmatory": false,
+    "estimate": 0.0,
+    "half_width90": 0.0,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 4,
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster",
+    "world_cluster": {
+      "L": 0.0,
+      "U": 0.0,
+      "estimate": 0.0,
+      "n_independent": 4
+    }
+  },
+  {
+    "L": null,
+    "U": null,
+    "check": "V10",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "n_independent": 0,
+    "regime": "B2",
+    "status": "not_established",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN01_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN01_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN02_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN02_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN03_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN03_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN04_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN04_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN05_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN05_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN06_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN06_B2",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B2",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V1",
+    "checkpoint_id": "SYN07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V2",
+    "checkpoint_id": "SYN07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V3",
+    "checkpoint_id": "SYN07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V4",
+    "checkpoint_id": "SYN07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V5",
+    "checkpoint_id": "SYN07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V6",
+    "checkpoint_id": "SYN07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "check": "V7",
+    "checkpoint_id": "SYN07_B1",
+    "confirmatory": false,
+    "label": "exploratory (DEV-001)",
+    "regime": "B1",
+    "status": "pass",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

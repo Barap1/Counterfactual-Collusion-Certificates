@@ -1,0 +1,119 @@
+[
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  },
+  {
+    "api_cost_usd": 0,
+    "confirmatory": false,
+    "event": "attempt_end",
+    "label": "exploratory (DEV-001)",
+    "model_resolved": "scripted-offline",
+    "tier": "B",
+    "uncertainty_scope": "world_cluster"
+  }
+]

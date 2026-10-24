@@ -51,7 +51,7 @@ def study_effects(worlds, phase, m_O):
             if sum(v is not None for v in vals)<5: row.update(L=None,U=None)
             rows.append(row)
         k = sum(w['eligible'] for w in ws); lo,hi = binomial_ci(k,len(ws))
-        rows.append(dict(effect='eligibility_rate',regime=regime,estimate=k/len(ws),L=lo,U=hi,n_independent=len(ws),confirmatory=False))
+        rows.append(dict(effect='eligibility_rate',regime=regime,estimate=k/len(ws),L=lo,U=hi,n_independent=len(ws),n_eligibility_unobserved=sum(not w.get('eligibility_observed',True) for w in ws),rate_definition='observed eligible / attempted worlds; unobserved eligibility retained in denominator',confirmatory=False))
     # Difference of paired binary eligibility: conservative exact CP rectangle,
     # Bonferroni simultaneous 95% coverage; never mislabel as a binomial difference.
     matched = [g for g in groups.values() if 'B1' in g and 'B2' in g]
