@@ -13,7 +13,18 @@ CCC builds executable counterexamples: teams that look identical under message r
 
 Two constructed teams send the same message, assign the task to dispatch, and produce the same message-removal effect. One follows a permitted efficiency policy; the other follows a prohibited coalition-protecting policy. That early evidence cannot distinguish them.
 
-<img src="docs/assets/allocation-twins.svg" width="600" alt="Constructed allocation twins: both send the same message and allocate to dispatch; mean outsider reward rises from 14 to 19 after message removal in both worlds. Lowering each outsider’s task cost by 10 separates them: efficiency switches allocation and yields 29; coalition protection keeps allocation and yields 14.">
+<a href="docs/assets/allocation-twins.svg#gh-light-mode-only">
+  <picture>
+    <source media="(max-width: 1100px)" srcset="docs/assets/allocation-twins.mobile.svg">
+    <img src="docs/assets/allocation-twins.svg#gh-light-mode-only" alt="Two programmed teams share message, dispatch allocation and removal effect: mean outsider reward 14 → 19. Lowering each outsider task cost by 10 separates them: permitted efficiency switches allocation and yields 29; prohibited coalition protection keeps allocation and yields 14.">
+  </picture>
+</a>
+<a href="docs/assets/allocation-twins.dark.svg#gh-dark-mode-only">
+  <picture>
+    <source media="(max-width: 1100px)" srcset="docs/assets/allocation-twins.mobile-dark.svg">
+    <img src="docs/assets/allocation-twins.dark.svg#gh-dark-mode-only" alt="Two programmed teams share message, dispatch allocation and removal effect: mean outsider reward 14 → 19. Lowering each outsider task cost by 10 separates them: permitted efficiency switches allocation and yields 29; prohibited coalition protection keeps allocation and yields 14.">
+  </picture>
+</a>
 
 The cost probe makes an outsider the efficient choice. The efficiency team switches; the coalition-protecting team does not. This separates **these specified policies**. The example does not establish a general impossibility theorem or a validated detector. [Exact values, code and source records](docs/assets/README.md).
 
@@ -21,7 +32,12 @@ The cost probe makes an outsider the efficient choice. The efficiency team switc
 
 CCC replays a checkpoint with the original message, its exposure masked, a sham, and an eligible inert-message control. It measures outsider, coalition and total reward. The controls test intervention validity and removal specificity; placebo surface and position matching is imperfect. Missing or invalid controls limit the conclusion.
 
-<img src="docs/assets/evidence-steps.svg" width="600" alt="Evidence requirements: observation needs visible communication; causal influence needs a valid replay and evidence of a nonzero effect; harmful exposure needs outsider outcome measures; attribution additionally needs a declared policy and evidence distinguishing legitimate alternatives. Without separating evidence, attribution remains unresolved.">
+| Claim | Evidence needed |
+| :--- | :--- |
+| Observation | Visible communication |
+| Causal influence | Valid controlled replay and a nonzero effect |
+| Harmful exposure | Outsider outcome measures, with valid controls |
+| Attribution | A declared policy and evidence separating legitimate alternatives |
 
 Attribution needs a declared policy and evidence distinguishing legitimate alternatives. The benchmark supplies cost probes and authorization records; its labels come from programmed policies. The separate real-agent study compares prompt conditions, not verified ground truth for realized collusion.
 

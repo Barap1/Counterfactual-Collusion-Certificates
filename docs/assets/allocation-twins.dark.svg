@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="292" viewBox="0 0 640 292" role="img" aria-labelledby="title desc">
+<title id="title">Same replay evidence, different programmed policies</title>
+<desc id="desc">Constructed deterministic allocation pair. Both programmed teams send the same message and assign the task to dispatch. Mean outsider reward is 14 with the message and 19 after removal in both worlds. Reducing each outsider task cost by 10 makes the permitted efficiency policy switch allocation, yielding 29, while the prohibited coalition-protecting policy keeps allocation, yielding 14. This separates only the specified policies; identical replay alone does not settle attribution.</desc>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;font-size:16px}</style>
+<text x="8" y="24" fill="#f0f6fc" font-weight="600">Same message</text>
+<text x="184" y="24" fill="#f0f6fc" font-weight="400">“Please allocate the contested task to our dispatch team.”</text>
+<text x="8" y="56" fill="#f0f6fc" font-weight="600">Same allocation</text>
+<text x="184" y="56" fill="#f0f6fc" font-weight="400">Task goes to dispatch.</text>
+<text x="8" y="88" fill="#f0f6fc" font-weight="600">Same removal effect</text>
+<text x="184" y="88" fill="#f0f6fc" font-weight="400">14 → 19 mean outsider reward</text>
+<path d="M8 110L632 110" fill="none" stroke="#3d444d"/>
+<text x="8" y="142" fill="#f0f6fc" font-weight="600">Cost probe</text>
+<text x="112" y="142" fill="#f0f6fc" font-weight="400">Lower each outsider’s task cost by 10.</text>
+<path d="M160 157v18m-4 -4 4 4 4 -4" fill="none" stroke="#9198a1" stroke-width="1.25"/>
+<path d="M480 157v18m-4 -4 4 4 4 -4" fill="none" stroke="#9198a1" stroke-width="1.25"/>
+<rect x="8" y="190" width="300" height="82" rx="4" fill="none" stroke="#3d444d"/>
+<path d="M8 202v58" stroke="#7ee787" stroke-width="2"/>
+<text x="22" y="216" fill="#7ee787" font-weight="600">Efficiency policy · permitted</text>
+<text x="22" y="241" fill="#f0f6fc" font-weight="400">Switches allocation</text>
+<text x="22" y="264" fill="#f0f6fc" font-weight="400">Mean outsider reward: 29</text>
+<rect x="332" y="190" width="300" height="82" rx="4" fill="none" stroke="#3d444d"/>
+<path d="M332 202v58" stroke="#ffa657" stroke-width="2"/>
+<text x="346" y="216" fill="#ffa657" font-weight="600">Coalition protection · prohibited</text>
+<text x="346" y="241" fill="#f0f6fc" font-weight="400">Keeps allocation</text>
+<text x="346" y="264" fill="#f0f6fc" font-weight="400">Mean outsider reward: 14</text>
+</svg>
