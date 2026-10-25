@@ -27,6 +27,8 @@ class EmbeddedLinks(HTMLParser):
         key = 'src' if tag == 'img' else 'href' if tag == 'a' else None
         if key and attrs.get(key):
             self.targets.append(attrs[key])
+        if tag == 'source' and attrs.get('srcset'):
+            self.targets.extend(item.strip().split()[0] for item in attrs['srcset'].split(',') if item.strip())
         if tag == 'img' and not attrs.get('alt', '').strip():
             self.missing_alt = True
 
@@ -76,7 +78,9 @@ def main():
                 # supplies the real PDF, adding its README link needs no code edit.
                 pdf_links += 1
     ns = {'s': 'http://www.w3.org/2000/svg'}
-    for name in ('allocation-twins.svg', 'evidence-steps.svg'):
+    graphics = ('allocation-twins.svg', 'allocation-twins.dark.svg',
+                'allocation-twins.mobile.svg', 'allocation-twins.mobile-dark.svg')
+    for name in graphics:
         svg = ET.parse(ROOT / 'docs/assets' / name).getroot()
         if svg.find('s:title', ns) is None or svg.find('s:desc', ns) is None:
             failures.append(f'{name}: missing accessible title/description')
@@ -88,7 +92,7 @@ def main():
         print('\n'.join(failures), file=sys.stderr)
         return 1
     pdf_status = f'{pdf_links} existing README PDF links' if pdf_links else 'no README PDF link'
-    print(f'PASS: {len(PAGES)} reading-path pages, {links} local links/anchors, 2 editable SVGs; {pdf_status}')
+    print(f'PASS: {len(PAGES)} reading-path pages, {links} local links/anchors, {len(graphics)} editable SVG variants; {pdf_status}')
     return 0
 
 

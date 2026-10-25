@@ -1,26 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="536" viewBox="0 0 640 536" role="img" aria-labelledby="title desc">
-<title id="title">Same replay, different programmed policies</title><desc id="desc">Constructed deterministic allocation pair. Both teams send the same message and assign the task to dispatch. Mean outsider reward is 14 with the message and 19 after removal in both worlds. Lowering each outsider task cost by 10 separates their programmed responses: the permitted efficiency policy switches allocation and yields 29; the prohibited coalition-protecting policy keeps allocation and yields 14. The probe separates only these specified policies; identical replay alone does not settle attribution.</desc>
-<rect width="640" height="536" fill="#faf9f6"/>
-<g font-family="Arial, Helvetica, sans-serif" fill="#19313e">
-<text x="24" y="40" font-size="30" fill="#19313e" font-weight="700">Same replay. Different policies.</text>
-<rect x="24" y="62" width="592" height="160" rx="8" fill="#ffffff" stroke="#c9d2d3"/>
-<text x="44" y="94" font-size="24" fill="#4c606a" font-weight="700">Same message · same dispatch allocation</text>
-<text x="44" y="128" font-size="24" fill="#19313e" font-weight="700">“Please allocate the contested task</text>
-<text x="44" y="157" font-size="24" fill="#19313e" font-weight="700">to our dispatch team.”</text>
-<text x="44" y="199" font-size="24" fill="#19313e" font-weight="400">Mean outsider reward: 14 → 19 after removal</text>
-<rect x="24" y="244" width="592" height="52" rx="8" fill="#19313e" stroke="none"/>
-<text x="44" y="277" font-size="24" fill="#ffffff" font-weight="400">Probe: lower each outsider’s task cost by 10.</text>
-<path d="M166 305v20m-5 -5 5 5 5 -5" fill="none" stroke="#006a60" stroke-width="2"/>
-<path d="M474 305v20m-5 -5 5 5 5 -5" fill="none" stroke="#854925" stroke-width="2"/>
-<rect x="24" y="332" width="284" height="140" rx="8" fill="#e8f2ef" stroke="none"/>
-<text x="42" y="365" font-size="24" fill="#006a60" font-weight="700">Efficiency policy</text>
-<text x="42" y="392" font-size="24" fill="#006a60" font-weight="400">(permitted)</text>
-<text x="42" y="425" font-size="24" fill="#19313e" font-weight="700">Switches allocation</text>
-<text x="42" y="455" font-size="24" fill="#19313e" font-weight="400">Outsider reward: 29</text>
-<rect x="332" y="332" width="284" height="140" rx="8" fill="#f4ece5" stroke="none"/>
-<text x="350" y="365" font-size="24" fill="#854925" font-weight="700">Coalition protection</text>
-<text x="350" y="392" font-size="24" fill="#854925" font-weight="400">(prohibited)</text>
-<text x="350" y="425" font-size="24" fill="#19313e" font-weight="700">Keeps allocation</text>
-<text x="350" y="455" font-size="24" fill="#19313e" font-weight="400">Outsider reward: 14</text>
-<text x="24" y="514" font-size="24" fill="#19313e" font-weight="700">Same replay alone does not settle attribution.</text>
-</g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="292" viewBox="0 0 640 292" role="img" aria-labelledby="title desc">
+<title id="title">Same replay evidence, different programmed policies</title>
+<desc id="desc">Constructed deterministic allocation pair. Both programmed teams send the same message and assign the task to dispatch. Mean outsider reward is 14 with the message and 19 after removal in both worlds. Reducing each outsider task cost by 10 makes the permitted efficiency policy switch allocation, yielding 29, while the prohibited coalition-protecting policy keeps allocation, yielding 14. This separates only the specified policies; identical replay alone does not settle attribution.</desc>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;font-size:16px}</style>
+<text x="8" y="24" fill="#1f2328" font-weight="600">Same message</text>
+<text x="184" y="24" fill="#1f2328" font-weight="400">“Please allocate the contested task to our dispatch team.”</text>
+<text x="8" y="56" fill="#1f2328" font-weight="600">Same allocation</text>
+<text x="184" y="56" fill="#1f2328" font-weight="400">Task goes to dispatch.</text>
+<text x="8" y="88" fill="#1f2328" font-weight="600">Same removal effect</text>
+<text x="184" y="88" fill="#1f2328" font-weight="400">14 → 19 mean outsider reward</text>
+<path d="M8 110L632 110" fill="none" stroke="#d1d9e0"/>
+<text x="8" y="142" fill="#1f2328" font-weight="600">Cost probe</text>
+<text x="112" y="142" fill="#1f2328" font-weight="400">Lower each outsider’s task cost by 10.</text>
+<path d="M160 157v18m-4 -4 4 4 4 -4" fill="none" stroke="#59636e" stroke-width="1.25"/>
+<path d="M480 157v18m-4 -4 4 4 4 -4" fill="none" stroke="#59636e" stroke-width="1.25"/>
+<rect x="8" y="190" width="300" height="82" rx="4" fill="none" stroke="#d1d9e0"/>
+<path d="M8 202v58" stroke="#116329" stroke-width="2"/>
+<text x="22" y="216" fill="#116329" font-weight="600">Efficiency policy · permitted</text>
+<text x="22" y="241" fill="#1f2328" font-weight="400">Switches allocation</text>
+<text x="22" y="264" fill="#1f2328" font-weight="400">Mean outsider reward: 29</text>
+<rect x="332" y="190" width="300" height="82" rx="4" fill="none" stroke="#d1d9e0"/>
+<path d="M332 202v58" stroke="#953800" stroke-width="2"/>
+<text x="346" y="216" fill="#953800" font-weight="600">Coalition protection · prohibited</text>
+<text x="346" y="241" fill="#1f2328" font-weight="400">Keeps allocation</text>
+<text x="346" y="264" fill="#1f2328" font-weight="400">Mean outsider reward: 14</text>
+</svg>
