@@ -77,7 +77,7 @@ _How clearly are work, findings, and impact potential communicated?_
 
 **Required:**
 
-- Research report (PDF) using the [official template](https://docs.google.com/document/d/1Y5wd3VRbXU5N08BvAGiJUQTaWbMCSPjhzXsR-ozuehg/copy?usp=sharing).
+- Research report (PDF) using the [official template](https://docs.google.com/document/d/[REDACTED-DOC-ID]/copy?usp=sharing).
 - Maximum 8 pages, not counting references and appendices.
 - Project title and abstract, 150 to 250 words.
 - Author names and affiliations.
@@ -88,7 +88,7 @@ _How clearly are work, findings, and impact potential communicated?_
 - Public GitHub repo.
 - A 3 to 5 minute video demo.
 
-## Submission Template => [Link](https://docs.google.com/document/d/1Y5wd3VRbXU5N08BvAGiJUQTaWbMCSPjhzXsR-ozuehg/copy?usp=sharing)
+## Submission Template => [Link](https://docs.google.com/document/d/[REDACTED-DOC-ID]/copy?usp=sharing)
 
 ## Recommended Report Structure
 
