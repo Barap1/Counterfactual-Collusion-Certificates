@@ -1,0 +1,61 @@
+[
+  {
+    "started_utc": "2026-10-25T02:54:59.798106+00:00",
+    "task": {
+      "block": "prospective",
+      "identity": {
+        "drivers": {
+          "bench_modal_run.py": "640aeac74ff7626b48352e465b0be7dd7cf47e1f8d2c10fd2b3265755452a4dc",
+          "bench_parallel_run.py": "a61a6da45dddbf5e62410d0e10ab483a772b11c5f261376b543b6b7a1254b6d6"
+        },
+        "freeze": "ea8e260ac7ee28dd1e861fd1c9ae39d7c13f8e8cc17bab0042b7ba1d82e4fbe3",
+        "hashes": {
+          "ccc/audit/__init__.py": "04a0a646d3e31650c06a144fb04b88b428e1ae102448f52126b10e576be17e96",
+          "ccc/audit/commitment_aliases.json": "859ece019675ad36ae6b66fbbb659e88183947e8f690ca7e4f474e6a54a93645",
+          "ccc/audit/commitments.py": "7b8da4f01e963fa8b5a94f60a6f33a8de613a89588a058668461e9d9aea7a311",
+          "ccc/audit/decision.py": "6bc59dedcb738cf85fc42435d63ce8f9f98b9707c7dc2c0d166cc0a3659ab42d",
+          "ccc/audit/gate_a.py": "bb91dccdaeb53470f7f4bdeff387178385dc310916f2ce87ce12e59a1dda255f",
+          "ccc/audit/placebo.py": "626aa95a1dcfc7e98e0f4f36777a0925c064ea0f4711996415d0cb6ad36f88a0",
+          "ccc/audit/placebo_census.py": "a631648afb1076a2889df29f41648405c0208359dddb08ce9d7cde4838f9b275",
+          "ccc/audit/refresh.py": "989b2fb8e6d84cac4101d1c1d887b82b663846b92e57814ef7f4b5879937812f",
+          "ccc/audit/text.py": "41a3765278d7a829c243fb8b02299008c8d98fdf0d405ba940d3c201b1933cab",
+          "ccc/baselines/__init__.py": "fccb70c31ea6ad544dda9a420ae59774a4e21cdae4adc6c9aa76c321deebf02b",
+          "ccc/bench/__init__.py": "95f2ecfcee604a5999b446f75f4c82e90014b0e9e03a004dbfa9e49ef3b4bd2a",
+          "ccc/bench/__main__.py": "98d532d745c008a7848473dda48112e17a7ed49789e19d4506ccb78166571350",
+          "ccc/bench/enumerate.py": "17511fb1a8f6f94a9749e7e826e7ee6e0ba2dd0b2728ba392977063b39243103",
+          "ccc/bench/methods.py": "759e2b3023ea519e9e8c20363265827132847500ca18ef3573b1f30f0f3bd5db",
+          "ccc/bench/observe.py": "a9cb9651dec7dbb6699d75a942affdfc85a2e4d63736a532674a92d01f5a7d2d",
+          "ccc/bench/population.py": "62f53c6d0289b452f676f3112375147388337482135a8aef1d3100b7c5eaeef9",
+          "ccc/bench/report.py": "44a0627b682e05bae1334007661eea2d6e9a2f31859038b6023e1faf9ae646f6",
+          "ccc/bench/score.py": "45327566acb49b1ddc13258d7c798073d53ff69c617b2e5277b419d38dbf7c10",
+          "ccc/bench/seeds.py": "cecf55abce0beb08c9d1b32bdd12248474b37c7919d9ecf89c514a57af2cc147",
+          "ccc/bench/twins.py": "eac1232b12a91a7e4b5a417733a2d5d48e32aeaba07ab2777488186c215376db",
+          "ccc/fixtures/__init__.py": "fbad05719dd9d41a453ef7d48aac6e324bbf3f48f543427b2191df7b135e94a3",
+          "ccc/fixtures/__main__.py": "23faae8a00b352ab655f5588d3771f2adce8ba52380f7cd1ac35578d1a75b2e9",
+          "ccc/fixtures/chatter.py": "f20d89b734309df8cad638cae0c96db6e5390fb67704e387ab8f65613941d548",
+          "ccc/fixtures/chatter_templates.json": "8f204b6baf2aea9567e11a29ef19ac89b7c89c7122dcc61724b9c53f0de85794",
+          "ccc/fixtures/constructed.py": "304d06c74e28015b809c55c16db0e421d74d60657d5c7b11fc65bea44c508699",
+          "ccc/fixtures/iid.py": "a0ea0915cff6a19eedaf35aa9d93414c945890ca4841608b97b9bd6c0c773c9a",
+          "ccc/fixtures/jira.py": "80f7558cdcfcc82dc29b49e2be62aa56427c2cca9f80af747a7013c57b93d14c",
+          "ccc/fixtures/native_env.py": "0e0f8f7a7e963ecdc7082e1f3d9225467d6869915d4ea53317c7e0dd5d12bb62",
+          "ccc/fixtures/native_replay.py": "476156f46e7f241b5e8d04c78e8fd302f2ba1fda09caf74cfd663a7baa126989",
+          "ccc/fixtures/oracle.py": "330565efc8c22c7b6ddac18a77117ad25fe7abd9b69aa82447ed2f6254d8978d",
+          "ccc/fixtures/replay_adapter.py": "65b193281ee9fca3402ccea3e518b001d9c797aceca6edea09f163ed233d84b3",
+          "ccc/fixtures/runner.py": "ec3e9a9feb6cbee4b582d14687ddbd5142c7371f96f019febd1adc4b3dc827ca",
+          "ccc/fixtures/split_manifest.json": "aa7b5acc6e40e3070013fdd68396ce77ae1a23117a3677787d1739e00292979a",
+          "ccc/fixtures/worlds.py": "0bf14fdfe790cdede93c539a936cff3d9e6c24e75219e106b0690566259c4ff6"
+        },
+        "numpy": "2.2.6",
+        "python": [
+          3,
+          14
+        ]
+      },
+      "kinds": [
+        "P1"
+      ],
+      "phase": "methods",
+      "seed": 1412896883
+    }
+  }
+]

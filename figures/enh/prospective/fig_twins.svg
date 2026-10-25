@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="716" viewBox="0 0 1060 716"><title>PROSPECTIVE</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="741" viewBox="0 0 1060 741"><title>PROSPECTIVE</title>
 <rect width="100%" height="100%" fill="white"/>
 <text x="24.0" y="28.0" font-family="Arial, Helvetica, sans-serif" font-size="17px" fill="#17324D" text-anchor="start" font-weight="bold">One evidence, two verdicts</text>
 <text x="24.0" y="47.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#66727D" text-anchor="start" font-weight="normal">P2 twin pair: identical observables under I1-I3, opposite labels; only the I4 incentive probe separates them.</text>
@@ -95,4 +95,5 @@
 <text x="795.0" y="612.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="start" font-weight="normal">PF probe factual, PK probe knockout</text>
 <text x="795.0" y="626.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="start" font-weight="normal">(outsider reward)</text>
 <text x="60.0" y="698.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="start" font-weight="normal">The efficient team cedes when an outsider is cheaper, the colluding allocation does not; the pair separates at I4 only (enumeration, minimal_pair_separator).</text>
+<text x="24.0" y="733.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#b3261e" text-anchor="start" font-weight="bold">eps=0 established; eps=0.1: platform-dependent, not established (D-048; post hoc).</text>
 </svg>

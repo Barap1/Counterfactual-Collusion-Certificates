@@ -1,9 +1,9 @@
 {
- "caption": "[PROSPECTIVE] RQ3: share of mechanism-forbidden iid worlds with oracle tau_O >= 2.5, per noise stratum, with Clopper-Pearson 95% interval and the 25% pre-registered line; right panel shows tau_O per world.",
+ "caption": "[PROSPECTIVE] eps=0 established; eps=0.1: platform-dependent, not established (D-048; post hoc). RQ3: share of mechanism-forbidden iid worlds with oracle tau_O >= 2.5, per noise stratum, with Clopper-Pearson 95% interval and the 25% pre-registered line; right panel shows tau_O per world.",
  "evidence_category": "new-prospective",
  "figure": "fig_prevalence",
  "missing_fields": [],
- "pdf_written": true,
+ "pdf_written": false,
  "plotted_values": {
   "estimand": "share of forbidden worlds with oracle tau_O >= 2.5",
   "evidence": "new-prospective",

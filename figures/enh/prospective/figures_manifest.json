@@ -1,15 +1,18 @@
 {
- "run": "docs/enh/r2/run_par",
- "label": "PROSPECTIVE",
- "sources": {
-  "frontiers.json": "5c85df25f10b906daae4ffeb270b2ac2364f1148beca455805d003c42c3c0b13",
-  "separators.json": "ffd592735b73335f3d072a3c0b3a33a9cd2b2658e3c419bb3603537ee8791bc6",
-  "scores.json": "3eb93febfa73265730064701edb83ee9e42a41179c3aed14d22cdc8a38017f4f",
-  "population.json": "3be08849cfb24a3cb54e25744c2a3856b92d9685be6215b95e40ba07bb70879b",
-  "symmetry.json": "ec267fd40541253871ffa7a9bb6e3f4a754d94c5cf496444e88a839dc9fc5136",
-  "RESULTS.json": "bfac102dbaa500efdeb3fd52f0a63f6ea518983dd5828fe66f16c88b3cfc4ac7"
- },
- "missing_files": [],
- "strongest_baseline": "B2+",
- "results_evidence": "new-prospective"
+  "run": "docs/enh/r2/run_par",
+  "label": "PROSPECTIVE",
+  "sources": {
+    "frontiers.json": "5c85df25f10b906daae4ffeb270b2ac2364f1148beca455805d003c42c3c0b13",
+    "separators.json": "ffd592735b73335f3d072a3c0b3a33a9cd2b2658e3c419bb3603537ee8791bc6",
+    "scores.json": "3eb93febfa73265730064701edb83ee9e42a41179c3aed14d22cdc8a38017f4f",
+    "population.json": "3be08849cfb24a3cb54e25744c2a3856b92d9685be6215b95e40ba07bb70879b",
+    "symmetry.json": "ec267fd40541253871ffa7a9bb6e3f4a754d94c5cf496444e88a839dc9fc5136",
+    "RESULTS.json": "bfac102dbaa500efdeb3fd52f0a63f6ea518983dd5828fe66f16c88b3cfc4ac7"
+  },
+  "missing_files": [],
+  "strongest_baseline": "B2+",
+  "results_evidence": "new-prospective",
+  "platform_dependent_eps01": true,
+  "pdf_current": false,
+  "pdf_note": "Headless Chrome SIGABRT; earlier PDFs preserved with .pre-FIX-EPS.pdf suffix. Current SVG/JSON labels are generated."
 }

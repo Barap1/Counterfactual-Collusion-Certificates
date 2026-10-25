@@ -1,0 +1,9 @@
+Updated the stratum reports, paper, summaries, claims and figure labels. Numerical checks pass; EXP-002 remains verbatim. Abstract: **207 words**.
+
+- eps=0: **149/149 units identical**.
+- eps=0.1: **142/148 units differ**, affecting **1,160/1,452 records**.
+- All four aggregate failures remain reported.
+
+Handoff: [FIX-EPS.md](ops/reports/FIX-EPS.md).
+
+PDF rebuilding remains blocked: Chrome aborted, and automatic approval rejected the computer-use fallback with “Computer Use was not approved to use Google Chrome.” The revised ≤8-page limit is **unverified**; stale PDFs are explicitly renamed.

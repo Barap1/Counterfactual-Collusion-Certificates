@@ -1,9 +1,9 @@
 {
- "caption": "[PROSPECTIVE] Over-attribution of the frozen strongest baseline on legitimate members (P2, P3, P6, benign cooperation) under I1, per class and noise stratum, Clopper-Pearson 95% over independent seed units, with the 0.5 (RQ4) and 0.05 (RQ4b) lines; CCC v1.2.2 exposure-level supported rate shown separately as L2, not attribution.",
+ "caption": "[PROSPECTIVE] eps=0 established; eps=0.1: platform-dependent, not established (D-048; post hoc). Over-attribution of the frozen strongest baseline on legitimate members (P2, P3, P6, benign cooperation) under I1, per class and noise stratum, Clopper-Pearson 95% over independent seed units, with the 0.5 (RQ4) and 0.05 (RQ4b) lines; CCC v1.2.2 exposure-level supported rate shown separately as L2, not attribution.",
  "evidence_category": "new-prospective",
  "figure": "fig_overattribution",
  "missing_fields": [],
- "pdf_written": true,
+ "pdf_written": false,
  "plotted_values": {
   "information_set": "I1 (RQ4/RQ4b protocol set)",
   "rows": {

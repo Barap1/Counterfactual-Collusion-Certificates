@@ -1,9 +1,9 @@
 {
- "caption": "[PROSPECTIVE] Risk-coverage curves on the exposure, axis E axis, per information set, both noise strata, abstention cost c in 0.25 and 0.5; CCC v1.2.2, CCC-L v1 (DEV-informed method version), CCC-L v0, frozen strongest baseline, Bayes-given-S and always-answer/abstain anchors.",
+ "caption": "[PROSPECTIVE] eps=0 established; eps=0.1: platform-dependent, not established (D-048; post hoc). Risk-coverage curves on the exposure, axis E axis, per information set, both noise strata, abstention cost c in 0.25 and 0.5; CCC v1.2.2, CCC-L v1 (DEV-informed method version), CCC-L v0, frozen strongest baseline, Bayes-given-S and always-answer/abstain anchors.",
  "evidence_category": "new-prospective",
  "figure": "fig_risk_E",
  "missing_fields": [],
- "pdf_written": true,
+ "pdf_written": false,
  "plotted_values": {
   "not_plotted_on_this_axis": [],
   "panels": {
