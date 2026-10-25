@@ -20,3 +20,11 @@
 - General hackathon-advice results (JetBrains, Devpost, etc.): not Apart-specific; unused. Third-party event listings (createwith.com, luma.com) only confirmed dates/tracks.
 ## Tool caveat
 Web pages were read through summarising fetch tools (WebFetch, Firecrawl query format), so quotes are short and paraphrases may lose nuance; PDFs of 5 winners were read directly with pdftotext, 7 by a helper.
+
+## Added by WRITE-RES2 (accessed 2026-10-24)
+- Sprint pages (apartresearch.com/sprints/...): women-in-ai-safety-hackathon-2025-03-07-to-2025-03-14; economics-of-transformative-ai-research-sprint-2025-04-25-to-2025-04-27; apart-x-martian-mechanistic-router-interpretability-hackathon-2025-05-30-to-2025-06-01; arena-6-mechanistic-interpretability-hackathon-2025-09-13-to-2025-09-14; cbrn-ai-risks-sprint-2025-09-12-to-2025-09-14; reprogramming-ai-models-hackathon-2024-11-22-to-2024-11-25; ai-safety-entrepreneurship-hackathon-2025-01-17-to-2025-01-20; red-teaming-a-narrow-path-control-ai-policy-sprint-2025-06-13-to-2025-06-13; ai-safety-x-physics-grand-challenge-2025-07-25-to-2025-07-27; ai-policy-hackathon-at-johns-hopkins-university-2024-10-26-to-2024-10-28; the-technical-ai-governance-challenge-2026-01-30-to-2026-02-01; hackathon-for-technical-ai-safety-startups-2024-09-22-to-2024-09-25; collaborations/{howard-university-ai-safety-summit-policy-hackathon-2024-11-21-to-2024-11-22, berkeley-ai-policy-hackathon-2025-04-14-to-2025-04-26, georgia-tech-aisi-policy-hackathon-2025-04-05-to-2025-04-06, blackpoolautostructuring-2024-11-23-to-2024-11-25}; dark-patterns-in-agi-hackathon-at-zaia-2025-04-04-to-2025-04-05
+- https://apartresearch.com/research (Apart publications list)
+- https://arxiv.org/abs/2412.01784 and https://arxiv.org/pdf/2412.01784v3 (NeurIPS 2025 noise-injection paper); https://openreview.net/forum?id=zpcx5a8w2a (workshop version, blocked by browser check)
+- https://arxiv.org/abs/2503.10728 (DarkBench; origin not established)
+- https://www.lesswrong.com/posts/vqxExZvDjkphqG6zH/schelling-coordination-via-agentic-loops-1
+- Project pages/PDFs for the 19 compact analyses: URLs in each winners/*.md.
