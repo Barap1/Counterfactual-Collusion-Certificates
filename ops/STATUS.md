@@ -1,3 +1,11 @@
+# CCC STATUS (2026-10-25 06:10 UTC) — READY FOR OWNER REVIEW
+
+Deliverables: paper paper/v2/build/submission_v2.pdf (main text 7 pp + refs p8; abstract 207 words) · explorer demo/explorer/index.html · judge summary docs/enh/JUDGE_SUMMARY.md · demo script docs/enh/DEMO_SCRIPT.md · final skeptical review docs/enh/FINAL_REVIEW.md · results docs/enh/r2/run_par/RESULTS.md + docs/enh/r2/RESULTS_BY_STRATUM.md · platform finding docs/enh/r2/PLATFORM_DIVERGENCE.md.
+EXP-002 frozen: Delta 1.354 [-0.020, 2.834], p 0.0703, not supported. R2 benchmark: RQ1 pass, RQ2 pass (by construction), RQ3/RQ4/RQ4b/RQ5 fail (aggregate), RQ6 descriptive; eps=0 established, eps=0.1 platform-dependent (D-048). EXP-003 not completed (D-047a). Modal spend ~$5.4.
+Owner: author/affiliation, LLM-use statement, dual-use sign-off, title, intro phrase fix, record demo, push, submit. Running: nothing.
+
+
+## Previous status
 # CCC STATUS — ENH sprint (updated 2026-10-25 00:20 UTC, after laptop crash)
 
 **Owner target:** all deliverables ready by 2026-10-25 16:00 UTC (owner records demo + submits). Hard deadline 2026-10-26 11:59 UTC.
