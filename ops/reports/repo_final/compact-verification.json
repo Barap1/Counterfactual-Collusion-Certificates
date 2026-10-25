@@ -40,5 +40,31 @@
   "local_links_and_anchors": 109,
   "protected_records_unchanged": 16992,
   "scientific_review_finding_fixed": "Visible nonzero-effect requirement; SVG description and README alternative text aligned",
-  "desktop_and_phone_visual_review": "Both compact diagrams visually inspected; no visible clipping or page overflow"
+  "desktop_and_phone_visual_review": "Both compact diagrams visually inspected; no visible clipping or page overflow",
+  "live_github_phone_image_sizes": [
+    [
+      324,
+      271
+    ],
+    [
+      324,
+      125
+    ]
+  ],
+  "live_github_phone_document_scroll_width": 390,
+  "minimum_svg_text_size": 24,
+  "future_pdf_workflow": {
+    "existing_link_accepted": "mocked existence check passed",
+    "missing_link_rejected": true,
+    "pdf_files_created": 0
+  },
+  "github_compact_ci": {
+    "sha": "2c6a78d527ea935beeee556bdac0a36a65edbff0",
+    "run": "https://github.com/Barap1/Counterfactual-Collusion-Certificates/actions/runs/40239473489",
+    "status": "success",
+    "python_versions": [
+      "3.12",
+      "3.14"
+    ]
+  }
 }
