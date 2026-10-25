@@ -1,15 +1,11 @@
-"""Run the unchanged EXP-002 runner/replay code against the Modal endpoint (additive wrapper, no frozen edits).
+"""Modal transport, identity canaries and guarded EXP-003 CLI.
 
-Mechanism: this module monkeypatches four names *inside ccc.runner.collector at runtime* (OllamaSession,
-OllamaChatClient, validate, GuardPolicy/BudgetGuard); nothing under ccc/runner, ccc/replay or ccc/infra is edited.
-Calls still go through BudgetGuard's BACKEND_MODAL path (https://*.modal.run, model allowlist, billing snapshot,
-reservation-free spend cap, per-run call cap) and every call is ledgered under task EXP-003.
-
-Usage: python -m ccc.exp003.modal_runner {manifest|canary|run} ...   (token read from the modal_ctl session file)
+The run command delegates to ccc.exp003.collector, including PF/PK scheduling.
+Configuration supplies the endpoint; the existing session environment supplies
+credentials. Importing this module does not read credentials or contact Modal.
 """
 from __future__ import annotations
 
-import copy
 import json
 import os
 import sys
@@ -19,7 +15,6 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from ccc.infra.budget_guard import BACKEND_MODAL, BudgetGuard, GuardPolicy
-from ccc.runner import collector, live, manifest as manifest_mod
 from ccc.runner.live import CANARY_MESSAGES, CANARY_PARAMS, KEEP_ALIVE, ModelReload, OllamaChatClient, OllamaSession
 from ccc.runner.manifest import digest, parse_instant
 from . import budget
@@ -28,10 +23,6 @@ ROOT = Path(__file__).resolve().parents[2]
 TOKEN_ENV = "EXP003_MODAL_TOKEN"
 MODEL_ID = "gemma4:26b"
 FROZEN_DIGEST = "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251"
-# What ccc.runner.manifest.validate() insists on; used only to validate everything *except* the endpoint.
-LOCAL_PIN = {"backend": "ollama_local", "base_url": "http://127.0.0.1:11434/v1"}
-
-_orig_validate = manifest_mod.validate
 
 
 class ModalChatClient(OllamaChatClient):
@@ -157,22 +148,22 @@ class ModalSession(OllamaSession):
 
 
 def validate_modal(m):
-    """Run the frozen validator on the manifest with the endpoint pins restored, then check the Modal endpoint."""
-    model = m["model"]
-    if model.get("backend") != BACKEND_MODAL or model.get("requested_id") != MODEL_ID:
-        raise ValueError("EXP-003 wrapper requires backend modal / gemma4:26b")
-    u = urlsplit(model["base_url"])
-    if u.scheme != "https" or not (u.hostname or "").endswith(".modal.run") or u.path != "/v1" or u.username or u.query:
-        raise ValueError("unexpected Modal endpoint")
-    if model.get("weight_digest") != FROZEN_DIGEST:
-        raise ValueError("manifest weight_digest must be the identity being frozen (see feasibility.md)")
-    m2 = copy.deepcopy(m)
-    m2["model"].update(LOCAL_PIN)
-    m2["model"]["weight_digest"] = FROZEN_DIGEST
-    _orig_validate(m2)
+    from .manifest import validate
+    if m.get("backend") != "modal":
+        raise ValueError("Modal configuration required")
+    return validate(m)
 
 
 class Exp003Guard(BudgetGuard):
+    def check_request(self, backend, model, base_url):
+        sessions = [r for r in budget.session_rows().values() if r['state'] in ('reserved', 'active')]
+        if len(sessions) != 1:
+            raise ValueError('one controller-owned active session required')
+        _, reason = budget.tick_session(sessions[0])
+        if reason:
+            raise ValueError('controller monetary/deadline stop: ' + reason)
+        return super().check_request(backend, model, base_url)
+
     def __init__(self, *, task_id, **kw):
         budget.record_billing_snapshot()           # guard needs a fresh (<1 h) snapshot; refreshed per world
         super().__init__(task_id=budget.TASK, **kw)
@@ -183,11 +174,7 @@ def _policy(**kw):
 
 
 def install():
-    collector.validate = validate_modal
-    collector.OllamaSession = ModalSession
-    collector.OllamaChatClient = ModalChatClient
-    collector.BudgetGuard = Exp003Guard
-    collector.GuardPolicy = lambda **kw: _policy(**kw)
+    raise ValueError("legacy collector patching retired; use ccc.exp003.collector")
 
 
 def make_manifest(url, out, *, max_requests=400, base="docs/runner/dev_manifest.json"):
@@ -196,6 +183,16 @@ def make_manifest(url, out, *, max_requests=400, base="docs/runner/dev_manifest.
     m["model"] = dict(m["model"], backend=BACKEND_MODAL, base_url=url.rstrip("/") + "/v1")
     m["policy"] = dict(m["policy"], live_inference_enabled=True)
     m["max_requests"] = max_requests
+    from .manifest import SCHEMA
+    from ccc.runner.manifest import file_hash
+    m.update(schema_version=SCHEMA, backend="modal",
+             protocol_artifact="docs/enh/exp003/PROTOCOL.md",
+             protocol_sha256=file_hash(ROOT / "docs/enh/exp003/PROTOCOL.md"),
+             arms=["F", "K", "S", "N", "PF", "PK"],
+             continuations_per_arm={"F": 4, "K": 4, "S": 2, "N": 4, "PF": 4, "PK": 4})
+    seeds = list(dict.fromkeys(w["seed"] for w in m["worlds"]))
+    m["worlds"] = [dict(id=f"dev{seed:02}_{regime}", pair_id=f"dev{seed:02}", seed=seed,
+                        regime=regime, split="development") for seed in seeds for regime in ("B1", "B2")]
     Path(out).write_text(json.dumps(m, indent=1))
     return m
 
@@ -250,8 +247,8 @@ def main(argv=None):
         return 0
     if args.cmd == "canary":
         return canary(s["url"], args.out)
-    install()
-    res = collector.run(json.loads(Path(args.manifest).read_text()), args.output, live=True,
+    from .collector import run
+    res = run(json.loads(Path(args.manifest).read_text()), args.output, live=True,
                         max_checkpoints=args.max_checkpoints)
     print(json.dumps(res, sort_keys=True)[:3000])
     return 0

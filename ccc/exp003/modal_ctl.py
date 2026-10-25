@@ -52,78 +52,162 @@ def app_list() -> str:
     return subprocess.run(["modal", "app", "list"], capture_output=True, text=True).stdout
 
 
-def prefetch(ref: str = "gemma4:26b") -> int:
-    from . import budget, modal_server as ms
-    import modal
-    t0 = time.time()
-    with modal.enable_output(), ms.prefetch_app.run():
-        facts = ms.prefetch.remote(ref)
-    row = budget.append_run(time.time() - t0, None, label="prefetch-cpu", cpu=ms.CPU, mem_gib=ms.MEM_MIB / 1024)
-    print(json.dumps({"prefetch": facts, "ledger_estimated_usd": row["estimated_usd"]}, indent=1))
-    return 0
-
-
-def identity() -> int:
-    from . import budget, modal_server as ms
-    import modal
-    t0 = time.time()
-    with ms.prefetch_app.run():
-        facts = ms.identity_check.remote()
-    row = budget.append_run(time.time() - t0, None, label="identity-check-cpu", cpu=ms.CPU, mem_gib=ms.MEM_MIB / 1024)
-    print(json.dumps({"identity": facts, "ledger_estimated_usd": row["estimated_usd"]}, indent=1))
-    return 0
-
-
-def serve() -> int:
-    """Daemon body (env: EXP003_MODAL_TOKEN, EXP003_GPU, EXP003_PARALLEL, EXP003_DEADLINE_EPOCH)."""
-    from . import budget, modal_server as ms
-    import modal
-    token = os.environ["EXP003_MODAL_TOKEN"]
-    deadline = float(os.environ["EXP003_DEADLINE_EPOCH"])
-    stop = {"flag": False}
-    def _bye(*_):
-        stop["flag"] = True
-        raise SystemExit(0)      # unblocks a pending cold-start request; `finally` below tears the app down
-    signal.signal(signal.SIGTERM, _bye)
-    signal.signal(signal.SIGINT, _bye)
-    t_start = time.time()
-    state = {"pid": os.getpid(), "token": token, "gpu": ms.GPU, "parallel": ms.PARALLEL, "t_start": t_start,
-             "deadline_epoch": deadline, "ready": False, "url": None}
-    _write_session(state)
-    ready_s = None
+def verify_stopped(app_id):
+    """Unknown CLI state is unverified, so the liability remains reserved."""
     try:
-        with ms.app.run():
-            url = ms.Server().web.get_web_url()
-            state["url"] = url
-            _write_session(state)
-            while not stop["flag"] and time.time() < deadline:
-                try:
-                    info = http(url, token, "/exp003/info", timeout=1500)   # first call blocks through cold start
-                    break
-                except Exception as exc:
-                    state["last_error"] = type(exc).__name__
-                    time.sleep(5)
-            else:
-                info = None
-            if info:
-                ready_s = round(time.time() - t_start, 1)
-                state.update(ready=True, cold_start_s=ready_s, server_info=info)
-                _write_session(state)
-            while not stop["flag"] and time.time() < deadline:
-                time.sleep(2)
-            if time.time() >= deadline:
-                state["stopped_reason"] = "deadline"
+        result = subprocess.run(["modal", "app", "list", "--json"], capture_output=True, text=True, timeout=15)
+        if result.returncode:
+            return False
+        rows = json.loads(result.stdout)
+        if not isinstance(rows, list):
+            return False
+        if any(not isinstance(r, dict) or not r.get("App ID", r.get("app_id")) for r in rows):
+            return False
+        matching = [r for r in rows if r.get("App ID", r.get("app_id")) == app_id]
+        return not matching or all(str(r.get("State", r.get("state", ""))).lower() == "stopped" for r in matching)
+    except Exception:
+        return False
+
+
+def stop_remote(app_id):
+    try:
+        subprocess.run(["modal", "app", "stop", app_id], capture_output=True, timeout=15, check=True)
+        return verify_stopped(app_id)
+    except Exception:
+        return False
+
+
+class Lifetime:
+    """Independent timer keeps enforcing caps while the main thread blocks on cold start/requests."""
+    def __init__(self, row, *, path=None, shutdown=None, clock=None):
+        import threading
+        from . import budget
+        self.row, self.path = row, path or budget.DEFAULT_LEDGER
+        self.shutdown, self.clock = shutdown or stop_remote, clock or time.time
+        self.app_id = None
+        self.signalled = False
+        self.done = threading.Event()
+        self.thread = threading.Thread(target=self.watch, daemon=True)
+
+    def tick(self):
+        from . import budget
+        self.row, reason = budget.tick_session(self.row, path=self.path, now=self.clock())
+        if reason and self.app_id:
+            # This does not wait for the HTTP request or for app.run().__exit__.
+            if self.shutdown(self.app_id):
+                self.done.set()
+        return reason
+
+    def watch(self):
+        from . import budget
+        while not self.done.wait(budget.TICK_SECONDS):
+            try:
+                reason = self.tick()
+            except Exception:
+                # Accounting failure must also terminate; keep the reservation.
+                reason = "accounting_failure"
+                if self.app_id:
+                    self.shutdown(self.app_id)
+            if reason and not self.signalled:
+                self.signalled = True
+                os.kill(os.getpid(), signal.SIGTERM)
+
+
+def _reservation(seconds, gpu, cpu, mem):
+    from . import budget
+    return budget.reserve_session(seconds, gpu, cpu=cpu, mem_gib=mem)
+
+
+def _cpu_action(action, ref=None):
+    from . import budget
+    # Reserve before importing Modal/server (which can create a volume).
+    cpu_only = os.environ.get("EXP003_GPU") == "none"
+    row = _reservation(3600 if action == "prefetch" else 900, None,
+                       float(os.environ.get("EXP003_CPU", "8" if cpu_only else "4")),
+                       int(os.environ.get("EXP003_MEM_MIB", "32768" if cpu_only else "16384"))/1024)
+    os.environ["EXP003_DEADLINE_EPOCH"] = str(row["deadline_epoch"])
+    lifetime = Lifetime(row)
+    signal.signal(signal.SIGTERM, lambda *_: sys.exit(0))
+    signal.signal(signal.SIGALRM, lambda *_: sys.exit(0))
+    signal.setitimer(signal.ITIMER_REAL, max(.001, row["deadline_epoch"]-time.time()))
+    lifetime.thread.start()
+    try:
+        from . import modal_server as ms
+        with ms.prefetch_app.run():
+            lifetime.app_id = ms.prefetch_app.app_id
+            facts = ms.prefetch.remote(ref) if action == "prefetch" else ms.identity_check.remote()
+        print(json.dumps({action: facts}, indent=1))
     finally:
-        seconds = time.time() - t_start
-        row = budget.append_run(seconds, None if ms.GPU == "none" else ms.GPU, label="serve-session", cpu=ms.CPU, mem_gib=ms.MEM_MIB / 1024,
-                                note=f"upper bound: daemon wall incl. cold start {ready_s}s; ephemeral app")
-        state.update(ready=False, ended=True, seconds=round(seconds, 1), estimated_usd=row["estimated_usd"])
-        state.pop("token", None)
-        _write_session(state | {"token": ""})
+        verified = bool(lifetime.app_id) and stop_remote(lifetime.app_id)
+        lifetime.done.set()
+        lifetime.thread.join(timeout=31)
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        budget.close_session(lifetime.row, verified)
+    return 0
+
+
+def prefetch(ref="gemma4:26b"):
+    return _cpu_action("prefetch", ref)
+
+
+def identity():
+    return _cpu_action("identity")
+
+
+def serve():
+    from . import budget
+    row = json.loads(os.environ["EXP003_RESERVATION"])
+    # Reservation timestamp covers process startup/import time as well as cold start.
+    lifetime = Lifetime(row)
+    token = os.environ["EXP003_MODAL_TOKEN"]
+    deadline = row["deadline_epoch"]
+    state = {"pid": os.getpid(), "token": token, "gpu": row["gpu"], "t_start": row["started_epoch"],
+             "deadline_epoch": deadline, "ready": False, "url": None}
+    def bye(*_):
+        raise SystemExit(0)
+    signal.signal(signal.SIGTERM, bye)
+    signal.signal(signal.SIGINT, bye)
+    signal.signal(signal.SIGALRM, bye)
+    signal.setitimer(signal.ITIMER_REAL, max(.001, deadline-time.time()))
+    lifetime.thread.start()
+    _write_session(state)
+    try:
+        from . import modal_server as ms
+        with ms.app.run():
+            lifetime.app_id = ms.app.app_id
+            state['app_id'] = lifetime.app_id
+            url = ms.Server().web.get_web_url()
+            state['url'] = url
+            _write_session(state)
+            # Alarm + watchdog enforce deadline during this blocking cold-start call.
+            info = http(url, token, "/exp003/info", timeout=max(.001, min(1500, deadline-time.time())))
+            state.update(ready=True, server_info=info)
+            _write_session(state)
+            while time.time() < deadline:
+                time.sleep(1)
+    finally:
+        verified = bool(lifetime.app_id) and stop_remote(lifetime.app_id)
+        lifetime.done.set()
+        lifetime.thread.join(timeout=31)
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        budget.close_session(lifetime.row, verified)
+        state.update(ready=False, ended=True, teardown_verified=verified, token="")
+        _write_session(state)
     return 0
 
 
 def start(args) -> int:
+    if not args.development:
+        if not args.manifest:
+            raise ValueError('held-out start requires --manifest; GPU spike requires --development')
+        from .manifest import load
+        m = load(args.manifest)
+        from .freeze import verify_launch_window
+        verify_launch_window(m)
+        if m['phase'] != 'holdout' or m['backend'] != 'modal':
+            raise ValueError('held-out Modal manifest required')
+    elif args.manifest:
+        raise ValueError('choose held-out manifest or explicitly labelled development')
     if SESSION_FILE.exists():
         try:
             s = load_session()
@@ -132,10 +216,18 @@ def start(args) -> int:
             return 1
         except (OSError, KeyError):
             SESSION_FILE.unlink()
+    from . import budget
+    if args.storage_usd is None:
+        raise ValueError("explicit conservative cumulative unledgered storage liability required: --storage-usd")
+    cpu = float(os.environ.get("EXP003_CPU", "8" if args.gpu == "none" else "4"))
+    mem = int(os.environ.get("EXP003_MEM_MIB", "32768" if args.gpu == "none" else "16384"))/1024
+    row = budget.reserve_session(args.max_minutes*60, None if args.gpu == "none" else args.gpu,
+                                 cpu=cpu, mem_gib=mem, storage_usd=args.storage_usd)
     env = dict(os.environ, EXP003_MODAL_TOKEN=secrets.token_urlsafe(32), EXP003_GPU=args.gpu,
-               EXP003_PARALLEL=str(args.parallel),
-               EXP003_DEADLINE_EPOCH=str(time.time() + args.max_minutes * 60),
-               EXP003_SCALEDOWN_S=str(args.scaledown), EXP003_TIMEOUT_S=str(int(min(args.max_minutes * 60, 7200))))
+               EXP003_PARALLEL=str(args.parallel), EXP003_RESERVATION=json.dumps(row),
+               EXP003_DEADLINE_EPOCH=str(row['deadline_epoch']),
+               EXP003_SCALEDOWN_S=str(args.scaledown),
+               EXP003_TIMEOUT_S=str(max(1, int(row['deadline_epoch']-time.time()))))
     log = open(Path(tempfile.gettempdir()) / "exp003_modal_daemon.log", "ab")
     daemon = subprocess.Popen([sys.executable, "-m", "ccc.exp003.modal_ctl", "_serve"], env=env, stdout=log, stderr=log,
                      stdin=subprocess.DEVNULL, start_new_session=True,
@@ -188,6 +280,9 @@ def main(argv=None) -> int:
     p.add_argument("--parallel", type=int, default=1)
     p.add_argument("--max-minutes", type=float, default=90)
     p.add_argument("--scaledown", type=int, default=180)
+    p.add_argument("--storage-usd", type=float, default=None)
+    p.add_argument("--manifest", type=Path)
+    p.add_argument("--development", action="store_true")
     p.add_argument("--ref", default="gemma4:26b")
     p.add_argument("--wait", type=float, default=1800)
     a = p.parse_args(argv)

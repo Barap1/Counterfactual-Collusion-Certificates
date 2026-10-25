@@ -32,8 +32,7 @@ def ledger(path=DEFAULT_LEDGER) -> Ledger:
 
 
 def total_estimated(path=DEFAULT_LEDGER) -> float:
-    return round(sum(float(r.get("estimated_usd", 0) or 0) for r in ledger(path).records()
-                     if r.get("event") == "modal_run" and r.get("task") == TASK), 4)
+    return round(exposure(path), 4)
 
 
 def append_run(seconds: float, gpu: Optional[str], *, label: str, cpu: float = 4.0, mem_gib: float = 16.0,
@@ -68,3 +67,98 @@ def record_billing_snapshot(path=DEFAULT_LEDGER) -> float:
                          "source": "exp003 max(estimated incl. 20% margin, modal billing summary metered_cost)",
                          "estimated_usd": est, "metered_usd": met, "verified": met is not None})
     return gross
+
+# Absolute project constants; callers cannot raise these through configuration.
+OPERATING_STOP = 45.0
+TOTAL_CAP = 51.0
+HARD_STOP_EPOCH = 1792918800.0  # 2026-10-25 09:00:00 UTC
+SHUTDOWN_SECONDS = 120.0
+TICK_SECONDS = 1.0
+
+
+def session_rows(path=DEFAULT_LEDGER):
+    latest = {}
+    for r in ledger(path).records():
+        if r.get('task') == TASK and r.get('event') == 'modal_session':
+            latest[r['session_id']] = r
+    return latest
+
+
+def exposure(path=DEFAULT_LEDGER, *, now=None, reserved=True):
+    """Legacy finalized costs + latest session liabilities, never summing timer updates."""
+    import time
+    now = time.time() if now is None else now
+    rows = ledger(path).records()
+    old = sum(float(r.get('estimated_usd', 0) or 0) for r in rows
+              if r.get('task') == TASK and r.get('event') in ('modal_run', 'modal_storage'))
+    for r in session_rows(path).values():
+        if r['state'] == 'closed':
+            old += r['estimated_usd']
+        else:
+            accrued = max(0, now-r['started_epoch']) * r['rate_with_margin'] / 3600
+            old += max(r['reserved_usd'], accrued) if reserved else accrued
+    return old
+
+
+def session_event(row, path=DEFAULT_LEDGER, **updates):
+    row = dict(row, **updates, schema=LEDGER_SCHEMA, ts_utc=_iso(), task=TASK,
+               backend=BACKEND_MODAL, event='modal_session')
+    ledger(path).append(row)
+    return row
+
+
+def reserve_session(seconds, gpu, *, cpu=4, mem_gib=16, storage_usd=0, path=DEFAULT_LEDGER, now=None):
+    """Atomically reserve startup, entire active lifetime and shutdown before spawning.
+
+    An unverified/stale reservation blocks subsequent launches until reconciled.
+    Storage is a conservative cumulative external liability supplied by ORCH.
+    """
+    import fcntl, math, time, uuid
+    from pathlib import Path
+    now = time.time() if now is None else now
+    if any(not math.isfinite(x) or x < 0 for x in (seconds, storage_usd, cpu, mem_gib)) or seconds <= 0:
+        raise ValueError('finite positive lifetime and nonnegative resource liabilities required')
+    rate = container_rate(gpu, cpu, mem_gib) * MARGIN
+    end = min(now + seconds, HARD_STOP_EPOCH - SHUTDOWN_SECONDS)
+    if end <= now:
+        raise ValueError('absolute deadline reached')
+    reserved = (end-now+SHUTDOWN_SECONDS) * rate / 3600
+    with Path(str(path)+'.admission.lock').open('a') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        active = [r for r in session_rows(path).values() if r['state'] != 'closed']
+        if active:
+            raise ValueError('active/unverified session liability; reconcile teardown before launch')
+        prior = exposure(path, now=now)
+        projected = prior + storage_usd + reserved
+        if projected >= TOTAL_CAP or projected >= OPERATING_STOP:
+            raise ValueError('projected liability reaches $45 operating stop or $51 total cap')
+        if storage_usd:
+            ledger(path).append(dict(schema=LEDGER_SCHEMA, ts_utc=_iso(), task=TASK, backend=BACKEND_MODAL,
+                                     event='modal_storage', estimated_usd=storage_usd))
+        return session_event(dict(session_id=uuid.uuid4().hex, state='reserved', started_epoch=now,
+                                  deadline_epoch=end, rate_with_margin=rate, reserved_usd=reserved,
+                                  estimated_usd=0, gpu=gpu, cpu=cpu, mem_gib=mem_gib,
+                                  safety_margin=MARGIN), path)
+
+
+def tick_session(row, *, path=DEFAULT_LEDGER, now=None):
+    import time
+    now = time.time() if now is None else now
+    actual = exposure(path, now=now, reserved=False)
+    tail = SHUTDOWN_SECONDS * row['rate_with_margin'] / 3600
+    reason = ('total_cap' if actual + tail >= TOTAL_CAP else
+              'operating_stop' if actual + tail >= OPERATING_STOP else
+              'deadline' if now >= min(row['deadline_epoch'], HARD_STOP_EPOCH-SHUTDOWN_SECONDS) else None)
+    updated = session_event(row, path, state='stopping' if reason else 'active',
+                            seconds=max(0, now-row['started_epoch']),
+                            estimated_usd=max(0, now-row['started_epoch'])*row['rate_with_margin']/3600,
+                            cumulative_estimated_usd=actual, stop_reason=reason)
+    return updated, reason
+
+
+def close_session(row, verified, *, path=DEFAULT_LEDGER, now=None):
+    import time
+    now = time.time() if now is None else now
+    return session_event(row, path, state='closed' if verified else 'teardown_unverified',
+                         teardown_verified=verified, seconds=max(0, now-row['started_epoch']),
+                         estimated_usd=max(0, now-row['started_epoch'])*row['rate_with_margin']/3600)

@@ -1,0 +1,5 @@
+Guarded combined EXP-003 + replay suite: 80 passed in 51.21s.
+Modal manifest entrypoint: 1 passed in 0.70s.
+Final wiring suite: 9 passed in 24.97s.
+Exact commands: docs/enh/exp003/WIRING.md
+All outputs development-only; no model/network/Modal calls.
