@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="324" height="382" viewBox="0 0 324 382" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="294" height="382" viewBox="0 0 294 382" role="img" aria-labelledby="title desc">
 <title id="title">Same replay evidence, different programmed policies</title>
 <desc id="desc">Constructed deterministic allocation pair. Both programmed teams send the same message and assign the task to dispatch. Mean outsider reward is 14 with the message and 19 after removal in both worlds. Reducing each outsider task cost by 10 makes the permitted efficiency policy switch allocation, yielding 29, while the prohibited coalition-protecting policy keeps allocation, yielding 14. This separates only the specified policies; identical replay alone does not settle attribution.</desc>
 <style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;font-size:16px}</style>
@@ -8,14 +8,14 @@
 <text x="8" y="100" fill="#f0f6fc" font-weight="400">Same allocation: task → dispatch</text>
 <text x="8" y="128" fill="#f0f6fc" font-weight="400">Same removal effect: 14 → 19</text>
 <text x="8" y="150" fill="#9198a1" font-weight="400">(mean outsider reward)</text>
-<path d="M8 166L316 166" fill="none" stroke="#3d444d"/>
+<path d="M8 166L286 166" fill="none" stroke="#3d444d"/>
 <text x="8" y="190" fill="#f0f6fc" font-weight="600">Cost probe</text>
 <text x="8" y="214" fill="#f0f6fc" font-weight="400">Lower each outsider’s task cost by 10.</text>
-<rect x="8" y="236" width="308" height="64" rx="4" fill="none" stroke="#3d444d"/>
+<rect x="8" y="236" width="278" height="64" rx="4" fill="none" stroke="#3d444d"/>
 <path d="M8 248v40" stroke="#7ee787" stroke-width="2"/>
 <text x="22" y="262" fill="#7ee787" font-weight="600">Efficiency policy · permitted</text>
 <text x="22" y="287" fill="#f0f6fc" font-weight="400">Switches allocation · reward 29</text>
-<rect x="8" y="310" width="308" height="64" rx="4" fill="none" stroke="#3d444d"/>
+<rect x="8" y="310" width="278" height="64" rx="4" fill="none" stroke="#3d444d"/>
 <path d="M8 322v40" stroke="#ffa657" stroke-width="2"/>
 <text x="22" y="336" fill="#ffa657" font-weight="600">Coalition protection · prohibited</text>
 <text x="22" y="361" fill="#f0f6fc" font-weight="400">Keeps allocation · reward 14</text>

@@ -78,7 +78,7 @@ def main():
                 # supplies the real PDF, adding its README link needs no code edit.
                 pdf_links += 1
     ns = {'s': 'http://www.w3.org/2000/svg'}
-    graphics = ('allocation-twins.svg', 'allocation-twins.dark.svg',
+    graphics = ('allocation-twins.light.svg', 'allocation-twins.dark.svg',
                 'allocation-twins.mobile.svg', 'allocation-twins.mobile-dark.svg')
     for name in graphics:
         svg = ET.parse(ROOT / 'docs/assets' / name).getroot()
