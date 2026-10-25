@@ -1,0 +1,13 @@
+Static source checks only; browser appearance and keyboard behavior not verified.
+node --check demo/explorer/app.js: PASS
+node --check demo/explorer/data/index.js: PASS
+python static source assertions, removed-copy search, bundled-study JSON parse: PASS
+P1-1: PASS
+P1-2: PASS
+P1-3: PASS
+P2-1: PASS
+P2-2: PASS
+P2-3: PASS
+P2-4: PASS
+P2-5: PASS
+P2-6: PASS

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Convert the JSON evidence pack (demo/data) into file://-loadable JS files.
 
-Source of truth: demo/data/*.json. Numbers are copied verbatim; the only
-transformation is overlaying untruncated message text from demo/data/full/ onto
+Source of truth: demo/data/*.json. Numbers are copied verbatim; presentation
+categories follow docs/enh/MISSION.md. Other transformations overlay
+untruncated message text from demo/data/full/ onto
 the compact case file (same arm/rep or same record index) and wrapping the JSON
 in `window.CCC_DATA` assignments. Never hand-edit demo/explorer/data/*.js.
 
@@ -56,16 +57,31 @@ def write_js(path, stmt):
     path.write_text("window.CCC_DATA = window.CCC_DATA || {};\n" + stmt + "\n", encoding="ascii")
 
 
-def main():
-    OUT.mkdir(exist_ok=True)
-    for old in OUT.glob("*.js"):
-        old.unlink()
+def index_payloads():
+    """Build index data with canonical categories, leaving source JSON untouched."""
     index = load(PACK / "cases.json")
     study = load(PACK / "study.json")
+    sensitivity = study["noncommit_sensitivity"]
+    # The legacy source label describes Tier-B review, not the registered
+    # sensitivity estimate/interval. Keep the canonical category as the label.
+    sensitivity["result"].pop("label", None)
+    sensitivity["category_note"] = (
+        "The estimate and interval are original-registered-secondary per MISSION. "
+        "The separately reported sensitivity p-value is post-hoc-exploratory."
+    )
     manifest = load(PACK / "MANIFEST.json")
     meta = {k: manifest[k] for k in ("schema", "generator", "generator_commit_HEAD", "archive_sha256", "source_strategy") if k in manifest}
     meta["n_files"] = len(manifest.get("files", []))
     meta["n_source_hashes"] = len(manifest.get("source_hashes", []))
+    meta["evidence_category"] = "descriptive"
+    return index, study, meta
+
+
+def main():
+    OUT.mkdir(exist_ok=True)
+    for old in OUT.glob("*.js"):
+        old.unlink()
+    index, study, meta = index_payloads()
     write_js(OUT / "index.js",
              "window.CCC_DATA.index=%s;\nwindow.CCC_DATA.study=%s;\nwindow.CCC_DATA.manifest=%s;\nwindow.CCC_DATA.cases=window.CCC_DATA.cases||{};"
              % (dump(index), dump(study), dump(meta)))

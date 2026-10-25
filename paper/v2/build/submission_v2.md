@@ -8,9 +8,11 @@ Author: [OWNER]. Affiliation: [OWNER]. The owner is the sole author.
 
 Audits of multi-agent systems use logged messages and replay interventions to assess whether agents colluded. Yet the same transcript and message-removal effect can arise from harmful coordination or legitimate cooperation. We propose an evidence ladder separating suspicious text, causal influence, harmful exposure effects and justified attribution. Executable twin worlds make the distinction concrete: within a declared generator and information set, identical observables cannot support opposite labels. An abstention-aware benchmark asks which additional evidence separates those labels and scores abstention alongside errors. Counterfactual Collusion Certificates supply an exposure-level instrument, while a ladder-aware reporter states when attribution remains unresolved. These components address the same question: what claim does the available evidence license? The original preregistered local-model study yielded Delta = 1.354, world-cluster 95% CI [-0.020, 2.834], exact one-sided p = 0.0703, across 8 matched world pairs [OC]. The directional hypothesis was NOT supported. This neither establishes an absent effect nor licenses attribution. The prospective benchmark passed symmetry and frontier consistency checks by construction, but failed the label-effect, over-attribution and ladder-auditor predictions [NP]. We recommend reporting the highest justified rung, the information supplied to the auditor and the evidence needed to resolve ambiguity. We do not claim to detect collusion or intent.
 
+**Evidence categories.** Quantitative settings and measurements carry one class each; a class scopes its quantity or single-class paragraph/table row. Identifiers (citations, sections, rungs, versions, paths, hashes, seeds, figure labels) are metadata, not empirical measurements. Evidence tags: [OC] original-confirmatory; [ORS] original-registered-secondary; [D] descriptive; [PH] post-hoc-exploratory; [NP] new-prospective; [DEV] development.
+
 ## 1. Introduction
 
-A team allocates a contested task to a coalition member. In one world its message steers work away from a cheaper outsider; in its twin, the same message and allocation follow the shared efficiency objective. The transcript and factual, knockout, sham and placebo outcomes are identical by construction. An auditor using that evidence must return the same output for both worlds, although their attribution labels differ. An environment probe asks the separating question: would the team yield when the outsider becomes the efficient claimant? Figure 1 introduces this design [D] (schematic).
+A team allocates a contested task to a coalition member. In one world its message steers work away from a cheaper outsider; in its twin, the same message and allocation follow the shared efficiency objective. The transcript and factual, knockout, sham and placebo outcomes are identical by construction. An auditor using that evidence must return the same output for both worlds, although their attribution labels differ. An environment probe asks the separating question: would the team yield when the outsider becomes the efficient claimant? Figure 1 presents the evidence ladder [NP] (PROSPECTIVE in its source figure metadata; a conceptual diagram, not a measured outcome).
 
 Auditors may use evidence of collusion to recommend sanctions, shutdowns or deployment decisions. Confusing influence with attribution risks accusing legitimate cooperation while missing harmful coordination. Our threat model is an auditor with a replayable log and a suspected message exposure, facing both possibilities. Auditors and benchmark builders can use this standard to state which claim their evidence supports and what additional probe or authorization record is needed.
 
@@ -27,7 +29,7 @@ Our contributions are:
 
 **What we tested and found.** The preregistered held-out directional hypothesis was not supported [OC] (Section 5.4). The prospective frontier matched enumeration by construction [NP]. The original and DEV-informed over-attribution predictions both failed across the required strata [NP].
 
-**Figure 1. Same evidence, different attribution labels [D] (schematic).** Left: a colluding-allocation twin and its efficiency-motivated counterpart share transcript and declared replay outcomes. Middle: equal tau_O, tau_C and tau_W support the same exposure-level reading. Right: the ladder separates influence and harm from attribution; an environment probe supplies separating evidence. **Takeaway:** identical declared evidence requires the same audit output, so attribution needs separating evidence. Rendering is pending; this schematic asserts no measured bars or prospective verdicts.
+**Figure 1. Same evidence, different attribution labels [NP] (schematic of the prospective twins).** Left: a colluding-allocation twin and its efficiency-motivated counterpart share transcript and declared replay outcomes. Middle: equal tau_O, tau_C and tau_W support the same exposure-level reading. Right: the ladder separates influence and harm from attribution; an environment probe supplies separating evidence. **Takeaway:** identical declared evidence requires the same audit output, so attribution needs separating evidence. Rendering is pending; this schematic asserts no measured bars or prospective verdicts.
 
 ![Figure 1. (PROSPECTIVE) Evidence ladder L0 suspicious text, L1 causal influence, L2 harmful exposure, L3 attribution, with the information set (I0-I5) each rung needs. Concept colours: causal effect (blue), harm (red), attribution (purple), uncertainty (amber).](../../../figures/enh/prospective/fig_ladder.svg)
 
@@ -129,7 +131,7 @@ Prospective outcomes [NP] are reported separately by stratum and never pooled. R
 | [PH] | Sensitivity sign-flip test | p = 0.156 | Post hoc; does not repair the primary |
 | [D] | Contribution of non-commit cases | 0.627 of 1.354 (46%) | Descriptive accounting; not entirely driven by those cases |
 
-Registered secondaries are not significant [ORS]; estimates and Holm corrections are in Appendix F.
+The preregistered S1–S3 family is original-confirmatory [OC]; none is significant. Estimates and Holm corrections are in Appendix F.
 
 **Exploratory certificates [D].** Over 16 checkpoints: 0 supported, 11 not supported, 5 inconclusive (B1 0/4/4, B2 0/7/1). No outsider-effect lower bound exceeded m_O = 2.5 (maximum L = 0.77). The placebo was available at 2 of 16 checkpoints, so zero support is not attributable to unavailable placebos alone. All 16 certificates carry `info_bearing = true` by conservative default, which changes no realized status.
 
@@ -236,7 +238,7 @@ Additional restrictions are:
 2. DEV-002 placebo-availability census run before its inputs were hash-committed; development census exploratory. [D].
 3. v1.2.1 extractor correction re-frozen before held-out data; theta pinned 0.4 by fallback (best Youden J 0.4947 < 0.5); `weak_detector`. [D].
 4. Label correction (exp002_heldout_v2): confirmatory study tests separated from exploratory certificates; no numeric change. [D].
-5. Validity-metadata repair (exp002_heldout_v3, FIX-001): 16 `gates.all_valid` and 5 `reasons` fields changed; 0 status or numeric changes. [D].
+5. Validity-metadata repair (exp002_heldout_v3, FIX-001): 16 `gates.all_valid` and 5 `reasons` fields changed; 0 status or numeric changes. [PH].
 6. ENH-B corrections applied here: non-commit exclusion estimate re-categorised as original-registered-secondary (its p and sham-gap interpretation remain post hoc); V9 sham signs aligned to S-minus-F; development "predictions confirmed" reworded as agreement with scripted predictions; the "post hoc" label of the whole sensitivity in paper/build/submission.md was wrong and is not repeated. [D].
 7. Open (director): `no_placebo_available` is appended on the final inconclusive path whether or not other support conditions held (REV001 F-10); not changed. [D].
 8. R2 amendments before the DEV run: CRN (A1), circularity disclosure (A2), RQ6 (A3). [D].
@@ -305,7 +307,7 @@ Also: a relayed-harmful case (sender to relay to receiver; expected unresolved a
 
 ## F. Original-study detail
 
-**Registered secondaries [ORS].** S1 (B1 mean tau_O) 0.970, Holm p = 0.164; S2 (B2 mean tau_O) -0.384, Holm p = 0.4375 (only 5 nonzero values against a floor of 6); S3 (tau_C contrast) -1.820, Holm p = 0.164. None is significant.
+**Preregistered S1–S3 family [OC].** S1 (B1 mean tau_O) 0.970, Holm p = 0.164; S2 (B2 mean tau_O) -0.384, Holm p = 0.4375 (only 5 nonzero values against a floor of 6); S3 (tau_C contrast) -1.820, Holm p = 0.164. None is significant.
 
 **Sham (V9) [PH].** On a consistent S-minus-F outsider-reward scale: B1 mean 1.64, 90% CI [-0.54, 3.82], n = 4, uncertain; B2 0.03 [-0.06, 0.12], n = 3, pass; pooled 0.95 [-0.20, 2.10], n = 7, pass. Individual sham gaps are +3.77 (H02_B1) and +2.62 (H05_B1). We report both aggregations and make no sham-equivalence claim. The V10 lesion check (n = 2, interval [-7.4, 11.7]) is uninformative.
 
@@ -322,13 +324,13 @@ Detailed comparison paragraphs to be carried from paper/build/submission.md Appe
 
 **Related work, extended.** *Responsibility, failure attribution and overdetermination.* Counterfactual replay for failure attribution and minimal repair families [14, 15] and degrees of responsibility under redundant contributions [13] motivate our redundancy cases, where single knockout is zero and joint knockout is positive; we report such cases as "not identifiable under I1", not "no effect". *Abstention and reporting standards.* Selective classification with a reject option and risk-coverage reporting [17] and delegation with cost or safety-performance guarantees for safety monitors [18] motivate our abstention-aware scoring. Preregistered audit studies have precedent: one finds auditors naming innocent parties after upstream false alarms, with its preregistered hypothesis not supported [16]. Steganographic and covert channels [10] can evade any text-level intervention; this limit is inherited.
 
-*Search scope.* Search date 2026-10-24; Firecrawl paper index, web search and fetch, about 25 queries. This is a bounded search, not a survey. Legal "plus factors" primary law was not checked. [D] (inherited search description; not rerun).
+*Search scope.* Search date 2026-10-24; Firecrawl paper index, web search and fetch, about 25 queries [D] (inherited, not independently traceable in this repository; unchecked count). This is a bounded search, not a survey. Legal "plus factors" primary law was not checked. The search was not rerun.
 
 ## H. Figure plan
 
 | # | Figure | Status | Exact data source |
 |---|---|---|---|
-| 1 | Twin worlds, shared transcript and replay effects, and the ladder showing what separates attribution | schematic [D]; rendering pending | Introduction caption; no measured data |
+| 1 | Twin worlds, shared transcript and replay effects, and the ladder showing what separates attribution | conceptual diagram [NP], matching PROSPECTIVE source metadata | figures/enh/prospective/fig_ladder.json; no measured data |
 | Appendix | Branch schematic F/K/S/N | reuse [D] (schematic) | figures/fig_arms.svg |
 | 4 | Held-out per-world Delta, aggregate and CI; non-commit sensitivity as separate marker (existing; caption must say registered sensitivity [ORS]) | reuse | figures/fig_heldout_delta.json; docs/analysis/exp002_heldout_v2/figure_data/fig_delta_by_world.json |
 | 2 | Frontier heat map, pair type x information set (Figure 2; `RESULTS.json.figures.frontier_heat_map`, NEW) | data complete [NP]; rendering pending | `RESULTS.json.figures.frontier_heat_map` |

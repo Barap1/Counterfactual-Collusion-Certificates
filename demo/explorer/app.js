@@ -52,7 +52,7 @@
       held ? 'held-out · frozen' : 'development · scripted');
   }
   function sha(t) { return h('span', { class: 'hash' }, t); }
-  function tw(t) { return h('div', { class: 'tw' }, t); }
+  function tw(t) { return h('div', { class: 'tw', tabindex: '0', role: 'region', 'aria-label': 'Scrollable table' }, t); }
   var ARM_NAME = { F: 'Factual', K: 'Knockout', S: 'Sham', N: 'Placebo' };
   var ARM_DESC = { F: 'message delivered as recorded', K: 'exposure message masked for the receiver', S: 'sham: identical input, fresh sampling', N: 'placebo: a different, non-informational message masked' };
 
@@ -101,7 +101,7 @@
   }
   function excludesZero(t) { return t.L !== null && (t.L > 0 || t.U < 0); }
 
-  /* Evidence-ladder rung, derived only from certificate fields. */
+  /* L0/L1 are UI-derived heuristics; only supported certificates reach L2. */
   function ladder(c) {
     var n = norm(c), O = n.tau.O, st = n.status;
     var infl = ['O', 'C', 'W'].some(function (k) { return excludesZero(n.tau[k]); });
@@ -116,6 +116,7 @@
       top = infl ? 1 : 0;
       why = 'Inconclusive: ' + rO + (n.reasons.length ? '; recorded reasons: ' + n.reasons.join(', ') : '') + '. ' + (infl ? 'Some influence is visible (L1), ' : 'No influence is established (L0), ') + 'but the harm rung cannot be decided.';
     }
+    if (top === 1) why += ' UI-derived, not a certificate rung: interval is one-sided, case-conditional, n_independent = 1; influence does not establish harm.';
     return { top: top, why: why, infl: infl };
   }
   function ladderStrip(c) {
@@ -126,10 +127,11 @@
       ['L2', 'Harmful exposure', 'Valid replay and outsider loss beyond m_O, with controls.'],
       ['L3', 'Attribution', 'Collusion justified. Needs evidence beyond a knockout.']
     ];
-    var wrap = h('div', { class: 'ladder', role: 'list', 'aria-label': 'Evidence ladder; highest supported rung L' + L.top });
+    var highest = n.status === 'supported' ? 'highest supported' : 'highest reached (UI-derived, not a certificate rung)';
+    var wrap = h('div', { class: 'ladder', role: 'list', 'aria-label': 'Evidence ladder; L' + L.top + ' ' + highest });
     defs.forEach(function (d, i) {
       var cls = 'rung' + (i < L.top ? ' reached' : '') + (i === L.top && i < 3 ? ' top' : '') + (i === 3 ? ' na' : '');
-      var st = i === 3 ? 'not claimed' : (i === L.top ? 'highest supported' : (i < L.top ? 'reached' : 'not reached'));
+      var st = i === 3 ? 'not claimed' : (i === L.top ? highest : (i < L.top ? 'reached' : 'not reached'));
       wrap.appendChild(h('div', { class: cls, role: 'listitem' }, h('b', null, d[0]), d[1], h('span', { class: 'st' }, st), h('span', { class: 'muted' }, d[2])));
     });
     return h('div', null, wrap,
@@ -195,7 +197,7 @@
   }
   function rowVerdicts(n) {
     var out = [], O = n.tau.O, C = n.tau.C, W = n.tau.W;
-    if (O.L !== null) out.push(['harm', 'tau_O', O.L > n.mO ? 'Whole interval is above m_O: harm beyond the margin is supported.' : O.U < n.mO ? 'Whole interval is below m_O: harm beyond the margin is ruled out for this exposure.' : 'Interval straddles m_O: the harm question is undecided.']);
+    if (O.L !== null) out.push(['harm', 'tau_O', O.L > n.mO ? 'Whole interval is above m_O: harm beyond the margin is supported.' : O.U < n.mO ? 'Upper bound is below m_O under the stated interval assumption; this is not a test or an exoneration.' : 'Interval straddles m_O: the harm question is undecided.']);
     if (C.L !== null) out.push(['causal', 'tau_C', C.L > 0 ? 'Coalition benefit excludes 0 (L > 0).' : C.U <= 0 ? 'No coalition benefit (U ≤ 0).' : 'Interval includes 0: coalition benefit undecided.']);
     if (W.L !== null) out.push(['causal', 'tau_W', W.L >= -n.dW ? 'No welfare change beyond −δ_W (L ≥ −δ_W).' : W.U < -n.dW ? 'Welfare change beyond −δ_W (U < −δ_W).' : 'Interval straddles −δ_W: undecided.']);
     return out;
@@ -263,7 +265,7 @@
       else if (G === 'outsider_loss') {
         var k = g.lower_exceeds_margin ? 'pass' : g.upper_below_margin ? 'warn' : 'warn';
         items.push(traceItem(k, 'Outsider loss vs margin (HARM)', 'L(O) = ' + fmt(g.L) + ', U(O) = ' + fmt(g.U) + ', margin m_O = ' + fmt(g.margin, 1) + '. ' +
-          (g.lower_exceeds_margin ? 'The lower bound exceeds the margin: harmful exposure supported.' : g.upper_below_margin ? 'The upper bound is below the margin: harm beyond m_O is ruled out here.' : 'The interval straddles the margin: undecided.')));
+          (g.lower_exceeds_margin ? 'The lower bound exceeds the margin: harmful exposure supported.' : g.upper_below_margin ? 'Upper bound is below m_O under the stated interval assumption; this is not a test or an exoneration.' : 'The interval straddles the margin: undecided.')));
       } else if (G === 'coalition_benefit' || G === 'efficiency' || G === 'no_material_efficiency_gain') {
         var nm = { coalition_benefit: 'Coalition benefit', efficiency: 'Efficiency (welfare)', no_material_efficiency_gain: 'No material efficiency gain' }[G];
         var tx = g.L !== undefined ? 'L = ' + fmt(g.L) + ', U = ' + fmt(g.U) + (g.delta_W ? ', δ_W = ' + fmt(g.delta_W, 1) : '') + '. ' : '';
@@ -502,12 +504,12 @@
   function changeView(c, n) {
     var box = h('div');
     box.appendChild(h('div', { class: 'legend' }, h('span', null, concept('harm', 'tau_O: outsider loss'), ' vs ', h('code', null, 'm_O')),
-      h('span', null, concept('causal', 'tau_C, tau_W'), ' vs 0 and −δ_W'), h('span', null, concept('unc', 'bar width'), ' = interval width'), h('span', null, 'dashed black = margin')));
+      h('span', null, concept('causal', 'tau_C, tau_W'), ' vs 0 and −δ_W'), h('span', null, concept('unc', 'bar width'), ' = bound span'), h('span', null, 'dashed black = margin')));
     box.appendChild(h('div', { class: 'card' }, intervalPlot(n)));
     var rv = rowVerdicts(n);
     if (rv.length) box.appendChild(h('ul', null, rv.map(function (r) {
       var t = n.tau[r[1].slice(4)];
-      return h('li', null, concept(r[0]), ' ', h('strong', null, r[1] + ' '), r[2], t.L !== null && !t.exact ? [' ', concept('unc', 'width ' + fmt(t.U - t.L))] : null);
+      return h('li', null, concept(r[0]), ' ', h('strong', null, r[1] + ' '), r[2], t.L !== null && !t.exact ? [' ', concept('unc', 'bound span ' + fmt(t.U - t.L))] : null);
     })));
     var tbl = ['O', 'C', 'W'].map(function (k) {
       var t = n.tau[k];
@@ -622,7 +624,7 @@
           h('div', { class: 'card k-causal' }, concept('causal'), h('p', null, h('strong', null, 'Did the message change behaviour?')), h('p', null, 'Compare factual (F) with knockout (K) continuations. Effects tau_O, tau_C, tau_W.')),
           h('div', { class: 'card k-harm' }, concept('harm'), h('p', null, h('strong', null, 'Did outsiders lose more than the margin?')), h('p', null, 'tau_O against m_O = 2.5, with controls. This is the L2 rung.')),
           h('div', { class: 'card k-attr' }, concept('attr'), h('p', null, h('strong', null, 'Is collusion justified?')), h('p', null, 'Needs evidence a knockout cannot give. CCC never claims this rung in the held-out data.')),
-          h('div', { class: 'card k-unc' }, concept('unc'), h('p', null, h('strong', null, 'How sure, and when to abstain?')), h('p', null, 'Interval width. Wide intervals give “inconclusive”, not a guess.'))));
+          h('div', { class: 'card k-unc' }, concept('unc'), h('p', null, h('strong', null, 'How sure, and when to abstain?')), h('p', null, 'Bound span. Wide spans give “inconclusive”, not a guess.'))));
         b.appendChild(h('p', null, 'Working principle: a knockout measures what a message did, not whether it should have done it.'));
       }],
       ['2 · One real contrast', function (b) {
@@ -643,7 +645,7 @@
         });
       }],
       ['3 · What the certificate allows', function (b) {
-        b.appendChild(h('p', null, 'Each case gets an evidence ladder derived from its certificate. Supported means L2 at most. Anything else stops lower, with a stated reason. L3 (attribution) is never claimed.'));
+        b.appendChild(h('p', null, 'Only a supported certificate reaches L2. L0 and L1 show the highest reached (UI-derived, not a certificate rung); a one-sided bound excluding zero can suggest influence in either direction, without establishing harm. Each stop has a stated reason. L3 (attribution) is never claimed.'));
         var g = h('div', { class: 'grid2' }); b.appendChild(g);
         worldCases(pw.world_id).then(function (m) {
           ['B1', 'B2'].forEach(function (r) { loadCase(m[r]).then(function (c) { g.appendChild(h('div', { class: 'card' }, h('h3', null, m[r]), ladderStrip(c))); }); });
@@ -681,7 +683,7 @@
       h('div', { class: 'card k-causal' }, concept('causal'), h('p', null, 'Did the message change behaviour? tau_C, tau_W and (as a quantity) tau_O. Shown in blue with a filled circle.')),
       h('div', { class: 'card k-harm' }, concept('harm'), h('p', null, 'Did outsiders lose more than the margin m_O? tau_O vs m_O. Shown in red with a filled square.')),
       h('div', { class: 'card k-attr' }, concept('attr'), h('p', null, 'Is collusion justified? Never claimed here. Violet with a triangle; the L3 rung is hatched.')),
-      h('div', { class: 'card k-unc' }, concept('unc'), h('p', null, 'Interval width and abstention (inconclusive). Amber with a diamond.'))));
+      h('div', { class: 'card k-unc' }, concept('unc'), h('p', null, 'Bound span and abstention (inconclusive). Amber with a diamond.'))));
     main.appendChild(h('h3', null, 'Effect definitions (verified against stored rows)'));
     main.appendChild(h('ul', null, h('li', null, 'tau_O = outsider mean under K minus under F.'), h('li', null, 'tau_C = coalition mean under F minus under K.'), h('li', null, 'tau_W = W under K minus W under F.'), h('li', null, 'F factual, K knockout (exposure mask), S sham, N placebo.')));
     main.appendChild(h('h3', null, 'Provenance'));
@@ -717,6 +719,8 @@
         h('div', { class: 'who' }, e.agent, ' ', h('span', null, 'board ' + e.board + ' · ' + e.id)), h('div', { class: 'body' }, e.content)));
     });
     col.appendChild(tl);
+    col.appendChild(h('p', { class: 'muted' }, 'Transcript snippets may end mid-sentence (clipped in source).'));
+    col.appendChild(h('p', { class: 'muted scroll-hint' }, 'Scroll the continuations table horizontally to see all columns, including Action; focus it to scroll with the arrow keys.'));
     col.appendChild(h('h4', null, 'Continuations visible at ' + S));
     var rows = [];
     Object.keys(bs.arms).forEach(function (arm) {
@@ -740,7 +744,7 @@
     clear(main);
     var T = D.twins, P = T.pairs[twinState.pair], si = twinState.set;
     var dev = T.label === 'DEV';
-    main.appendChild(h('div', { class: 'head' }, h('h2', null, 'Twin worlds: same evidence, same verdict'), h('span', { class: 'badge ' + (dev ? 'dev' : 'held'), title: T.provenance_label }, T.provenance_label)));
+    main.appendChild(h('div', { class: 'head' }, h('h2', null, 'Twin worlds: when does evidence separate verdicts?'), h('span', { class: 'badge ' + (dev ? 'dev' : 'held'), title: T.provenance_label }, T.provenance_label)));
     if (T.banner) main.appendChild(h('div', { class: 'note warn banner', role: 'status' }, h('strong', null, T.banner), ' Selection rule: ' + T.selection_rule));
     main.appendChild(h('p', null, 'Two worlds are built so that the auditor sees identical observables up to a stated information set, yet their private labels differ. A method that sees only the same evidence must give the same output; only new evidence can separate them. Pick a pair, then step the evidence from I0 to I5.'));
     var tabs = h('div', { class: 'steps', role: 'group', 'aria-label': 'Twin pair types' });
@@ -766,6 +770,7 @@
     else if (sameView) banner = h('div', { class: 'verdict same' }, h('div', { class: 'big' }, 'At ' + SETS_T[si] + ' the two auditor views are byte-identical.'), h('p', null, 'Identical evidence → identical verdict. Every method below must, and does, give the same output for both worlds.'));
     else banner = h('div', { class: 'verdict diff' }, h('div', { class: 'big' }, 'At ' + SETS_T[si] + ' the auditor views differ.'), h('p', null, 'New evidence has entered, so outputs may differ. See which methods actually do.'));
     main.appendChild(h('h3', null, 'Verdicts at ' + SETS_T[si]));
+    main.appendChild(h('p', { class: 'note' }, 'Private twin labels and attribution verdicts are scripted benchmark labels, not a detection.'));
     main.appendChild(banner);
     var vr = T.methods.map(function (mt) {
       var va = A.by_set[SETS_T[si]].verdicts[mt.id], vb = B ? B.by_set[SETS_T[si]].verdicts[mt.id] : null;

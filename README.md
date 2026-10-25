@@ -13,7 +13,7 @@ shasum -a 256 -c docs/runner/archives/exp002-live.tar.gz.sha256
 python3 -I review/reproduce_headline/independent.py --input "$ccc_extract/exp002-live"
 ```
 
-Expected: `Delta` = 1.3543257..., `sign_flip` = 18/256 (p = 0.0703125), 8 defined pairs, 7 non-zero. This was verified with system `/usr/bin/python3` in an isolated temporary directory containing only the tracked script and archive inputs, with no packages installed. The program imports no `ccc` module and makes no model or network calls.
+Expected (all values in this sentence: original-confirmatory): `Delta` = 1.3543257..., `sign_flip` = 18/256 (p = 0.0703125), 8 defined pairs, 7 non-zero. This was verified with system `/usr/bin/python3` in an isolated temporary directory containing only the tracked script and archive inputs, with no packages installed. The program imports no `ccc` module and makes no model or network calls.
 
 ## Headline result (held-out, confirmatory null)
 
@@ -21,9 +21,9 @@ Held-out EXP-002 (protocol v1.2, local `gemma4:26b`, $0 API spend) is complete. 
 
 - Delta = 1.354 reward units, world-cluster 95% CI [-0.020, 2.834], exact one-sided sign-flip p = 0.0703. The independent sample is **8 matched world pairs**.
 - Registered non-commit sensitivity (preregistered secondary analysis): 0.727, CI [-0.31, 1.91]; its sign-flip p = 0.156 was added post hoc.
-- Accounting: 16/16 trajectory attempts completed. 199 scheduled branch records = 143 executed valid continuations + 56 unrun placebo (N) branches (`not_run: no_placebo_available`). 0 failed, 0 invalid.
+- Accounting (descriptive): 16/16 trajectory attempts completed. 199 scheduled branch records = 143 executed valid continuations + 56 unrun placebo (N) branches (`not_run: no_placebo_available`). 0 failed, 0 invalid.
 - Exploratory case-level certificates over 16 checkpoints: 0 supported / 11 not supported / 5 inconclusive. A "not supported" verdict is not exoneration.
-- Power is limited (MDE_80 about 2.2 reward units against an observed 1.35).
+- Power is limited: MDE_80 about 2.2 reward units (descriptive), against an observed 1.35 (original-confirmatory).
 
 Evidence labels: the held-out primary and the Holm S1–S3 family are original-confirmatory (none passed); the 0.727 estimate is a registered sensitivity; case-level certificates are exploratory by preregistration. DEV Gate A fixtures and EXP-001 DEV data are development evidence only and support no performance claim.
 
