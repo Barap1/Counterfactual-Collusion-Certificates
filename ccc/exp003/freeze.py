@@ -73,6 +73,9 @@ def verify_freeze(m):
         raise ValueError('measured DEV/source+canary request budget required')
     if b['gpu_seconds_per_regime_world'] <= 0 or b['projected_total_seconds'] <= 0 or b['projected_total_usd'] <= 0 or b['projected_total_usd'] + b['reconciled_prior_usd'] + b['storage_usd'] > 45:
         raise ValueError('primary-block feasibility exceeds operating budget or is unmeasured')
+    if m['backend'] == 'modal':
+        from .feasibility import projection
+        projection(m, f)
     return f
 
 

@@ -1,10 +1,4 @@
 {
-  "schema": "ccc.exp003.freeze_candidate.v1",
-  "status": "candidate-not-approved-not-committed",
-  "worker": "W2-PROTO",
-  "protocol_artifact": "docs/enh/exp003/PROTOCOL.md",
-  "protocol_sha256": "11f0c5275e33bf8ff837a4858f9562d4e41b0d1753eb1021e138491972e84a31",
-  "hard_stop_utc": "2026-10-25T09:00:00Z",
   "code_sha256": {
     "ccc/__init__.py": "7a7efd53e0fd8e0d85b3fd4b635b8783012d872c330209d454e2b684f58d0505",
     "ccc/adapters/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -30,16 +24,20 @@
     "ccc/audit/refresh.py": "989b2fb8e6d84cac4101d1c1d887b82b663846b92e57814ef7f4b5879937812f",
     "ccc/audit/text.py": "41a3765278d7a829c243fb8b02299008c8d98fdf0d405ba940d3c201b1933cab",
     "ccc/exp003/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "ccc/exp003/analysis.py": "89bedb762c19cb0bb8eb784d3c4ebd0e20259f1aee5b4966b99a048a052a957c",
+    "ccc/exp003/analysis.py": "9b6b98d7aff670f35701bfca9cd9f5689d5eb58a60f2e3ee683741e36a393c73",
     "ccc/exp003/arms.py": "d7f6318a93e2b676385ae411475433020476865d61c2ccfb72ad637e2922fcdd",
-    "ccc/exp003/budget.py": "4781799608b9b7c2ee8038a898c25c5a6286d04dc6826418f567e01976eb630a",
-    "ccc/exp003/collector.py": "c2ee3c61690983c5271e00321026a1f9a99617bc43482836c04b025b6ab9bdd6",
-    "ccc/exp003/manifest.py": "943ceab79273a7c3dbaf2c16a89c0f7ec1bc28e73d7dfabb2effa387c3cdcc48",
+    "ccc/exp003/budget.py": "ba846a5bdf261fcc6fca19e51081c58324ec339bb15d4d1c0f3ca2eed8847ed5",
+    "ccc/exp003/collector.py": "08fca05081cf5d31fcadb69cf5a9ab226736f0be346c29111d5bec44946eb0cf",
+    "ccc/exp003/feasibility.py": "7aceaccddb43ebf0b371ee4ecf8db6aa61aa81dab2412d2edb01d3f3fe2b5e50",
+    "ccc/exp003/freeze.py": "7960fa35e55e8b8c5b0fdbdbfc30fc1ca6e42104b06341ed12cfeab2e4c38d7d",
+    "ccc/exp003/manifest.py": "8fe31643954ba59b8140da6696e855bd3c90d2d7ea1d19693772295e94de265d",
     "ccc/exp003/mock.py": "5d8d22ddeabeaabccc98138f9f84cb953703abe9ffe895f6c219d51316da826d",
-    "ccc/exp003/modal_ctl.py": "f588c592cf76fadeb4e57efc64dfbda1278161d8ab5fb75633c59fc712cb9583",
-    "ccc/exp003/modal_runner.py": "edbaf9624e34461700e9242bd4ad4c65fcab3966db6bd35fc203f339d886a948",
-    "ccc/exp003/modal_server.py": "1c83deeeaf295c366752b7abf18b52af8a5d74a0e6ceb81885757baee7b66361",
+    "ccc/exp003/modal_ctl.py": "159b0df9c58c1686f079fc9bf54c955050aeaae31e6171ba7e16c8c2158c14da",
+    "ccc/exp003/modal_runner.py": "f5dd366532f2ba76013e09531646bf278f327a675d486bed27a7b45472bc2ab8",
+    "ccc/exp003/modal_server.py": "6681871c6457ee8b57f17a2b0b790bddb36ebfdd70308e7209846b99a6c448c3",
     "ccc/exp003/probe.py": "3c12d1a07442377ecd4113fcbc1ddec309d1225210295313a6a179c6058af8f4",
+    "ccc/exp003/refresh_candidate.py": "c69c8846658bdc21ed8b9837935c3b0129e58df7204a9969fe870b7d4366a962",
+    "ccc/exp003/slots.py": "bc9811b7f1129ac4b2c44da15cc55d21d25cddc7582d2b3b0248759bbd0f8ece",
     "ccc/exp003/storage.py": "6ed724d48d1176d6bf462f5fedb0fa90097ac1316ee70f0ea0f65771f0b91ef2",
     "ccc/fixtures/__init__.py": "fbad05719dd9d41a453ef7d48aac6e324bbf3f48f543427b2191df7b135e94a3",
     "ccc/fixtures/__main__.py": "23faae8a00b352ab655f5588d3771f2adce8ba52380f7cd1ac35578d1a75b2e9",
@@ -217,14 +215,25 @@
     "starter/collusion_hackathon/colosseum/experiments/persuasion/hospital/prompts.py": "9e301e3283b48bd96c14aa86c0da32d0c3aee6102faff0886e383944c48f3e9c",
     "starter/collusion_hackathon/colosseum/experiments/persuasion/hospital/run.py": "4ea89843130f3738282acad6e93ae24e4877109c0be0de0dfeb12f0e4f10b282",
     "starter/collusion_hackathon/colosseum/experiments/preflight.py": "a67eb7394f5292ab1d4923aac82e0464266d964e233c8b6bdd31d7d0b46cfba8",
+    "tests/test_exp003_controls.py": "8e5a47b4fd22cd8d813f20c2147c915c2205163ae228a4cb84b8499528e57ee7",
     "tests/test_exp003_probe.py": "7b362e8db7b01e380d894e1c9e015024b487520554e781c70bdaf4072b810470",
     "tests/test_exp003_wiring.py": "c12345e0f970d9072d2ee9aa0b34cda9221f43c4fc2a61ae7f5b75bcc312ee0c"
   },
   "evidence_sha256": {
+    "ccc/exp003/offline_evidence/W2_FIX2_validation.txt": "9fa7a16a688d33f8b745d6288b0926557f8d2bd7120ac93384f9bfad35cc5391",
     "ccc/exp003/offline_evidence/analysis.json": "2bce9760688a9696359d22243c9776636cee2d0af1bc589a701f79a8a3faddcc",
     "ccc/exp003/offline_evidence/rows.json": "69e419ee3c13df0930fc0ea8b3805d7b7b60a997ad282bec55c0cb095e7faeae",
-    "ccc/exp003/offline_evidence/validation.txt": "90f1b748843eaba3edb794158b0d4328b5e8467d1d0408b7a31feed5b84b4113"
+    "ccc/exp003/offline_evidence/validation.txt": "90f1b748843eaba3edb794158b0d4328b5e8467d1d0408b7a31feed5b84b4113",
+    "docs/enh/exp003/FEASIBILITY_TEMPLATE.md": "795ef07f411ec56738a9889d716312226d520c1c6f45dc147c067891bf8d305c",
+    "docs/enh/exp003/WIRING.md": "a8c8b704858583ac59a2ed31433577ab7d204fb5946249ae0c4daa52e14c7bf0"
   },
+  "hard_stop_utc": "2026-10-25T09:00:00Z",
+  "notes": [
+    "No held-out seeds or outcomes generated.",
+    "No approval is implied by this candidate.",
+    "Native installed source is hashed; other third-party runtime versions require attestation.",
+    "Recompute after edits; ORCH alone commits."
+  ],
   "pending": [
     "independent review",
     "director freeze commit",
@@ -232,10 +241,9 @@
     "backend choice before held-out outcomes",
     "feasibility cost/request/container admission budget"
   ],
-  "notes": [
-    "No held-out seeds or outcomes generated.",
-    "No approval is implied by this candidate.",
-    "Native installed source is hashed; other third-party runtime versions require attestation.",
-    "Recompute after edits; ORCH alone commits."
-  ]
+  "protocol_artifact": "docs/enh/exp003/PROTOCOL.md",
+  "protocol_sha256": "98e9bc827a38f334a6899c20292f8552d2b4f23bce17f7e9883974525ed72cd3",
+  "schema": "ccc.exp003.freeze_candidate.v1",
+  "status": "candidate-not-approved-not-committed",
+  "worker": "W2-FIX2"
 }

@@ -401,7 +401,17 @@ def run(m, root, *, dry_run=False, live=False, retry_failed=False, max_checkpoin
         raise ValueError("EXP-003 freezes first attempts; retries require a new protocol")
     if live and m["phase"] == "holdout":
         from .freeze import verify_launch_window
-        verify_launch_window(m)
+        frozen = verify_launch_window(m)
+        if m['backend'] == 'modal':
+            import time
+            from . import budget
+            from .feasibility import validate_session
+            active = [r for r in budget.session_rows().values() if r['state'] in ('reserved', 'active')]
+            if len(active) != 1:
+                raise ValueError('one frozen controller session required before collector attachment')
+            validate_session(m, frozen, active[0], now=time.time())
+            if budget.exposure() >= budget.OPERATING_STOP or budget.exposure() >= budget.TOTAL_CAP:
+                raise ValueError('committed session liabilities reach monetary cap')
     if live and m["phase"] == "holdout" and not m.get("director_freeze_commit"):
         raise ValueError("director freeze commit required before held-out calls")
     if max_checkpoints is not None and (type(max_checkpoints) is not int or max_checkpoints < 1):

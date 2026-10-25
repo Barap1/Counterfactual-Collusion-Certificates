@@ -14,6 +14,13 @@
 - Local fallback (iii) blocked by the driver's proof-receipt requirement; serial throughput ~2 units/min, so full block (4200 units) ~11 h at 3 processes.
 - EXP-003: REV_PROTO2 ISSUES; W2-FIX2 and W4-P1 running. D-045 timeboxes apply (freeze by 03:30 UTC).
 
+## ORCH final state (2026-10-25 ~05:55 UTC)
+- R2 prospective benchmark: DONE on Modal Linux (D-046). 4200/4200 units, 0 failures; RESULTS in docs/enh/r2/run_par/RESULTS.md. Criteria: RQ1 pass, RQ2 pass (by construction), RQ3 FAIL (eps0 61/200), RQ4 FAIL, RQ4b FAIL, RQ5 FAIL, RQ6 descriptive. R3 review ISSUES (provenance only, corrected in PARALLEL_EXECUTION.md).
+- Figures: figures/enh/prospective. Explorer rebuilt (21 cases). Paper v2 filled, 16 pages, main text 7 pages.
+- EXP-003: NOT COMPLETED (D-047a). No EXP-003 Modal apps running. Paper does not claim it.
+- Judge summary, demo script, final review in docs/enh; R4 re-check ISSUES only on explorer HEAD stamp (explicit disclosure).
+- Modal spend: ledger cumulative upper bound ~$5.4 of $45 stop (benchmark row is an upper-bound estimate).
+
 ## ENH gates
 R1 direction ACCEPTED (D-038) · R2 benchmark protocol FROZEN (D-041; docs/enh/r2/FREEZE.json) · R3 pending results · R4/R5 pending.
 

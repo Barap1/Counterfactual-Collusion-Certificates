@@ -107,7 +107,8 @@ def session_event(row, path=DEFAULT_LEDGER, **updates):
     return row
 
 
-def reserve_session(seconds, gpu, *, cpu=4, mem_gib=16, storage_usd=0, path=DEFAULT_LEDGER, now=None):
+def reserve_session(seconds, gpu, *, cpu=4, mem_gib=16, storage_usd=0, path=DEFAULT_LEDGER, now=None,
+                    minimum_seconds=0, minimum_usd=0, reconciled_prior_usd=0, binding=None):
     """Atomically reserve startup, entire active lifetime and shutdown before spawning.
 
     An unverified/stale reservation blocks subsequent launches until reconciled.
@@ -116,29 +117,35 @@ def reserve_session(seconds, gpu, *, cpu=4, mem_gib=16, storage_usd=0, path=DEFA
     import fcntl, math, time, uuid
     from pathlib import Path
     now = time.time() if now is None else now
-    if any(not math.isfinite(x) or x < 0 for x in (seconds, storage_usd, cpu, mem_gib)) or seconds <= 0:
+    if any(not math.isfinite(x) or x < 0 for x in (seconds, storage_usd, cpu, mem_gib, minimum_seconds, minimum_usd, reconciled_prior_usd)) or seconds <= 0:
         raise ValueError('finite positive lifetime and nonnegative resource liabilities required')
     rate = container_rate(gpu, cpu, mem_gib) * MARGIN
     end = min(now + seconds, HARD_STOP_EPOCH - SHUTDOWN_SECONDS)
     if end <= now:
         raise ValueError('absolute deadline reached')
-    reserved = (end-now+SHUTDOWN_SECONDS) * rate / 3600
+    if end-now < minimum_seconds:
+        raise ValueError('reserved lifetime cannot cover projected block including startup')
+    reserved = max(minimum_usd, (end-now+SHUTDOWN_SECONDS) * rate / 3600)
     with Path(str(path)+'.admission.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         active = [r for r in session_rows(path).values() if r['state'] != 'closed']
         if active:
             raise ValueError('active/unverified session liability; reconcile teardown before launch')
-        prior = exposure(path, now=now)
+        recorded = exposure(path, now=now)
+        prior = max(recorded, reconciled_prior_usd)
         projected = prior + storage_usd + reserved
         if projected >= TOTAL_CAP or projected >= OPERATING_STOP:
             raise ValueError('projected liability reaches $45 operating stop or $51 total cap')
+        if prior > recorded:
+            ledger(path).append(dict(schema=LEDGER_SCHEMA, ts_utc=_iso(), task=TASK, backend=BACKEND_MODAL,
+                                     event='modal_run', label='reconciled-prior-adjustment', estimated_usd=prior-recorded))
         if storage_usd:
             ledger(path).append(dict(schema=LEDGER_SCHEMA, ts_utc=_iso(), task=TASK, backend=BACKEND_MODAL,
                                      event='modal_storage', estimated_usd=storage_usd))
         return session_event(dict(session_id=uuid.uuid4().hex, state='reserved', started_epoch=now,
                                   deadline_epoch=end, rate_with_margin=rate, reserved_usd=reserved,
                                   estimated_usd=0, gpu=gpu, cpu=cpu, mem_gib=mem_gib,
-                                  safety_margin=MARGIN), path)
+                                  safety_margin=MARGIN, **(binding or {})), path)
 
 
 def tick_session(row, *, path=DEFAULT_LEDGER, now=None):
