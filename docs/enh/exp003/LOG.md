@@ -1,0 +1,9 @@
+# EXP-003 LOG (RA-LEAD)
+- 2026-10-24 20:55Z start. Read BRIEF, MISSION, D-042, EXP-002 manifest, cap_investigation. Modal CLI 1.6.2 present.
+- Architecture decision: runner/replay stay LOCAL (unchanged); only the gemma4:26b Ollama server runs on Modal GPU, exposed via an authenticated tunnel/web endpoint; local runner's model base_url points to it. Spend = GPU-seconds while the server is up. Spend so far: $0.00.
+- Next: child RA-MODAL builds the Modal Ollama server + canary + 1 DEV world spike (cap $5).
+- 20:58Z launched RA-MODAL (sonnet) and RA-PROBE (codex gpt-6.1-sol medium; out in /tmp/ra_probe.out).
+- 21:04Z Director instruction: all further sub-agents must be Codex (gpt-6.1-sol medium; stdout/stderr to ops/reports/codex_runs/RA-<ID>.*); independent reviews = separate Codex thread; Codex sandbox may block network so Modal commands may need to be run by me. RA-MODAL (sonnet) already running: let it finish, launch no more Claude agents.
+- 21:00-23:40Z RA-MODAL (sonnet) built modal_server/ctl/runner/budget (ccc/exp003) and ran CPU-only spike (workspace 'barap1'): canaries passed, identity digest equals EXP-002 weight digest (Q4_K_M), but CPU latency 20-70 s/call and the DEV world attempt came out invalid. RA-MODAL then died on a session rate limit (no handoff written). Spend so far ~$0.95 (ledger, estimated with 20% margin).
+- 23:45Z BLOCKER: GPU launch fails on Modal: "Please add a payment method to use <GPU> functions" (tested L40S, T4, A100-40GB; workspace barap1). CPU-only is not viable (gemma4:26b ~20-70 s/call). Only the owner can add a payment method / enable GPUs. No GPU run possible; no fresh world run. modal app list: nothing running.
+- 23:43Z Director: GPU escalated to owner; proceed backend-independent. Launched Codex RA-WIRE (collector wiring, backend switch local/modal, manifest+seed rule, mock dry-run). Next: PROTOCOL.md with Plan M and Plan L; Codex review.
