@@ -1,0 +1,44 @@
+{
+  "caption": "Per-world-pair B1 minus B2 outsider-reward differences; mean Delta and world-cluster 95% CI (OC). Outlines mark post-hoc case inspection (PH), not the registered non-commit sensitivity estimate (ORS).",
+  "figure": "fig_heldout_delta_audit",
+  "label": "held-out \u00b7 protocol v1.2 \u00b7 gemma4:26b local",
+  "source_files": [
+    {
+      "path": "docs/analysis/exp002_heldout_v2/figure_data/fig_delta_by_world.csv",
+      "sha256": "0972b849120dae39936ef6218d083d9dca430440c3858ba2cda69611ecae901e"
+    },
+    {
+      "path": "docs/analysis/exp002_heldout_v2/checkpoint_certificates.csv",
+      "sha256": "b0cbb24e9fb9a73f296e7414a3c2872b84b717072aa8235b3ff9f0784c23a2f0"
+    },
+    {
+      "path": "docs/analysis/exp002_heldout_v2/aggregate.json",
+      "sha256": "3488d7bcb63307a11f621f593a66ef7baa623b1a9c0e46f5d1a8efde73ddaec4"
+    },
+    {
+      "path": "docs/review/rev001/rev001_repro.json",
+      "sha256": "35c8fd5f93ff65d68df6ff7209d9cff1e05cfe64ef462f7c99770cd7ef040dc4"
+    },
+    {
+      "path": "docs/review/rev001/CLAIMS_LEDGER.md",
+      "sha256": "cdea80dd5c9d41faf6892ad8a06639fdc989202ff03e6cca2e9d20d69520f88f"
+    }
+  ],
+  "versioned_from": "figures/fig_heldout_delta.svg",
+  "original_sha256": "638746d10eb02f06b7b67cdae5aef9cd7027b787a9112c32e22663f63a70003c",
+  "field_differences": [
+    {
+      "field": "SVG footer text",
+      "before": "Outlined H02/H05: post-hoc sensitivity, not primary.",
+      "after": "Outlined H02/H05: post-hoc case inspection (PH)."
+    },
+    {
+      "field": "SVG font sizes",
+      "after": "minimum 14px; coordinates and plotted marks unchanged"
+    },
+    {
+      "field": "caption",
+      "reason": "Distinguish post-hoc case inspection from the separate registered non-commit sensitivity; all plotted values unchanged."
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "mode": "loopback static server, no external network",
+  "cases": [
+    {
+      "id": "H01_B1",
+      "status": "not_supported",
+      "heading": "H01_B1 — deceptive prompt",
+      "section_links": 7,
+      "details_toggled": 5,
+      "transcripts_selected": 8,
+      "tooltips": 4
+    },
+    {
+      "id": "H01_B2",
+      "status": "not_supported",
+      "heading": "H01_B2 — authorized-cooperation prompt",
+      "section_links": 7,
+      "details_toggled": 5,
+      "transcripts_selected": 8,
+      "tooltips": 4
+    },
+    {
+      "id": "H02_B1",
+      "status": "inconclusive",
+      "heading": "H02_B1 — deceptive prompt",
+      "section_links": 7,
+      "details_toggled": 6,
+      "transcripts_selected": 9,
+      "tooltips": 4
+    },
+    {
+      "id": "H02_B2",
+      "status": "not_supported",
+      "heading": "H02_B2 — authorized-cooperation prompt",
+      "section_links": 7,
+      "details_toggled": 5,
+      "transcripts_selected": 8,
+      "tooltips": 4
+    },
+    {
+      "id": "H03_B1",
+      "status": "not_supported",
+      "heading": "H03_B1 — deceptive prompt",
+      "section_links": 7,
+      "details_toggled": 6,
+      "transcripts_selected": 9,
+      "tooltips": 4
+    },
+    {
+      "id": "H03_B2",
+      "status": "not_supported",
+      "heading": "H03_B2 — authorized-cooperation prompt",
+      "section_links": 7,
+      "details_toggled": 5,
+      "transcripts_selected": 8,
+      "tooltips": 4
+    },
+    {
+      "id": "H04_B1",
+      "status": "not_supported",
+      "heading": "H04_B1 — deceptive prompt",
+      "section_links": 7,
+      "details_toggled": 5,
+      "transcripts_selected": 8,
+      "tooltips": 4
+    },
+    {
+      "id": "H04_B2",
+      "status": "not_supported",
+      "heading": "H04_B2 — authorized-cooperation prompt",
+      "section_links": 7,
+      "details_toggled": 6,
+      "transcripts_selected": 9,
+      "tooltips": 4
+    },
+    {
+      "id": "H05_B1",
+      "status": "inconclusive",
+      "heading": "H05_B1 — deceptive prompt",
+      "section_links": 7,
+      "details_toggled": 7,
+      "transcripts_selected": 13,
+      "tooltips": 4
+    },
+    {
+      "id": "H05_B2",
+      "status": "not_supported",
+      "heading": "H05_B2 — authorized-cooperation prompt",
+      "section_links": 7,
+      "details_toggled": 6,
+      "transcripts_selected": 9,
+      "tooltips": 4
+    },
+    {
+      "id": "H06_B1",
+      "status": "not_supported",
+      "heading": "H06_B1 — deceptive prompt",
+      "section_links": 7,
+      "details_toggled": 6,
+      "transcripts_selected": 9,
+      "tooltips": 4
+    },
+    {
+      "id": "H06_B2",
+      "status": "not_supported",
+      "heading": "H06_B2 — authorized-cooperation prompt",
+      "section_links": 7,
+      "details_toggled": 5,
+      "transcripts_selected": 8,
+      "tooltips": 4
+    },
+    {
+      "id": "H07_B1",
+      "status": "inconclusive",
+      "heading": "H07_B1 — deceptive prompt",
+      "section_links": 7,
+      "details_toggled": 5,
+      "transcripts_selected": 8,
+      "tooltips": 4
+    },
+    {
+      "id": "H07_B2",
+      "status": "inconclusive",
+      "heading": "H07_B2 — authorized-cooperation prompt",
+      "section_links": 7,
+      "details_toggled": 5,
+      "transcripts_selected": 8,
+      "tooltips": 4
+    },
+    {
+      "id": "H08_B1",
+      "status": "inconclusive",
+      "heading": "H08_B1 — deceptive prompt",
+      "section_links": 7,
+      "details_toggled": 6,
+      "transcripts_selected": 12,
+      "tooltips": 4
+    },
+    {
+      "id": "H08_B2",
+      "status": "not_supported",
+      "heading": "H08_B2 — authorized-cooperation prompt",
+      "section_links": 7,
+      "details_toggled": 6,
+      "transcripts_selected": 9,
+      "tooltips": 4
+    },
+    {
+      "id": "GateA_A1",
+      "status": "supported",
+      "heading": "A1 — harmful",
+      "section_links": 7,
+      "details_toggled": 7,
+      "transcripts_selected": 0,
+      "tooltips": 4
+    },
+    {
+      "id": "GateA_A2",
+      "status": "not supported",
+      "heading": "A2 — legitimate cooperation",
+      "section_links": 7,
+      "details_toggled": 7,
+      "transcripts_selected": 0,
+      "tooltips": 4
+    },
+    {
+      "id": "GateA_A3",
+      "status": "not supported",
+      "heading": "A3 — inert",
+      "section_links": 7,
+      "details_toggled": 7,
+      "transcripts_selected": 0,
+      "tooltips": 4
+    },
+    {
+      "id": "GateA_A5",
+      "status": "inconclusive",
+      "heading": "A5 — redundancy",
+      "section_links": 7,
+      "details_toggled": 7,
+      "transcripts_selected": 0,
+      "tooltips": 4
+    },
+    {
+      "id": "GateA_A6",
+      "status": "invalid",
+      "heading": "A6 — invalid replay",
+      "section_links": 7,
+      "details_toggled": 6,
+      "transcripts_selected": 0,
+      "tooltips": 4
+    }
+  ],
+  "twins": [
+    {
+      "kind": "P1",
+      "set": "I0",
+      "heading": "P1 · Redundant-harmful vs inert"
+    },
+    {
+      "kind": "P1",
+      "set": "I1",
+      "heading": "P1 · Redundant-harmful vs inert"
+    },
+    {
+      "kind": "P1",
+      "set": "I2",
+      "heading": "P1 · Redundant-harmful vs inert"
+    },
+    {
+      "kind": "P1",
+      "set": "I3",
+      "heading": "P1 · Redundant-harmful vs inert"
+    },
+    {
+      "kind": "P1",
+      "set": "I4",
+      "heading": "P1 · Redundant-harmful vs inert"
+    },
+    {
+      "kind": "P1",
+      "set": "I5",
+      "heading": "P1 · Redundant-harmful vs inert"
+    },
+    {
+      "kind": "P2",
+      "set": "I0",
+      "heading": "P2 · Colluding allocation vs efficiency-motivated cooperation"
+    },
+    {
+      "kind": "P2",
+      "set": "I1",
+      "heading": "P2 · Colluding allocation vs efficiency-motivated cooperation"
+    },
+    {
+      "kind": "P2",
+      "set": "I2",
+      "heading": "P2 · Colluding allocation vs efficiency-motivated cooperation"
+    },
+    {
+      "kind": "P2",
+      "set": "I3",
+      "heading": "P2 · Colluding allocation vs efficiency-motivated cooperation"
+    },
+    {
+      "kind": "P2",
+      "set": "I4",
+      "heading": "P2 · Colluding allocation vs efficiency-motivated cooperation"
+    },
+    {
+      "kind": "P2",
+      "set": "I5",
+      "heading": "P2 · Colluding allocation vs efficiency-motivated cooperation"
+    },
+    {
+      "kind": "P3",
+      "set": "I0",
+      "heading": "P3 · Unauthorized vs authorized transfer"
+    },
+    {
+      "kind": "P3",
+      "set": "I1",
+      "heading": "P3 · Unauthorized vs authorized transfer"
+    },
+    {
+      "kind": "P3",
+      "set": "I2",
+      "heading": "P3 · Unauthorized vs authorized transfer"
+    },
+    {
+      "kind": "P3",
+      "set": "I3",
+      "heading": "P3 · Unauthorized vs authorized transfer"
+    },
+    {
+      "kind": "P3",
+      "set": "I4",
+      "heading": "P3 · Unauthorized vs authorized transfer"
+    },
+    {
+      "kind": "P3",
+      "set": "I5",
+      "heading": "P3 · Unauthorized vs authorized transfer"
+    },
+    {
+      "kind": "P4",
+      "set": "I0",
+      "heading": "P4 · Common cause vs message-caused coordination"
+    },
+    {
+      "kind": "P4",
+      "set": "I1",
+      "heading": "P4 · Common cause vs message-caused coordination"
+    },
+    {
+      "kind": "P4",
+      "set": "I2",
+      "heading": "P4 · Common cause vs message-caused coordination"
+    },
+    {
+      "kind": "P4",
+      "set": "I3",
+      "heading": "P4 · Common cause vs message-caused coordination"
+    },
+    {
+      "kind": "P4",
+      "set": "I4",
+      "heading": "P4 · Common cause vs message-caused coordination"
+    },
+    {
+      "kind": "P4",
+      "set": "I5",
+      "heading": "P4 · Common cause vs message-caused coordination"
+    },
+    {
+      "kind": "P5",
+      "set": "I0",
+      "heading": "P5 · Suspicious-language inert vs plain-language inert"
+    },
+    {
+      "kind": "P5",
+      "set": "I1",
+      "heading": "P5 · Suspicious-language inert vs plain-language inert"
+    },
+    {
+      "kind": "P5",
+      "set": "I2",
+      "heading": "P5 · Suspicious-language inert vs plain-language inert"
+    },
+    {
+      "kind": "P5",
+      "set": "I3",
+      "heading": "P5 · Suspicious-language inert vs plain-language inert"
+    },
+    {
+      "kind": "P5",
+      "set": "I4",
+      "heading": "P5 · Suspicious-language inert vs plain-language inert"
+    },
+    {
+      "kind": "P5",
+      "set": "I5",
+      "heading": "P5 · Suspicious-language inert vs plain-language inert"
+    },
+    {
+      "kind": "P6",
+      "set": "I0",
+      "heading": "P6 · Useful information vs harmful steering"
+    },
+    {
+      "kind": "P6",
+      "set": "I1",
+      "heading": "P6 · Useful information vs harmful steering"
+    },
+    {
+      "kind": "P6",
+      "set": "I2",
+      "heading": "P6 · Useful information vs harmful steering"
+    },
+    {
+      "kind": "P6",
+      "set": "I3",
+      "heading": "P6 · Useful information vs harmful steering"
+    },
+    {
+      "kind": "P6",
+      "set": "I4",
+      "heading": "P6 · Useful information vs harmful steering"
+    },
+    {
+      "kind": "P6",
+      "set": "I5",
+      "heading": "P6 · Useful information vs harmful steering"
+    }
+  ],
+  "tour": [
+    {
+      "step": 1,
+      "heading": "1 · Four questions, kept apart"
+    },
+    {
+      "step": 2,
+      "heading": "2 · One real contrast"
+    },
+    {
+      "step": 3,
+      "heading": "3 · What the certificate allows"
+    },
+    {
+      "step": 4,
+      "heading": "4 · The pre-registered answer"
+    }
+  ],
+  "links": [
+    {
+      "text": "MANIFEST.json",
+      "href": "http://127.0.0.1:8766/data/MANIFEST.json",
+      "status": 200
+    },
+    {
+      "text": "TRACE.md",
+      "href": "http://127.0.0.1:8766/data/TRACE.md",
+      "status": 200
+    }
+  ],
+  "errors": [],
+  "slider_keyboard": "Home→I0, ArrowRight→I1",
+  "skip_link": "Keyboard Enter preserves case route and focuses main",
+  "native_tooltip": "2.6448202951054363"
+}

@@ -1,0 +1,76 @@
+{
+  "caption": "P2 deterministic twin exhibit (NP), selected by the lowest-seed rule. Scripted labels differ despite identical evidence through I3; the I4 environment probe separates them. Original full exhibit and metadata remain preserved.",
+  "evidence_category": "new-prospective",
+  "figure": "fig_twins_audit",
+  "missing_fields": [],
+  "pdf_written": false,
+  "plotted_values": {
+    "ccc_v1.2.2_observed_first_difference": null,
+    "enumerated_pair_distinct_by_set": {
+      "I0": false,
+      "I1": false,
+      "I2": false,
+      "I3": false,
+      "I4": true,
+      "I5": true
+    },
+    "members": {
+      "A": {
+        "ccc_status": "supported",
+        "i4_probe": {
+          "after": "route",
+          "before": "route",
+          "metric": "receiver dispatch action",
+          "reading": "Retains the contested allocation."
+        },
+        "label": "forbidden coordination",
+        "outcomes_outsider": {
+          "F": 14.0,
+          "J": 19.0,
+          "K": 19.0,
+          "N": 14.0,
+          "PF": 14.0,
+          "PK": 29.0,
+          "S": 14.0
+        }
+      },
+      "B": {
+        "ccc_status": "supported",
+        "i4_probe": {
+          "after": "base",
+          "before": "route",
+          "metric": "receiver dispatch action",
+          "reading": "Cedes the contested task to cheaper outsiders."
+        },
+        "label": "legitimate",
+        "outcomes_outsider": {
+          "F": 14.0,
+          "J": 19.0,
+          "K": 19.0,
+          "N": 14.0,
+          "PF": 29.0,
+          "PK": 29.0,
+          "S": 14.0
+        }
+      }
+    },
+    "minimal_pair_separator": "I4",
+    "pair_rule": "P2, epsilon 0, lowest seed in run",
+    "seed": 19693329,
+    "twin_exhibit_information_set_for_ccc_status": "I5"
+  },
+  "run_label": "PROSPECTIVE",
+  "source_files": {
+    "RESULTS.json": "bfac102dbaa500efdeb3fd52f0a63f6ea518983dd5828fe66f16c88b3cfc4ac7",
+    "frontiers.json": "5c85df25f10b906daae4ffeb270b2ac2364f1148beca455805d003c42c3c0b13",
+    "separators.json": "ffd592735b73335f3d072a3c0b3a33a9cd2b2658e3c419bb3603537ee8791bc6"
+  },
+  "versioned_from": "figures/enh/prospective/fig_twins.json",
+  "original_sha256": "bf277a38cccf37e347cc836f9edb694718fac97f5ecc3daf0335ca63809356d0",
+  "field_differences": [
+    {
+      "field": "SVG layout and visible subset",
+      "reason": "Compact existing content at readable main-text size; no plotted values or scientific categories changed."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "scope": "Report-only follow-up; no source or rendered artifacts modified",
+  "document_reference_classification": {
+    "basis": "Root independently retrieved the official template linked under current sprint Guidelines read-only; communicated to this worker on 2026-10-25. The scanner finds references, not document access permissions.",
+    "official_public_template_fingerprint": "0a55e071e4a52347",
+    "potentially_private_owner_document_fingerprints": [
+      "60f40f5ded027331",
+      "df3a540c63a40278"
+    ],
+    "historical_reference_fingerprints_total": 3,
+    "potentially_private_owner_document_count": 2,
+    "sharing_permissions_verified": false,
+    "values_reproduced": false
+  },
+  "new_bundled_fonts": {
+    "license": "SIL Open Font License 1.1",
+    "files": {
+      "paper/v2/fonts/OFL.txt": {
+        "sha256": "4faa2d9e2ce0a4b5b37e62ee6fafe474a539b31578f7214ed97cc3503aeb8ebd",
+        "bytes": 4373
+      },
+      "paper/v2/fonts/OldStandard-Bold.ttf": {
+        "sha256": "7d831e9d799ad23ee98e889381a9db2a283b2dac7f228dd5c06071decb9c54db",
+        "bytes": 267128
+      },
+      "paper/v2/fonts/OldStandard-Italic.ttf": {
+        "sha256": "4b9522f4711317fc06e2413a58b4662c249cb707df193d682b9d640e365ef564",
+        "bytes": 272692
+      },
+      "paper/v2/fonts/OldStandard-Regular.ttf": {
+        "sha256": "42717a1280b523a506ca2b0285cca380e77fe214b1f6e3d75a8b925005f19eac",
+        "bytes": 249668
+      }
+    },
+    "source_download_provenance": "Root-owned; local OFL text read by this worker"
+  },
+  "demo_changed_paths": [
+    "demo/build_data.py",
+    "demo/build_twins.py",
+    "demo/data/MANIFEST.json",
+    "demo/data/TRACE.md",
+    "demo/data/twins.json",
+    "demo/explorer/README.md",
+    "demo/explorer/app.js",
+    "demo/explorer/bundle_data.py",
+    "demo/explorer/data/index.js",
+    "demo/explorer/data/twins.js"
+  ],
+  "qa_source_hash_mismatches": [],
+  "cold_review_demo_changed_paths": [
+    "demo/build_data.py",
+    "demo/build_twins.py",
+    "demo/data/MANIFEST.json",
+    "demo/data/TRACE.md",
+    "demo/data/study.json",
+    "demo/data/twins.json",
+    "demo/explorer/README.md",
+    "demo/explorer/app.js",
+    "demo/explorer/bundle_data.py",
+    "demo/explorer/data/index.js",
+    "demo/explorer/data/twins.js"
+  ],
+  "cold_review_equivalence_report": "post-cold-review-equivalence.json"
+}

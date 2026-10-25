@@ -1,0 +1,47 @@
+ops/reports/final_audit/science/JUDGE_SUMMARY.diff:7: trailing whitespace.
++ 
+ops/reports/final_audit/science/JUDGE_SUMMARY.diff:9: trailing whitespace.
++ 
+ops/reports/final_audit/science/JUDGE_SUMMARY.diff:11: trailing whitespace.
++ 
+ops/reports/final_audit/science/JUDGE_SUMMARY.diff:13: trailing whitespace.
++ 
+ops/reports/final_audit/science/JUDGE_SUMMARY.diff:16: trailing whitespace.
++ 
+ops/reports/final_audit/science/JUDGE_SUMMARY.diff:18: trailing whitespace.
++ 
+ops/reports/final_audit/science/JUDGE_SUMMARY.diff:20: trailing whitespace.
++ 
+ops/reports/final_audit/science/JUDGE_SUMMARY.diff:22: trailing whitespace.
++ 
+ops/reports/final_audit/science/JUDGE_SUMMARY.diff:25: trailing whitespace.
++ 
+ops/reports/final_audit/science/PARALLEL_EXECUTION.diff:12: trailing whitespace.
++ 
+ops/reports/final_audit/science/PARALLEL_EXECUTION.diff:21: trailing whitespace.
++ 
+ops/reports/final_audit/science/PARALLEL_EXECUTION.diff:25: trailing whitespace.
++ 
+ops/reports/final_audit/science/PARALLEL_EXECUTION.diff:33: trailing whitespace.
++ 
+ops/reports/final_audit/science/PARALLEL_EXECUTION.diff:35: trailing whitespace.
++ 
+ops/reports/final_audit/science/PARALLEL_EXECUTION.diff:39: trailing whitespace.
++ 
+ops/reports/final_audit/science/PARALLEL_EXECUTION.diff:48: trailing whitespace.
++ 
+ops/reports/final_audit/science/PLATFORM_DIVERGENCE.md:2665: new blank line at EOF.
+ops/reports/final_audit/tests/pytest_stdin_attempt.log:24: trailing whitespace.
++tests/test_bench_parallel.py:46: 
+ops/reports/final_audit/tests/pytest_stdin_attempt.log:25: trailing whitespace.
++_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+ops/reports/final_audit/tests/pytest_stdin_attempt.log:32: trailing whitespace.
++_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+ops/reports/final_audit/tests/pytest_stdin_attempt.xml:13: trailing whitespace.
++tests/test_bench_parallel.py:46: 
+ops/reports/final_audit/tests/pytest_stdin_attempt.xml:14: trailing whitespace.
++_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+ops/reports/final_audit/tests/pytest_stdin_attempt.xml:21: trailing whitespace.
++_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+paper/v2/fonts/OFL.txt:21: trailing whitespace.
++fonts, including any derivative works, can be bundled, embedded, 

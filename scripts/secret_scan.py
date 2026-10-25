@@ -19,24 +19,35 @@ patterns=[
     re.compile(rb'\bAKIA[0-9A-Z]{16}\b'),
     re.compile(rb'(?i)(?:api[_-]?key|access[_-]?token|secret)\s*[=:]\s*[\x22\x27]?[A-Za-z0-9_/-]{24,}'),
     re.compile(rb'https://docs\.google\.com/(?:document|spreadsheets|presentation)/d/[A-Za-z0-9_-]+'),
-    # Drive IDs: /d/ tokens, mixed-case/digit quoted tokens, or known 1-prefixed format.
-    re.compile(rb'''(?<![A-Za-z0-9_-])(?:/d/[A-Za-z0-9_-]{44}|[\x22\x27](?=[A-Za-z0-9_-]{0,43}[A-Z])(?=[A-Za-z0-9_-]{0,43}[a-z])(?=[A-Za-z0-9_-]{0,43}[0-9])[A-Za-z0-9_-]{44})(?![A-Za-z0-9_-])|(?<![A-Za-z0-9_-])1(?=[A-Za-z0-9_-]{0,43}[G-Zg-z_-])[A-Za-z0-9_-]{43}(?![A-Za-z0-9_-])'''),
 ]
-secrets=[]
-env=ROOT/'.env'
-if env.exists():
-    from dotenv import dotenv_values
-    for key,value in dotenv_values(env,interpolate=False).items():
-        if re.search(r'(?i)(key|token|secret|password)',key) and value:
-            secrets.append(value.encode())
-else:
-    print('Exact-value check unavailable: local .env absent')
+# Tokenize exact-length candidates before checking character classes. Repeated
+# bounded lookaheads across large frozen JSON reports made the old rule costly.
+drive_candidates = re.compile(rb'''(?<![A-Za-z0-9_-])(/d/|[\x22\x27])?([A-Za-z0-9_-]{44})(?![A-Za-z0-9_-])''')
+
+def has_document_id(data):
+    for match in drive_candidates.finditer(data):
+        prefix, token = match.groups()
+        if prefix == b'/d/':
+            return True
+        if prefix in (b'"', b"'") and all(any(test(c) for c in token) for test in
+                (lambda c: 65 <= c <= 90, lambda c: 97 <= c <= 122, lambda c: 48 <= c <= 57)):
+            return True
+        if token.startswith(b'1') and re.search(rb'[G-Zg-z_-]', token):
+            return True
+    return False
+# Deliberately never open credentials, even for exact-value comparisons.
+# Pattern scanning is limited evidence; it does not establish privacy clearance.
 release_only='--release-only' in sys.argv
-extra_roots=[a for a in sys.argv[1:] if a != '--release-only']
-tracked=subprocess.check_output(['git','ls-files','-z','--','.',':!:docs/runner/exp002-*',':!:runs/exp002',':!:ops/budget_ledger.jsonl',':!:starter']).split(b'\0')
+changed_only='--changed-only' in sys.argv
+if release_only and changed_only:
+    raise SystemExit('Choose --release-only or --changed-only, not both')
+extra_roots=[a for a in sys.argv[1:] if a not in ('--release-only', '--changed-only')]
+selection=(['git','diff','--cached','--name-only','--diff-filter=ACM','-z'] if changed_only
+           else ['git','ls-files','-z'])
+tracked=subprocess.check_output(selection+['--','.',':!:docs/runner/exp002-*',':!:runs/exp002',':!:ops/budget_ledger.jsonl',':!:starter']).split(b'\0')
 files=set() if release_only else {Path(os.fsdecode(n)) for n in tracked if n and not forbidden(Path(os.fsdecode(n)))}
 # Scan newly prepared artifacts as well as tracked files, pruning before traversal.
-for top in ['scripts','docs/release']+extra_roots:
+for top in ([] if changed_only else ['scripts','docs/release'])+extra_roots:
     p=Path(top)
     if p.is_absolute():
         p=p.resolve().relative_to(ROOT)
@@ -52,10 +63,9 @@ def scan(data,label):
     count+=1
     if count % 250 == 0: print(f"Scan progress: {count} blobs",flush=True)
     rules=[str(i+1) for i,r in enumerate(patterns) if r.search(data)]
-    exact=any(v in data for v in secrets)
-    if rules or exact:
-        safe=label if not any(v in label.encode() for v in secrets) else '[redacted path]'
-        findings.append((safe,rules,exact))
+    if has_document_id(data): rules.append('7')
+    if rules:
+        findings.append((label,rules))
 for p in sorted(files):
     if not p.is_symlink() and p.is_file(): scan(p.read_bytes(),str(p))
 # Check staged blobs independently, including files whose working copies changed.
@@ -71,8 +81,8 @@ if not release_only:
                 size=int(header[2]); data=batch.stdout.read(size); batch.stdout.read(1)
                 scan(data,'staged:'+str(p))
         batch.stdin.close()
-for label,rules,exact in findings:
-    print(f'Flagged path={label!r}; regex rules={rules}; exact credential match={exact}')
+for label,rules in findings:
+    print(f'Flagged path={label!r}; regex rules={rules}')
 # Never print matched content or credential values.
-print(f'Scanned {count} working/generated/staged blobs; {len(findings)} flagged blobs; exact-value source available={env.exists()}')
+print(f'Scanned {count} working/generated/staged blobs; {len(findings)} flagged blobs; credential files never read')
 raise SystemExit(1 if findings else 0)

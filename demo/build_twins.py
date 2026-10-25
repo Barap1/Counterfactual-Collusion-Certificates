@@ -122,7 +122,7 @@ def main():
 
     def src(p):
         sources[rel(p)] = sha_file(p)
-    for name in ('records.json.gz', 'COMPLETE.json', 'manifest.json', 'separators.json', 'DEV_REPORT.md'):
+    for name in ('records.json.gz', 'COMPLETE.json', 'manifest.json', 'separators.json', 'DEV_REPORT.md', 'RESULTS.json'):
         if (run / name).exists():
             src(run / name)
     if dev_run != run:
@@ -180,11 +180,18 @@ def main():
                           first_separating_set=first_view, first_divergence=div,
                           enumerated_pair_separator=sep.get((kind, 0, seed)), members=members))
     dev = a.label == 'DEV'
+    aggregate = {}
+    if not dev:
+        report = json.loads((run / 'RESULTS.json').read_text())
+        aggregate = {rq: row['status'] for rq, row in report['rq'].items()}
     out = dict(
         schema='ccc.demo.twins/1', label=a.label,
-        provenance_label='development, structural benchmark (scripted)' if dev else 'new-prospective, frozen before outcomes',
+        provenance_label='development, structural benchmark (scripted)' if dev else 'prospective scripted benchmark, selected epsilon=0 exhibit',
         evidence_category='development' if dev else 'new-prospective',
         banner='Development data — prospective results pending.' if dev else None,
+        aggregate_criteria=aggregate,
+        scope_note=None if dev else 'Only the deterministic epsilon=0 stratum is shown. Restricting established claims to epsilon=0 was post hoc, after outcomes were visible (D-048). The epsilon=0.1 stratum is platform-dependent and not established; substantive method decisions differ, not only bytes.',
+        limitations='Scripted labels do not establish real-agent intent. End-to-end support-level positive-control recovery and useful real-agent detection sensitivity remain unestablished. EXP-003 was not completed.',
         run_dir=rel(run), selection_rule='Per pair type, the pair at the lowest seed in the run at epsilon = 0 (deterministic; no outcome-based choice). relayed is a single case.',
         strongest_baseline=dict(id=base_id, balanced_accuracy=ba, rule='docs/enh/r2/PROTOCOL.md s5: of {B2+, B3b}, higher balanced accuracy for attributable-M at I1 over the DEV block; ties to B2+.'),
         methods=[dict(id=i, label=l) for i, l, _ in METHODS], sets=[dict(id=s, adds=NEW_EVIDENCE[s]) for s in SETS],

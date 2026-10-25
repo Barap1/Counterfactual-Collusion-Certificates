@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scientific_values_and_statuses_changed": false,
+  "source_study_change": "noncommit_sensitivity.category_note only",
+  "exact_previous_source_study_sha256": "be08bf59bd3b2d63f3c16db87a6e50f8b65f5669c240f795e281d229e0ae0aab",
+  "new_source_study_sha256": "4e3ea915d3a22f955b01b4d338b84fe3dfeacd4833a7ef81d2d8053c70dad34d",
+  "normalized_study_js_line_byte_identical": true,
+  "normalized_study_js_line_sha256": "9703d346e5d9c587b289c4505c2fa707ae9faba55774cf84187b3009f792c6ce",
+  "index_data_byte_identical": true,
+  "case_data_byte_identical": true,
+  "twins_data_byte_identical": true,
+  "app_js_unchanged": true,
+  "metadata_differences": {
+    "manifest_sha256": {
+      "before": "86cc3928f0e35ef707ce20e8aa8d26a0ca0314c181fafb60dd52fbfc13d63765",
+      "after": "bdb66f194e5ba4abf1e6b18f20ee4ec6ff44b954ad0adbb19f3685a31cddb687"
+    }
+  },
+  "generated_pack_files_changed": [
+    "demo/data/TRACE.md",
+    "demo/data/study.json"
+  ],
+  "screenshot_decision": "No Study screenshot rerun: exact serialized study view data are byte-identical after the existing normalization. Existing screenshot provenance bindings remain the v2 capture record; only About provenance text changes to the newly verified manifest SHA.",
+  "prior_correction_snapshot_sha256": "13425fb38db0b402b7fa68d3ee28d526956a39b3b8d2793ff11a2f90c04861b9"
+}

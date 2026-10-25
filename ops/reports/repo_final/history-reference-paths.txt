@@ -1,0 +1,10 @@
+commit 0f55155598fceb846591f577e37336ccb4973555
+
+paper/final/STYLE_SPEC.md
+paper/final/qa/official_template_live.json
+commit 4811eaf24b3bdc9e73bb96c1cbf3cf7288c429ac
+
+docs/enh/writing/NOTES_judging_raw.md
+commit e65054c8bc97011413c1cc0637df0e0fcc7d5fa8
+
+docs/enh/writing/NOTES_judging_raw.md

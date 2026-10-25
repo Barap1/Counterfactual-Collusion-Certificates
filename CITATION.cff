@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite this research artifact when using CCC's code or constructed examples."
+title: "When Cooperation Looks Like Collusion: The Limits of Counterfactual Auditing in Multi-Agent AI"
+type: software
+authors:
+  - family-names: Patel
+    given-names: Aarav
+    affiliation: Georgia Institute of Technology
+repository-code: "https://github.com/Barap1/Counterfactual-Collusion-Certificates"
+url: "https://github.com/Barap1/Counterfactual-Collusion-Certificates"
+date-released: 2026-10-25
+abstract: "Executable counterexamples and controlled replays studying the gap between causal message influence and policy-conditioned collusion attribution."
+license: MIT

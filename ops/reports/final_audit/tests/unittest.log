@@ -1,0 +1,685 @@
+test_behavioural_retry_rejected (tests.analysis.test_analysis.RegressionTests.test_behavioural_retry_rejected) ... ok
+test_deprecated_N_cannot_enable_support (tests.analysis.test_analysis.RegressionTests.test_deprecated_N_cannot_enable_support) ... ok
+test_grid_search_matches_independent_reference (tests.analysis.test_analysis.RegressionTests.test_grid_search_matches_independent_reference) ... ok
+test_holdout_requires_freeze_and_hashes (tests.analysis.test_analysis.RegressionTests.test_holdout_requires_freeze_and_hashes) ... ok
+test_missing_fill_sensitivity_hand_calculation (tests.analysis.test_analysis.RegressionTests.test_missing_fill_sensitivity_hand_calculation) ... ok
+test_path_traversal_rejected (tests.analysis.test_analysis.RegressionTests.test_path_traversal_rejected) ... ok
+test_reject_mixed_model_duplicates_invalid_rewards (tests.analysis.test_analysis.RegressionTests.test_reject_mixed_model_duplicates_invalid_rewards) ... ok
+test_session_break_excludes_entire_checkpoint (tests.analysis.test_analysis.RegressionTests.test_session_break_excludes_entire_checkpoint) ... ok
+test_sham_hash_rule (tests.analysis.test_analysis.RegressionTests.test_sham_hash_rule) ... ok
+test_tv_exact_null_subtraction (tests.analysis.test_analysis.RegressionTests.test_tv_exact_null_subtraction) ... ok
+test_v3_failure_invalid (tests.analysis.test_analysis.RegressionTests.test_v3_failure_invalid) ... ok
+test_validation_report_records_multiple_gates (tests.analysis.test_analysis.RegressionTests.test_validation_report_records_multiple_gates) ... ok
+test_01_metric_sign_and_identity (tests.analysis.test_analysis.RequiredTests.test_01_metric_sign_and_identity) ... ok
+test_02_reward_identity_joint_never_read (tests.analysis.test_analysis.RequiredTests.test_02_reward_identity_joint_never_read) ... ok
+test_03_vectors_minimum_monotone_ties (tests.analysis.test_analysis.RequiredTests.test_03_vectors_minimum_monotone_ties) ... ok
+test_04_coverage_simulation (tests.analysis.test_analysis.RequiredTests.test_04_coverage_simulation) ... ok
+test_05_bootstrap_world_unit (tests.analysis.test_analysis.RequiredTests.test_05_bootstrap_world_unit) ... ok
+test_06_sign_flip_bruteforce (tests.analysis.test_analysis.RequiredTests.test_06_sign_flip_bruteforce) ... ok
+test_07_holm (tests.analysis.test_analysis.RequiredTests.test_07_holm) ... ok
+test_08_ineligible_sensitivities (tests.analysis.test_analysis.RequiredTests.test_08_ineligible_sensitivities) ... ok
+test_09_missing_and_noncommit (tests.analysis.test_analysis.RequiredTests.test_09_missing_and_noncommit) ... ok
+test_10_retries_preserve_failures (tests.analysis.test_analysis.RequiredTests.test_10_retries_preserve_failures) ... ok
+test_11_pinning_treatment_unread (tests.analysis.test_analysis.RequiredTests.test_11_pinning_treatment_unread) ... ok
+test_12_labels_isolated (tests.analysis.test_analysis.RequiredTests.test_12_labels_isolated) ... ok
+test_13_outputs_byte_deterministic (tests.analysis.test_analysis.RequiredTests.test_13_outputs_byte_deterministic) ... ok
+test_14_no_network_no_outside_writes (tests.analysis.test_analysis.RequiredTests.test_14_no_network_no_outside_writes) ... ok
+test_15_empty_data_no_nan (tests.analysis.test_analysis.RequiredTests.test_15_empty_data_no_nan) ... ok
+test_16_status_truth_table (tests.analysis.test_analysis.RequiredTests.test_16_status_truth_table) ... ok
+test_active_run_is_refused (tests.analysis.test_input_guard.InputGuardTests.test_active_run_is_refused) ... ok
+test_cli_forwards_watchdog_directory (tests.analysis.test_input_guard.InputGuardTests.test_cli_forwards_watchdog_directory) ... ok
+test_explicit_watchdog_directory_uses_same_stale_rules (tests.analysis.test_input_guard.InputGuardTests.test_explicit_watchdog_directory_uses_same_stale_rules) ... ok
+test_finished_run_with_failed_attempt_is_accepted_and_counted (tests.analysis.test_input_guard.InputGuardTests.test_finished_run_with_failed_attempt_is_accepted_and_counted) ... ok
+test_holdout_refusal_unchanged (tests.analysis.test_input_guard.InputGuardTests.test_holdout_refusal_unchanged) ... ok
+test_incomplete_run_without_terminal_record_is_refused (tests.analysis.test_input_guard.InputGuardTests.test_incomplete_run_without_terminal_record_is_refused) ... ok
+test_lock_newer_than_marker_without_pid_is_refused (tests.analysis.test_input_guard.InputGuardTests.test_lock_newer_than_marker_without_pid_is_refused) ... ok
+test_lock_with_marker_and_live_pid_is_refused (tests.analysis.test_input_guard.InputGuardTests.test_lock_with_marker_and_live_pid_is_refused) ... ok
+test_sibling_marker_dead_pid_warns_in_validation_report (tests.analysis.test_input_guard.InputGuardTests.test_sibling_marker_dead_pid_warns_in_validation_report) ... ok
+test_sibling_marker_live_pid_is_refused (tests.analysis.test_input_guard.InputGuardTests.test_sibling_marker_live_pid_is_refused) ... ok
+test_stale_lock_with_dead_pid_is_accepted_with_warning (tests.analysis.test_input_guard.InputGuardTests.test_stale_lock_with_dead_pid_is_accepted_with_warning) ... ok
+test_both_criteria_and_boundaries (tests.analysis.test_label_correction.LabelCorrectionTests.test_both_criteria_and_boundaries) ... ok
+test_confirmatory_family_and_descriptive_conditional (tests.analysis.test_label_correction.LabelCorrectionTests.test_confirmatory_family_and_descriptive_conditional) ... ok
+test_dev_exploratory_and_holdout_not_supported (tests.analysis.test_label_correction.LabelCorrectionTests.test_dev_exploratory_and_holdout_not_supported) ... ok
+test_floors_and_phase (tests.analysis.test_label_correction.LabelCorrectionTests.test_floors_and_phase) ... ok
+test_active_synthetic_refused_before_manifest (tests.analysis.test_readiness.ReadinessTests.test_active_synthetic_refused_before_manifest) ... ok
+test_real_frozen_manifest_contract_without_outcomes (tests.analysis.test_readiness.ReadinessTests.test_real_frozen_manifest_contract_without_outcomes) ... skipped 'REL-001a prohibits reading real EXP-002 manifest; owner/controller must run separately'
+test_runner_end_to_end (tests.analysis.test_readiness.ReadinessTests.test_runner_end_to_end) ... ok
+test_synthetic_cannot_enable_live (tests.analysis.test_readiness.ReadinessTests.test_synthetic_cannot_enable_live) ... ok
+test_v9_s1_tost_uncertain_and_invalid (tests.analysis.test_readiness.ReadinessTests.test_v9_s1_tost_uncertain_and_invalid) ... ok
+test_whole_world_retry_does_not_pool_old_branches (tests.analysis.test_readiness.ReadinessTests.test_whole_world_retry_does_not_pool_old_branches) ... ok
+test_eligible_world_count_and_incomplete (tests.analysis.test_stage2.Stage2Tests.test_eligible_world_count_and_incomplete) ... ok
+test_holdout_rejected_even_kn (tests.analysis.test_stage2.Stage2Tests.test_holdout_rejected_even_kn) ... ok
+test_ignores_unreadable_kn_outcomes (tests.analysis.test_stage2.Stage2Tests.test_ignores_unreadable_kn_outcomes) ... ok
+test_pilot_reader_never_opens_kn_outcomes (tests.analysis.test_stage2.Stage2Tests.test_pilot_reader_never_opens_kn_outcomes) ... ok
+test_pooled_formula_and_rounding (tests.analysis.test_stage2.Stage2Tests.test_pooled_formula_and_rounding) ... ok
+test_reject_manifest_before_outputs (tests.analysis.test_stage2.Stage2Tests.test_reject_manifest_before_outputs) ... ok
+test_theta_missing_ties_weak_and_holdout (tests.analysis.test_stage2.Stage2Tests.test_theta_missing_ties_weak_and_holdout) ... ok
+test_thin_and_floor (tests.analysis.test_stage2.Stage2Tests.test_thin_and_floor) ... ok
+test_zero_noise_diagnostic (tests.analysis.test_stage2.Stage2Tests.test_zero_noise_diagnostic) ... ok
+test_author_binding_and_private_quantities (tests.audit.test_amd_fix_1.FixRegressions.test_author_binding_and_private_quantities) ... ok
+test_legacy_or_unvalidated_n_never_supports_or_vetoes (tests.audit.test_amd_fix_1.FixRegressions.test_legacy_or_unvalidated_n_never_supports_or_vetoes) ... ok
+test_private_quantities_abstain_through_decide (tests.audit.test_amd_fix_1.FixRegressions.test_private_quantities_abstain_through_decide) ... ok
+test_shared_sender_commitments_abstain_through_decide (tests.audit.test_amd_fix_1.FixRegressions.test_shared_sender_commitments_abstain_through_decide) ... ok
+test_study_excludes_deprecated_filler_and_rechecks_provenance (tests.audit.test_amd_fix_1.FixRegressions.test_study_excludes_deprecated_filler_and_rechecks_provenance) ... ok
+test_NC1_other_agent_planning_to_take_same_task (tests.audit.test_commitments_contract.NegativeControls.test_NC1_other_agent_planning_to_take_same_task) ... ok
+test_NC2_generic_verb_lines_give_no_tuple (tests.audit.test_commitments_contract.NegativeControls.test_NC2_generic_verb_lines_give_no_tuple) ... ok
+test_NC3_negated_commitment (tests.audit.test_commitments_contract.NegativeControls.test_NC3_negated_commitment) ... ok
+test_NC4_same_agent_different_task (tests.audit.test_commitments_contract.NegativeControls.test_NC4_same_agent_different_task) ... ok
+test_NC5_prime_instead_of_negates_only_following_task (tests.audit.test_commitments_contract.NegativeControls.test_NC5_prime_instead_of_negates_only_following_task) ... ok
+test_NC6_task_in_blocked_or_infeasible_clause (tests.audit.test_commitments_contract.NegativeControls.test_NC6_task_in_blocked_or_infeasible_clause) ... ok
+test_NC7_outsider_quote_of_unrelated_task (tests.audit.test_commitments_contract.NegativeControls.test_NC7_outsider_quote_of_unrelated_task) ... ok
+test_PC1_verbatim_copy_by_sender_on_board0 (tests.audit.test_commitments_contract.PositiveControls.test_PC1_verbatim_copy_by_sender_on_board0) ... ok
+test_PC2_current_assignments_row (tests.audit.test_commitments_contract.PositiveControls.test_PC2_current_assignments_row) ... skipped 'SPEC-AMBIGUOUS: the row syntax of a CURRENT ASSIGNMENTS entry is not specified; only that a row gives (agent, task).'
+test_PC3_third_person_relay_compared_on_agent_and_task (tests.audit.test_commitments_contract.PositiveControls.test_PC3_third_person_relay_compared_on_agent_and_task) ... ok
+test_PC4_explicit_paraphrase_from_other_wording (tests.audit.test_commitments_contract.PositiveControls.test_PC4_explicit_paraphrase_from_other_wording) ... ok
+test_PC5_private_resend_by_sender (tests.audit.test_commitments_contract.PositiveControls.test_PC5_private_resend_by_sender) ... ok
+test_PC6_strict_superset_same_agent_line_matches (tests.audit.test_commitments_contract.PositiveControls.test_PC6_strict_superset_same_agent_line_matches) ... ok
+test_PC7_instead_of_then_clause_matches_for_taken_task (tests.audit.test_commitments_contract.PositiveControls.test_PC7_instead_of_then_clause_matches_for_taken_task) ... ok
+test_attribution_maps_to_claim (tests.audit.test_commitments_contract.SpecRulesBeyondControls.test_attribution_maps_to_claim) ... skipped "SPEC-AMBIGUOUS: the surface form of 'attribution' is not specified; the spec says only that it maps to 'claim'."
+test_clause_split_stops_anchor_crossing_sentence_boundary (tests.audit.test_commitments_contract.SpecRulesBeyondControls.test_clause_split_stops_anchor_crossing_sentence_boundary) ... ok
+test_containment_requires_every_sender_pair (tests.audit.test_commitments_contract.SpecRulesBeyondControls.test_containment_requires_every_sender_pair) ... ok
+test_implicit_exposure_empty_tuples_ignores_candidate_tuples (tests.audit.test_commitments_contract.SpecRulesBeyondControls.test_implicit_exposure_empty_tuples_ignores_candidate_tuples) ... ok
+test_implicit_exposure_empty_tuples_uses_jaccard_only (tests.audit.test_commitments_contract.SpecRulesBeyondControls.test_implicit_exposure_empty_tuples_uses_jaccard_only) ... ok
+test_negation_does_not_cross_clause_boundary (tests.audit.test_commitments_contract.SpecRulesBeyondControls.test_negation_does_not_cross_clause_boundary) ... ok
+test_registered_alias_gives_tuple (tests.audit.test_commitments_contract.SpecRulesBeyondControls.test_registered_alias_gives_tuple) ... skipped 'SPEC-AMBIGUOUS: the alias-list format (mapping and DEV-pinned contents) is not specified in the amendment.'
+test_third_person_form_gives_named_agent (tests.audit.test_commitments_contract.SpecRulesBeyondControls.test_third_person_form_gives_named_agent) ... ok
+test_bad_identity (tests.audit.test_decision.Decisions.test_bad_identity) ... ok
+test_baselines_ignore_info (tests.audit.test_decision.Decisions.test_baselines_ignore_info) ... ok
+test_carrier_is_not_invalidity (tests.audit.test_decision.Decisions.test_carrier_is_not_invalidity) ... ok
+test_divergences (tests.audit.test_decision.Decisions.test_divergences) ... ok
+test_efficient (tests.audit.test_decision.Decisions.test_efficient) ... ok
+test_exact_margin_abstains (tests.audit.test_decision.Decisions.test_exact_margin_abstains) ... ok
+test_extract_literal (tests.audit.test_decision.Decisions.test_extract_literal) ... ok
+test_floor (tests.audit.test_decision.Decisions.test_floor) ... ok
+test_ineligible (tests.audit.test_decision.Decisions.test_ineligible) ... ok
+test_info_cap (tests.audit.test_decision.Decisions.test_info_cap) ... ok
+test_invalid_precedes_ineligible (tests.audit.test_decision.Decisions.test_invalid_precedes_ineligible) ... ok
+test_missing_no_zero (tests.audit.test_decision.Decisions.test_missing_no_zero) ... ok
+test_mutual (tests.audit.test_decision.Decisions.test_mutual) ... ok
+test_no_mutation (tests.audit.test_decision.Decisions.test_no_mutation) ... ok
+test_placebo_literal_f_vs_n (tests.audit.test_decision.Decisions.test_placebo_literal_f_vs_n) ... ok
+test_redundancy (tests.audit.test_decision.Decisions.test_redundancy) ... ok
+test_sham_invalid (tests.audit.test_decision.Decisions.test_sham_invalid) ... ok
+test_sham_uncertain_nonblocking (tests.audit.test_decision.Decisions.test_sham_uncertain_nonblocking) ... ok
+test_signs_identities (tests.audit.test_decision.Decisions.test_signs_identities) ... ok
+test_small (tests.audit.test_decision.Decisions.test_small) ... ok
+test_stochastic_singleton (tests.audit.test_decision.Decisions.test_stochastic_singleton) ... ok
+test_supported (tests.audit.test_decision.Decisions.test_supported) ... ok
+test_unvalidated_info (tests.audit.test_decision.Decisions.test_unvalidated_info) ... ok
+test_zero_benefit_fails (tests.audit.test_decision.Decisions.test_zero_benefit_fails) ... ok
+test_invalid_has_no_interpretable_effect (tests.audit.test_decision.InvalidEffect.test_invalid_has_no_interpretable_effect) ... ok
+test_agent_tuple_required (tests.audit.test_decision.StateCarriers.test_agent_tuple_required) ... ok
+test_explicit_state (tests.audit.test_decision.StateCarriers.test_explicit_state) ... ok
+test_later_state (tests.audit.test_decision.StateCarriers.test_later_state) ... ok
+test_carrier_flag_preserves_protocol_status_precedence (tests.audit.test_decision_v12.V12.test_carrier_flag_preserves_protocol_status_precedence) ... ok
+test_case_decisions_use_frozen_exact_intervals (tests.audit.test_decision_v12.V12.test_case_decisions_use_frozen_exact_intervals) ... ok
+test_exact_bounds_reference_vectors (tests.audit.test_decision_v12.V12.test_exact_bounds_reference_vectors) ... ok
+test_exact_lesion_test_uses_c3_p_ge_m_O (tests.audit.test_decision_v12.V12.test_exact_lesion_test_uses_c3_p_ge_m_O) ... ok
+test_extractor_clarifications_without_editing_independent_contract (tests.audit.test_decision_v12.V12.test_extractor_clarifications_without_editing_independent_contract) ... ok
+test_legacy_without_status_still_blocks_supported (tests.audit.test_decision_v12.V12.test_legacy_without_status_still_blocks_supported) ... ok
+test_no_placebo_available_blocks_supported_and_is_listed_last (tests.audit.test_decision_v12.V12.test_no_placebo_available_blocks_supported_and_is_listed_last) ... ok
+test_no_placebo_available_co_lists_and_does_not_hide_others (tests.audit.test_decision_v12.V12.test_no_placebo_available_co_lists_and_does_not_hide_others) ... ok
+test_not_supported_does_not_require_placebo (tests.audit.test_decision_v12.V12.test_not_supported_does_not_require_placebo) ... ok
+test_partial_placebo_failure_cannot_support (tests.audit.test_decision_v12.V12.test_partial_placebo_failure_cannot_support) ... ok
+test_supported_prints_required_text_and_mandatory_contrast (tests.audit.test_decision_v12.V12.test_supported_prints_required_text_and_mandatory_contrast) ... ok
+test_unselected_sham_is_not_treatment_missingness (tests.audit.test_decision_v12.V12.test_unselected_sham_is_not_treatment_missingness) ... ok
+test_active_a6b_has_later_visible_read_and_intended_validator_fires (tests.audit.test_diagnosis.DiagnosisIntegration.test_active_a6b_has_later_visible_read_and_intended_validator_fires) ... ok
+test_inactive_single_mask_matches_clean_k (tests.audit.test_diagnosis.DiagnosisIntegration.test_inactive_single_mask_matches_clean_k) ... ok
+test_merge_keeps_flags_and_provenance_without_mutation (tests.audit.test_diagnosis.DiagnosisIntegration.test_merge_keeps_flags_and_provenance_without_mutation) ... ok
+test_v07_carriers_reach_decision (tests.audit.test_diagnosis.DiagnosisIntegration.test_v07_carriers_reach_decision) ... ok
+test_a6_any_invalid_is_not_intended_detection (tests.audit.test_eng005.ProtocolRegressions.test_a6_any_invalid_is_not_intended_detection) ... ok
+test_c3_exact_ties_and_attainable_rejection (tests.audit.test_eng005.ProtocolRegressions.test_c3_exact_ties_and_attainable_rejection) ... ok
+test_c3_no_rejection_with_noisy_four_by_four_above_margin (tests.audit.test_eng005.ProtocolRegressions.test_c3_no_rejection_with_noisy_four_by_four_above_margin) ... ok
+test_c3_point_above_margin_is_not_significance (tests.audit.test_eng005.ProtocolRegressions.test_c3_point_above_margin_is_not_significance) ... ok
+test_study_tost_three_outcomes_and_half_width (tests.audit.test_eng005.ProtocolRegressions.test_study_tost_three_outcomes_and_half_width) ... ok
+test_v07_collision_retains_all_checks_and_audit_evidence (tests.audit.test_eng005.ProtocolRegressions.test_v07_collision_retains_all_checks_and_audit_evidence) ... ok
+test_v10_study_veto_applies_outside_n_subset (tests.audit.test_eng005.ProtocolRegressions.test_v10_study_veto_applies_outside_n_subset) ... ok
+test_v10_study_veto_reaches_cases_below_c3_margin (tests.audit.test_eng005.ProtocolRegressions.test_v10_study_veto_reaches_cases_below_c3_margin) ... ok
+test_v10_uses_one_sided_95_study_lower_bound (tests.audit.test_eng005.ProtocolRegressions.test_v10_uses_one_sided_95_study_lower_bound) ... ok
+test_v9_study_invalid_reaches_every_decision (tests.audit.test_eng005.ProtocolRegressions.test_v9_study_invalid_reaches_every_decision) ... ok
+test_all_dev_and_no_holdout_generation (tests.audit.test_gate_a.DevBoundary.test_all_dev_and_no_holdout_generation) ... ok
+test_outside_partition (tests.audit.test_gate_a.DevBoundary.test_outside_partition) ... ok
+test_default_is_unchanged (tests.audit.test_gate_a.ParameterOverride.test_default_is_unchanged) ... ok
+test_invalid_bootstrap_rejected (tests.audit.test_gate_a.ParameterOverride.test_invalid_bootstrap_rejected) ... ok
+test_only_theta_and_bootstrap_change (tests.audit.test_gate_a.ParameterOverride.test_only_theta_and_bootstrap_change) ... ok
+test_benign_cooperation_abstains (tests.audit.test_native.NativeIntegration.test_benign_cooperation_abstains) ... ok
+test_cost_corruption_invalid (tests.audit.test_native.NativeIntegration.test_cost_corruption_invalid) ... ok
+test_hidden_copy_invalid (tests.audit.test_native.NativeIntegration.test_hidden_copy_invalid) ... ok
+test_native_n_m_provenance_and_actual_counts (tests.audit.test_native.NativeIntegration.test_native_n_m_provenance_and_actual_counts) ... ok
+test_native_sham_and_isolation (tests.audit.test_native.NativeIntegration.test_native_sham_and_isolation) ... ok
+test_post_decision_has_no_fork (tests.audit.test_native.NativeIntegration.test_post_decision_has_no_fork) ... ok
+test_route_invalid (tests.audit.test_native.NativeIntegration.test_route_invalid) ... ok
+test_tool_fault_invalid (tests.audit.test_native.NativeIntegration.test_tool_fault_invalid) ... ok
+test_rule_string_hash_and_selection (tests.audit.test_placebo.HashedSham.test_rule_string_hash_and_selection) ... ok
+test_n_custom_fault_hook_still_runs_placebo_validator (tests.audit.test_placebo.MaskWiring.test_n_custom_fault_hook_still_runs_placebo_validator) ... ok
+test_n_m_branch_is_valid_and_v3_for_n_passes (tests.audit.test_placebo.MaskWiring.test_n_m_branch_is_valid_and_v3_for_n_passes) ... ok
+test_n_requires_placebo_ids (tests.audit.test_placebo.MaskWiring.test_n_requires_placebo_ids) ... ok
+test_n_validator_rejects_empty_observations_and_overlapping_bundles (tests.audit.test_placebo.MaskWiring.test_n_validator_rejects_empty_observations_and_overlapping_bundles) ... ok
+test_v3_for_n_detects_unmasked_and_overmasked_renders (tests.audit.test_placebo.MaskWiring.test_v3_for_n_detects_unmasked_and_overmasked_renders) ... ok
+test_at_least_k_takes_first_k_in_order (tests.audit.test_placebo.Rule.test_at_least_k_takes_first_k_in_order) ... ok
+test_event_ids_never_order (tests.audit.test_placebo.Rule.test_event_ids_never_order) ... ok
+test_filters_author_boundary_kind_and_audited (tests.audit.test_placebo.Rule.test_filters_author_boundary_kind_and_audited) ... ok
+test_length_definition_nfc_and_whitespace (tests.audit.test_placebo.Rule.test_length_definition_nfc_and_whitespace) ... ok
+test_order_is_board_rank_then_length_distance_then_turn_seq (tests.audit.test_placebo.Rule.test_order_is_board_rank_then_length_distance_then_turn_seq) ... ok
+test_window_is_inclusive_at_25_percent (tests.audit.test_placebo.Rule.test_window_is_inclusive_at_25_percent) ... ok
+test1_gap_reactive_disruptor_is_flagged_and_vetoes_equal_k_effect (tests.audit.test_placebo_faults.FaultTests.test1_gap_reactive_disruptor_is_flagged_and_vetoes_equal_k_effect) ... ok
+test2_length_reactive_disruptor_is_flagged (tests.audit.test_placebo_faults.FaultTests.test2_length_reactive_disruptor_is_flagged) ... ok
+test3_salient_content_only_disruptor_is_NOT_flagged_documented_limit (tests.audit.test_placebo_faults.FaultTests.test3_salient_content_only_disruptor_is_NOT_flagged_documented_limit)
+Documents the limit (amendment §1.1): N_m removes only non-informational messages, so a ... ok
+test4_benign_removal_with_true_effect_reaches_supported (tests.audit.test_placebo_faults.FaultTests.test4_benign_removal_with_true_effect_reaches_supported) ... ok
+test5_content_leak_into_M_is_excluded (tests.audit.test_placebo_faults.FaultTests.test5_content_leak_into_M_is_excluded) ... ok
+test6_no_candidate_is_inconclusive_never_supported (tests.audit.test_placebo_faults.FaultTests.test6_no_candidate_is_inconclusive_never_supported) ... ok
+test7_selection_invariance_to_list_order_and_event_ids (tests.audit.test_placebo_faults.FaultTests.test7_selection_invariance_to_list_order_and_event_ids) ... ok
+test_assert_not_constructed_raises_on_tagged_and_passes_clean (tests.fixtures.test_constructed.ConstructedOracleTests.test_assert_not_constructed_raises_on_tagged_and_passes_clean) ... ok
+test_derived_tau_O_side_of_floor (tests.fixtures.test_constructed.ConstructedOracleTests.test_derived_tau_O_side_of_floor) ... ok
+test_development_only_and_chatter_matching (tests.fixtures.test_constructed.ConstructedOracleTests.test_development_only_and_chatter_matching) ... ok
+test_exclusion_guards_all_protected_uses (tests.fixtures.test_constructed.ConstructedOracleTests.test_exclusion_guards_all_protected_uses) ... ok
+test_oracle_verifier_matches_derivation_for_all_30 (tests.fixtures.test_constructed.ConstructedOracleTests.test_oracle_verifier_matches_derivation_for_all_30) ... ok
+test_prediction_table_matches_declarations (tests.fixtures.test_constructed.ConstructedOracleTests.test_prediction_table_matches_declarations) ... ok
+test_a6b_generation_records_exercisability_without_seed_search (tests.fixtures.test_eng005_precondition.ActivationPrecondition.test_a6b_generation_records_exercisability_without_seed_search) ... ok
+test_strict_fault_generation_refuses_inactive_cells_without_search (tests.fixtures.test_eng005_precondition.ActivationPrecondition.test_strict_fault_generation_refuses_inactive_cells_without_search) ... ok
+test_all_enumerable_rewards_crosschecked_including_unknown_duplicates (tests.fixtures.test_iid_population.IIDPopulation.test_all_enumerable_rewards_crosschecked_including_unknown_duplicates) ... ok
+test_common_cause_and_ignored_talk_have_exact_nulls (tests.fixtures.test_iid_population.IIDPopulation.test_common_cause_and_ignored_talk_have_exact_nulls) ... ok
+test_family_independent_costs_priorities_and_unrestricted_order (tests.fixtures.test_iid_population.IIDPopulation.test_family_independent_costs_priorities_and_unrestricted_order) ... ok
+test_generation_never_calls_oracle_or_replay (tests.fixtures.test_iid_population.IIDPopulation.test_generation_never_calls_oracle_or_replay) ... ok
+test_holdout_refused_before_any_population_rng (tests.fixtures.test_iid_population.IIDPopulation.test_holdout_refused_before_any_population_rng) ... ok
+test_iid_oracle_enumerates_every_noise_path (tests.fixtures.test_iid_population.IIDPopulation.test_iid_oracle_enumerates_every_noise_path) ... ok
+test_implicit_explicit_tone_commitment_balanced_and_private (tests.fixtures.test_iid_population.IIDPopulation.test_implicit_explicit_tone_commitment_balanced_and_private) ... ok
+test_invalid_hooks_are_arm_specific_and_observable_faults_fail (tests.fixtures.test_iid_population.IIDPopulation.test_invalid_hooks_are_arm_specific_and_observable_faults_fail) ... ok
+test_k_n_preserve_original_indices_and_placebo_matches_mask (tests.fixtures.test_iid_population.IIDPopulation.test_k_n_preserve_original_indices_and_placebo_matches_mask) ... ok
+test_labels_are_objectives_even_when_outcomes_have_opposite_signs (tests.fixtures.test_iid_population.IIDPopulation.test_labels_are_objectives_even_when_outcomes_have_opposite_signs) ... ok
+test_all_jira_development_inputs_blinded_including_invalid (tests.fixtures.test_jira.JiraMechanisms.test_all_jira_development_inputs_blinded_including_invalid) ... ok
+test_crossed_wording_balance_names_templates_and_order_constraints (tests.fixtures.test_jira.JiraMechanisms.test_crossed_wording_balance_names_templates_and_order_constraints) ... ok
+test_exact_invariants_all_deterministic_cases_and_seeds (tests.fixtures.test_jira.JiraMechanisms.test_exact_invariants_all_deterministic_cases_and_seeds) ... ok
+test_factual_common_cause_advantage_matches_harmful_distribution (tests.fixtures.test_jira.JiraMechanisms.test_factual_common_cause_advantage_matches_harmful_distribution) ... ok
+test_invalid_variants_on_harmful_and_common_cause_bases (tests.fixtures.test_jira.JiraMechanisms.test_invalid_variants_on_harmful_and_common_cause_bases) ... ok
+test_jira_holdout_refused_before_rng_or_template_use (tests.fixtures.test_jira.JiraMechanisms.test_jira_holdout_refused_before_rng_or_template_use) ... ok
+test_jira_leakage_schema_and_nested_label_mutations_rejected (tests.fixtures.test_jira.JiraMechanisms.test_jira_leakage_schema_and_nested_label_mutations_rejected) ... ok
+test_native_policy_is_policycall_compatible_and_prompt_only (tests.fixtures.test_jira.JiraMechanisms.test_native_policy_is_policycall_compatible_and_prompt_only) ... ok
+test_no_network (tests.fixtures.test_jira.JiraMechanisms.test_no_network) ... ok
+test_noise_paths_exhaustively_enumerated_exact_probability_and_identities (tests.fixtures.test_jira.JiraMechanisms.test_noise_paths_exhaustively_enumerated_exact_probability_and_identities) ... ok
+test_post_decision_exposure_is_ineligible_without_continuation (tests.fixtures.test_jira.JiraMechanisms.test_post_decision_exposure_is_ineligible_without_continuation) ... ok
+test_real_renderer_byte_parity_and_no_logging_constructor (tests.fixtures.test_jira.JiraMechanisms.test_real_renderer_byte_parity_and_no_logging_constructor) ... ok
+test_redundancy_channel_and_joint_estimands_differ (tests.fixtures.test_jira.JiraMechanisms.test_redundancy_channel_and_joint_estimands_differ) ... ok
+test_relay_stochastic_effect_exceeds_reference_margin (tests.fixtures.test_jira.JiraMechanisms.test_relay_stochastic_effect_exceeds_reference_margin) ... ok
+test_replay_like_arms_match_independent_plain_oracle (tests.fixtures.test_jira.JiraMechanisms.test_replay_like_arms_match_independent_plain_oracle) ... ok
+test_rewards_crosschecked_against_upstream_100_random_assignments (tests.fixtures.test_jira.JiraMechanisms.test_rewards_crosschecked_against_upstream_100_random_assignments) ... ok
+test_scripted_receiver_uses_delivered_prompt_not_unseen_state (tests.fixtures.test_jira.JiraMechanisms.test_scripted_receiver_uses_delivered_prompt_not_unseen_state) ... ok
+test_seeded_noise_is_fresh_reproducible_and_not_independent_worlds (tests.fixtures.test_jira.JiraMechanisms.test_seeded_noise_is_fresh_reproducible_and_not_independent_worlds) ... ok
+test_sham_identity_persistence_and_nonreceiver_boundary (tests.fixtures.test_jira.JiraMechanisms.test_sham_identity_persistence_and_nonreceiver_boundary) ... ok
+test_upstream_unknown_duplicate_joint_discrepancy_is_explicit (tests.fixtures.test_jira.JiraMechanisms.test_upstream_unknown_duplicate_joint_discrepancy_is_explicit) ... ok
+test_01_harmful_exact_resource_transfer (tests.fixtures.test_mechanisms.OfflineWorlds.test_01_harmful_exact_resource_transfer) ... ok
+test_02_benign_hard_negative_large_advantage_effect (tests.fixtures.test_mechanisms.OfflineWorlds.test_02_benign_hard_negative_large_advantage_effect) ... ok
+test_03_common_cause_correlates_but_mask_has_no_effect (tests.fixtures.test_mechanisms.OfflineWorlds.test_03_common_cause_correlates_but_mask_has_no_effect) ... ok
+test_04_inert_suspicious_talk_has_no_action_edge (tests.fixtures.test_mechanisms.OfflineWorlds.test_04_inert_suspicious_talk_has_no_action_edge) ... ok
+test_05_redundancy_single_null_joint_effect (tests.fixtures.test_mechanisms.OfflineWorlds.test_05_redundancy_single_null_joint_effect) ... ok
+test_06_memory_leak_invalid_never_zero_filled (tests.fixtures.test_mechanisms.OfflineWorlds.test_06_memory_leak_invalid_never_zero_filled) ... ok
+test_07_protocol_corruption_invalid (tests.fixtures.test_mechanisms.OfflineWorlds.test_07_protocol_corruption_invalid) ... ok
+test_08_sham_input_byte_identity_and_targeted_persistent_mask (tests.fixtures.test_mechanisms.OfflineWorlds.test_08_sham_input_byte_identity_and_targeted_persistent_mask) ... ok
+test_09_observation_and_branch_isolation (tests.fixtures.test_mechanisms.OfflineWorlds.test_09_observation_and_branch_isolation) ... ok
+test_10_snapshot_roundtrip_is_exact (tests.fixtures.test_mechanisms.OfflineWorlds.test_10_snapshot_roundtrip_is_exact) ... ok
+test_11_protocol_mutation_detected_by_validator (tests.fixtures.test_mechanisms.OfflineWorlds.test_11_protocol_mutation_detected_by_validator) ... ok
+test_12_repeated_exposure_mutation_detected (tests.fixtures.test_mechanisms.OfflineWorlds.test_12_repeated_exposure_mutation_detected) ... ok
+test_13_nonreceiver_and_state_corruption_detected (tests.fixtures.test_mechanisms.OfflineWorlds.test_13_nonreceiver_and_state_corruption_detected) ... ok
+test_14_fresh_execution_uses_structural_action_again (tests.fixtures.test_mechanisms.OfflineWorlds.test_14_fresh_execution_uses_structural_action_again) ... ok
+test_15_seeded_stochastic_variant_exact_oracle_and_fresh_draws (tests.fixtures.test_mechanisms.OfflineWorlds.test_15_seeded_stochastic_variant_exact_oracle_and_fresh_draws) ... ok
+test_16_oracle_has_no_scoring_or_runner_dependency (tests.fixtures.test_mechanisms.OfflineWorlds.test_16_oracle_has_no_scoring_or_runner_dependency) ... ok
+test_17_generator_is_reproducible_and_varies_task_and_roles (tests.fixtures.test_mechanisms.OfflineWorlds.test_17_generator_is_reproducible_and_varies_task_and_roles) ... ok
+test_18_matched_regimes_share_task_group_not_independent_N (tests.fixtures.test_mechanisms.OfflineWorlds.test_18_matched_regimes_share_task_group_not_independent_N) ... ok
+test_19_split_manifest_disjoint_and_holdout_guarded (tests.fixtures.test_mechanisms.OfflineWorlds.test_19_split_manifest_disjoint_and_holdout_guarded) ... ok
+test_20_split_and_arm_argument_errors (tests.fixtures.test_mechanisms.OfflineWorlds.test_20_split_and_arm_argument_errors) ... ok
+test_21_all_inputs_blinded_and_json_serializable (tests.fixtures.test_mechanisms.OfflineWorlds.test_21_all_inputs_blinded_and_json_serializable) ... ok
+test_22_label_injection_at_every_public_level_is_rejected (tests.fixtures.test_mechanisms.OfflineWorlds.test_22_label_injection_at_every_public_level_is_rejected) ... ok
+test_23_label_values_and_hidden_role_text_are_rejected (tests.fixtures.test_mechanisms.OfflineWorlds.test_23_label_values_and_hidden_role_text_are_rejected) ... ok
+test_24_private_oracle_record_rejected_as_detector_input (tests.fixtures.test_mechanisms.OfflineWorlds.test_24_private_oracle_record_rejected_as_detector_input) ... ok
+test_25_network_guard_remains_unused (tests.fixtures.test_mechanisms.OfflineWorlds.test_25_network_guard_remains_unused) ... ok
+test_native_bridge_refuses_unsupported_stress_or_stochastic_instances (tests.fixtures.test_native_replay.NativeReplayBridge.test_native_bridge_refuses_unsupported_stress_or_stochastic_instances) ... ok
+test_native_valid_mechanisms_match_exact_oracle (tests.fixtures.test_native_replay.NativeReplayBridge.test_native_valid_mechanisms_match_exact_oracle) ... ok
+test_native_verbatim_resend_is_valid_and_flagged_but_masked_rerender_is_invalid (tests.fixtures.test_native_replay.NativeReplayBridge.test_native_verbatim_resend_is_valid_and_flagged_but_masked_rerender_is_invalid) ... ok
+test_joint_knockout_and_mismatched_world (tests.fixtures.test_replay_adapter.ReplayPolicyAdapter.test_joint_knockout_and_mismatched_world) ... ok
+test_masked_agent_never_receives_another_agents_intact_copy (tests.fixtures.test_replay_adapter.ReplayPolicyAdapter.test_masked_agent_never_receives_another_agents_intact_copy) ... ok
+test_policy_callable_matches_structural_receiver_for_all_valid_families (tests.fixtures.test_replay_adapter.ReplayPolicyAdapter.test_policy_callable_matches_structural_receiver_for_all_valid_families) ... ok
+test_policy_emits_tool_call_shape_expected_by_scripted_client (tests.fixtures.test_replay_adapter.ReplayPolicyAdapter.test_policy_emits_tool_call_shape_expected_by_scripted_client) ... ok
+test_sender_and_other_agents_are_scripted (tests.fixtures.test_replay_adapter.ReplayPolicyAdapter.test_sender_and_other_agents_are_scripted) ... ok
+test_openrouter_requires_zero_pricing_check (tests.infra.test_budget_guard.AllowlistTests.test_openrouter_requires_zero_pricing_check) ... ok
+test_policy_file_keeps_modal_blocked_and_strips_aliases (tests.infra.test_budget_guard.AllowlistTests.test_policy_file_keeps_modal_blocked_and_strips_aliases) ... ok
+test_refuses_aliases_paid_cloud_and_wrong_hosts (tests.infra.test_budget_guard.AllowlistTests.test_refuses_aliases_paid_cloud_and_wrong_hosts) ... ok
+test_call_cap_counts_retries (tests.infra.test_budget_guard.CapAndLedgerTests.test_call_cap_counts_retries) ... ok
+test_daily_openrouter_cap_from_ledger (tests.infra.test_budget_guard.CapAndLedgerTests.test_daily_openrouter_cap_from_ledger) ... ok
+test_ledger_is_append_only_and_secret_free (tests.infra.test_budget_guard.CapAndLedgerTests.test_ledger_is_append_only_and_secret_free) ... ok
+test_local_backend_never_receives_openrouter_key_and_seed_passes (tests.infra.test_budget_guard.CapAndLedgerTests.test_local_backend_never_receives_openrouter_key_and_seed_passes) ... ok
+test_key_status_tightens_daily_cap (tests.infra.test_budget_guard.HaltTests.test_key_status_tightens_daily_cap) ... ok
+test_missing_cost_halts_openrouter_only (tests.infra.test_budget_guard.HaltTests.test_missing_cost_halts_openrouter_only) ... ok
+test_openrouter_429_halts_without_retry (tests.infra.test_budget_guard.HaltTests.test_openrouter_429_halts_without_retry) ... ok
+test_positive_cost_halts_persistently (tests.infra.test_budget_guard.HaltTests.test_positive_cost_halts_persistently) ... ok
+test_resolved_model_mismatch_halts (tests.infra.test_budget_guard.HaltTests.test_resolved_model_mismatch_halts) ... ok
+test_modal_blocked_by_default (tests.infra.test_budget_guard.ModalTests.test_modal_blocked_by_default) ... ok
+test_modal_never_uses_openrouter_key (tests.infra.test_budget_guard.ModalTests.test_modal_never_uses_openrouter_key) ... ok
+test_modal_requires_verified_fresh_billing_and_cap (tests.infra.test_budget_guard.ModalTests.test_modal_requires_verified_fresh_billing_and_cap) ... ok
+test_process_tool_calls_matches_terrarium_semantics (tests.infra.test_budget_guard.ToolLoopTests.test_process_tool_calls_matches_terrarium_semantics) ... ok
+test_F_reproduces_source_with_deterministic_policy (tests.replay.test_branches.ArmTests.test_F_reproduces_source_with_deterministic_policy) ... ok
+test_V04_sham_identity (tests.replay.test_branches.ArmTests.test_V04_sham_identity) ... ok
+test_V05_knockout_changes_only_intended_exposure (tests.replay.test_branches.ArmTests.test_V05_knockout_changes_only_intended_exposure) ... ok
+test_V07_persistent_mask_holds_for_horizon (tests.replay.test_branches.ArmTests.test_V07_persistent_mask_holds_for_horizon) ... ok
+test_V08_tool_protocol_legal_in_every_request (tests.replay.test_branches.ArmTests.test_V08_tool_protocol_legal_in_every_request) ... ok
+test_V09_fresh_continuation (tests.replay.test_branches.ArmTests.test_V09_fresh_continuation) ... ok
+test_all_arms_valid (tests.replay.test_branches.ArmTests.test_all_arms_valid) ... ok
+test_factual_and_sham_identical_state (tests.replay.test_branches.ArmTests.test_factual_and_sham_identical_state) ... ok
+test_knockout_downstream_is_regenerated (tests.replay.test_branches.ArmTests.test_knockout_downstream_is_regenerated) ... ok
+test_zz_no_network_attempts (tests.replay.test_branches.ArmTests.test_zz_no_network_attempts) ... ok
+test_V01_V02_V06_checkpoint_validation (tests.replay.test_branches.CheckpointTests.test_V01_V02_V06_checkpoint_validation) ... ok
+test_checkpoint_is_pre_exposure_and_earliest (tests.replay.test_branches.CheckpointTests.test_checkpoint_is_pre_exposure_and_earliest) ... ok
+test_manifest_fields (tests.replay.test_branches.CheckpointTests.test_manifest_fields) ... ok
+test_pre_exposure_when_receiver_had_earlier_turns (tests.replay.test_branches.CheckpointTests.test_pre_exposure_when_receiver_had_earlier_turns) ... ok
+test_prefix_strategy_gives_identical_checkpoint (tests.replay.test_branches.CheckpointTests.test_prefix_strategy_gives_identical_checkpoint) ... ok
+test_V03_interleaved_branches_equal_sequential (tests.replay.test_branches.IsolationTests.test_V03_interleaved_branches_equal_sequential) ... ok
+test_V03_mutating_one_branch_cannot_change_another_or_the_source (tests.replay.test_branches.IsolationTests.test_V03_mutating_one_branch_cannot_change_another_or_the_source) ... ok
+test_V03_no_shared_mutable_state (tests.replay.test_branches.IsolationTests.test_V03_no_shared_mutable_state) ... ok
+test_V10_replicates_are_distinct_calls (tests.replay.test_branches.IsolationTests.test_V10_replicates_are_distinct_calls) ... ok
+test_V08_validator_detects_broken_tool_pairing (tests.replay.test_corruption.BranchCorruption.test_V08_validator_detects_broken_tool_pairing) ... ok
+test_V09_reused_source_responses_are_rejected (tests.replay.test_corruption.BranchCorruption.test_V09_reused_source_responses_are_rejected) ... ok
+test_V18_failed_model_call_is_not_an_outcome (tests.replay.test_corruption.BranchCorruption.test_V18_failed_model_call_is_not_an_outcome) ... Can't get LLM response: simulated provider timeout
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 113, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/replay/test_corruption.py", line 187, in generate_response
+    raise TimeoutError("simulated provider timeout")
+TimeoutError: simulated provider timeout
+ok
+test_every_prompt_render_check_catches_extra_event (tests.replay.test_corruption.BranchCorruption.test_every_prompt_render_check_catches_extra_event) ... ok
+test_impure_intervention_fails_branch (tests.replay.test_corruption.BranchCorruption.test_impure_intervention_fails_branch) ... ok
+test_tool_result_echo_is_detected (tests.replay.test_corruption.BranchCorruption.test_tool_result_echo_is_detected) ... ok
+test_wrong_reported_model_invalidates_branch (tests.replay.test_corruption.BranchCorruption.test_wrong_reported_model_invalidates_branch) ... ok
+test_zz_no_network_attempts (tests.replay.test_corruption.BranchCorruption.test_zz_no_network_attempts) ... ok
+test_V02_prefix_request_mismatch_stops_reconstruction (tests.replay.test_corruption.CheckpointCorruption.test_V02_prefix_request_mismatch_stops_reconstruction) ... Failed to continue conversation at step 2: request hash mismatch at seq 2 (Mona turn 0 step 3): recorded 000000000000 got b508e48f790b
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 379, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 113, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 157, in generate_response
+    rec = self.source.next(ccc_context or {}, request_payload(input, params))
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 135, in next
+    self._fail(f"request hash mismatch at seq {rec.seq} ({rec.agent} turn {rec.turn_index} "
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         f"step {rec.step}): recorded {rec.request_sha256[:12]} got {sha[:12]}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 123, in _fail
+    raise PrefixMismatch(msg)
+ccc.replay.clients.PrefixMismatch: request hash mismatch at seq 2 (Mona turn 0 step 3): recorded 000000000000 got b508e48f790b
+Can't get LLM response: order mismatch at seq 2: recorded ('Mona', 0, 3) got ('Layla', 1, 1)
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 299, in generate_response
+    return await self._multi_step_response_generation(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        system_prompt=system_prompt, user_prompt=user_prompt
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/agents/base.py", line 340, in _multi_step_response_generation
+    response, response_str = await run_blocking(
+                             ^^^^^^^^^^^^^^^^^^^
+        self.client.generate_response, input=context, params=params
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aarav/Documents/Projects/ApartSprint/starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages/terrarium/async_utils.py", line 27, in run_blocking
+    return fut.result()
+           ~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/recorder.py", line 113, in generate_response
+    response, text = self._inner.generate_response(input=input, params=params, **_ccc_kwargs(self._inner, ctx))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 157, in generate_response
+    rec = self.source.next(ccc_context or {}, request_payload(input, params))
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 132, in next
+    self._fail(f"order mismatch at seq {rec.seq}: recorded {(rec.agent, rec.turn_index, rec.step)} "
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         f"got {(ctx.get('agent'), ctx.get('turn_index'), ctx.get('step'))}")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/ccc/replay/clients.py", line 123, in _fail
+    raise PrefixMismatch(msg)
+ccc.replay.clients.PrefixMismatch: order mismatch at seq 2: recorded ('Mona', 0, 3) got ('Layla', 1, 1)
+ok
+test_V06_checkpoint_after_exposure_is_flagged (tests.replay.test_corruption.CheckpointCorruption.test_V06_checkpoint_after_exposure_is_flagged) ... ok
+test_V15_rehashed_but_altered_snapshot_caught_by_prefix_crosscheck (tests.replay.test_corruption.CheckpointCorruption.test_V15_rehashed_but_altered_snapshot_caught_by_prefix_crosscheck) ... ok
+test_V15_static_world_drift_refuses_restore (tests.replay.test_corruption.CheckpointCorruption.test_V15_static_world_drift_refuses_restore) ... ok
+test_V15_tampered_snapshot_bytes (tests.replay.test_corruption.CheckpointCorruption.test_V15_tampered_snapshot_bytes) ... ok
+test_V07_leak_through_summary_rerender_invalidates_K (tests.replay.test_corruption.LeakTests.test_V07_leak_through_summary_rerender_invalidates_K) ... ok
+test_V07_public_relay_is_allowed_and_flagged (tests.replay.test_corruption.LeakTests.test_V07_public_relay_is_allowed_and_flagged) ... ok
+test_V07_sender_resend_is_allowed_and_flagged (tests.replay.test_corruption.LeakTests.test_V07_sender_resend_is_allowed_and_flagged) ... ok
+test_single_exposure_policy_scopes_the_leak_check (tests.replay.test_corruption.LeakTests.test_single_exposure_policy_scopes_the_leak_check) ... ok
+test_a_ollama_repeating_provider_ids_with_distinct_request_ids_pass (tests.replay.test_freshness_request_ids.FreshnessRequestIdTests.test_a_ollama_repeating_provider_ids_with_distinct_request_ids_pass) ... ok
+test_b2_client_request_id_reused_from_source_fails (tests.replay.test_freshness_request_ids.FreshnessRequestIdTests.test_b2_client_request_id_reused_from_source_fails) ... ok
+test_b_reused_client_request_id_across_branches_fails (tests.replay.test_freshness_request_ids.FreshnessRequestIdTests.test_b_reused_client_request_id_across_branches_fails) ... ok
+test_c_missing_client_request_id_fails (tests.replay.test_freshness_request_ids.FreshnessRequestIdTests.test_c_missing_client_request_id_fails) ... ok
+test_d2_scripted_provider_id_shared_with_other_branch_fails (tests.replay.test_freshness_request_ids.FreshnessRequestIdTests.test_d2_scripted_provider_id_shared_with_other_branch_fails) ... ok
+test_d_scripted_backend_reused_provider_id_fails (tests.replay.test_freshness_request_ids.FreshnessRequestIdTests.test_d_scripted_backend_reused_provider_id_fails) ... ok
+test_fake_clients_declare_unique_ids_and_mint_a_request_id_per_call (tests.replay.test_freshness_request_ids.FreshnessRequestIdTests.test_fake_clients_declare_unique_ids_and_mint_a_request_id_per_call) ... ok
+test_non_fresh_cache_mode_fails (tests.replay.test_freshness_request_ids.FreshnessRequestIdTests.test_non_fresh_cache_mode_fails) ... ok
+test_N_and_C_exact_every_call_and_original_indices (tests.replay.test_hardening.Hardening.test_N_and_C_exact_every_call_and_original_indices) ... ok
+test_W_is_sum_and_unknown_duplicate_discrepancy_is_recorded (tests.replay.test_hardening.Hardening.test_W_is_sum_and_unknown_duplicate_discrepancy_is_recorded) ... ok
+test_channel_covers_new_sender_posts_but_preserves_actions (tests.replay.test_hardening.Hardening.test_channel_covers_new_sender_posts_but_preserves_actions) ... ok
+test_checkpoint_all_local_rngs_and_board_roundtrip (tests.replay.test_hardening.Hardening.test_checkpoint_all_local_rngs_and_board_roundtrip) ... ok
+test_current_assignment_and_summary_paraphrase_are_scanned (tests.replay.test_hardening.Hardening.test_current_assignment_and_summary_paraphrase_are_scanned) ... ok
+test_independent_diff_catches_payload_change_and_renumbering (tests.replay.test_hardening.Hardening.test_independent_diff_catches_payload_change_and_renumbering) ... ok
+test_ledger_hash_chain_failed_attempt_and_no_overwrite (tests.replay.test_hardening.Hardening.test_ledger_hash_chain_failed_attempt_and_no_overwrite) ... ok
+test_mask_identical_rerender_on_every_message_surface_is_invalid (tests.replay.test_hardening.Hardening.test_mask_identical_rerender_on_every_message_surface_is_invalid) ... ok
+test_native_verbatim_and_paraphrase_resends_are_valid (tests.replay.test_hardening.Hardening.test_native_verbatim_and_paraphrase_resends_are_valid) ... ok
+test_rng_consuming_client_prefix_reconstruction (tests.replay.test_hardening.Hardening.test_rng_consuming_client_prefix_reconstruction) ... ok
+test_shuffled_interleaved_replicates_and_protocol_selector (tests.replay.test_hardening.Hardening.test_shuffled_interleaved_replicates_and_protocol_selector) ... ok
+test_source_model_mismatch_fails_V6 (tests.replay.test_hardening.Hardening.test_source_model_mismatch_fails_V6) ... ok
+test_horizon_policies (tests.replay.test_interventions.InterventionUnits.test_horizon_policies) ... ok
+test_leak_heuristic (tests.replay.test_interventions.InterventionUnits.test_leak_heuristic) ... ok
+test_mask_is_pure_and_receiver_scoped (tests.replay.test_interventions.InterventionUnits.test_mask_is_pure_and_receiver_scoped) ... ok
+test_sham_is_identity_copy (tests.replay.test_interventions.InterventionUnits.test_sham_is_identity_copy) ... ok
+test_every_boundary_snapshot_restores (tests.replay.test_world_parity.Determinism.test_every_boundary_snapshot_restores) ... ok
+test_two_source_runs_are_identical (tests.replay.test_world_parity.Determinism.test_two_source_runs_are_identical) ... ok
+test_all_archived_tool_calls_consumed (tests.replay.test_world_parity.PilotParity.test_all_archived_tool_calls_consumed) ... ok
+test_blackboards_reproduced_exactly_except_ids_and_wallclock (tests.replay.test_world_parity.PilotParity.test_blackboards_reproduced_exactly_except_ids_and_wallclock) ... ok
+test_final_rewards_reproduced (tests.replay.test_world_parity.PilotParity.test_final_rewards_reproduced) ... ok
+test_setup_matches_archived_run_config (tests.replay.test_world_parity.PilotParity.test_setup_matches_archived_run_config) ... ok
+test_1_leaked_masked_copy_in_receiver_view (tests.review.test_fault_injection.Faults.test_1_leaked_masked_copy_in_receiver_view) ... ok
+test_1b_leak_in_paraphrase_is_NOT_expected_to_fire (tests.review.test_fault_injection.Faults.test_1b_leak_in_paraphrase_is_NOT_expected_to_fire)
+Documents the known limit (not an assertion of success): a light paraphrase of the ... ok
+test_2_tampered_ledger_byte (tests.review.test_fault_injection.Faults.test_2_tampered_ledger_byte) ... ok
+test_3_reused_nonfresh_response (tests.review.test_fault_injection.Faults.test_3_reused_nonfresh_response) ... ok
+test_3b_cross_branch_response_sharing (tests.review.test_fault_injection.Faults.test_3b_cross_branch_response_sharing) ... ok
+test_4_model_id_mismatch (tests.review.test_fault_injection.Faults.test_4_model_id_mismatch) ... ok
+test_4b_requested_model_mismatch (tests.review.test_fault_injection.Faults.test_4b_requested_model_mismatch) ... ok
+test_5_cross_branch_state_mutation (tests.review.test_fault_injection.Faults.test_5_cross_branch_state_mutation) ... ok
+test_clean_controls_valid (tests.review.test_fault_injection.Faults.test_clean_controls_valid) ... ok
+test_call_seed_distinct_deterministic_every_dimension (tests.runner.test_live.LiveTests.test_call_seed_distinct_deterministic_every_dimension) ... ok
+test_default_map_and_legacy_seed_temperature_remote_refused (tests.runner.test_live.LiveTests.test_default_map_and_legacy_seed_temperature_remote_refused) ... ok
+test_full_guarded_http_collection_no_reload (tests.runner.test_live.LiveTests.test_full_guarded_http_collection_no_reload) ... ok
+test_hard_stop_after_source_retains_source_without_branches (tests.runner.test_live.LiveTests.test_hard_stop_after_source_retains_source_without_branches) ... ok
+test_hard_stop_before_transport_or_writes (tests.runner.test_live.LiveTests.test_hard_stop_before_transport_or_writes) ... ok
+test_hard_stop_between_checkpoints (tests.runner.test_live.LiveTests.test_hard_stop_between_checkpoints) ... ok
+test_holdout_sham_hash_subset_n_on_all_and_default_map (tests.runner.test_live.LiveTests.test_holdout_sham_hash_subset_n_on_all_and_default_map) ... ok
+test_http_guarded_payload_seeds_and_reload_invalidates_checkpoint (tests.runner.test_live.LiveTests.test_http_guarded_payload_seeds_and_reload_invalidates_checkpoint) ... ok
+test_listener_wildcard_lan_and_missing_refused (tests.runner.test_live.LiveTests.test_listener_wildcard_lan_and_missing_refused) ... ok
+test_model_reload_only_one_explicit_retry (tests.runner.test_live.LiveTests.test_model_reload_only_one_explicit_retry) ... ok
+test_model_runner_process_selection (tests.runner.test_live.LiveTests.test_model_runner_process_selection) ... ok
+test_ollama_expires_at_in_local_offset_is_accepted (tests.runner.test_live.LiveTests.test_ollama_expires_at_in_local_offset_is_accepted) ... ok
+test_pilot_fixed_matrix_and_parameters (tests.runner.test_live.LiveTests.test_pilot_fixed_matrix_and_parameters) ... ok
+test_preflight_digest_context_refuse_and_real_ps_accepts (tests.runner.test_live.LiveTests.test_preflight_digest_context_refuse_and_real_ps_accepts) ... ok
+test_real_ps_canary_reload_invalidates_all_branches (tests.runner.test_live.LiveTests.test_real_ps_canary_reload_invalidates_all_branches) ... ok
+test_real_ps_fingerprint_changes_fail_closed (tests.runner.test_live.LiveTests.test_real_ps_fingerprint_changes_fail_closed) ... ok
+test_real_ps_no_reload (tests.runner.test_live.LiveTests.test_real_ps_no_reload) ... ok
+test_residency_reload_expiry_and_loss_fail_closed (tests.runner.test_live.LiveTests.test_residency_reload_expiry_and_loss_fail_closed) ... ok
+test_bundle_includes_all_sender_posts_first_seen_at_boundary (tests.runner.test_runner.CollectionTests.test_bundle_includes_all_sender_posts_first_seen_at_boundary) ... ok
+test_failure_retained_no_silent_retry_and_cap_across_resume (tests.runner.test_runner.CollectionTests.test_failure_retained_no_silent_retry_and_cap_across_resume) ... ok
+test_first_event_selection_bundles_without_effect_search (tests.runner.test_runner.CollectionTests.test_first_event_selection_bundles_without_effect_search) ... ok
+test_full_collection_and_noop_resume (tests.runner.test_runner.CollectionTests.test_full_collection_and_noop_resume) ... ok
+test_interrupted_attempt_requires_explicit_retry (tests.runner.test_runner.CollectionTests.test_interrupted_attempt_requires_explicit_retry) ... ok
+test_live_disabled_before_any_write (tests.runner.test_runner.CollectionTests.test_live_disabled_before_any_write) ... ok
+test_manifest_change_cannot_resume_existing_collection (tests.runner.test_runner.CollectionTests.test_manifest_change_cannot_resume_existing_collection) ... ok
+test_n_m_runs_when_sender_chatter_exists_and_is_skipped_otherwise (tests.runner.test_runner.CollectionTests.test_n_m_runs_when_sender_chatter_exists_and_is_skipped_otherwise) ... ok
+test_no_message_world_retained_in_coverage (tests.runner.test_runner.CollectionTests.test_no_message_world_retained_in_coverage) ... ok
+test_transport_failure_is_immutable_and_explicit_retry_succeeds (tests.runner.test_runner.CollectionTests.test_transport_failure_is_immutable_and_explicit_retry_succeeds) ... ok
+test_arm_counts_and_v11_n_label (tests.runner.test_runner.ManifestTests.test_arm_counts_and_v11_n_label) ... ok
+test_duplicate_world_does_not_inflate_unit (tests.runner.test_runner.ManifestTests.test_duplicate_world_does_not_inflate_unit) ... ok
+test_holdout_requires_stat001_even_dry_run (tests.runner.test_runner.ManifestTests.test_holdout_requires_stat001_even_dry_run) ... ok
+test_holdout_s_must_be_one (tests.runner.test_runner.ManifestTests.test_holdout_s_must_be_one) ... ok
+test_holdout_stat_hash_binds_manifest (tests.runner.test_runner.ManifestTests.test_holdout_stat_hash_binds_manifest) ... ok
+test_placebo_on_all_checkpoints_frozen_before_sources (tests.runner.test_runner.ManifestTests.test_placebo_on_all_checkpoints_frozen_before_sources) ... ok
+test_plan_deterministic_interleaved_and_one_world_unit (tests.runner.test_runner.ManifestTests.test_plan_deterministic_interleaved_and_one_world_unit) ... ok
+test_prompt_model_and_budget_switches_refused (tests.runner.test_runner.ManifestTests.test_prompt_model_and_budget_switches_refused) ... ok
+test_protocol_drift_refused (tests.runner.test_runner.ManifestTests.test_protocol_drift_refused) ... ok
+test_seed1_never_holdout (tests.runner.test_runner.ManifestTests.test_seed1_never_holdout) ... ok
+test_unfrozen_refused (tests.runner.test_runner.ManifestTests.test_unfrozen_refused) ... ok
+test_cli_run_dry_run_with_exact_hard_stop_under_new_york_tz (tests.runner.test_runner.RunPathTimeZoneTests.test_cli_run_dry_run_with_exact_hard_stop_under_new_york_tz) ... ok
+test_max_checkpoints_stops_before_next_world_and_rejects_nonpositive (tests.runner.test_runner.RunPathTimeZoneTests.test_max_checkpoints_stops_before_next_world_and_rejects_nonpositive) ... ok
+test_archive_and_path_escape_rejected (tests.runner.test_runner.StorageTests.test_archive_and_path_escape_rejected) ... ok
+test_collector_lock_excludes_second_writer (tests.runner.test_runner.StorageTests.test_collector_lock_excludes_second_writer) ... ok
+test_exclusive_write_and_tamper_detection (tests.runner.test_runner.StorageTests.test_exclusive_write_and_tamper_detection) ... ok
+test_seal_detects_deleted_records (tests.runner.test_runner.StorageTests.test_seal_detects_deleted_records) ... ok
+test_after_deadline_triggers (tests.runner.test_watchdog.WatchdogTests.test_after_deadline_triggers) ... ok
+test_before_deadline_ok (tests.runner.test_watchdog.WatchdogTests.test_before_deadline_ok) ... ok
+test_clean_run_has_no_trigger (tests.runner.test_watchdog.WatchdogTests.test_clean_run_has_no_trigger) ... ok
+test_custom_hard_stop_does_not_trigger_before_its_time (tests.runner.test_watchdog.WatchdogTests.test_custom_hard_stop_does_not_trigger_before_its_time) ... ok
+test_custom_hard_stop_triggers_after_its_time (tests.runner.test_watchdog.WatchdogTests.test_custom_hard_stop_triggers_after_its_time) ... ok
+test_default_hard_stop_is_unchanged (tests.runner.test_watchdog.WatchdogTests.test_default_hard_stop_is_unchanged) ... ok
+test_digest_change_triggers (tests.runner.test_watchdog.WatchdogTests.test_digest_change_triggers) ... ok
+test_exits_cleanly_when_run_exits_on_its_own (tests.runner.test_watchdog.WatchdogTests.test_exits_cleanly_when_run_exits_on_its_own) ... ok
+test_hard_stop_in_past_is_rejected_at_startup (tests.runner.test_watchdog.WatchdogTests.test_hard_stop_in_past_is_rejected_at_startup) ... usage: python -m tests.replay.offline_runner [-h] --run-pid RUN_PID
+                                             --output OUTPUT
+                                             [--interval INTERVAL]
+                                             [--ollama-pid OLLAMA_PID]
+                                             [--hard-stop ISO8601_UTC]
+python -m tests.replay.offline_runner: error: --hard-stop 2000-01-01T00:00:00Z is in the past
+ok
+test_low_disk_triggers (tests.runner.test_watchdog.WatchdogTests.test_low_disk_triggers) ... ok
+test_low_memory_triggers (tests.runner.test_watchdog.WatchdogTests.test_low_memory_triggers) ... ok
+test_memory_pressure_parse (tests.runner.test_watchdog.WatchdogTests.test_memory_pressure_parse) ... ok
+test_memory_probe_failure_triggers (tests.runner.test_watchdog.WatchdogTests.test_memory_probe_failure_triggers) ... ok
+test_missing_cost_triggers (tests.runner.test_watchdog.WatchdogTests.test_missing_cost_triggers) ... ok
+test_model_missing_from_ps_triggers (tests.runner.test_watchdog.WatchdogTests.test_model_missing_from_ps_triggers) ... ok
+test_non_utc_hard_stop_is_rejected (tests.runner.test_watchdog.WatchdogTests.test_non_utc_hard_stop_is_rejected) ... usage: python -m tests.replay.offline_runner [-h] --run-pid RUN_PID
+                                             --output OUTPUT
+                                             [--interval INTERVAL]
+                                             [--ollama-pid OLLAMA_PID]
+                                             [--hard-stop ISO8601_UTC]
+python -m tests.replay.offline_runner: error: argument --hard-stop: --hard-stop must be UTC (end with Z or +00:00): '2026-10-23T23:00:00+02:00'
+usage: python -m tests.replay.offline_runner [-h] --run-pid RUN_PID
+                                             --output OUTPUT
+                                             [--interval INTERVAL]
+                                             [--ollama-pid OLLAMA_PID]
+                                             [--hard-stop ISO8601_UTC]
+python -m tests.replay.offline_runner: error: argument --hard-stop: --hard-stop must be UTC (end with Z or +00:00): '2026-10-23T23:00:00'
+usage: python -m tests.replay.offline_runner [-h] --run-pid RUN_PID
+                                             --output OUTPUT
+                                             [--interval INTERVAL]
+                                             [--ollama-pid OLLAMA_PID]
+                                             [--hard-stop ISO8601_UTC]
+python -m tests.replay.offline_runner: error: argument --hard-stop: --hard-stop must be UTC (end with Z or +00:00): '2026-10-23T23:00:00-00:00'
+ok
+test_ollama_gone_triggers (tests.runner.test_watchdog.WatchdogTests.test_ollama_gone_triggers) ... ok
+test_partial_line_waits_then_is_checked (tests.runner.test_watchdog.WatchdogTests.test_partial_line_waits_then_is_checked) ... ok
+test_positive_cost_triggers (tests.runner.test_watchdog.WatchdogTests.test_positive_cost_triggers) ... ok
+test_ps_unreachable_triggers (tests.runner.test_watchdog.WatchdogTests.test_ps_unreachable_triggers) ... ok
+test_run_loop_stops_on_trigger_mid_run (tests.runner.test_watchdog.WatchdogTests.test_run_loop_stops_on_trigger_mid_run) ... ok
+test_sigkill_after_grace_when_term_ignored (tests.runner.test_watchdog.WatchdogTests.test_sigkill_after_grace_when_term_ignored) ... ok
+test_size_vram_change_triggers (tests.runner.test_watchdog.WatchdogTests.test_size_vram_change_triggers) ... ok
+test_wrong_backend_triggers (tests.runner.test_watchdog.WatchdogTests.test_wrong_backend_triggers) ... ok
+test_wrong_model_triggers (tests.runner.test_watchdog.WatchdogTests.test_wrong_model_triggers) ... ok
+test_amended_report_criteria_and_twin_exhibit (tests.test_bench_alignment.AlignmentTests.test_amended_report_criteria_and_twin_exhibit) ... ok
+test_collision_with_previously_used_label_is_salted (tests.test_bench_alignment.AlignmentTests.test_collision_with_previously_used_label_is_salted) ... ok
+test_crn_pointwise_identical_twins_every_arm_and_noise_stratum (tests.test_bench_alignment.AlignmentTests.test_crn_pointwise_identical_twins_every_arm_and_noise_stratum) ... ok
+test_dev_report_has_all_rqs_tables_and_failure_cells (tests.test_bench_alignment.AlignmentTests.test_dev_report_has_all_rqs_tables_and_failure_cells) ... ok
+test_method_crash_is_retained_for_all_methods (tests.test_bench_alignment.AlignmentTests.test_method_crash_is_retained_for_all_methods) ... ok
+test_prospective_schedule_is_only_frozen_file_values (tests.test_bench_alignment.AlignmentTests.test_prospective_schedule_is_only_frozen_file_values) ... ok
+test_protocol_roster_counts_and_dev_baseline_tie (tests.test_bench_alignment.AlignmentTests.test_protocol_roster_counts_and_dev_baseline_tie) ... ok
+test_rq2_is_independent_of_ladder_correctness (tests.test_bench_alignment.AlignmentTests.test_rq2_is_independent_of_ladder_correctness) ... ok
+test_seed_census_world_sampling_and_embedded_fields (tests.test_bench_alignment.AlignmentTests.test_seed_census_world_sampling_and_embedded_fields) ... ok
+test_seed_formula_skip_and_global_disjointness (tests.test_bench_alignment.AlignmentTests.test_seed_formula_skip_and_global_disjointness) ... ok
+test_v1_negative_separator_evidence_and_v0_preserved (tests.test_bench_alignment.AlignmentTests.test_v1_negative_separator_evidence_and_v0_preserved) ... ok
+test_all_methods_symmetry_and_ccc_scope (tests.test_bench_core.EnumerationTests.test_all_methods_symmetry_and_ccc_scope) ... ok
+test_census_complete_and_every_suite_member_in_design (tests.test_bench_core.EnumerationTests.test_census_complete_and_every_suite_member_in_design) ... ok
+test_enumeration_independent_of_audited_output (tests.test_bench_core.EnumerationTests.test_enumeration_independent_of_audited_output) ... ok
+test_exact_toy_partition (tests.test_bench_core.EnumerationTests.test_exact_toy_partition) ... ok
+test_ladder_l3_is_separated_in_full_policy_space (tests.test_bench_core.EnumerationTests.test_ladder_l3_is_separated_in_full_policy_space) ... ok
+test_ladder_separating_requirements_and_legitimate_exposure (tests.test_bench_core.EnumerationTests.test_ladder_separating_requirements_and_legitimate_exposure) ... ok
+test_partition_serializes_mixed_available_and_na_truth (tests.test_bench_core.EnumerationTests.test_partition_serializes_mixed_available_and_na_truth) ... ok
+test_absent_freeze_and_cli_refusal_before_generation (tests.test_bench_core.FreezeTests.test_absent_freeze_and_cli_refusal_before_generation) ... ok
+test_freeze_exact_hash_manifest_and_seeds (tests.test_bench_core.FreezeTests.test_freeze_exact_hash_manifest_and_seeds) ... ok
+test_hashes_command_contains_all_benchmark_sources (tests.test_bench_core.FreezeTests.test_hashes_command_contains_all_benchmark_sources) ... ok
+test_clopper_pearson_known_values (tests.test_bench_core.PopulationAndStatisticsTests.test_clopper_pearson_known_values) ... ok
+test_clusters_not_members_and_absent_axes (tests.test_bench_core.PopulationAndStatisticsTests.test_clusters_not_members_and_absent_axes) ... ok
+test_fresh_seed_binding_and_unchanged_frozen_namespace (tests.test_bench_core.PopulationAndStatisticsTests.test_fresh_seed_binding_and_unchanged_frozen_namespace) ... ok
+test_nested_views_filler_and_continuations (tests.test_bench_core.PublicBoundaryTests.test_nested_views_filler_and_continuations) ... ok
+test_no_private_metadata_and_nested_allowlist (tests.test_bench_core.PublicBoundaryTests.test_no_private_metadata_and_nested_allowlist) ... ok
+test_p6_factual_match_and_information_removal_hurts_every_actor (tests.test_bench_core.PublicBoundaryTests.test_p6_factual_match_and_information_removal_hurts_every_actor) ... ok
+test_relay_and_corruptions (tests.test_bench_core.PublicBoundaryTests.test_relay_and_corruptions) ... ok
+test_stochastic_oracle_and_exact_native_equation (tests.test_bench_core.PublicBoundaryTests.test_stochastic_oracle_and_exact_native_equation) ... ok
+test_twin_frontiers_and_nuisance (tests.test_bench_core.PublicBoundaryTests.test_twin_frontiers_and_nuisance) ... ok
+tests.test_bench_modal (unittest.loader._FailedTest.tests.test_bench_modal) ... ERROR
+test_dev_output_bytes (tests.test_bench_parallel.ParallelTests.test_dev_output_bytes) ... GA-DIAG inactive A6b: 10/10 valid; clean K request hashes and outcomes identical; one receiver observation each
+C4 oracle verifier: 30/30 K effects, 30/30 N_v1.1 effects, 18/18 N_m zero effects; 12/12 absent-placebo refusals
+REV-GA word-reversed paraphrase leak: status=invalid V07=pass
+fixture counts: 145 guarded calls; 3 canaries; 8 branches; complete
+fixture counts: 50 guarded calls; 2 canaries; 8 branches; invalid
+fixture counts: 30 guarded calls; 2 canaries; 8 branches; invalid
+fixture counts: 145 guarded calls; 3 canaries; 8 branches; complete
+dev: seed 13000, eps=0, 138 instance/set records complete
+dev: seed 13000, eps=0.1, 138 instance/set records complete
+dev: seed 13001, eps=0, 138 instance/set records complete
+dev: seed 13001, eps=0.1, 138 instance/set records complete
+dev: iid population eps=0, 2 independent seeds complete
+dev: iid population eps=0.1, 2 independent seeds complete
+parallel: 0 checksum-validated seeds skipped; 2 pending
+dev: seed 13001, eps=0, 138 instance/set records complete
+dev: seed 13000, eps=0, 138 instance/set records complete
+dev: seed 13001, eps=0.1, 138 instance/set records complete
+parallel: 1/2 seeds; 0.199872 seeds/s; ETA 5.0s
+dev: seed 13000, eps=0.1, 138 instance/set records complete
+parallel: 2/2 seeds; 0.397256 seeds/s; ETA 0.0s
+dev: iid population eps=0, 2 independent seeds complete
+dev: iid population eps=0.1, 2 independent seeds complete
+parallel: 2 checksum-validated seeds skipped; 0 pending
+dev: iid population eps=0, 2 independent seeds complete
+dev: iid population eps=0.1, 2 independent seeds complete
+ok
+test_nonempty_output_refused (tests.test_bench_parallel.ParallelTests.test_nonempty_output_refused) ... ok
+test_per_seed_orchestration_and_tail_ast (tests.test_bench_parallel.ParallelTests.test_per_seed_orchestration_and_tail_ast) ... ok
+test_archive_sample_hashes_checks_and_untruncated_responses (tests.test_demo_data.DemoDataTests.test_archive_sample_hashes_checks_and_untruncated_responses) ... ok
+test_case_coverage_categories_and_exact_certificates (tests.test_demo_data.DemoDataTests.test_case_coverage_categories_and_exact_certificates) ... ok
+test_continuation_metrics_rederived_from_agent_rewards (tests.test_demo_data.DemoDataTests.test_continuation_metrics_rederived_from_agent_rewards) ... ok
+test_fixture_per_instance_numbers_and_no_invented_transcripts (tests.test_demo_data.DemoDataTests.test_fixture_per_instance_numbers_and_no_invented_transcripts) ... ok
+test_gate_trace_is_source_derived (tests.test_demo_data.DemoDataTests.test_gate_trace_is_source_derived) ... ok
+test_manifest_complete_hashes_and_size (tests.test_demo_data.DemoDataTests.test_manifest_complete_hashes_and_size) ... ok
+test_primary_is_exact_frozen_row (tests.test_demo_data.DemoDataTests.test_primary_is_exact_frozen_row) ... ok
+test_secondary_and_world_contrasts (tests.test_demo_data.DemoDataTests.test_secondary_and_world_contrasts) ... ok
+tests.test_exp003_controls (unittest.loader._FailedTest.tests.test_exp003_controls) ... ERROR
+tests.test_exp003_probe (unittest.loader._FailedTest.tests.test_exp003_probe) ... ERROR
+tests.test_exp003_wiring (unittest.loader._FailedTest.tests.test_exp003_wiring) ... ERROR
+test_canonical_passes_establish_validity (tests.test_fix001_validity_mapping.ValidityMappingTests.test_canonical_passes_establish_validity) ... ok
+test_engine_passes_establish_validity (tests.test_fix001_validity_mapping.ValidityMappingTests.test_engine_passes_establish_validity) ... ok
+test_failures_dominate_later_passes (tests.test_fix001_validity_mapping.ValidityMappingTests.test_failures_dominate_later_passes) ... ok
+test_legacy_runner_passes (tests.test_fix001_validity_mapping.ValidityMappingTests.test_legacy_runner_passes) ... ok
+test_missing_checks_are_not_inferred_to_pass (tests.test_fix001_validity_mapping.ValidityMappingTests.test_missing_checks_are_not_inferred_to_pass) ... ok
+test_not_applicable_is_recognized_without_inventing_a_pass (tests.test_fix001_validity_mapping.ValidityMappingTests.test_not_applicable_is_recognized_without_inventing_a_pass) ... ok
+test_unknown_evidence_does_not_establish_validity (tests.test_fix001_validity_mapping.ValidityMappingTests.test_unknown_evidence_does_not_establish_validity) ... ok
+test_zero_padded_restore_ids_normalize (tests.test_fix001_validity_mapping.ValidityMappingTests.test_zero_padded_restore_ids_normalize) ... ok
+test_imports_and_environments_without_network (tests.test_offline_adapter.OfflineAdapter.test_imports_and_environments_without_network) ... ok
+test_pilot_archive_matches_manifest (tests.test_offline_adapter.OfflineAdapter.test_pilot_archive_matches_manifest) ... ok
+test_pilot_metrics_recompute (tests.test_offline_adapter.OfflineAdapter.test_pilot_metrics_recompute) ... ok
+test_pilot_model_provenance (tests.test_offline_adapter.OfflineAdapter.test_pilot_model_provenance) ... ok
+
+======================================================================
+ERROR: tests.test_bench_modal (unittest.loader._FailedTest.tests.test_bench_modal)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.test_bench_modal
+Traceback (most recent call last):
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/unittest/loader.py", line 433, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/unittest/loader.py", line 374, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_bench_modal.py", line 8, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+
+======================================================================
+ERROR: tests.test_exp003_controls (unittest.loader._FailedTest.tests.test_exp003_controls)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.test_exp003_controls
+Traceback (most recent call last):
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/unittest/loader.py", line 433, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/unittest/loader.py", line 374, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_exp003_controls.py", line 7, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+
+======================================================================
+ERROR: tests.test_exp003_probe (unittest.loader._FailedTest.tests.test_exp003_probe)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.test_exp003_probe
+Traceback (most recent call last):
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/unittest/loader.py", line 433, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/unittest/loader.py", line 374, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_exp003_probe.py", line 10, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+
+======================================================================
+ERROR: tests.test_exp003_wiring (unittest.loader._FailedTest.tests.test_exp003_wiring)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests.test_exp003_wiring
+Traceback (most recent call last):
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/unittest/loader.py", line 433, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/unittest/loader.py", line 374, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/tests/test_exp003_wiring.py", line 5, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+
+----------------------------------------------------------------------
+Ran 460 tests in 338.691s
+
+FAILED (errors=4, skipped=4)

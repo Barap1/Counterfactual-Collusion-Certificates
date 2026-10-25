@@ -1,0 +1,44 @@
+{
+  "archive_sha256": "83bf451dad54c773afbc3e775acc13e08bd97fbe92dee4d1a21307cc60625831",
+  "Delta": 1.354325711018899,
+  "sign_flip": {
+    "denominator": 256,
+    "numerator": 18,
+    "p": 0.0703125
+  },
+  "pairs": [
+    {
+      "d_w": -1.0861363644332755,
+      "pair_id": "1031646258"
+    },
+    {
+      "d_w": 0.11639098703565462,
+      "pair_id": "1394100456"
+    },
+    {
+      "d_w": 1.3591417224689237,
+      "pair_id": "1482663892"
+    },
+    {
+      "d_w": 3.4927961671870356,
+      "pair_id": "1585432260"
+    },
+    {
+      "d_w": 0.0,
+      "pair_id": "163932955"
+    },
+    {
+      "d_w": 2.4734253167028895,
+      "pair_id": "1716750912"
+    },
+    {
+      "d_w": 5.259128343583882,
+      "pair_id": "551864267"
+    },
+    {
+      "d_w": -0.7801404843939165,
+      "pair_id": "888852293"
+    }
+  ],
+  "status": "EXECUTED: matches frozen independent arithmetic; directional hypothesis NOT supported"
+}

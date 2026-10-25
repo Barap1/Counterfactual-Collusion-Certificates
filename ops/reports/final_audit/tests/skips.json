@@ -1,0 +1,18 @@
+[
+  {
+    "test": "tests.analysis.test_readiness.ReadinessTests.test_real_frozen_manifest_contract_without_outcomes",
+    "reason": "REL-001a prohibits reading real EXP-002 manifest; owner/controller must run separately"
+  },
+  {
+    "test": "tests.audit.test_commitments_contract.PositiveControls.test_PC2_current_assignments_row",
+    "reason": "SPEC-AMBIGUOUS: the row syntax of a CURRENT ASSIGNMENTS entry is not specified; only that a row gives (agent, task)."
+  },
+  {
+    "test": "tests.audit.test_commitments_contract.SpecRulesBeyondControls.test_attribution_maps_to_claim",
+    "reason": "SPEC-AMBIGUOUS: the surface form of 'attribution' is not specified; the spec says only that it maps to 'claim'."
+  },
+  {
+    "test": "tests.audit.test_commitments_contract.SpecRulesBeyondControls.test_registered_alias_gives_tuple",
+    "reason": "SPEC-AMBIGUOUS: the alias-list format (mapping and DEV-pinned contents) is not specified in the amendment."
+  }
+]

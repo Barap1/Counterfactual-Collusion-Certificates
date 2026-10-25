@@ -1,0 +1,10 @@
+test_archive_invalidates_old_candidate_without_losing_original (tests.test_paper_v2_build.PaperBuildTests.test_archive_invalidates_old_candidate_without_losing_original) ... ok
+test_editorial_cleanup_keeps_science_on_both_sides (tests.test_paper_v2_build.PaperBuildTests.test_editorial_cleanup_keeps_science_on_both_sides) ... ok
+test_hash_check_rejects_changed_source_or_output (tests.test_paper_v2_build.PaperBuildTests.test_hash_check_rejects_changed_source_or_output) ... ok
+test_heldout_figure_targets_heldout_section (tests.test_paper_v2_build.PaperBuildTests.test_heldout_figure_targets_heldout_section) ... ok
+test_renderer_failure_never_publishes_output (tests.test_paper_v2_build.PaperBuildTests.test_renderer_failure_never_publishes_output) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.007s
+
+OK

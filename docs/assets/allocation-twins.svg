@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1180" viewBox="0 0 640 1180" role="img" aria-labelledby="title desc">
+<title id="title">Same replay evidence, different programmed policies</title><desc id="desc">Constructed deterministic allocation pair. Both teams send the same message, allocate the task to dispatch, and yield mean outsider reward 14 with the message and 19 after its removal. Reducing each outsider cost by 10 separates the policies: efficiency switches allocation and yields 29; coalition protection keeps it and yields 14. This separates only these specified policies.</desc>
+<rect width="640" height="1180" fill="#faf9f6"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#19313e">
+<text x="28" y="48" font-size="34" fill="#19313e" font-weight="700" text-anchor="start">One replay. Two explanations.</text>
+<text x="28" y="84" font-size="23" fill="#4c606a" font-weight="400" text-anchor="start">Constructed task-allocation pair</text>
+<path d="M28 110H612" stroke="#c9d2d3"/>
+<text x="28" y="151" font-size="20" fill="#4c606a" font-weight="700" text-anchor="start">THE SAME EARLY EVIDENCE</text>
+<rect x="28" y="176" width="584" height="245" rx="10" fill="#ffffff" stroke="#c9d2d3"/>
+<text x="50" y="212" font-size="22" fill="#4c606a" font-weight="400" text-anchor="start">Both teams send:</text>
+<text x="50" y="254" font-size="25" fill="#19313e" font-weight="700" text-anchor="start">“Please allocate the contested task</text>
+<text x="50" y="286" font-size="25" fill="#19313e" font-weight="700" text-anchor="start">to our dispatch team.”</text>
+<text x="50" y="333" font-size="23" fill="#19313e" font-weight="400" text-anchor="start">Task assigned to the dispatch team.</text>
+<text x="50" y="375" font-size="25" fill="#19313e" font-weight="700" text-anchor="start">Mean outsider reward: 14 → 19</text>
+<text x="50" y="404" font-size="21" fill="#4c606a" font-weight="400" text-anchor="start">Original message → message removed</text>
+<path d="M320 431v28m-6 -6 6 6 6 -6" fill="none" stroke="#4c606a" stroke-width="2"/>
+<text x="320" y="495" font-size="25" fill="#19313e" font-weight="700" text-anchor="middle">Different programmed policies</text>
+<rect x="28" y="522" width="280" height="132" rx="10" fill="#e8f2ef" stroke="none"/>
+<rect x="332" y="522" width="280" height="132" rx="10" fill="#f4ece5" stroke="none"/>
+<text x="48" y="558" font-size="26" fill="#006a60" font-weight="700" text-anchor="start">Efficiency</text>
+<text x="48" y="591" font-size="22" fill="#19313e" font-weight="400" text-anchor="start">Choose the lower-</text>
+<text x="48" y="620" font-size="22" fill="#19313e" font-weight="400" text-anchor="start">cost allocation.</text>
+<text x="352" y="558" font-size="23" fill="#854925" font-weight="700" text-anchor="start">Coalition protection</text>
+<text x="352" y="591" font-size="22" fill="#19313e" font-weight="400" text-anchor="start">Favor the coalition</text>
+<text x="352" y="620" font-size="22" fill="#19313e" font-weight="400" text-anchor="start">across contexts.</text>
+<text x="168" y="687" font-size="22" fill="#006a60" font-weight="700" text-anchor="middle">Permitted policy</text>
+<text x="472" y="687" font-size="22" fill="#854925" font-weight="700" text-anchor="middle">Prohibited policy</text>
+<rect x="28" y="720" width="584" height="100" rx="10" fill="#19313e" stroke="none"/>
+<text x="50" y="753" font-size="20" fill="#dbeae8" font-weight="700" text-anchor="start">EXTRA PROBE</text>
+<text x="50" y="788" font-size="24" fill="#ffffff" font-weight="400" text-anchor="start">Lower each outsider’s task cost by 10.</text>
+<path d="M168 830v36m-6 -6 6 6 6 -6" fill="none" stroke="#006a60" stroke-width="2"/>
+<path d="M472 830v36m-6 -6 6 6 6 -6" fill="none" stroke="#854925" stroke-width="2"/>
+<rect x="28" y="884" width="280" height="154" rx="10" fill="#e8f2ef" stroke="none"/>
+<rect x="332" y="884" width="280" height="154" rx="10" fill="#f4ece5" stroke="none"/>
+<text x="48" y="922" font-size="23" fill="#006a60" font-weight="700" text-anchor="start">Switches allocation</text>
+<text x="48" y="958" font-size="22" fill="#19313e" font-weight="400" text-anchor="start">Outsider is now</text>
+<text x="48" y="988" font-size="22" fill="#19313e" font-weight="400" text-anchor="start">the efficient choice.</text>
+<text x="48" y="1020" font-size="22" fill="#006a60" font-weight="700" text-anchor="start">Outsider reward: 29</text>
+<text x="352" y="922" font-size="23" fill="#854925" font-weight="700" text-anchor="start">Keeps allocation</text>
+<text x="352" y="958" font-size="22" fill="#19313e" font-weight="400" text-anchor="start">Task stays with</text>
+<text x="352" y="988" font-size="22" fill="#19313e" font-weight="400" text-anchor="start">the dispatch team.</text>
+<text x="352" y="1020" font-size="22" fill="#854925" font-weight="700" text-anchor="start">Outsider reward: 14</text>
+<text x="28" y="1083" font-size="26" fill="#19313e" font-weight="700" text-anchor="start">Message removal shows an effect.</text>
+<text x="28" y="1120" font-size="24" fill="#19313e" font-weight="400" text-anchor="start">The cost probe separates this policy pair.</text>
+<text x="28" y="1156" font-size="20" fill="#4c606a" font-weight="400" text-anchor="start">Scripted example · reward units · no general detector claim</text>
+</g></svg>

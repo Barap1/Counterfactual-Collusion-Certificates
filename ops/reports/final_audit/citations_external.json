@@ -1,0 +1,126 @@
+{
+  "classification": "EXECUTED metadata retrieval for20references; scoped primary-content checks plus clearly marked historical-only details",
+  "sources": [
+    {
+      "reference": 1,
+      "url": "https://arxiv.org/abs/2602.15198",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary HTML limitations: collusion not always harmful; DCOP assumptions and Jira environment confirmed"
+    },
+    {
+      "reference": 2,
+      "url": "https://arxiv.org/abs/2610.28787",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary HTML: common random numbers, A/A, placebos, positive control and quoted best-response limitation confirmed"
+    },
+    {
+      "reference": 3,
+      "url": "https://arxiv.org/abs/2608.19161",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary HTML: event-linked matched neutral counterfactual bid-distribution interventions; abstract title typo normalized by full HTML title"
+    },
+    {
+      "reference": 4,
+      "url": "https://arxiv.org/abs/2604.01151",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary HTML definition4.7: causality requires counterfactual access, explicitly not always available"
+    },
+    {
+      "reference": 5,
+      "url": "https://arxiv.org/abs/2607.26385",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary HTML marginal-audit blind construction and explicit non-universal-impossibility scope confirmed"
+    },
+    {
+      "reference": 6,
+      "url": "https://arxiv.org/abs/2608.18078",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary HTML attribution/indistinguishability argument confirmed; treated as argument, not proof for CCC"
+    },
+    {
+      "reference": 7,
+      "url": "https://arxiv.org/abs/2607.26773",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary HTML \u00a7Inference/Validity: paired bootstrap/sign-flip/exact tests, matched other-example replacement, three outcome categories confirmed; full title resolves truncated arXiv metadata"
+    },
+    {
+      "reference": 8,
+      "url": "https://arxiv.org/abs/2601.00360",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract explicitly names beneficial-cooperation/harmful-collusion boundary challenge"
+    },
+    {
+      "reference": 9,
+      "url": "https://arxiv.org/abs/2609.18346",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract CoT/collusion dissociation confirmed"
+    },
+    {
+      "reference": 10,
+      "url": "https://arxiv.org/abs/2402.07510",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract steganographic secret coordination and detection limitations confirmed"
+    },
+    {
+      "reference": 11,
+      "url": "https://arxiv.org/abs/2102.01685",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract causal-influence-diagram framework confirmed; shared-model caveat uses historical full-text record"
+    },
+    {
+      "reference": 12,
+      "url": "https://arxiv.org/abs/2402.07221",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract structural causal influence models/intention confirmed; assumptions use historical full-text record"
+    },
+    {
+      "reference": 13,
+      "url": "https://arxiv.org/abs/cs/0312038",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary arXiv authors/title and responsibility/blame confirmed; 2004 JAIR volume/pages/DOI REVIEWED RECORD ONLY (DOI fetch blocked)"
+    },
+    {
+      "reference": 14,
+      "url": "https://arxiv.org/abs/2608.29228",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract minimal repair families/counterfactual replay confirmed; no beyond-abstract comparative performance claimed"
+    },
+    {
+      "reference": 15,
+      "url": "https://arxiv.org/abs/2606.08275",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract intervention/replay attribution with intervals confirmed"
+    },
+    {
+      "reference": 16,
+      "url": "https://arxiv.org/abs/2609.07680",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract preregistered hypothesis not supported, false allegations confirmed"
+    },
+    {
+      "reference": 17,
+      "url": "https://arxiv.org/abs/1705.08500",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract selective classification/reject option risk-coverage confirmed"
+    },
+    {
+      "reference": 18,
+      "url": "https://arxiv.org/abs/2604.14251",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract cost/safety-guaranteed delegation motivation confirmed"
+    },
+    {
+      "reference": 19,
+      "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20190623",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "AEA metadata/abstract punishment phase confirmed; full text access gated, forced-deviation detail REVIEWED RECORD ONLY via historical audit and primary paper20 replication description"
+    },
+    {
+      "reference": 20,
+      "url": "https://arxiv.org/abs/2610.21867",
+      "metadata": "EXECUTED primary abstract/publisher metadata retrieval: title and authors consistent",
+      "material_claim_check": "Primary abstract impulse-response replication and failure of mechanistic identification confirmed"
+    }
+  ],
+  "not_claimed": "No exhaustive new novelty search, full-text reading of every paper, or universal priority/novelty claim. No bibliography identity/numbering change was needed."
+}

@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "view": "About / Provenance",
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "file": "final_about_provenance_1440_light.png",
+      "state": {
+        "manifest_sha256": "bdb66f194e5ba4abf1e6b18f20ee4ec6ff44b954ad0adbb19f3685a31cddb687",
+        "generation_base_commit": "4811eaf24b3bdc9e73bb96c1cbf3cf7288c429ac",
+        "background": "rgb(251, 250, 247)",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "stamp_rect": {
+          "top": 435.2734375,
+          "bottom": 473.0703125,
+          "left": 324,
+          "right": 1409.9921875
+        },
+        "stamp_fully_visible": true
+      }
+    },
+    {
+      "view": "About / Provenance",
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "file": "final_about_provenance_1440_dark.png",
+      "state": {
+        "manifest_sha256": "bdb66f194e5ba4abf1e6b18f20ee4ec6ff44b954ad0adbb19f3685a31cddb687",
+        "generation_base_commit": "4811eaf24b3bdc9e73bb96c1cbf3cf7288c429ac",
+        "background": "rgb(20, 19, 15)",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "stamp_rect": {
+          "top": 435.2734375,
+          "bottom": 473.0703125,
+          "left": 324,
+          "right": 1409.9921875
+        },
+        "stamp_fully_visible": true
+      }
+    },
+    {
+      "view": "About / Provenance",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "file": "final_about_provenance_390_light.png",
+      "state": {
+        "manifest_sha256": "bdb66f194e5ba4abf1e6b18f20ee4ec6ff44b954ad0adbb19f3685a31cddb687",
+        "generation_base_commit": "4811eaf24b3bdc9e73bb96c1cbf3cf7288c429ac",
+        "background": "rgb(251, 250, 247)",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "stamp_rect": {
+          "top": 433.1328125,
+          "bottom": 470.9296875,
+          "left": 16,
+          "right": 369.0703125
+        },
+        "stamp_fully_visible": true
+      }
+    },
+    {
+      "view": "About / Provenance",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "file": "final_about_provenance_390_dark.png",
+      "state": {
+        "manifest_sha256": "bdb66f194e5ba4abf1e6b18f20ee4ec6ff44b954ad0adbb19f3685a31cddb687",
+        "generation_base_commit": "4811eaf24b3bdc9e73bb96c1cbf3cf7288c429ac",
+        "background": "rgb(20, 19, 15)",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "stamp_rect": {
+          "top": 433.1328125,
+          "bottom": 470.9296875,
+          "left": 16,
+          "right": 369.0703125
+        },
+        "stamp_fully_visible": true
+      }
+    }
+  ],
+  "errors": [],
+  "scope": "Four fresh provenance views after source-pack sensitivity-note correction; Study view remains byte-identical per post-cold-review-equivalence.json"
+}

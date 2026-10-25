@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+build/
+qa/layout-unmerged.pdf
+qa/render-local/
+qa/render-native/
+qa/submission.txt
+qa/native-candidate.txt

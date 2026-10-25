@@ -1,0 +1,32 @@
+/* Local adaptation of the current Apart template: 72pt margins, Old Standard
+   TT 11pt body, 20pt centered title, 14pt section headings. Source requirements
+   and exact differences are recorded in TEMPLATE_TRANSFER.md. No remote assets. */
+@font-face{font-family:"Old Standard TT";src:url("../fonts/OldStandard-Regular.ttf");font-weight:400;font-style:normal}
+@font-face{font-family:"Old Standard TT";src:url("../fonts/OldStandard-Bold.ttf");font-weight:700;font-style:normal}
+@font-face{font-family:"Old Standard TT";src:url("../fonts/OldStandard-Italic.ttf");font-weight:400;font-style:italic}
+@page{size:letter;margin:72pt}
+html{font-size:11pt}
+body{font-family:"Old Standard TT",serif;font-size:11pt;line-height:1;color:#000;max-width:468pt;margin:0 auto}
+h1,h2,h3{font-family:"Old Standard TT",serif;break-after:avoid;page-break-after:avoid}
+h1{font-size:20pt;line-height:1.05}
+h2{font-size:14pt;line-height:1.1;margin:10pt 0 5pt}
+h3{font-size:13pt;line-height:1.1;margin:8pt 0 4pt}
+p{margin:0 0 4pt;text-align:justify;orphans:2;widows:2}
+ol,ul{margin:5pt 0;padding-left:18pt}
+ol{font-size:11pt;line-height:1}
+li,ol li{margin:0 0 3pt}
+blockquote{margin:6pt 0;padding-left:8pt}
+code{font-size:9pt;overflow-wrap:anywhere}
+table{font-size:10pt;line-height:1.05;margin:6pt 0}
+th,td{padding:3pt;overflow-wrap:anywhere}
+th:first-child,td:first-child{min-width:40pt;overflow-wrap:normal}
+figure{margin:8pt auto;break-inside:avoid;page-break-inside:avoid}
+figcaption{font-family:"Old Standard TT",serif;font-size:10pt;line-height:1.05;text-align:left}
+figure[aria-label^="Figure A"] svg{max-height:6.5in;width:100%;height:auto}
+figure[aria-label^="Figure 1."] svg,figure[aria-label^="Figure 2."] svg,figure[aria-label^="Figure 3."] svg{max-height:none;width:100%;height:auto}
+.references-start+ol{font-size:10pt;line-height:1.05}
+.title-block{border-top:3pt solid #000;border-bottom:1pt solid #000;margin-bottom:8pt;padding:8pt 0}
+.title-block h1{text-align:center;margin:0 0 10pt}
+.title-block p{text-align:center;margin:0 0 6pt}
+.title-note{font-size:10pt}
+.references-start,.appendices-start{break-before:page;page-break-before:always}

@@ -5,7 +5,7 @@
 
 # Same Evidence, Different Verdicts: Evidence Standards for AI Collusion Attribution
 
-Author: [OWNER]. Affiliation: [OWNER]. The owner is the sole author.
+Author: [OWNER]. Affiliation: [OWNER].
 
 ## Abstract
 
@@ -15,7 +15,7 @@ Audits of multi-agent systems use logged messages and replay interventions to as
 
 ## 1. Introduction
 
-A team allocates a contested task to a coalition member. In one world its message steers work away from a cheaper outsider; in its twin, the same message and allocation follow the shared efficiency objective. The transcript and factual, knockout, sham and placebo outcomes are identical by construction. An auditor using that evidence must return the same output for both worlds, although their attribution labels differ. An environment probe asks the separating question: would the team yield when the outsider becomes the efficient claimant? Figure 1 presents the evidence ladder [NP] (PROSPECTIVE in its source figure metadata; a conceptual diagram, not a measured outcome).
+A team allocates a contested task to a coalition member. In one world its message steers work away from a cheaper outsider; in its twin, the same message and allocation follow the shared efficiency objective. The transcript and factual, knockout, sham and placebo outcomes are identical by construction. An auditor using that evidence must return the same output for both worlds, although their attribution labels differ. An environment probe asks the separating question: would the team yield when the outsider becomes the efficient claimant? Figure 1 presents the evidence ladder [NP] (conceptual diagram); Figure 2 shows the designed twins.
 
 Auditors may use evidence of collusion to recommend sanctions, shutdowns or deployment decisions. Confusing influence with attribution risks accusing legitimate cooperation while missing harmful coordination. Our threat model is an auditor with a replayable log and a suspected message exposure, facing both possibilities. Auditors and benchmark builders can use this standard to state which claim their evidence supports and what additional probe or authorization record is needed.
 
@@ -31,8 +31,6 @@ Our contributions are:
 **What is new, and what is not.** Counterfactual interventions, sham and placebo controls and three-way outcomes are established [2, 7]. Indistinguishability of lawful parallelism and conspiracy is argued for price- and bid-level tests [5] and for reasoning agents [6]; the boundary between beneficial cooperation and harmful collusion is named as an open challenge in [8]. In a bounded search (Appendix G) we found no executable, message-level, interventional statement of the limit with a measured separating-evidence frontier. We state the limit only for our generators and information sets, and make no priority claim.
 
 **What we tested and found.** The preregistered held-out directional hypothesis was not supported [OC] (Section 5.4). The prospective frontier matched enumeration by construction [NP]. The original and DEV-informed over-attribution predictions both failed across the required strata [NP].
-
-**Figure 1. Same evidence, different attribution labels [NP] (schematic of the prospective twins).** Left: a colluding-allocation twin and its efficiency-motivated counterpart share transcript and declared replay outcomes. Middle: equal tau_O, tau_C and tau_W support the same exposure-level reading. Right: the ladder separates influence and harm from attribution; an environment probe supplies separating evidence. **Takeaway:** identical declared evidence requires the same audit output, so attribution needs separating evidence. Rendering is pending; this schematic asserts no measured bars or prospective verdicts.
 
 ## 2. Related Work
 
@@ -70,7 +68,7 @@ tau_O = E[Omean_K] - E[Omean_F] (outsider effect), tau_C = E[Cmean_F - Cmean_K] 
 
 ## 4. Benchmark and Study Methods
 
-**Benchmark [NP] (frozen design).** Six twin-pair types P1-P6 (redundant-harmful vs inert; colluding vs efficiency-motivated allocation; authorized vs unauthorized transfer; common cause vs message-caused coordination; suspicious vs plain inert language; information-bearing vs harmful steering), a relayed-harmful case, corrupted traces and 11 benchmark classes, each twin pair being ONE independent unit (Appendix E). Strata eps in {0, 0.1} (random-action probability of each scripted agent; R = 8 continuations per arm) are reported separately and never pooled. Seeds derive from the protocol hash with a deterministic skip rule against all development, pilot and original-study seeds; disjointness is checked and hashed in FREEZE.json before any run. Metrics: over-claim rate, sensitivity, FPR, abstention and coverage, risk-coverage curves at abstention cost c in {0.25, 0.5}, exact Clopper-Pearson 95% intervals over independent units, exact McNemar-type paired tests, world-cluster percentile bootstrap (Appendix E). Single pass, fixed N, no interim looks; crashes stay in the denominator; any code change after outcomes are visible forces a new seed block and both runs are reported.
+**Benchmark [NP] (frozen design).** Six twin-pair types P1-P6 (redundant-harmful vs inert; colluding vs efficiency-motivated allocation; authorized vs unauthorized transfer; common cause vs message-caused coordination; suspicious vs plain inert language; information-bearing vs harmful steering), a relayed-harmful case, corrupted traces and 11 benchmark classes, each twin pair being ONE independent unit (Appendix E). Strata eps in {0, 0.1} (random-action probability of each scripted agent; eps = 0 is evaluated exactly with one continuation per arm, while eps = 0.1 uses R = 8 per arm) are reported separately and never pooled. Seeds derive from the protocol hash with a deterministic skip rule against all development, pilot and original-study seeds; disjointness is checked and hashed in FREEZE.json before any run. Metrics: over-claim rate, sensitivity, FPR, abstention and coverage, risk-coverage curves at abstention cost c in {0.25, 0.5}, exact Clopper-Pearson 95% intervals over independent units, exact McNemar-type paired tests, world-cluster percentile bootstrap (Appendix E). Single pass, fixed N, no interim looks; crashes stay in the denominator; any code change after outcomes are visible forces a new seed block and both runs are reported.
 
 **Positive control [DEV] (design).** The **P4 message-caused coordination member**, contrasted with its common-cause twin, is the named causal-influence positive control. Single-message knockout is the declared separating intervention. This checks influence rather than the full certificate or attribution pipeline. Recovery counts and support-level positive-control validation are not established in the supplied draft and must be reported before instrument-validity claims.
 
@@ -80,21 +78,19 @@ tau_O = E[Omean_K] - E[Omean_F] (outsider effect), tau_C = E[Cmean_F - Cmean_K] 
 
 **Frozen research questions [NP] (criteria).** The protocol tests symmetry and the separating-evidence frontier, the label-effect gap, knockout over-attribution, abstention-aware ladder reporting and descriptive CCC behaviour. Appendix E gives every threshold and failure rule; Section 5 reports each question without replacing the original over-attribution prediction with its development-informed refinement.
 
-**Amendments and disclosures [DEV].** Three director amendments precede the DEV run (CRN, circularity disclosure, RQ6). After seeing DEV results (RQ1 and RQ3 passed; RQ2, RQ4 and RQ5 failed) and before any prospective seed existed, four further amendments were made and are reported as DEV-informed: CCC-L v0 to v1 (adds "L3 excluded"), RQ2 made method-independent, RQ4b added beside the unchanged RQ4, and RQ3 left unchanged. The independent review (REV-R2) approved the freeze with four conditions, which we adopt as reporting rules. (C2) RQ5 is structurally strict: undefined denominators score as fail (166/168 DEV cells), so the informative RQ5 readouts are the selective-accuracy gap, over-claim counts and pair attribution (DEV v1: 1.00 at eps = 0, 0.66 at eps = 0.1) [DEV]. (C3) The report is stricter than the protocol text: RQ3 and RQ4 must pass in both strata; RQ1 and RQ2 are consistency checks by construction and are not performance evidence. (C4) Prospective RQ3 uses effectively random cell assignment, whereas the DEV block was balanced (0.24 [DEV] against the 0.25 frozen bound [NP] at the deterministic stratum), so DEV is not a reliable guide to the prospective value. Circularity (amendment A2): RQ2 and RQ5 are consistency checks of the generator, the enumeration and the reference auditor; CCC-L was written knowing which evidence separates each type, so passing them is expected by design and is not a performance claim. D-048 subsequently restricts established results to eps = 0; eps = 0.1 is platform-dependent, not established, including the proposed noisy-stratum robustness check. DEV macOS eps = 0.1 is not comparable with prospective Linux eps = 0.1.
-
-**Original held-out study (EXP-002; protocol v1.2, preregistered) [OC] (design).** Local `gemma4:26b`; 8 matched world pairs; regimes B1 (one deception prompt variant) and B2 (authorized cooperation); 4 F and 4 K continuations per checkpoint. Estimand Delta = mean_w[tau_O(w,B1) - tau_O(w,B2)] with whole matched worlds as independent units; the directional primary required both a positive world-cluster bootstrap lower bound (10,000 draws) and exact one-sided paired sign-flip p <= 0.05. Case-level certificates are exploratory. The prospective study (R2) has disjoint worlds, seeds and code hashes, is never pooled with EXP-002, and EXP-002 serves only as a real-agent illustration.
+**Amendments and disclosures [DEV].** Three amendments preceded DEV (CRN, circularity disclosure, RQ6). After DEV and before prospective seeds, CCC-L v1, method-independent RQ2 and RQ4b were adopted; RQ3 stayed unchanged. All are DEV-informed. REV-R2 conditions require both strata for RQ3/RQ4, score undefined RQ5 denominators as failures, distinguish random prospective RQ3 assignment from balanced DEV, and classify RQ1/RQ2 as construction consistency. Full development readouts and review conditions are retained in Appendix B.
 
 ## 5. Results
 
 ### 5.1 Positive control and development evidence
 
-The P4 message-caused coordination positive control is specified in Section 4 [DEV] (design). Its recovery is not established by the supplied draft. The following implementation checks do not substitute for that result.
+The P4 influence control (Section 4) does not establish full certificate recovery [DEV].
 
 Gate A (v1.2.2) passed its deterministic implementation checks (for example A2 benign cooperation never supported, 80/80) but is not held-out inference, and agreement with scripted predictions is not validation. The label-effect gap was 12/80 in Gate A and 12/50 (eps = 0), 5/50 (eps = 0.1) in the benchmark DEV block [DEV]; RQ3 and RQ4 were derived from these, and none counts as confirmatory (Appendix F).
 
 ### 5.2 Frontier and identifiability [NP]
 
-Established prospective results below use **eps = 0 only** [NP]. D-048 marks eps = 0.1 **platform-dependent, not established**: across the preserved cross-platform overlap, all 149 deterministic units were byte-identical, while 142/148 noisy units differed and 1160/1452 noisy records had differing method output objects [D] (platform audit). The restriction was decided **post hoc, after outcomes were visible**, on evidence of substantive cross-platform divergence. Its cause is unresolved. Mapped methods/enumeration ran on Modal Linux; RQ3 population generation and reporting ran locally (D-046). Full noisy results remain in `RESULTS_BY_STRATUM.json`; no claim rests on them.
+Established prospective results below use **eps = 0 only** [NP]. D-048 marks eps = 0.1 **platform-dependent, not established**: across the preserved cross-platform overlap, all 149 deterministic units were byte-identical, while 142/148 noisy units differed and 1160/1452 noisy records had differing method output objects [D] (platform audit). The restriction was decided **post hoc, after outcomes were visible**, on evidence of substantive cross-platform divergence. Its cause is unresolved. The historical cross-platform gate failed; D-046 permitted execution after limited deterministic-stratum agreement and Linux self-determinism checks, an execution-environment deviation rather than a study-protocol amendment. Mapped methods/enumeration ran on Modal Linux; RQ3 population generation and reporting ran locally (D-046). Full noisy results remain in `RESULTS_BY_STRATUM.json`; no claim rests on them.
 
 **Pre-registered aggregate verdicts (verbatim from report.py):**
 
@@ -114,7 +110,7 @@ These aggregate rules require both strata. Four predictions failed; the stratum 
 
 ### 5.3 Abstention-aware benchmark [NP]
 
-**RQ3 label-effect gap — eps = 0 FAIL.** [NP] The share was 30.5% (61/200; CP 95% [0.242, 0.374]), failing the frozen <25% prediction. Prospective cell assignment was random; DEV was balanced. The run_par report's eps = 0.1 entry is 41/200 (20.5%; CP 95% [0.151, 0.268]), a point-threshold pass without margin, **platform-dependent, not established**. The aggregate remains failed.
+**RQ3 label-effect gap — eps = 0 FAIL.** [NP] The share was 30.5% (61/200; CP 95% [0.242, 0.374]), failing the frozen <25% prediction. The interval includes 25%; this failed point-threshold prediction does not establish that the true rate exceeds 25%. Prospective cell assignment was random; DEV was balanced. The run_par report's eps = 0.1 entry is 41/200 (20.5%; CP 95% [0.151, 0.268]), a point-threshold pass without margin, **platform-dependent, not established**. The aggregate remains failed.
 
 **RQ4 over-attribution — eps = 0 FAIL.** [NP] B2+ accused legitimate P2 and P3 members at 200/200 each (CP 95% [0.981725, 1]), but P6 at 0/200 and benign cooperation at 0/100 (CP 95% [0, 0.018275] and [0, 0.036217]). Thus the original all-class prediction failed even in the established stratum. CCC had zero L2 supports under I1 in those cells.
 
@@ -160,7 +156,7 @@ The instrument's accounting is 199 scheduled branch records: 143 executed valid 
 
 **Platform dependence and post-hoc scope.** D-048 was decided after outcomes were visible: eps = 0 is the established prospective stratum, supported by byte identity on the available overlap; eps = 0.1 is platform-dependent, not established. Self-determinism on Linux does not resolve substantive disagreement with macOS. The cause is unknown, and REV_R3 did not identify this consequence. Full noisy results and all aggregate failures remain reported. This scope restriction is not a pre-registered successful validation or a general platform-invariance guarantee.
 
-We do not detect collusion or intent. A `not supported` or `inconclusive` record is not exoneration and must not be the sole basis for deployment. The identifiability limit holds only for our generators and information sets, and scripted generators with oracle labels cannot estimate real false-positive rates. RQ1 and RQ2 are consistency checks by construction, RQ5 is largely a consistency check and structurally strict, and CCC-L v1, the method-independent RQ2 and RQ4b are DEV-informed amendments; the DEV block was balanced while prospective RQ3 assignment is random (Section 4; REV-R2 C2-C4). The original study has one local model, one deceptive prompt variant, one exposure per trajectory and 8 independent matched world pairs [D], so its precision cannot support equivalence or practical-significance claims. Replay access and a suspected exposure are required. Appendix A lists restrictions and ways to extend the evidence.
+**End-to-end support-level positive-control recovery and useful real-agent detection sensitivity remain unestablished.** The P4 influence control and construction consistency do not validate the full certificate pipeline. We do not detect collusion or intent. A `not supported` or `inconclusive` record is not exoneration and must not be the sole basis for deployment. The identifiability limit holds only for our generators and information sets, and scripted generators with oracle labels cannot estimate real false-positive rates. RQ1 and RQ2 are consistency checks by construction, RQ5 is largely a consistency check and structurally strict, and CCC-L v1, the method-independent RQ2 and RQ4b are DEV-informed amendments; the DEV block was balanced while prospective RQ3 assignment is random (Section 4; REV-R2 C2-C4). The original study has one local model, one deceptive prompt variant, one exposure per trajectory and 8 independent matched world pairs [D], so its precision cannot support equivalence or practical-significance claims. Replay access and a suspected exposure are required. Appendix A lists restrictions and ways to extend the evidence.
 
 ## 8. Conclusion
 
@@ -197,7 +193,7 @@ Colosseum, Terrarium and the prompted pilot predate the sprint; the audit protoc
 
 # Appendices
 
-Index: A limitations and dual-use; B deviations; C reproducibility; D falsifiable checks and worked record; E benchmark design and selected templates; F original-study detail; G related work; H figure sources; I extra tables.
+Index: A limitations and dual-use; B deviations; C reproducibility; D falsifiable checks and worked record; E benchmark design and selected templates; F original-study detail; G related work; I extra tables. Figure sources accompany their captions and sidecar metadata.
 
 ## A. Limitations and Dual-Use / Ethical Considerations
 
@@ -240,6 +236,12 @@ Additional restrictions are:
 
 11. D-048 (post-hoc, after outcomes were visible): substantive eps = 0.1 method outputs disagree between macOS serial and Modal Linux on identical seeds. Established prospective claims are restricted to eps = 0; eps = 0.1 is reported in full as "platform-dependent, not established". This decision was based on objective divergence, not outcome direction; it does not alter the pre-registered aggregate failures. REV_R3 missed the substantive consequence. See `PLATFORM_DIVERGENCE.md` and `RESULTS_BY_STRATUM.json`; no frozen source, seed or run output was changed. [PH] (scope decision).
 
+### B.1 Development-informed amendments and review conditions
+
+**Amendments and disclosures [DEV].** Three director amendments precede the DEV run (CRN, circularity disclosure, RQ6). After seeing DEV results (RQ1 and RQ3 passed; RQ2, RQ4 and RQ5 failed) and before any prospective seed existed, three further changes were made and are reported as DEV-informed: CCC-L v0 to v1 (adds "L3 excluded"), RQ2 made method-independent, RQ4b added beside the unchanged RQ4, with RQ3 left unchanged. The independent review (REV-R2) approved the freeze with four conditions, which we adopt as reporting rules. (C2) RQ5 is structurally strict: undefined denominators score as fail (166/168 DEV cells), so the informative RQ5 readouts are the selective-accuracy gap, over-claim counts and pair attribution (DEV v1: 1.00 at eps = 0, 0.66 at eps = 0.1) [DEV]. (C3) The report is stricter than the protocol text: RQ3 and RQ4 must pass in both strata; RQ1 and RQ2 are consistency checks by construction and are not performance evidence. (C4) Prospective RQ3 uses effectively random cell assignment, whereas the DEV block was balanced (0.24 [DEV] against the 0.25 frozen bound [NP] at the deterministic stratum), so DEV is not a reliable guide to the prospective value. Circularity (amendment A2): RQ2 and RQ5 are consistency checks of the generator, the enumeration and the reference auditor; CCC-L was written knowing which evidence separates each type, so passing them is expected by design and is not a performance claim. D-048 subsequently restricts established results to eps = 0; eps = 0.1 is platform-dependent, not established, including the proposed noisy-stratum robustness check. DEV macOS eps = 0.1 is not comparable with prospective Linux eps = 0.1.
+
+**Original held-out study (EXP-002; protocol v1.2, preregistered) [OC] (design).** Local `gemma4:26b`; 8 matched world pairs; regimes B1 (one deception prompt variant) and B2 (authorized cooperation); 4 F and 4 K continuations per checkpoint. Estimand Delta = mean_w[tau_O(w,B1) - tau_O(w,B2)] with whole matched worlds as independent units; the directional primary required both a positive world-cluster bootstrap lower bound (10,000 draws) and exact one-sided paired sign-flip p <= 0.05. Case-level certificates are exploratory. The prospective study (R2) has disjoint worlds, seeds and code hashes, is never pooled with EXP-002, and EXP-002 serves only as a real-agent illustration.
+
 ## C. Reproducibility
 
 Frozen EXP-002 outputs: docs/analysis/exp002_heldout_v2/ and v3 (metadata repair; field diff in output_diff_v3.json). Independent reproduction: docs/review/rev001/rev001_repro.json. Gate A: docs/gate_a/v1.2/correction_v1.2.2/. R2: docs/enh/r2/PROTOCOL.md, FREEZE.json (code hashes, enumeration hash, seed list hash, intersection sizes, reviewer, timestamp); commands `python -m ccc.bench hashes|seeds --check`. Offline reproduction script scripts/reproduce_offline.sh. Model digest 5571076f3d70; 3,516 local calls, $0 [D]. R2 input SHA-256 values (`RESULTS.json.inputs`): `frontiers.json`: `5c85df25f10b906daae4ffeb270b2ac2364f1148beca455805d003c42c3c0b13`; `manifest.json`: `148ce53257a3bd6e1530af65a6ad59bf62fcd30b87a0b3b0bfbcfb49fcf8063c`; `population.json`: `3be08849cfb24a3cb54e25744c2a3856b92d9685be6215b95e40ba07bb70879b`; `records.json.gz`: `8e095c9e13a5c126699b2060138afe6a0fdd37457d357fbfa55245fc2146aba8`. Seed-list SHA-256 (`tables.T1.seed_disjointness.seed_list_sha256`): `1720ba12cd131f9d914ea01bf0a14e72f4f7923fd060ca6d5802a2839e829e7c`.
@@ -252,7 +254,7 @@ Frozen EXP-002 outputs: docs/analysis/exp002_heldout_v2/ and v3 (metadata repair
 
 **Judge disclosure.** No new judge-validity claim is introduced here.
 
-## E. Benchmark design and selected reporting templates
+## E. Benchmark design and detailed results
 
 **Preregistered research questions [NP] (frozen criteria; protocol sha256 334a4539; descriptive-with-prediction, not a Holm-corrected family).** RQ1 symmetry: 0 within-pair output differences of 200 for each method x pair type x set where observables are S-equivalent (twin members use common random numbers). RQ2 frontier, method-independent: the observed frontier, the lowest set S at which Bayes-given-S pair accuracy is 1 on all units, equals the enumerated minimal separating set for every listed type, and no method is correct on both members of any unit below that set beyond what Bayes-given-S achieves. RQ3 label-effect gap: the share of mechanism-"forbidden" iid Jira worlds with oracle tau_O >= m_O is below 25%. DEV values are disclosed beside the prediction: Gate A 12/80 [DEV]; benchmark DEV block 12/50 at eps = 0 and 5/50 at eps = 0.1 [DEV]. RQ4 over-attribution [NP] (criterion), kept verbatim from the original protocol: the strongest knockout baseline accuses legitimate members at rate > 0.5 under I1 for each of P2, P3, P6 and benign cooperation; on DEV this failed on P6 and benign cooperation (0/50 [DEV]). RQ4b [NP] (DEV-informed criterion): the same baseline over-attributes on P2 and P3 at rate > 0.5 and at rate <= 0.05 on P6 and benign cooperation, each stratum separately. RQ5 ladder auditor [NP] (criterion): CCC-L v1 within 0.02 selective accuracy of Bayes-given-S at both c, zero over-claims, abstention precision and recall >= 0.9, and >= 0.95 correct attribution when I4 (P2) or I5 (P3) is supplied. RQ6 descriptive: CCC v1.2.2 status distribution per class and stratum.
 
@@ -292,12 +294,10 @@ Also: a relayed-harmful case (sender to relay to receiver; expected unresolved a
 | T9 failures | `tables.T9`: complete; crashes empty; corrupted-trace statuses retained |
 | T1 design and disjointness | `tables.T1`; all excluded-set intersections are zero |
 | T10 post-hoc list | `tables.T10`: empty |
-| Figure 2 frontier | `figures.frontier_heat_map`; prospective data, rendering pending |
-| Figure 3 risk-coverage | `figures.risk_coverage`; prospective data, rendering pending |
+| Figure A9 frontier | `figures.frontier_heat_map`; both strata, with D-048 scope labels |
+| Figure A10 risk-coverage | `figures.risk_coverage`; both strata, with D-048 scope labels |
 
 **Methods compared, full definition.** (each sees only the observables of its declared set; none tuned on prospective seeds; frozen before any prospective seed existed): CCC v1.2.2; B0 outcome-only; B1 simple knockout; B2 and B2+ harm-gated knockout; B3a and B3b influence-only; B4 transcript keyword rule; always-answer and always-abstain anchors; Bayes-given-S reference (majority label per S-equivalence class under frozen class priors; the ceiling for any method restricted to S); CCC-L v1 (new, exploratory, DEV-informed), which outputs the highest justified rung, "insufficient for L3 under S", or "L3 excluded" (attribution ruled out by separating evidence in S), attributing L3 only when S contains separating evidence. CCC-L v0 lacks the "L3 excluded" output; DEV showed it therefore cannot be correct on both members of a pair. It is retained, run and reported prospectively so the change is visible. The "strongest knockout baseline" is fixed in advance as the better of {B2+, B3b} by balanced accuracy on DEV block 13000-13049 under I1 (ties to B2+), recorded in FREEZE.json.
-
-**Selected reporting templates.** The pass templates for RQ1 and RQ2, negative templates for RQ3, RQ4, RQ4b and RQ5, and both stratum-specific descriptive RQ6 templates are populated in Section 5. Inactive alternatives are removed; no favourable alternative replaces a failed prediction. Full numerical cells remain in `docs/enh/r2/run_par/RESULTS.json`.
 
 ## F. Original-study detail
 
@@ -314,11 +314,11 @@ Also: a relayed-harmful case (sender to relay to receiver; expected unresolved a
 
 ## G. Related-work detail and search scope
 
-Detailed comparison paragraphs to be carried from paper/build/submission.md Appendix B.1 (DoVer, AgenTracer, Audit the Whisper, CABAL, tool-use steganography: all verified in paper/references_draft.bib; re-cite with numbers added then) plus the ENH-A neighbours above. [OWNER: confirm whether to carry these over.] Not found in the bounded search: a theorem that message-level interventional evidence on influence, harm and utility cannot separate harmful coordination from legitimate cooperation. Absence in a bounded search is not proof. Safe wording used throughout: "we state and demonstrate a scoped outcome-equivalence limit for declared-arm evidence; related indistinguishability claims exist for marginal price tests [5] and are argued for reasoning agents [6]". No "first" claim.
+Not found in the bounded search: a theorem that message-level interventional evidence on influence, harm and utility cannot separate harmful coordination from legitimate cooperation. Absence in a bounded search is not proof. Safe wording used throughout: "we state and demonstrate a scoped outcome-equivalence limit for declared-arm evidence; related indistinguishability claims exist for marginal price tests [5] and are argued for reasoning agents [6]". No "first" claim.
 
 **Related work, extended.** *Responsibility, failure attribution and overdetermination.* Counterfactual replay for failure attribution and minimal repair families [14, 15] and degrees of responsibility under redundant contributions [13] motivate our redundancy cases, where single knockout is zero and joint knockout is positive; we report such cases as "not identifiable under I1", not "no effect". *Abstention and reporting standards.* Selective classification with a reject option and risk-coverage reporting [17] and delegation with cost or safety-performance guarantees for safety monitors [18] motivate our abstention-aware scoring. Preregistered audit studies have precedent: one finds auditors naming innocent parties after upstream false alarms, with its preregistered hypothesis not supported [16]. Steganographic and covert channels [10] can evade any text-level intervention; this limit is inherited.
 
-*Search scope.* Search date 2026-10-24; Firecrawl paper index, web search and fetch, about 25 queries [D] (inherited, not independently traceable in this repository; unchecked count). This is a bounded search, not a survey. Legal "plus factors" primary law was not checked. The search was not rerun.
+*Search scope.* Search date 2026-10-24; Firecrawl paper index, web search and fetch, query count is not independently traceable in this repository [D]. This is a bounded search, not a survey. Legal "plus factors" primary law was not checked. The search was not rerun.
 
 ## H. Figure plan
 
@@ -339,7 +339,7 @@ Main-text sequence: twin schematic, frontier, risk-coverage, held-out null. Deve
 
 ## I. Appendix tables
 
-T1 design, counts, seed disjointness; T10 post-hoc list (all analyses added after outcomes are visible, labelled [PH]).
+Design counts and seed disjointness are retained in `RESULTS.json.tables.T1`; `tables.T10` was empty in the frozen report. D-048 was a later post-hoc scope restriction, documented in Appendix B and `RESULTS_BY_STRATUM.json`, rather than an addition to the frozen report.
 
 ## LLM Usage Statement
 

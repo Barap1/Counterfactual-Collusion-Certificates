@@ -12,10 +12,10 @@ Views: Start here (4-step tour), Study, Twin worlds (hidden unless `demo/data/tw
 Rules the UI derives (stated in the UI too): evidence-ladder rung comes only from certificate fields (supported -> L2; invalid -> L0; not supported / inconclusive -> L1 if any tau interval excludes 0, else L0; L3 never claimed). Tour contrast = the world with the largest |tau_O(B1) - tau_O(B2)| (illustrative, not a selected positive result).
 
 ## Rebuild
-`python3 -I demo/explorer/bundle_data.py` (rerun after any change to `demo/data/`; picks up `twins.json` automatically).
+Run `build_twins.py` when changing the selected benchmark source, then `python3 -I demo/build_data.py`, then `python3 -I demo/explorer/bundle_data.py`. The pack builder writes its manifest last; the bundler verifies generated file hashes before replacing the previous bundle. It embeds the exact manifest SHA-256 and copies the manifest's authentic generation base commit. That commit records HEAD at generation; source hashes identify the actual input and generator bytes, including uncommitted corrections.
 
 ## Twin worlds
-`python3 -I demo/build_twins.py --run docs/enh/bench/dev_run --label DEV` writes `demo/data/twins.json` from benchmark outputs only (records, per-seed partitions with canonical auditor views, separators); then rerun `bundle_data.py` and `demo/build_data.py` (manifest). The provenance badge and the DEV banner come from the JSON. Deep link: `#/twins/P2/4`. For PROSPECTIVE use `--label PROSPECTIVE --dev-run <DEV run>`.
+`python3 -I demo/build_twins.py --run docs/enh/r2/run_par --label PROSPECTIVE --dev-run docs/enh/bench/dev_run` writes `demo/data/twins.json` from preserved outputs only (records, canonical per-seed partitions, separators, RESULTS.json); follow with `build_data.py`, then `bundle_data.py`. For development use `--run docs/enh/bench/dev_run --label DEV`. Deep link: `#/twins/P2/4`. Selection is the lowest seed per pair type at epsilon=0. The prospective view retains all frozen aggregate criterion decisions and discloses the post-hoc epsilon=0 scope and unresolved epsilon=0.1 divergence. Labels are scripted, not recovered real-agent intent.
 
 ## QA
-Screenshots in `qa/` (headless Chrome; 390 px shots use a 390 px iframe because headless windows are at least 500 px wide).
+Current interaction and desktop/mobile review notes are in [`ops/reports/repo_final/`](../../ops/reports/repo_final/). Older screenshot sets were redundant presentation evidence and are excluded from the reading path. Frozen numerical pack provenance remains in `demo/data/` and is checked by `tests/test_demo_data.py`.

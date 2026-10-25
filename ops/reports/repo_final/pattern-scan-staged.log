@@ -1,0 +1,16 @@
+Scan progress: 250 blobs
+Scan progress: 500 blobs
+Scan progress: 750 blobs
+Scan progress: 1000 blobs
+Scan progress: 1250 blobs
+Scan progress: 1500 blobs
+Scan progress: 1750 blobs
+Scan progress: 2000 blobs
+Traceback (most recent call last):
+  File "/Users/aarav/Documents/Projects/ApartSprint/scripts/secret_scan.py", line 51, in <module>
+    if not p.is_symlink() and p.is_file(): scan(p.read_bytes(),str(p))
+                                           ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aarav/Documents/Projects/ApartSprint/scripts/secret_scan.py", line 47, in scan
+    rules=[str(i+1) for i,r in enumerate(patterns) if r.search(data)]
+                                                      ~~~~~~~~^^^^^^
+KeyboardInterrupt

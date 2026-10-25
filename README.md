@@ -1,107 +1,94 @@
-# Counterfactual Collusion Certificates (CCC)
+# When Cooperation Looks Like Collusion
+### The Limits of Counterfactual Auditing in Multi-Agent AI
 
-CCC studies what replay evidence can support a scoped claim of communication-dependent harmful coordination, and when an auditor should abstain. It combines synthetic Jira task worlds, replay validity checks, message interventions, baseline auditors, and world-level offline analysis. It is a contribution to evidence standards for attributing harm to AI-agent communication, not a collusion detector.
+**Counterfactual Collusion Certificates (CCC)** · Apart Research AI Collusion Research Sprint · October 2026
 
-## Quick check: reproduce the headline (no install, no network)
+A message can change what other agents do and disadvantage outsiders without proving that the communication constitutes collusion. **Evidence of influence leaves an attribution problem: which policy produced the behavior?**
 
-Needs only Python 3 (standard library). From the repository root; the final command prints JSON including Delta and p:
+CCC makes that problem executable. We construct teams that look identical under message removal, then ask what additional evidence distinguishes their programmed policies.
+
+[Explore the example](#try-it-offline) · [Reproduce the primary result](#reproduce-the-primary-result) · [Research and evidence](docs/README.md)
+
+## Two teams. The same evidence.
+
+Both teams send the same allocation request. Both assign the task to the dispatch team. Removing the message has the same measured effect on outsiders in each world.
+
+One team follows a permitted efficiency policy. The other follows a prohibited policy that protects the coalition. Their initial behavior and message-removal results do not tell those explanations apart.
+
+![Two constructed teams send the same allocation request and make the same allocation. Mean outsider reward rises from 14 to 19 after message removal in both worlds. Lowering each outsider’s task cost by 10 separates their programmed responses: the efficiency policy changes the allocation and yields outsider reward 29; the coalition-protecting policy keeps the allocation and yields 14.](docs/assets/allocation-twins.svg)
+
+The extra probe changes task costs so that an outsider becomes the efficient choice. The efficiency team switches; the coalition-protecting team does not. This resolves the ambiguity **for these specified policies**. It is a reproducible counterexample to treating message-removal harm as sufficient attribution, not a general impossibility theorem or a validated detector. [Exact values, code and source records](docs/assets/README.md).
+
+## What the audit can say
+
+CCC replays a checkpoint with the original message, with its exposure masked, and with sham and eligible inert-message controls. It reports effects on outsiders, the coalition and total reward. The sham checks the intervention machinery; the inert-message control probes removal specificity, with imperfect surface and position matching. Missing or invalid controls limit the conclusion.
+
+The claim should grow only with the evidence:
+
+![Observation raises a question. A valid controlled replay can establish causal influence. Outcome measures can establish harmful exposure. Attribution additionally needs a declared policy and evidence distinguishing legitimate alternatives; otherwise it remains unresolved.](docs/assets/evidence-steps.svg)
+
+The constructed benchmark adds cost probes and authorization records. Its labels come from the generator's programmed policies. The separate real-agent study compares prompt conditions, which are not verified ground truth for realized collusion.
+
+## What we found
+
+**Constructed benchmark.** The allocation and transfer twins share their specified early observations. Both construction-consistency checks pass by design; **all four aggregate prospective predictions fail**.
+
+In deterministic evaluation, the harm-gated baseline accused legitimate cases as follows:
+
+| Legitimate mechanism | Accused / evaluated |
+| :--- | ---: |
+| Efficient allocation | 200 / 200 |
+| Authorized transfer | 200 / 200 |
+| Useful information | 0 / 200 |
+| Benign cooperation | 0 / 100 |
+
+The revised attribution rule met the full utility criterion in **2 of 84 evaluation settings**; the previous version met it in **5 of 84**. These are setting counts, not classification accuracy or evidence of general superiority. [Full results and original verdicts](docs/RESULTS.md).
+
+**Separate real-agent study.** Across **eight independent matched-world pairs**, the primary contrast was **1.354 reward units**, with a world-cluster 95% interval of approximately **−0.020 to 2.834** and exact one-sided sign-flip **p = 0.0703125**. The preregistered directional hypothesis was **not supported**. No exploratory case-level certificate was supported.
+
+**What remains unestablished:** general detection reliability, end-to-end sensitivity, and consistent performance across platforms under noise. The noisy benchmark condition produced substantive cross-platform disagreements. Restricting established benchmark findings to the deterministic condition was a **post-hoc decision**. Negative results, both conditions and correction records are retained. [Limitations and release boundaries](docs/LIMITATIONS.md).
+
+## Try it offline
+
+Download or clone this repository, then open [`demo/explorer/index.html`](demo/explorer/index.html) in your browser. No server, installation or network connection is needed. GitHub's file preview shows source; the downloaded HTML runs the explorer.
+
+1. Select **Twin worlds**, choose **P2** (allocation), and compare evidence levels **I2** and **I4**.
+2. Open **Study** for the real-agent estimate and uncertainty.
+3. Select a case to inspect continuations, controls and the recorded certificate.
+
+The explorer reads a bundled frozen data pack; it makes no model calls. [Data provenance and rebuild instructions](demo/explorer/README.md).
+
+## Reproduce the primary result
+
+From the repository root, using **Python 3.12 or newer** on macOS, Linux or Windows:
 
 ```sh
-ccc_extract=$(mktemp -d)
-tar -xzf docs/runner/archives/exp002-live.tar.gz -C "$ccc_extract"
-shasum -a 256 -c docs/runner/archives/exp002-live.tar.gz.sha256
-python3 -I review/reproduce_headline/independent.py --input "$ccc_extract/exp002-live"
+python3 scripts/reproduce_headline.py
 ```
 
-Expected (all values in this sentence: original-confirmatory): `Delta` = 1.3543257..., `sign_flip` = 18/256 (p = 0.0703125), 8 defined pairs, 7 non-zero. This was verified with system `/usr/bin/python3` in an isolated temporary directory containing only the tracked script and archive inputs, with no packages installed. The program imports no `ccc` module and makes no model or network calls.
+Use `python` instead of `python3` where that is your Python 3 command. No dependencies, credentials, models or network are required. The script verifies the archived input hash, recomputes the eight pair contrasts and checks them against the frozen independent arithmetic. Expected fields:
 
-## Prospective headline: deterministic stratum only (D-048)
-
-The established new-prospective result is **eps=0**: symmetry and frontier checks pass by construction; the knockout baseline accuses legitimate allocation and authorized-transfer members in 200/200 pairs each, while P6 is 0/200 and benign cooperation 0/100. RQ3/RQ4/RQ5 fail at eps=0; DEV-informed RQ4b passes; RQ6 is descriptive. These are scoped scripted-generator results, not validated collusion detection.
-
-**Pre-registered aggregate verdicts:** RQ1: **pass** — T2; RQ2: **pass** — T3; RQ3: **fail** — T4; RQ4: **fail** — T5; RQ4b: **fail** — T5b; RQ5: **fail** — T8; RQ6: **descriptive** — RQ6. Four aggregate predictions failed.
-
-**eps=0.1 is platform-dependent, not established.** D-048 restricted established claims to eps=0 after outcomes were visible (post hoc). Across available shared units, eps=0 is byte-identical on 149/149; eps=0.1 differs on 142/148, with method-output differences on 1160/1452 records (descriptive archive audit). No claim rests on noisy results, and macOS noisy DEV is not comparable with Linux noisy prospective results. See [full stratum results](docs/enh/r2/RESULTS_BY_STRATUM.md) and [exact platform counts](docs/enh/r2/PLATFORM_DIVERGENCE.md). EXP-003 was not completed; no result is claimed.
-
-## Headline result (held-out, confirmatory null)
-
-Held-out EXP-002 (protocol v1.2, local `gemma4:26b`, $0 API spend) is complete. The preregistered directional hypothesis (deceptive-collusion prompts raise the outsider-harm effect above authorized cooperation) is **not supported**:
-
-- Delta = 1.354 reward units, world-cluster 95% CI [-0.020, 2.834], exact one-sided sign-flip p = 0.0703. The independent sample is **8 matched world pairs**.
-- Registered non-commit sensitivity (preregistered secondary analysis): 0.727, CI [-0.31, 1.91]; its sign-flip p = 0.156 was added post hoc.
-- Accounting (descriptive): 16/16 trajectory attempts completed. 199 scheduled branch records = 143 executed valid continuations + 56 unrun placebo (N) branches (`not_run: no_placebo_available`). 0 failed, 0 invalid.
-- Exploratory case-level certificates over 16 checkpoints: 0 supported / 11 not supported / 5 inconclusive. A "not supported" verdict is not exoneration.
-- Power is limited: MDE_80 about 2.2 reward units (descriptive), against an observed 1.35 (original-confirmatory).
-
-Evidence labels: the held-out primary and the Holm S1–S3 family are original-confirmatory (none passed); the 0.727 estimate is a registered sensitivity; case-level certificates are exploratory by preregistration. DEV Gate A fixtures and EXP-001 DEV data are development evidence only and support no performance claim.
-
-Certificate validity metadata was repaired in `docs/analysis/exp002_heldout_v3/` (see `CORRECTION.md`), with no certificate status or numeric change.
-
-Frozen outputs: `docs/analysis/exp002_heldout_v2/` (corrected labels, see `CORRECTION.md`), `docs/review/rev001/` (independent review and claims ledger), `ops/CLAIMS.md` (claims index).
-
-## DEV Gate A (development evidence)
-
-DEV Gate A v1.2.2: the preregistered gate criteria (factual/sham identity, knockout scope, branch isolation, no `supported` on benign cooperation) pass on scripted fixtures; two stricter diagnostic checks fail and are reported as limitations (A5 redundancy 20/120, so `not supported` is not exoneration; ten non-exercisable A6b faults). Scripted fixtures are not independent real-agent observations; prompted intent is not ground truth.
-
-## Repository map
-
-- `ccc/replay/`, `ccc/audit/`, `ccc/fixtures/`, `ccc/baselines/`: replay, auditing, synthetic controls and comparators.
-- `ccc/analysis/`: offline estimators, failure accounting and Stage-2 diagnostics.
-- `ccc/runner/`, `ccc/infra/`: collection infrastructure; reproduction never invokes live collection.
-- `tests/`: offline unit, corruption, integration and budget-barrier checks.
-- `docs/analysis/exp002_heldout_v2/`: held-out analysis (frozen). `docs/analysis/exp001_dev*/`, `docs/stats/stage2/`: DEV analysis and pinning provenance.
-- `docs/runner/archives/`: held-out and DEV raw-trace archives with SHA-256 sidecars.
-- `review/reproduce_headline/`: stdlib-only independent reproduction of the headline.
-- `docs/gate_a/v1.2/correction_v1.2.2/`: DEV gate evidence, including failures.
-- `figures/`, `viewer/`, `paper/`: figures, offline evidence viewer, manuscript and draft PDF (final owner review pending).
-- `docs/release/`, `scripts/`: metadata bundle, release checklist, licenses, offline reproduction.
-
-## Full offline reproduction (needs the starter environment)
-
-Use `/bin/zsh`. The script runs heavy work with `nice -n 19`, sets `CCC_STARTER_ROOT`, installs no packages, makes no model calls and reads no credentials. A host may deny lowering priority (`setpriority: Operation not permitted`); this is recorded, not hidden.
-
-Prerequisites (the full path needs numpy/scipy and the third-party starter; a fresh install is not demonstrated):
-
-1. Place the upstream `poseidon-research/collusion_hackathon` checkout at `starter/collusion_hackathon`, commit `d585a7b3be50366cc2bdf5789bf8add5890b2abd`, including `colosseum/external/CoLLAB`. It is not redistributed here (see `docs/release/LICENSES.md`; its license terms are unverified).
-2. In `starter/collusion_hackathon/colosseum`, prepare `.venv` with the locked setup (`uv sync --locked --offline` with a populated cache). Do not run upstream live preflight/experiments or source `compute.env`. Versions and hashes: `docs/release/environment.json`.
-3. In a clean checkout only, restore the archived pilot:
-
-   ```zsh
-   mkdir -p results
-   cp -R docs/release/pilot_archive results/baselines
-   cp -R docs/release/pilot3_input docs/runner/exp001-pilot3
-   ```
-
-Then:
-
-```zsh
-/bin/zsh scripts/reproduce_offline.sh
+```text
+Delta:       1.354325711018899
+sign_flip:   numerator 18, denominator 256, p 0.0703125
+pairs:       8 records
+status:      matches frozen independent arithmetic; directional hypothesis NOT supported
 ```
 
-Without step 1-2 the script stops with "Complete README starter setup first". It writes a gitignored `docs/release/reproduction.*` directory with the test log, regenerated Gate A, DEV analysis, Stage-2 draft and verified hashes. The recorded run passed 399 tests. A readiness test that reads the real EXP-002 manifest is skipped under the held-out access guard. The held-out result is reproduced by the quick check above, not by this script.
+This reproduces the primary estimate and exact test from recorded outputs. It does not regenerate agents or recompute the bootstrap interval. [Bootstrap verification, public-checkout checks and full-analysis requirements](docs/REPRODUCING.md).
 
-## Secret scan
+## Methods and navigation
 
-```zsh
-/bin/zsh scripts/secret_scan.sh
-```
+The **constructed study** tests evidence access using scripted allocation and transfer policies, legitimate controls and a frozen prospective evaluation. The **real-agent study** uses eight matched-world pairs and checkpoint continuations under a separately frozen protocol. These studies answer different questions; neither establishes deployment detection accuracy.
 
-Checks regex patterns and local `.env` values without printing them, over tracked files, staged blobs and release artifacts. It does not scan history or `ops/budget_ledger.jsonl`, and flags Doc URLs plus quoted, `/d/`, and known-format bare 44-character Drive-style IDs. Staged blobs can retain findings until the redactions are staged. A scan is not publication approval.
+| Location | Start here for |
+| :--- | :--- |
+| [`ccc/`](ccc/) | Replay, auditing, benchmark and analysis code |
+| [`demo/explorer/`](demo/explorer/) | Offline evidence explorer |
+| [`docs/README.md`](docs/README.md) | Canonical results, freezes, corrections and provenance |
+| [`paper/README.md`](paper/README.md) | Latest manuscript source, figures and bibliography |
+| [`tests/`](tests/) · [`scripts/`](scripts/) | Implementation checks and reproduction entry points |
 
-## Data provenance and licenses
+Original CCC code and documentation use the [MIT license](LICENSE). Third-party adaptations and scenario/trace redistribution rights remain unresolved; MIT does not grant those rights. See [NOTICE](NOTICE.md). Prior public history also retains potentially private document references; current-tree cleanup does not erase them. [Release status](docs/LIMITATIONS.md#release-status).
 
-The seed-1 pilot is development data only (`docs/release/pilot_archive/`, 27 files listed in `ops/pilot_manifest.sha256`). EXP-001 is DEV; `docs/release/exp001_dev_input/` is a metadata subset, not the full raw trace archive. Third-party terms, including unverified Colosseum/poseidon-compute/CoLLAB licenses, are in `docs/release/LICENSES.md`; Terrarium is MIT. CCC's own license has not been chosen by the owner.
-
-## Release status
-
-Science is frozen. Pending owner decisions: author/affiliation, LLM-usage statement, dual-use review, template and page-by-page PDF review, Google Doc sync, push of latest commits, and submission: [release checklist](docs/release/CHECKLIST.md).
-
-Authorship: the owner is the sole author.
-
-## Enhancement work in progress
-
-See [docs/enh/](docs/enh/) for ongoing enhancement work; a later task will finalize this presentation.
-
-## License
-
-Original CCC code: MIT (`LICENSE`). Third-party material (Colosseum starter, model, dependencies) is not covered; see `NOTICE.md`.
+Developed by **Aarav Patel, Georgia Institute of Technology**, during Apart Research's October 23–25, 2026 sprint, with substantial Claude/Codex assistance. Colosseum/Terrarium and the seed-1 development pilot predate CCC's sprint work. [Provenance and acknowledgments](docs/README.md#provenance-and-acknowledgments).

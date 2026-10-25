@@ -1,0 +1,17 @@
+{
+  "PLATFORM_DIVERGENCE.md": {
+    "equal": true,
+    "historical_sha256": "a64856472438647e642b8e99ab7faf953754d16d0916242d21f53006d1e06c7b",
+    "recomputed_sha256": "a64856472438647e642b8e99ab7faf953754d16d0916242d21f53006d1e06c7b"
+  },
+  "RESULTS_BY_STRATUM.md": {
+    "equal": true,
+    "historical_sha256": "6cfd07fbb1b46235fee9c17b5b363c97f3c39c0bf4e6576d5dfacb591a495832",
+    "recomputed_sha256": "6cfd07fbb1b46235fee9c17b5b363c97f3c39c0bf4e6576d5dfacb591a495832"
+  },
+  "RESULTS_BY_STRATUM.json": {
+    "equal": true,
+    "historical_sha256": "c96a92d0f33218cc81248ee40860d5b2ad94653a693e56675012d2c8ed76c8da",
+    "recomputed_sha256": "c96a92d0f33218cc81248ee40860d5b2ad94653a693e56675012d2c8ed76c8da"
+  }
+}

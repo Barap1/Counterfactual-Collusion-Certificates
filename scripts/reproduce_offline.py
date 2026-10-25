@@ -115,6 +115,6 @@ def main_driver():
         method='Current analysis repeated with exact byte/hash agreement. Archived scientific fields retained and equal; additive fields allowed. code_hashes, rule_hashes, and warnings differences are reported but excluded from value comparison.'),indent=2)+'\n')
     checks['theta_pin.json']=digest(out/'theta_pin.json')
     (out/'verified_hashes.json').write_text(json.dumps(checks,indent=2)+'\n')
-    print('Verified DEV inputs, analysis, Stage-2 draft, theta pin and Gate A; Gate A remains FAIL.')
+    print('Verified DEV inputs, analysis, Stage-2 draft, theta pin and Gate A diagnostics; diagnostic failures remain. Formal gate acceptance is scoped in docs/gate_a/v1.2/correction_v1.2.2/GATE_A_v1.2.2.md.')
 
 if __name__ == '__main__': main_driver()

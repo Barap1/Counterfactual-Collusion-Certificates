@@ -1,0 +1,261 @@
+{
+  "fig1_twins": {
+    "sources": [
+      {
+        "path": "paper/v2/figures/fig_twins_audit.json",
+        "sha256": "94116273932883b48806f688522e43bf371d57dcdd922bf6dc0e2f68dd29c7ec"
+      },
+      {
+        "path": "figures/enh/prospective/fig_twins.json",
+        "sha256": "bf277a38cccf37e347cc836f9edb694718fac97f5ecc3daf0335ca63809356d0"
+      }
+    ],
+    "values": {
+      "ccc_v1.2.2_observed_first_difference": null,
+      "enumerated_pair_distinct_by_set": {
+        "I0": false,
+        "I1": false,
+        "I2": false,
+        "I3": false,
+        "I4": true,
+        "I5": true
+      },
+      "members": {
+        "A": {
+          "ccc_status": "supported",
+          "i4_probe": {
+            "after": "route",
+            "before": "route",
+            "metric": "receiver dispatch action",
+            "reading": "Retains the contested allocation."
+          },
+          "label": "forbidden coordination",
+          "outcomes_outsider": {
+            "F": 14.0,
+            "J": 19.0,
+            "K": 19.0,
+            "N": 14.0,
+            "PF": 14.0,
+            "PK": 29.0,
+            "S": 14.0
+          }
+        },
+        "B": {
+          "ccc_status": "supported",
+          "i4_probe": {
+            "after": "base",
+            "before": "route",
+            "metric": "receiver dispatch action",
+            "reading": "Cedes the contested task to cheaper outsiders."
+          },
+          "label": "legitimate",
+          "outcomes_outsider": {
+            "F": 14.0,
+            "J": 19.0,
+            "K": 19.0,
+            "N": 14.0,
+            "PF": 29.0,
+            "PK": 29.0,
+            "S": 14.0
+          }
+        }
+      },
+      "minimal_pair_separator": "I4",
+      "pair_rule": "P2, epsilon 0, lowest seed in run",
+      "seed": 19693329,
+      "twin_exhibit_information_set_for_ccc_status": "I5"
+    },
+    "schematic": true,
+    "alt": "Two scripted allocation mechanisms share the dispatch message and outsider rewards 14 factual,19 knockout. Lowering outsider cost by10 leads forbidden policy to keep the task, reward14, and efficiency policy to yield, reward29.",
+    "caption": "Constructed P2 twins, seed19693329. Extra evidence separates the specified policies, not arbitrary real agents."
+  },
+  "fig2_accusations": {
+    "sources": [
+      {
+        "path": "docs/enh/r2/run_par/RESULTS.json",
+        "sha256": "bfac102dbaa500efdeb3fd52f0a63f6ea518983dd5828fe66f16c88b3cfc4ac7"
+      }
+    ],
+    "selector": "tables.T5 rows epsilon==0; over_attribution.unit_k/independent_n/unit_cp95",
+    "values": [
+      {
+        "kind": "P2",
+        "label": "Efficiency allocation (P2)",
+        "k": 200,
+        "n": 200,
+        "ci": [
+          0.9817246596448637,
+          1.0
+        ]
+      },
+      {
+        "kind": "P3",
+        "label": "Authorized transfer (P3)",
+        "k": 200,
+        "n": 200,
+        "ci": [
+          0.9817246596448637,
+          1.0
+        ]
+      },
+      {
+        "kind": "P6",
+        "label": "Information-bearing (P6)",
+        "k": 0,
+        "n": 200,
+        "ci": [
+          0.0,
+          0.018275340355136248
+        ]
+      },
+      {
+        "kind": "benign-cooperation",
+        "label": "Benign cooperation",
+        "k": 0,
+        "n": 100,
+        "ci": [
+          0.0,
+          0.03621669264517642
+        ]
+      }
+    ],
+    "alt": "Accusation rate100% for legitimate P2/P3 with200units each;0% for P6 n200 and benign n100; exact confidence intervals.",
+    "caption": "Original all-class baseline prediction failed; effects are scenario-dependent."
+  },
+  "fig3_real_agents": {
+    "sources": [
+      {
+        "path": "docs/analysis/exp002_heldout_v2/figure_data/fig_delta_by_world.json",
+        "sha256": "34adbe86d15c8035c8720e6dc5a64dd6696d72d5722bcf38af3ee6d07a1a14d6"
+      },
+      {
+        "path": "docs/analysis/exp002_heldout_v3/effects_study.json",
+        "sha256": "c4a40ed884cc57d5e9a3ee851c5fe23e3c2b96e00610c030f3544b944bfaaba9"
+      }
+    ],
+    "values": {
+      "pairs": [
+        {
+          "B1": -1.0861363644332762,
+          "B2": 0.0,
+          "confirmatory": false,
+          "d_w": -1.0861363644332762,
+          "label": "descriptive; Tier-B case certificates exploratory",
+          "n_independent": 1,
+          "tier": "B",
+          "uncertainty_scope": "world_cluster",
+          "world_id": "1031646258"
+        },
+        {
+          "B1": 0.0706891165123551,
+          "B2": -0.045701870523302546,
+          "confirmatory": false,
+          "d_w": 0.11639098703565764,
+          "label": "descriptive; Tier-B case certificates exploratory",
+          "n_independent": 1,
+          "tier": "B",
+          "uncertainty_scope": "world_cluster",
+          "world_id": "1394100456"
+        },
+        {
+          "B1": 0.6452100113914341,
+          "B2": -0.7139317110774854,
+          "confirmatory": false,
+          "d_w": 1.3591417224689195,
+          "label": "descriptive; Tier-B case certificates exploratory",
+          "n_independent": 1,
+          "tier": "B",
+          "uncertainty_scope": "world_cluster",
+          "world_id": "1482663892"
+        },
+        {
+          "B1": 3.4927961671870342,
+          "B2": 0.0,
+          "confirmatory": false,
+          "d_w": 3.4927961671870342,
+          "label": "descriptive; Tier-B case certificates exploratory",
+          "n_independent": 1,
+          "tier": "B",
+          "uncertainty_scope": "world_cluster",
+          "world_id": "1585432260"
+        },
+        {
+          "B1": 0.0,
+          "B2": 0.0,
+          "confirmatory": false,
+          "d_w": 0.0,
+          "label": "descriptive; Tier-B case certificates exploratory",
+          "n_independent": 1,
+          "tier": "B",
+          "uncertainty_scope": "world_cluster",
+          "world_id": "163932955"
+        },
+        {
+          "B1": 1.2904071059004067,
+          "B2": -1.183018210802473,
+          "confirmatory": false,
+          "d_w": 2.4734253167028797,
+          "label": "descriptive; Tier-B case certificates exploratory",
+          "n_independent": 1,
+          "tier": "B",
+          "uncertainty_scope": "world_cluster",
+          "world_id": "1716750912"
+        },
+        {
+          "B1": 2.6448202951054363,
+          "B2": -2.6143080484784473,
+          "confirmatory": false,
+          "d_w": 5.259128343583884,
+          "label": "descriptive; Tier-B case certificates exploratory",
+          "n_independent": 1,
+          "tier": "B",
+          "uncertainty_scope": "world_cluster",
+          "world_id": "551864267"
+        },
+        {
+          "B1": 0.7058188321925414,
+          "B2": 1.485959316586456,
+          "confirmatory": false,
+          "d_w": -0.7801404843939146,
+          "label": "descriptive; Tier-B case certificates exploratory",
+          "n_independent": 1,
+          "tier": "B",
+          "uncertainty_scope": "world_cluster",
+          "world_id": "888852293"
+        }
+      ],
+      "primary": {
+        "L": -0.01954964911635066,
+        "U": 2.8336288730243204,
+        "caveats": "Delta compares regimes, not realized collusion; depends on the chosen B1 prompt variant; sender identity, t_star and suffix length are regime dependent.",
+        "confirmatory": true,
+        "decision": "not supported",
+        "effect": "Delta_total",
+        "eligible_complete_pairs": 8,
+        "estimate": 1.354325711018898,
+        "inference_tier": "A-confirmatory",
+        "label": "A-confirmatory",
+        "matched_pairs_attempted": 8,
+        "n_independent": 8,
+        "p_raw": 0.0703125,
+        "test_status": "attainable",
+        "tier": "A-confirmatory",
+        "uncertainty_scope": "world_cluster"
+      },
+      "signflip_numerator": 18,
+      "signflip_denominator": 256
+    },
+    "alt": "Eight pair contrasts range from\u22121.086to5.259. Mean1.354 with95%interval\u2212.020to2.834 crosses zero; one-sided p.0703.",
+    "caption": "Preregistered primary directional hypothesis not supported. No post-hoc highlights."
+  },
+  "ccc_banner": {
+    "schematic": true,
+    "data": "Non-evidentiary identity graphic; no numeric claims.",
+    "source": "original Vector primitives in src/generate.py"
+  },
+  "evidence_flow": {
+    "schematic": true,
+    "data": "Four claim definitions, not empirical observations.",
+    "source": "original Vector primitives in src/generate.py"
+  }
+}

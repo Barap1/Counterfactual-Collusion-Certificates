@@ -1,0 +1,9 @@
+{
+  "classification": "EXECUTED final-audit read-only independent R3 reconstruction",
+  "changed_semantics": "none; only absolute root/output Path assignments replaced via AST",
+  "differences": 0,
+  "source_sha256": {
+    "audit.py": "cf1e6dc090dbe7213de794d61921c625e03455e36ca0b1da58754e4eb5b09d6a",
+    "compare.py": "89140db8c32d536baac73463184d051da867050be38884f3dd4201249236ffd7"
+  }
+}

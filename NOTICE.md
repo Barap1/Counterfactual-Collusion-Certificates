@@ -14,3 +14,5 @@ It does not grant rights in third-party material:
   `docs/release/LICENSES.md`.
 
 Source: release audit `docs/enh/sec/SEC-001_audit.md` (2026-10-24).
+
+- **Old Standard TT**: three unmodified font faces are bundled in `paper/v2/fonts/` for the official template typography under SIL Open Font License 1.1. The copyright and full license are retained in `paper/v2/fonts/OFL.txt`; source URLs and SHA-256 values are in `ops/reports/final_audit/paper/font_sources.json`. CCC MIT does not cover those font files.

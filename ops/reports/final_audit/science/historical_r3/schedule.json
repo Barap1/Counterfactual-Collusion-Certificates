@@ -1,0 +1,199 @@
+{
+  "manifest_schedule_equal": true,
+  "population_seeds_equal": true,
+  "row_schedule_violations": [],
+  "counts": [
+    {
+      "kind": "P1",
+      "epsilon": 0,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P1",
+      "epsilon": 0.1,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P2",
+      "epsilon": 0,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P2",
+      "epsilon": 0.1,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P3",
+      "epsilon": 0,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P3",
+      "epsilon": 0.1,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P4",
+      "epsilon": 0,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P4",
+      "epsilon": 0.1,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P5",
+      "epsilon": 0,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P5",
+      "epsilon": 0.1,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P6",
+      "epsilon": 0,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "P6",
+      "epsilon": 0.1,
+      "n": 200,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "common-cause-single",
+      "epsilon": 0,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "common-cause-single",
+      "epsilon": 0.1,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "harm-without-dependence",
+      "epsilon": 0,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "harm-without-dependence",
+      "epsilon": 0.1,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "inert",
+      "epsilon": 0,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "inert",
+      "epsilon": 0.1,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "info-bearing",
+      "epsilon": 0,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "info-bearing",
+      "epsilon": 0.1,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "invalid-corrupted-trace",
+      "epsilon": 0,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "invalid-corrupted-trace",
+      "epsilon": 0.1,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "legitimate-useful",
+      "epsilon": 0,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "legitimate-useful",
+      "epsilon": 0.1,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "redundant-single",
+      "epsilon": 0,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "redundant-single",
+      "epsilon": 0.1,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "relayed-harmful",
+      "epsilon": 0,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "relayed-harmful",
+      "epsilon": 0.1,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "suspicious-language-no-harm",
+      "epsilon": 0,
+      "n": 100,
+      "expected_seed_set_equal": true
+    },
+    {
+      "kind": "suspicious-language-no-harm",
+      "epsilon": 0.1,
+      "n": 100,
+      "expected_seed_set_equal": true
+    }
+  ],
+  "attempt_lengths": {
+    "enumerate": {
+      "1": 2100
+    },
+    "methods": {
+      "1": 2100
+    }
+  },
+  "population_raw_seed_sets_equal": {
+    "0": true,
+    "0.1": true
+  }
+}

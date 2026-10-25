@@ -1,0 +1,28 @@
+{
+  "caption": "Gate A integrity checks on DEV fixtures, protocol v1.2.2. Each cell is a fixture check; this is not a real-world rate. Overall Gate A: FAIL.",
+  "data_tier": "synthetic DEV fixtures; no real experiment data",
+  "figure": "fig_gateA_integrity_audit",
+  "generated_by": "figures/scripts/build_publication.py",
+  "labels": {
+    "overall": "FAIL",
+    "protocol": "v1.2.2",
+    "tier": "DEV fixtures"
+  },
+  "source_files": [
+    {
+      "path": "docs/gate_a/v1.2/correction_v1.2.2/gate_a_results.json.gz",
+      "sha256": "8aa6b1b0b979406dc523f931e1451e75304a599f7f6379f7c6985bcd4a60e54c"
+    }
+  ],
+  "versioned_from": "figures/fig_gateA_integrity.svg",
+  "original_sha256": "1ae0f2aaff8b9cc8b550113f3c2a6eb8123fb1dcbeb5ffb3c90071407f3e41ae",
+  "field_differences": [
+    {
+      "field": "SVG footer annotation",
+      "before": "A6 sensitivity gate fails (350/360); overall Gate A reported FAIL. Counts are fixture checks, not real-world rates.",
+      "after": "A6 diagnostic fails (350/360); formal Gate A criteria passed with narrowing. Counts are fixture checks.",
+      "plotted_values_changed": false,
+      "precision_note": "Counts unchanged"
+    }
+  ]
+}

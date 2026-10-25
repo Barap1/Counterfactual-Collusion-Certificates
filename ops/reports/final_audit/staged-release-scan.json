@@ -1,0 +1,12 @@
+{
+  "classification": "EXECUTED",
+  "scope": "all staged delivery text and audit snapshot tar text; binary fonts/images/PDF excluded from credential regex",
+  "staged_paths": 375,
+  "text_bytes": 17980215,
+  "snapshot_archive_members": 80,
+  "credential_matches": [],
+  "secret_file_paths": [],
+  "doc_references": [],
+  "sensitive_values_printed": false,
+  "limitations": "Bounded pattern scan; history is separate; source/PDF text independently checked. No secret values were read."
+}

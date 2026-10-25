@@ -1,49 +1,11 @@
-# CCC STATUS (2026-10-25 06:10 UTC) — READY FOR OWNER REVIEW
+# CCC status — repository overhaul
 
-Deliverables: paper paper/v2/build/submission_v2.pdf (main text 7 pp + refs p8; abstract 207 words) · explorer demo/explorer/index.html · judge summary docs/enh/JUDGE_SUMMARY.md · demo script docs/enh/DEMO_SCRIPT.md · final skeptical review docs/enh/FINAL_REVIEW.md · results docs/enh/r2/run_par/RESULTS.md + docs/enh/r2/RESULTS_BY_STRATUM.md · platform finding docs/enh/r2/PLATFORM_DIVERGENCE.md.
-EXP-002 frozen: Delta 1.354 [-0.020, 2.834], p 0.0703, not supported. R2 benchmark: RQ1 pass, RQ2 pass (by construction), RQ3/RQ4/RQ4b/RQ5 fail (aggregate), RQ6 descriptive; eps=0 established, eps=0.1 platform-dependent (D-048). EXP-003 not completed (D-047a). Modal spend ~$5.4.
-Owner: author/affiliation, LLM-use statement, dual-use sign-off, title, intro phrase fix, record demo, push, submit. Running: nothing.
+Task REPO-FINAL: owner-authorized public repository maintenance, on `codex/repository-overhaul`. Current research entry: `README.md`; evidence map: `docs/README.md`; tested commands: `docs/REPRODUCING.md`.
 
+Scientific results unchanged. Eight independent real-agent pairs: primary contrast 1.354, world-cluster 95% interval [-0.020,2.834], exact one-sided p .0703125; directional hypothesis not supported; zero supported exploratory certificates. Constructed benchmark: two consistency checks pass by design; four aggregate predictions fail; utility 2/84 settings (v1),5/84 (v0). Noisy condition platform-dependent; deterministic restriction post hoc.
 
-## Previous status
-# CCC STATUS — ENH sprint (updated 2026-10-25 00:20 UTC, after laptop crash)
+Executed: stdlib headline; 11 independent arithmetic tests; eight source-to-explorer tests; full guarded local suite 500 passed/4 skipped/351 subtests; bootstrap verification. Public-file CI added. Browser loopback checks and mobile/desktop SVG review executed; direct file URL execution blocked by browser tooling. Final public verification and GitHub maintenance are recorded in `ops/reports/repo_final/REVIEW.md`.
 
-**Owner target:** all deliverables ready by 2026-10-25 16:00 UTC (owner records demo + submits). Hard deadline 2026-10-26 11:59 UTC.
-**Original study FROZEN:** EXP-002 Delta 1.354 [-0.020, 2.834], p 0.0703, not supported (confirmatory null). Never changed.
+No new experiment, model call, cloud job, spend, live Google Doc edit or final paper generation. No final paper PDF included. Missing public inputs: 18/27 legacy pilot traces and excluded pinned upstream environment. Upstream redistribution rights and historical public document exposure remain owner actions; current-tree cleanup does not erase history.
 
-## ORCH BLOCKER (2026-10-25 ~01:40 UTC)
-- W1 determinism gate on Modal (40 seeds): FAIL. Decompressed content differs in 38 eps-0.1 unit files (all 40 eps-0 match; 2 eps-0.1 match). Full run NOT started. Serial-vs-Modal divergence in the eps-0.1 stratum must be diagnosed (GATE.json: docs/enh/r2/run_par/GATE.json).
-- EXP-003: W2-REV verdict ISSUES (docs/enh/exp003/REV_PROTO.md). W2-FIX (Codex) applied fixes: ops/reports/W2-FIX.md. Freeze NOT committed; GPU $/world spike not yet run.
-- Modal spend est. ~$0.96 (ledger). Nothing committed by ORCH yet.
-
-## ORCH update (2026-10-25 ~01:50 UTC)
-- W1 diagnosis (D-044): outcome (ii), container env. Container ran CPython 3.14.2/GCC; local 3.14.7/Clang; NumPy 2.2.6 both (ops/reports/W1-DIAG.md).
-- Pinned Modal image to python:3.14.7-slim: BUILD FAILS (numpy==2.2.6 has no cp314 wheel; source build fails). Gate v2 not run. Failed gate-1 outputs moved to ops/reports/codex_runs/gate1_failed/.
-- Local fallback (iii) blocked by the driver's proof-receipt requirement; serial throughput ~2 units/min, so full block (4200 units) ~11 h at 3 processes.
-- EXP-003: REV_PROTO2 ISSUES; W2-FIX2 and W4-P1 running. D-045 timeboxes apply (freeze by 03:30 UTC).
-
-## ORCH final state (2026-10-25 ~05:55 UTC)
-- R2 prospective benchmark: DONE on Modal Linux (D-046). 4200/4200 units, 0 failures; RESULTS in docs/enh/r2/run_par/RESULTS.md. Criteria: RQ1 pass, RQ2 pass (by construction), RQ3 FAIL (eps0 61/200), RQ4 FAIL, RQ4b FAIL, RQ5 FAIL, RQ6 descriptive. R3 review ISSUES (provenance only, corrected in PARALLEL_EXECUTION.md).
-- Figures: figures/enh/prospective. Explorer rebuilt (21 cases). Paper v2 filled, 16 pages, main text 7 pages.
-- EXP-003: NOT COMPLETED (D-047a). No EXP-003 Modal apps running. Paper does not claim it.
-- Judge summary, demo script, final review in docs/enh; R4 re-check ISSUES only on explorer HEAD stamp (explicit disclosure).
-- Modal spend: ledger cumulative upper bound ~$5.4 of $45 stop (benchmark row is an upper-bound estimate).
-
-## ENH gates
-R1 direction ACCEPTED (D-038) · R2 benchmark protocol FROZEN (D-041; docs/enh/r2/FREEZE.json) · R3 pending results · R4/R5 pending.
-
-## Running (restart instructions in ops/RESUME.md)
-- BENCH-PAR2 (Codex): parallel execution of the frozen prospective benchmark → docs/enh/r2/run_par/ (resumable; PID in run_par.pid). Serial run docs/enh/r2/run/ killed by crash at 297 unit files (preserved).
-- RA-LEAD (Sonnet orchestrator, Codex-only children): EXP-003 real-agent twin probe on Modal GPU (owner added card + limit; cap $51, stop $45; ~$0.95 spent). Brief docs/enh/exp003/BRIEF.md; log docs/enh/exp003/LOG.md. Freeze target ~02:30 UTC; results 10:00 UTC.
-- WRITE-RES (Sonnet): wrapping up writing playbook docs/enh/writing/WRITING_PLAYBOOK.md.
-
-## Done (committed)
-v3 validity-metadata fix · explorer (demo/explorer, 0 mismatches in QA; 3 P1 fixes pending) · paper v2 draft (paper/v2) with verified refs · figures script (figures/enh) · release hygiene · MIT license.
-
-## Next (in order)
-1. Benchmark RESULTS → R3 independent Codex review. 2. EXP-003 freeze (director commits) → run → analysis → review.
-3. Paper fill per WRITING_PLAYBOOK (blend EXP-003 into the main story; no pooling) → figures PROSPECTIVE → PDF ≤ 8 pp; official template.
-4. Explorer: prospective twins + QA fixes. 5. R4 consistency check. 6. Judge summary, demo script, final critical review → R5 handoff.
-
-## Owner items
-Author line/affiliation, LLM-use statement, dual-use sign-off, title choice, push, submission. Repo visibility/history deferred (D-039).
+Old task reports, spec modules and audit statuses are historical. Do not restart completed studies from old notes. Owner will add `paper/paper.pdf` and make final submission decisions separately.
