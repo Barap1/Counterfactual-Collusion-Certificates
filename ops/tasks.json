@@ -1,6 +1,6 @@
 {
  "schema": "ccc-tasks/1",
- "updated_utc": "2026-10-24T21:05Z",
+ "updated_utc": "2026-10-24T23:50Z",
  "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
  "policy": {
   "max_worker_depth": 3,
@@ -10,20 +10,24 @@
   "max_new_children_per_delegation": 2,
   "max_concurrent_experiment_controllers": 1,
   "initial_remote_inference_concurrency": 1,
-  "note": "Codex threads and their native subagents count toward the 6-agent global cap; the Claude env cap does not see them."
+  "note": "Codex threads and their native subagents count toward the 6-agent global cap; the Claude env cap does not see them.",
+  "owner_model_preference": "Sonnet orchestrators + Codex workers; more Codex than Claude; no Opus sub-agents (owner 2026-10-24 23:40Z)"
  },
  "live_agents": [
   {
    "id": "RA-LEAD",
-   "owner": "claude sonnet (lead; may spawn \u22643 children, depth 2)",
-   "started_utc": "2026-10-24T21:05Z",
-   "writes": "docs/enh/exp003/, ccc/exp003/, tests/test_exp003_*, ops/budget_ledger.jsonl, docs/runner/exp003-*/"
+   "owner": "claude sonnet orchestrator; Codex-only children",
+   "started_utc": "2026-10-24T21:05Z (resumed 23:45Z after session limit)"
   },
   {
    "id": "WRITE-RES",
-   "owner": "claude sonnet (may run 1 helper at a time)",
-   "started_utc": "2026-10-24T21:15Z",
-   "writes": "docs/enh/writing/"
+   "owner": "claude sonnet (resumed 23:45Z)"
+  },
+  {
+   "id": "BENCH-PAR",
+   "owner": "codex gpt-6.1-sol/medium",
+   "started_utc": "2026-10-24T23:45Z",
+   "writes": "scripts/bench_parallel_run.py, tests/test_bench_parallel.py, docs/enh/r2/run_par/"
   }
  ],
  "gates": {
@@ -585,6 +589,13 @@
    "owner": "claude sonnet",
    "status": "RUNNING",
    "gate": "ENH-R4"
+  },
+  {
+   "id": "BENCH-PAR",
+   "objective": "parallel execution driver for frozen prospective run (byte-identical check)",
+   "owner": "codex gpt-6.1-sol/medium",
+   "status": "RUNNING",
+   "gate": "ENH-R3"
   }
  ],
  "handoff": {
