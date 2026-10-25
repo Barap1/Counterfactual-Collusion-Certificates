@@ -1,0 +1,19 @@
+{
+  "ccc/exp003/analysis.py": "9b6b98d7aff670f35701bfca9cd9f5689d5eb58a60f2e3ee683741e36a393c73",
+  "ccc/exp003/manifest.py": "8fe31643954ba59b8140da6696e855bd3c90d2d7ea1d19693772295e94de265d",
+  "ccc/exp003/slots.py": "bc9811b7f1129ac4b2c44da15cc55d21d25cddc7582d2b3b0248759bbd0f8ece",
+  "ccc/exp003/budget.py": "6583a4cb06fd55530fafd756178378ae9fbed60ebf1c8459b22fb502c7cedf0a",
+  "ccc/exp003/collector.py": "91d00f2d3bca320f6850b63d8bdf30d66013511b5c258b9f6d9a43d40a2e2777",
+  "ccc/exp003/arms.py": "d7f6318a93e2b676385ae411475433020476865d61c2ccfb72ad637e2922fcdd",
+  "ccc/exp003/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "ccc/exp003/modal_ctl.py": "a461c6c5a98c70b34569231ae4c0adc751700da33d896923a56c4af1c1eac64e",
+  "ccc/exp003/modal_runner.py": "f5dd366532f2ba76013e09531646bf278f327a675d486bed27a7b45472bc2ab8",
+  "ccc/exp003/modal_server.py": "6681871c6457ee8b57f17a2b0b790bddb36ebfdd70308e7209846b99a6c448c3",
+  "ccc/exp003/probe.py": "3c12d1a07442377ecd4113fcbc1ddec309d1225210295313a6a179c6058af8f4",
+  "ccc/exp003/storage.py": "6ed724d48d1176d6bf462f5fedb0fa90097ac1316ee70f0ea0f65771f0b91ef2",
+  "ccc/exp003/freeze.py": "23e0e0a9b5140a20d310580650a15b59a36d9d7f38c889576ff80de55440354e",
+  "ccc/exp003/mock.py": "5d8d22ddeabeaabccc98138f9f84cb953703abe9ffe895f6c219d51316da826d",
+  "tests/test_exp003_controls.py": "3ed46c3734fa04edee0d63b721876b39994731cc0c4696a4743842b3a4c64a4b",
+  "docs/enh/exp003/PROTOCOL.md": "9b6d53a4b7f842ee46f0df2cfd8bf7b8329e902874852256b25f84f89ab8eea5",
+  "docs/enh/exp003/WIRING.md": "1f4d1a9a4a5fcf9aa6fab3105aa3f2024879a6276ad8010236f7b94c62cfec13"
+}

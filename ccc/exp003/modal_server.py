@@ -41,6 +41,7 @@ prefetch_app = modal.App(APP_NAME + "-prefetch")   # CPU-only, separate so it lo
 
 if modal.is_local():
     _cfg = {"EXP003_SERVER_TOKEN": os.environ.get("EXP003_MODAL_TOKEN", ""),
+            "EXP003_DEADLINE_EPOCH": os.environ.get("EXP003_DEADLINE_EPOCH", "0"),
             "OLLAMA_NUM_PARALLEL": PARALLEL, "EXP003_MODELS_DIR": MODELS_DIR}
     secret = modal.Secret.from_dict(_cfg)
 else:  # inside the container the secret is already injected into the environment
@@ -131,6 +132,18 @@ class Server:
     @modal.enter()
     def boot(self):
         import httpx
+        import threading
+        deadline = float(os.environ.get("EXP003_DEADLINE_EPOCH", "0"))
+        if deadline <= time.time():
+            raise RuntimeError("controller absolute deadline missing or expired")
+        def absolute_shutdown():
+            # Kill Ollama as well as the proxy, independently of an in-flight request.
+            if hasattr(self, "proc"):
+                self.proc.kill()
+            os._exit(0)
+        timer = threading.Timer(max(.001, deadline-time.time()), absolute_shutdown)
+        timer.daemon = True
+        timer.start()
         self.t_boot = time.time()
         self.proc = _start_ollama()
         tags = httpx.get("http://127.0.0.1:11434/api/tags").json()

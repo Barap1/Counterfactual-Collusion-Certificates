@@ -218,3 +218,11 @@ Next: BENCH-IMP (implementation, Codex) and PROTO-001 (R2 protocol draft, Sonnet
 - Owner: laptop crashed twice; finish by 2026-10-25 16:00 UTC; do not overload the laptop; leverage Modal; ~8% Claude budget left, so use Claude minimally and Codex maximally (suggested a heavily informed Haiku agent orchestrating Codex workers).
 - Damage: no committed work lost. Lost in flight: BENCH-PAR2 (partial driver edits, uncommitted), RA-LEAD (no progress after resume), PAPER-W (no saved output). The likely crash cause was the 13-process local benchmark pool; it will not be rerun locally.
 - Decision: ORCH (Claude Haiku) orchestrates and is integration custodian (commits as owner, no AI trailers, no push); all work by Codex workers (≤2 concurrent); heavy compute on Modal (benchmark on CPU containers, EXP-003 on GPU). Modal policy extended to benchmark CPU execution; cap unchanged ($51; stop $45). ORCH commits the EXP-003 freeze after a separate Codex review (replaces "director commits"). Brief: docs/enh/ORCH_BRIEF.md.
+
+## D-044 (2026-10-25 ~01:27 UTC, director) W1 determinism gate: timeboxed diagnosis
+- Gate on Modal CPU (40 seeds) FAILED: all 40 eps-0 units match; 38 of 40 eps-0.1 units differ in decompressed content (docs/enh/r2/run_par/GATE.json). Full run NOT started.
+- Ruling: diagnose for 45 min, one Codex worker, light local load (1 process), 3 mismatching eps-0.1 seeds, two local reruns with different PYTHONHASHSEED plus one run under the container's Python/numpy versions. Outcomes: (i) hash-seed dependence -> pin PYTHONHASHSEED=0 in container and local, re-gate eps-0, full run, disclose in PARALLEL_EXECUTION.md as execution-environment deviation; (ii) version mismatch -> match versions, re-gate; (iii) neither in 45 min -> run full block locally at <=3 processes, resumable, report ETA. No changes to ccc/bench code. No outcomes inspected.
+
+## D-045 (2026-10-25 ~01:27 UTC, director) EXP-003 proceeds under Plan M, with timebox
+- After W2-FIX: independent re-review (separate Codex thread) and 1-DEV-world GPU spike (L40S or A100) in parallel.
+- Hard timebox: freeze not committed by 03:30 UTC, or spike shows fewer than 16 pairs fit in $45 operating stop -> stop EXP-003, stop all Modal apps, record as not completed (paper will not claim it). Otherwise freeze and run (hard stop 09:00 UTC).

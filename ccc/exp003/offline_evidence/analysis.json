@@ -1,0 +1,227 @@
+{
+  "scheduled_status_reasons": [
+    {
+      "regime": "B1",
+      "arm": "F",
+      "status": "valid",
+      "reason": "none",
+      "count": 4
+    },
+    {
+      "regime": "B1",
+      "arm": "K",
+      "status": "valid",
+      "reason": "none",
+      "count": 4
+    },
+    {
+      "regime": "B1",
+      "arm": "N",
+      "status": "not_run",
+      "reason": "no_placebo_available",
+      "count": 4
+    },
+    {
+      "regime": "B1",
+      "arm": "PF",
+      "status": "valid",
+      "reason": "none",
+      "count": 4
+    },
+    {
+      "regime": "B1",
+      "arm": "PK",
+      "status": "valid",
+      "reason": "none",
+      "count": 4
+    },
+    {
+      "regime": "B1",
+      "arm": "S",
+      "status": "valid",
+      "reason": "none",
+      "count": 2
+    },
+    {
+      "regime": "B2",
+      "arm": "F",
+      "status": "valid",
+      "reason": "none",
+      "count": 4
+    },
+    {
+      "regime": "B2",
+      "arm": "K",
+      "status": "valid",
+      "reason": "none",
+      "count": 4
+    },
+    {
+      "regime": "B2",
+      "arm": "N",
+      "status": "not_run",
+      "reason": "no_placebo_available",
+      "count": 4
+    },
+    {
+      "regime": "B2",
+      "arm": "PF",
+      "status": "valid",
+      "reason": "none",
+      "count": 4
+    },
+    {
+      "regime": "B2",
+      "arm": "PK",
+      "status": "valid",
+      "reason": "none",
+      "count": 4
+    },
+    {
+      "regime": "B2",
+      "arm": "S",
+      "status": "valid",
+      "reason": "none",
+      "count": 2
+    }
+  ],
+  "evidence_category": "development",
+  "bootstrap_seed": 20261025,
+  "bootstrap_draws": 10000,
+  "expected_per_arm": 4,
+  "primary": [
+    {
+      "effect": "P1_Delta_K",
+      "estimate": 0.0,
+      "L": null,
+      "U": null,
+      "n_independent": 1,
+      "test": {
+        "p": null,
+        "status": "unattainable",
+        "n_nonzero": 0
+      },
+      "world_ids": [
+        "mock_dev02"
+      ],
+      "p_holm": null
+    },
+    {
+      "effect": "P2_Delta_P",
+      "estimate": 0.0,
+      "L": null,
+      "U": null,
+      "n_independent": 1,
+      "test": {
+        "p": null,
+        "status": "unattainable",
+        "n_nonzero": 0
+      },
+      "world_ids": [
+        "mock_dev02"
+      ],
+      "p_holm": null
+    }
+  ],
+  "world_effects": [
+    {
+      "world_id": "mock_dev02",
+      "regime": "B1",
+      "eligible": true,
+      "probe_eligible": true,
+      "means": {
+        "F": 19.81584679291671,
+        "K": 19.81584679291671,
+        "PF": 19.81584679291671,
+        "PK": 19.81584679291671
+      },
+      "counts": {
+        "F": 4,
+        "K": 4,
+        "PF": 4,
+        "PK": 4
+      },
+      "missing": {
+        "F": 0,
+        "K": 0,
+        "PF": 0,
+        "PK": 0
+      },
+      "tau_O": 0.0,
+      "pi": 0.0,
+      "cedes_rate": 0.0
+    },
+    {
+      "world_id": "mock_dev02",
+      "regime": "B2",
+      "eligible": true,
+      "probe_eligible": true,
+      "means": {
+        "F": 19.81584679291671,
+        "K": 19.81584679291671,
+        "PF": 19.81584679291671,
+        "PK": 19.81584679291671
+      },
+      "counts": {
+        "F": 4,
+        "K": 4,
+        "PF": 4,
+        "PK": 4
+      },
+      "missing": {
+        "F": 0,
+        "K": 0,
+        "PF": 0,
+        "PK": 0
+      },
+      "tau_O": 0.0,
+      "pi": 0.0,
+      "cedes_rate": 0.0
+    }
+  ],
+  "coalition_cedes": [
+    {
+      "regime": "B1",
+      "estimate": 0.0,
+      "L": null,
+      "U": null,
+      "n_independent": 1,
+      "definition": "world mean of PF unique-outsider wins; no coalition claimant"
+    },
+    {
+      "regime": "B2",
+      "estimate": 0.0,
+      "L": null,
+      "U": null,
+      "n_independent": 1,
+      "definition": "world mean of PF unique-outsider wins; no coalition claimant"
+    }
+  ],
+  "separation": {
+    "label": "descriptive",
+    "standardization": "paired d_z = mean(world contrast) / sample SD(world contrast)",
+    "world_ids": [
+      "mock_dev02"
+    ],
+    "n_independent": 1,
+    "knockout": {
+      "estimate": null,
+      "L": null,
+      "U": null,
+      "undefined_bootstrap_draws": 0
+    },
+    "probe": {
+      "estimate": null,
+      "L": null,
+      "U": null,
+      "undefined_bootstrap_draws": 0
+    },
+    "probe_minus_knockout": {
+      "estimate": null,
+      "L": null,
+      "U": null,
+      "undefined_bootstrap_draws": 0
+    }
+  },
+  "missingness_policy": "complete arms; separate complete matched pairs per estimand; no imputation"
+}

@@ -5,7 +5,7 @@ Input: JSON list of collector branch records, with shared matched ``world_id``
 outcomes. Include every scheduled branch, including failed/not_run records.
 No EXP002 results are read, pooled, or rewritten.
 """
-from collections import defaultdict
+from collections import Counter, defaultdict
 import json
 import math
 from pathlib import Path
@@ -72,7 +72,9 @@ def world_effects(records, expected_per_arm=4):
                     and r["outcomes"].get("status") == "complete"
                     and isinstance(r["outcomes"].get("Omean"), (int, float))
                     and math.isfinite(r["outcomes"]["Omean"])
-                    and all(c["status"] in ("pass", "not_applicable") for c in r.get("checks", []))]
+                    and all(c["status"] in ("pass", "na", "not_applicable") for c in r.get("checks", []))
+                    and all(c["status"] in ("pass", "na", "not_applicable") for c in r.get("cross_checks", []))
+                    and r.get("checkpoint_status") not in ("invalid", "failed")]
             if len(scheduled) > expected_per_arm:
                 raise ValueError("arm exceeds frozen continuation count")
             counts[arm] = len(good)
@@ -83,7 +85,9 @@ def world_effects(records, expected_per_arm=4):
                 if all(type(x) is bool for x in flags):
                     rates = flags
         f, k, pf = (means[a] for a in ("F", "K", "PF"))
-        worlds.append(dict(world_id=wid, regime=regime, eligible=True, means=means,
+        worlds.append(dict(world_id=wid, regime=regime,
+                           eligible=not any(r.get("checkpoint_status") == "ineligible" for r in rows),
+                           probe_eligible=next((r["probe_selection"]["status"] == "eligible" for r in rows if r.get("probe_selection")), None), means=means,
                            counts=counts, missing=missing,
                            tau_O=k-f if k is not None and f is not None else None,
                            pi=pf-f if pf is not None and f is not None else None,
@@ -127,9 +131,36 @@ def separation(knockout_pairs, probe_pairs):
     return result
 
 
-def analyze(records, expected_per_arm=4, evidence_category="development"):
+def analyze(records, expected_per_arm=4, evidence_category="development", *, exploratory=False,
+            evidence_root=None):
+    prospective = evidence_category == "new-prospective"
+    administration = {"validated": False, "k": None}
+    release = False
+    if prospective:
+        if expected_per_arm != 4 and not exploratory:
+            raise ValueError("confirmatory analysis requires four continuations; use explicit exploratory mode")
+        if evidence_root is None and not exploratory:
+            raise ValueError("confirmatory analysis requires sealed raw evidence and frozen manifest")
+        if evidence_root is not None:
+            from .storage import get, verify
+            from .manifest import validate
+            from .collector import export_rows
+            from .slots import validate_slots
+            root = Path(evidence_root)
+            verify(root)
+            m = validate(get(root / "manifest.json"))
+            if m["phase"] != "holdout":
+                raise ValueError("new-prospective requires held-out manifest")
+            raw_rows = export_rows(m, root)
+            if records != raw_rows:
+                raise ValueError("rows differ from raw first attempts")
+            administration = validate_slots(records, m)
+            release = True
+
     worlds = world_effects(records, expected_per_arm)
     kp, pp = paired(worlds, metric="tau_O", conditional=True), paired(worlds, metric="pi", conditional=True)
+    if prospective and not exploratory and (len(kp) < 16 or len(pp) < 16):
+        raise ValueError("each confirmatory estimand requires at least 16 complete matched pairs; use explicit exploratory mode")
     primary = []
     for name, pairs, direction in (("P1_Delta_K", kp, 1), ("P2_Delta_P", pp, -1)):
         values = [direction * p["d_w"] for p in pairs]
@@ -138,12 +169,31 @@ def analyze(records, expected_per_arm=4, evidence_category="development"):
                             world_ids=[p["world_id"] for p in pairs]))
     for row, adjusted in zip(primary, stats.holm([r["test"]["p"] for r in primary])):
         row["p_holm"] = adjusted
+        reasons = []
+        if not release:
+            reasons.append("release gates/raw slot validation not satisfied")
+        if expected_per_arm != 4:
+            reasons.append("requires four primary continuations")
+        if row["n_independent"] < 16:
+            reasons.append("fewer than 16 complete matched pairs")
+        if exploratory or not prospective:
+            reasons.append("exploratory/development mode")
+        row.update(confirmatory_eligible=not reasons, ineligibility_reasons=reasons,
+                   interpretation="confirmatory" if not reasons else "feasibility/descriptive")
     cedes = []
     for regime in ("B1", "B2"):
         vals = [w["cedes_rate"] for w in worlds if w["regime"] == regime and w["cedes_rate"] is not None]
         cedes.append(dict(regime=regime, **stats.summarize(vals),
                           definition="world mean of PF unique-outsider wins; no coalition claimant"))
-    return {"evidence_category": evidence_category, "bootstrap_seed": stats.SEED,
+    missingness = Counter()
+    for row in records:
+        reasons = row.get("reasons") or ["none"]
+        for reason in reasons:
+            missingness[(row["regime"], row["arm"], row["status"], reason)] += 1
+    return {"scheduled_status_reasons": [dict(regime=k[0], arm=k[1], status=k[2], reason=k[3], count=n)
+                                         for k, n in sorted(missingness.items())],
+            "evidence_category": evidence_category, "exploratory": exploratory,
+            "administrative_prefix": administration, "bootstrap_seed": stats.SEED,
             "bootstrap_draws": stats.B, "expected_per_arm": expected_per_arm,
             "primary": primary, "world_effects": worlds, "coalition_cedes": cedes,
             "separation": separation(kp, pp),
@@ -156,9 +206,11 @@ def main():
     parser.add_argument("records", type=Path)
     parser.add_argument("--continuations", type=int, default=4)
     parser.add_argument("--evidence-category", choices=("development", "new-prospective"), default="development")
+    parser.add_argument("--exploratory", action="store_true")
     args = parser.parse_args()
     print(json.dumps(analyze(json.loads(args.records.read_text()), args.continuations,
-                             args.evidence_category), indent=2, allow_nan=False))
+                             args.evidence_category, exploratory=args.exploratory,
+                             evidence_root=args.records.parent if args.evidence_category == "new-prospective" and (args.records.parent / "manifest.json").exists() else None), indent=2, allow_nan=False))
 
 
 if __name__ == "__main__":

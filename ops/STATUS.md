@@ -3,6 +3,11 @@
 **Owner target:** all deliverables ready by 2026-10-25 16:00 UTC (owner records demo + submits). Hard deadline 2026-10-26 11:59 UTC.
 **Original study FROZEN:** EXP-002 Delta 1.354 [-0.020, 2.834], p 0.0703, not supported (confirmatory null). Never changed.
 
+## ORCH BLOCKER (2026-10-25 ~01:40 UTC)
+- W1 determinism gate on Modal (40 seeds): FAIL. Decompressed content differs in 38 eps-0.1 unit files (all 40 eps-0 match; 2 eps-0.1 match). Full run NOT started. Serial-vs-Modal divergence in the eps-0.1 stratum must be diagnosed (GATE.json: docs/enh/r2/run_par/GATE.json).
+- EXP-003: W2-REV verdict ISSUES (docs/enh/exp003/REV_PROTO.md). W2-FIX (Codex) applied fixes: ops/reports/W2-FIX.md. Freeze NOT committed; GPU $/world spike not yet run.
+- Modal spend est. ~$0.96 (ledger). Nothing committed by ORCH yet.
+
 ## ENH gates
 R1 direction ACCEPTED (D-038) · R2 benchmark protocol FROZEN (D-041; docs/enh/r2/FREEZE.json) · R3 pending results · R4/R5 pending.
 
