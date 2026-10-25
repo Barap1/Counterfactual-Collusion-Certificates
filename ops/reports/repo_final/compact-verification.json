@@ -1,0 +1,44 @@
+{
+  "checked_utc": "2026-10-25T22:17:08.930578+00:00",
+  "source_dimensions": {
+    "allocation-twins.svg": [
+      640,
+      536
+    ],
+    "evidence-steps.svg": [
+      640,
+      246
+    ]
+  },
+  "readme_max_width": 600,
+  "observed_desktop_image_sizes": [
+    [
+      600,
+      503
+    ],
+    [
+      600,
+      231
+    ]
+  ],
+  "observed_phone_image_sizes": [
+    [
+      358,
+      300
+    ],
+    [
+      358,
+      138
+    ]
+  ],
+  "phone_viewport_width": 390,
+  "phone_document_scroll_width": 390,
+  "prose_words_before": 920,
+  "prose_words_after": 852,
+  "public_file_tests": 19,
+  "navigation_pages": 15,
+  "local_links_and_anchors": 109,
+  "protected_records_unchanged": 16992,
+  "scientific_review_finding_fixed": "Visible nonzero-effect requirement; SVG description and README alternative text aligned",
+  "desktop_and_phone_visual_review": "Both compact diagrams visually inspected; no visible clipping or page overflow"
+}

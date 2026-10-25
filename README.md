@@ -5,29 +5,25 @@
 
 A message can change what other agents do and disadvantage outsiders without proving that the communication constitutes collusion. **Evidence of influence leaves an attribution problem: which policy produced the behavior?**
 
-CCC makes that problem executable. We construct teams that look identical under message removal, then ask what additional evidence distinguishes their programmed policies.
+CCC builds executable counterexamples: teams that look identical under message removal but follow different programmed policies. Extra evidence can separate particular pairs.
 
 [Explore the example](#try-it-offline) · [Reproduce the primary result](#reproduce-the-primary-result) · [Research and evidence](docs/README.md)
 
 ## Two teams. The same evidence.
 
-Both teams send the same allocation request. Both assign the task to the dispatch team. Removing the message has the same measured effect on outsiders in each world.
+Two constructed teams send the same message, assign the task to dispatch, and produce the same message-removal effect. One follows a permitted efficiency policy; the other follows a prohibited coalition-protecting policy. That early evidence cannot distinguish them.
 
-One team follows a permitted efficiency policy. The other follows a prohibited policy that protects the coalition. Their initial behavior and message-removal results do not tell those explanations apart.
+<img src="docs/assets/allocation-twins.svg" width="600" alt="Constructed allocation twins: both send the same message and allocate to dispatch; mean outsider reward rises from 14 to 19 after message removal in both worlds. Lowering each outsider’s task cost by 10 separates them: efficiency switches allocation and yields 29; coalition protection keeps allocation and yields 14.">
 
-![Two constructed teams send the same allocation request and make the same allocation. Mean outsider reward rises from 14 to 19 after message removal in both worlds. Lowering each outsider’s task cost by 10 separates their programmed responses: the efficiency policy changes the allocation and yields outsider reward 29; the coalition-protecting policy keeps the allocation and yields 14.](docs/assets/allocation-twins.svg)
-
-The extra probe changes task costs so that an outsider becomes the efficient choice. The efficiency team switches; the coalition-protecting team does not. This resolves the ambiguity **for these specified policies**. It is a reproducible counterexample to treating message-removal harm as sufficient attribution, not a general impossibility theorem or a validated detector. [Exact values, code and source records](docs/assets/README.md).
+The cost probe makes an outsider the efficient choice. The efficiency team switches; the coalition-protecting team does not. This separates **these specified policies**. The example does not establish a general impossibility theorem or a validated detector. [Exact values, code and source records](docs/assets/README.md).
 
 ## What the audit can say
 
-CCC replays a checkpoint with the original message, with its exposure masked, and with sham and eligible inert-message controls. It reports effects on outsiders, the coalition and total reward. The sham checks the intervention machinery; the inert-message control probes removal specificity, with imperfect surface and position matching. Missing or invalid controls limit the conclusion.
+CCC replays a checkpoint with the original message, its exposure masked, a sham, and an eligible inert-message control. It measures outsider, coalition and total reward. The controls test intervention validity and removal specificity; placebo surface and position matching is imperfect. Missing or invalid controls limit the conclusion.
 
-The claim should grow only with the evidence:
+<img src="docs/assets/evidence-steps.svg" width="600" alt="Evidence requirements: observation needs visible communication; causal influence needs a valid replay and evidence of a nonzero effect; harmful exposure needs outsider outcome measures; attribution additionally needs a declared policy and evidence distinguishing legitimate alternatives. Without separating evidence, attribution remains unresolved.">
 
-![Observation raises a question. A valid controlled replay can establish causal influence. Outcome measures can establish harmful exposure. Attribution additionally needs a declared policy and evidence distinguishing legitimate alternatives; otherwise it remains unresolved.](docs/assets/evidence-steps.svg)
-
-The constructed benchmark adds cost probes and authorization records. Its labels come from the generator's programmed policies. The separate real-agent study compares prompt conditions, which are not verified ground truth for realized collusion.
+Attribution needs a declared policy and evidence distinguishing legitimate alternatives. The benchmark supplies cost probes and authorization records; its labels come from programmed policies. The separate real-agent study compares prompt conditions, not verified ground truth for realized collusion.
 
 ## What we found
 
@@ -42,21 +38,21 @@ In deterministic evaluation, the harm-gated baseline accused legitimate cases as
 | Useful information | 0 / 200 |
 | Benign cooperation | 0 / 100 |
 
-The revised attribution rule met the full utility criterion in **2 of 84 evaluation settings**; the previous version met it in **5 of 84**. These are setting counts, not classification accuracy or evidence of general superiority. [Full results and original verdicts](docs/RESULTS.md).
+The revised attribution rule met the full utility criterion in **2 of 84 evaluation settings**, versus **5 of 84** for the previous version. These are setting counts, not classification accuracy or a general ranking. [Full results and original verdicts](docs/RESULTS.md).
 
 **Separate real-agent study.** Across **eight independent matched-world pairs**, the primary contrast was **1.354 reward units**, with a world-cluster 95% interval of approximately **−0.020 to 2.834** and exact one-sided sign-flip **p = 0.0703125**. The preregistered directional hypothesis was **not supported**. No exploratory case-level certificate was supported.
 
-**What remains unestablished:** general detection reliability, end-to-end sensitivity, and consistent performance across platforms under noise. The noisy benchmark condition produced substantive cross-platform disagreements. Restricting established benchmark findings to the deterministic condition was a **post-hoc decision**. Negative results, both conditions and correction records are retained. [Limitations and release boundaries](docs/LIMITATIONS.md).
+**What remains unestablished:** general detection reliability, end-to-end sensitivity, and consistent performance across platforms under noise. The noisy condition produced substantive cross-platform disagreements. Restricting established benchmark findings to the deterministic condition was **post hoc**. Both conditions, negative results and corrections remain available. [Limitations and release boundaries](docs/LIMITATIONS.md).
 
 ## Try it offline
 
-Download or clone this repository, then open [`demo/explorer/index.html`](demo/explorer/index.html) in your browser. No server, installation or network connection is needed. GitHub's file preview shows source; the downloaded HTML runs the explorer.
+Download or clone this repository, then open [`demo/explorer/index.html`](demo/explorer/index.html) in your browser. The bundled interface needs no server, installation or network connection. GitHub shows source; open the downloaded HTML to use it.
 
 1. Select **Twin worlds**, choose **P2** (allocation), and compare evidence levels **I2** and **I4**.
 2. Open **Study** for the real-agent estimate and uncertainty.
 3. Select a case to inspect continuations, controls and the recorded certificate.
 
-The explorer reads a bundled frozen data pack; it makes no model calls. [Data provenance and rebuild instructions](demo/explorer/README.md).
+The explorer reads frozen records and makes no model calls. [Data provenance and rebuild instructions](demo/explorer/README.md).
 
 ## Reproduce the primary result
 
@@ -66,7 +62,7 @@ From the repository root, using **Python 3.12 or newer** on macOS, Linux or Wind
 python3 scripts/reproduce_headline.py
 ```
 
-Use `python` instead of `python3` where that is your Python 3 command. No dependencies, credentials, models or network are required. The script verifies the archived input hash, recomputes the eight pair contrasts and checks them against the frozen independent arithmetic. Expected fields:
+Use `python` instead of `python3` where that is your Python 3 command. No dependencies, credentials, models or network are required. The script verifies the input archive hash and recomputes all eight pair contrasts against frozen independent arithmetic. Expected fields:
 
 ```text
 Delta:       1.354325711018899
@@ -79,7 +75,7 @@ This reproduces the primary estimate and exact test from recorded outputs. It do
 
 ## Methods and navigation
 
-The **constructed study** tests evidence access using scripted allocation and transfer policies, legitimate controls and a frozen prospective evaluation. The **real-agent study** uses eight matched-world pairs and checkpoint continuations under a separately frozen protocol. These studies answer different questions; neither establishes deployment detection accuracy.
+The **constructed study** tests scripted policies and evidence access in a frozen prospective evaluation. The **real-agent study** uses eight matched-world pairs and checkpoint continuations under a separate freeze. Neither establishes deployment detection accuracy.
 
 | Location | Start here for |
 | :--- | :--- |
