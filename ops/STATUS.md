@@ -1,21 +1,23 @@
-# CCC STATUS — handoff (2026-10-24 15:00 UTC)
+# CCC STATUS — ENH sprint (updated 2026-10-25 00:20 UTC, after laptop crash)
 
-**Deadline:** 2026-10-26 11:59 UTC (Apart AI Collusion Sprint; Sunday 23:59 AoE).
-**Gates:** A PASSED (D-028) · B MET (D-032) · C PASSED with narrowing (D-035) · D technical checks done; owner decisions pending.
-**Science is complete and FROZEN.** Do not rerun experiments or change analysis numbers.
+**Owner target:** all deliverables ready by 2026-10-25 16:00 UTC (owner records demo + submits). Hard deadline 2026-10-26 11:59 UTC.
+**Original study FROZEN:** EXP-002 Delta 1.354 [-0.020, 2.834], p 0.0703, not supported (confirmatory null). Never changed.
 
-## Verified result
-Held-out EXP-002 (protocol v1.2, local gemma4:26b, 8 matched world pairs): Delta = 1.354, 95% CI [-0.020, 2.834], one-sided p = 0.0703, so the preregistered decision is **not supported** (confirmatory null). Holm S1–S3 not significant. Certificates 0/11/5. Integrity 143/143, 0 failed or invalid, $0. Claims: ops/CLAIMS.md (final section) and docs/review/rev001/CLAIMS_LEDGER.md.
+## ENH gates
+R1 direction ACCEPTED (D-038) · R2 benchmark protocol FROZEN (D-041; docs/enh/r2/FREEZE.json) · R3 pending results · R4/R5 pending.
 
-## Running
-Nothing. No agents, no Codex jobs, no experiments, Ollama stopped.
+## Running (restart instructions in ops/RESUME.md)
+- BENCH-PAR2 (Codex): parallel execution of the frozen prospective benchmark → docs/enh/r2/run_par/ (resumable; PID in run_par.pid). Serial run docs/enh/r2/run/ killed by crash at 297 unit files (preserved).
+- RA-LEAD (Sonnet orchestrator, Codex-only children): EXP-003 real-agent twin probe on Modal GPU (owner added card + limit; cap $51, stop $45; ~$0.95 spent). Brief docs/enh/exp003/BRIEF.md; log docs/enh/exp003/LOG.md. Freeze target ~02:30 UTC; results 10:00 UTC.
+- WRITE-RES (Sonnet): wrapping up writing playbook docs/enh/writing/WRITING_PLAYBOOK.md.
 
-## Git
-main at b89093e; **1 unpushed commit** (D-036 record) plus this handoff commit. origin = github.com/Barap1/Counterfactual-Collusion-Certificates, **currently PUBLIC** (unexpected; it was private on Oct 23). Local backups: backup/pre-squash, backup/pre-squash-2. Worktree ../ApartSprint-wt-v12 (branch v1.2-impl) is fully merged and can be removed with owner OK.
+## Done (committed)
+v3 validity-metadata fix · explorer (demo/explorer, 0 mismatches in QA; 3 P1 fixes pending) · paper v2 draft (paper/v2) with verified refs · figures script (figures/enh) · release hygiene · MIT license.
 
-## Owner blockers
-1. Repo visibility (recommend `gh repo edit Barap1/Counterfactual-Collusion-Certificates --visibility private --accept-visibility-change-consequences` — owner approval required). Private Google Doc IDs appear in 5 files and in history; scrub before any deliberate public release.
-2. Paper [OWNER] placeholders: author/affiliation; LLM-usage wording + human-verification sentence; dual-use review (Appendix A); public-release line.
-3. Google Doc working-copy sync (writes never authorized yet).
-4. Push of the remaining local commits.
-5. Final submission (the owner submits).
+## Next (in order)
+1. Benchmark RESULTS → R3 independent Codex review. 2. EXP-003 freeze (director commits) → run → analysis → review.
+3. Paper fill per WRITING_PLAYBOOK (blend EXP-003 into the main story; no pooling) → figures PROSPECTIVE → PDF ≤ 8 pp; official template.
+4. Explorer: prospective twins + QA fixes. 5. R4 consistency check. 6. Judge summary, demo script, final critical review → R5 handoff.
+
+## Owner items
+Author line/affiliation, LLM-use statement, dual-use sign-off, title choice, push, submission. Repo visibility/history deferred (D-039).

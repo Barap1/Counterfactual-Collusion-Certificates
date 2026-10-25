@@ -1,25 +1,14 @@
-# RESUME packet for a fresh Opus director session (2026-10-24 15:00 UTC)
+# RESUME packet (updated 2026-10-25 00:20 UTC)
 
-Paste to start:
-> Resume CCC as research director. Read CCC_START_HERE.md, ops/STATUS.md, this file, docs/release/CHECKLIST.md (section "Owner decisions required"), and ops/DECISIONS.md D-026..D-036 only. Science is frozen; do not rerun experiments or change numbers. Wait for the owner's decisions below before acting on them.
+Paste to restart: "Resume CCC ENH sprint as director. Read CLAUDE.md, ops/STATUS.md, ops/RESUME.md, ops/DECISIONS.md D-037..latest, docs/enh/MISSION.md. Restart anything listed below that is not running."
 
-## Standing rules (owner instructions)
-- $0 out-of-pocket; no paid fallback.
-- The owner (Aarav Patel, [REDACTED-EMAIL] git identity) is the SOLE commit author; never add Claude/Codex Co-Authored-By trailers (D-027).
-- Be stingy with subagents: Codex gpt-6.1-sol medium or low, gpt-6-luna for easy work; Claude Sonnet or Haiku; no Opus or gpt-6-astra without a stated reason. Prefer Codex when credits allow (Codex cannot write .git or run headless Chrome; the director commits).
-- Push, Google Doc writes, sharing/visibility changes, publication and submission require explicit owner approval each time.
-- Keep about 40 commits per push; squash local unpushed history with git commit-tree (trees identical, backup branch) if asked.
+## Rules
+Owner is sole commit author (no AI trailers). Sonnet orchestrators + Codex workers (gpt-6.1-sol medium); no Opus sub-agents; Modal children Codex-only. Max 6 live agents. Modal spend only for EXP-003 (≤$51). Never print secrets. No push/visibility/submission without owner.
+Codex: `node ~/.claude/plugins/cache/openai-codex/codex/1.0.6/scripts/codex-companion.mjs task --write --effort medium --model gpt-6.1-sol "<prompt>"` (stdout to ops/reports/codex_runs/<ID>.stdout).
 
-## Key paths
-- Paper (tagged audit copy): paper/draft.md. Submission: paper/build/submission.{md,html}; PDF paper/build/CCC_submission_draft.pdf (+ .sha256). Rebuild: `python3 paper/build/make_submission.py`, then `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer --print-to-pdf=paper/build/CCC_submission_draft.pdf file://$PWD/paper/build/submission.html`. Page QA: `swift paper/build/pdf_pages.swift <pdf> <outdir>` (PDFKit: page count, section-per-page, PNG per page).
-- Results: docs/analysis/exp002_heldout_v2/ (+CORRECTION.md); DEV docs/analysis/exp001_dev_v2/; review docs/review/rev001/, docs/review/REV_FREEZE.md, docs/review/director_gateA_audit.md, docs/review/cold_read.md.
-- Protocol/prereg: docs/research/sci002/protocol.md (v1.2), docs/stats/prereg.md, docs/stats/stage2/STAGE2_ADDENDUM.md, docs/stats/deviation_log.md, docs/stats/FREEZE.md.
-- Raw traces: docs/runner/archives/exp00{1,2}-live.tar.gz (+.sha256); live dirs are gitignored.
-- Reproduce: `/bin/zsh scripts/reproduce_offline.sh` (verified exit 0 on 2026-10-24).
-- Google Doc target: ops/doc_target.local.json (gitignored; check baseline_modified_utc before any write; never write the official template).
-
-## Next actions (owner-gated)
-1. Owner decides repo visibility; if private is approved, run the gh command in STATUS.md.
-2. Owner provides author line, LLM-statement approval and dual-use sign-off; edit the [OWNER] tags in paper/draft.md; rebuild; QA the PDF (main text must stay ≤ 8 pages).
-3. If approved: sync to the Google Doc; push main; optionally scrub Doc IDs before any intentional public release.
-4. The owner submits on the Apart sprint page before the deadline.
+## Restart checklist
+1. Benchmark: if docs/enh/r2/run_par/COMPLETE.json missing and no process in run_par.pid, rerun the resume command in docs/enh/r2/PARALLEL_EXECUTION.md (resumable).
+2. EXP-003: read docs/enh/exp003/LOG.md last lines; `modal app list` (stop anything stray); resume RA-LEAD or relaunch a Sonnet lead with docs/enh/exp003/BRIEF.md + LOG.md.
+3. Writing playbook: docs/enh/writing/WRITING_PLAYBOOK.md (done or near done).
+4. Paper: paper/v2/draft_v2.md, build `python3 paper/v2/make_v2.py --figdir figures/enh/<run>`.
+5. Explorer: demo/explorer (open index.html); rebuild: demo/build_twins.py → demo/explorer/bundle_data.py → demo/build_data.py.
