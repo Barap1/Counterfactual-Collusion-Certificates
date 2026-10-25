@@ -113,8 +113,8 @@ main{padding:1.2rem 1.5rem 3rem;min-width:0;outline:none}
 .rec .body{white-space:pre-wrap;word-break:break-word;font-size:.9rem}
 .rec .tool{font-size:.82rem;color:var(--muted);font-family:var(--mono);white-space:pre-wrap;word-break:break-word}
 .rec.exp{background:var(--hi);border:2px solid var(--hi-line);border-radius:5px;padding:.55rem .6rem;margin:.4rem 0}
-.xtag{display:inline-block;font:700 .72rem var(--sans);text-transform:uppercase;letter-spacing:.05em;background:var(--hi-line);color:#fff;padding:.1rem .45rem;border-radius:3px;margin-bottom:.2rem}
-@media (prefers-color-scheme:dark){.xtag{color:#14130f}}
+.xtag{display:inline-block;font:700 .72rem var(--sans);text-transform:uppercase;letter-spacing:.05em;background:#7a5600;color:#fff;padding:.1rem .45rem;border-radius:3px;margin-bottom:.2rem}
+@media (prefers-color-scheme:dark){.xtag{background:var(--hi-line);color:#14130f}}
 .cpline{text-align:center;font:700 .78rem var(--sans);text-transform:uppercase;letter-spacing:.08em;color:var(--causal);border-top:2px solid var(--causal);margin:.5rem 0;padding-top:.3rem}
 .expcard{border:2px solid var(--hi-line);background:var(--hi);border-radius:6px;padding:.7rem .9rem;margin:.6rem 0}
 .expcard .route{font:700 1rem var(--sans)}
@@ -201,3 +201,8 @@ select{font:inherit;padding:.3rem .5rem;border:1px solid var(--ink);border-radiu
 .twinline{font-size:1.08rem;border:2px solid var(--ink);border-radius:6px;padding:.7rem .9rem;background:var(--panel)}
 .matrix th.cur,.matrix td.cur{background:var(--causal-bg);outline:2px solid var(--causal);outline-offset:-2px}
 h4{font:700 .85rem var(--sans);margin:.9rem 0 .3rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+
+/* Keep twin content inside grid tracks so tables scroll and transcripts wrap. */
+.twin{min-width:0}
+.twin .rec .body{overflow-wrap:anywhere}
+.scroll-hint{font-size:.82rem}
