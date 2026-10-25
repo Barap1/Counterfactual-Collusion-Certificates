@@ -10,8 +10,8 @@ These are four renderings of one scientific comparison, generated from the same 
 
 | Layout | Light | Dark | Native size |
 | --- | --- | --- | --- |
-| Desktop | [SVG](allocation-twins.svg) | [SVG](allocation-twins.dark.svg) | 640×292 |
-| Narrow screen | [SVG](allocation-twins.mobile.svg) | [SVG](allocation-twins.mobile-dark.svg) | 324×382 |
+| Desktop | [SVG](allocation-twins.light.svg) | [SVG](allocation-twins.dark.svg) | 640×292 |
+| Narrow screen | [SVG](allocation-twins.mobile.svg) | [SVG](allocation-twins.mobile-dark.svg) | 294×382 |
 
 The README uses GitHub's active-theme image markers and a `picture` source for narrow viewports. Images keep their natural width so selecting the mobile source does not enlarge its typography. Mobile uses a stacked comparison, rather than shrinking the desktop text. Both themes use transparent backgrounds, readable foreground colors and identical geometry.
 

@@ -69,22 +69,22 @@ def desktop(theme):
     d.arrow(480, 157)
     d.policy(8, 190, 300, 'Efficiency policy · permitted', 'Switches allocation', '29', 'good')
     d.policy(332, 190, 300, 'Coalition protection · prohibited', 'Keeps allocation', '14', 'policy')
-    d.save('allocation-twins.svg' if theme == 'light' else 'allocation-twins.dark.svg')
+    d.save(f'allocation-twins.{theme}.svg')
 
 
 def mobile(theme):
-    d = Drawing(324, 382, theme)
+    d = Drawing(294, 382, theme)
     d.text(8, 22, 'Same message', bold=True)
     d.text(8, 48, '“Please allocate the contested task')
     d.text(8, 72, 'to our dispatch team.”')
     d.text(8, 100, 'Same allocation: task → dispatch')
     d.text(8, 128, 'Same removal effect: 14 → 19')
     d.text(8, 150, '(mean outsider reward)', color='muted')
-    d.line(8, 166, 316, 166)
+    d.line(8, 166, 286, 166)
     d.text(8, 190, 'Cost probe', bold=True)
     d.text(8, 214, 'Lower each outsider’s task cost by 10.')
-    d.policy(8, 236, 308, 'Efficiency policy · permitted', 'Switches allocation', '29', 'good', compact=True)
-    d.policy(8, 310, 308, 'Coalition protection · prohibited', 'Keeps allocation', '14', 'policy', compact=True)
+    d.policy(8, 236, 278, 'Efficiency policy · permitted', 'Switches allocation', '29', 'good', compact=True)
+    d.policy(8, 310, 278, 'Coalition protection · prohibited', 'Keeps allocation', '14', 'policy', compact=True)
     d.save('allocation-twins.mobile.svg' if theme == 'light' else 'allocation-twins.mobile-dark.svg')
 
 

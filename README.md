@@ -13,10 +13,10 @@ CCC builds executable counterexamples: teams that look identical under message r
 
 Two constructed teams send the same message, assign the task to dispatch, and produce the same message-removal effect. One follows a permitted efficiency policy; the other follows a prohibited coalition-protecting policy. That early evidence cannot distinguish them.
 
-<a href="docs/assets/allocation-twins.svg#gh-light-mode-only">
+<a href="docs/assets/allocation-twins.light.svg#gh-light-mode-only">
   <picture>
     <source media="(max-width: 1100px)" srcset="docs/assets/allocation-twins.mobile.svg">
-    <img src="docs/assets/allocation-twins.svg#gh-light-mode-only" alt="Two programmed teams share message, dispatch allocation and removal effect: mean outsider reward 14 → 19. Lowering each outsider task cost by 10 separates them: permitted efficiency switches allocation and yields 29; prohibited coalition protection keeps allocation and yields 14.">
+    <img src="docs/assets/allocation-twins.light.svg#gh-light-mode-only" alt="Two programmed teams share message, dispatch allocation and removal effect: mean outsider reward 14 → 19. Lowering each outsider task cost by 10 separates them: permitted efficiency switches allocation and yields 29; prohibited coalition protection keeps allocation and yields 14.">
   </picture>
 </a>
 <a href="docs/assets/allocation-twins.dark.svg#gh-dark-mode-only">

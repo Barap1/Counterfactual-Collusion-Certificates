@@ -1,0 +1,14 @@
+{
+  "light": {
+    "ink": 15.8,
+    "muted": 6.11,
+    "good": 7.39,
+    "policy": 7.39
+  },
+  "dark": {
+    "ink": 17.39,
+    "muted": 6.5,
+    "good": 12.32,
+    "policy": 9.77
+  }
+}
