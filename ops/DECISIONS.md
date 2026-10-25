@@ -226,3 +226,18 @@ Next: BENCH-IMP (implementation, Codex) and PROTO-001 (R2 protocol draft, Sonnet
 ## D-045 (2026-10-25 ~01:27 UTC, director) EXP-003 proceeds under Plan M, with timebox
 - After W2-FIX: independent re-review (separate Codex thread) and 1-DEV-world GPU spike (L40S or A100) in parallel.
 - Hard timebox: freeze not committed by 03:30 UTC, or spike shows fewer than 16 pairs fit in $45 operating stop -> stop EXP-003, stop all Modal apps, record as not completed (paper will not claim it). Otherwise freeze and run (hard stop 09:00 UTC).
+
+## D-046 (2026-10-25 ~01:45 UTC, director) Platform choice for the full prospective run: Modal Linux only
+- Ruling: run the FULL prospective block on Modal (Linux CPython 3.14.2, NumPy 2.2.6, existing debian_slim image), entirely on one platform. Never mix platforms.
+- Rationale: frozen code and seeds unchanged; freeze binds code and seeds, not platform; eps=0 byte-identical across platforms (40/40); eps=0.1 differs by platform floating-point/RNG (W1-DIAG: local reruns agree with each other and with the serial files; container differs); no outcome contents inspected, so the platform choice is outcome-blind.
+- Steps: (1) container self-determinism check on 5 gate seeds, both eps, two separate container runs, recorded in docs/enh/r2/run_par/GATE_v2.json; (2) documented exception in scripts/bench_modal_run.py (require_gate accepts GATE_v2 under D-046: eps-0 cross-platform identity + container self-determinism); ccc/bench untouched; (3) full run on Modal, <= ~$8, <= 2 h; output docs/enh/r2/run_par/; (4) disclose in docs/enh/r2/PARALLEL_EXECUTION.md (platform, versions, gate evidence; the 297 serial macOS units are preserved, not used for results); (5) R3 reviewer must check these facts.
+- EXP-003 timebox (freeze by 03:30 UTC or stop) stands.
+
+## D-047 (2026-10-25 ~02:20 UTC, director) EXP-003 final extension
+- EXP-003 missed the 03:30 freeze timebox. Final extension: freeze committed AND a 1-DEV-world GPU spike (L40S or A100) completed by 04:30 UTC, sized so >=16 pairs finish by 10:00 UTC within the $45 operating stop; hard stop 10:00 UTC; analysis and Codex reproduction by 11:30 UTC.
+- If any of these cannot be met: stop EXP-003, `modal app stop` all its apps, record "not completed" here, and the paper does not claim it.
+- Spike and final protocol re-review run in parallel now.
+
+## D-047a (2026-10-25 ~03:57 UTC, ORCH) EXP-003 recorded as NOT COMPLETED
+- The D-047 conditions cannot be met before 04:30 UTC: no EXP-003 GPU server is running (`modal app list`: only stopped apps), no 1-DEV-world GPU spike has been run, the freeze has not been committed, and the protocol re-review (W2-REV3) had not returned. Per D-047, EXP-003 is stopped; no Modal EXP-003 apps are running.
+- The paper does not claim EXP-003. Only the frozen prospective benchmark (R2) and the held-out EXP-002 result are reported.

@@ -83,3 +83,11 @@ rerun: **4 passed, 1 deselected in 15.22 seconds**. Exact command:
 ```sh
 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$PWD/scripts/offline_guard:$PWD:/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/site-packages" starter/collusion_hackathon/colosseum/.venv/bin/python -m pytest tests/test_bench_modal.py -q -k 'not dev_serial'
 ```
+
+## Platform deviation (D-046, execution-only)
+- The frozen prospective benchmark is executed entirely on Modal Linux containers: CPython 3.14.2 (debian_slim image), NumPy 2.2.6, 1 CPU and 4 GiB per container. Frozen code, seeds and protocol are unchanged.
+- Local macOS runs (CPython 3.14.7, Clang, NumPy 2.2.6) are not mixed into the results. The 297 serial macOS unit files in docs/enh/r2/run/ are preserved and are not used for results.
+- Gate evidence: the 40-seed gate (archived in ops/reports/codex_runs/gate1_failed/run_par_prev/GATE.json): all 40 eps-0 units match the serial files byte-for-byte after decompression; 38 of 40 eps-0.1 units differ. Local reruns (W1-DIAG) agree with the serial files; the container differs, consistent with a platform floating-point or RNG difference.
+- Container self-determinism (docs/enh/r2/run_par/GATE_v2.json): 5 seeds, both eps, two separate Modal app runs: 20 of 20 units identical. eps-0 against serial: 20 of 20 identical.
+- The D-046 exception in scripts/bench_modal_run.py accepts GATE_v2 in place of cross-platform eps-0.1 identity. ccc/bench is unchanged.
+- After the run, eps-0 units for the 40 gate seeds are compared against the serial files as a post-run check.

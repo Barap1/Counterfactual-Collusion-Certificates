@@ -8,6 +8,12 @@
 - EXP-003: W2-REV verdict ISSUES (docs/enh/exp003/REV_PROTO.md). W2-FIX (Codex) applied fixes: ops/reports/W2-FIX.md. Freeze NOT committed; GPU $/world spike not yet run.
 - Modal spend est. ~$0.96 (ledger). Nothing committed by ORCH yet.
 
+## ORCH update (2026-10-25 ~01:50 UTC)
+- W1 diagnosis (D-044): outcome (ii), container env. Container ran CPython 3.14.2/GCC; local 3.14.7/Clang; NumPy 2.2.6 both (ops/reports/W1-DIAG.md).
+- Pinned Modal image to python:3.14.7-slim: BUILD FAILS (numpy==2.2.6 has no cp314 wheel; source build fails). Gate v2 not run. Failed gate-1 outputs moved to ops/reports/codex_runs/gate1_failed/.
+- Local fallback (iii) blocked by the driver's proof-receipt requirement; serial throughput ~2 units/min, so full block (4200 units) ~11 h at 3 processes.
+- EXP-003: REV_PROTO2 ISSUES; W2-FIX2 and W4-P1 running. D-045 timeboxes apply (freeze by 03:30 UTC).
+
 ## ENH gates
 R1 direction ACCEPTED (D-038) · R2 benchmark protocol FROZEN (D-041; docs/enh/r2/FREEZE.json) · R3 pending results · R4/R5 pending.
 
