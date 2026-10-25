@@ -355,7 +355,8 @@ def fig_frontier(c: Ctx, F, SEP, RES):
             y = oy + i * chei * 0.0 + i * 0.0
             yy = oy + i * chei * 0.78
             s.text(cx0 - 10, yy + 22, KIND_NAMES[kind], 11, INK, "end")
-            units = [x for x in F if x["epsilon"] == eps]
+            # Prospective rows contain only their own pair kind (or no pair).
+            units = [x for x in F if x["epsilon"] == eps and kind in x["pairs"]]
             n = len(units)
             for j, k in enumerate(SETS):
                 sep = sum(1 for u in units if u["pairs"][kind]["by_set"][k]["pair_distinct"])

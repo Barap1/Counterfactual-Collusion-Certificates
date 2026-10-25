@@ -1,0 +1,519 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1018" height="794" viewBox="0 0 1018 794"><title>PROSPECTIVE</title>
+<rect width="100%" height="100%" fill="white"/>
+<text x="24.0" y="28.0" font-family="Arial, Helvetica, sans-serif" font-size="17px" fill="#17324D" text-anchor="start" font-weight="bold">Risk-coverage by information set (attribution, axis M)</text>
+<text x="24.0" y="47.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#66727D" text-anchor="start" font-weight="normal">Risk = error + c * abstention (lower is better); coverage = share of members answered. Rows: noise stratum x abstention cost c.</text>
+<rect x="870.0" y="12" width="132.0" height="24" rx="3" fill="white" stroke="#1d6b3a" stroke-width="1.6"/>
+<text x="936.0" y="29.0" font-family="Arial, Helvetica, sans-serif" font-size="12px" fill="#1d6b3a" text-anchor="middle" font-weight="bold">PROSPECTIVE RUN</text>
+<rect x="92.0" y="96.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="92.0" y1="200.0" x2="230.0" y2="200.0" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="203.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.0</text>
+<line x1="92.0" y1="170.3" x2="230.0" y2="170.3" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="173.3" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.2</text>
+<line x1="92.0" y1="140.6" x2="230.0" y2="140.6" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="143.6" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.4</text>
+<line x1="92.0" y1="110.9" x2="230.0" y2="110.9" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="113.9" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.6</text>
+<text x="161.0" y="88.0" font-family="Arial, Helvetica, sans-serif" font-size="13px" fill="#1b1a17" text-anchor="middle" font-weight="bold">I0</text>
+<text x="52.0" y="166.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#17324D" text-anchor="middle" font-weight="bold" transform="rotate(-90 52.0 166.0)">eps 0  c=0.25</text>
+<path d="M92.0,162.9 L119.6,170.3 L131.4,173.5 L166.9,166.0 L230.0,149.1" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="92.0" cy="162.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="119.6" cy="170.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="131.4" cy="173.5" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="166.9" cy="166.0" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="230.0" cy="149.1" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="162.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="162.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="162.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="225.0" y="97.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="92.0,156.9 98.0,167.9 86.0,167.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="244.0" y="96.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="244.0" y1="200.0" x2="382.0" y2="200.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="170.3" x2="382.0" y2="170.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="140.6" x2="382.0" y2="140.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="110.9" x2="382.0" y2="110.9" stroke="#eceae3" stroke-width="0.8"/>
+<text x="313.0" y="88.0" font-family="Arial, Helvetica, sans-serif" font-size="13px" fill="#1b1a17" text-anchor="middle" font-weight="bold">I1</text>
+<path d="M244.0,162.9 L295.3,176.7 L362.3,173.5 L382.0,166.0" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="244.0" cy="162.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="295.3" cy="176.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="362.3" cy="173.5" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="382.0" cy="166.0" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M244.0,162.9 L382.0,153.3" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="244.0" cy="162.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="382.0" cy="153.3" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="244.0" cy="162.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="244.0" cy="162.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="377.0" y="97.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="244.0,156.9 250.0,167.9 238.0,167.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="396.0" y="96.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="396.0" y1="200.0" x2="534.0" y2="200.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="170.3" x2="534.0" y2="170.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="140.6" x2="534.0" y2="140.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="110.9" x2="534.0" y2="110.9" stroke="#eceae3" stroke-width="0.8"/>
+<text x="465.0" y="88.0" font-family="Arial, Helvetica, sans-serif" font-size="13px" fill="#1b1a17" text-anchor="middle" font-weight="bold">I2</text>
+<path d="M396.0,162.9 L447.3,176.7 L514.3,173.5 L534.0,166.0" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="396.0" cy="162.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="447.3" cy="176.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="514.3" cy="173.5" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="534.0" cy="166.0" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M396.0,162.9 L534.0,153.3" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="396.0" cy="162.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="534.0" cy="153.3" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="396.0" cy="162.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="396.0" cy="162.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="529.0" y="97.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="396.0,156.9 402.0,167.9 390.0,167.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="548.0" y="96.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="548.0" y1="200.0" x2="686.0" y2="200.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="170.3" x2="686.0" y2="170.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="140.6" x2="686.0" y2="140.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="110.9" x2="686.0" y2="110.9" stroke="#eceae3" stroke-width="0.8"/>
+<text x="617.0" y="88.0" font-family="Arial, Helvetica, sans-serif" font-size="13px" fill="#1b1a17" text-anchor="middle" font-weight="bold">I3</text>
+<path d="M548.0,162.9 L611.1,179.8 L686.0,178.8" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="548.0" cy="162.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="611.1" cy="179.8" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="686.0" cy="178.8" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M548.0,162.9 L686.0,153.3" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="162.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="686.0" cy="153.3" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M548.0,162.9 L559.8,166.0" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="162.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="559.8" cy="166.0" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M548.0,162.9 L567.7,168.2" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="162.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="567.7" cy="168.2" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="681.0" y="97.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="548.0,156.9 554.0,167.9 542.0,167.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="700.0" y="96.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="700.0" y1="200.0" x2="838.0" y2="200.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="170.3" x2="838.0" y2="170.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="140.6" x2="838.0" y2="140.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="110.9" x2="838.0" y2="110.9" stroke="#eceae3" stroke-width="0.8"/>
+<text x="769.0" y="88.0" font-family="Arial, Helvetica, sans-serif" font-size="13px" fill="#1b1a17" text-anchor="middle" font-weight="bold">I4</text>
+<path d="M700.0,162.9 L794.6,188.3 L822.2,191.5 L838.0,187.3" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="700.0" cy="162.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="794.6" cy="188.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="822.2" cy="191.5" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="838.0" cy="187.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M700.0,162.9 L838.0,153.3" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="162.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="838.0" cy="153.3" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M700.0,162.9 L727.6,170.3" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="162.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="727.6" cy="170.3" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M700.0,162.9 L743.4,174.5" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="162.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="743.4" cy="174.5" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="833.0" y="97.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="700.0,156.9 706.0,167.9 694.0,167.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="852.0" y="96.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="852.0" y1="200.0" x2="990.0" y2="200.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="170.3" x2="990.0" y2="170.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="140.6" x2="990.0" y2="140.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="110.9" x2="990.0" y2="110.9" stroke="#eceae3" stroke-width="0.8"/>
+<text x="921.0" y="88.0" font-family="Arial, Helvetica, sans-serif" font-size="13px" fill="#1b1a17" text-anchor="middle" font-weight="bold">I5</text>
+<path d="M852.0,162.9 L962.4,192.6 L990.0,195.8" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="852.0" cy="162.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="962.4" cy="192.6" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="990.0" cy="195.8" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M852.0,162.9 L990.0,153.3" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="162.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="990.0" cy="153.3" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M852.0,162.9 L887.5,172.4" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="162.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="887.5" cy="172.4" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M852.0,162.9 L911.1,178.8" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="162.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="911.1" cy="178.8" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="985.0" y="97.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="852.0,156.9 858.0,167.9 846.0,167.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="92.0" y="228.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="92.0" y1="332.0" x2="230.0" y2="332.0" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="335.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.0</text>
+<line x1="92.0" y1="302.3" x2="230.0" y2="302.3" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="305.3" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.2</text>
+<line x1="92.0" y1="272.6" x2="230.0" y2="272.6" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="275.6" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.4</text>
+<line x1="92.0" y1="242.9" x2="230.0" y2="242.9" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="245.9" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.6</text>
+<text x="52.0" y="298.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#17324D" text-anchor="middle" font-weight="bold" transform="rotate(-90 52.0 298.0)">eps 0  c=0.5</text>
+<path d="M92.0,257.7 L119.6,272.6 L131.4,278.9 L166.9,281.1 L230.0,281.1" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="92.0" cy="257.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="119.6" cy="272.6" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="131.4" cy="278.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="166.9" cy="281.1" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="230.0" cy="281.1" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="257.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="257.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="257.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="225.0" y="229.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="92.0,251.7 98.0,262.7 86.0,262.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="244.0" y="228.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="244.0" y1="332.0" x2="382.0" y2="332.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="302.3" x2="382.0" y2="302.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="272.6" x2="382.0" y2="272.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="242.9" x2="382.0" y2="242.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M244.0,257.7 L295.3,285.3 L362.3,300.2 L382.0,298.0" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="244.0" cy="257.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="295.3" cy="285.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="362.3" cy="300.2" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="382.0" cy="298.0" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M244.0,257.7 L382.0,285.3" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="244.0" cy="257.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="382.0" cy="285.3" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="244.0" cy="257.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="244.0" cy="257.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="377.0" y="229.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="244.0,251.7 250.0,262.7 238.0,262.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="396.0" y="228.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="396.0" y1="332.0" x2="534.0" y2="332.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="302.3" x2="534.0" y2="302.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="272.6" x2="534.0" y2="272.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="242.9" x2="534.0" y2="242.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M396.0,257.7 L447.3,285.3 L514.3,300.2 L534.0,298.0" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="396.0" cy="257.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="447.3" cy="285.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="514.3" cy="300.2" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="534.0" cy="298.0" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M396.0,257.7 L534.0,285.3" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="396.0" cy="257.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="534.0" cy="285.3" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="396.0" cy="257.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="396.0" cy="257.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="529.0" y="229.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="396.0,251.7 402.0,262.7 390.0,262.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="548.0" y="228.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="548.0" y1="332.0" x2="686.0" y2="332.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="302.3" x2="686.0" y2="302.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="272.6" x2="686.0" y2="272.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="242.9" x2="686.0" y2="242.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M548.0,257.7 L611.1,291.7 L686.0,310.8" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="548.0" cy="257.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="611.1" cy="291.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="686.0" cy="310.8" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M548.0,257.7 L686.0,285.3" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="257.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="686.0" cy="285.3" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M548.0,257.7 L559.8,264.1" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="257.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="559.8" cy="264.1" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M548.0,257.7 L567.7,268.3" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="257.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="567.7" cy="268.3" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="681.0" y="229.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="548.0,251.7 554.0,262.7 542.0,262.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="700.0" y="228.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="700.0" y1="332.0" x2="838.0" y2="332.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="302.3" x2="838.0" y2="302.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="272.6" x2="838.0" y2="272.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="242.9" x2="838.0" y2="242.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M700.0,257.7 L794.6,308.7 L822.2,319.3 L838.0,319.3" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="700.0" cy="257.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="794.6" cy="308.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="822.2" cy="319.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="838.0" cy="319.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M700.0,257.7 L838.0,285.3" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="257.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="838.0" cy="285.3" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M700.0,257.7 L727.6,272.6" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="257.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="727.6" cy="272.6" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M700.0,257.7 L743.4,281.1" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="257.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="743.4" cy="281.1" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="833.0" y="229.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="700.0,251.7 706.0,262.7 694.0,262.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="852.0" y="228.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="852.0" y1="332.0" x2="990.0" y2="332.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="302.3" x2="990.0" y2="302.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="272.6" x2="990.0" y2="272.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="242.9" x2="990.0" y2="242.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M852.0,257.7 L962.4,317.1 L990.0,327.8" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="852.0" cy="257.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="962.4" cy="317.1" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="990.0" cy="327.8" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M852.0,257.7 L990.0,285.3" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="257.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="990.0" cy="285.3" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M852.0,257.7 L887.5,276.8" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="257.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="887.5" cy="276.8" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M852.0,257.7 L911.1,289.6" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="257.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="911.1" cy="289.6" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="985.0" y="229.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="852.0,251.7 858.0,262.7 846.0,262.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="92.0" y="360.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="92.0" y1="464.0" x2="230.0" y2="464.0" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="467.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.0</text>
+<line x1="92.0" y1="434.3" x2="230.0" y2="434.3" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="437.3" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.2</text>
+<line x1="92.0" y1="404.6" x2="230.0" y2="404.6" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="407.6" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.4</text>
+<line x1="92.0" y1="374.9" x2="230.0" y2="374.9" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="377.9" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.6</text>
+<text x="52.0" y="430.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#17324D" text-anchor="middle" font-weight="bold" transform="rotate(-90 52.0 430.0)">eps 0.1  c=0.25</text>
+<path d="M92.0,426.9 L119.6,434.3 L131.4,437.5 L166.9,430.0 L230.0,413.1" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="92.0" cy="426.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="119.6" cy="434.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="131.4" cy="437.5" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="166.9" cy="430.0" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="230.0" cy="413.1" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="426.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="426.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="426.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="225.0" y="361.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="92.0,420.9 98.0,431.9 86.0,431.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="244.0" y="360.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="244.0" y1="464.0" x2="382.0" y2="464.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="434.3" x2="382.0" y2="434.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="404.6" x2="382.0" y2="404.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="374.9" x2="382.0" y2="374.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M244.0,426.9 L295.3,440.7 L362.3,437.5 L382.0,430.0" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="244.0" cy="426.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="295.3" cy="440.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="362.3" cy="437.5" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="382.0" cy="430.0" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M244.0,426.9 L382.0,413.1" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="244.0" cy="426.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="382.0" cy="413.1" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="244.0" cy="426.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="244.0" cy="426.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="377.0" y="361.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="244.0,420.9 250.0,431.9 238.0,431.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="396.0" y="360.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="396.0" y1="464.0" x2="534.0" y2="464.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="434.3" x2="534.0" y2="434.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="404.6" x2="534.0" y2="404.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="374.9" x2="534.0" y2="374.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M396.0,426.9 L447.3,440.7 L514.3,437.5 L534.0,430.0" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="396.0" cy="426.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="447.3" cy="440.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="514.3" cy="437.5" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="534.0" cy="430.0" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M396.0,426.9 L534.0,413.1" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="396.0" cy="426.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="534.0" cy="413.1" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="396.0" cy="426.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="396.0" cy="426.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="529.0" y="361.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="396.0,420.9 402.0,431.9 390.0,431.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="548.0" y="360.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="548.0" y1="464.0" x2="686.0" y2="464.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="434.3" x2="686.0" y2="434.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="404.6" x2="686.0" y2="404.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="374.9" x2="686.0" y2="374.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M548.0,426.9 L611.1,443.8 L686.0,442.8" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="548.0" cy="426.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="611.1" cy="443.8" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="686.0" cy="442.8" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M548.0,426.9 L686.0,413.1" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="426.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="686.0" cy="413.1" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M548.0,426.9 L558.9,429.8" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="426.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="558.9" cy="429.8" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M548.0,426.9 L566.8,431.9" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="426.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="566.8" cy="431.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="681.0" y="361.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="548.0,420.9 554.0,431.9 542.0,431.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="700.0" y="360.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="700.0" y1="464.0" x2="838.0" y2="464.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="434.3" x2="838.0" y2="434.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="404.6" x2="838.0" y2="404.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="374.9" x2="838.0" y2="374.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M700.0,426.9 L794.6,452.3 L822.2,455.5 L838.0,451.3" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="700.0" cy="426.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="794.6" cy="452.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="822.2" cy="455.5" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="838.0" cy="451.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M700.0,426.9 L838.0,413.1" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="426.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="838.0" cy="413.1" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M700.0,426.9 L710.9,429.8" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="426.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="710.9" cy="429.8" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M700.0,426.9 L726.7,434.0" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="426.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="726.7" cy="434.0" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="833.0" y="361.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="700.0,420.9 706.0,431.9 694.0,431.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="852.0" y="360.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="852.0" y1="464.0" x2="990.0" y2="464.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="434.3" x2="990.0" y2="434.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="404.6" x2="990.0" y2="404.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="374.9" x2="990.0" y2="374.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M852.0,426.9 L962.4,456.6 L990.0,459.8" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="852.0" cy="426.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="962.4" cy="456.6" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="990.0" cy="459.8" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M852.0,426.9 L990.0,413.1" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="426.9" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="990.0" cy="413.1" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M852.0,426.9 L862.9,429.8" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="426.9" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="862.9" cy="429.8" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M852.0,426.9 L886.5,436.2" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="426.9" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="886.5" cy="436.2" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="985.0" y="361.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="852.0,420.9 858.0,431.9 846.0,431.9" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<rect x="92.0" y="492.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="92.0" y1="596.0" x2="230.0" y2="596.0" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="599.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.0</text>
+<line x1="92.0" y1="566.3" x2="230.0" y2="566.3" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="569.3" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.2</text>
+<line x1="92.0" y1="536.6" x2="230.0" y2="536.6" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="539.6" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.4</text>
+<line x1="92.0" y1="506.9" x2="230.0" y2="506.9" stroke="#eceae3" stroke-width="0.8"/>
+<text x="87.0" y="509.9" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="end" font-weight="normal">0.6</text>
+<text x="52.0" y="562.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#17324D" text-anchor="middle" font-weight="bold" transform="rotate(-90 52.0 562.0)">eps 0.1  c=0.5</text>
+<path d="M92.0,521.7 L119.6,536.6 L131.4,542.9 L166.9,545.1 L230.0,545.1" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="92.0" cy="521.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="119.6" cy="536.6" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="131.4" cy="542.9" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="166.9" cy="545.1" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="230.0" cy="545.1" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="521.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="521.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="92.0" cy="521.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="225.0" y="493.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="92.0,515.7 98.0,526.7 86.0,526.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<text x="92.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0</text>
+<text x="161.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0.5</text>
+<text x="230.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">1</text>
+<rect x="244.0" y="492.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="244.0" y1="596.0" x2="382.0" y2="596.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="566.3" x2="382.0" y2="566.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="536.6" x2="382.0" y2="536.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="244.0" y1="506.9" x2="382.0" y2="506.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M244.0,521.7 L295.3,549.3 L362.3,564.2 L382.0,562.0" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="244.0" cy="521.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="295.3" cy="549.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="362.3" cy="564.2" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="382.0" cy="562.0" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M244.0,521.7 L382.0,545.1" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="244.0" cy="521.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="382.0" cy="545.1" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="244.0" cy="521.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="244.0" cy="521.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="377.0" y="493.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="244.0,515.7 250.0,526.7 238.0,526.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<text x="244.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0</text>
+<text x="313.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0.5</text>
+<text x="382.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">1</text>
+<rect x="396.0" y="492.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="396.0" y1="596.0" x2="534.0" y2="596.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="566.3" x2="534.0" y2="566.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="536.6" x2="534.0" y2="536.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="396.0" y1="506.9" x2="534.0" y2="506.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M396.0,521.7 L447.3,549.3 L514.3,564.2 L534.0,562.0" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="396.0" cy="521.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="447.3" cy="549.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="514.3" cy="564.2" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="534.0" cy="562.0" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M396.0,521.7 L534.0,545.1" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="396.0" cy="521.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="534.0" cy="545.1" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="396.0" cy="521.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="396.0" cy="521.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="529.0" y="493.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="396.0,515.7 402.0,526.7 390.0,526.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<text x="396.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0</text>
+<text x="465.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0.5</text>
+<text x="534.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">1</text>
+<text x="541.0" y="623.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="middle" font-weight="normal">coverage</text>
+<rect x="548.0" y="492.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="548.0" y1="596.0" x2="686.0" y2="596.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="566.3" x2="686.0" y2="566.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="536.6" x2="686.0" y2="536.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="548.0" y1="506.9" x2="686.0" y2="506.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M548.0,521.7 L611.1,555.7 L686.0,574.8" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="548.0" cy="521.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="611.1" cy="555.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="686.0" cy="574.8" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M548.0,521.7 L686.0,545.1" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="521.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="686.0" cy="545.1" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M548.0,521.7 L558.9,527.6" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="521.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="558.9" cy="527.6" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M548.0,521.7 L566.8,531.8" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="548.0" cy="521.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="566.8" cy="531.8" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="681.0" y="493.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="548.0,515.7 554.0,526.7 542.0,526.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<text x="548.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0</text>
+<text x="617.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0.5</text>
+<text x="686.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">1</text>
+<rect x="700.0" y="492.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="700.0" y1="596.0" x2="838.0" y2="596.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="566.3" x2="838.0" y2="566.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="536.6" x2="838.0" y2="536.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="700.0" y1="506.9" x2="838.0" y2="506.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M700.0,521.7 L794.6,572.7 L822.2,583.3 L838.0,583.3" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="700.0" cy="521.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="794.6" cy="572.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="822.2" cy="583.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="838.0" cy="583.3" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M700.0,521.7 L838.0,545.1" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="521.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="838.0" cy="545.1" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M700.0,521.7 L710.9,527.6" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="521.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="710.9" cy="527.6" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M700.0,521.7 L726.7,536.1" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="700.0" cy="521.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="726.7" cy="536.1" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="833.0" y="493.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="700.0,515.7 706.0,526.7 694.0,526.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<text x="700.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0</text>
+<text x="769.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0.5</text>
+<text x="838.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">1</text>
+<rect x="852.0" y="492.0" width="138.0" height="104.0" rx="0" fill="white" stroke="#d9d5ca" stroke-width="1" />
+<line x1="852.0" y1="596.0" x2="990.0" y2="596.0" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="566.3" x2="990.0" y2="566.3" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="536.6" x2="990.0" y2="536.6" stroke="#eceae3" stroke-width="0.8"/>
+<line x1="852.0" y1="506.9" x2="990.0" y2="506.9" stroke="#eceae3" stroke-width="0.8"/>
+<path d="M852.0,521.7 L962.4,581.1 L990.0,591.8" fill="none" stroke="#17324D" stroke-width="1.9" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<circle cx="852.0" cy="521.7" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="962.4" cy="581.1" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<circle cx="990.0" cy="591.8" r="3.2" fill="#17324D" stroke="white" stroke-width="1"/>
+<path d="M852.0,521.7 L990.0,545.1" fill="none" stroke="#CC6677" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="521.7" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<circle cx="990.0" cy="545.1" r="3.2" fill="#CC6677" stroke="white" stroke-width="1"/>
+<path d="M852.0,521.7 L862.9,527.6" fill="none" stroke="#66CCEE" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="521.7" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<circle cx="862.9" cy="527.6" r="3.2" fill="#66CCEE" stroke="white" stroke-width="1"/>
+<path d="M852.0,521.7 L886.5,540.3" fill="none" stroke="#228833" stroke-width="1.9" stroke-linejoin="round"/>
+<circle cx="852.0" cy="521.7" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<circle cx="886.5" cy="540.3" r="3.2" fill="#228833" stroke="white" stroke-width="1"/>
+<rect x="985.0" y="493.4" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<polygon points="852.0,515.7 858.0,526.7 846.0,526.7" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<text x="852.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0</text>
+<text x="921.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">0.5</text>
+<text x="990.0" y="609.0" font-family="Arial, Helvetica, sans-serif" font-size="10px" fill="#5d5a52" text-anchor="middle" font-weight="normal">1</text>
+<line x1="92.0" y1="636.0" x2="114.0" y2="636.0" stroke="#4477AA" stroke-width="2.2"/>
+<circle cx="103.0" cy="636.0" r="3.5" fill="#4477AA" stroke="white" stroke-width="1.2"/>
+<text x="120.0" y="640.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">CCC v1.2.2</text>
+<line x1="205.0" y1="636.0" x2="227.0" y2="636.0" stroke="#228833" stroke-width="2.2"/>
+<circle cx="216.0" cy="636.0" r="3.5" fill="#228833" stroke="white" stroke-width="1.2"/>
+<text x="233.0" y="640.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">CCC-L v1 (DEV-informed method version)</text>
+<line x1="494.4" y1="636.0" x2="516.4" y2="636.0" stroke="#66CCEE" stroke-width="2.2"/>
+<circle cx="505.4" cy="636.0" r="3.5" fill="#66CCEE" stroke="white" stroke-width="1.2"/>
+<text x="522.4" y="640.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">CCC-L v0</text>
+<line x1="594.8" y1="636.0" x2="616.8" y2="636.0" stroke="#CC6677" stroke-width="2.2"/>
+<circle cx="605.8" cy="636.0" r="3.5" fill="#CC6677" stroke="white" stroke-width="1.2"/>
+<text x="622.8" y="640.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">strongest baseline (B2+, frozen)</text>
+<line x1="846.4" y1="636.0" x2="868.4" y2="636.0" stroke="#17324D" stroke-width="2.2" stroke-dasharray="5 3"/>
+<circle cx="857.4" cy="636.0" r="3.5" fill="#17324D" stroke="white" stroke-width="1.2"/>
+<text x="874.4" y="640.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">Bayes-given-S</text>
+<polygon points="98.0,650.0 104.0,661.0 92.0,661.0" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<text x="112.0" y="660.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">always-abstain (coverage 0, risk c)</text>
+<rect x="352.0" y="651.0" width="10" height="10" fill="white" stroke="#66727D" stroke-width="1.8"/>
+<text x="367.0" y="660.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#1b1a17" text-anchor="start" font-weight="normal">always-answer</text>
+<text x="92.0" y="680.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="start" font-weight="normal">Not plotted (method emits no attribution, axis M output): CCC v1.2.2.</text>
+<text x="92.0" y="696.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="start" font-weight="normal">Where curves coincide, the top-drawn marker is CCC v1.2.2 (largest dot); coincident methods emitted identical outputs.</text>
+<text x="92.0" y="712.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="start" font-weight="normal">Native binary methods have one or two curve points (confidence ties kept whole). Weighted risk has no binomial CI.</text>
+<text x="92.0" y="728.0" font-family="Arial, Helvetica, sans-serif" font-size="11px" fill="#5d5a52" text-anchor="start" font-weight="normal">Bayes-given-S uses only the design class prior given the view; it is a ceiling for methods restricted to that set, under the uniform design prior.</text>
+</svg>

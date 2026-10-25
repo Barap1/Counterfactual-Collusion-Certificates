@@ -91,3 +91,9 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$PWD/scripts/offline_guard:$PWD:/opt/homeb
 - Container self-determinism (docs/enh/r2/run_par/GATE_v2.json): 5 seeds, both eps, two separate Modal app runs: 20 of 20 units identical. eps-0 against serial: 20 of 20 identical.
 - The D-046 exception in scripts/bench_modal_run.py accepts GATE_v2 in place of cross-platform eps-0.1 identity. ccc/bench is unchanged.
 - After the run, eps-0 units for the 40 gate seeds are compared against the serial files as a post-run check.
+
+## Provenance corrections (R3 review, docs/enh/r2/REV_R3.md)
+- The archived gate file (ops/reports/codex_runs/gate1_failed/run_par_prev/GATE.json) records 160 missing-file failures from the first gate attempt, which was an infrastructure failure. The 40/40 eps-0 result for the cross-platform identity comes from the later gate run recorded in the same archive, not from the 160-failure record.
+- docs/enh/r2/run_par/GATE_v2.json counts units and partitions together (the compared field); the self-check is 20 units (5 seeds x 2 eps x 2 units/partitions reported as 20 comparisons).
+- The platform string written into GATE_v2.json names the local Python patch version. The container ran CPython 3.14.2 (debian_slim); the string is a receipt-writer artefact and does not describe the container.
+- Not entirely Modal: the population generation (population.json) and the report tail were computed locally (as stated in the W1-MODAL handoff). The unit computation (units and partitions) ran entirely on Modal.
