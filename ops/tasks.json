@@ -656,7 +656,7 @@
       "id": "REPO-FINAL",
       "objective": "Owner-authorized final public repository overhaul; no paper PDF or new experiments",
       "owner": "Codex repository integration lead",
-      "status": "DONE; published to main and verified",
+      "status": "IN_PROGRESS; owner-requested compact graphics, prose refinement and final GitHub audit",
       "writes": [
         "README.md",
         "docs/",
@@ -666,7 +666,10 @@
         "ops/",
         "repository metadata and refs"
       ],
-      "lease": null,
+      "lease": {
+        "acquired_utc": "2026-10-25T22:11:52.945984+00:00",
+        "scope": "README/assets/public-reading-path refinement; frozen evidence read-only"
+      },
       "children": [
         "REPO-FINAL-SCI",
         "REPO-FINAL-ENG"

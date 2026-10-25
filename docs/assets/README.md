@@ -1,6 +1,6 @@
 # Editable README figures
 
-Original SVGs use live text, flat high-contrast colors and system fonts. Regenerate from the repository root with `python3 docs/assets/generate.py`. This writes SVG only: no paper, PDF, model or network operation.
+Original SVGs use live text, flat high-contrast colors and system fonts. The README caps both at 600px wide. The allocation figure is 640×536 and the evidence map 640×246, replacing tall poster layouts. Regenerate from the repository root with `python3 docs/assets/generate.py`. This writes SVG only: no paper, PDF, model or network operation.
 
 ## Allocation twins
 

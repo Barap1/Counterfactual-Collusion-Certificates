@@ -1,63 +1,87 @@
+"""Original, editable README diagrams. Run from the repository root; SVG only."""
 from pathlib import Path
 from html import escape
-P=Path('docs/assets');P.mkdir(exist_ok=True)
-ink='#19313e';muted='#4c606a';line='#c9d2d3';paper='#faf9f6';teal='#006a60';rust='#854925'
-def start(w,h,title,desc):
-    return [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">',f'<title id="title">{escape(title)}</title><desc id="desc">{escape(desc)}</desc>',f'<rect width="{w}" height="{h}" fill="{paper}"/>',f'<g font-family="Arial, Helvetica, sans-serif" fill="{ink}">']
-def text(a,x,y,s,size=24,color=ink,weight='400',anchor='start'):
-    a.append(f'<text x="{x}" y="{y}" font-size="{size}" fill="{color}" font-weight="{weight}" text-anchor="{anchor}">{escape(s)}</text>')
-def rect(a,x,y,w,h,fill,stroke='none',rx=10):a.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}" stroke="{stroke}"/>')
-def arrow(a,x,y,h=38,color=muted):a.append(f'<path d="M{x} {y}v{h}m-6 -6 6 6 6 -6" fill="none" stroke="{color}" stroke-width="2"/>')
-a=start(640,1180,'Same replay evidence, different programmed policies','Constructed deterministic allocation pair. Both teams send the same message, allocate the task to dispatch, and yield mean outsider reward 14 with the message and 19 after its removal. Reducing each outsider cost by 10 separates the policies: efficiency switches allocation and yields 29; coalition protection keeps it and yields 14. This separates only these specified policies.')
-text(a,28,48,'One replay. Two explanations.',34,weight='700')
-text(a,28,84,'Constructed task-allocation pair',23,muted)
-a.append(f'<path d="M28 110H612" stroke="{line}"/>')
-text(a,28,151,'THE SAME EARLY EVIDENCE',20,muted,weight='700')
-rect(a,28,176,584,245,'#ffffff',line)
-text(a,50,212,'Both teams send:',22,muted)
-text(a,50,254,'“Please allocate the contested task',25,weight='700')
-text(a,50,286,'to our dispatch team.”',25,weight='700')
-text(a,50,333,'Task assigned to the dispatch team.',23)
-text(a,50,375,'Mean outsider reward: 14 → 19',25,weight='700')
-text(a,50,404,'Original message → message removed',21,muted)
-arrow(a,320,431,28)
-text(a,320,495,'Different programmed policies',25,weight='700',anchor='middle')
-rect(a,28,522,280,132,'#e8f2ef')
-rect(a,332,522,280,132,'#f4ece5')
-text(a,48,558,'Efficiency',26,teal,'700')
-text(a,48,591,'Choose the lower-',22)
-text(a,48,620,'cost allocation.',22)
-text(a,352,558,'Coalition protection',23,rust,'700')
-text(a,352,591,'Favor the coalition',22)
-text(a,352,620,'across contexts.',22)
-text(a,168,687,'Permitted policy',22,teal,'700','middle')
-text(a,472,687,'Prohibited policy',22,rust,'700','middle')
-rect(a,28,720,584,100,ink)
-text(a,50,753,'EXTRA PROBE',20,'#dbeae8','700')
-text(a,50,788,'Lower each outsider’s task cost by 10.',24,'#ffffff')
-arrow(a,168,830,36,teal);arrow(a,472,830,36,rust)
-rect(a,28,884,280,154,'#e8f2ef')
-rect(a,332,884,280,154,'#f4ece5')
-text(a,48,922,'Switches allocation',23,teal,'700')
-text(a,48,958,'Outsider is now',22)
-text(a,48,988,'the efficient choice.',22)
-text(a,48,1020,'Outsider reward: 29',22,teal,'700')
-text(a,352,922,'Keeps allocation',23,rust,'700')
-text(a,352,958,'Task stays with',22)
-text(a,352,988,'the dispatch team.',22)
-text(a,352,1020,'Outsider reward: 14',22,rust,'700')
-text(a,28,1083,'Message removal shows an effect.',26,weight='700')
-text(a,28,1120,'The cost probe separates this policy pair.',24)
-text(a,28,1156,'Scripted example · reward units · no general detector claim',20,muted)
-a.append('</g></svg>');(P/'allocation-twins.svg').write_text('\n'.join(a)+'\n')
-a=start(640,578,'Match the claim to the evidence','Observation raises a question. Valid controlled replay supports causal influence. Outcome measurement supports harmful exposure. Attribution also requires a declared policy and evidence that distinguishes legitimate alternatives. Without that extra evidence attribution remains unresolved.')
-text(a,28,48,'Match the claim to the evidence',32,weight='700')
-rows=[('Observation','A message raises a question.'),('Causal influence','Controlled replay measures an effect.'),('Harmful exposure','Outcome measures show outsider harm.'),('Attribution','Policy + evidence separate alternatives.')]
-for i,(title,body) in enumerate(rows):
- y=81+i*109
- rect(a,28,y,584,86,ink if i==3 else '#ffffff',line if i<3 else 'none')
- text(a,50,y+32,title,25,'#ffffff' if i==3 else ink,'700')
- text(a,50,y+64,body,22,'#e0eeec' if i==3 else muted)
- if i<3:arrow(a,320,y+90,14)
-text(a,28,550,'Without separating evidence, attribution stays unresolved.',22,muted)
-a.append('</g></svg>');(P/'evidence-steps.svg').write_text('\n'.join(a)+'\n')
+
+P = Path('docs/assets')
+P.mkdir(exist_ok=True)
+INK, MUTED, LINE = '#19313e', '#4c606a', '#c9d2d3'
+PAPER, TEAL, RUST = '#faf9f6', '#006a60', '#854925'
+
+
+def start(width, height, title, description):
+    return [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">',
+        f'<title id="title">{escape(title)}</title><desc id="desc">{escape(description)}</desc>',
+        f'<rect width="{width}" height="{height}" fill="{PAPER}"/>',
+        f'<g font-family="Arial, Helvetica, sans-serif" fill="{INK}">',
+    ]
+
+
+def text(svg, x, y, value, size=24, color=INK, weight='400'):
+    svg.append(f'<text x="{x}" y="{y}" font-size="{size}" fill="{color}" '
+               f'font-weight="{weight}">{escape(value)}</text>')
+
+
+def rect(svg, x, y, width, height, fill, stroke='none', radius=8):
+    svg.append(f'<rect x="{x}" y="{y}" width="{width}" height="{height}" '
+               f'rx="{radius}" fill="{fill}" stroke="{stroke}"/>')
+
+
+def arrow(svg, x, y, color):
+    svg.append(f'<path d="M{x} {y}v20m-5 -5 5 5 5 -5" fill="none" '
+               f'stroke="{color}" stroke-width="2"/>')
+
+
+def save(name, svg):
+    (P / name).write_text('\n'.join([*svg, '</g></svg>']) + '\n')
+
+
+svg = start(640, 536, 'Same replay, different programmed policies',
+    'Constructed deterministic allocation pair. Both teams send the same message and assign '
+    'the task to dispatch. Mean outsider reward is 14 with the message and 19 after removal '
+    'in both worlds. Lowering each outsider task cost by 10 separates their programmed '
+    'responses: the permitted efficiency policy switches allocation and yields 29; the '
+    'prohibited coalition-protecting policy keeps allocation and yields 14. The probe '
+    'separates only these specified policies; identical replay alone does not settle attribution.')
+text(svg, 24, 40, 'Same replay. Different policies.', 30, weight='700')
+rect(svg, 24, 62, 592, 160, '#ffffff', LINE)
+text(svg, 44, 94, 'SAME MESSAGE · SAME DISPATCH ALLOCATION', 20, MUTED, '700')
+text(svg, 44, 128, '“Please allocate the contested task', 23, weight='700')
+text(svg, 44, 157, 'to our dispatch team.”', 23, weight='700')
+text(svg, 44, 199, 'Mean outsider reward: 14 → 19 after removal', 23)
+rect(svg, 24, 244, 592, 52, INK)
+text(svg, 44, 277, 'Probe: lower each outsider’s task cost by 10.', 23, '#ffffff')
+arrow(svg, 166, 305, TEAL)
+arrow(svg, 474, 305, RUST)
+for x, color, background, title, permission, response, reward in [
+    (24, TEAL, '#e8f2ef', 'Efficiency policy', '(permitted)', 'Switches allocation', '29'),
+    (332, RUST, '#f4ece5', 'Coalition protection', '(prohibited)', 'Keeps allocation', '14'),
+]:
+    rect(svg, x, 332, 284, 140, background)
+    text(svg, x + 18, 365, title, 24, color, '700')
+    text(svg, x + 18, 392, permission, 22, color)
+    text(svg, x + 18, 425, response, 23, INK, '700')
+    text(svg, x + 18, 455, f'Outsider reward: {reward}', 22)
+text(svg, 24, 514, 'Same replay alone does not settle attribution.', 24, weight='700')
+save('allocation-twins.svg', svg)
+
+svg = start(640, 246, 'Claims and the evidence they require',
+    'Observation requires visible communication. Causal influence needs a valid controlled '
+    'replay showing a nonzero effect. Harmful exposure needs outsider outcome measures. Attribution '
+    'additionally requires a declared policy and evidence distinguishing legitimate '
+    'alternatives. These are requirements, not automatic conclusions; otherwise attribution '
+    'remains unresolved.')
+text(svg, 28, 31, 'Claim', 22, MUTED, '700')
+text(svg, 264, 31, 'Evidence needed', 22, MUTED, '700')
+for i, (claim, evidence) in enumerate([
+    ('Observation', 'Visible communication'),
+    ('Causal influence', 'Valid replay + nonzero effect'),
+    ('Harmful exposure', 'Outsider outcome measures'),
+    ('Attribution', 'Policy + separating evidence'),
+]):
+    y = 48 + i * 47
+    rect(svg, 16, y, 608, 42, INK if i == 3 else '#ffffff', LINE if i < 3 else 'none', 5)
+    text(svg, 28, y + 28, claim, 22, '#ffffff' if i == 3 else INK, '700')
+    text(svg, 264, y + 28, evidence, 22, '#e0eeec' if i == 3 else MUTED)
+save('evidence-steps.svg', svg)

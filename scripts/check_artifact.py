@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Dependency-free checks for the maintained public reading path, never experiments."""
 from pathlib import Path
+from html.parser import HTMLParser
 from urllib.parse import unquote, urlsplit
 import re
 import sys
@@ -12,6 +13,22 @@ PAGES = ('README.md', 'CCC_START_HERE.md', 'docs/README.md', 'docs/RESULTS.md',
          'docs/archive/README.md', 'paper/README.md', 'docs/release/CHECKLIST.md',
          'demo/explorer/README.md', 'paper/final/FIGURE_EVIDENCE_MAP.md', 'NOTICE.md',
          'paper/final/manuscript.md', 'paper/final/CLAIMS_LEDGER.md')
+
+
+class EmbeddedLinks(HTMLParser):
+    """Include explicitly sized README images in the public navigation check."""
+    def __init__(self):
+        super().__init__()
+        self.targets = []
+        self.missing_alt = False
+
+    def handle_starttag(self, tag, attributes):
+        attrs = dict(attributes)
+        key = 'src' if tag == 'img' else 'href' if tag == 'a' else None
+        if key and attrs.get(key):
+            self.targets.append(attrs[key])
+        if tag == 'img' and not attrs.get('alt', '').strip():
+            self.missing_alt = True
 
 
 def prose(path):
@@ -38,7 +55,12 @@ def main():
             failures.append(f'Missing reading-path page: {name}')
             continue
         source = prose(path)
-        for raw in re.findall(r'!?\[[^\]]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)', source):
+        html = EmbeddedLinks()
+        html.feed(source)
+        if html.missing_alt:
+            failures.append(f'{name}: image missing alternative text')
+        targets = re.findall(r'!?\[[^\]]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)', source)
+        for raw in targets + html.targets:
             href = urlsplit(raw.strip('<>'))
             if href.scheme or href.netloc:
                 continue  # external access is intentionally not performed
