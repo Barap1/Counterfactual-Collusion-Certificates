@@ -26,17 +26,17 @@ FIGS = [
     ("figdir:fig_ladder.svg", "## 1. Introduction", "Figure 1. "),
     ("figdir:fig_twins.svg", "after:**Scoped limit statement.**", "Figure 2. "),
     ("figures/fig_heldout_delta.svg", "### 5.1 ", "Figure 3. Held-out real-agent matched-world contrasts (EXP-002), aggregate Delta and world-cluster CI (OC). The preregistered directional test is a confirmatory null; non-commit exclusion points are the registered sensitivity (ORS), not the primary. "),
-    ("figdir:fig_frontier.svg", "## B. Limitations", "Figure A9 (RQ2, frontier; main-text candidate if space allows). "),
-    ("figdir:fig_risk.svg", "## B. Limitations", "Figure A10 (RQ5, risk-coverage; main-text candidate if space allows). "),
+    ("figdir:fig_frontier.svg", "## A. Limitations and Dual-Use / Ethical Considerations", "Figure A9 (RQ2, frontier; main-text candidate if space allows). "),
+    ("figdir:fig_risk.svg", "## A. Limitations and Dual-Use / Ethical Considerations", "Figure A10 (RQ5, risk-coverage; main-text candidate if space allows). "),
     # appendix
-    ("figures/fig_arms.svg", "## B. Limitations", "Figure A1. Branch schematic F/K/S/N (schematic, no data). "),
-    ("figures/fig_heldout_cases.svg", "## B. Limitations", "Figure A2. Case-level outsider-effect certificate intervals versus m_O (EXP-002, descriptive); certificates are exploratory. "),
-    ("figures/fig_supported_vs_oracle.svg", "## B. Limitations", "Figure A3. Supported verdicts versus oracle exposure effect on DEV fixtures (DEV). "),
-    ("figures/fig_gateA_integrity.svg", "## B. Limitations", "Figure A4. Gate A integrity checks (DEV). "),
-    ("figures/fig_confusion_dev.svg", "## B. Limitations", "Figure A5. Baseline positive-call rates on DEV fixtures (DEV). "),
-    ("figdir:fig_prevalence.svg", "## B. Limitations", "Figure A6. "),
-    ("figdir:fig_overattribution.svg", "## B. Limitations", "Figure A7. "),
-    ("figdir:fig_risk_E.svg", "## B. Limitations", "Figure A8. "),
+    ("figures/fig_arms.svg", "## A. Limitations and Dual-Use / Ethical Considerations", "Figure A1. Branch schematic F/K/S/N (schematic, no data). "),
+    ("figures/fig_heldout_cases.svg", "## A. Limitations and Dual-Use / Ethical Considerations", "Figure A2. Case-level outsider-effect certificate intervals versus m_O (EXP-002, descriptive); certificates are exploratory. "),
+    ("figures/fig_supported_vs_oracle.svg", "## A. Limitations and Dual-Use / Ethical Considerations", "Figure A3. Supported verdicts versus oracle exposure effect on DEV fixtures (DEV). "),
+    ("figures/fig_gateA_integrity.svg", "## A. Limitations and Dual-Use / Ethical Considerations", "Figure A4. Gate A integrity checks (DEV). "),
+    ("figures/fig_confusion_dev.svg", "## A. Limitations and Dual-Use / Ethical Considerations", "Figure A5. Baseline positive-call rates on DEV fixtures (DEV). "),
+    ("figdir:fig_prevalence.svg", "## A. Limitations and Dual-Use / Ethical Considerations", "Figure A6. "),
+    ("figdir:fig_overattribution.svg", "## A. Limitations and Dual-Use / Ethical Considerations", "Figure A7. "),
+    ("figdir:fig_risk_E.svg", "## A. Limitations and Dual-Use / Ethical Considerations", "Figure A8. "),
 ]
 
 def entry_for(bib: str, key: str) -> str:
