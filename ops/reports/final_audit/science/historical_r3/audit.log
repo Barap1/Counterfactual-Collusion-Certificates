@@ -1,0 +1,3 @@
+raw records 42000
+unit and partition audit complete
+independent {'RQ1': 'pass', 'RQ2': 'pass', 'RQ3': 'fail', 'RQ4': 'fail', 'RQ4b': 'fail', 'RQ5': 'fail', 'RQ6': 'descriptive'}

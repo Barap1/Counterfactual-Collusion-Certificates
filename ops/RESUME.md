@@ -1,14 +1,9 @@
-# RESUME packet (updated 2026-10-25 00:20 UTC)
+# Resume — repository delivery
 
-Paste to restart: "Resume CCC ENH sprint as director. Read CLAUDE.md, ops/STATUS.md, ops/RESUME.md, ops/DECISIONS.md D-037..latest, docs/enh/MISSION.md. Restart anything listed below that is not running."
+Read `CLAUDE.md`, `ops/STATUS.md`, the REPO-FINAL registry entry, `docs/README.md` and `ops/reports/repo_final/REVIEW.md`. The user explicitly authorized public repository maintenance, pushes, integration, cleanup and metadata updates. No final paper PDF or live Google Doc changes are authorized by this overhaul.
 
-## Rules
-Owner is sole commit author (no AI trailers). Sonnet orchestrators + Codex workers (gpt-6.1-sol medium); no Opus sub-agents; Modal children Codex-only. Max 6 live agents. Modal spend only for EXP-003 (≤$51). Never print secrets. No push/visibility/submission without owner.
-Codex: `node ~/.claude/plugins/cache/openai-codex/codex/1.0.6/scripts/codex-companion.mjs task --write --effort medium --model gpt-6.1-sol "<prompt>"` (stdout to ops/reports/codex_runs/<ID>.stdout).
+Current research records remain at established paths. The latest accessible manuscript is `paper/final/manuscript.md`; its title follows the owner request. Root README is the canonical public summary. Do not use old manuscript build outputs or restart old experiments.
 
-## Restart checklist
-1. Benchmark: if docs/enh/r2/run_par/COMPLETE.json missing and no process in run_par.pid, rerun the resume command in docs/enh/r2/PARALLEL_EXECUTION.md (resumable).
-2. EXP-003: read docs/enh/exp003/LOG.md last lines; `modal app list` (stop anything stray); resume RA-LEAD or relaunch a Sonnet lead with docs/enh/exp003/BRIEF.md + LOG.md.
-3. Writing playbook: docs/enh/writing/WRITING_PLAYBOOK.md (done or near done).
-4. Paper: paper/v2/draft_v2.md, build `python3 paper/v2/make_v2.py --figdir figures/enh/<run>`.
-5. Explorer: demo/explorer (open index.html); rebuild: demo/build_twins.py → demo/explorer/bundle_data.py → demo/build_data.py.
+Verification uses `python3 scripts/reproduce_headline.py`, the 11 independent arithmetic tests, eight demo provenance tests and `scripts/check_artifact.py`. Full local implementation suite uses `scripts/test_offline.py` with the existing pinned starter environment and local-only pilot traces. Missing public inputs and genuine release-rights/privacy concerns are documented in `docs/REPRODUCING.md` and `docs/LIMITATIONS.md`.
+
+A local pre-cleanup recovery bundle preserves all local refs at `/private/tmp/ccc-repository-overhaul/pre-overhaul.bundle`. It must not be pushed wholesale: it includes unpublished submission PDFs and template artifacts excluded by the owner. Existing public history was not rewritten. Final PDF placement instructions: `paper/README.md`.

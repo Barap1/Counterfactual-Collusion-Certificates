@@ -1,0 +1,37 @@
+{
+  "RESULTS.json": {
+    "byte_equal": true,
+    "original_sha256": "bfac102dbaa500efdeb3fd52f0a63f6ea518983dd5828fe66f16c88b3cfc4ac7",
+    "copy_sha256": "bfac102dbaa500efdeb3fd52f0a63f6ea518983dd5828fe66f16c88b3cfc4ac7"
+  },
+  "RESULTS.md": {
+    "byte_equal": true,
+    "original_sha256": "18a291148f8499d7d0e7f4038b4fff11ed5d2b5b0c3c34a5d15e62b7121426d5",
+    "copy_sha256": "18a291148f8499d7d0e7f4038b4fff11ed5d2b5b0c3c34a5d15e62b7121426d5"
+  },
+  "records.json.gz": {
+    "byte_equal": true,
+    "original_sha256": "8e095c9e13a5c126699b2060138afe6a0fdd37457d357fbfa55245fc2146aba8",
+    "copy_sha256": "8e095c9e13a5c126699b2060138afe6a0fdd37457d357fbfa55245fc2146aba8"
+  },
+  "manifest.json": {
+    "byte_equal": true,
+    "original_sha256": "148ce53257a3bd6e1530af65a6ad59bf62fcd30b87a0b3b0bfbcfb49fcf8063c",
+    "copy_sha256": "148ce53257a3bd6e1530af65a6ad59bf62fcd30b87a0b3b0bfbcfb49fcf8063c"
+  },
+  "population.json": {
+    "byte_equal": true,
+    "original_sha256": "3be08849cfb24a3cb54e25744c2a3856b92d9685be6215b95e40ba07bb70879b",
+    "copy_sha256": "3be08849cfb24a3cb54e25744c2a3856b92d9685be6215b95e40ba07bb70879b"
+  },
+  "frontiers.json": {
+    "byte_equal": true,
+    "original_sha256": "5c85df25f10b906daae4ffeb270b2ac2364f1148beca455805d003c42c3c0b13",
+    "copy_sha256": "5c85df25f10b906daae4ffeb270b2ac2364f1148beca455805d003c42c3c0b13"
+  },
+  "failures.json": {
+    "byte_equal": true,
+    "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "copy_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  }
+}

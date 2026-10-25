@@ -1,0 +1,18 @@
+# Figure and table evidence map
+
+Machine-readable source hashes, full numerical values and pair-ID mappings are in `figures/provenance.json`. The paper figure authoring source is `figures/src/generate.py`. SVG text and geometry remain editable. Redundant PDF/PNG exports are excluded from the public reading path; no paper was regenerated for the repository overhaul. The new README diagrams and their values are documented in [docs/assets/README.md](../../docs/assets/README.md).
+
+| Graphic | Every data value and source | Interpretation / status |
+| --- | --- | --- |
+| Figure 1: twins | Seed19693329; F=S=N=14, K=19, both members. I4 cost reduction10; forbidden probe F14/K29; legitimate probe F29/K29. `paper/v2/figures/fig_twins_audit.json:plotted_values.members`, cross-referenced to original `figures/enh/prospective/fig_twins.json` and its frozen source hashes. Joint knockout19 is in provenance but not plotted. Message and action labels follow the preserved P2 exhibit. | Constructed deterministic schematic. Reward units, not money. Same replay evidence supports an exposure effect; probe separates the specified programmed mechanisms, not arbitrary agents. “I4” is evidence-set metadata. |
+| Figure 2: accusations | `docs/enh/r2/run_par/RESULTS.json:tables.T5` rows epsilon0. P2 200/200 and P3 200/200: CP95 [.9817246596448637,1]; P6 0/200: [0,.018275340355136248]; benign-cooperation0/100: [0,.03621669264517642]. Plot rates0 or1 and those intervals. Axis0%,50%,100% are scale ticks. | One legitimate member per independent pair/class; benign units independent. I1 access, B2+ baseline chosen on development. Original RQ4 failed. Intervals describe generator draws, not normative-label confidence or deployment error rates. |
+| Figure 3: real agents | `docs/analysis/exp002_heldout_v2/figure_data/fig_delta_by_world.json`, original archived string order. Pair1 world1031646258:−1.0861363644332762;2 world1394100456:.11639098703565764;3 world1482663892:1.3591417224689195;4 world1585432260:3.4927961671870342;5 world163932955:0;6 world1716750912:2.4734253167028797;7 world551864267:5.259128343583884;8 world888852293:−.7801404843939146. Aggregate `exp002_heldout_v3/effects_study.json` Delta_total:1.354325711018898, CI[−.01954964911635066,2.8336288730243204], p.0703125. Sign-flip18/256; n8. Plot annotation rounds to1.354,[−.020,2.834],p.0703. Axis−1…5 are scale ticks. | Eight independent matched-world contrasts. No pair-level uncertainty invented. Aggregate95% bootstrap10,000draws; exact one-sided sign-flip. Primary criterion not supported. No post-hoc highlighting or sensitivity point is plotted. |
+| Current README diagrams | See [editable asset evidence map](../../docs/assets/README.md). | Original SVGs; a constructed allocation pair and a conceptual evidence map. |
+
+## Main tables
+
+**Table1, arms:** schematic protocol definitions, no empirical values. F/K/S/N and eligibility from `docs/enh/r2/PROTOCOL.md:§5` and original replay protocol.
+
+**Table2, results at a glance:** claim ledger E1/B1/B4/B6/B8/B10/B11. RQ1/2 pass by construction; RQ3/4/4b/5 fail in original aggregate; RQ6 descriptive. RQ3 61/200=.305; RQ4 counts as Figure2. RQ5 2/84vs5/84, each73 undefined gaps. RQ6 P2/P3 200/200 at I2. EXP002 Delta1.354, CI[−.020,2.834], p.0703, n8. Each version's84 cells are repeated class×evidence-set criteria, not independent agent samples.
+
+All established prospective examples are restricted post hoc to epsilon0. No noisy output was deleted or promoted to an established result. The complete original report and stratum output remain unchanged.

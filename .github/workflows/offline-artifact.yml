@@ -1,0 +1,25 @@
+name: Offline research artifact
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  public-checkout:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.12', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Reproduce recorded primary estimate and exact test
+        run: python scripts/reproduce_headline.py
+      - name: Check independent arithmetic and explorer provenance
+        run: |
+          python -m unittest discover -s review/reproduce_headline/tests -v
+          python -m unittest tests.test_demo_data -v
+      - name: Check public navigation and editable graphics
+        run: python scripts/check_artifact.py

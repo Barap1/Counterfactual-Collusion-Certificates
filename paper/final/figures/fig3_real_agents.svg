@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="468pt" height="169pt" viewBox="0 0 468 169" role="img"><title>Original real-agent matched-world effects with aggregate uncertainty crossing zero.</title><rect width="100%" height="100%" fill="white"/>
+<rect x="0" y="0" width="468" height="169" rx="0" fill="#ffffff" stroke="none" stroke-width=".65"/>
+<line x1="79.46666666666667" y1="12" x2="79.46666666666667" y2="118" stroke="#d5dbd6" stroke-width="0.55"/>
+<text x="79.46666666666667" y="135" font-family="Old Standard TT, serif" font-size="9" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">-1</text>
+<line x1="114.4" y1="12" x2="114.4" y2="118" stroke="#726d66" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="114.4" y="135" font-family="Old Standard TT, serif" font-size="9" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">0</text>
+<line x1="149.33333333333331" y1="12" x2="149.33333333333331" y2="118" stroke="#d5dbd6" stroke-width="0.55"/>
+<text x="149.33333333333331" y="135" font-family="Old Standard TT, serif" font-size="9" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">1</text>
+<line x1="184.26666666666665" y1="12" x2="184.26666666666665" y2="118" stroke="#d5dbd6" stroke-width="0.55"/>
+<text x="184.26666666666665" y="135" font-family="Old Standard TT, serif" font-size="9" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">2</text>
+<line x1="219.2" y1="12" x2="219.2" y2="118" stroke="#d5dbd6" stroke-width="0.55"/>
+<text x="219.2" y="135" font-family="Old Standard TT, serif" font-size="9" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">3</text>
+<line x1="254.13333333333333" y1="12" x2="254.13333333333333" y2="118" stroke="#d5dbd6" stroke-width="0.55"/>
+<text x="254.13333333333333" y="135" font-family="Old Standard TT, serif" font-size="9" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">4</text>
+<line x1="289.06666666666666" y1="12" x2="289.06666666666666" y2="118" stroke="#d5dbd6" stroke-width="0.55"/>
+<text x="289.06666666666666" y="135" font-family="Old Standard TT, serif" font-size="9" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">5</text>
+<text x="0" y="20" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Pair 1</text>
+<circle cx="76.45763633579756" cy="17" r="2.7" fill="#355b79"/>
+<text x="0" y="31" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Pair 2</text>
+<circle cx="118.4659251471123" cy="28" r="2.7" fill="#355b79"/>
+<text x="0" y="42" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Pair 3</text>
+<circle cx="161.8793508382476" cy="39" r="2.7" fill="#355b79"/>
+<text x="0" y="53" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Pair 4</text>
+<circle cx="236.4150127737337" cy="50" r="2.7" fill="#355b79"/>
+<text x="0" y="64" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Pair 5</text>
+<circle cx="114.4" cy="61" r="2.7" fill="#355b79"/>
+<text x="0" y="75" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Pair 6</text>
+<circle cx="200.80499106348725" cy="72" r="2.7" fill="#355b79"/>
+<text x="0" y="86" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Pair 7</text>
+<circle cx="298.11888346919704" cy="83" r="2.7" fill="#355b79"/>
+<text x="0" y="97" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Pair 8</text>
+<circle cx="87.14709241183925" cy="94" r="2.7" fill="#355b79"/>
+<line x1="0" y1="109" x2="468" y2="109" stroke="#d5dbd6" stroke-width="0.6"/>
+<text x="0" y="122" font-family="Old Standard TT, serif" font-size="10" font-weight="bold" font-style="normal" fill="#193025" text-anchor="start">Mean</text>
+<line x1="113.71706559086881" y1="119" x2="213.38810196431626" y2="119" stroke="#194b37" stroke-width="2.4"/>
+<line x1="113.71706559086881" y1="115" x2="113.71706559086881" y2="123" stroke="#194b37" stroke-width="1"/>
+<line x1="213.38810196431626" y1="115" x2="213.38810196431626" y2="123" stroke="#194b37" stroke-width="1"/>
+<circle cx="161.71111150492686" cy="119" r="4" fill="#194b37"/>
+<text x="347" y="29" font-family="Old Standard TT, serif" font-size="12" font-weight="bold" font-style="normal" fill="#193025" text-anchor="start">Delta = 1.354</text>
+<text x="347" y="46" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">95% CI [−0.020, 2.834]</text>
+<text x="347" y="63" font-family="Old Standard TT, serif" font-size="10" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">n = 8 matched pairs</text>
+<text x="347" y="80" font-family="Old Standard TT, serif" font-size="10" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">One-sided p = 0.0703</text>
+<text x="347" y="101" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Directional hypothesis</text>
+<text x="347" y="115" font-family="Old Standard TT, serif" font-size="11" font-weight="bold" font-style="normal" fill="#193025" text-anchor="start">not supported</text>
+<text x="193" y="151" font-family="Old Standard TT, serif" font-size="10" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">Prompt-regime contrast in outsider effect (task reward units)</text>
+<text x="193" y="165" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#726d66" text-anchor="middle">Cooperation larger  ←  0  →  Deceptive prompts larger</text>
+</svg>

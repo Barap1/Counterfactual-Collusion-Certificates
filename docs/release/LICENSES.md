@@ -197,3 +197,7 @@ Starter `git status --short -- colosseum util` returned empty at inspection: no 
 ## Release disposition
 
 Keep starter, venvs, and model weights excluded. Resolve UNVERIFIED Colosseum/poseidon/CoLLAB permissions and copied setup provenance before distributing their source or substantial adaptations. Preserve Terrarium MIT notice for copied portions. If shipping an environment or binary bundle, include all installed license/NOTICE texts and audit embedded libraries under their own terms; this inventory does not replace those notices. Owner remains sole author; no commits or co-author lines were added.
+
+## Final audit addition: template fonts
+
+Three unmodified Old Standard TT font faces (`paper/v2/fonts/OldStandard-{Regular,Bold,Italic}.ttf`) are bundled under SIL Open Font License 1.1, independently read in this audit. Copyright: The Old Standard Project Authors (2011). Full license: `paper/v2/fonts/OFL.txt`. Google Fonts source URLs and actual file hashes: `ops/reports/final_audit/paper/font_sources.json`. These font files are separate from CCC MIT. No other third-party redistribution permission is inferred by this addition.

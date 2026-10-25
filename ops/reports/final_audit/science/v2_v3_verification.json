@@ -1,0 +1,13 @@
+{
+  "verification": "EXECUTED; existing verifier, only its sole write redirected",
+  "files": 39,
+  "changed_fields_or_records": 222,
+  "numeric_tokens_compared": 33292,
+  "numeric_tokens_byte_identical": true,
+  "status_changes": [],
+  "frozen_diff_sha256_before": "10a0b0d0c35340224904a2d03f7bf58f9e1fe99151dea5bddd84cd88b34b198a",
+  "frozen_diff_sha256_after": "10a0b0d0c35340224904a2d03f7bf58f9e1fe99151dea5bddd84cd88b34b198a",
+  "recomputed_diff_equals_historical": true,
+  "all_valid_false_to_true": 16,
+  "inconclusive_reasons_removed": 5
+}

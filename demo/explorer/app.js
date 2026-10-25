@@ -460,7 +460,7 @@
         ? 'EXP-002 world ' + c.world_id + ' · regime ' + c.regime + (c.regime === 'B1' ? ' (deceptive prompt)' : ' (authorized-cooperation prompt)') + ' · checkpoint turn ' + c.checkpoint_turn + ' · evidence category: ' + c.evidence_category
         : 'Scripted fixture ' + c.family + ' (seed ' + c.seed + ', stratum ' + c.stratum + ') · ' + c.selection_rule + ' · evidence category: ' + c.evidence_category));
       if (!held) main.appendChild(h('p', { class: 'note warn' }, (c.limitations || []).join(' ')));
-      else main.appendChild(h('p', { class: 'note' }, 'Held-out data are descriptive here. The preregistered confirmatory result is a null (see Study). Case certificates are Tier-B exploratory.'));
+      else main.appendChild(h('p', { class: 'note' }, 'Held-out cases are descriptive here. The preregistered directional hypothesis was not supported (see Study). Case certificates are Tier-B exploratory.'));
       main.appendChild(sectionNav([['s-ladder', 'Ladder'], ['s-inter', 'Interaction'], ['s-cmp', 'F vs K'], ['s-chg', 'What changed'], ['s-val', 'Validity'], ['s-cert', 'Certificate'], ['s-raw', 'Raw evidence']]));
       main.appendChild(sec('s-ladder', 'Evidence ladder', ['causal', 'harm', 'attr'], ladderStrip(c)));
       main.appendChild(sec('s-inter', 'Interaction up to the checkpoint', ['causal'], interactionView(c)));
@@ -538,7 +538,7 @@
   function rawView(c) {
     var box = h('div');
     box.appendChild(h('p', null, 'Archive: ', h('code', null, D.index.archive.path), h('br'), sha('sha256 ' + (c.archive_sha256 || D.index.archive.sha256))));
-    box.appendChild(h('p', null, h('a', { href: '../data/MANIFEST.json' }, 'MANIFEST.json'), ' · ', h('a', { href: '../data/TRACE.md' }, 'TRACE.md (field-by-field source map)'), ' · pack built by ', h('code', null, D.manifest.generator), ' at commit ', h('code', null, (D.manifest.generator_commit_HEAD || '').slice(0, 10)), '. ', D.manifest.n_files + ' generated files and ' + D.manifest.n_source_hashes + ' source hashes are listed in the manifest.'));
+    box.appendChild(h('p', null, h('a', { href: '../data/MANIFEST.json' }, 'MANIFEST.json'), ' · ', h('a', { href: '../data/TRACE.md' }, 'TRACE.md (field-by-field source map)'), ' · pack built by ', h('code', null, D.manifest.generator), ' with generation base commit ', h('code', null, (D.manifest.generator_commit_HEAD || '').slice(0, 10)), '. Actual source and generator bytes are bound by hashes. ', D.manifest.n_files + ' generated files and ' + D.manifest.n_source_hashes + ' source hashes are listed in the manifest.'));
     var rows = (c.sources || []).map(function (src) {
       return h('tr', null, h('td', null, h('code', { class: 'hash' }, src.archive_member || src.path)), h('td', null, sha(src.sha256)));
     });
@@ -558,7 +558,7 @@
     main.appendChild(h('div', { class: 'kpis' },
       h('div', { class: 'card' }, concept('causal', 'Frozen primary Δ'), h('div', { class: 'big-num num' }, fmt(p.estimate, 3)), h('p', null, '95% CI [' + fmt(p.L, 3) + ', ' + fmt(p.U, 3) + '] (world-cluster)'), h('p', { class: 'muted' }, 'category: ' + st.primary.evidence_category)),
       h('div', { class: 'card' }, concept('unc', 'One-sided p'), h('div', { class: 'big-num num' }, fmt(p.p_raw, 4)), h('p', null, 'exact sign-flip, ' + p.eligible_complete_pairs + ' of ' + p.matched_pairs_attempted + ' pairs')),
-      h('div', { class: 'card' }, concept('attr', 'Decision'), h('div', { class: 'big-num', style: null }, 'NOT SUPPORTED'), h('p', null, 'Preregistered directional hypothesis ' + String(p.decision).toUpperCase() + '. Confirmatory null.')),
+      h('div', { class: 'card' }, concept('attr', 'Decision'), h('div', { class: 'big-num', style: null }, 'NOT SUPPORTED'), h('p', null, 'Preregistered directional hypothesis ' + String(p.decision).toUpperCase() + '. This does not establish a null effect.')),
       h('div', { class: 'card' }, concept('unc', 'Registered sensitivity'), h('div', { class: 'big-num num' }, fmt(ns.estimate, 3)), h('p', null, '95% CI [' + fmt(ns.L, 2) + ', ' + fmt(ns.U, 2) + '] (non-commit excluded)'), h('p', { class: 'muted' }, 'registered sensitivity, ' + st.noncommit_sensitivity.evidence_category + '; not a confirmatory test'))));
     main.appendChild(h('p', { class: 'note' }, p.caveats));
     main.appendChild(h('h3', null, 'Per-world contrast d_w = tau_O(B1) − tau_O(B2)'));
@@ -571,7 +571,7 @@
       worldCases(w.world_id).then(function (m) { clear(td); ['B1', 'B2'].forEach(function (r) { if (m[r]) td.appendChild(h('a', { href: '#/case/' + m[r], style: null }, m[r] + ' ')); }); });
     });
     main.appendChild(h('div', { class: 'grid2' },
-      h('div', { class: 'card' }, h('h3', null, 'Certificates'), h('p', null, statusPill('supported'), ' ' + (st.certificate_counts.supported || 0) + ' · not supported ' + st.certificate_counts.not_supported + ' · ', concept('unc', 'inconclusive'), ' ' + st.certificate_counts.inconclusive), h('p', { class: 'muted' }, 'Sixteen held-out case certificates (8 worlds × 2 regimes). None reaches L2.')),
+      h('div', { class: 'card' }, h('h3', null, 'Certificates'), h('p', null, statusPill('supported'), ' ' + (st.certificate_counts.supported || 0) + ' · not supported ' + st.certificate_counts.not_supported + ' · ', concept('unc', 'inconclusive'), ' ' + st.certificate_counts.inconclusive), h('p', { class: 'muted' }, 'Sixteen held-out case certificates from eight matched world pairs. None reaches L2.')),
       h('div', { class: 'card' }, h('h3', null, 'Scheduled continuation records'), h('p', null, st.scheduled_counts.valid + ' executed valid + ' + st.scheduled_counts.not_run + ' not run (placebo unavailable) = ' + (st.scheduled_counts.valid + st.scheduled_counts.not_run) + ' scheduled.'), h('p', { class: 'muted' }, 'Unrun records are not zeros.'))));
     main.appendChild(h('details', { class: 'd' }, h('summary', null, 'Sources and sha256'), h('div', null, st.sources.map(function (x) { return h('p', null, h('code', null, x.path), h('br'), sha(x.sha256)); }))));
   }
@@ -629,7 +629,7 @@
       }],
       ['2 · One real contrast', function (b) {
         b.appendChild(h('p', null, h('strong', null, 'Selection rule (fixed in advance, stated here): '), 'of the eight held-out worlds, take the one whose B1 and B2 checkpoints differ most in tau_O, i.e. the largest |d_w|. That is world ', h('code', null, pw.world_id), ' (|d_w| = ' + fmt(Math.abs(pw.d_w), 3) + ').'));
-        b.appendChild(h('p', { class: 'note warn' }, 'Illustrative, not a selected positive result. The rule picks the largest contrast, not a certified harm: neither checkpoint below reaches a supported certificate, and the study-level result is a null.'));
+        b.appendChild(h('p', { class: 'note warn' }, 'Illustrative, not a selected positive result. The rule picks the largest contrast, not a certified harm: neither checkpoint below reaches a supported certificate, and the study-level directional hypothesis was not supported.'));
         var g = h('div', { class: 'grid2' }); b.appendChild(g);
         worldCases(pw.world_id).then(function (m) {
           ['B1', 'B2'].forEach(function (r) {
@@ -687,9 +687,9 @@
     main.appendChild(h('h3', null, 'Effect definitions (verified against stored rows)'));
     main.appendChild(h('ul', null, h('li', null, 'tau_O = outsider mean under K minus under F.'), h('li', null, 'tau_C = coalition mean under F minus under K.'), h('li', null, 'tau_W = W under K minus W under F.'), h('li', null, 'F factual, K knockout (exposure mask), S sham, N placebo.')));
     main.appendChild(h('h3', null, 'Provenance'));
-    main.appendChild(h('p', null, 'The pack was generated by ', h('code', null, D.manifest.generator), ' at commit ', h('code', null, (D.manifest.generator_commit_HEAD || '').slice(0, 10)), '. See ', h('a', { href: '../data/MANIFEST.json' }, 'MANIFEST.json'), ' and ', h('a', { href: '../data/TRACE.md' }, 'TRACE.md'), '. Archive sha256:'));
+    main.appendChild(h('p', null, 'The pack was generated by ', h('code', null, D.manifest.generator), ' with generation base commit ', h('code', null, (D.manifest.generator_commit_HEAD || '').slice(0, 10)), '. This records HEAD at generation; source hashes bind actual working-tree inputs. See ', h('a', { href: '../data/MANIFEST.json' }, 'MANIFEST.json'), ' and ', h('a', { href: '../data/TRACE.md' }, 'TRACE.md'), '. Bundled manifest sha256: ', sha(D.manifest.manifest_sha256), '. Archive sha256:'));
     main.appendChild(sha(D.index.archive.sha256));
-    main.appendChild(h('p', null, 'Held-out data: EXP-002 (frozen, descriptive here). Development data: scripted Gate A fixtures, never evidence of performance. Gate A overall status was FAIL; the fixtures are shown because their failures are informative.'));
+    main.appendChild(h('p', null, 'Held-out data: EXP-002 (frozen, descriptive here). Development data: scripted Gate A fixtures, never evidence of performance. These development fixtures include failed diagnostics. Formal Gate A v1.2.2 was accepted with narrowing; the fixtures do not establish real-agent detection performance.'));
   }
 
   /* ---------- twins (hidden unless data/twins.js exists) ---------- */
@@ -746,6 +746,10 @@
     var dev = T.label === 'DEV';
     main.appendChild(h('div', { class: 'head' }, h('h2', null, 'Twin worlds: when does evidence separate verdicts?'), h('span', { class: 'badge ' + (dev ? 'dev' : 'held'), title: T.provenance_label }, T.provenance_label)));
     if (T.banner) main.appendChild(h('div', { class: 'note warn banner', role: 'status' }, h('strong', null, T.banner), ' Selection rule: ' + T.selection_rule));
+    if (T.scope_note) main.appendChild(h('p', { class: 'note warn' }, T.scope_note));
+    main.appendChild(h('p', { class: 'muted' }, 'Selection rule: ' + T.selection_rule));
+    if (T.aggregate_criteria && Object.keys(T.aggregate_criteria).length) main.appendChild(h('p', { class: 'note' }, h('strong', null, 'Frozen aggregate criteria: '), Object.keys(T.aggregate_criteria).map(function (rq) { return rq + ' ' + String(T.aggregate_criteria[rq]).toUpperCase(); }).join(' · '), '. RQ1/RQ2 pass by construction, not independent detection performance. These aggregate outcomes are retained; selected deterministic examples do not replace them.'));
+    if (T.limitations) main.appendChild(h('p', { class: 'note' }, T.limitations));
     main.appendChild(h('p', null, 'Two worlds are built so that the auditor sees identical observables up to a stated information set, yet their private labels differ. A method that sees only the same evidence must give the same output; only new evidence can separate them. Pick a pair, then step the evidence from I0 to I5.'));
     var tabs = h('div', { class: 'steps', role: 'group', 'aria-label': 'Twin pair types' });
     T.pairs.forEach(function (p, i) { tabs.appendChild(h('button', { type: 'button', class: 'tabbtn', 'aria-pressed': i === twinState.pair ? 'true' : 'false', on: { click: function () { twinState.pair = i; renderTwins(); } } }, p.kind)); });
@@ -816,7 +820,7 @@
     var worlds = {}, order = [];
     cases.filter(function (c) { return c.id.charAt(0) === 'H'; }).forEach(function (c) { var k = c.id.slice(0, 3); if (!worlds[k]) { worlds[k] = []; order.push(k); } worlds[k].push(c); });
     list.appendChild(h('div', { class: 'grp' }, 'Held-out real agent · EXP-002 · frozen'));
-    list.appendChild(h('p', { class: 'muted', style: null }, '8 worlds × B1 deceptive / B2 authorized cooperation'));
+    list.appendChild(h('p', { class: 'muted', style: null }, '8 matched world pairs · B1 deceptive / B2 authorized cooperation'));
     order.forEach(function (k) {
       list.appendChild(h('div', { class: 'world' }, 'World ' + k));
       var pair = h('div', { class: 'pair' });
@@ -850,6 +854,11 @@
     if (!m) window.scrollTo(0, 0);
   }
   window.addEventListener('hashchange', route);
+  document.querySelector('.skip').addEventListener('click', function (event) {
+    event.preventDefault();
+    main.focus();
+    main.scrollIntoView({ block: 'start' });
+  });
   buildSidebar();
   if (window.innerWidth <= 900) $('case-menu').open = false;
   route();

@@ -1,0 +1,102 @@
+{
+  "verification": "EXECUTED; read-only, stdlib-only; no benchmark execution",
+  "protocol": {
+    "expected": "334a4539d2dc6976879c50c8244905a735a13ce32f5a4e8046715e31b250dcb6",
+    "actual": "334a4539d2dc6976879c50c8244905a735a13ce32f5a4e8046715e31b250dcb6"
+  },
+  "freeze": {
+    "actual": "ea8e260ac7ee28dd1e861fd1c9ae39d7c13f8e8cc17bab0042b7ba1d82e4fbe3",
+    "receipt": "ea8e260ac7ee28dd1e861fd1c9ae39d7c13f8e8cc17bab0042b7ba1d82e4fbe3"
+  },
+  "historical_gate": {
+    "path": "ops/reports/codex_runs/gate1_failed/run_par_prev/GATE.json",
+    "sha256": "1ddb1f8605c434307bc6d450481dea23761c714d8734fcd1ccce9fc0a4e6822e",
+    "status": "FAIL",
+    "infrastructure_error": true,
+    "compared": 160,
+    "mismatch_count": 160,
+    "missing_count": 160,
+    "independent_seeds": 40
+  },
+  "current_gate": {
+    "path": "docs/enh/r2/run_par/GATE.json",
+    "sha256": "1ddb1f8605c434307bc6d450481dea23761c714d8734fcd1ccce9fc0a4e6822e",
+    "status": "FAIL",
+    "infrastructure_error": true,
+    "compared": 160,
+    "mismatch_count": 160,
+    "missing_count": 160,
+    "independent_seeds": 40
+  },
+  "gate_v2": {
+    "independent_seeds": 5,
+    "recorded_platform": "modal linux, CPython 3.14.7",
+    "recorded_self_check": {
+      "compared": 20,
+      "mismatches": []
+    },
+    "recorded_eps0": {
+      "compared": 20,
+      "mismatches": []
+    },
+    "actual": [
+      {
+        "kind": "units",
+        "epsilon": "0",
+        "files": 5,
+        "A_B_identical": 5,
+        "A_final_identical": 5,
+        "A_serial_identical": 5
+      },
+      {
+        "kind": "units",
+        "epsilon": "0.1",
+        "files": 5,
+        "A_B_identical": 5,
+        "A_final_identical": 5,
+        "A_serial_identical": 0
+      },
+      {
+        "kind": "partitions",
+        "epsilon": "0",
+        "files": 5,
+        "A_B_identical": 5,
+        "A_final_identical": 5,
+        "A_serial_identical": 5
+      },
+      {
+        "kind": "partitions",
+        "epsilon": "0.1",
+        "files": 5,
+        "A_B_identical": 5,
+        "A_final_identical": 5,
+        "A_serial_identical": 5
+      }
+    ]
+  },
+  "method_receipts": {
+    "count": 2100,
+    "runtime_python_counts": {
+      "3.14.2 (main, Dec  8 2025, 23:38:13) [GCC 12.2.0]": 2100
+    },
+    "identity_equal_to_gate_v2": 2100,
+    "artifact_checksum_count": 8400,
+    "artifact_checksum_failures": []
+  },
+  "aggregate_verdicts": {
+    "RQ1": "pass",
+    "RQ2": "pass",
+    "RQ3": "fail",
+    "RQ4": "fail",
+    "RQ4b": "fail",
+    "RQ5": "fail",
+    "RQ6": "descriptive"
+  },
+  "source_hashes": {
+    "docs/enh/r2/run_par/RESULTS.json": "bfac102dbaa500efdeb3fd52f0a63f6ea518983dd5828fe66f16c88b3cfc4ac7",
+    "docs/enh/r2/run_par/RESULTS.md": "18a291148f8499d7d0e7f4038b4fff11ed5d2b5b0c3c34a5d15e62b7121426d5",
+    "docs/enh/r2/run_par/GATE.json": "1ddb1f8605c434307bc6d450481dea23761c714d8734fcd1ccce9fc0a4e6822e",
+    "docs/enh/r2/run_par/GATE_v2.json": "bd45ac65797ebb67ad373c3d609c098e6e625c1d8ad3388e47f25a9391e7ca00",
+    "scripts/eps_platform_check.py": "c6980db6d30071ad7ef4f8c45a9cb59218988ce023df924900d678c05f3fd362"
+  }
+}

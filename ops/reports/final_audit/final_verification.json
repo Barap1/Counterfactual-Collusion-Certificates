@@ -1,0 +1,260 @@
+{
+  "classification": "EXECUTED",
+  "frozen_files_compared": 16992,
+  "frozen_differences": [],
+  "archives": {
+    "exp001-live": {
+      "expected": "0963303f6c67b5a32278ca7470515f8942fd011bed0b610a956865d87a8f26dc",
+      "actual": "0963303f6c67b5a32278ca7470515f8942fd011bed0b610a956865d87a8f26dc"
+    },
+    "exp002-live": {
+      "expected": "83bf451dad54c773afbc3e775acc13e08bd97fbe92dee4d1a21307cc60625831",
+      "actual": "83bf451dad54c773afbc3e775acc13e08bd97fbe92dee4d1a21307cc60625831"
+    }
+  },
+  "pilot": [
+    {
+      "name": "./20261023-111229/config.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1_interrupted/20261023-111229/config.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1_interrupted/20261023-111229/config.json"
+      ],
+      "sha256": "b12ed213ea19585f874418c819c720853f43264f90ac939da29292763c6f1190"
+    },
+    {
+      "name": "./20261023-111229/experiment.log",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1_interrupted/20261023-111229/experiment.log",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1_interrupted/20261023-111229/experiment.log"
+      ],
+      "sha256": "478f1ce9292cf6c9428026cacf8b9fe7ced8dd22aac8a752ef352556835a4e08"
+    },
+    {
+      "name": "./20261023-111229/progress.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1_interrupted/20261023-111229/progress.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1_interrupted/20261023-111229/progress.json"
+      ],
+      "sha256": "63012e3137cf84317e6779a4452941576557b7f22d8a07e3933528de1ce2419b"
+    },
+    {
+      "name": "./20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.json"
+      ],
+      "sha256": "4e70abe2d8839348dedacdcac7d58ed8867a184cd74b060f756ebcfaae88e217"
+    },
+    {
+      "name": "./20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.md",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.md",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.md"
+      ],
+      "sha256": "574440aaa574d70dd4fa2a98be813459db4b90716ebf8d095f27a30ab747b5ae"
+    },
+    {
+      "name": "./20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_trajectories.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_trajectories.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_trajectories.json"
+      ],
+      "sha256": "4021b8caa98613bda161d40af390d65f94561506f2ce0374f6fdcbbda47d8d1a"
+    },
+    {
+      "name": "./20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_0.txt",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_0.txt",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_0.txt"
+      ],
+      "sha256": "42535f61fc51422b36f7e46bb111ab516919f21735d988ada06991cf5cec964a"
+    },
+    {
+      "name": "./20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_1.txt",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_1.txt",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_1.txt"
+      ],
+      "sha256": "b08522420bed40f953fb273bea5a044c7d3b16f633b3b7d432ccaf54bc4c8833"
+    },
+    {
+      "name": "./20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/communication_network.png",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/communication_network.png",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1_interrupted/20261023-111229/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/communication_network.png"
+      ],
+      "sha256": "aa913e375db0d3ab684a46e35b1143b7af7aa3966937e1bf0f2a96bdfd12e16f"
+    },
+    {
+      "name": "./20261023-111625/config.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/config.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/config.json"
+      ],
+      "sha256": "b12ed213ea19585f874418c819c720853f43264f90ac939da29292763c6f1190"
+    },
+    {
+      "name": "./20261023-111625/experiment.log",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/experiment.log",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/experiment.log"
+      ],
+      "sha256": "d6e00ca1bf51bfefcf6e76b343fc6c849bbeca94c2a4f167c6dce5967eea77ee"
+    },
+    {
+      "name": "./20261023-111625/progress.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/progress.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/progress.json"
+      ],
+      "sha256": "772b130bb5d4645e8d22693ccf134b3e797c56e45b1a531cc622d83f3fcf519d"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.json"
+      ],
+      "sha256": "1cac8825ff836fc21a47eb7b562210390593a1f07dc526b857fb60ae78507e51"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.md",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.md",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_prompts.md"
+      ],
+      "sha256": "df13d8648471b6218c4a75cc842ee306abfebb893c8e31aafdba95ac436afe1e"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_trajectories.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_trajectories.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_trajectories.json"
+      ],
+      "sha256": "ae75c76a16c7c25cdf2409cedd09b6b2d3ddaa2c9acc938c39f91df59e70d60e"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_turns.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_turns.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/agent_turns.json"
+      ],
+      "sha256": "ea0446a44bbcb454d183c86b49e715e7998cf3d547e554e98497a2cc92c7244c"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_0.txt",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_0.txt",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_0.txt"
+      ],
+      "sha256": "9f35e98fcf60ff3f7c9ad5716a230f7713aa302ba307d4b150be709facec4b41"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_1.txt",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_1.txt",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboard_1.txt"
+      ],
+      "sha256": "36a5b056ec67e66c96ba100503ebdd8f37f34d2d81565fa852a863aee47e28de"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboards.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboards.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/blackboards.json"
+      ],
+      "sha256": "3b384cd478e38b8ff277cd45338bb4a05f8e876821ce8c83fb89b9171803372b"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/communication_network.png",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/communication_network.png",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/communication_network.png"
+      ],
+      "sha256": "aa913e375db0d3ab684a46e35b1143b7af7aa3966937e1bf0f2a96bdfd12e16f"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/final_summary.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/final_summary.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/final_summary.json"
+      ],
+      "sha256": "233763119c109c9c00a4c26d4628f5bf6abd50398f4bcc072183446b429d310c"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/metrics.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/metrics.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/metrics.json"
+      ],
+      "sha256": "c6fb4a120366007c1da53f54834ccd7b87740b43a38a0c57360cc34fb4668fb7"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/run_config.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/run_config.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/run_config.json"
+      ],
+      "sha256": "70528662531cbdf7fbc6704b9a549116af2810b78f748d9a7afce2e647e97b12"
+    },
+    {
+      "name": "./20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/tool_events.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/tool_events.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/runs/openai_gpt4o_mini/hackathon_positive_control/openai_gpt4o_mini__hackathon_positive_control__complete__n4__c2__secret1__pvsimple__seed1/tool_events.json"
+      ],
+      "sha256": "d18cd84d18f46ae50e69f81de7d0a68d8f70886da1b469b517cca386572f9da6"
+    },
+    {
+      "name": "./20261023-111625/summary.csv",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/summary.csv",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/summary.csv"
+      ],
+      "sha256": "28582783b1f9f29ce9622e2dda58080bf6ecc6c3146b669e47fe57f3ab2a66c1"
+    },
+    {
+      "name": "./20261023-111625/summary.json",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/summary.json",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/summary.json"
+      ],
+      "sha256": "aa9117b141618b3cfb638af944e48ef7e653e5b33dae6af1e64a6375eb938230"
+    },
+    {
+      "name": "./20261023-111625/summary.jsonl",
+      "matching_copies": [
+        "results/baselines/colosseum_positive_control_seed1/20261023-111625/summary.jsonl",
+        "docs/release/pilot_archive/colosseum_positive_control_seed1/20261023-111625/summary.jsonl"
+      ],
+      "sha256": "eb8e7ddb3652c184a21b89f21298bea84a134d7c7e70368c9ad36a1337f7bf73"
+    }
+  ],
+  "primary": {
+    "L": -0.01954964911635066,
+    "U": 2.8336288730243204,
+    "caveats": "Delta compares regimes, not realized collusion; depends on the chosen B1 prompt variant; sender identity, t_star and suffix length are regime dependent.",
+    "confirmatory": true,
+    "decision": "not supported",
+    "effect": "Delta_total",
+    "eligible_complete_pairs": 8,
+    "estimate": 1.354325711018898,
+    "inference_tier": "A-confirmatory",
+    "label": "A-confirmatory",
+    "matched_pairs_attempted": 8,
+    "n_independent": 8,
+    "p_raw": 0.0703125,
+    "test_status": "attainable",
+    "tier": "A-confirmatory",
+    "uncertainty_scope": "world_cluster"
+  },
+  "certificates": {
+    "not_supported": 11,
+    "inconclusive": 5
+  },
+  "independent_raw_minus_frozen_delta": 1.1102230246251565e-15,
+  "arithmetic_note": "Stdlib Fraction/raw reduction and frozen NumPy reduction differ at ~1e-15; no scientific output changed.",
+  "abstract_words": 207,
+  "heldout_section_byte_identical": true,
+  "pdf_sha256": "8bec47060d6b27d638217ef9c52676a463af4f5d8bccd6cc99c0d75094382498"
+}

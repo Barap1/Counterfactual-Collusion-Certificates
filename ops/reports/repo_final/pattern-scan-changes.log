@@ -1,0 +1,6 @@
+Scan progress: 250 blobs
+Flagged path='ops/reports/final_audit/tests/pytest_final.xml'; regex rules=['7']
+Flagged path='ops/reports/final_audit/tests/pytest_stdin_attempt.xml'; regex rules=['7']
+Flagged path='staged:ops/reports/final_audit/tests/pytest_final.xml'; regex rules=['7']
+Flagged path='staged:ops/reports/final_audit/tests/pytest_stdin_attempt.xml'; regex rules=['7']
+Scanned 380 working/generated/staged blobs; 4 flagged blobs; credential files never read

@@ -1,0 +1,18 @@
+{
+  "classification": "EXECUTED",
+  "source": "independent raw EXP002 contrasts; string-sorted pair IDs",
+  "algorithm": "PCG64(20261025),10000 cluster draws,quantile(.025,.975)",
+  "ci": [
+    -0.0195496491163503,
+    2.833628873024321
+  ],
+  "frozen_ci": [
+    -0.01954964911635066,
+    2.8336288730243204
+  ],
+  "differences": [
+    3.608224830031759e-16,
+    4.440892098500626e-16
+  ],
+  "n_independent": 8
+}

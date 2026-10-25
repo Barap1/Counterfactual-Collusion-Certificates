@@ -32,3 +32,23 @@ docs/runner/exp00*-live.log
 docs/runner/exp00*-live.watchdog.log
 docs/enh/bench/*/cache/
 docs/runner/exp003-*/
+
+# Build attempts are preserved locally by content hash; release candidate is tracked.
+paper/v2/build/history/
+paper/v2/build/.submission_v2.pdf.tmp
+
+# Local presentation previews and worker logs (scientific records stay tracked).
+.playwright-mcp/
+ops/reports/codex_runs/*.log
+ops/reports/codex_runs/*.pid
+ops/reports/codex_runs/*.stdout
+ops/reports/codex_runs/*.stderr
+ops/reports/codex_runs/gate1_failed/
+ops/reports/final_audit/FINAL_COMMIT.json
+paper/build/
+paper/v2/build/
+paper/final/qa/
+paper/final/submission.pdf
+paper/final/submission.docx
+# Machine-local test XML includes generated fixture identifiers/host metadata.
+ops/reports/repo_final/*.xml

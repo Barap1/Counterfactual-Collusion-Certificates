@@ -1,0 +1,13 @@
+{
+  "demo/build_data.py": "6e9767a37f0e3a977fe5146968f4d48dfbef54fefc8f8f9ddadab80a1d5ad1f3",
+  "demo/build_twins.py": "f8d1025d9e7239f416ddc77732470d0f994ad392723b7514920146b7c5f6cb75",
+  "demo/explorer/bundle_data.py": "3b901d72f36346d60f5f73d806c2fafd45ba8c75a91416db359404183657bf7b",
+  "demo/explorer/app.js": "8f0c317e97924cdcd454a269685cfd858aec7d6e030d317882a3a9b4658044c7",
+  "demo/explorer/style.css": "4a09ca199092d6cba9c2fd2536c9c964d1a38069de5a367648cf7ffc134b9fe3",
+  "demo/explorer/index.html": "2db9b7d83d2504b7c886d8060c723ceb1c0ad6b4ca2e4586daf93e3c658750f3",
+  "demo/data/MANIFEST.json": "bdb66f194e5ba4abf1e6b18f20ee4ec6ff44b954ad0adbb19f3685a31cddb687",
+  "demo/data/study.json": "4e3ea915d3a22f955b01b4d338b84fe3dfeacd4833a7ef81d2d8053c70dad34d",
+  "demo/data/TRACE.md": "0184618680bd8f34582fe4c06c8be2068194909d7b3fc3430425fd05469d35fc",
+  "demo/explorer/data/index.js": "95547c894bb562e2f59345333eb5884ab6f8c0d141807e7b35d883ae1f31dea8",
+  "demo/explorer/data/twins.js": "6d8c97617359baad6581a75d3222bf58b13d3d133c942dd8813f72ed70c19676"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/oldstandardtt/OldStandard-Regular.ttf",
+    "path": "paper/v2/fonts/OldStandard-Regular.ttf",
+    "sha256": "42717a1280b523a506ca2b0285cca380e77fe214b1f6e3d75a8b925005f19eac",
+    "bytes": 249668
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/oldstandardtt/OldStandard-Bold.ttf",
+    "path": "paper/v2/fonts/OldStandard-Bold.ttf",
+    "sha256": "7d831e9d799ad23ee98e889381a9db2a283b2dac7f228dd5c06071decb9c54db",
+    "bytes": 267128
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/oldstandardtt/OldStandard-Italic.ttf",
+    "path": "paper/v2/fonts/OldStandard-Italic.ttf",
+    "sha256": "4b9522f4711317fc06e2413a58b4662c249cb707df193d682b9d640e365ef564",
+    "bytes": 272692
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/oldstandardtt/OFL.txt",
+    "path": "paper/v2/fonts/OFL.txt",
+    "sha256": "4faa2d9e2ce0a4b5b37e62ee6fafe474a539b31578f7214ed97cc3503aeb8ebd",
+    "bytes": 4373
+  }
+]

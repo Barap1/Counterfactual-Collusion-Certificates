@@ -1,0 +1,14 @@
+[
+  {
+    "field": "files",
+    "status": "PASS",
+    "error": "Stale evidence manifest: demo/data/TRACE.md; rerun demo/build_data.py before bundling",
+    "previous_bundle_preserved": true
+  },
+  {
+    "field": "source_hashes",
+    "status": "PASS",
+    "error": "Changed evidence source: ccc/analysis/status.py; rerun the evidence pack builders before bundling",
+    "previous_bundle_preserved": true
+  }
+]

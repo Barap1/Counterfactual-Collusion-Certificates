@@ -1,0 +1,3 @@
+Scan progress: 250 blobs
+Flagged path='ops/reports/repo_final/pytest.xml'; regex rules=['7']
+Scanned 343 working/generated/staged blobs; 1 flagged blobs; credential files never read

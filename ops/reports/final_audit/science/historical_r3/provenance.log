@@ -1,0 +1,160 @@
+{
+  "frozen_hash_disagreements": [],
+  "protocol_hash_equal": true,
+  "serial_eps0": {
+    "total": 149,
+    "compressed_equal": 149,
+    "decompressed_equal": 149,
+    "missing": [],
+    "different": []
+  },
+  "archived_gate": {
+    "status": "FAIL",
+    "compared": 160,
+    "infrastructure_error": true,
+    "mismatch_count": 160,
+    "missing_count": 160,
+    "first_mismatches": [
+      "units/1016969-eps-0.json.gz: missing",
+      "partitions/1016969-eps-0.json.gz: missing",
+      "units/1016969-eps-0.1.json.gz: missing",
+      "partitions/1016969-eps-0.1.json.gz: missing"
+    ]
+  },
+  "v2_identity": {
+    "drivers": {
+      "bench_modal_run.py": "640aeac74ff7626b48352e465b0be7dd7cf47e1f8d2c10fd2b3265755452a4dc",
+      "bench_parallel_run.py": "a61a6da45dddbf5e62410d0e10ab483a772b11c5f261376b543b6b7a1254b6d6"
+    },
+    "freeze": "ea8e260ac7ee28dd1e861fd1c9ae39d7c13f8e8cc17bab0042b7ba1d82e4fbe3",
+    "numpy": "2.2.6",
+    "python": [
+      3,
+      14
+    ]
+  },
+  "failures": [],
+  "gate40_current": {
+    "0": {
+      "total": 40,
+      "compressed_equal": 40,
+      "decompressed_equal": 40,
+      "missing": [],
+      "different": []
+    },
+    "0.1": {
+      "total": 40,
+      "compressed_equal": 2,
+      "decompressed_equal": 2,
+      "missing": [],
+      "different": [
+        "1016969-eps-0.1.json.gz",
+        "2054967-eps-0.1.json.gz",
+        "2137797-eps-0.1.json.gz",
+        "5028610-eps-0.1.json.gz",
+        "5221106-eps-0.1.json.gz",
+        "6959008-eps-0.1.json.gz",
+        "7271111-eps-0.1.json.gz",
+        "8335963-eps-0.1.json.gz",
+        "11436370-eps-0.1.json.gz",
+        "13886421-eps-0.1.json.gz",
+        "15044089-eps-0.1.json.gz",
+        "16627987-eps-0.1.json.gz",
+        "17460418-eps-0.1.json.gz",
+        "18352486-eps-0.1.json.gz",
+        "19184196-eps-0.1.json.gz",
+        "19693329-eps-0.1.json.gz",
+        "20114201-eps-0.1.json.gz",
+        "20581290-eps-0.1.json.gz",
+        "20603300-eps-0.1.json.gz",
+        "21847798-eps-0.1.json.gz",
+        "27947030-eps-0.1.json.gz",
+        "28173884-eps-0.1.json.gz",
+        "28827949-eps-0.1.json.gz",
+        "29062605-eps-0.1.json.gz",
+        "33099166-eps-0.1.json.gz",
+        "34711018-eps-0.1.json.gz",
+        "35893802-eps-0.1.json.gz",
+        "36233823-eps-0.1.json.gz",
+        "36623590-eps-0.1.json.gz",
+        "37028549-eps-0.1.json.gz",
+        "38171445-eps-0.1.json.gz",
+        "41361529-eps-0.1.json.gz",
+        "43220095-eps-0.1.json.gz",
+        "45812025-eps-0.1.json.gz",
+        "46554553-eps-0.1.json.gz",
+        "47224387-eps-0.1.json.gz",
+        "48715117-eps-0.1.json.gz",
+        "49120142-eps-0.1.json.gz"
+      ]
+    }
+  },
+  "v2_actual": {
+    "units_A_vs_B": {
+      "total": 10,
+      "compressed_equal": 10,
+      "decompressed_equal": 10,
+      "missing": [],
+      "different": []
+    },
+    "units_A_vs_serial_eps0": {
+      "total": 5,
+      "compressed_equal": 5,
+      "decompressed_equal": 5,
+      "missing": [],
+      "different": []
+    },
+    "units_A_vs_final": {
+      "total": 10,
+      "compressed_equal": 10,
+      "decompressed_equal": 10,
+      "missing": [],
+      "different": []
+    },
+    "partitions_A_vs_B": {
+      "total": 10,
+      "compressed_equal": 10,
+      "decompressed_equal": 10,
+      "missing": [],
+      "different": []
+    },
+    "partitions_A_vs_serial_eps0": {
+      "total": 5,
+      "compressed_equal": 5,
+      "decompressed_equal": 5,
+      "missing": [],
+      "different": []
+    },
+    "partitions_A_vs_final": {
+      "total": 10,
+      "compressed_equal": 10,
+      "decompressed_equal": 10,
+      "missing": [],
+      "different": []
+    }
+  },
+  "method_receipt_count": 2100,
+  "method_runtime_counts": {
+    "3.14.2 (main, Dec  8 2025, 23:38:13) [GCC 12.2.0]": 2100
+  },
+  "receipt_identity_disagreements": [],
+  "receipt_checksum_disagreements": [],
+  "manifest_seed_count": 2100,
+  "schedule_kind_counts": {
+    "suspicious-language-no-harm": 100,
+    "P3": 200,
+    "relayed-harmful": 100,
+    "P1": 200,
+    "P5": 200,
+    "harm-without-dependence": 100,
+    "inert": 100,
+    "P6": 200,
+    "common-cause-single": 100,
+    "P4": 200,
+    "legitimate-useful": 100,
+    "info-bearing": 100,
+    "P2": 200,
+    "redundant-single": 100,
+    "invalid-corrupted-trace": 100
+  }
+}

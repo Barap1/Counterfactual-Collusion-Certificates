@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="468pt" height="133pt" viewBox="0 0 468 133" role="img"><title>B2+ legitimate-member accusation rates at identical I1 evidence: scenario-dependent failures.</title><rect width="100%" height="100%" fill="white"/>
+<rect x="0" y="0" width="468" height="133" rx="0" fill="#ffffff" stroke="none" stroke-width=".65"/>
+<line x1="202" y1="15" x2="202" y2="105" stroke="#d5dbd6" stroke-width="0.5"/>
+<text x="202" y="121" font-family="Old Standard TT, serif" font-size="9" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">0%</text>
+<line x1="287.0" y1="15" x2="287.0" y2="105" stroke="#d5dbd6" stroke-width="0.5"/>
+<text x="287.0" y="121" font-family="Old Standard TT, serif" font-size="9" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">50%</text>
+<line x1="372" y1="15" x2="372" y2="105" stroke="#d5dbd6" stroke-width="0.5"/>
+<text x="372" y="121" font-family="Old Standard TT, serif" font-size="9" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">100%</text>
+<text x="0" y="30" font-family="Old Standard TT, serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Efficiency allocation (P2)</text>
+<line x1="368.8931921396268" y1="27" x2="372.0" y2="27" stroke="#194b37" stroke-width="2"/>
+<line x1="368.8931921396268" y1="24" x2="368.8931921396268" y2="30" stroke="#194b37" stroke-width="1"/>
+<line x1="372.0" y1="24" x2="372.0" y2="30" stroke="#194b37" stroke-width="1"/>
+<circle cx="372.0" cy="27" r="3" fill="#194b37"/>
+<text x="468" y="30" font-family="Old Standard TT, serif" font-size="10.5" font-weight="bold" font-style="normal" fill="#193025" text-anchor="end">200/200</text>
+<text x="0" y="53" font-family="Old Standard TT, serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Authorized transfer (P3)</text>
+<line x1="368.8931921396268" y1="50" x2="372.0" y2="50" stroke="#194b37" stroke-width="2"/>
+<line x1="368.8931921396268" y1="47" x2="368.8931921396268" y2="53" stroke="#194b37" stroke-width="1"/>
+<line x1="372.0" y1="47" x2="372.0" y2="53" stroke="#194b37" stroke-width="1"/>
+<circle cx="372.0" cy="50" r="3" fill="#194b37"/>
+<text x="468" y="53" font-family="Old Standard TT, serif" font-size="10.5" font-weight="bold" font-style="normal" fill="#193025" text-anchor="end">200/200</text>
+<text x="0" y="76" font-family="Old Standard TT, serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Information-bearing (P6)</text>
+<line x1="202.0" y1="73" x2="205.10680786037315" y2="73" stroke="#194b37" stroke-width="2"/>
+<line x1="202.0" y1="70" x2="202.0" y2="76" stroke="#194b37" stroke-width="1"/>
+<line x1="205.10680786037315" y1="70" x2="205.10680786037315" y2="76" stroke="#194b37" stroke-width="1"/>
+<circle cx="202.0" cy="73" r="3" fill="#194b37"/>
+<text x="468" y="76" font-family="Old Standard TT, serif" font-size="10.5" font-weight="bold" font-style="normal" fill="#193025" text-anchor="end">0/200</text>
+<text x="0" y="99" font-family="Old Standard TT, serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="start">Benign cooperation</text>
+<line x1="202.0" y1="96" x2="208.15683774968" y2="96" stroke="#194b37" stroke-width="2"/>
+<line x1="202.0" y1="93" x2="202.0" y2="99" stroke="#194b37" stroke-width="1"/>
+<line x1="208.15683774968" y1="93" x2="208.15683774968" y2="99" stroke="#194b37" stroke-width="1"/>
+<circle cx="202.0" cy="96" r="3" fill="#194b37"/>
+<text x="468" y="99" font-family="Old Standard TT, serif" font-size="10.5" font-weight="bold" font-style="normal" fill="#193025" text-anchor="end">0/100</text>
+<text x="287" y="132" font-family="Old Standard TT, serif" font-size="9.5" font-weight="normal" font-style="normal" fill="#193025" text-anchor="middle">Accusation rate · exact 95% interval</text>
+</svg>

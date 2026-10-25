@@ -1,607 +1,718 @@
 {
- "schema": "ccc-tasks/1",
- "updated_utc": "2026-10-24T23:50Z",
- "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
- "policy": {
-  "max_worker_depth": 3,
-  "max_live_agents_global": 6,
-  "max_live_leads": 2,
-  "reserve_review_capacity": 1,
-  "max_new_children_per_delegation": 2,
-  "max_concurrent_experiment_controllers": 1,
-  "initial_remote_inference_concurrency": 1,
-  "note": "Codex threads and their native subagents count toward the 6-agent global cap; the Claude env cap does not see them.",
-  "owner_model_preference": "Sonnet orchestrators + Codex workers; more Codex than Claude; no Opus sub-agents (owner 2026-10-24 23:40Z)"
- },
- "live_agents": [
-  {
-   "id": "RA-LEAD",
-   "owner": "claude sonnet orchestrator; Codex-only children",
-   "started_utc": "2026-10-24T21:05Z (resumed 23:45Z after session limit)"
+  "schema": "ccc-tasks/1",
+  "updated_utc": "2026-10-25T18:40:13.288157+00:00",
+  "project_start_commit": "097619b24a748b543d332eb010f25d9081f5bb72",
+  "policy": {
+    "max_worker_depth": 3,
+    "max_live_agents_global": 6,
+    "max_live_leads": 2,
+    "reserve_review_capacity": 1,
+    "max_new_children_per_delegation": 2,
+    "max_concurrent_experiment_controllers": 1,
+    "initial_remote_inference_concurrency": 1,
+    "note": "Codex threads and their native subagents count toward the 6-agent global cap; the Claude env cap does not see them.",
+    "owner_model_preference": "Sonnet orchestrators + Codex workers; more Codex than Claude; no Opus sub-agents (owner 2026-10-24 23:40Z)"
   },
-  {
-   "id": "WRITE-RES",
-   "owner": "claude sonnet (resumed 23:45Z)"
+  "live_agents": [],
+  "gates": {
+    "A": "PASSED (D-028; audit docs/review/director_gateA_audit.md; v1.2.2)",
+    "B": "MET (D-032)",
+    "C": "PASSED with narrowing (D-035)",
+    "D": "technical checks done; owner decisions pending (D-036)",
+    "ENH": "R1 ACCEPTED (D-038); R2 FROZEN (D-041); prospective run started 19:58Z"
   },
-  {
-   "id": "BENCH-PAR",
-   "owner": "codex gpt-6.1-sol/medium",
-   "started_utc": "2026-10-24T23:45Z",
-   "writes": "scripts/bench_parallel_run.py, tests/test_bench_parallel.py, docs/enh/r2/run_par/"
-  }
- ],
- "gates": {
-  "A": "PASSED (D-028; audit docs/review/director_gateA_audit.md; v1.2.2)",
-  "B": "MET (D-032)",
-  "C": "PASSED with narrowing (D-035)",
-  "D": "technical checks done; owner decisions pending (D-036)",
-  "ENH": "R1 ACCEPTED (D-038); R2 FROZEN (D-041); prospective run started 19:58Z"
- },
- "tasks": [
-  {
-   "id": "BOOT-001",
-   "objective": "Environment/delegation/budget audit; preserved pilot",
-   "role": "Bootstrap Lead",
-   "depends_on": [],
-   "acceptance": "Module 08 checks pass; no large inference batch",
-   "status": "DONE",
-   "owner": "bootstrap-subagent(depth1)",
-   "lease": {
-    "lock": "ops/locks/BOOT-001.lock",
-    "acquired_utc": "2026-10-23T16:03:25Z"
-   },
-   "attempt": 1,
-   "review_state": "director-accepted 2026-10-23T16:13:11Z; owner items open (Modal limit, Codex account, settings restart)",
-   "artifacts": [
-    "ops/reports/BOOT-001.md",
-    "ops/environment.local.json (gitignored)",
-    "ops/resource_policy.local.json (gitignored)",
-    "ops/pilot_manifest.sha256",
-    "ops/reports/pilot_metric_audit.md",
-    "ops/reports/delegation_check/",
-    "ops/reports/INF-001_benchmark_plan.md",
-    "tests/test_offline_adapter.py",
-    "ccc/"
-   ],
-   "children": [
+  "tasks": [
     {
-     "id": "BOOT-001-NEST-A",
-     "depth": 2,
-     "runtime": "claude(haiku)",
-     "status": "completed"
+      "id": "BOOT-001",
+      "objective": "Environment/delegation/budget audit; preserved pilot",
+      "role": "Bootstrap Lead",
+      "depends_on": [],
+      "acceptance": "Module 08 checks pass; no large inference batch",
+      "status": "DONE",
+      "owner": "bootstrap-subagent(depth1)",
+      "lease": {
+        "lock": "ops/locks/BOOT-001.lock",
+        "acquired_utc": "2026-10-23T16:03:25Z"
+      },
+      "attempt": 1,
+      "review_state": "director-accepted 2026-10-23T16:13:11Z; owner items open (Modal limit, Codex account, settings restart)",
+      "artifacts": [
+        "ops/reports/BOOT-001.md",
+        "ops/environment.local.json (gitignored)",
+        "ops/resource_policy.local.json (gitignored)",
+        "ops/pilot_manifest.sha256",
+        "ops/reports/pilot_metric_audit.md",
+        "ops/reports/delegation_check/",
+        "ops/reports/INF-001_benchmark_plan.md",
+        "tests/test_offline_adapter.py",
+        "ccc/"
+      ],
+      "children": [
+        {
+          "id": "BOOT-001-NEST-A",
+          "depth": 2,
+          "runtime": "claude(haiku)",
+          "status": "completed"
+        },
+        {
+          "id": "BOOT-001-NEST-B",
+          "depth": 3,
+          "runtime": "claude(haiku)",
+          "status": "completed"
+        },
+        {
+          "id": "BOOT-001-CODEX-1",
+          "depth": 2,
+          "runtime": "codex(gpt-6.1-sol default, effort low)",
+          "thread": "01a16983-935e-7c32-ab4d-90e3ade2264a",
+          "status": "completed",
+          "codex_subagent": "/root/hash_check"
+        }
+      ],
+      "open_items": [
+        "Modal $0 net-spend limit + credit balance (owner dashboard)",
+        "module 08 \u00a7F paper outline/author checklist + Drive check deferred to PUB-001 (module 12 not in BOOT inputs)"
+      ]
     },
     {
-     "id": "BOOT-001-NEST-B",
-     "depth": 3,
-     "runtime": "claude(haiku)",
-     "status": "completed"
+      "id": "SCI-001",
+      "objective": "Closest prior art and claim review; novelty matrix; verified source ledger",
+      "role": "Source worker + skeptical reviewer",
+      "depends_on": [],
+      "acceptance": "At least the closest four methods inspected; no unsupported first claim",
+      "status": "DONE",
+      "owner": "director-launched read-only agent",
+      "lease": null,
+      "attempt": 0,
+      "review_state": "director-accepted 2026-10-23T16:13:11Z; REV-001 to re-verify sources + recency check before submission",
+      "artifacts": [
+        "docs/research/sci001/novelty_matrix.md",
+        "docs/research/sci001/source_ledger.md",
+        "docs/research/sci001/claim_review.md"
+      ],
+      "note": "started alongside BOOT-001 after lock"
     },
     {
-     "id": "BOOT-001-CODEX-1",
-     "depth": 2,
-     "runtime": "codex(gpt-6.1-sol default, effort low)",
-     "thread": "01a16983-935e-7c32-ab4d-90e3ade2264a",
-     "status": "completed",
-     "codex_subagent": "/root/hash_check"
+      "id": "ENG-001",
+      "objective": "Recorder/state inspection; state/observation map and prototype strategy",
+      "role": "Replay engineer",
+      "depends_on": [],
+      "acceptance": "Exact hooks and inaccessible state documented",
+      "status": "DONE",
+      "owner": "director-launched agent 2026-10-23T17:00Z",
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": []
+    },
+    {
+      "id": "SCI-002",
+      "objective": "Causal/metric contract: harm definition, intervention scope, control plan",
+      "role": "Causal-design worker",
+      "depends_on": [
+        "BOOT-001",
+        "SCI-001",
+        "ENG-001"
+      ],
+      "acceptance": "Independent design reviewer approves or explicitly narrows",
+      "status": "DONE (protocol v1.2 adopted, D-023)",
+      "owner": "director-launched agent 2026-10-23T17:00Z",
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": [
+        "docs/research/sci002/"
+      ]
+    },
+    {
+      "id": "ENG-002",
+      "objective": "Minimal replay prototype: snapshot/reconstruction, F/K/S execution",
+      "role": "Replay engineer + test worker",
+      "depends_on": [
+        "BOOT-001",
+        "SCI-001",
+        "ENG-001"
+      ],
+      "acceptance": "Offline invariants and corruption tests pass",
+      "status": "DONE",
+      "owner": "director-launched agent 2026-10-23T17:00Z",
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": []
+    },
+    {
+      "id": "FIX-001",
+      "objective": "Independent mechanism/control fixture generator",
+      "role": "Fixture worker",
+      "depends_on": [
+        "SCI-002"
+      ],
+      "acceptance": "Labels not derived from CCC; hidden labels not leaked",
+      "status": "DONE",
+      "owner": "codex gpt-6.1-sol (effort high) via codex-companion, 2026-10-23",
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": [],
+      "brief": "ops/briefs/FIX-001.md"
+    },
+    {
+      "id": "INF-001",
+      "objective": "Realistic backend benchmark and cost reservation",
+      "role": "Inference controller",
+      "depends_on": [
+        "GATE-A"
+      ],
+      "acceptance": "Tool-loop compatibility and zero-new-spend guards demonstrated",
+      "status": "DONE",
+      "owner": "director-launched agent 2026-10-23T17:00Z",
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": [
+        "ops/reports/INF-001.md",
+        "ccc/infra/"
+      ]
+    },
+    {
+      "id": "EXP-001",
+      "objective": "Small real development pilot; throughput and failure report",
+      "role": "Experiment controller",
+      "depends_on": [
+        "INF-001"
+      ],
+      "acceptance": "Real branch validity inspected; all attempted cases retained",
+      "status": "DONE (7/8 complete; dev05_B2 failed attempt preserved; D-029)",
+      "owner": "Claude Haiku operator",
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": []
+    },
+    {
+      "id": "STAT-001",
+      "objective": "Freeze protocol, thresholds, sample/compute plan + independent review",
+      "role": "Statistician + cold reviewer",
+      "depends_on": [
+        "GATE-B"
+      ],
+      "acceptance": "World-level analysis; realistic uncertainty; holdout untouched",
+      "status": "DONE (frozen: docs/stats/FREEZE.md, stat001_approval.json)",
+      "owner": "Claude Sonnet agent (relaunched per D-012)",
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": [
+        "docs/stats/"
+      ]
+    },
+    {
+      "id": "EXP-002",
+      "objective": "Held-out collection; immutable traces and manifests",
+      "role": "Experiment controller",
+      "depends_on": [
+        "STAT-001"
+      ],
+      "acceptance": "No unregistered model/prompt switch or selective reruns",
+      "status": "DONE (16/16 worlds, 199 records, 0 failed/invalid; D-031)",
+      "owner": null,
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": []
+    },
+    {
+      "id": "STAT-002",
+      "objective": "Frozen analysis: effect tables, intervals, missingness, claim candidates",
+      "role": "Statistician",
+      "depends_on": [
+        "EXP-002"
+      ],
+      "acceptance": "Offline rerun agrees; claims follow realized evidence",
+      "status": "DONE (docs/analysis/exp002_heldout_v2; confirmatory null)",
+      "owner": null,
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": []
+    },
+    {
+      "id": "VIS-001",
+      "objective": "Publication figures and offline replay viewer (skeleton may use labeled fixtures)",
+      "role": "Visualization worker",
+      "depends_on": [
+        "EXP-002"
+      ],
+      "acceptance": "Data lineage, readable design, no hidden live calls",
+      "status": "DONE (figures/, viewer/ builder)",
+      "owner": null,
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": []
+    },
+    {
+      "id": "REV-001",
+      "objective": "Independent scientific and code audit",
+      "role": "Independent reviewer",
+      "depends_on": [
+        "STAT-002"
+      ],
+      "acceptance": "Reproduces key metric and challenges strongest claim",
+      "status": "DONE (PASS-WITH-NARROWING; docs/review/rev001)",
+      "owner": null,
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": []
+    },
+    {
+      "id": "PUB-001",
+      "objective": "Paper, references, required appendix, working Doc sync",
+      "role": "Publication worker",
+      "depends_on": [
+        "GATE-C"
+      ],
+      "acceptance": "Numeric/source audit and template preservation",
+      "status": "TECHNICALLY DONE; OWNER placeholders remain (paper/build/submission.md)",
+      "owner": "director-launched agent 2026-10-23T17:00Z",
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": [
+        "paper/outline.md",
+        "paper/author_checklist.md",
+        "paper/references_draft.bib",
+        "ops/reports/PUB-001_early.md"
+      ]
+    },
+    {
+      "id": "REL-001",
+      "objective": "Reproduction bundle, final PDF, owner checklist",
+      "role": "Integration/release reviewer",
+      "depends_on": [
+        "PUB-001",
+        "GATE-D"
+      ],
+      "acceptance": "All mandatory gates pass or limitations explicitly narrow release",
+      "status": "OWNER-BLOCKED (docs/release/CHECKLIST.md: DONE 21 / PENDING 7 / OWNER 3)",
+      "owner": null,
+      "lease": null,
+      "attempt": 0,
+      "review_state": "none",
+      "artifacts": []
+    },
+    {
+      "id": "ENG-003",
+      "objective": "Replay hardening to SCI-002 v1",
+      "owner": "codex gpt-6.1-sol/high",
+      "depends_on": [
+        "ENG-002",
+        "SCI-002"
+      ],
+      "status": "ACCEPTED (58 replay tests, 11/11 native probes); fixture V07 test update by Haiku pending",
+      "brief": "ops/briefs/ENG-003.md"
+    },
+    {
+      "id": "ENG-004",
+      "objective": "Audit decision layer, baselines, Gate A evidence",
+      "owner": "codex gpt-6.1-sol/medium (relaunched per D-012)",
+      "depends_on": [
+        "ENG-002",
+        "FIX-001",
+        "SCI-002"
+      ],
+      "status": "DONE \u2014 Gate A FAIL reported honestly (D-015)",
+      "brief": "ops/briefs/ENG-004.md"
+    },
+    {
+      "id": "EXP-000",
+      "objective": "Live runner plumbing + offline dry-run",
+      "owner": "codex gpt-6.1-sol/medium",
+      "depends_on": [
+        "INF-001",
+        "ENG-002"
+      ],
+      "status": "ACCEPTED (22 tests; dry-run 8 valid branches, 0 live calls)",
+      "brief": "ops/briefs/EXP-000.md"
+    },
+    {
+      "id": "SCI-002b",
+      "objective": "Protocol v1.1 applying STAT-001 C1-C8",
+      "owner": "Claude Haiku",
+      "status": "ACCEPTED (v1.1 sha 7e3864c7\u2026; D-014)",
+      "depends_on": [
+        "STAT-001"
+      ]
+    },
+    {
+      "id": "EXP-000b",
+      "objective": "Per-arm map + seeds (STAT B2), live Ollama transport with model-reload guard, EXP-001 manifest",
+      "owner": "codex gpt-6.1-sol/medium",
+      "status": "ACCEPTED (35 tests); Ollama load-session gap -> EXP-000c",
+      "depends_on": [
+        "EXP-000",
+        "STAT-001"
+      ],
+      "brief": "ops/briefs/EXP-000b.md"
+    },
+    {
+      "id": "GA-DIAG",
+      "objective": "Diagnose Gate A failures; fix impl bugs only",
+      "owner": "codex gpt-6.1-sol/medium",
+      "status": "DONE (A5 bug fixed; Gate A still FAIL; proposals to REV-GA)",
+      "brief": "ops/briefs/GA-DIAG.md"
+    },
+    {
+      "id": "EXP-000c",
+      "objective": "Ollama-compatible reload detection (canary + keep_alive -1)",
+      "owner": "codex gpt-6.1-sol/low",
+      "status": "ACCEPTED (38 runner tests)",
+      "brief": "ops/briefs/EXP-000c.md"
+    },
+    {
+      "id": "REV-GA",
+      "objective": "Independent review of GA-DIAG fixes/proposals + fault-injection tests",
+      "owner": "Claude Sonnet",
+      "status": "ACCEPTED (9/9 fault-injection; P0 supported unreachable) \u2014 will review AMD-001"
+    },
+    {
+      "id": "PUB-002",
+      "objective": "Paper draft methods-first with VERIFIED/PROVISIONAL tags",
+      "owner": "Claude Sonnet",
+      "status": "DRAFT ACCEPTED (paper/draft.md ~3.7k words main text; trim to 6pp later). Note: docs/gate_a/diag IS committed (GA-DIAG commit)."
+    },
+    {
+      "id": "SCI-001b",
+      "objective": "Close read P01/P04 + recency",
+      "owner": "Claude Sonnet",
+      "status": "ACCEPTED (novelty narrowed: sham/regeneration precedented by P04; 4 draft fixes queued for PUB-003)"
+    },
+    {
+      "id": "AMD-001",
+      "objective": "Protocol amendment v1.2 draft (N-placebo, extractor, reporting, constructed positives)",
+      "owner": "Claude Sonnet",
+      "status": "r3 adopted by REV-AMD (conditional edits applied); protocol.md v1.2 finalization by drafter"
+    },
+    {
+      "id": "ENG-005",
+      "objective": "Audit impl bugs vs v1.1 (C3 exact lesion test, V9/V10, A6 intended validator, A6b precondition)",
+      "owner": "codex gpt-6.1-sol/medium",
+      "status": "ACCEPTED (263 tests; A6 230/360 under retracted map)"
+    },
+    {
+      "id": "AMD-IMP-A",
+      "objective": "v1.2 core impl (IMP-0..4,7) in worktree v1.2-impl",
+      "owner": "codex gpt-6.1-sol/medium",
+      "status": "DONE (superseded/merged; see DECISIONS)",
+      "worktree": "/Users/aarav/Documents/Projects/ApartSprint-wt-v12 (branch v1.2-impl)"
+    },
+    {
+      "id": "AMD-IMP-B",
+      "objective": "Constructed controls derivation only (IMP-6a) in worktree",
+      "owner": "codex gpt-6.1-sol/low",
+      "status": "DONE (superseded/merged; see DECISIONS)",
+      "worktree": "/Users/aarav/Documents/Projects/ApartSprint-wt-v12 (branch v1.2-impl)"
+    },
+    {
+      "id": "ENH-A",
+      "objective": "novelty & competition review",
+      "owner": "claude sonnet",
+      "status": "DONE",
+      "writes": "docs/enh/r1/A_*",
+      "gate": "ENH-R1"
+    },
+    {
+      "id": "ENH-B",
+      "objective": "adversarial statistical review",
+      "owner": "codex gpt-6.1-sol/medium",
+      "status": "DONE",
+      "writes": "docs/enh/r1/B_stats.md, scratch_B/",
+      "gate": "ENH-R1"
+    },
+    {
+      "id": "ENH-C",
+      "objective": "research direction challenger",
+      "owner": "claude sonnet",
+      "status": "DONE",
+      "writes": "docs/enh/r1/C_directions.md, scratch_C/",
+      "gate": "ENH-R1"
+    },
+    {
+      "id": "ENH-FIX1",
+      "objective": "certificate validity mapping fix -> exp002_heldout_v3",
+      "owner": "codex gpt-6.1-sol/medium",
+      "status": "DONE",
+      "writes": "ccc/analysis/loaders.py, pipeline.py, tests/test_fix001_*, docs/analysis/exp002_heldout_v3/, docs/enh/fix/",
+      "gate": "ENH-R1",
+      "note": "report ops/reports/ENH-FIX1.md (artifacts internally call it FIX-001; the older FIX-001 report was restored)"
+    },
+    {
+      "id": "SEC-001",
+      "objective": "release safety & reproducibility audit (read-only)",
+      "owner": "claude sonnet",
+      "status": "DONE",
+      "writes": "docs/enh/sec/",
+      "gate": "ENH-R1"
+    },
+    {
+      "id": "BENCH-IMP",
+      "objective": "ccc/bench identifiability benchmark build + DEV run",
+      "owner": "codex gpt-6.1-sol/high (core research artifact; stated reason)",
+      "status": "DONE (DEV run; commit 1c055a8)",
+      "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/",
+      "gate": "ENH-R2"
+    },
+    {
+      "id": "DEMO-DATA",
+      "objective": "explorer evidence data pack",
+      "owner": "codex gpt-6.1-sol/medium",
+      "status": "DONE",
+      "writes": "demo/build_data.py, demo/data/, tests/test_demo_data.py",
+      "gate": "ENH-R2"
+    },
+    {
+      "id": "PROTO-001",
+      "objective": "R2 prospective protocol draft",
+      "owner": "claude sonnet",
+      "status": "DONE",
+      "writes": "docs/enh/r2/PROTOCOL.md, FREEZE_TEMPLATE.json",
+      "gate": "ENH-R2"
+    },
+    {
+      "id": "REL-ENH1",
+      "objective": "doc-ID/email redaction in tree, scanner rule, README swap, CLAIMS/CHECKLIST fixes",
+      "owner": "codex gpt-6.1-sol/low",
+      "status": "DONE",
+      "writes": "README.md, scripts/secret_scan.py, 5 redaction files, ops/CLAIMS.md, docs/release/CHECKLIST.md",
+      "gate": "ENH-R4"
+    },
+    {
+      "id": "PAPER-PLAN",
+      "objective": "paper v2 architecture + draft with result placeholders",
+      "owner": "claude sonnet",
+      "status": "DONE",
+      "writes": "paper/v2/",
+      "gate": "ENH-R4"
+    },
+    {
+      "id": "DEMO-UI",
+      "objective": "offline evidence explorer UI",
+      "owner": "claude sonnet",
+      "status": "DONE (pending R4 number-trace QA and twins view)",
+      "writes": "demo/explorer/",
+      "gate": "ENH-R4"
+    },
+    {
+      "id": "BENCH-ALIGN",
+      "objective": "align ccc/bench with PROTOCOL (CRN, seed rule, report generator, strongest baseline)",
+      "owner": "codex gpt-6.1-sol/medium",
+      "status": "DONE",
+      "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/",
+      "gate": "ENH-R2/R4"
+    },
+    {
+      "id": "VIS-ENH",
+      "objective": "paper v2 figures from benchmark outputs (DEV prototype)",
+      "owner": "claude sonnet",
+      "status": "DONE",
+      "writes": "figures/enh/",
+      "gate": "ENH-R2/R4"
+    },
+    {
+      "id": "DEMO-TWINS",
+      "objective": "explorer twin-worlds centrepiece",
+      "owner": "claude sonnet (resumed DEMO-UI)",
+      "status": "DONE",
+      "writes": "demo/",
+      "gate": "ENH-R2/R4"
+    },
+    {
+      "id": "BENCH-ALIGN2",
+      "objective": "CCC-L v1, RQ2/RQ4b amendments, demo refresh, twin_exhibit",
+      "owner": "codex gpt-6.1-sol/medium",
+      "status": "DONE",
+      "writes": "ccc/bench/, docs/enh/bench/, regenerated demo outputs",
+      "gate": "ENH-R2/R3"
+    },
+    {
+      "id": "CITE-CHECK",
+      "objective": "verify paper v2 references and claim-citation fidelity",
+      "owner": "claude sonnet",
+      "status": "DONE",
+      "writes": "paper/v2/references_v2.bib, CITATION_AUDIT.md",
+      "gate": "ENH-R2/R3"
+    },
+    {
+      "id": "REV-R2",
+      "objective": "independent freeze review",
+      "owner": "claude sonnet",
+      "status": "DONE (APPROVE-WITH-CONDITIONS)",
+      "gate": "ENH-R2"
+    },
+    {
+      "id": "RUN-R2",
+      "objective": "prospective benchmark run (single pass)",
+      "owner": "director (CLI)",
+      "status": "STOPPED partial serial run; 297 unit files preserved; completed run_par supersedes execution only",
+      "writes": "docs/enh/r2/run/",
+      "gate": "ENH-R3",
+      "historical_status_at_audit": "RUNNING",
+      "reconciliation_evidence": "D-046; run_par/COMPLETE.json; source audit receipts",
+      "lease": null
+    },
+    {
+      "id": "RA-LEAD",
+      "objective": "EXP-003 real-agent twin probe on Modal (cap $51)",
+      "owner": "claude sonnet lead",
+      "status": "STOPPED; EXP-003 NOT COMPLETED; no result claimed",
+      "gate": "ENH-EXP003",
+      "brief": "docs/enh/exp003/BRIEF.md",
+      "historical_status_at_audit": "RUNNING",
+      "reconciliation_evidence": "D-047a; docs/enh/exp003/LOG.md",
+      "lease": null
+    },
+    {
+      "id": "WRITE-RES",
+      "objective": "research on winning paper writing; Apart winners analysis; writing playbook",
+      "owner": "claude sonnet",
+      "status": "DONE; writing artifact exists",
+      "gate": "ENH-R4",
+      "historical_status_at_audit": "RUNNING",
+      "reconciliation_evidence": "docs/enh/writing/WRITING_PLAYBOOK.md",
+      "lease": null
+    },
+    {
+      "id": "BENCH-PAR",
+      "objective": "parallel execution driver for frozen prospective run (byte-identical check)",
+      "owner": "codex gpt-6.1-sol/medium",
+      "status": "DONE; frozen prospective run complete; platform limitation retained",
+      "gate": "ENH-R3",
+      "historical_status_at_audit": "RUNNING",
+      "reconciliation_evidence": "docs/enh/r2/run_par/COMPLETE.json; REV_R3; D-048",
+      "lease": null
+    },
+    {
+      "id": "CODEX-FINAL-AUDIT",
+      "objective": "Final independent correctness audit and owner handoff; no new experiments",
+      "owner": "Codex GPT-6.1 Sol high; scoped science and explorer reviewers",
+      "status": "DONE; owner finalization required",
+      "writes": [
+        "paper/v2/",
+        "README.md",
+        "docs/release/",
+        "ops/",
+        "docs/enh/JUDGE_SUMMARY.md",
+        "docs/enh/r2/PARALLEL_EXECUTION.md",
+        "demo/"
+      ],
+      "lease": null,
+      "children": [
+        "FINAL-AUDIT-SCI",
+        "FINAL-AUDIT-DEMO"
+      ],
+      "review_state": "fresh-context cold review completed; all machine P0 checks resolved",
+      "artifacts": [
+        "ops/reports/CODEX_FINAL_AUDIT.md",
+        "ops/reports/CODEX_FINAL_HANDOFF.md"
+      ]
+    },
+    {
+      "id": "PUB-FINAL",
+      "objective": "Final manuscript, original visual system, editable artifacts and README from completed audit",
+      "owner": "Codex publication lead",
+      "status": "DONE; finished editable submission candidate; owner review and submission pending",
+      "writes": [
+        "paper/final/",
+        "docs/assets/",
+        "docs/STUDIO_RESEARCH_PLAN.md",
+        "README.md",
+        "ops/tasks.json"
+      ],
+      "lease": null,
+      "children": [
+        "PUB-FINAL-FIG (initial context ended; lead finished)",
+        "PUB-FINAL-EVIDENCE (ledger saved)",
+        "PUB-FINAL-BUILD (initial context ended; lead finished)",
+        "science_review",
+        "stat_review",
+        "judge_review",
+        "final_cold"
+      ],
+      "artifacts": [
+        "paper/final/manuscript.md",
+        "paper/final/submission.pdf",
+        "paper/final/submission.docx",
+        "paper/final/FINAL_QA.md",
+        "paper/final/EDITING_GUIDE.md",
+        "docs/STUDIO_RESEARCH_PLAN.md",
+        "README.md"
+      ],
+      "review_state": "Three independent substantive review/revision rounds; final independent cold read and all12pages inspected; final publication verification PASS",
+      "completed_utc": "2026-10-25T16:39:21.957373+00:00"
+    },
+    {
+      "id": "REPO-FINAL",
+      "objective": "Owner-authorized final public repository overhaul; no paper PDF or new experiments",
+      "owner": "Codex repository integration lead",
+      "status": "VERIFIED; publishing and GitHub maintenance",
+      "writes": [
+        "README.md",
+        "docs/",
+        "scripts/",
+        "demo/",
+        "paper/",
+        "ops/",
+        "repository metadata and refs"
+      ],
+      "lease": {
+        "acquired_utc": "2026-10-25T18:13:30.866065+00:00",
+        "scope": "repository maintenance; frozen evidence read-only"
+      },
+      "children": [
+        "REPO-FINAL-SCI",
+        "REPO-FINAL-ENG"
+      ],
+      "review_state": "Independent scientific and engineering passes completed; findings fixed; editorial/design/browser passes completed",
+      "artifacts": [
+        "README.md",
+        "docs/README.md",
+        "docs/RESULTS.md",
+        "docs/REPRODUCING.md",
+        "docs/assets/",
+        "ops/reports/repo_final/REVIEW.md"
+      ],
+      "scope_exclusions": [
+        "No final paper PDF",
+        "No experiment or live Google Doc changes",
+        "No public history rewrite"
+      ]
     }
-   ],
-   "open_items": [
-    "Modal $0 net-spend limit + credit balance (owner dashboard)",
-    "module 08 \u00a7F paper outline/author checklist + Drive check deferred to PUB-001 (module 12 not in BOOT inputs)"
-   ]
+  ],
+  "handoff": {
+    "running_jobs": "No local experimental controller identified in permitted process inspection; no job started or stopped by audit. Remote job state NOT VERIFIED.",
+    "local_audit_branch": "codex/final-submission-audit",
+    "local_commit_state": "Resolve git rev-list origin/main..HEAD; no push in this audit",
+    "repo_visibility": "PUBLIC independently confirmed via GitHub connector 2026-10-25; history/document access and release decisions require owner",
+    "worktree": "Existing ../ApartSprint-wt-v12 left untouched",
+    "next": "Owner wording/graphics/template approval, release rights/privacy decisions, final submission"
   },
-  {
-   "id": "SCI-001",
-   "objective": "Closest prior art and claim review; novelty matrix; verified source ledger",
-   "role": "Source worker + skeptical reviewer",
-   "depends_on": [],
-   "acceptance": "At least the closest four methods inspected; no unsupported first claim",
-   "status": "DONE",
-   "owner": "director-launched read-only agent",
-   "lease": null,
-   "attempt": 0,
-   "review_state": "director-accepted 2026-10-23T16:13:11Z; REV-001 to re-verify sources + recency check before submission",
-   "artifacts": [
-    "docs/research/sci001/novelty_matrix.md",
-    "docs/research/sci001/source_ledger.md",
-    "docs/research/sci001/claim_review.md"
-   ],
-   "note": "started alongside BOOT-001 after lock"
-  },
-  {
-   "id": "ENG-001",
-   "objective": "Recorder/state inspection; state/observation map and prototype strategy",
-   "role": "Replay engineer",
-   "depends_on": [],
-   "acceptance": "Exact hooks and inaccessible state documented",
-   "status": "DONE",
-   "owner": "director-launched agent 2026-10-23T17:00Z",
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": []
-  },
-  {
-   "id": "SCI-002",
-   "objective": "Causal/metric contract: harm definition, intervention scope, control plan",
-   "role": "Causal-design worker",
-   "depends_on": [
-    "BOOT-001",
-    "SCI-001",
-    "ENG-001"
-   ],
-   "acceptance": "Independent design reviewer approves or explicitly narrows",
-   "status": "DONE (protocol v1.2 adopted, D-023)",
-   "owner": "director-launched agent 2026-10-23T17:00Z",
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": [
-    "docs/research/sci002/"
-   ]
-  },
-  {
-   "id": "ENG-002",
-   "objective": "Minimal replay prototype: snapshot/reconstruction, F/K/S execution",
-   "role": "Replay engineer + test worker",
-   "depends_on": [
-    "BOOT-001",
-    "SCI-001",
-    "ENG-001"
-   ],
-   "acceptance": "Offline invariants and corruption tests pass",
-   "status": "DONE",
-   "owner": "director-launched agent 2026-10-23T17:00Z",
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": []
-  },
-  {
-   "id": "FIX-001",
-   "objective": "Independent mechanism/control fixture generator",
-   "role": "Fixture worker",
-   "depends_on": [
-    "SCI-002"
-   ],
-   "acceptance": "Labels not derived from CCC; hidden labels not leaked",
-   "status": "DONE",
-   "owner": "codex gpt-6.1-sol (effort high) via codex-companion, 2026-10-23",
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": [],
-   "brief": "ops/briefs/FIX-001.md"
-  },
-  {
-   "id": "INF-001",
-   "objective": "Realistic backend benchmark and cost reservation",
-   "role": "Inference controller",
-   "depends_on": [
-    "GATE-A"
-   ],
-   "acceptance": "Tool-loop compatibility and zero-new-spend guards demonstrated",
-   "status": "DONE",
-   "owner": "director-launched agent 2026-10-23T17:00Z",
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": [
-    "ops/reports/INF-001.md",
-    "ccc/infra/"
-   ]
-  },
-  {
-   "id": "EXP-001",
-   "objective": "Small real development pilot; throughput and failure report",
-   "role": "Experiment controller",
-   "depends_on": [
-    "INF-001"
-   ],
-   "acceptance": "Real branch validity inspected; all attempted cases retained",
-   "status": "DONE (7/8 complete; dev05_B2 failed attempt preserved; D-029)",
-   "owner": "Claude Haiku operator",
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": []
-  },
-  {
-   "id": "STAT-001",
-   "objective": "Freeze protocol, thresholds, sample/compute plan + independent review",
-   "role": "Statistician + cold reviewer",
-   "depends_on": [
-    "GATE-B"
-   ],
-   "acceptance": "World-level analysis; realistic uncertainty; holdout untouched",
-   "status": "DONE (frozen: docs/stats/FREEZE.md, stat001_approval.json)",
-   "owner": "Claude Sonnet agent (relaunched per D-012)",
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": [
-    "docs/stats/"
-   ]
-  },
-  {
-   "id": "EXP-002",
-   "objective": "Held-out collection; immutable traces and manifests",
-   "role": "Experiment controller",
-   "depends_on": [
-    "STAT-001"
-   ],
-   "acceptance": "No unregistered model/prompt switch or selective reruns",
-   "status": "DONE (16/16 worlds, 199 records, 0 failed/invalid; D-031)",
-   "owner": null,
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": []
-  },
-  {
-   "id": "STAT-002",
-   "objective": "Frozen analysis: effect tables, intervals, missingness, claim candidates",
-   "role": "Statistician",
-   "depends_on": [
-    "EXP-002"
-   ],
-   "acceptance": "Offline rerun agrees; claims follow realized evidence",
-   "status": "DONE (docs/analysis/exp002_heldout_v2; confirmatory null)",
-   "owner": null,
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": []
-  },
-  {
-   "id": "VIS-001",
-   "objective": "Publication figures and offline replay viewer (skeleton may use labeled fixtures)",
-   "role": "Visualization worker",
-   "depends_on": [
-    "EXP-002"
-   ],
-   "acceptance": "Data lineage, readable design, no hidden live calls",
-   "status": "DONE (figures/, viewer/ builder)",
-   "owner": null,
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": []
-  },
-  {
-   "id": "REV-001",
-   "objective": "Independent scientific and code audit",
-   "role": "Independent reviewer",
-   "depends_on": [
-    "STAT-002"
-   ],
-   "acceptance": "Reproduces key metric and challenges strongest claim",
-   "status": "DONE (PASS-WITH-NARROWING; docs/review/rev001)",
-   "owner": null,
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": []
-  },
-  {
-   "id": "PUB-001",
-   "objective": "Paper, references, required appendix, working Doc sync",
-   "role": "Publication worker",
-   "depends_on": [
-    "GATE-C"
-   ],
-   "acceptance": "Numeric/source audit and template preservation",
-   "status": "TECHNICALLY DONE; OWNER placeholders remain (paper/build/submission.md)",
-   "owner": "director-launched agent 2026-10-23T17:00Z",
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": [
-    "paper/outline.md",
-    "paper/author_checklist.md",
-    "paper/references_draft.bib",
-    "ops/reports/PUB-001_early.md"
-   ]
-  },
-  {
-   "id": "REL-001",
-   "objective": "Reproduction bundle, final PDF, owner checklist",
-   "role": "Integration/release reviewer",
-   "depends_on": [
-    "PUB-001",
-    "GATE-D"
-   ],
-   "acceptance": "All mandatory gates pass or limitations explicitly narrow release",
-   "status": "OWNER-BLOCKED (docs/release/CHECKLIST.md: DONE 21 / PENDING 7 / OWNER 3)",
-   "owner": null,
-   "lease": null,
-   "attempt": 0,
-   "review_state": "none",
-   "artifacts": []
-  },
-  {
-   "id": "ENG-003",
-   "objective": "Replay hardening to SCI-002 v1",
-   "owner": "codex gpt-6.1-sol/high",
-   "depends_on": [
-    "ENG-002",
-    "SCI-002"
-   ],
-   "status": "ACCEPTED (58 replay tests, 11/11 native probes); fixture V07 test update by Haiku pending",
-   "brief": "ops/briefs/ENG-003.md"
-  },
-  {
-   "id": "ENG-004",
-   "objective": "Audit decision layer, baselines, Gate A evidence",
-   "owner": "codex gpt-6.1-sol/medium (relaunched per D-012)",
-   "depends_on": [
-    "ENG-002",
-    "FIX-001",
-    "SCI-002"
-   ],
-   "status": "DONE \u2014 Gate A FAIL reported honestly (D-015)",
-   "brief": "ops/briefs/ENG-004.md"
-  },
-  {
-   "id": "EXP-000",
-   "objective": "Live runner plumbing + offline dry-run",
-   "owner": "codex gpt-6.1-sol/medium",
-   "depends_on": [
-    "INF-001",
-    "ENG-002"
-   ],
-   "status": "ACCEPTED (22 tests; dry-run 8 valid branches, 0 live calls)",
-   "brief": "ops/briefs/EXP-000.md"
-  },
-  {
-   "id": "SCI-002b",
-   "objective": "Protocol v1.1 applying STAT-001 C1-C8",
-   "owner": "Claude Haiku",
-   "status": "ACCEPTED (v1.1 sha 7e3864c7\u2026; D-014)",
-   "depends_on": [
-    "STAT-001"
-   ]
-  },
-  {
-   "id": "EXP-000b",
-   "objective": "Per-arm map + seeds (STAT B2), live Ollama transport with model-reload guard, EXP-001 manifest",
-   "owner": "codex gpt-6.1-sol/medium",
-   "status": "ACCEPTED (35 tests); Ollama load-session gap -> EXP-000c",
-   "depends_on": [
-    "EXP-000",
-    "STAT-001"
-   ],
-   "brief": "ops/briefs/EXP-000b.md"
-  },
-  {
-   "id": "GA-DIAG",
-   "objective": "Diagnose Gate A failures; fix impl bugs only",
-   "owner": "codex gpt-6.1-sol/medium",
-   "status": "DONE (A5 bug fixed; Gate A still FAIL; proposals to REV-GA)",
-   "brief": "ops/briefs/GA-DIAG.md"
-  },
-  {
-   "id": "EXP-000c",
-   "objective": "Ollama-compatible reload detection (canary + keep_alive -1)",
-   "owner": "codex gpt-6.1-sol/low",
-   "status": "ACCEPTED (38 runner tests)",
-   "brief": "ops/briefs/EXP-000c.md"
-  },
-  {
-   "id": "REV-GA",
-   "objective": "Independent review of GA-DIAG fixes/proposals + fault-injection tests",
-   "owner": "Claude Sonnet",
-   "status": "ACCEPTED (9/9 fault-injection; P0 supported unreachable) \u2014 will review AMD-001"
-  },
-  {
-   "id": "PUB-002",
-   "objective": "Paper draft methods-first with VERIFIED/PROVISIONAL tags",
-   "owner": "Claude Sonnet",
-   "status": "DRAFT ACCEPTED (paper/draft.md ~3.7k words main text; trim to 6pp later). Note: docs/gate_a/diag IS committed (GA-DIAG commit)."
-  },
-  {
-   "id": "SCI-001b",
-   "objective": "Close read P01/P04 + recency",
-   "owner": "Claude Sonnet",
-   "status": "ACCEPTED (novelty narrowed: sham/regeneration precedented by P04; 4 draft fixes queued for PUB-003)"
-  },
-  {
-   "id": "AMD-001",
-   "objective": "Protocol amendment v1.2 draft (N-placebo, extractor, reporting, constructed positives)",
-   "owner": "Claude Sonnet",
-   "status": "r3 adopted by REV-AMD (conditional edits applied); protocol.md v1.2 finalization by drafter"
-  },
-  {
-   "id": "ENG-005",
-   "objective": "Audit impl bugs vs v1.1 (C3 exact lesion test, V9/V10, A6 intended validator, A6b precondition)",
-   "owner": "codex gpt-6.1-sol/medium",
-   "status": "ACCEPTED (263 tests; A6 230/360 under retracted map)"
-  },
-  {
-   "id": "AMD-IMP-A",
-   "objective": "v1.2 core impl (IMP-0..4,7) in worktree v1.2-impl",
-   "owner": "codex gpt-6.1-sol/medium",
-   "status": "DONE (superseded/merged; see DECISIONS)",
-   "worktree": "/Users/aarav/Documents/Projects/ApartSprint-wt-v12 (branch v1.2-impl)"
-  },
-  {
-   "id": "AMD-IMP-B",
-   "objective": "Constructed controls derivation only (IMP-6a) in worktree",
-   "owner": "codex gpt-6.1-sol/low",
-   "status": "DONE (superseded/merged; see DECISIONS)",
-   "worktree": "/Users/aarav/Documents/Projects/ApartSprint-wt-v12 (branch v1.2-impl)"
-  },
-  {
-   "id": "ENH-A",
-   "objective": "novelty & competition review",
-   "owner": "claude sonnet",
-   "status": "DONE",
-   "writes": "docs/enh/r1/A_*",
-   "gate": "ENH-R1"
-  },
-  {
-   "id": "ENH-B",
-   "objective": "adversarial statistical review",
-   "owner": "codex gpt-6.1-sol/medium",
-   "status": "DONE",
-   "writes": "docs/enh/r1/B_stats.md, scratch_B/",
-   "gate": "ENH-R1"
-  },
-  {
-   "id": "ENH-C",
-   "objective": "research direction challenger",
-   "owner": "claude sonnet",
-   "status": "DONE",
-   "writes": "docs/enh/r1/C_directions.md, scratch_C/",
-   "gate": "ENH-R1"
-  },
-  {
-   "id": "ENH-FIX1",
-   "objective": "certificate validity mapping fix -> exp002_heldout_v3",
-   "owner": "codex gpt-6.1-sol/medium",
-   "status": "DONE",
-   "writes": "ccc/analysis/loaders.py, pipeline.py, tests/test_fix001_*, docs/analysis/exp002_heldout_v3/, docs/enh/fix/",
-   "gate": "ENH-R1",
-   "note": "report ops/reports/ENH-FIX1.md (artifacts internally call it FIX-001; the older FIX-001 report was restored)"
-  },
-  {
-   "id": "SEC-001",
-   "objective": "release safety & reproducibility audit (read-only)",
-   "owner": "claude sonnet",
-   "status": "DONE",
-   "writes": "docs/enh/sec/",
-   "gate": "ENH-R1"
-  },
-  {
-   "id": "BENCH-IMP",
-   "objective": "ccc/bench identifiability benchmark build + DEV run",
-   "owner": "codex gpt-6.1-sol/high (core research artifact; stated reason)",
-   "status": "DONE (DEV run; commit 1c055a8)",
-   "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/",
-   "gate": "ENH-R2"
-  },
-  {
-   "id": "DEMO-DATA",
-   "objective": "explorer evidence data pack",
-   "owner": "codex gpt-6.1-sol/medium",
-   "status": "DONE",
-   "writes": "demo/build_data.py, demo/data/, tests/test_demo_data.py",
-   "gate": "ENH-R2"
-  },
-  {
-   "id": "PROTO-001",
-   "objective": "R2 prospective protocol draft",
-   "owner": "claude sonnet",
-   "status": "DONE",
-   "writes": "docs/enh/r2/PROTOCOL.md, FREEZE_TEMPLATE.json",
-   "gate": "ENH-R2"
-  },
-  {
-   "id": "REL-ENH1",
-   "objective": "doc-ID/email redaction in tree, scanner rule, README swap, CLAIMS/CHECKLIST fixes",
-   "owner": "codex gpt-6.1-sol/low",
-   "status": "DONE",
-   "writes": "README.md, scripts/secret_scan.py, 5 redaction files, ops/CLAIMS.md, docs/release/CHECKLIST.md",
-   "gate": "ENH-R4"
-  },
-  {
-   "id": "PAPER-PLAN",
-   "objective": "paper v2 architecture + draft with result placeholders",
-   "owner": "claude sonnet",
-   "status": "DONE",
-   "writes": "paper/v2/",
-   "gate": "ENH-R4"
-  },
-  {
-   "id": "DEMO-UI",
-   "objective": "offline evidence explorer UI",
-   "owner": "claude sonnet",
-   "status": "DONE (pending R4 number-trace QA and twins view)",
-   "writes": "demo/explorer/",
-   "gate": "ENH-R4"
-  },
-  {
-   "id": "BENCH-ALIGN",
-   "objective": "align ccc/bench with PROTOCOL (CRN, seed rule, report generator, strongest baseline)",
-   "owner": "codex gpt-6.1-sol/medium",
-   "status": "DONE",
-   "writes": "ccc/bench/, tests/test_bench_*, docs/enh/bench/",
-   "gate": "ENH-R2/R4"
-  },
-  {
-   "id": "VIS-ENH",
-   "objective": "paper v2 figures from benchmark outputs (DEV prototype)",
-   "owner": "claude sonnet",
-   "status": "DONE",
-   "writes": "figures/enh/",
-   "gate": "ENH-R2/R4"
-  },
-  {
-   "id": "DEMO-TWINS",
-   "objective": "explorer twin-worlds centrepiece",
-   "owner": "claude sonnet (resumed DEMO-UI)",
-   "status": "DONE",
-   "writes": "demo/",
-   "gate": "ENH-R2/R4"
-  },
-  {
-   "id": "BENCH-ALIGN2",
-   "objective": "CCC-L v1, RQ2/RQ4b amendments, demo refresh, twin_exhibit",
-   "owner": "codex gpt-6.1-sol/medium",
-   "status": "DONE",
-   "writes": "ccc/bench/, docs/enh/bench/, regenerated demo outputs",
-   "gate": "ENH-R2/R3"
-  },
-  {
-   "id": "CITE-CHECK",
-   "objective": "verify paper v2 references and claim-citation fidelity",
-   "owner": "claude sonnet",
-   "status": "DONE",
-   "writes": "paper/v2/references_v2.bib, CITATION_AUDIT.md",
-   "gate": "ENH-R2/R3"
-  },
-  {
-   "id": "REV-R2",
-   "objective": "independent freeze review",
-   "owner": "claude sonnet",
-   "status": "DONE (APPROVE-WITH-CONDITIONS)",
-   "gate": "ENH-R2"
-  },
-  {
-   "id": "RUN-R2",
-   "objective": "prospective benchmark run (single pass)",
-   "owner": "director (CLI)",
-   "status": "RUNNING",
-   "writes": "docs/enh/r2/run/",
-   "gate": "ENH-R3"
-  },
-  {
-   "id": "RA-LEAD",
-   "objective": "EXP-003 real-agent twin probe on Modal (cap $51)",
-   "owner": "claude sonnet lead",
-   "status": "RUNNING",
-   "gate": "ENH-EXP003",
-   "brief": "docs/enh/exp003/BRIEF.md"
-  },
-  {
-   "id": "WRITE-RES",
-   "objective": "research on winning paper writing; Apart winners analysis; writing playbook",
-   "owner": "claude sonnet",
-   "status": "RUNNING",
-   "gate": "ENH-R4"
-  },
-  {
-   "id": "BENCH-PAR",
-   "objective": "parallel execution driver for frozen prospective run (byte-identical check)",
-   "owner": "codex gpt-6.1-sol/medium",
-   "status": "RUNNING",
-   "gate": "ENH-R3"
-  }
- ],
- "handoff": {
-  "running_jobs": "RUN-R2 prospective benchmark (background CLI); RA-LEAD (+ its children)",
-  "unpushed_commits": 1,
-  "repo_visibility": "PUBLIC (re-confirmed by SEC-001 2026-10-24); owner decision pending",
-  "worktree": "../ApartSprint-wt-v12 (branch v1.2-impl, fully merged into main; safe to remove after owner OK)"
- }
+  "historical_live_agents_at_audit_start": [
+    {
+      "id": "RA-LEAD",
+      "owner": "claude sonnet orchestrator; Codex-only children",
+      "started_utc": "2026-10-24T21:05Z (resumed 23:45Z after session limit)"
+    },
+    {
+      "id": "WRITE-RES",
+      "owner": "claude sonnet (resumed 23:45Z)"
+    },
+    {
+      "id": "BENCH-PAR",
+      "owner": "codex gpt-6.1-sol/medium",
+      "started_utc": "2026-10-24T23:45Z",
+      "writes": "scripts/bench_parallel_run.py, tests/test_bench_parallel.py, docs/enh/r2/run_par/"
+    }
+  ]
 }

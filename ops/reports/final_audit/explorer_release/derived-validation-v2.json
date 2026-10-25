@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "cases": 21,
+  "heldout": 16,
+  "scripted_development": 5,
+  "heldout_statuses": {
+    "not_supported": 11,
+    "inconclusive": 5
+  },
+  "scheduled": {
+    "valid": 143,
+    "not_run": 56
+  },
+  "twins": [
+    {
+      "kind": "P1",
+      "seed": 2137797,
+      "epsilon": 0,
+      "separator": "I3"
+    },
+    {
+      "kind": "P2",
+      "seed": 19693329,
+      "epsilon": 0,
+      "separator": "I4"
+    },
+    {
+      "kind": "P3",
+      "seed": 11436370,
+      "epsilon": 0,
+      "separator": "I5"
+    },
+    {
+      "kind": "P4",
+      "seed": 38171445,
+      "epsilon": 0,
+      "separator": "I1"
+    },
+    {
+      "kind": "P5",
+      "seed": 5221106,
+      "epsilon": 0,
+      "separator": "I0"
+    },
+    {
+      "kind": "P6",
+      "seed": 7271111,
+      "epsilon": 0,
+      "separator": "I1"
+    }
+  ],
+  "criteria": {
+    "RQ1": "pass",
+    "RQ2": "pass",
+    "RQ3": "fail",
+    "RQ4": "fail",
+    "RQ4b": "fail",
+    "RQ5": "fail",
+    "RQ6": "descriptive"
+  },
+  "manifest_sha256": "86cc3928f0e35ef707ce20e8aa8d26a0ca0314c181fafb60dd52fbfc13d63765",
+  "changed_files": [
+    "demo/build_data.py",
+    "demo/build_twins.py",
+    "demo/data/MANIFEST.json",
+    "demo/data/TRACE.md",
+    "demo/data/twins.json",
+    "demo/explorer/README.md",
+    "demo/explorer/app.js",
+    "demo/explorer/bundle_data.py",
+    "demo/explorer/data/index.js",
+    "demo/explorer/data/twins.js"
+  ],
+  "preserved_original_sha256": "4d2478090f46a68cc3c3c861ecf7248f0ccda01b8783d70a949650c257d91436",
+  "original_bundle_case_comparisons": 21,
+  "original_bundle_twins_equal": true,
+  "original_metadata_only_difference": [
+    {
+      "path": "$.generator_commit_HEAD",
+      "before": "0d8f3d4ec8c6a2784ed85ec890cf36b5a9cda9b4",
+      "after": "541c989c78b4793a65371daafa2b69d8f02db0f9"
+    }
+  ]
+}

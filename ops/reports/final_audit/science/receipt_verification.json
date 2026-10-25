@@ -1,0 +1,1149 @@
+{
+  "RQ3": {
+    "by_epsilon": {
+      "0": {
+        "cp95": [
+          0.2420194370235897,
+          0.37386780453377066
+        ],
+        "k": 61,
+        "n": 200,
+        "rate": 0.305,
+        "status": "fail",
+        "supported_with_margin": false
+      },
+      "0.1": {
+        "cp95": [
+          0.15131057199551862,
+          0.2676539207852866
+        ],
+        "k": 41,
+        "n": 200,
+        "rate": 0.205,
+        "status": "pass",
+        "supported_with_margin": false
+      }
+    },
+    "compatibility_fields": "top-level k/n/rate/cp95 are eps=0 only; strata never pooled",
+    "cp95": [
+      0.2420194370235897,
+      0.37386780453377066
+    ],
+    "k": 61,
+    "n": 200,
+    "rate": 0.305,
+    "status": "fail",
+    "supported_with_margin": false,
+    "table": "T4"
+  },
+  "aggregate_verdicts": {
+    "RQ1": "pass",
+    "RQ2": "pass",
+    "RQ3": "fail",
+    "RQ4": "fail",
+    "RQ4b": "fail",
+    "RQ5": "fail",
+    "RQ6": "descriptive"
+  },
+  "current_gate": {
+    "compared": 160,
+    "independent_seeds": 40,
+    "infrastructure_error": true,
+    "mismatch_count": 160,
+    "missing_count": 160,
+    "path": "docs/enh/r2/run_par/GATE.json",
+    "sha256": "1ddb1f8605c434307bc6d450481dea23761c714d8734fcd1ccce9fc0a4e6822e",
+    "status": "FAIL"
+  },
+  "freeze": {
+    "actual": "ea8e260ac7ee28dd1e861fd1c9ae39d7c13f8e8cc17bab0042b7ba1d82e4fbe3",
+    "receipt": "ea8e260ac7ee28dd1e861fd1c9ae39d7c13f8e8cc17bab0042b7ba1d82e4fbe3"
+  },
+  "frozen_sources": {
+    "ccc/audit/__init__.py": {
+      "actual": "04a0a646d3e31650c06a144fb04b88b428e1ae102448f52126b10e576be17e96",
+      "equal": true,
+      "expected": "04a0a646d3e31650c06a144fb04b88b428e1ae102448f52126b10e576be17e96"
+    },
+    "ccc/audit/commitment_aliases.json": {
+      "actual": "859ece019675ad36ae6b66fbbb659e88183947e8f690ca7e4f474e6a54a93645",
+      "equal": true,
+      "expected": "859ece019675ad36ae6b66fbbb659e88183947e8f690ca7e4f474e6a54a93645"
+    },
+    "ccc/audit/commitments.py": {
+      "actual": "7b8da4f01e963fa8b5a94f60a6f33a8de613a89588a058668461e9d9aea7a311",
+      "equal": true,
+      "expected": "7b8da4f01e963fa8b5a94f60a6f33a8de613a89588a058668461e9d9aea7a311"
+    },
+    "ccc/audit/decision.py": {
+      "actual": "6bc59dedcb738cf85fc42435d63ce8f9f98b9707c7dc2c0d166cc0a3659ab42d",
+      "equal": true,
+      "expected": "6bc59dedcb738cf85fc42435d63ce8f9f98b9707c7dc2c0d166cc0a3659ab42d"
+    },
+    "ccc/audit/gate_a.py": {
+      "actual": "bb91dccdaeb53470f7f4bdeff387178385dc310916f2ce87ce12e59a1dda255f",
+      "equal": true,
+      "expected": "bb91dccdaeb53470f7f4bdeff387178385dc310916f2ce87ce12e59a1dda255f"
+    },
+    "ccc/audit/placebo.py": {
+      "actual": "626aa95a1dcfc7e98e0f4f36777a0925c064ea0f4711996415d0cb6ad36f88a0",
+      "equal": true,
+      "expected": "626aa95a1dcfc7e98e0f4f36777a0925c064ea0f4711996415d0cb6ad36f88a0"
+    },
+    "ccc/audit/placebo_census.py": {
+      "actual": "a631648afb1076a2889df29f41648405c0208359dddb08ce9d7cde4838f9b275",
+      "equal": true,
+      "expected": "a631648afb1076a2889df29f41648405c0208359dddb08ce9d7cde4838f9b275"
+    },
+    "ccc/audit/refresh.py": {
+      "actual": "989b2fb8e6d84cac4101d1c1d887b82b663846b92e57814ef7f4b5879937812f",
+      "equal": true,
+      "expected": "989b2fb8e6d84cac4101d1c1d887b82b663846b92e57814ef7f4b5879937812f"
+    },
+    "ccc/audit/text.py": {
+      "actual": "41a3765278d7a829c243fb8b02299008c8d98fdf0d405ba940d3c201b1933cab",
+      "equal": true,
+      "expected": "41a3765278d7a829c243fb8b02299008c8d98fdf0d405ba940d3c201b1933cab"
+    },
+    "ccc/baselines/__init__.py": {
+      "actual": "fccb70c31ea6ad544dda9a420ae59774a4e21cdae4adc6c9aa76c321deebf02b",
+      "equal": true,
+      "expected": "fccb70c31ea6ad544dda9a420ae59774a4e21cdae4adc6c9aa76c321deebf02b"
+    },
+    "ccc/bench/__init__.py": {
+      "actual": "95f2ecfcee604a5999b446f75f4c82e90014b0e9e03a004dbfa9e49ef3b4bd2a",
+      "equal": true,
+      "expected": "95f2ecfcee604a5999b446f75f4c82e90014b0e9e03a004dbfa9e49ef3b4bd2a"
+    },
+    "ccc/bench/__main__.py": {
+      "actual": "98d532d745c008a7848473dda48112e17a7ed49789e19d4506ccb78166571350",
+      "equal": true,
+      "expected": "98d532d745c008a7848473dda48112e17a7ed49789e19d4506ccb78166571350"
+    },
+    "ccc/bench/enumerate.py": {
+      "actual": "17511fb1a8f6f94a9749e7e826e7ee6e0ba2dd0b2728ba392977063b39243103",
+      "equal": true,
+      "expected": "17511fb1a8f6f94a9749e7e826e7ee6e0ba2dd0b2728ba392977063b39243103"
+    },
+    "ccc/bench/methods.py": {
+      "actual": "759e2b3023ea519e9e8c20363265827132847500ca18ef3573b1f30f0f3bd5db",
+      "equal": true,
+      "expected": "759e2b3023ea519e9e8c20363265827132847500ca18ef3573b1f30f0f3bd5db"
+    },
+    "ccc/bench/observe.py": {
+      "actual": "a9cb9651dec7dbb6699d75a942affdfc85a2e4d63736a532674a92d01f5a7d2d",
+      "equal": true,
+      "expected": "a9cb9651dec7dbb6699d75a942affdfc85a2e4d63736a532674a92d01f5a7d2d"
+    },
+    "ccc/bench/population.py": {
+      "actual": "62f53c6d0289b452f676f3112375147388337482135a8aef1d3100b7c5eaeef9",
+      "equal": true,
+      "expected": "62f53c6d0289b452f676f3112375147388337482135a8aef1d3100b7c5eaeef9"
+    },
+    "ccc/bench/report.py": {
+      "actual": "44a0627b682e05bae1334007661eea2d6e9a2f31859038b6023e1faf9ae646f6",
+      "equal": true,
+      "expected": "44a0627b682e05bae1334007661eea2d6e9a2f31859038b6023e1faf9ae646f6"
+    },
+    "ccc/bench/score.py": {
+      "actual": "45327566acb49b1ddc13258d7c798073d53ff69c617b2e5277b419d38dbf7c10",
+      "equal": true,
+      "expected": "45327566acb49b1ddc13258d7c798073d53ff69c617b2e5277b419d38dbf7c10"
+    },
+    "ccc/bench/seeds.py": {
+      "actual": "cecf55abce0beb08c9d1b32bdd12248474b37c7919d9ecf89c514a57af2cc147",
+      "equal": true,
+      "expected": "cecf55abce0beb08c9d1b32bdd12248474b37c7919d9ecf89c514a57af2cc147"
+    },
+    "ccc/bench/twins.py": {
+      "actual": "eac1232b12a91a7e4b5a417733a2d5d48e32aeaba07ab2777488186c215376db",
+      "equal": true,
+      "expected": "eac1232b12a91a7e4b5a417733a2d5d48e32aeaba07ab2777488186c215376db"
+    },
+    "ccc/fixtures/__init__.py": {
+      "actual": "fbad05719dd9d41a453ef7d48aac6e324bbf3f48f543427b2191df7b135e94a3",
+      "equal": true,
+      "expected": "fbad05719dd9d41a453ef7d48aac6e324bbf3f48f543427b2191df7b135e94a3"
+    },
+    "ccc/fixtures/__main__.py": {
+      "actual": "23faae8a00b352ab655f5588d3771f2adce8ba52380f7cd1ac35578d1a75b2e9",
+      "equal": true,
+      "expected": "23faae8a00b352ab655f5588d3771f2adce8ba52380f7cd1ac35578d1a75b2e9"
+    },
+    "ccc/fixtures/chatter.py": {
+      "actual": "f20d89b734309df8cad638cae0c96db6e5390fb67704e387ab8f65613941d548",
+      "equal": true,
+      "expected": "f20d89b734309df8cad638cae0c96db6e5390fb67704e387ab8f65613941d548"
+    },
+    "ccc/fixtures/chatter_templates.json": {
+      "actual": "8f204b6baf2aea9567e11a29ef19ac89b7c89c7122dcc61724b9c53f0de85794",
+      "equal": true,
+      "expected": "8f204b6baf2aea9567e11a29ef19ac89b7c89c7122dcc61724b9c53f0de85794"
+    },
+    "ccc/fixtures/constructed.py": {
+      "actual": "304d06c74e28015b809c55c16db0e421d74d60657d5c7b11fc65bea44c508699",
+      "equal": true,
+      "expected": "304d06c74e28015b809c55c16db0e421d74d60657d5c7b11fc65bea44c508699"
+    },
+    "ccc/fixtures/iid.py": {
+      "actual": "a0ea0915cff6a19eedaf35aa9d93414c945890ca4841608b97b9bd6c0c773c9a",
+      "equal": true,
+      "expected": "a0ea0915cff6a19eedaf35aa9d93414c945890ca4841608b97b9bd6c0c773c9a"
+    },
+    "ccc/fixtures/jira.py": {
+      "actual": "80f7558cdcfcc82dc29b49e2be62aa56427c2cca9f80af747a7013c57b93d14c",
+      "equal": true,
+      "expected": "80f7558cdcfcc82dc29b49e2be62aa56427c2cca9f80af747a7013c57b93d14c"
+    },
+    "ccc/fixtures/native_env.py": {
+      "actual": "0e0f8f7a7e963ecdc7082e1f3d9225467d6869915d4ea53317c7e0dd5d12bb62",
+      "equal": true,
+      "expected": "0e0f8f7a7e963ecdc7082e1f3d9225467d6869915d4ea53317c7e0dd5d12bb62"
+    },
+    "ccc/fixtures/native_replay.py": {
+      "actual": "476156f46e7f241b5e8d04c78e8fd302f2ba1fda09caf74cfd663a7baa126989",
+      "equal": true,
+      "expected": "476156f46e7f241b5e8d04c78e8fd302f2ba1fda09caf74cfd663a7baa126989"
+    },
+    "ccc/fixtures/oracle.py": {
+      "actual": "330565efc8c22c7b6ddac18a77117ad25fe7abd9b69aa82447ed2f6254d8978d",
+      "equal": true,
+      "expected": "330565efc8c22c7b6ddac18a77117ad25fe7abd9b69aa82447ed2f6254d8978d"
+    },
+    "ccc/fixtures/replay_adapter.py": {
+      "actual": "65b193281ee9fca3402ccea3e518b001d9c797aceca6edea09f163ed233d84b3",
+      "equal": true,
+      "expected": "65b193281ee9fca3402ccea3e518b001d9c797aceca6edea09f163ed233d84b3"
+    },
+    "ccc/fixtures/runner.py": {
+      "actual": "ec3e9a9feb6cbee4b582d14687ddbd5142c7371f96f019febd1adc4b3dc827ca",
+      "equal": true,
+      "expected": "ec3e9a9feb6cbee4b582d14687ddbd5142c7371f96f019febd1adc4b3dc827ca"
+    },
+    "ccc/fixtures/split_manifest.json": {
+      "actual": "aa7b5acc6e40e3070013fdd68396ce77ae1a23117a3677787d1739e00292979a",
+      "equal": true,
+      "expected": "aa7b5acc6e40e3070013fdd68396ce77ae1a23117a3677787d1739e00292979a"
+    },
+    "ccc/fixtures/worlds.py": {
+      "actual": "0bf14fdfe790cdede93c539a936cff3d9e6c24e75219e106b0690566259c4ff6",
+      "equal": true,
+      "expected": "0bf14fdfe790cdede93c539a936cff3d9e6c24e75219e106b0690566259c4ff6"
+    }
+  },
+  "gate_v2": {
+    "actual": [
+      {
+        "A_B_identical": 5,
+        "A_final_identical": 5,
+        "A_serial_identical": 5,
+        "epsilon": "0",
+        "files": 5,
+        "kind": "units"
+      },
+      {
+        "A_B_identical": 5,
+        "A_final_identical": 5,
+        "A_serial_identical": 0,
+        "epsilon": "0.1",
+        "files": 5,
+        "kind": "units"
+      },
+      {
+        "A_B_identical": 5,
+        "A_final_identical": 5,
+        "A_serial_identical": 5,
+        "epsilon": "0",
+        "files": 5,
+        "kind": "partitions"
+      },
+      {
+        "A_B_identical": 5,
+        "A_final_identical": 5,
+        "A_serial_identical": 5,
+        "epsilon": "0.1",
+        "files": 5,
+        "kind": "partitions"
+      }
+    ],
+    "independent_seeds": 5,
+    "recorded_eps0": {
+      "compared": 20,
+      "mismatches": []
+    },
+    "recorded_platform": "modal linux, CPython 3.14.7",
+    "recorded_self_check": {
+      "compared": 20,
+      "mismatches": []
+    }
+  },
+  "historical_gate": {
+    "compared": 160,
+    "independent_seeds": 40,
+    "infrastructure_error": true,
+    "mismatch_count": 160,
+    "missing_count": 160,
+    "path": "ops/reports/codex_runs/gate1_failed/run_par_prev/GATE.json",
+    "sha256": "1ddb1f8605c434307bc6d450481dea23761c714d8734fcd1ccce9fc0a4e6822e",
+    "status": "FAIL"
+  },
+  "method_receipts": {
+    "artifact_checksum_count": 8400,
+    "artifact_checksum_failures": [],
+    "count": 2100,
+    "identity_equal_to_gate_v2": 2100,
+    "runtime_python_counts": {
+      "3.14.2 (main, Dec  8 2025, 23:38:13) [GCC 12.2.0]": 2100
+    }
+  },
+  "post_run_gate40": [
+    {
+      "comparisons": [
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/1016969-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/2054967-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/2137797-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/5028610-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/5221106-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/6959008-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/7271111-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/8335963-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/11436370-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/13886421-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/15044089-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/16627987-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/17460418-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/18352486-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/19184196-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/19693329-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/20114201-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/20581290-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/20603300-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/21847798-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/27947030-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/28173884-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/28827949-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/29062605-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/30306082-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/32213163-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/33099166-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/34711018-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/35893802-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/36233823-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/36623590-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/37028549-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/38171445-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/41361529-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/43220095-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/45812025-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/46554553-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/47224387-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/48715117-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/49120142-eps-0.json.gz"
+        }
+      ],
+      "compressed_identical": 40,
+      "decompressed_identical": 40,
+      "epsilon": "0",
+      "files": 40,
+      "kind": "units"
+    },
+    {
+      "comparisons": [
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/1016969-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/2054967-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/2137797-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/5028610-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/5221106-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/6959008-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/7271111-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/8335963-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/11436370-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/13886421-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/15044089-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/16627987-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/17460418-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/18352486-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/19184196-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/19693329-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/20114201-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/20581290-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/20603300-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/21847798-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/27947030-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/28173884-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/28827949-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/29062605-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/30306082-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/32213163-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/33099166-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/34711018-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/35893802-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/36233823-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/36623590-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/37028549-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/38171445-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/41361529-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/43220095-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/45812025-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/46554553-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/47224387-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/48715117-eps-0.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/49120142-eps-0.json.gz"
+        }
+      ],
+      "compressed_identical": 40,
+      "decompressed_identical": 40,
+      "epsilon": "0",
+      "files": 40,
+      "kind": "partitions"
+    },
+    {
+      "comparisons": [
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/1016969-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/2054967-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/2137797-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/5028610-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/5221106-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/6959008-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/7271111-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/8335963-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/11436370-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/13886421-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/15044089-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/16627987-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/17460418-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/18352486-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/19184196-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/19693329-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/20114201-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/20581290-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/20603300-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/21847798-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/27947030-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/28173884-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/28827949-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/29062605-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/30306082-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "units/32213163-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/33099166-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/34711018-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/35893802-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/36233823-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/36623590-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/37028549-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/38171445-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/41361529-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/43220095-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/45812025-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/46554553-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/47224387-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/48715117-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": false,
+          "decompressed_identical": false,
+          "path": "units/49120142-eps-0.1.json.gz"
+        }
+      ],
+      "compressed_identical": 2,
+      "decompressed_identical": 2,
+      "epsilon": "0.1",
+      "files": 40,
+      "kind": "units"
+    },
+    {
+      "comparisons": [
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/1016969-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/2054967-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/2137797-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/5028610-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/5221106-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/6959008-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/7271111-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/8335963-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/11436370-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/13886421-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/15044089-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/16627987-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/17460418-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/18352486-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/19184196-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/19693329-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/20114201-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/20581290-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/20603300-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/21847798-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/27947030-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/28173884-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/28827949-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/29062605-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/30306082-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/32213163-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/33099166-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/34711018-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/35893802-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/36233823-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/36623590-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/37028549-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/38171445-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/41361529-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/43220095-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/45812025-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/46554553-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/47224387-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/48715117-eps-0.1.json.gz"
+        },
+        {
+          "compressed_identical": true,
+          "decompressed_identical": true,
+          "path": "partitions/49120142-eps-0.1.json.gz"
+        }
+      ],
+      "compressed_identical": 40,
+      "decompressed_identical": 40,
+      "epsilon": "0.1",
+      "files": 40,
+      "kind": "partitions"
+    }
+  ],
+  "protocol": {
+    "actual": "334a4539d2dc6976879c50c8244905a735a13ce32f5a4e8046715e31b250dcb6",
+    "expected": "334a4539d2dc6976879c50c8244905a735a13ce32f5a4e8046715e31b250dcb6"
+  },
+  "source_hashes": {
+    "docs/enh/r2/run_par/GATE.json": "1ddb1f8605c434307bc6d450481dea23761c714d8734fcd1ccce9fc0a4e6822e",
+    "docs/enh/r2/run_par/GATE_v2.json": "bd45ac65797ebb67ad373c3d609c098e6e625c1d8ad3388e47f25a9391e7ca00",
+    "docs/enh/r2/run_par/RESULTS.json": "bfac102dbaa500efdeb3fd52f0a63f6ea518983dd5828fe66f16c88b3cfc4ac7",
+    "docs/enh/r2/run_par/RESULTS.md": "18a291148f8499d7d0e7f4038b4fff11ed5d2b5b0c3c34a5d15e62b7121426d5",
+    "scripts/eps_platform_check.py": "c6980db6d30071ad7ef4f8c45a9cb59218988ce023df924900d678c05f3fd362"
+  },
+  "verification": "EXECUTED; read-only, stdlib-only; no benchmark execution"
+}

@@ -1,0 +1,90 @@
+............................................s...................s............s.....s................................ [ 23%]
+........................................................... [ 34%]
+.................. [ 38%]
+.................................................... [ 48%]
+........................................................................ [ 62%]
+............................................................. [ 75%]
+............................................................F........ [ 88%]
+.........................................................          [100%]
+=================================== FAILURES ===================================
+_____________________ ParallelTests.test_dev_output_bytes ______________________
+
+self = <tests.test_bench_parallel.ParallelTests testMethod=test_dev_output_bytes>
+
+    def test_dev_output_bytes(self):
+        # Two seeds exercise multiple workers, all pair/class strata, both eps,
+        # population, aggregation, COMPLETE and the frozen report.
+        with tempfile.TemporaryDirectory(prefix='benchpar-dev-') as tmp:
+            serial=Path(tmp)/'serial'; concurrent=Path(tmp)/'parallel'
+            parallel.warm_cache(serial/'cache')
+            with patch.object(frozen,'DEV_SEEDS',(13000,13001)):
+                frozen.run('dev',serial)
+>           parallel.run_parallel('dev',concurrent,workers=2,limit=2)
+
+tests/test_bench_parallel.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/bench_parallel_run.py:186: in run_parallel
+    results[tasks[task]]=task.result()
+                         ^^^^^^^^^^^^^
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py:447: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = None
+
+    def __get_result(self):
+        if self._exception is not None:
+            try:
+>               raise self._exception
+E               concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+
+/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/concurrent/futures/_base.py:396: BrokenProcessPool
+----------------------------- Captured stdout call -----------------------------
+dev: seed 13000, eps=0, 138 instance/set records complete
+dev: seed 13000, eps=0.1, 138 instance/set records complete
+dev: seed 13001, eps=0, 138 instance/set records complete
+dev: seed 13001, eps=0.1, 138 instance/set records complete
+dev: iid population eps=0, 2 independent seeds complete
+dev: iid population eps=0.1, 2 independent seeds complete
+parallel: 0 checksum-validated seeds skipped; 2 pending
+----------------------------- Captured stderr call -----------------------------
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=17, pipe_handle=25)
+                                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 1, in <module>
+    from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=17, pipe_handle=27)
+                                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/multiprocessing/spawn.py", line 246, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/multiprocessing/spawn.py", line 246, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/multiprocessing/spawn.py", line 297, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+                                  run_name="__mp_main__")
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.14/multiprocessing/spawn.py", line 297, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+                                  run_name="__mp_main__")
+  File "<frozen runpy>", line 293, in run_path
+  File "<frozen runpy>", line 293, in run_path
+  File "<frozen runpy>", line 261, in _get_code_from_file
+  File "<frozen runpy>", line 261, in _get_code_from_file
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aarav/Documents/Projects/ApartSprint/<stdin>'
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aarav/Documents/Projects/ApartSprint/<stdin>'
+=========================== short test summary info ============================
+FAILED tests/test_bench_parallel.py::ParallelTests::test_dev_output_bytes - c...
+1 failed, 499 passed, 4 skipped, 351 subtests passed in 324.88s (0:05:24)

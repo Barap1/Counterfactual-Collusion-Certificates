@@ -1,0 +1,26 @@
+{
+  "classification": "EXECUTED read-only external retrieval; scoped claim verification",
+  "checked_date": "2026-10-25",
+  "repo": {
+    "url": "https://github.com/Barap1/Counterfactual-Collusion-Certificates",
+    "visibility": "public",
+    "default_branch": "main",
+    "github_reported_size_KiB": 57915,
+    "via": "GitHub get_repo connector; no changes"
+  },
+  "guidelines": {
+    "url": "https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25",
+    "requirements": [
+      "PDF using official linked template",
+      "max8pages excluding references/appendices",
+      "abstract150\u2013250words",
+      "authors/affiliations",
+      "required Limitations and Dual-Use / Ethical Considerations appendix"
+    ],
+    "deadline": "2026-10-26T11:59:00Z",
+    "upload_max_MB": 25,
+    "template": "Public official template inspected anonymously via read-only Playwright export; format receipt in paper/official_template_export.json"
+  },
+  "paid_api_use": false,
+  "note": "Firecrawl plugin was not called because its retrieval is billed; authorized free web/browser fallback used."
+}

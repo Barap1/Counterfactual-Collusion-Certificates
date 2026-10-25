@@ -1,0 +1,249 @@
+{
+  "scope": "Tracked current files + every unique text blob on all local refs + streamed tracked raw/release tar archives. No .env, compute.env, or *.local.json contents read. Regex detection is bounded, not a security proof.",
+  "tracked_files": 24363,
+  "tracked_bytes": 1570418741,
+  "history_objects": 21306,
+  "history_text_bytes": 328793547,
+  "forbidden_tracked_paths": [],
+  "credential_findings": [],
+  "current_google_document_references": [],
+  "current_bare_historical_doc_ids": [],
+  "historical_google_document_reference_blobs": [
+    {
+      "path": "docs/enh/writing/NOTES_judging_raw.md",
+      "line": 80,
+      "id_fingerprint": "0a55e071e4a52347",
+      "blob": "962d889870089b2ae2d2bebe3d9205c04fb7cdc9",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "docs/enh/writing/NOTES_judging_raw.md",
+      "line": 91,
+      "id_fingerprint": "0a55e071e4a52347",
+      "blob": "962d889870089b2ae2d2bebe3d9205c04fb7cdc9",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "CCC_MASTER_SPEC.md",
+      "line": 1331,
+      "id_fingerprint": "df3a540c63a40278",
+      "blob": "168a3148f8a3dd01ac995101f5aa2e252972cdd5",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "CCC_MASTER_SPEC.md",
+      "line": 1339,
+      "id_fingerprint": "60f40f5ded027331",
+      "blob": "168a3148f8a3dd01ac995101f5aa2e252972cdd5",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "docs/spec/12_paper_and_drive.md",
+      "line": 17,
+      "id_fingerprint": "df3a540c63a40278",
+      "blob": "0971ea84029379d4c77f1fdb64b9d625fd57fe57",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "docs/spec/12_paper_and_drive.md",
+      "line": 25,
+      "id_fingerprint": "60f40f5ded027331",
+      "blob": "0971ea84029379d4c77f1fdb64b9d625fd57fe57",
+      "reachable_from_origin_main": true
+    }
+  ],
+  "distinct_document_id_fingerprints": [
+    "0a55e071e4a52347",
+    "60f40f5ded027331",
+    "df3a540c63a40278"
+  ],
+  "current_email_paths": [
+    {
+      "path": "docs/enh/writing/NOTES_judging_raw.md",
+      "count": 4,
+      "lines": [
+        114,
+        116
+      ]
+    },
+    {
+      "path": "docs/enh/writing/WRITING_PLAYBOOK.md",
+      "count": 1,
+      "lines": [
+        105
+      ]
+    }
+  ],
+  "distinct_non_noreply_commit_emails": 2,
+  "archives": [
+    {
+      "path": "docs/runner/archives/exp001-live.tar.gz",
+      "members": 23047,
+      "bytes": 211840907,
+      "credential_findings": 0,
+      "new_document_ids": 0,
+      "sha256": "0963303f6c67b5a32278ca7470515f8942fd011bed0b610a956865d87a8f26dc"
+    },
+    {
+      "path": "docs/runner/archives/exp002-live.tar.gz",
+      "members": 32199,
+      "bytes": 293174546,
+      "credential_findings": 0,
+      "new_document_ids": 0,
+      "sha256": "83bf451dad54c773afbc3e775acc13e08bd97fbe92dee4d1a21307cc60625831"
+    }
+  ],
+  "largest_files": [
+    {
+      "path": "docs/enh/r2/run_par/RESULTS.json",
+      "bytes": 43385350
+    },
+    {
+      "path": "docs/enh/bench/dev_run/RESULTS.json",
+      "bytes": 40578783
+    },
+    {
+      "path": "docs/enh/bench/dev_run/RESULTS_dev.json",
+      "bytes": 40578783
+    },
+    {
+      "path": "docs/runner/archives/exp002-live.tar.gz",
+      "bytes": 22442068
+    },
+    {
+      "path": "docs/runner/archives/exp001-live.tar.gz",
+      "bytes": 15990095
+    },
+    {
+      "path": "docs/enh/bench/align2_numeric_delta.json",
+      "bytes": 14293052
+    },
+    {
+      "path": "docs/enh/r2/run_par/separators.json",
+      "bytes": 9200507
+    },
+    {
+      "path": "docs/enh/bench/seed_exclusions.json",
+      "bytes": 8019606
+    },
+    {
+      "path": "ops/budget_ledger.jsonl",
+      "bytes": 7505828
+    },
+    {
+      "path": "docs/analysis/exp002_heldout_v2/events_accounting.json",
+      "bytes": 5529911
+    },
+    {
+      "path": "docs/analysis/exp002_heldout_v3/events_accounting.json",
+      "bytes": 5529911
+    },
+    {
+      "path": "docs/analysis/exp002_heldout/events_accounting.json",
+      "bytes": 5332119
+    },
+    {
+      "path": "docs/gate_a/v1.2/correction_v1.2.2/gate_a_results.json.gz",
+      "bytes": 5289514
+    },
+    {
+      "path": "docs/gate_a/v1.2/correction_v1.2.1/gate_a_results.json.gz",
+      "bytes": 5193104
+    },
+    {
+      "path": "docs/gate_a/v1.2/gate_a_results.json.gz",
+      "bytes": 5193042
+    }
+  ],
+  "archive_personal_data_paths": [
+    {
+      "path": "docs/runner/archives/exp001-live.tar.gz::exp001-live.log",
+      "email_count": 0,
+      "local_username_path_count": 9
+    }
+  ],
+  "historical_bare_document_reference_blobs": [
+    {
+      "path": "docs/enh/writing/NOTES_judging_raw.md",
+      "id_fingerprint": "0a55e071e4a52347",
+      "lines": [
+        80,
+        91
+      ],
+      "blob": "962d889870089b2ae2d2bebe3d9205c04fb7cdc9",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "CCC_MASTER_SPEC.md",
+      "id_fingerprint": "df3a540c63a40278",
+      "lines": [
+        1330,
+        1331
+      ],
+      "blob": "168a3148f8a3dd01ac995101f5aa2e252972cdd5",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "CCC_MASTER_SPEC.md",
+      "id_fingerprint": "60f40f5ded027331",
+      "lines": [
+        1338,
+        1339
+      ],
+      "blob": "168a3148f8a3dd01ac995101f5aa2e252972cdd5",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "docs/spec/12_paper_and_drive.md",
+      "id_fingerprint": "df3a540c63a40278",
+      "lines": [
+        16,
+        17
+      ],
+      "blob": "0971ea84029379d4c77f1fdb64b9d625fd57fe57",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "docs/spec/12_paper_and_drive.md",
+      "id_fingerprint": "60f40f5ded027331",
+      "lines": [
+        24,
+        25
+      ],
+      "blob": "0971ea84029379d4c77f1fdb64b9d625fd57fe57",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "ops/reports/PUB-001_early.md",
+      "id_fingerprint": "0a55e071e4a52347",
+      "lines": [
+        11
+      ],
+      "blob": "857abb13cbd52852fac6326ad8b10c75d5942d71",
+      "reachable_from_origin_main": true
+    },
+    {
+      "path": "ops/reports/PUB-001_early.md",
+      "id_fingerprint": "60f40f5ded027331",
+      "lines": [
+        11
+      ],
+      "blob": "857abb13cbd52852fac6326ad8b10c75d5942d71",
+      "reachable_from_origin_main": true
+    }
+  ],
+  "origin_main_snapshot": "4811eaf24b3bdc9e73bb96c1cbf3cf7288c429ac",
+  "historical_forbidden_paths": [],
+  "document_reference_classification": {
+    "basis": "Root independently retrieved the official template linked under current sprint Guidelines read-only; communicated to this worker on 2026-10-25. The scanner finds references, not document access permissions.",
+    "official_public_template_fingerprint": "0a55e071e4a52347",
+    "potentially_private_owner_document_fingerprints": [
+      "60f40f5ded027331",
+      "df3a540c63a40278"
+    ],
+    "historical_reference_fingerprints_total": 3,
+    "potentially_private_owner_document_count": 2,
+    "sharing_permissions_verified": false,
+    "values_reproduced": false
+  }
+}

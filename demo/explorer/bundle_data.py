@@ -9,12 +9,14 @@ in `window.CCC_DATA` assignments. Never hand-edit demo/explorer/data/*.js.
 
 Usage: python3 demo/explorer/bundle_data.py
 """
+import hashlib
 import json
 import pathlib
 
 HERE = pathlib.Path(__file__).resolve().parent
 PACK = HERE.parent / "data"
 OUT = HERE / "data"
+ROOT = HERE.parents[1]
 
 
 def load(p):
@@ -70,7 +72,18 @@ def index_payloads():
         "The separately reported sensitivity p-value is post-hoc-exploratory."
     )
     manifest = load(PACK / "MANIFEST.json")
-    meta = {k: manifest[k] for k in ("schema", "generator", "generator_commit_HEAD", "archive_sha256", "source_strategy") if k in manifest}
+    # Fail before deleting the previous bundle if the pack manifest is stale.
+    # Build order is build_twins.py -> build_data.py -> bundle_data.py.
+    for record in manifest["files"]:
+        raw = (ROOT / record["path"]).read_bytes()
+        if len(raw) != record["bytes"] or hashlib.sha256(raw).hexdigest() != record["sha256"]:
+            raise ValueError("Stale evidence manifest: " + record["path"] + "; rerun demo/build_data.py before bundling")
+    for record in manifest["source_hashes"]:
+        if "archive_member" not in record and hashlib.sha256((ROOT / record["path"]).read_bytes()).hexdigest() != record["sha256"]:
+            raise ValueError("Changed evidence source: " + record["path"] + "; rerun the evidence pack builders before bundling")
+    meta = {k: manifest[k] for k in ("schema", "generator", "generator_commit_HEAD", "generator_commit_role", "archive_sha256", "source_strategy") if k in manifest}
+    meta["manifest_sha256"] = hashlib.sha256((PACK / "MANIFEST.json").read_bytes()).hexdigest()
+    meta["bundle_generator_sha256"] = hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest()
     meta["n_files"] = len(manifest.get("files", []))
     meta["n_source_hashes"] = len(manifest.get("source_hashes", []))
     meta["evidence_category"] = "descriptive"
@@ -79,9 +92,9 @@ def index_payloads():
 
 def main():
     OUT.mkdir(exist_ok=True)
+    index, study, meta = index_payloads()
     for old in OUT.glob("*.js"):
         old.unlink()
-    index, study, meta = index_payloads()
     write_js(OUT / "index.js",
              "window.CCC_DATA.index=%s;\nwindow.CCC_DATA.study=%s;\nwindow.CCC_DATA.manifest=%s;\nwindow.CCC_DATA.cases=window.CCC_DATA.cases||{};"
              % (dump(index), dump(study), dump(meta)))

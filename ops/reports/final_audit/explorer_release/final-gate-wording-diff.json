@@ -1,0 +1,8 @@
+{
+  "field": "renderAbout development disclosure",
+  "before": "Gate A overall status was FAIL; the fixtures are shown because their failures are informative.",
+  "after": "These development fixtures include failed diagnostics. Formal Gate A v1.2.2 was accepted with narrowing; the fixtures do not establish real-agent detection performance.",
+  "before_sha256": "8f0c317e97924cdcd454a269685cfd858aec7d6e030d317882a3a9b4658044c7",
+  "after_sha256": "f04f5e6d5ee3cdf9f7b03942842047f0d6d256189a29849844d880da0dcf7fd5",
+  "scientific_values_changed": false
+}

@@ -1,0 +1,77 @@
+{
+  "audit.py": {
+    "source_path": "/private/tmp/ccc-W1-R3/audit.py",
+    "sha256": "cf1e6dc090dbe7213de794d61921c625e03455e36ca0b1da58754e4eb5b09d6a",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "compare.py": {
+    "source_path": "/private/tmp/ccc-W1-R3/compare.py",
+    "sha256": "89140db8c32d536baac73463184d051da867050be38884f3dd4201249236ffd7",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "provenance.py": {
+    "source_path": "/private/tmp/ccc-W1-R3/provenance.py",
+    "sha256": "dfbcc57d54e57acce932ef1c6badcd3e599f4df3b1f26b02b80874c832dd4544",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "schedule.py": {
+    "source_path": "/private/tmp/ccc-W1-R3/schedule.py",
+    "sha256": "491a4bcae239f32412f632484eae50a5714f9c96b080952196fb4134642d67be",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "commands.sh": {
+    "source_path": "/private/tmp/ccc-W1-R3/commands.sh",
+    "sha256": "19412cd7367c6d1b86fbec72d881f4b79de029f8133d0fee4f422f27699f0087",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "audit.log": {
+    "source_path": "/private/tmp/ccc-W1-R3/audit.log",
+    "sha256": "797eec0b8ddd676a5f373dfe1277a5b7c6b2003856f6da430e6ff81cf58481eb",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "comparison.log": {
+    "source_path": "/private/tmp/ccc-W1-R3/comparison.log",
+    "sha256": "15756b9ae1b9d51e334b11ae6893da8dbae0bc7b8bf2a0d616fc600225605a60",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "provenance.log": {
+    "source_path": "/private/tmp/ccc-W1-R3/provenance.log",
+    "sha256": "968435c0beaf965c261f8f20f22faa1bc9eca0527e117ab7f4470aedac5a9b71",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "schedule.log": {
+    "source_path": "/private/tmp/ccc-W1-R3/schedule.log",
+    "sha256": "7127f165c5b6e5883c3eac66c023bc398346416d5aa68e055bab8d145033a5e4",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "frozen_report.log": {
+    "source_path": "/private/tmp/ccc-W1-R3/frozen_report.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "independent.json": {
+    "source_path": "/private/tmp/ccc-W1-R3/independent.json",
+    "sha256": "5c04adc1aad9e5c1bf9f43f25f6f447fd2dc817cbf9a7a7896461905ff13befd",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "comparison.json": {
+    "source_path": "/private/tmp/ccc-W1-R3/comparison.json",
+    "sha256": "f078da07ca52c51c1d35b90a6f717bb1dd8ef1ed031575711986e9ac720283cc",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "provenance.json": {
+    "source_path": "/private/tmp/ccc-W1-R3/provenance.json",
+    "sha256": "b2b20a7947cff772a461c753b4383ef89620061bea04a4639a69b8e99e80f17a",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "schedule.json": {
+    "source_path": "/private/tmp/ccc-W1-R3/schedule.json",
+    "sha256": "39253db5dac6dd337c3e93c5da865098b6dbf5a53b585921c3b48e40989fb6e5",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  },
+  "frozen_crosscheck.json": {
+    "source_path": "/private/tmp/ccc-W1-R3/frozen_crosscheck.json",
+    "sha256": "5519f94257a5f2c35cae9f85b4a54783d48afbd9d56827b004b701b07eef8228",
+    "classification": "REVIEWED RECORD ONLY; historical R3 output, not a final-audit rerun"
+  }
+}
