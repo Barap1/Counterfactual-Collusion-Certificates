@@ -63,3 +63,49 @@ Prizes: $1,000 / $500 / $300 / $100 / $100; fellowship fast-track.
 
 ## Not covered
 Sprints not checked for winners: Women in AI Safety (Mar 2025), Economics of Transformative AI (Apr 2025), Martian Router Interp (May-Jun 2025), Red Teaming A Narrow Path (Jun 2025), ARENA hackathons, CBRN sprint (Sep 2025), Reprogramming AI Models (Nov 2024), AI Safety Entrepreneurship (Jan 2025), policy collaboration hackathons. Apart Lab follow-up papers were not searched (a later check could use https://apartresearch.com/research).
+
+# Addendum (WRITE-RES2, 2026-10-24): additional sprints, lower-place winners, coverage table
+
+Raw lists: NOTES_winners_batch2.md. Additional winners found (not in tables above):
+- Women in AI Safety (Mar 2025): Social Sciences "Detecting Malicious AI Agents Through Simulated Interactions" (Yulu Pi, Anna Becker, Ella Bettison); Mech Interp "Red-teaming with Mech-Interpretability" (Devina Jain); Public Education $600 "Morph: AI Safety Education Adaptable to (Almost) Anyone" (Shafira Noh, Wan Aimran).
+- Economics of Transformative AI (Apr 2025): 1st "The Early Economic Impacts of Transformative AI: A Focus on Temporal Coherence"; 3rd (x2) Brazil job-displacement case study and "Economics of AI Data Center Energy Infrastructure"; 4th "Economic Feasibility of Universal High Income".
+- Martian Router Interp (May-Jun 2025): 1st "Manipulating Self-Preference for Large Language Models"; 2nd "Approximating Human Preferences Using a Multi-Judge Learned System"; 3rd "Judge using SAE Features"; 4th "Guardian-Loop".
+- AI Safety x Physics (Jul 2025): 1st "Constrained Belief Updates in Transformer Representations" (Brianna Grado-White); 2nd "Momentum-Point-Perplexity Mechanics in LLMs"; 3rd "Local Learning Coefficients in Reinforcement Learning"; prize "AI agentic system epidemiology".
+- Red Teaming A Narrow Path (Jun 2025): "Four Paths to Failure: Red Teaming ASI Governance"; "Red Teaming A Narrow Path" (Aritra Das, Vaani Goenka).
+- AI Safety Entrepreneurship (Jan 2025) 1st "AntiMidas"; Reprogramming AI Models (Nov 2024) 1st "AutoSteer"; Howard (Nov 2024) 1st K-12 accountability paper; JHU (Oct 2024) 1st "Robust Machine Unlearning for Dangerous Capabilities"; Startups (Aug-Sep 2024, before window) 1st "DarkForest".
+- Sprints with no winners shown or no published projects: AIxBio (Apr 2026), CBRN (Sep 2025), ARENA 6.0 (Sep 2025), Berkeley, Georgia Tech, Dark Patterns ZAIA (Apr 2025), Blackpool (Nov 2024), Concordia (2024). Not fetched (before Oct 2024): ARENA 4.0, demo-jam, Research Augmentation.
+- Apart Lab follow-ups: winners/FOLLOWUP_sandbag_sprint_to_neurips.md (Deception Detection 1st -> NeurIPS workshop -> NeurIPS 2025). Other items on https://apartresearch.com/research were not traced to sprints (DarkBench origin not established).
+
+## Coverage table (analysed = a file exists in winners/)
+| Sprint | Winners found | Analysed files present | Note |
+|---|---|---|---|
+| Secret Loyalties (Jul 2026) | 1st-5th (5) | 5 | 5/5 |
+| AI Incident Response (Sep 2026) | 1st-5th (5) | 5 | 5/5 |
+| Digital Minds (Aug 2026) | 1st-5th (5) | 5 | 5/5 |
+| Global South AI Safety (Jun 2026) | 6 regional 1sts + 7 honourable mentions | 0 | not analysed - time (regional 1sts only; HMs not analysed - time) |
+| Secure Program Synthesis (May 2026) | 1st-5th (5) | 0 | not analysed - time (5) |
+| AIxBio (Apr 2026) | none published on Apart site | 0 | n/a - projects not published |
+| AI Control 2026 (Mar 2026) | 1st-5th + LinuxArena track (6) | 6 | 6 |
+| Technical AI Governance (Jan-Feb 2026) | 1st-5th (5) | 0 | not analysed - time (5) |
+| AI Manipulation (Jan 2026) | 1st-5th (5) | 5 | 5 |
+| Defensive Acceleration (Nov 2025) | 10 winners (1st x2, 2nd x2, 3rd x2, 4th x4) | 0 | not analysed - time (8 of 10 listed for analysis (4th: 2 of 4)) |
+| AI Forecasting (Oct-Nov 2025) | 1st-5th (5) | 0 | not analysed - time (4 of 5 (4th ExogenousAI no URL)) |
+| ARENA 6.0 (Sep 2025) | none shown | 0 | n/a |
+| CBRN (Sep 2025) | none published on Apart site | 0 | n/a |
+| AI Safety x Physics (Jul 2025) | 1st-3rd + prize (4) | 0 | not analysed - time (4) |
+| Red Teaming A Narrow Path (Jun 2025) | 2 prizes | 0 | not analysed - time (2) |
+| Martian Router Interp (May-Jun 2025) | 1st-4th (4) | 0 | not analysed - time (4) |
+| Economics of Transformative AI (Apr 2025) | 1st, 3rd x2, 4th (4) | 0 | not analysed - time (4) |
+| Berkeley / Georgia Tech policy hackathons, Dark Patterns ZAIA (Apr 2025) | none shown | 0 | n/a |
+| AI Control 2025 (Mar 2025) | 1st-4th (4) | 4 | 4 |
+| Women in AI Safety (Mar 2025) | 3 track winners | 0 | not analysed - time (3) |
+| AI Safety Entrepreneurship (Jan 2025) | 1st (1) | 0 | not analysed - time (1) |
+| Blackpool Autostructures (Nov 2024) | none shown | 0 | n/a |
+| Reprogramming AI Models (Nov 2024) | 1st (1) | 0 | not analysed - time (1) |
+| Howard policy hackathon (Nov 2024) | 1st (1) | 0 | not analysed - time (1) |
+| JHU AI Policy Hackathon (Oct 2024) | 1st (1) | 0 | not analysed - time (1) |
+| Agent Security (Oct 2024) | 1st (1) | 1 | 1 |
+| Startups hackathon (Aug-Sep 2024; before window) | 1st (1) | 0 | not analysed - time (1) |
+| Deception Detection (Jun-Jul 2024; before window) | 1st (1) | 1 | 1 (follow-up chain analysed) |
+
+Totals: 12 first-pass analyses + 19 compact analyses (lower places) + 1 follow-up chain + 1 contrast file. About 35 listed winners (Global South, Secure Program Synthesis, Technical AI Governance, Defensive Acceleration, Forecasting, Physics, Martian, Economics, Women, Red Teaming, Entrepreneurship, Reprogramming, Howard, JHU, Startups) are index-only: "not analysed - time" (helper run lost to a session limit and crash). Their URLs are in NOTES_batchB_list.txt, ready for a later pass. Place labels for the compact analyses are as listed on sprint pages.

@@ -115,3 +115,16 @@ Presentation & Clarity
 8. Related-work wall before the idea (BP10, SPJ).
 9. Defensive voice around the null; cheerleading voice around new positives. Report both in the same register.
 10. Omitting the positive control (S0 explicitly: "always include").
+
+## Changelog (WRITE-RES2, 2026-10-24; evidence base now 31 winner analyses incl. 19 compact ones in winners/, plus the sandbag follow-up chain)
+Strengthened by new evidence (no rule reversed):
+1. Section 3/7: state the count of failed or unsupported preregistered predictions where it exists. Digital Minds 3rd put "Six predictions ... failed and are reported as failed" in the abstract (W:digitalminds_3rd); 2nd place fixed thresholds before data and published discarded designs (W:digitalminds_2nd); Secret Loyalties 3rd logged 52 predictions with failures. Use for the EXP-002 null (hypothesis not supported) without a defensive tone.
+2. Section 3 (abstract): say which part of the proposal is NOT yet tested (W:control2026_5th); this pre-empts the "unvalidated" criticism. For us: mark RQs still pending as pending.
+3. Section 5/4 (design): a twin-pair design where credit requires getting both members right closes the "flag everything" loophole and was praised (W:incident_3rd); but the same paper was criticised for an inflated headline figure in its abstract and one seed. Our twin worlds fit this; keep abstract numbers equal to body numbers.
+4. Section 6: add a three-valued verdict ("compels / does not / contestable") as evidence for abstention-aware scoring (W:incident_2nd); tag claims with verification level (W:incident_4th).
+5. Section 1 appendix list: add one worked example evidence record (W:control2026_track_syscon "receipt", judged helpful) and a short disclosure of judge/subject overlap if an LLM judge is used (W:manipulation2026_3rd).
+6. Section 7 tone: always give effect sizes with intervals and multiple-testing correction for intervention claims (W:digitalminds_4th); decodable-but-not-causal distinction is a repeated winner theme (W:digitalminds_1st, _5th).
+7. Mistakes list: add (a) missing plots/figures despite vivid narrative (W:agentsecurity2024_1st marked down), (b) no false-positive/honest-case rate next to detection (W:control2026_4th reported both, W:control2026_1st did not).
+8. Follow-up evidence (winners/FOLLOWUP_sandbag_sprint_to_neurips.md): the sandbag sprint paper was 9 pages with 2 models and a hedged abstract; the NeurIPS version added a quantified general claim, an operational decision rule, an unprompted case, a named Limitations section and a method Figure 1. Judges' sprint critiques foreshadowed those additions. Confirms rules 3, 5, 8.
+Caveat added: compact analyses list main text of 7-13 pages for several winners (helper estimates, unverified); the 8-page cap is a stated rule, so keep to it regardless.
+Not changed: sections 0-2, 4, 8, 10 (no new evidence). Index-only winners (about 35) were not read; rules cite only analysed papers.
