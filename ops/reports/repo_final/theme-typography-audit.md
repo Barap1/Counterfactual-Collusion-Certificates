@@ -19,7 +19,7 @@ Independent science review: `theme-science-review.md`. Independent source/engine
 Actual GitHub preview branch, in the existing automatic/dark appearance:
 
 - Desktop1280px: README text16px; exactly one visible diagram; native640px image gives effective16px figure type. Inactive light anchor has `display:none`.
-- Phone390px and intermediate800/1000px: the mobile source is selected at its natural width and effective type remains16px. The earlier324px narrow variant was checked live; the final294px refinement is also checked after publication.
+- Phone390px and intermediate800/1000px: the mobile source is selected at its natural width and effective type remains16px. The final294px refinement was then checked on exact GitHub commit `a341dccd5be711ca4eb5b7c05282a060d386e5da`: at a360px viewport its rendered and natural widths both equal294px, matching16px body type, with document scrollWidth360px. Exactly one theme anchor remains visible.
 - Desktop layout fits at1101px. A source switch briefly leaves an unloaded candidate; measurements were repeated after image load rather than reporting that transient state as a pass.
 - The evidence table is native GitHub text, not an image. No duplicate theme image occupies layout space.
 
@@ -46,4 +46,4 @@ The four SVGs regenerate byte-for-byte. Navigation checker now validates `source
 
 The ordinary missing-file check continues to reject nonexistent paper links while permitting the owner's later real PDF. There is no active README paper-PDF link and no paper PDF/DOCX in the public tree. Separate `paper/graphics_redesign/`, its reports and shared registry updates belong to another session and were not staged or altered for this redesign.
 
-Final source is verified on GitHub before fast-forwarding `main`; final publication and CI receipts are checked before handoff. The temporary preview branch is removed after its commits are reachable from `main`. No force push or public history rewrite is used.
+Final source was verified on GitHub commit `a341dccd5be711ca4eb5b7c05282a060d386e5da`; both Python3.12/3.14 jobs passed in CI run40242053372. Final publication and latest-main CI receipts are checked before handoff. The temporary preview branch is removed after its commits are reachable from `main`. No force push or public history rewrite is used.

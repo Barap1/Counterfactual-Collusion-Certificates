@@ -1,10 +1,10 @@
 # Repository release checklist
 
-Current reader entry: [README](../../README.md). Verification and exact commands: [overhaul report](../../ops/reports/repo_final/FINAL_GITHUB_AUDIT.md). Historical audit: [CODEX_FINAL_AUDIT.md](../../ops/reports/CODEX_FINAL_AUDIT.md); its PDF freshness, no-publication and pending presentation statements describe the earlier local state, not this release.
+Current reader entry: [README](../../README.md). Verification and exact commands: [latest figure audit](../../ops/reports/repo_final/theme-typography-audit.md). Historical audit: [CODEX_FINAL_AUDIT.md](../../ops/reports/CODEX_FINAL_AUDIT.md); its PDF freshness, no-publication and pending presentation statements describe the earlier local state, not this release.
 
 ## Repository delivery
 
-- New problem-first README, constructed allocation diagram and evidence map.
+- Problem-first README, native16px allocation comparison with light/dark/mobile variants, and a native Markdown evidence table.
 - Frozen scientific evidence, preregistrations, failed predictions and corrections retained.
 - No final paper PDF, paper placeholder or active paper-PDF link.
 - Latest accessible manuscript source and verified bibliography indexed in [paper/README.md](../../paper/README.md).
