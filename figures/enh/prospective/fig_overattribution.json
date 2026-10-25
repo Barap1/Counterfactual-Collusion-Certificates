@@ -1,0 +1,257 @@
+{
+ "caption": "[PROSPECTIVE] Over-attribution of the frozen strongest baseline on legitimate members (P2, P3, P6, benign cooperation) under I1, per class and noise stratum, Clopper-Pearson 95% over independent seed units, with the 0.5 (RQ4) and 0.05 (RQ4b) lines; CCC v1.2.2 exposure-level supported rate shown separately as L2, not attribution.",
+ "evidence_category": "new-prospective",
+ "figure": "fig_overattribution",
+ "missing_fields": [],
+ "pdf_written": true,
+ "plotted_values": {
+  "information_set": "I1 (RQ4/RQ4b protocol set)",
+  "rows": {
+   "eps0.1/P2": {
+    "RQ4_class_pass": false,
+    "RQ4b_class_pass": false,
+    "baseline_over_attribution": {
+     "independent_n": 200,
+     "member_k": 0,
+     "member_n": 200,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.018275340355136248
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    },
+    "ccc_v1.2.2_L2_supported": {
+     "independent_n": 200,
+     "member_k": 0,
+     "member_n": 200,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.018275340355136248
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    }
+   },
+   "eps0.1/P3": {
+    "RQ4_class_pass": false,
+    "RQ4b_class_pass": false,
+    "baseline_over_attribution": {
+     "independent_n": 200,
+     "member_k": 0,
+     "member_n": 200,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.018275340355136248
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    },
+    "ccc_v1.2.2_L2_supported": {
+     "independent_n": 200,
+     "member_k": 0,
+     "member_n": 200,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.018275340355136248
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    }
+   },
+   "eps0.1/P6": {
+    "RQ4_class_pass": false,
+    "RQ4b_class_pass": true,
+    "baseline_over_attribution": {
+     "independent_n": 200,
+     "member_k": 0,
+     "member_n": 200,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.018275340355136248
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    },
+    "ccc_v1.2.2_L2_supported": {
+     "independent_n": 200,
+     "member_k": 0,
+     "member_n": 200,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.018275340355136248
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    }
+   },
+   "eps0.1/benign-cooperation": {
+    "RQ4_class_pass": false,
+    "RQ4b_class_pass": true,
+    "baseline_over_attribution": {
+     "independent_n": 100,
+     "member_k": 0,
+     "member_n": 100,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.03621669264517642
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    },
+    "ccc_v1.2.2_L2_supported": {
+     "independent_n": 100,
+     "member_k": 0,
+     "member_n": 100,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.03621669264517642
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    }
+   },
+   "eps0/P2": {
+    "RQ4_class_pass": true,
+    "RQ4b_class_pass": true,
+    "baseline_over_attribution": {
+     "independent_n": 200,
+     "member_k": 200,
+     "member_n": 200,
+     "member_rate": 1.0,
+     "unit_cp95": [
+      0.9817246596448637,
+      1.0
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 200,
+     "unit_rate": 1.0
+    },
+    "ccc_v1.2.2_L2_supported": {
+     "independent_n": 200,
+     "member_k": 0,
+     "member_n": 200,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.018275340355136248
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    }
+   },
+   "eps0/P3": {
+    "RQ4_class_pass": true,
+    "RQ4b_class_pass": true,
+    "baseline_over_attribution": {
+     "independent_n": 200,
+     "member_k": 200,
+     "member_n": 200,
+     "member_rate": 1.0,
+     "unit_cp95": [
+      0.9817246596448637,
+      1.0
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 200,
+     "unit_rate": 1.0
+    },
+    "ccc_v1.2.2_L2_supported": {
+     "independent_n": 200,
+     "member_k": 0,
+     "member_n": 200,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.018275340355136248
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    }
+   },
+   "eps0/P6": {
+    "RQ4_class_pass": false,
+    "RQ4b_class_pass": true,
+    "baseline_over_attribution": {
+     "independent_n": 200,
+     "member_k": 0,
+     "member_n": 200,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.018275340355136248
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    },
+    "ccc_v1.2.2_L2_supported": {
+     "independent_n": 200,
+     "member_k": 0,
+     "member_n": 200,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.018275340355136248
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    }
+   },
+   "eps0/benign-cooperation": {
+    "RQ4_class_pass": false,
+    "RQ4b_class_pass": true,
+    "baseline_over_attribution": {
+     "independent_n": 100,
+     "member_k": 0,
+     "member_n": 100,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.03621669264517642
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    },
+    "ccc_v1.2.2_L2_supported": {
+     "independent_n": 100,
+     "member_k": 0,
+     "member_n": 100,
+     "member_rate": 0.0,
+     "unit_cp95": [
+      0.0,
+      0.03621669264517642
+     ],
+     "unit_endpoint": "any",
+     "unit_k": 0,
+     "unit_rate": 0.0
+    }
+   }
+  },
+  "strongest_baseline": "B2+"
+ },
+ "run_label": "PROSPECTIVE",
+ "source_files": {
+  "RESULTS.json": "bfac102dbaa500efdeb3fd52f0a63f6ea518983dd5828fe66f16c88b3cfc4ac7"
+ }
+}
