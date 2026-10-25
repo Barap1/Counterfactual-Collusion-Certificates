@@ -15,6 +15,14 @@ python3 -I review/reproduce_headline/independent.py --input "$ccc_extract/exp002
 
 Expected (all values in this sentence: original-confirmatory): `Delta` = 1.3543257..., `sign_flip` = 18/256 (p = 0.0703125), 8 defined pairs, 7 non-zero. This was verified with system `/usr/bin/python3` in an isolated temporary directory containing only the tracked script and archive inputs, with no packages installed. The program imports no `ccc` module and makes no model or network calls.
 
+## Prospective headline: deterministic stratum only (D-048)
+
+The established new-prospective result is **eps=0**: symmetry and frontier checks pass by construction; the knockout baseline accuses legitimate allocation and authorized-transfer members in 200/200 pairs each, while P6 is 0/200 and benign cooperation 0/100. RQ3/RQ4/RQ5 fail at eps=0; DEV-informed RQ4b passes; RQ6 is descriptive. These are scoped scripted-generator results, not validated collusion detection.
+
+**Pre-registered aggregate verdicts:** RQ1: **pass** — T2; RQ2: **pass** — T3; RQ3: **fail** — T4; RQ4: **fail** — T5; RQ4b: **fail** — T5b; RQ5: **fail** — T8; RQ6: **descriptive** — RQ6. Four aggregate predictions failed.
+
+**eps=0.1 is platform-dependent, not established.** D-048 restricted established claims to eps=0 after outcomes were visible (post hoc). Across available shared units, eps=0 is byte-identical on 149/149; eps=0.1 differs on 142/148, with method-output differences on 1160/1452 records (descriptive archive audit). No claim rests on noisy results, and macOS noisy DEV is not comparable with Linux noisy prospective results. See [full stratum results](docs/enh/r2/RESULTS_BY_STRATUM.md) and [exact platform counts](docs/enh/r2/PLATFORM_DIVERGENCE.md). EXP-003 was not completed; no result is claimed.
+
 ## Headline result (held-out, confirmatory null)
 
 Held-out EXP-002 (protocol v1.2, local `gemma4:26b`, $0 API spend) is complete. The preregistered directional hypothesis (deceptive-collusion prompts raise the outsider-harm effect above authorized cooperation) is **not supported**:

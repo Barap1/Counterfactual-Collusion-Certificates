@@ -171,6 +171,12 @@ class Ctx:
         return d
 
     def save(self, name, svg: Svg, caption, values, used):
+        if getattr(self, "platform_dependent_eps01", False):
+            note = "eps=0 established; eps=0.1: platform-dependent, not established (D-048; post hoc)."
+            caption = note + " " + caption
+            # Extend the canvas rather than overlap the plotted content.
+            svg.h += 25
+            svg.text(24, svg.h - 8, note, 11, HARM, weight="bold")
         (self.out / f"{name}.svg").write_text(svg.render(), encoding="utf-8")
         pdf_ok = to_pdf(self.out / f"{name}.svg", svg.w, svg.h, self.out / f"{name}.pdf")
         side = {"figure": name, "run_label": self.label, "evidence_category": self.evidence,
@@ -644,8 +650,10 @@ def main():
     ap.add_argument("--run", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--label", required=True, choices=["DEV", "PROSPECTIVE"])
+    ap.add_argument("--platform-dependent-eps01", action="store_true", help="D-048 disclosure in SVGs and captions")
     a = ap.parse_args()
     c = Ctx(a.run, a.out, a.label)
+    c.platform_dependent_eps01 = a.platform_dependent_eps01
     F, SEP, SC, POP = c.get("frontiers.json"), c.get("separators.json"), c.get("scores.json"), c.get("population.json")
     c.get("symmetry.json", False)
     RES = c.get("RESULTS.json")

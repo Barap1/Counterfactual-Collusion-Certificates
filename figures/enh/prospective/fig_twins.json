@@ -1,9 +1,9 @@
 {
- "caption": "[PROSPECTIVE] One evidence, two verdicts. P2 twin pair at seed 19693329 (lowest seed rule). Identical observables under I1-I3 (enumeration), opposite labels, frozen CCC v1.2.2 emits the same exposure-level output for both; the I4 incentive probe separates them.",
+ "caption": "[PROSPECTIVE] eps=0 established; eps=0.1: platform-dependent, not established (D-048; post hoc). One evidence, two verdicts. P2 twin pair at seed 19693329 (lowest seed rule). Identical observables under I1-I3 (enumeration), opposite labels, frozen CCC v1.2.2 emits the same exposure-level output for both; the I4 incentive probe separates them.",
  "evidence_category": "new-prospective",
  "figure": "fig_twins",
  "missing_fields": [],
- "pdf_written": true,
+ "pdf_written": false,
  "plotted_values": {
   "ccc_v1.2.2_observed_first_difference": null,
   "enumerated_pair_distinct_by_set": {

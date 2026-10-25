@@ -1,0 +1,24 @@
+### 5.4 Original held-out study: confirmatory null
+
+**Primary [OC].** Delta = 1.354 reward units, world-cluster 95% CI [-0.020, 2.834], exact one-sided sign-flip p = 0.0703 (18/256), n = 8 matched world pairs. Both required criteria fail; the preregistered directional hypothesis is **NOT supported**. Floors were met (8 attempted pairs, 7 nonzero paired effects, 8 eligible complete pairs). This is a failed confirmatory directional test, not evidence that the effect is absent.
+
+**Design sensitivity [D].** The registered MDE_80 is about 2.2 reward units; precision was limited.
+
+**Post-hoc order check [PH].** The bootstrap lower bound is -0.0195 under archived string order and -0.00017 under numeric order; the sign-flip criterion fails independently.  Delta compares prompt regimes, not realized collusion.
+
+**Not confirmatory: registered secondary and post-hoc analyses.**
+
+| Class | Quantity | Value | Status |
+|---|---|---|---|
+| [ORS] | Registered non-commit sensitivity | Delta = 0.727, 95% CI [-0.306, 1.914] | Excludes non-committing factual continuations, retains matched worlds; changes the estimand |
+| [PH] | Sensitivity sign-flip test | p = 0.156 | Post hoc; does not repair the primary |
+| [D] | Contribution of non-commit cases | 0.627 of 1.354 (46%) | Descriptive accounting; not entirely driven by those cases |
+
+The preregistered S1–S3 family is original-confirmatory [OC]; none is significant. Estimates and Holm corrections are in Appendix F.
+
+**Exploratory certificates [D].** Over 16 checkpoints: 0 supported, 11 not supported, 5 inconclusive (B1 0/4/4, B2 0/7/1). No outsider-effect lower bound exceeded m_O = 2.5 (maximum L = 0.77). The placebo was available at 2 of 16 checkpoints, so zero support is not attributable to unavailable placebos alone. All 16 certificates carry `info_bearing = true` by conservative default, which changes no realized status.
+
+**Interpretation.** The interval is compatible with effects near zero and substantially positive effects. Delta compares prompt regimes, not realized collusion. A significant exposure-level effect would still require separating evidence for attribution.
+
+The instrument's accounting is 199 scheduled branch records: 143 executed valid continuations and 56 unrun placebo branches [D]. Control design and development checks are in Section 5.1; full accounting and sham uncertainty are in Appendix F.
+

@@ -25,3 +25,16 @@
 | C-D03 | Tier-B placebo availability 0/8 on DEV real conversations | VERIFIED | docs/research/sci002/placebo_census_tierB_dev.md |
 | C-X01 | "First causal/counterfactual audit of LLM collusion"; "novel message knockout" | **REJECTED** | docs/research/sci001/claim_review.md, close_read.md |
 | Note | REV-001 ledger C24 says 3 `pattern_ambiguous`; frozen rows show 4 (H02_B1, H07_B1, H07_B2, H08_B1). The paper uses 4. | CORRECTED | ops/reports/PUB-007.md |
+
+## D-048 platform and stratum claims (FIX-EPS)
+
+| ID | Claim | Status | Evidence |
+|---|---|---|---|
+| C-E01 | Shared eps=0 units byte-identical 149/149; no method-output differences on 1458 records | descriptive archive audit; supports established eps=0 scope | docs/enh/r2/PLATFORM_DIVERGENCE.md; scripts/eps_platform_check.py |
+| C-E02 | Shared eps=0.1 units differ 142/148; method outputs differ on 1160/1452 records | platform-dependent, not established; cause unresolved | docs/enh/r2/PLATFORM_DIVERGENCE.md |
+| C-E03 | eps=0: RQ1/RQ2 pass, RQ3/RQ4/RQ5 fail, RQ4b pass, RQ6 descriptive | established new-prospective, scoped to frozen generator; RQ4b DEV-informed; RQ5 exploratory | docs/enh/r2/RESULTS_BY_STRATUM.json strata.0; run_par/RESULTS.json |
+| C-E04 | Four aggregate predictions failed: RQ3/RQ4/RQ4b/RQ5; RQ1/RQ2 pass, RQ6 descriptive | unchanged pre-registered report.py verdicts | run_par/RESULTS.json rq; RESULTS_BY_STRATUM.json aggregate_verdicts |
+| C-E05 | eps=0 RQ3 61/200; B2+ legitimate P2/P3 200/200 each, P6 0/200, benign 0/100 | established new-prospective | RESULTS_BY_STRATUM.json strata.0.rq.RQ3/RQ4; run_par/RESULTS.json tables.T5 |
+| C-E06 | eps=0 RQ5 v1 2/84 cells, v0 5/84; 73 undefined gaps each; v1 pair attribution P2/I4 and P3/I5 200/200 each | exploratory-method; overall failure retained | RESULTS_BY_STRATUM.json strata.0.rq.RQ5 |
+| C-E07 | Established-scope restriction was decided after outcomes were visible; no claim rests on eps=0.1; noisy DEV/prospective are not comparable | post-hoc decision, not new preregistration | ops/DECISIONS.md D-048; paper/v2/draft_v2.md §§5,7,B |
+| C-E08 | eps=0 CCC I2 legitimate P2/P3 supported 200/200 each | new-prospective L2 exposure, not attribution | RESULTS_BY_STRATUM.json strata.0.rq.RQ6.rows |

@@ -2,6 +2,14 @@
 
 Reviewed 2026-10-25, within the 40-minute timebox. Scope: the five assigned documents, paper main text §§1–8 and abstract; project instructions and task registry were also read. No paper, results, protocol, registry or experimental artifacts were edited. The registry has no W5-FINAL entry; the direct user assignment authorizes this review and its required handoff only. No delegation, git, network, Modal or experimental model/API calls were used.
 
+## Top skeptic point added by FIX-EPS: D-048 changes the established evidence scope
+
+**Severity: HIGH — substantive platform dependence and post-hoc restriction.**
+
+**Evidence:** [PLATFORM_DIVERGENCE.md](r2/PLATFORM_DIVERGENCE.md), [RESULTS_BY_STRATUM.json](r2/RESULTS_BY_STRATUM.json), D-048. All 149 shared eps=0 units agree byte-for-byte; 142/148 shared eps=0.1 units differ, with full method-output differences on 1160/1452 records [D]. The disagreement includes decisions, not only numerical receipts. REV_R3 verified arithmetic but missed this substantive consequence. The cause remains unresolved. This limits the earlier review's assurance; its historical source hashes and line references below describe the pre-FIX-EPS snapshot.
+
+**Minimal honest fix applied:** eps=0 alone supplies established new-prospective headlines; eps=0.1 remains fully reported as **platform-dependent, not established**. D-048 was decided after outcomes were visible and is disclosed as post hoc. No noisy DEV/prospective cross-platform comparison supports a claim. All four aggregate failures remain: RQ3/RQ4/RQ4b/RQ5. The eps=0 RQ4b pass cannot rescue its aggregate failure; RQ5 fails even at eps=0. No EXP-003 result is claimed. Both run archives remain untouched. Source counts and copied table rows can be regenerated with `scripts/eps_platform_check.py`.
+
 ## Assessment
 
 **The strongest rejection case is insufficient scientific validation of the proposed instrument and reporter, rather than incorrect arithmetic or concealed failed tests.** What survives is a scoped evidence-standard proposal, executable counterexamples, and openly reported negative results. Whether that constitutes enough research contribution is a judge's substantive decision. The minimal honest revision is to make that surviving contribution unmistakable, disclose the execution deviation in the main text, and stop short of validated auditing capability.

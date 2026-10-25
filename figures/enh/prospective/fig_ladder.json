@@ -1,9 +1,9 @@
 {
- "caption": "[PROSPECTIVE] Evidence ladder L0 suspicious text, L1 causal influence, L2 harmful exposure, L3 attribution, with the information set (I0-I5) each rung needs. Concept colours: causal effect (blue), harm (red), attribution (purple), uncertainty (amber).",
+ "caption": "[PROSPECTIVE] eps=0 established; eps=0.1: platform-dependent, not established (D-048; post hoc). Evidence ladder L0 suspicious text, L1 causal influence, L2 harmful exposure, L3 attribution, with the information set (I0-I5) each rung needs. Concept colours: causal effect (blue), harm (red), attribution (purple), uncertainty (amber).",
  "evidence_category": "new-prospective",
  "figure": "fig_ladder",
  "missing_fields": [],
- "pdf_written": true,
+ "pdf_written": false,
  "plotted_values": {
   "colours": {
    "attribution": "#6b3fa0",

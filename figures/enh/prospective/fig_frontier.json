@@ -1,9 +1,9 @@
 {
- "caption": "[PROSPECTIVE] Frontier heat map, pair type P1-P6 by information set I0-I5, both noise strata. Fill from exact enumeration; overlaid: Bayes-given-S pair accuracy (RQ2, T3) and the share of seed units on which CCC-L v1 (DEV-informed method version), CCC-L v0 and frozen CCC v1.2.2 emit different outputs for the two twin members. P3 at I5 is definitional.",
+ "caption": "[PROSPECTIVE] eps=0 established; eps=0.1: platform-dependent, not established (D-048; post hoc). Frontier heat map, pair type P1-P6 by information set I0-I5, both noise strata. Fill from exact enumeration; overlaid: Bayes-given-S pair accuracy (RQ2, T3) and the share of seed units on which CCC-L v1 (DEV-informed method version), CCC-L v0 and frozen CCC v1.2.2 emit different outputs for the two twin members. P3 at I5 is definitional.",
  "evidence_category": "new-prospective",
  "figure": "fig_frontier",
  "missing_fields": [],
- "pdf_written": true,
+ "pdf_written": false,
  "plotted_values": {
   "eps0.1/P1/I0": {
    "Bayes-given-S": 0.0,
