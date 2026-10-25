@@ -12,7 +12,7 @@ Rebuilt README from a problem-first outline. The opening explains influence vers
 
 ## Design pass
 
-Original editable SVGs: `docs/assets/allocation-twins.svg`, `evidence-steps.svg`, source `generate.py`. Rendered in Chrome through the browser tool and visually inspected. Desktop native SVG and 390px README-scale reviews showed readable labels, high contrast, complete arrows and no visible clipping. Phone README images render at 358px inside a 390px viewport; document scrollWidth equals clientWidth (390). Explorer mobile case view also has no page overflow; a fresh mobile entry collapses its case menu. The local README preview approximated GitHub typography; final GitHub rendering is checked after push.
+Original editable SVGs: `docs/assets/allocation-twins.svg`, `evidence-steps.svg`, source `generate.py`. Rendered in Chrome through the browser tool and visually inspected. Desktop native SVG and 390px README-scale reviews showed readable labels, high contrast, complete arrows and no visible clipping. Phone README images render at 358px inside a 390px viewport; document scrollWidth equals clientWidth (390). Explorer mobile case view also has no page overflow; a fresh mobile entry collapses its case menu. The local README preview approximated GitHub typography. After push, the live GitHub README and both loaded SVG images were inspected; image dimensions were 640×1180 and 640×578.
 
 ## Engineering pass
 
@@ -44,4 +44,4 @@ Final preservation check: all 16,992 protected records are byte-identical. Targe
 
 Clean staged-tree export to `/private/tmp/ccc-repository-overhaul/public-checkout` independently passed the headline, all 19 public-file tests, and all 109 link/anchor checks with no starter, credential files or private pilot inputs. No `paper/*.pdf` or DOCX is present in the staged public tree. The scanner checked 376 changed working/staged blobs with zero flags; two broad scans of unchanged compressed mirrors were interrupted and are not reported as complete full-tree scans. Old JUnit exports with document-ID-shaped fixture identifiers were also excluded. Hash verification protects the unchanged scientific bytes.
 
-GitHub final commit, CI and maintenance results will be recorded in `delivery.json` after publication. No claim of final paper submission or third-party legal clearance is made.
+Published research-content commit: `89572d99e4042f04a387a80e7e093dca86421341`. GitHub CI passed on Python 3.12 and 3.14. PR #1 was closed as superseded; `cursor/cloud-agent-env-235e` was deleted after verifying its only proposed unique work was the setup notes consolidated here. The sole remote branch is `main`; no issues or milestones needed closure. Description, topics and homepage were updated. Details are recorded in `delivery.json`. No claim of final paper submission or third-party legal clearance is made.

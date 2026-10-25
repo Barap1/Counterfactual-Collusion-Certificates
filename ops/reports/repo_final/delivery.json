@@ -1,0 +1,56 @@
+{
+  "status": "published and verified",
+  "repository": "https://github.com/Barap1/Counterfactual-Collusion-Certificates",
+  "content_commit": "89572d99e4042f04a387a80e7e093dca86421341",
+  "verified_utc": "2026-10-25T18:42:27.841318+00:00",
+  "ci": {
+    "status": "success",
+    "python_versions": [
+      "3.12",
+      "3.14"
+    ],
+    "run": "https://github.com/Barap1/Counterfactual-Collusion-Certificates/actions/runs/40222385026"
+  },
+  "maintenance": {
+    "closed_prs": [
+      {
+        "number": 1,
+        "reason": "superseded; useful setup and missing-input caveats consolidated in docs/REPRODUCING.md"
+      }
+    ],
+    "merged_prs": [],
+    "deleted_remote_branches": [
+      "cursor/cloud-agent-env-235e"
+    ],
+    "remaining_remote_branches": [
+      "main"
+    ],
+    "issues": 0,
+    "milestones": 0,
+    "metadata": [
+      "description",
+      "homepage",
+      "topics"
+    ]
+  },
+  "validation": {
+    "full_local_suite_passed": 500,
+    "skipped": 4,
+    "subtests": 351,
+    "public_checkout_tests_passed": 19,
+    "navigation_pages": 15,
+    "local_links_and_anchors": 109,
+    "protected_scientific_records_unchanged": 16992,
+    "independent_bootstrap": "matches frozen interval",
+    "live_github_svg_images": "both loaded",
+    "final_paper_pdf_added": false,
+    "experiments_or_model_calls": 0
+  },
+  "owner_actions": [
+    "Add approved final PDF at paper/paper.pdf; then add [Read the paper](paper/paper.pdf) to README navigation",
+    "Resolve upstream redistribution permissions",
+    "Review/restrict historically exposed external documents",
+    "Final paper submission decisions"
+  ],
+  "verification_limit": "Direct file URL access blocked by browser policy; local-only HTTP explorer and desktop/mobile SVGs verified. Full public baseline pattern scan not completed; changed public bytes scanned and frozen records hash-verified."
+}
