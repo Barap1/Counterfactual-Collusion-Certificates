@@ -1,6 +1,6 @@
 # CCC status — repository overhaul
 
-Task REPO-FINAL: DONE, published to remote `main`. Current research entry: `README.md`; evidence map: `docs/README.md`; tested commands: `docs/REPRODUCING.md`.
+Task REPO-FINAL: DONE, published to remote `main`. Owner-requested compact graphics/prose refinement is complete; final audit: `ops/reports/repo_final/FINAL_GITHUB_AUDIT.md`. Current research entry: `README.md`; evidence map: `docs/README.md`; tested commands: `docs/REPRODUCING.md`.
 
 Scientific results unchanged. Eight independent real-agent pairs: primary contrast 1.354, world-cluster 95% interval [-0.020,2.834], exact one-sided p .0703125; directional hypothesis not supported; zero supported exploratory certificates. Constructed benchmark: two consistency checks pass by design; four aggregate predictions fail; utility 2/84 settings (v1),5/84 (v0). Noisy condition platform-dependent; deterministic restriction post hoc.
 

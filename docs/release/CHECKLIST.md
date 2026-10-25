@@ -1,6 +1,6 @@
 # Repository release checklist
 
-Current reader entry: [README](../../README.md). Verification and exact commands: [overhaul report](../../ops/reports/repo_final/REVIEW.md). Historical audit: [CODEX_FINAL_AUDIT.md](../../ops/reports/CODEX_FINAL_AUDIT.md); its PDF freshness, no-publication and pending presentation statements describe the earlier local state, not this release.
+Current reader entry: [README](../../README.md). Verification and exact commands: [overhaul report](../../ops/reports/repo_final/FINAL_GITHUB_AUDIT.md). Historical audit: [CODEX_FINAL_AUDIT.md](../../ops/reports/CODEX_FINAL_AUDIT.md); its PDF freshness, no-publication and pending presentation statements describe the earlier local state, not this release.
 
 ## Repository delivery
 

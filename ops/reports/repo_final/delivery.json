@@ -2,7 +2,7 @@
   "status": "published and verified",
   "repository": "https://github.com/Barap1/Counterfactual-Collusion-Certificates",
   "content_commit": "89572d99e4042f04a387a80e7e093dca86421341",
-  "verified_utc": "2026-10-25T18:42:27.841318+00:00",
+  "verified_utc": "2026-10-25T22:26:35.690645+00:00",
   "ci": {
     "status": "success",
     "python_versions": [
@@ -52,5 +52,11 @@
     "Review/restrict historically exposed external documents",
     "Final paper submission decisions"
   ],
-  "verification_limit": "Direct file URL access blocked by browser policy; local-only HTTP explorer and desktop/mobile SVGs verified. Full public baseline pattern scan not completed; changed public bytes scanned and frozen records hash-verified."
+  "verification_limit": "Direct file URL access blocked by browser policy; local-only HTTP explorer and desktop/mobile SVGs verified. Full public baseline pattern scan not completed; changed public bytes scanned and frozen records hash-verified.",
+  "compact_content_commit": "2c6a78d527ea935beeee556bdac0a36a65edbff0",
+  "compact_ci": {
+    "status": "success",
+    "run": "https://github.com/Barap1/Counterfactual-Collusion-Certificates/actions/runs/40239473489"
+  },
+  "final_audit": "ops/reports/repo_final/FINAL_GITHUB_AUDIT.md"
 }

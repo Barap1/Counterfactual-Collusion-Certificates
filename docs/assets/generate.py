@@ -46,12 +46,12 @@ svg = start(640, 536, 'Same replay, different programmed policies',
     'separates only these specified policies; identical replay alone does not settle attribution.')
 text(svg, 24, 40, 'Same replay. Different policies.', 30, weight='700')
 rect(svg, 24, 62, 592, 160, '#ffffff', LINE)
-text(svg, 44, 94, 'SAME MESSAGE · SAME DISPATCH ALLOCATION', 20, MUTED, '700')
-text(svg, 44, 128, '“Please allocate the contested task', 23, weight='700')
-text(svg, 44, 157, 'to our dispatch team.”', 23, weight='700')
-text(svg, 44, 199, 'Mean outsider reward: 14 → 19 after removal', 23)
+text(svg, 44, 94, 'Same message · same dispatch allocation', 24, MUTED, '700')
+text(svg, 44, 128, '“Please allocate the contested task', 24, weight='700')
+text(svg, 44, 157, 'to our dispatch team.”', 24, weight='700')
+text(svg, 44, 199, 'Mean outsider reward: 14 → 19 after removal', 24)
 rect(svg, 24, 244, 592, 52, INK)
-text(svg, 44, 277, 'Probe: lower each outsider’s task cost by 10.', 23, '#ffffff')
+text(svg, 44, 277, 'Probe: lower each outsider’s task cost by 10.', 24, '#ffffff')
 arrow(svg, 166, 305, TEAL)
 arrow(svg, 474, 305, RUST)
 for x, color, background, title, permission, response, reward in [
@@ -60,9 +60,9 @@ for x, color, background, title, permission, response, reward in [
 ]:
     rect(svg, x, 332, 284, 140, background)
     text(svg, x + 18, 365, title, 24, color, '700')
-    text(svg, x + 18, 392, permission, 22, color)
-    text(svg, x + 18, 425, response, 23, INK, '700')
-    text(svg, x + 18, 455, f'Outsider reward: {reward}', 22)
+    text(svg, x + 18, 392, permission, 24, color)
+    text(svg, x + 18, 425, response, 24, INK, '700')
+    text(svg, x + 18, 455, f'Outsider reward: {reward}', 24)
 text(svg, 24, 514, 'Same replay alone does not settle attribution.', 24, weight='700')
 save('allocation-twins.svg', svg)
 
@@ -72,8 +72,8 @@ svg = start(640, 246, 'Claims and the evidence they require',
     'additionally requires a declared policy and evidence distinguishing legitimate '
     'alternatives. These are requirements, not automatic conclusions; otherwise attribution '
     'remains unresolved.')
-text(svg, 28, 31, 'Claim', 22, MUTED, '700')
-text(svg, 264, 31, 'Evidence needed', 22, MUTED, '700')
+text(svg, 28, 31, 'Claim', 24, MUTED, '700')
+text(svg, 264, 31, 'Evidence needed', 24, MUTED, '700')
 for i, (claim, evidence) in enumerate([
     ('Observation', 'Visible communication'),
     ('Causal influence', 'Valid replay + nonzero effect'),
@@ -82,6 +82,6 @@ for i, (claim, evidence) in enumerate([
 ]):
     y = 48 + i * 47
     rect(svg, 16, y, 608, 42, INK if i == 3 else '#ffffff', LINE if i < 3 else 'none', 5)
-    text(svg, 28, y + 28, claim, 22, '#ffffff' if i == 3 else INK, '700')
-    text(svg, 264, y + 28, evidence, 22, '#e0eeec' if i == 3 else MUTED)
+    text(svg, 28, y + 28, claim, 24, '#ffffff' if i == 3 else INK, '700')
+    text(svg, 264, y + 28, evidence, 24, '#e0eeec' if i == 3 else MUTED)
 save('evidence-steps.svg', svg)
