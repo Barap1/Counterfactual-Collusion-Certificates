@@ -197,13 +197,14 @@ def serve():
 
 
 def start(args) -> int:
+    frozen = None
     if not args.development:
         if not args.manifest:
             raise ValueError('held-out start requires --manifest; GPU spike requires --development')
         from .manifest import load
         m = load(args.manifest)
         from .freeze import verify_launch_window
-        verify_launch_window(m)
+        frozen = verify_launch_window(m)
         if m['phase'] != 'holdout' or m['backend'] != 'modal':
             raise ValueError('held-out Modal manifest required')
     elif args.manifest:
@@ -221,8 +222,25 @@ def start(args) -> int:
         raise ValueError("explicit conservative cumulative unledgered storage liability required: --storage-usd")
     cpu = float(os.environ.get("EXP003_CPU", "8" if args.gpu == "none" else "4"))
     mem = int(os.environ.get("EXP003_MEM_MIB", "32768" if args.gpu == "none" else "16384"))/1024
+    admission = {}
+    if frozen is not None:
+        from .feasibility import projection
+        from .manifest import digest
+        p = projection(m, frozen)
+        config = dict(gpu=args.gpu, cpu=cpu, mem_gib=mem, parallel=args.parallel, scaledown=args.scaledown)
+        if config != p['config']:
+            raise ValueError('launch configuration differs from measured frozen configuration')
+        # The remote function has a fixed 7200-second timeout ceiling.
+        if min(args.max_minutes*60, 7200) < p['seconds']:
+            raise ValueError('requested lifetime cannot cover projected block including startup')
+        if args.storage_usd < frozen['feasibility_budget']['storage_usd']:
+            raise ValueError('storage liability below frozen reconciliation')
+        admission = dict(minimum_seconds=p['seconds'], minimum_usd=p['cost'],
+                         reconciled_prior_usd=frozen['feasibility_budget']['reconciled_prior_usd'],
+                         binding=dict(launch_config=config, manifest_sha256=digest(m),
+                                      measured_cost_sha256=p['measured_cost_sha256']))
     row = budget.reserve_session(args.max_minutes*60, None if args.gpu == "none" else args.gpu,
-                                 cpu=cpu, mem_gib=mem, storage_usd=args.storage_usd)
+                                 cpu=cpu, mem_gib=mem, storage_usd=args.storage_usd, **admission)
     env = dict(os.environ, EXP003_MODAL_TOKEN=secrets.token_urlsafe(32), EXP003_GPU=args.gpu,
                EXP003_PARALLEL=str(args.parallel), EXP003_RESERVATION=json.dumps(row),
                EXP003_DEADLINE_EPOCH=str(row['deadline_epoch']),

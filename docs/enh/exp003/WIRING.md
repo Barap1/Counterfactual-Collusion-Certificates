@@ -176,3 +176,50 @@ inventory is W2_FIX_hashes.json in that directory; ORCH must refresh the full
 candidate/final dependency inventory after integration. No freeze approval is
 implied by these fixes. The registry lists RA-LEAD ownership, no W2-FIX lease;
 this direct user assignment supplies path ownership; registry remains untouched.
+
+## W2-FIX2 measured admission and candidate regeneration
+
+`feasibility.py` reads the hash-bound measured-cost file; placeholders refuse.
+It binds workload/model/counts and launch GPU/CPU/memory/parallel/scaledown, and
+computes all-64-world cost/time lower bounds including startup and shutdown.
+`modal_ctl.start` checks the actual requested lifetime and 7200-second remote
+ceiling before reservation. `reserve_session` enforces the deadline-clipped
+minimum lifetime, reserves at least the measured projection under its ledger lock,
+and includes the larger of reconciled and recorded prior usage plus storage.
+A prior reconciliation adjustment is durable so the watchdog sees it as well.
+The reservation records manifest/measurement/configuration bindings. Collector
+attachment checks those bindings, whole-block remaining lifetime and committed
+liabilities before output setup or source calls. Development spikes remain
+explicitly labelled and do not constitute prospective feasibility evidence.
+
+See FEASIBILITY_TEMPLATE.md for the unmeasured schema and ORCH measurement work.
+No measured-cost file or final FREEZE.json is supplied by W2-FIX2. The registration
+still requires 32 scheduled pairs; unaffordable measurements block it pending a
+prospective reviewed amendment, with the 16/24–32 targets unchanged in this patch.
+
+Regenerate the candidate after all integration edits:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python -B -m ccc.exp003.refresh_candidate
+```
+
+This stdlib-only command retains the dependency inventory, adds every EXP-003
+module/test, rehashes protocol and evidence, and rewrites only FREEZE_candidate.json.
+It verifies every resulting entry. It never writes FREEZE.json, generates seeds,
+approves a run or claims final release. ORCH must regenerate the final approved
+freeze and dependent manifest/plan after audited seed and measured feasibility
+artifacts exist, then obtain release re-review. New light validation evidence is
+ccc/exp003/offline_evidence/W2_FIX2_validation.txt.
+
+W2-FIX2 final light-test command (guarded against network, secret-file reads and
+all subprocesses):
+
+```sh
+CCC_STARTER_ROOT="$PWD/starter/collusion_hackathon" PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 python -B -c 'import sys,site; site.addsitedir("starter/collusion_hackathon/colosseum/.venv/lib/python3.14/site-packages"); from tests.replay.offline_runner import guard; sys.addaudithook(guard); sys.addaudithook(lambda e,a: (_ for _ in ()).throw(PermissionError("W2-FIX2 subprocess forbidden")) if e=="subprocess.Popen" else None); import pytest; raise SystemExit(pytest.main(["-q","tests/test_exp003_controls.py","tests/test_exp003_probe.py","tests/test_exp003_wiring.py","--basetemp","/tmp/W2-FIX2-release","-p","no:cacheprovider"]))' > ccc/exp003/offline_evidence/W2_FIX2_validation.txt
+```
+
+Initial validation found a synthetic temporary measured-file resolver mismatch;
+the fixture now explicitly maps that file without weakening repository-only
+production artifact checks. The corrected 37-test suite passed; the final suite
+adds a launch-to-reservation binding test. All measurement numbers in tests are
+synthetic development fixtures. No FREEZE.json is created, even by fixtures.

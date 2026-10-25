@@ -192,3 +192,22 @@ Offline validation uses `python -m ccc.exp003.mock --output OUT` followed by the
 same analysis command with default development category. No real outcomes were
 used in drafting. Independent review, audited seed inventory, feasibility budget,
 backend choice, and director freeze commit remain release gates.
+
+## Measured session admission
+
+For Plan M, freeze a measured-cost JSON file and its SHA256 in feasibility_budget
+as measured_cost_artifact/measured_cost_sha256. The required measurement record
+and unmeasured schema are in FEASIBILITY_TEMPLATE.md. Placeholder values refuse
+launch. Compute cost/time from frozen conservative per-regime-world parameters
+for all 64 regime-worlds, startup and 120 seconds of shutdown, with 20% cost margin.
+Bind GPU, CPU, memory, parallelism, scaledown, model parameters, arms and counts
+to the spike configuration. Before spawning, require the requested session and
+server timeout to cover projected active time, and reserve the greater of full
+session liability and the measured projection. Add committed spend (at least
+reconciled prior usage) and storage; refuse at either $45 operating or $51 total
+cap. Collector attachment rechecks configuration, frozen measurement hash,
+reservation and remaining lifetime before source calls. If the measured affordable
+pair ceiling cannot cover 32 scheduled pairs, refuse under this protocol and
+obtain a prospective reviewed amendment before reducing the planning target to
+what fits $45. The existing 16/24–32 targets remain unchanged here; no
+outcome-dependent amendment or confirmatory interpretation below 16 is permitted.
