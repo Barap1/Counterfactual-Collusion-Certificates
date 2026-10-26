@@ -165,30 +165,30 @@
       lo -= pad; hi += pad;
       var x = function (v) { return padL + (v - lo) / (hi - lo) * (W - padL - padR); };
       svg.appendChild(s('text', { x: 8, y: y - 6, 'font-size': 15, 'font-weight': 700 }, r.name));
-      svg.appendChild(s('text', { x: 8, y: y + 12, 'font-size': 12, class: 'muted', fill: 'var(--muted)' }, r.sub));
+      svg.appendChild(s('text', { x: 8, y: y + 12, 'font-size': 13, class: 'muted', fill: 'var(--muted)' }, r.sub));
       svg.appendChild(s('line', { x1: padL, x2: W - padR, y1: y + 14, y2: y + 14, class: 'ax' }));
       ticks(lo, hi).forEach(function (tv) {
         svg.appendChild(s('line', { x1: x(tv), x2: x(tv), y1: y + 14, y2: y + 19, class: 'ax' }));
-        svg.appendChild(s('text', { x: x(tv), y: y + 31, 'font-size': 11, 'text-anchor': 'middle', fill: 'var(--muted)' }, fmt(tv, Math.abs(tv) < 1 && tv !== 0 ? 2 : (tv % 1 ? 1 : 0))));
+        svg.appendChild(s('text', { x: x(tv), y: y + 31, 'font-size': 13, 'text-anchor': 'middle', fill: 'var(--muted)' }, fmt(tv, Math.abs(tv) < 1 && tv !== 0 ? 2 : (tv % 1 ? 1 : 0))));
       });
       svg.appendChild(s('line', { x1: x(0), x2: x(0), y1: y - 22, y2: y + 14, class: 'gl', 'stroke-dasharray': '2 3' }));
       if (r.ref !== 0) {
         svg.appendChild(s('line', { x1: x(r.ref), x2: x(r.ref), y1: y - 26, y2: y + 14, stroke: 'var(--ink)', 'stroke-width': 2, 'stroke-dasharray': '6 3' }));
-        svg.appendChild(s('text', { x: x(r.ref), y: y - 30, 'font-size': 11, 'font-weight': 700, 'text-anchor': 'middle' }, r.refLabel));
+        svg.appendChild(s('text', { x: x(r.ref), y: y - 30, 'font-size': 13, 'font-weight': 700, 'text-anchor': 'middle' }, r.refLabel));
       }
       if (t.L !== null && t.U !== null && !t.exact) {
         svg.appendChild(s('rect', { x: x(t.L), y: y - 6, width: Math.max(2, x(t.U) - x(t.L)), height: 14, fill: r.col, opacity: 0.28 }));
         svg.appendChild(s('line', { x1: x(t.L), x2: x(t.L), y1: y - 10, y2: y + 12, stroke: r.col, 'stroke-width': 3 }));
         svg.appendChild(s('line', { x1: x(t.U), x2: x(t.U), y1: y - 10, y2: y + 12, stroke: r.col, 'stroke-width': 3 }));
-        svg.appendChild(s('text', { x: x(t.L), y: y - 13, 'font-size': 11, 'text-anchor': 'middle', fill: r.col }, 'L ' + fmt(t.L)));
-        svg.appendChild(s('text', { x: x(t.U), y: y - 13, 'font-size': 11, 'text-anchor': 'middle', fill: r.col }, 'U ' + fmt(t.U)));
+        svg.appendChild(s('text', { x: x(t.L), y: y - 13, 'font-size': 13, 'text-anchor': 'middle', fill: r.col }, 'L ' + fmt(t.L)));
+        svg.appendChild(s('text', { x: x(t.U), y: y - 13, 'font-size': 13, 'text-anchor': 'middle', fill: r.col }, 'U ' + fmt(t.U)));
       }
       if (t.est !== null) {
         var px = x(t.est);
         if (t.exact) svg.appendChild(s('path', { d: 'M' + px + ' ' + (y - 9) + ' l8 8 l-8 8 l-8 -8z', fill: r.col }));
         else svg.appendChild(s('circle', { cx: px, cy: y + 1, r: 5.5, fill: 'var(--bg)', stroke: r.col, 'stroke-width': 3 }));
       } else {
-        svg.appendChild(s('text', { x: padL, y: y + 1, 'font-size': 12, fill: 'var(--muted)' }, 'no estimate in this certificate'));
+        svg.appendChild(s('text', { x: padL, y: y + 1, 'font-size': 13, fill: 'var(--muted)' }, 'no estimate in this certificate'));
       }
       desc.push(r.name + ': ' + (t.est === null ? 'none' : fmt(t.est)) + (t.L !== null ? ' [' + fmt(t.L) + ', ' + fmt(t.U) + ']' : ''));
     });
@@ -426,19 +426,19 @@
       svg.appendChild(s('text', { x: 4, y: y0 - 6, 'font-size': 13, 'font-weight': 700 }, m[1]));
       arms.forEach(function (a, i) {
         var y = y0 + i * 22, x0 = 190, bw = (summ[a][m[0]] - 0) / span * (Wd - x0 - 110), zx = x0 + (-mn) / span * (Wd - x0 - 110);
-        svg.appendChild(s('text', { x: x0 - 8, y: y + 13, 'font-size': 12, 'text-anchor': 'end' }, a + ' ' + ARM_NAME[a]));
+        svg.appendChild(s('text', { x: x0 - 8, y: y + 13, 'font-size': 14, 'text-anchor': 'end' }, a + ' ' + ARM_NAME[a]));
         svg.appendChild(s('rect', { x: bw >= 0 ? zx : zx + bw, y: y, width: Math.abs(bw), height: 15, fill: colors[a], opacity: a === 'F' ? 0.85 : 0.8 }));
-        svg.appendChild(s('text', { x: (bw >= 0 ? zx + bw : zx) + (bw >= 0 ? 6 : -6), y: y + 12, 'font-size': 12, 'text-anchor': bw >= 0 ? 'start' : 'end', class: 'num' }, fmt(summ[a][m[0]])));
+        svg.appendChild(s('text', { x: (bw >= 0 ? zx + bw : zx) + (bw >= 0 ? 6 : -6), y: y + 12, 'font-size': 14, 'text-anchor': bw >= 0 ? 'start' : 'end', class: 'num' }, fmt(summ[a][m[0]])));
       });
     });
-    return h('div', { class: 'card bars' }, h('h3', null, 'Outcomes by arm'), svg, h('p', { class: 'muted' }, 'Bars show means over the valid replicates listed above (stored per-replicate values).'));
+    return h('div', { class: 'card bars' }, h('h3', null, 'Outcomes by arm'), chartScroll(svg, 'Outcome means by arm'), h('p', { class: 'muted' }, 'Bars show means over the valid replicates listed above (stored per-replicate values).'));
   }
 
   /* ---------- case page ---------- */
   function sectionNav(ids) {
     var nav = h('nav', { class: 'sect-nav', 'aria-label': 'Sections of this case' });
     ids.forEach(function (x) {
-      nav.appendChild(h('a', { href: '#/case/' + curId, on: { click: function (e) { e.preventDefault(); var t = $(x[0]); if (t) { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); t.focus({ preventScroll: true }); } } } }, x[1]));
+      nav.appendChild(h('a', { href: '#/case/' + curId, on: { click: function (e) { e.preventDefault(); var t = $(x[0]); if (t) { var detail = t.closest('details'); if (detail) detail.open = true; t.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'start' }); t.focus({ preventScroll: true }); } } } }, x[1]));
     });
     return nav;
   }
@@ -455,23 +455,24 @@
       if (curId !== id) return;
       clear(main);
       var n = norm(c), held = n.held;
-      main.appendChild(h('div', { class: 'head' }, h('h2', { id: 'top-h' }, c.title), provBadge(c), statusPill(c.certificate.status)));
+      main.appendChild(h('div', { class: 'head' }, h('h1', { id: 'top-h' }, c.title), provBadge(c), statusPill(c.certificate.status)));
       main.appendChild(h('p', { class: 'muted' }, held
         ? 'EXP-002 world ' + c.world_id + ' · regime ' + c.regime + (c.regime === 'B1' ? ' (deceptive prompt)' : ' (authorized-cooperation prompt)') + ' · checkpoint turn ' + c.checkpoint_turn + ' · evidence category: ' + c.evidence_category
         : 'Scripted fixture ' + c.family + ' (seed ' + c.seed + ', stratum ' + c.stratum + ') · ' + c.selection_rule + ' · evidence category: ' + c.evidence_category));
       if (!held) main.appendChild(h('p', { class: 'note warn' }, (c.limitations || []).join(' ')));
       else main.appendChild(h('p', { class: 'note' }, 'Held-out cases are descriptive here. The preregistered directional hypothesis was not supported (see Study). Case certificates are Tier-B exploratory.'));
-      main.appendChild(sectionNav([['s-ladder', 'Ladder'], ['s-inter', 'Interaction'], ['s-cmp', 'F vs K'], ['s-chg', 'What changed'], ['s-val', 'Validity'], ['s-cert', 'Certificate'], ['s-raw', 'Raw evidence']]));
-      main.appendChild(sec('s-ladder', 'Evidence ladder', ['causal', 'harm', 'attr'], ladderStrip(c)));
+      main.appendChild(sectionNav([['s-ladder', 'Evidence scope'], ['s-inter', 'Observed message'], ['s-cmp', 'F vs K'], ['s-chg', 'What changed'], ['s-val', 'Controls & validity'], ['s-cert', 'Certificate'], ['s-raw', 'Raw evidence']]));
+      main.appendChild(disclosure('How the evidence ladder applies to this case', sec('s-ladder', 'Evidence ladder', [], ladderStrip(c))));
       main.appendChild(sec('s-inter', 'Interaction up to the checkpoint', ['causal'], interactionView(c)));
       main.appendChild(sec('s-cmp', 'Factual vs knockout continuations', ['causal'], compareView(c)));
       main.appendChild(sec('s-chg', 'What changed', ['causal', 'harm', 'unc'], changeView(c, n)));
-      main.appendChild(sec('s-val', 'Validity checks', [], validityView(c)));
-      main.appendChild(sec('s-cert', 'Certificate and gate trace', ['harm', 'attr'], certView(c, n)));
+      main.appendChild(sec('s-val', 'Replay validity and control checks', [], disclosure('Inspect all recorded validity checks', validityView(c))));
+      main.appendChild(sec('s-cert', 'Recorded certificate and uncertainty', [], certView(c, n)));
       main.appendChild(sec('s-raw', 'Raw evidence', [], rawView(c)));
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      enhance();
       var hd = $('top-h'); if (hd) { hd.setAttribute('tabindex', '-1'); }
-    }).catch(function (e) { clear(main); main.appendChild(h('p', { class: 'note warn' }, String(e.message))); });
+    }).catch(function (e) { if (curId !== id) return; clear(main); main.appendChild(h('p', { class: 'note warn', role: 'alert' }, String(e.message))); });
   }
   function interactionView(c) {
     var ex = c.exposure, box = h('div');
@@ -479,7 +480,7 @@
       box.appendChild(h('div', { class: 'expcard' }, h('div', { class: 'route' }, 'Exposure: ' + ex.sender + ' → ' + ex.receiver),
         h('div', { class: 'muted' }, 'private channel [' + (ex.channel_participants || []).join(', ') + '], posted turn ' + ex.posted_turn + ', first seen turn ' + ex.first_exposure_turn + ', knockout mask from turn ' + ex.mask_start + ' (' + ex.mask_version + ')'),
         h('blockquote', null, ex.content)));
-      box.appendChild(logView(c.original_interaction || [], ex, c.checkpoint_turn));
+      box.appendChild(disclosure('Original interaction transcript and checkpoint', logView(c.original_interaction || [], ex, c.checkpoint_turn)));
       box.appendChild(h('p', { class: 'muted' }, 'The highlighted record is the sender’s post_message call; the checkpoint line marks where factual and knockout continuations branch.'));
     } else {
       box.appendChild(h('div', { class: 'expcard' }, h('div', { class: 'route' }, 'Exposure message'),
@@ -505,7 +506,7 @@
     var box = h('div');
     box.appendChild(h('div', { class: 'legend' }, h('span', null, concept('harm', 'tau_O: outsider loss'), ' vs ', h('code', null, 'm_O')),
       h('span', null, concept('causal', 'tau_C, tau_W'), ' vs 0 and −δ_W'), h('span', null, concept('unc', 'bar width'), ' = bound span'), h('span', null, 'dashed black = margin')));
-    box.appendChild(h('div', { class: 'card' }, intervalPlot(n)));
+    box.appendChild(h('div', { class: 'card' }, chartScroll(intervalPlot(n), 'Case effect intervals')));
     var rv = rowVerdicts(n);
     if (rv.length) box.appendChild(h('ul', null, rv.map(function (r) {
       var t = n.tau[r[1].slice(4)];
@@ -530,13 +531,13 @@
     box.appendChild(h('div', { class: 'verdict' }, h('div', { class: 'muted' }, 'Exact certificate status'), h('div', { class: 'big' }, statusPill(n.status), ' ', h('code', null, String(n.status))),
       h('p', null, h('strong', null, 'Why: '), t.why), t.wording ? h('p', { class: 'muted' }, 'Recorded wording: “' + t.wording + '”') : null,
       h('p', null, concept('attr', 'Attribution'), ' CCC does not issue this rung. A “not supported” certificate is not evidence that agents did not collude; a “supported” one is not evidence that they did.')));
-    box.appendChild(h('h3', null, 'Gate trace'));
-    box.appendChild(t.list);
+    box.appendChild(disclosure('Inspect the recorded gate trace', t.list));
     box.appendChild(h('p', { class: 'muted' }, 'The trace restates recorded gates in plain language; it explains the stored outcome and does not issue a replacement certificate.'));
     return box;
   }
   function rawView(c) {
     var box = h('div');
+    box.appendChild(h('p', null, h('a', { href: '../data/cases/' + c.id + '.json' }, 'Download compact case JSON'), ' · ', h('a', { href: '../data/full/' + c.id + '.json' }, 'Full-text source overlay')));
     box.appendChild(h('p', null, 'Archive: ', h('code', null, D.index.archive.path), h('br'), sha('sha256 ' + (c.archive_sha256 || D.index.archive.sha256))));
     box.appendChild(h('p', null, h('a', { href: '../data/MANIFEST.json' }, 'MANIFEST.json'), ' · ', h('a', { href: '../data/TRACE.md' }, 'TRACE.md (field-by-field source map)'), ' · pack built by ', h('code', null, D.manifest.generator), ' with generation base commit ', h('code', null, (D.manifest.generator_commit_HEAD || '').slice(0, 10)), '. Actual source and generator bytes are bound by hashes. ', D.manifest.n_files + ' generated files and ' + D.manifest.n_source_hashes + ' source hashes are listed in the manifest.'));
     var rows = (c.sources || []).map(function (src) {
@@ -549,31 +550,45 @@
     return box;
   }
 
-  /* ---------- study ---------- */
+  /* ---------- study: individual matched pairs and whole-pair uncertainty ---------- */
+  function chartScroll(svg, label) { return h('div', { class: 'chart-scroll', tabindex: '0', role: 'region', 'aria-label': label + '; scroll horizontally on narrow screens' }, svg); }
+  function studyFigure() {
+    var p = D.study.primary.result;
+    return h('figure', { class: 'study-figure' }, h('h3', null, 'Eight pairs, one uncertain directional comparison'),
+      h('p', { class: 'muted' }, 'Outsider-loss difference: deceptive prompt (B1) − authorized cooperation (B2). Reward units.'),
+      h('p', { class: 'chart-hint' }, 'Each circle is one independent matched pair; the diamond and horizontal line show the mean and whole-pair 95% interval.'),
+      h('div', { class: 'chart-scroll', tabindex: '0', role: 'region', 'aria-label': 'Matched-pair differences and whole-pair uncertainty figure' }, stripPlot(D.study)),
+      h('figcaption', null, h('div', { class: 'study-summary' }, h('span', null, 'Mean ', h('b', { class: 'num' }, fmt(p.estimate, 3))),
+        h('span', null, '95% CI ', h('b', { class: 'num' }, '[' + fmt(p.L, 3) + ', ' + fmt(p.U, 3) + ']')),
+        h('span', null, 'Exact one-sided p = ', h('b', { class: 'num' }, String(p.p_raw)))),
+        h('p', { class: 'muted' }, 'The interval resamples whole matched pairs and includes zero. The preregistered directional effect was not established; this is not proof of no effect or equivalence.')));
+  }
   function renderStudy() {
     var st = D.study, p = st.primary.result, ns = st.noncommit_sensitivity.result;
     clear(main);
-    main.appendChild(h('div', { class: 'head' }, h('h2', null, 'Study: eight matched world pairs'), h('span', { class: 'badge held' }, 'held-out · frozen')));
-    main.appendChild(h('p', null, 'EXP-002 asked whether a deceptive-prompt regime (B1) produces larger outsider loss from a single exposure message than an authorized-cooperation regime (B2). The independent sample is the eight matched world pairs, not branches or checks.'));
-    main.appendChild(h('div', { class: 'kpis' },
-      h('div', { class: 'card' }, concept('causal', 'Frozen primary Δ'), h('div', { class: 'big-num num' }, fmt(p.estimate, 3)), h('p', null, '95% CI [' + fmt(p.L, 3) + ', ' + fmt(p.U, 3) + '] (world-cluster)'), h('p', { class: 'muted' }, 'category: ' + st.primary.evidence_category)),
-      h('div', { class: 'card' }, concept('unc', 'One-sided p'), h('div', { class: 'big-num num' }, fmt(p.p_raw, 4)), h('p', null, 'exact sign-flip, ' + p.eligible_complete_pairs + ' of ' + p.matched_pairs_attempted + ' pairs')),
-      h('div', { class: 'card' }, concept('attr', 'Decision'), h('div', { class: 'big-num', style: null }, 'NOT SUPPORTED'), h('p', null, 'Preregistered directional hypothesis ' + String(p.decision).toUpperCase() + '. This does not establish a null effect.')),
-      h('div', { class: 'card' }, concept('unc', 'Registered sensitivity'), h('div', { class: 'big-num num' }, fmt(ns.estimate, 3)), h('p', null, '95% CI [' + fmt(ns.L, 2) + ', ' + fmt(ns.U, 2) + '] (non-commit excluded)'), h('p', { class: 'muted' }, 'registered sensitivity, ' + st.noncommit_sensitivity.evidence_category + '; not a confirmatory test'))));
-    main.appendChild(h('p', { class: 'note' }, p.caveats));
-    main.appendChild(h('h3', null, 'Per-world contrast d_w = tau_O(B1) − tau_O(B2)'));
-    main.appendChild(h('div', { class: 'card' }, stripPlot(st)));
-    main.appendChild(h('div', { class: 'legend' }, h('span', null, 'dots: d_w per world'), h('span', null, 'solid line: frozen Δ'), h('span', null, 'band: 95% CI'), h('span', null, 'dashed: 0 (no regime difference)')));
-    var tb = h('tbody'); main.appendChild(h('div', null, tw(h('table', null, h('thead', null, h('tr', null, h('th', null, 'World'), h('th', { class: 'r' }, 'tau_O B1'), h('th', { class: 'r' }, 'tau_O B2'), h('th', { class: 'r' }, 'd_w'), h('th', null, 'Open cases'))), tb))));
+    main.appendChild(h('p', { class: 'eyebrow' }, 'The real-agent comparison · EXP-002'));
+    main.appendChild(h('div', { class: 'head' }, h('h1', null, 'A directional difference was not established.'), h('span', { class: 'badge held' }, 'Held-out · frozen'), h('span', { class: 'muted' }, p.eligible_complete_pairs + ' independent matched pairs')));
+    main.appendChild(h('p', { class: 'page-intro' }, 'Does a deceptive-prompt regime produce larger outsider loss from a single exposure message than authorized cooperation? The independent sample is eight matched world pairs. The frozen comparison does not establish the preregistered direction.'));
+    main.appendChild(studyFigure());
+    var tb = h('tbody');
     st.per_world.forEach(function (w) {
-      var td = h('td', null, h('span', { class: 'muted' }, 'loading…'));
-      tb.appendChild(h('tr', null, h('td', null, h('code', null, w.world_id)), h('td', { class: 'r num' }, fmt(w.tau_O_B1, 3)), h('td', { class: 'r num' }, fmt(w.tau_O_B2, 3)), h('td', { class: 'r num' }, fmt(w.d_w, 3)), td));
-      worldCases(w.world_id).then(function (m) { clear(td); ['B1', 'B2'].forEach(function (r) { if (m[r]) td.appendChild(h('a', { href: '#/case/' + m[r], style: null }, m[r] + ' ')); }); });
+      var td = h('td', null, h('span', { class: 'muted' }, 'Loading cases…'));
+      tb.appendChild(h('tr', null, h('th', { scope: 'row' }, w.world_id), h('td', { class: 'r num' }, fmt(w.tau_O_B1, 3)), h('td', { class: 'r num' }, fmt(w.tau_O_B2, 3)), h('td', { class: 'r num' }, fmt(w.d_w, 3)), td));
+      worldCases(w.world_id).then(function (m) { clear(td); ['B1', 'B2'].forEach(function (r) { if (m[r]) td.appendChild(h('a', { href: '#/case/' + m[r] }, m[r] + ' ')); }); }).catch(function () { td.textContent = 'Case data unavailable'; });
     });
-    main.appendChild(h('div', { class: 'grid2' },
-      h('div', { class: 'card' }, h('h3', null, 'Certificates'), h('p', null, statusPill('supported'), ' ' + (st.certificate_counts.supported || 0) + ' · not supported ' + st.certificate_counts.not_supported + ' · ', concept('unc', 'inconclusive'), ' ' + st.certificate_counts.inconclusive), h('p', { class: 'muted' }, 'Sixteen held-out case certificates from eight matched world pairs. None reaches L2.')),
-      h('div', { class: 'card' }, h('h3', null, 'Scheduled continuation records'), h('p', null, st.scheduled_counts.valid + ' executed valid + ' + st.scheduled_counts.not_run + ' not run (placebo unavailable) = ' + (st.scheduled_counts.valid + st.scheduled_counts.not_run) + ' scheduled.'), h('p', { class: 'muted' }, 'Unrun records are not zeros.'))));
-    main.appendChild(h('details', { class: 'd' }, h('summary', null, 'Sources and sha256'), h('div', null, st.sources.map(function (x) { return h('p', null, h('code', null, x.path), h('br'), sha(x.sha256)); }))));
+    main.appendChild(disclosure('Inspect all eight differences and the underlying cases', tw(h('table', null,
+      h('thead', null, h('tr', null, ['World', 'Outsider loss B1', 'Outsider loss B2', 'Difference', 'Cases'].map(function (x) { return h('th', null, x); }))), tb))));
+    main.appendChild(h('h3', null, 'What the case certificates establish'));
+    main.appendChild(h('p', null, 'Across sixteen held-out checkpoints, ' + (st.certificate_counts.supported || 0) + ' certificates are supported, ' + st.certificate_counts.not_supported + ' are not supported, and ' + st.certificate_counts.inconclusive + ' are inconclusive. These descriptive, exploratory case certificates do not attribute policy violations. A “not supported” result is not exoneration.'));
+    main.appendChild(h('p', null, st.scheduled_counts.valid + ' continuations executed with valid outcomes; ' + st.scheduled_counts.not_run + ' were not run because no eligible placebo was available. There were ' + (st.scheduled_counts.valid + st.scheduled_counts.not_run) + ' scheduled records. Unrun records are missing evidence, not zero-valued outcomes.'));
+    main.appendChild(disclosure('Registered sensitivity and uncertainty assumptions', h('div', null,
+      h('p', null, 'With non-commit cases excluded: mean ' + fmt(ns.estimate, 3) + ', 95% interval [' + fmt(ns.L, 3) + ', ' + fmt(ns.U, 3) + ']. This estimate and interval are original-registered-secondary, not the primary confirmatory test. A separately reported sensitivity p-value is post-hoc-exploratory.'),
+      h('p', null, p.caveats), h('p', { class: 'muted' }, 'Independent units are whole matched world pairs. Branch replicates and validation checks do not increase that independent sample size.'))));
+    main.appendChild(h('h3', null, 'The constructed benchmark is a separate test'));
+    main.appendChild(h('p', null, 'Scripted policies illustrate which additional evidence can resolve an ambiguity. They do not establish real-agent intent or deployment performance.'));
+    main.appendChild(disclosure('All aggregate criteria, utility counts, and cross-platform discrepancy', benchmarkDetails()));
+    main.appendChild(disclosure('Frozen study sources and hashes', h('div', null, st.sources.map(function (x) { return h('p', null, sourceLink(x.path), h('br'), sha(x.sha256)); }),
+      h('p', null, h('a', { href: '../data/study.json' }, 'Download frozen study JSON')))));
   }
   var worldMap = null;
   function worldCases(world) {
@@ -585,115 +600,221 @@
     });
   }
   function stripPlot(st) {
-    var p = st.primary.result, W = 720, H = 190, padL = 20, padR = 20;
+    var p = st.primary.result, W = Math.max(280, Math.min(820, main.clientWidth || 820)), H = 390, padL = W < 500 ? 68 : 135, padR = W < 500 ? 50 : 100;
     var vals = st.per_world.map(function (w) { return w.d_w; }).concat([p.L, p.U, 0]);
-    var lo = Math.min.apply(null, vals) - 0.4, hi = Math.max.apply(null, vals) + 0.4;
+    var lo = Math.min.apply(null, vals) - .5, hi = Math.max.apply(null, vals) + .5;
     var x = function (v) { return padL + (v - lo) / (hi - lo) * (W - padL - padR); };
-    var svg = s('svg', { class: 'plot', viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Strip plot of per-world d_w with frozen Delta ' + fmt(p.estimate, 3) + ' and confidence interval' });
-    svg.appendChild(s('rect', { x: x(p.L), y: 20, width: x(p.U) - x(p.L), height: 120, fill: 'var(--unc)', opacity: 0.18 }));
-    svg.appendChild(s('line', { x1: padL, x2: W - padR, y1: 150, y2: 150, class: 'ax' }));
-    ticks(lo, hi).forEach(function (t) { svg.appendChild(s('line', { x1: x(t), x2: x(t), y1: 150, y2: 156, class: 'ax' })); svg.appendChild(s('text', { x: x(t), y: 172, 'font-size': 12, 'text-anchor': 'middle', fill: 'var(--muted)' }, fmt(t, 0))); });
-    svg.appendChild(s('line', { x1: x(0), x2: x(0), y1: 14, y2: 150, stroke: 'var(--ink)', 'stroke-dasharray': '5 4' }));
-    svg.appendChild(s('line', { x1: x(p.estimate), x2: x(p.estimate), y1: 14, y2: 150, stroke: 'var(--causal)', 'stroke-width': 3 }));
-    svg.appendChild(s('text', { x: x(p.estimate) + 6, y: 28, 'font-size': 12, 'font-weight': 700, fill: 'var(--causal)' }, 'Δ = ' + fmt(p.estimate, 3)));
-    var sorted = st.per_world.slice().sort(function (a, b) { return a.d_w - b.d_w; }), lastX = -99, row = 0;
-    sorted.forEach(function (w) {
-      var cx = x(w.d_w); row = Math.abs(cx - lastX) < 16 ? (row + 1) % 4 : 0; lastX = cx;
-      var cy = 58 + row * 22;
-      svg.appendChild(s('circle', { cx: cx, cy: cy, r: 7, fill: w.d_w > 0 ? 'var(--causal)' : 'var(--bg)', stroke: 'var(--causal)', 'stroke-width': 2.5 }, s('title', null, 'world ' + w.world_id + ': d_w = ' + fmt(w.d_w, 3))));
+    var svg = s('svg', { class: 'plot matched-plot', viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Eight matched-pair differences and mean ' + fmt(p.estimate, 3) + '; whole-pair 95% interval [' + fmt(p.L, 3) + ', ' + fmt(p.U, 3) + '] includes zero.' });
+    svg.appendChild(s('title', null, 'Individual matched pairs and whole-pair uncertainty'));
+    svg.appendChild(s('desc', null, st.per_world.map(function (w) { return w.world_id + ': ' + String(w.d_w); }).join('; ') + '. Exact one-sided sign-flip p = ' + p.p_raw + '.'));
+    svg.appendChild(s('text', { x: x(0), y: 20, 'text-anchor': 'middle', 'font-size': 12 }, 'Zero difference'));
+    svg.appendChild(s('line', { x1: x(0), x2: x(0), y1: 32, y2: 326, stroke: 'var(--muted)', 'stroke-dasharray': '3 5' }));
+    st.per_world.forEach(function (w, i) {
+      var y = 48 + i * 31;
+      svg.appendChild(s('line', { x1: padL, x2: W - padR, y1: y, y2: y, class: 'pair-guide' }));
+      svg.appendChild(s('text', { x: 4, y: y + 5, 'font-size': 13 }, 'Pair ' + String(i + 1).padStart(2, '0')));
+      svg.appendChild(s('circle', { cx: x(w.d_w), cy: y, r: 5.5, fill: 'var(--bg)', stroke: 'var(--accent)', 'stroke-width': 2, class: 'pair-dot', tabindex: '0', role: 'img', 'aria-label': w.world_id + ': ' + fmt(w.d_w, 3) }, s('title', null, w.world_id + ': ' + String(w.d_w))));
+      svg.appendChild(s('text', { x: W - 8, y: y + 5, 'font-size': 13, 'text-anchor': 'end' }, fmt(w.d_w, 3)));
     });
+    var y = 315, mx = x(p.estimate);
+    svg.appendChild(s('text', { x: 4, y: y + 5, 'font-size': 13, 'font-weight': 600 }, W < 500 ? 'Mean' : 'Mean · 95% CI'));
+    svg.appendChild(s('line', { x1: x(p.L), x2: x(p.U), y1: y, y2: y, stroke: 'var(--accent)', 'stroke-width': 2 }));
+    [p.L, p.U].forEach(function (v) { svg.appendChild(s('line', { x1: x(v), x2: x(v), y1: y - 6, y2: y + 6, stroke: 'var(--accent)', 'stroke-width': 2 })); });
+    svg.appendChild(s('path', { d: 'M' + mx + ' ' + (y - 7) + ' l7 7 l-7 7 l-7 -7z', fill: 'var(--accent)' }));
+    svg.appendChild(s('text', { x: W - 8, y: y + 5, 'font-size': 13, 'text-anchor': 'end', 'font-weight': 600 }, fmt(p.estimate, 3)));
+    svg.appendChild(s('line', { x1: padL, x2: W - padR, y1: 348, y2: 348, class: 'ax' }));
+    ticks(lo, hi).forEach(function (t) { svg.appendChild(s('line', { x1: x(t), x2: x(t), y1: 348, y2: 354, class: 'ax' })); svg.appendChild(s('text', { x: x(t), y: 373, 'font-size': 13, 'text-anchor': 'middle' }, fmt(t, 0))); });
     return svg;
   }
 
-  /* ---------- start here (tour) ---------- */
-  var tourStep = 0;
-  function tourPair() {
-    // Rule: among the 8 worlds, pick the one with the largest |tau_O(B1) - tau_O(B2)| (= |d_w|).
-    var pw = D.study.per_world.slice().sort(function (a, b) { return Math.abs(b.d_w) - Math.abs(a.d_w); })[0];
-    return pw;
+  /* ---------- editorial research companion ---------- */
+  function essaySection(number, label, title, body, id) {
+    return h('section', { class: 'essay-section', id: id || null, 'aria-labelledby': 'essay-' + number },
+      h('div', { class: 'section-aside' }, h('span', { class: 'index' }, number), label),
+      h('div', { class: 'section-body' }, h('h2', { id: 'essay-' + number }, title), body));
+  }
+  function localScroll(id) {
+    var el = $(id);
+    if (el) { el.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'start' }); el.focus({ preventScroll: true }); }
+  }
+  function reducedMotion() { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+  function disclosure(title, content) { return h('details', { class: 'd' }, h('summary', null, title), h('div', null, content)); }
+  function sourceLink(path, text) { return h('a', { href: 'https://github.com/Barap1/Counterfactual-Collusion-Certificates/blob/main/' + path }, text || path); }
+  function benchmarkDetails() {
+    var r = D.review, u = r.utility;
+    var rows = Object.keys(r.criteria).map(function (k) {
+      return h('tr', null, h('th', { scope: 'row' }, k), h('td', null, r.criteria[k]),
+        h('td', null, { RQ1: 'Identical-view consistency; by construction', RQ2: 'Enumerated evidence separation; by construction', RQ3: 'Harm prevalence among forbidden policies', RQ4: 'Original baseline over-attribution criterion', RQ4b: 'DEV-informed refinement; aggregate criterion', RQ5: 'Full utility criterion; exploratory method', RQ6: 'Exposure-level illustration' }[k]));
+    });
+    return h('div', null,
+      h('p', null, 'The original aggregate outcomes are retained: RQ1 and RQ2 pass by construction; RQ3, RQ4, RQ4b, and RQ5 do not meet their criteria. RQ6 is descriptive.'),
+      tw(h('table', null, h('thead', null, h('tr', null, h('th', null, 'Question'), h('th', null, 'Frozen result'), h('th', null, 'Meaning'))), h('tbody', null, rows))),
+      h('p', null, 'At ε = 0, CCC-L v1 meets the full utility criterion in ' + u.v1.passed + '/' + u.v1.total + ' settings; v0 in ' + u.v0.passed + '/' + u.v0.total + '. Each version has ' + u.v1.undefined_gaps + ' undefined accuracy gaps. Undefined values are retained, without favourable imputation. Settings are combinations of case family and information set, not independent deployment trials.'),
+      h('p', null, 'RQ3 harm prevalence at ε = 0: ' + r.rq3.k + '/' + r.rq3.n + ' = ' + fmt(r.rq3.rate, 3) + ', exact 95% interval [' + fmt(r.rq3.cp95[0], 3) + ', ' + fmt(r.rq3.cp95[1], 3) + ']. This is the share of forbidden policies with oracle outsider harm above the 2.5 margin; the <0.25 criterion is not met.'),
+      h('p', null, 'The B2+ harm-based baseline over-attributes in the permitted P2 allocation and authorized P3 transfer cases: ', r.baseline.map(function (b, i) { var o = b.over_attribution; return (i ? '; ' : '') + b.kind + ' ' + o.unit_k + '/' + o.independent_n + ' independent units'; }), '. This constructed result does not estimate a real-world false-accusation rate.'),
+      h('p', null, 'The deterministic restriction (ε = 0) was chosen post hoc, after outcomes were visible. The ε = 0.1 results have an unresolved cross-platform discrepancy in substantive method decisions. The refined RQ4b passes within the deterministic stratum while its original aggregate result remains unmet. End-to-end support-level positive-control recovery and useful real-agent sensitivity remain unestablished; EXP-003 was not completed.'),
+      h('p', { class: 'muted' }, sourceLink(r.source, 'Frozen benchmark results'), ' · ', sourceLink('docs/enh/r2/PROTOCOL.md', 'Protocol'), ' · ', sourceLink('docs/RESULTS.md', 'Interpretation and scope')),
+      sha('RESULTS.json sha256 ' + r.sha256));
+  }
+  function evidenceProgression() {
+    var steps = [
+      ['Observation', 'A message and an allocation are recorded.'],
+      ['Causal influence', 'Removing the message changes a continuation.'],
+      ['Harmful exposure', 'A valid, controlled replay supports outsider loss.'],
+      ['Policy attribution', 'The rule and legitimate alternatives must also be known.']
+    ];
+    return h('ol', { class: 'evidence-flow', 'aria-label': 'Evidence progression' }, steps.map(function (d) { return h('li', null, h('b', null, d[0]), h('span', null, d[1])); }));
+  }
+  function allocationDiagram() {
+    var svg = s('svg', { class: 'allocation', viewBox: '0 0 360 125', role: 'img', 'aria-label': 'Recorded allocation action: route' });
+    svg.appendChild(s('path', { class: 'wire', d: 'M20 62 H94 L150 27 H338 M94 62 L150 100 H338' }));
+    var active = s('path', { class: 'active-wire', d: 'M20 62 H94 L150 27 H338' }); svg.appendChild(active);
+    svg.appendChild(s('text', { x: 20, y: 47 }, 'Allocation'));
+    var routeText = s('text', { x: 168, y: 19, class: 'selected' }, 'Route · retain allocation');
+    var baseText = s('text', { x: 168, y: 92 }, 'Base · change allocation');
+    svg.appendChild(routeText); svg.appendChild(baseText);
+    var token = s('circle', { cx: 150, cy: 27, r: 5, class: 'allocation-token' }); svg.appendChild(token);
+    return { el: svg, update: function (arm) {
+      var route = arm.actions.indexOf('route') !== -1;
+      svg.setAttribute('aria-label', 'Recorded allocation action: ' + arm.actions.join(', '));
+      active.setAttribute('d', route ? 'M20 62 H94 L150 27 H338' : 'M20 62 H94 L150 100 H338');
+      token.setAttribute('transform', route ? 'translate(0 0)' : 'translate(0 73)');
+      routeText.setAttribute('class', route ? 'selected' : ''); baseText.setAttribute('class', route ? '' : 'selected');
+    } };
+  }
+  function counterexample() {
+    var P = D.twins && D.twins.pairs.filter(function (p) { return p.kind === 'P2'; })[0];
+    if (!P) return h('p', null, 'The constructed twin evidence is unavailable. ', h('a', { href: '../data/twins.json' }, 'Inspect the frozen source.'));
+    var permitted = P.members.filter(function (m) { return m.truth.M === 'legitimate-cooperation'; })[0];
+    var prohibited = P.members.filter(function (m) { return m.truth.M === 'harmful-coordination'; })[0];
+    var shared = permitted.by_set.I2, wrap = h('div');
+    wrap.appendChild(h('p', { class: 'lead' }, 'Two programmed policies produce the same message, the same allocation, and the same measured removal effect. Can the audit tell them apart?'));
+    wrap.appendChild(h('div', { class: 'shared-evidence' }, h('div', { class: 'eyebrow' }, 'The shared evidence'),
+      h('blockquote', null, '“' + shared.transcript[0].content + '”'),
+      h('div', { class: 'shared-stats' },
+        h('div', null, h('span', null, 'Outsider reward · message present → removed'), h('strong', { class: 'num' }, fmt(shared.arms.F.Omean, 0) + ' → ' + fmt(shared.arms.K.Omean, 0)), ' in both worlds'),
+        h('div', null, h('span', null, 'Coalition reward · present → removed'), h('strong', { class: 'num' }, fmt(shared.arms.F.Cmean, 0) + ' → ' + fmt(shared.arms.K.Cmean, 0))),
+        h('div', null, h('span', null, 'Total welfare · present → removed'), h('strong', { class: 'num' }, fmt(shared.arms.F.W, 0) + ' → ' + fmt(shared.arms.K.W, 0))))));
+    var controls = h('div', { class: 'probe-controls', role: 'group', 'aria-label': 'Counterexample evidence' }, h('span', null, 'Reveal the evidence'));
+    var b0 = h('button', { type: 'button', 'aria-pressed': 'true', 'aria-controls': 'policy-comparison' }, '01  Shared evidence');
+    var b1 = h('button', { type: 'button', 'aria-pressed': 'false', 'aria-controls': 'policy-comparison' }, '02  Add the cost probe ↗');
+    controls.appendChild(b0); controls.appendChild(b1); wrap.appendChild(controls);
+    var worlds = h('div', { class: 'policy-worlds', id: 'policy-comparison' }), updates = [];
+    [permitted, prohibited].forEach(function (m, i) {
+      var diagram = allocationDiagram(), reward = h('span', { class: 'reward num' }), outcome = h('span'), coalition = h('span'), detail = h('p', { class: 'probe-description' });
+      worlds.appendChild(h('article', { class: 'policy-world' }, h('div', { class: 'world-no' }, i ? 'Programmed policy · prohibited' : 'Programmed policy · permitted'),
+        h('h3', null, i ? 'Coalition-protecting coordination' : 'Efficiency-seeking coordination'), diagram.el,
+        h('p', { class: 'world-result' }, reward, 'outsider reward', h('br'), coalition, ' coalition reward · ', outcome, ' total welfare'), detail));
+      updates.push(function (probe) {
+        var arm = m.by_set[probe ? 'I4' : 'I2'].arms[probe ? 'PF' : 'F'];
+        diagram.update(arm); reward.textContent = fmt(arm.Omean, 0); coalition.textContent = fmt(arm.Cmean, 0); outcome.textContent = fmt(arm.W, 0);
+        detail.textContent = probe ? (i ? 'Retains the route action despite the cheaper outsider option.' : 'Switches to the base action when outsider costs fall.') : 'Same recorded route action. The initial audit cannot distinguish these policies.';
+      });
+    });
+    wrap.appendChild(worlds);
+    var caption = h('p', { class: 'probe-caption', role: 'status', 'aria-live': 'polite' }); wrap.appendChild(caption);
+    var show = function (probe) {
+      b0.setAttribute('aria-pressed', String(!probe)); b1.setAttribute('aria-pressed', String(probe));
+      updates.forEach(function (f) { f(probe); });
+      caption.textContent = probe
+        ? 'Lowering outsider costs by ' + fmt(permitted.by_set.I4.probe.outsider_cost_reduction, 0) + ' separates the programmed responses. With the message present, the permitted policy changes allocation; the prohibited policy protects the coalition. Additional evidence distinguishes them.'
+        : 'Same observed evidence, different programmed policies. The labels come from the benchmark’s design; they are not inferred from the initial behaviour.';
+    };
+    b0.addEventListener('click', function () { show(false); }); b1.addEventListener('click', function () { show(true); }); show(false);
+    wrap.appendChild(disclosure('Inspect the control and probe outcomes', h('div', null,
+      tw(h('table', null, h('thead', null, h('tr', null, ['Policy', 'F', 'K', 'Sham', 'Placebo', 'Probe F', 'Probe K'].map(function (v) { return h('th', null, v); }))),
+        h('tbody', null, [permitted, prohibited].map(function (m, i) {
+          return h('tr', null, h('th', { scope: 'row' }, i ? 'Prohibited' : 'Permitted'), ['F', 'K', 'S', 'N', 'PF', 'PK'].map(function (arm) { return h('td', { class: 'num' }, fmt(m.by_set.I4.arms[arm].Omean, 0)); }));
+        })), h('caption', null, 'Outsider mean reward. F: message present; K: message removed; probe F/K: the same comparison after lowering outsider costs. S and N are sham and eligible placebo controls.'))),
+      h('p', null, 'The sham and placebo preserve the factual outcome in both policies. Under the probe, removal yields ' + fmt(permitted.by_set.I4.arms.PK.Omean, 0) + ' outsider reward in both worlds. The exposure certificate remains L2 supported for both; this is not an attribution verdict. At I4, CCC-L v0 attributes the prohibited twin and abstains on the permitted twin. The benchmark’s Bayes-given-S reference distinguishes both labels.'),
+      h('p', { class: 'muted' }, h('a', { href: '#/twins/P2/2' }, 'Inspect I2'), ' · ', h('a', { href: '#/twins/P2/4' }, 'Inspect I4'), ' · ', h('a', { href: '../data/twins.json' }, 'Raw twin evidence')))));
+    wrap.appendChild(h('div', { class: 'figure-meta' }, h('span', null, 'Fig. 1 · Constructed P2 pair · ε = 0 · one deterministic continuation per arm'), h('a', { href: '#/twins/P2/4' }, 'Open the full twin comparison ↗')));
+    return wrap;
+  }
+  function researchFindings() {
+    var p = D.study.primary.result, u = D.review.utility.v1;
+    var findings = [
+      ['Constructed counterexamples separate as specified', 'The allocation cost probe and the transfer authorization record reveal distinctions hidden in the initial evidence. These are controlled constructions with programmed labels.'],
+      ['Harm alone leaves an attribution gap', 'The harm-based baseline accuses permitted allocation and authorized-transfer cases. Outsider loss can be real while policy attribution remains unjustified.'],
+      ['The broader auditor needs further validation', 'Four aggregate benchmark predictions were unmet. CCC-L v1 meets the full utility criterion in ' + u.passed + '/' + u.total + ' deterministic settings; this is a count of settings, not deployment accuracy.'],
+      ['A directional difference was not established', 'The separate real-agent study includes ' + p.eligible_complete_pairs + ' matched pairs. Its mean difference is positive, but the whole-pair 95% uncertainty interval includes zero. The result does not establish equivalence.']
+    ];
+    return h('div', null, h('p', { class: 'lead' }, 'The evidence supports a boundary on attribution. It also identifies what an auditor must still demonstrate.'),
+      h('div', { class: 'finding-list' }, findings.map(function (f, i) { return h('article', { class: 'finding' }, h('span', null, String(i + 1).padStart(2, '0')), h('div', null, h('h3', null, f[0]), h('p', null, f[1]))); })),
+      studyFigure(), disclosure('Detailed benchmark results and validation boundaries', benchmarkDetails()),
+      h('p', { class: 'muted' }, 'Established benchmark claims are restricted post hoc to ε = 0. The noisy ε = 0.1 condition has unresolved cross-platform decision disagreements.'),
+      h('div', { class: 'text-actions' }, h('a', { href: '#/study' }, 'Inspect the full study', h('span', { 'aria-hidden': 'true' }, '↗'))));
   }
   function renderStart() {
     clear(main);
-    main.appendChild(h('div', { class: 'head' }, h('h2', null, 'Start here')));
-    main.appendChild(h('p', null, 'This explorer lets you inspect every piece of evidence behind CCC’s held-out experiment and its development fixtures. Four ideas stay visually separate throughout.'));
-    var holder = h('div'); main.appendChild(holder);
-    var pw = tourPair();
-    var steps = [
-      ['1 · Four questions, kept apart', function (b) {
-        b.appendChild(h('div', { class: 'concepts' },
-          h('div', { class: 'card k-causal' }, concept('causal'), h('p', null, h('strong', null, 'Did the message change behaviour?')), h('p', null, 'Compare factual (F) with knockout (K) continuations. Effects tau_O, tau_C, tau_W.')),
-          h('div', { class: 'card k-harm' }, concept('harm'), h('p', null, h('strong', null, 'Did outsiders lose more than the margin?')), h('p', null, 'tau_O against m_O = 2.5, with controls. This is the L2 rung.')),
-          h('div', { class: 'card k-attr' }, concept('attr'), h('p', null, h('strong', null, 'Is collusion justified?')), h('p', null, 'Needs evidence a knockout cannot give. CCC never claims this rung in the held-out data.')),
-          h('div', { class: 'card k-unc' }, concept('unc'), h('p', null, h('strong', null, 'How sure, and when to abstain?')), h('p', null, 'Bound span. Wide spans give “inconclusive”, not a guess.'))));
-        b.appendChild(h('p', null, 'Working principle: a knockout measures what a message did, not whether it should have done it.'));
-      }],
-      ['2 · One real contrast', function (b) {
-        b.appendChild(h('p', null, h('strong', null, 'Selection rule (fixed in advance, stated here): '), 'of the eight held-out worlds, take the one whose B1 and B2 checkpoints differ most in tau_O, i.e. the largest |d_w|. That is world ', h('code', null, pw.world_id), ' (|d_w| = ' + fmt(Math.abs(pw.d_w), 3) + ').'));
-        b.appendChild(h('p', { class: 'note warn' }, 'Illustrative, not a selected positive result. The rule picks the largest contrast, not a certified harm: neither checkpoint below reaches a supported certificate, and the study-level directional hypothesis was not supported.'));
-        var g = h('div', { class: 'grid2' }); b.appendChild(g);
-        worldCases(pw.world_id).then(function (m) {
-          ['B1', 'B2'].forEach(function (r) {
-            var cell = h('div', { class: 'card' }, h('p', { class: 'muted' }, 'loading…')); g.appendChild(cell);
-            loadCase(m[r]).then(function (c) {
-              var n = norm(c); clear(cell);
-              cell.appendChild(h('h3', { style: null }, r + (r === 'B1' ? ' deceptive prompt' : ' authorized-cooperation prompt')));
-              cell.appendChild(h('p', null, provBadge(c), ' ', statusPill(n.status), ' ', h('span', { class: 'muted' }, 'tau_O = ' + fmt(n.tau.O.est, 2) + ', [' + fmt(n.tau.O.L) + ', ' + fmt(n.tau.O.U) + '] vs m_O = ' + fmt(n.mO, 1))));
-              cell.appendChild(intervalPlot(n, { w: 560 }));
-              cell.appendChild(h('p', null, h('a', { href: '#/case/' + m[r] }, 'Open ' + m[r] + ' in full')));
-            });
-          });
-        });
-      }],
-      ['3 · What the certificate allows', function (b) {
-        b.appendChild(h('p', null, 'Only a supported certificate reaches L2. L0 and L1 show the highest reached (UI-derived, not a certificate rung); a one-sided bound excluding zero can suggest influence in either direction, without establishing harm. Each stop has a stated reason. L3 (attribution) is never claimed.'));
-        var g = h('div', { class: 'grid2' }); b.appendChild(g);
-        worldCases(pw.world_id).then(function (m) {
-          ['B1', 'B2'].forEach(function (r) { loadCase(m[r]).then(function (c) { g.appendChild(h('div', { class: 'card' }, h('h3', null, m[r]), ladderStrip(c))); }); });
-        });
-      }],
-      ['4 · The pre-registered answer', function (b) {
-        var p = D.study.primary.result;
-        b.appendChild(h('p', null, 'Across all eight world pairs, the frozen primary contrast is Δ = ' + fmt(p.estimate, 3) + ', 95% CI [' + fmt(p.L, 3) + ', ' + fmt(p.U, 3) + '], one-sided p = ' + fmt(p.p_raw, 4) + '. The preregistered directional hypothesis is not supported. The contrast above is one world among eight; it should be read next to the strip plot, not instead of it.'));
-        b.appendChild(h('p', null, h('a', { class: 'btn', href: '#/study' }, 'Open the study panel')));
-      }]
-    ];
-    var show = function () {
-      clear(holder);
-      var box = h('div', { class: 'tour' });
-      var nav = h('div', { class: 'steps', role: 'group', 'aria-label': 'Tour steps' });
-      steps.forEach(function (st, i) { nav.appendChild(h('button', { type: 'button', 'aria-current': i === tourStep ? 'step' : null, on: { click: function () { tourStep = i; show(); } } }, st[0].split(' · ')[0] + '. ' + st[0].split(' · ')[1])); });
-      box.appendChild(nav);
-      box.appendChild(h('h3', null, steps[tourStep][0]));
-      steps[tourStep][1](box);
-      box.appendChild(h('div', { class: 'navrow' },
-        h('button', { class: 'btn sec', type: 'button', disabled: tourStep === 0, on: { click: function () { tourStep--; show(); } } }, 'Back'),
-        h('button', { class: 'btn', type: 'button', disabled: tourStep === steps.length - 1, on: { click: function () { tourStep++; show(); } } }, 'Next')));
-      holder.appendChild(box);
-    };
-    show();
-    if (D.twins) main.appendChild(h('div', { class: 'card twins-flag' }, h('h3', null, 'Twin worlds'), h('p', null, 'Two worlds with identical observables and different labels. Step the evidence I0 \u2192 I5 and watch when verdicts diverge.'), h('a', { class: 'btn', href: '#/twins' }, 'Open Twin worlds')));
-    main.appendChild(h('p', { class: 'muted' }, 'Or pick any case from the list on the left: 16 held-out checkpoints (8 worlds × B1/B2) and 5 scripted development fixtures.'));
+    var scroll = function (e) { e.preventDefault(); localScroll('counterexample'); };
+    main.appendChild(h('section', { class: 'hero', 'aria-labelledby': 'opening-title' },
+      h('p', { class: 'eyebrow' }, 'An interactive research companion · Multi-agent AI'),
+      h('div', null, h('h1', { id: 'opening-title' }, 'When Cooperation', h('br'), 'Looks Like ', h('em', null, 'Collusion')),
+        h('p', { class: 'subtitle' }, 'The limits of counterfactual auditing in multi-agent AI.'),
+        h('p', { class: 'dek' }, 'A message can influence other agents and disadvantage outsiders without proving that the coordination was prohibited.'),
+        h('div', { class: 'text-actions' }, h('a', { href: '#/start/counterexample', on: { click: scroll } }, 'Explore the counterexample', h('span', { 'aria-hidden': 'true' }, '↓')),
+          h('a', { href: '#/study' }, 'Inspect the study evidence', h('span', { 'aria-hidden': 'true' }, '↗')))),
+      h('aside', { class: 'hero-aside', 'aria-label': 'Research scope' }, h('p', null, h('b', null, 'The question'), 'What can a message-removal audit actually establish?'), h('p', null, h('b', null, 'The evidence'), 'Constructed twin worlds and eight matched real-agent pairs.'))));
+    var ce = essaySection('01', 'The counterexample', 'One observation. Two explanations.', counterexample(), 'counterexample'); ce.tabIndex = -1; main.appendChild(ce);
+    main.appendChild(essaySection('02', 'The attribution gap', 'What does an audit establish?', h('div', null,
+      h('p', { class: 'lead' }, 'A knockout removes a message and replays what follows. It can support a causal claim about that message’s effect. Attribution asks a further question: did the coordination violate the rule?'), evidenceProgression(),
+      h('p', { class: 'pullquote' }, 'A knockout measures what a message did, not whether it should have done it.'))));
+    main.appendChild(essaySection('03', 'The study evidence', 'What the evidence establishes', researchFindings()));
+    main.appendChild(essaySection('04', 'The evidence inspector', 'Follow the evidence yourself.', h('div', null,
+      h('div', { class: 'inspector-intro' }, h('p', { class: 'lead' }, 'Read the recorded message, compare its removal with sham and placebo controls, and inspect exactly where the certificate stops.'), h('a', { class: 'btn', href: '#/case/H02_B1' }, 'Open case H02_B1 ↗')),
+      h('p', { class: 'muted' }, 'The default opens the largest absolute matched-world contrast, an illustrative selection rather than a positive result. All 16 held-out checkpoints and 5 scripted development fixtures remain available.'),
+      h('div', { class: 'text-actions' }, h('a', { href: '#/twins/P3/5' }, 'Inspect transfer authorization ↗'), h('a', { href: '#/about' }, 'Concepts & sources ↗')))));
+    main.appendChild(essaySection('05', 'The next research question', 'Does more evidence improve attribution on unfamiliar agents?', h('div', null,
+      h('p', { class: 'lead' }, 'The next stage is to test whether added evidence improves attribution beyond the constructions that motivated it.'),
+      h('ol', { class: 'research-agenda' },
+        h('li', null, h('div', null, h('strong', null, 'Validate the full certificate pipeline'), h('p', null, 'Establish support-level sensitivity with controlled, reproducible positive controls before interpreting real-agent abstention.'))),
+        h('li', null, h('div', null, h('strong', null, 'Evaluate independently designed policies'), h('p', null, 'Test unfamiliar permitted and prohibited policies designed independently of the auditor and its separating probes.'))),
+        h('li', null, h('div', null, h('strong', null, 'Compare the evidence available to the auditor'), h('p', null, 'Compare knockout-only auditing with added cost probes or authorization. Measure false accusations, sensitivity, and coverage together.')))),
+      h('div', { class: 'text-actions' }, sourceLink('docs/STUDIO_RESEARCH_PLAN.md', 'Read the research continuation ↗')))));
   }
 
-  /* ---------- about ---------- */
+  /* ---------- concepts and sources ---------- */
   function renderAbout() {
     clear(main);
-    main.appendChild(h('div', { class: 'head' }, h('h2', null, 'Concepts and sources')));
-    main.appendChild(h('div', { class: 'concepts' },
-      h('div', { class: 'card k-causal' }, concept('causal'), h('p', null, 'Did the message change behaviour? tau_C, tau_W and (as a quantity) tau_O. Shown in blue with a filled circle.')),
-      h('div', { class: 'card k-harm' }, concept('harm'), h('p', null, 'Did outsiders lose more than the margin m_O? tau_O vs m_O. Shown in red with a filled square.')),
-      h('div', { class: 'card k-attr' }, concept('attr'), h('p', null, 'Is collusion justified? Never claimed here. Violet with a triangle; the L3 rung is hatched.')),
-      h('div', { class: 'card k-unc' }, concept('unc'), h('p', null, 'Bound span and abstention (inconclusive). Amber with a diamond.'))));
-    main.appendChild(h('h3', null, 'Effect definitions (verified against stored rows)'));
-    main.appendChild(h('ul', null, h('li', null, 'tau_O = outsider mean under K minus under F.'), h('li', null, 'tau_C = coalition mean under F minus under K.'), h('li', null, 'tau_W = W under K minus W under F.'), h('li', null, 'F factual, K knockout (exposure mask), S sham, N placebo.')));
-    main.appendChild(h('h3', null, 'Provenance'));
-    main.appendChild(h('p', null, 'The pack was generated by ', h('code', null, D.manifest.generator), ' with generation base commit ', h('code', null, (D.manifest.generator_commit_HEAD || '').slice(0, 10)), '. This records HEAD at generation; source hashes bind actual working-tree inputs. See ', h('a', { href: '../data/MANIFEST.json' }, 'MANIFEST.json'), ' and ', h('a', { href: '../data/TRACE.md' }, 'TRACE.md'), '. Bundled manifest sha256: ', sha(D.manifest.manifest_sha256), '. Archive sha256:'));
-    main.appendChild(sha(D.index.archive.sha256));
-    main.appendChild(h('p', null, 'Held-out data: EXP-002 (frozen, descriptive here). Development data: scripted Gate A fixtures, never evidence of performance. These development fixtures include failed diagnostics. Formal Gate A v1.2.2 was accepted with narrowing; the fixtures do not establish real-agent detection performance.'));
+    main.appendChild(h('p', { class: 'eyebrow' }, 'Reading the evidence'));
+    main.appendChild(h('div', { class: 'head' }, h('h1', null, 'Concepts & sources')));
+    main.appendChild(h('p', { class: 'page-intro' }, 'Influence, harm, and policy attribution answer different questions. This companion keeps their evidence and uncertainty separate.'));
+    main.appendChild(evidenceProgression());
+    main.appendChild(h('h3', null, 'The attribution gap'));
+    main.appendChild(h('p', null, 'A valid intervention can support a scoped causal claim: removing this message changed these outcomes. A policy violation additionally depends on the applicable rule, authorization, and legitimate alternatives. Programmed benchmark labels are supplied by the evaluator; they are not inferred real-agent intent.'));
+    main.appendChild(h('h3', null, 'Effect definitions'));
+    main.appendChild(tw(h('table', null, h('thead', null, h('tr', null, h('th', null, 'Quantity'), h('th', null, 'Definition'))), h('tbody', null,
+      h('tr', null, h('th', { scope: 'row' }, 'Outsider loss · τO'), h('td', null, 'Outsider mean reward under removal (K) minus message present (F).')),
+      h('tr', null, h('th', { scope: 'row' }, 'Coalition benefit · τC'), h('td', null, 'Coalition mean reward under F minus K.')),
+      h('tr', null, h('th', { scope: 'row' }, 'Welfare change · τW'), h('td', null, 'Total reward under K minus F.')),
+      h('tr', null, h('th', { scope: 'row' }, 'Controls · S and N'), h('td', null, 'S is a sham with identical input and fresh sampling. N removes a different, eligible non-informational message. Not available does not mean zero effect.'))))));
+    main.appendChild(h('h3', null, 'Reading a certificate'));
+    main.appendChild(h('p', null, 'Supported means the recorded harmful-exposure criterion is met; it does not attribute collusion. Not supported means the criterion is not met; it does not exonerate a policy. Inconclusive preserves uncertainty. Invalid means replay validity failed. The case ladder’s L0/L1 display is a UI-derived heuristic, not a replacement certificate; only supported certificates reach L2. L3 policy attribution is never claimed for the held-out cases.'));
+    main.appendChild(h('h3', null, 'Evidence provenance'));
+    main.appendChild(h('p', null, 'Held-out real-agent evidence comes from EXP-002: sixteen checkpoints from eight matched world pairs. Gate A cases are five scripted development fixtures, including failed diagnostics. The selected prospective twin examples are deterministic ε = 0 constructions. None of these categories substitutes for another.'));
+    main.appendChild(h('p', null, 'The frozen pack was generated by ', h('code', null, D.manifest.generator), '. Generation base commit ', h('code', null, D.manifest.generator_commit_HEAD), ' records HEAD at generation. Hashes bind the actual source and generator bytes. The full-text overlay restores messages shortened in the compact pack.'));
+    main.appendChild(h('p', { class: 'muted' }, 'Manifest SHA-256: ', sha(D.manifest.manifest_sha256), h('br'), 'Archive SHA-256: ', sha(D.index.archive.sha256)));
+    main.appendChild(h('div', { class: 'sources-list' }, h('h3', null, 'Inspect or download the sources'), h('ul', null,
+      h('li', null, h('a', { href: '../data/MANIFEST.json' }, 'Frozen manifest and source hashes')),
+      h('li', null, h('a', { href: '../data/TRACE.md' }, 'Field-by-field numerical source map')),
+      h('li', null, h('a', { href: '../data/study.json' }, 'Study results and all eight matched-pair differences')),
+      h('li', null, h('a', { href: '../data/twins.json' }, 'All bundled twin worlds and information sets')),
+      h('li', null, h('a', { href: '../data/cases.json' }, 'Index of held-out cases and development fixtures')),
+      h('li', null, sourceLink('docs/runner/archives/exp002-live.tar.gz', 'Original archived real-agent records')),
+      h('li', null, sourceLink('docs/REPRODUCING.md', 'Reproduction instructions and missing-input limits')),
+      h('li', null, h('a', { href: 'https://docs.google.com/document/d/1lpUPKgZGy_vVPfbocKlr5-VqD6UxcGb2RzEWD8DbZgk/edit' }, 'Paper and research context')))));
+    main.appendChild(disclosure('Public data, privacy, and redistribution scope', h('div', null,
+      h('p', null, 'This site republishes the repository’s existing frozen research evidence: synthetic scenario identifiers, scripted messages, and recorded model outputs. It runs without inference, analytics, or network requests for its content. Explicit external links leave this local evidence companion. Theme preference is stored only in the browser.'),
+      h('p', null, 'Prior repository reviews leave upstream scenario and trace redistribution rights unresolved. Publication authorization does not establish third-party licensing clearance. Source text and tool outputs are research artifacts; they should not be interpreted as statements by real participants.'),
+      h('p', null, sourceLink('NOTICE.md', 'Repository notices'), ' · ', sourceLink('docs/release/LICENSES.md', 'Existing license inventory'), ' · ', sourceLink('docs/release/CHECKLIST.md', 'Release limitations')))));
+    main.appendChild(h('h3', null, 'Design and offline use'));
+    main.appendChild(h('p', null, 'Old Standard TT is embedded locally under the ', h('a', { href: 'fonts/OFL.txt' }, 'SIL Open Font License 1.1'), '. The warm paper and forest accents take inspiration from the ', h('a', { href: 'https://apartresearch.com/' }, 'Apart Research website'), '; this is an independent research companion, not an official Apart product.'));
+    main.appendChild(h('p', null, 'To use offline, download the repository and open demo/explorer/index.html. Keep its adjacent assets and demo/data directory together. Hash routes work without a server.'));
   }
 
   /* ---------- twins (hidden unless data/twins.js exists) ---------- */
-  var twinState = { pair: 0, set: 0 };
+  var twinState = { pair: 1, set: 2 };
   function vtxt(v) {
     if (!v) return '—';
     var s2 = v.status + (v.rung ? ' · ' + v.rung : '');
@@ -740,26 +861,35 @@
     return col;
   }
   var SETS_T = ['I0', 'I1', 'I2', 'I3', 'I4', 'I5'];
+  function updateTwin(pair, set, control) {
+    var y = window.scrollY; twinState.pair = pair; twinState.set = set;
+    try { history.replaceState(null, '', '#/twins/' + D.twins.pairs[pair].kind + '/' + set); } catch (e) { /* static file browsing may restrict history */ }
+    renderTwins(); window.scrollTo({ top: y, behavior: 'instant' });
+    var selected = main.querySelector('[data-' + control + '="' + (control === 'pair' ? pair : set) + '"]');
+    if (selected) selected.focus({ preventScroll: true });
+  }
   function renderTwins() {
     clear(main);
     var T = D.twins, P = T.pairs[twinState.pair], si = twinState.set;
     var dev = T.label === 'DEV';
-    main.appendChild(h('div', { class: 'head' }, h('h2', null, 'Twin worlds: when does evidence separate verdicts?'), h('span', { class: 'badge ' + (dev ? 'dev' : 'held'), title: T.provenance_label }, T.provenance_label)));
-    if (T.banner) main.appendChild(h('div', { class: 'note warn banner', role: 'status' }, h('strong', null, T.banner), ' Selection rule: ' + T.selection_rule));
-    if (T.scope_note) main.appendChild(h('p', { class: 'note warn' }, T.scope_note));
-    main.appendChild(h('p', { class: 'muted' }, 'Selection rule: ' + T.selection_rule));
-    if (T.aggregate_criteria && Object.keys(T.aggregate_criteria).length) main.appendChild(h('p', { class: 'note' }, h('strong', null, 'Frozen aggregate criteria: '), Object.keys(T.aggregate_criteria).map(function (rq) { return rq + ' ' + String(T.aggregate_criteria[rq]).toUpperCase(); }).join(' · '), '. RQ1/RQ2 pass by construction, not independent detection performance. These aggregate outcomes are retained; selected deterministic examples do not replace them.'));
-    if (T.limitations) main.appendChild(h('p', { class: 'note' }, T.limitations));
-    main.appendChild(h('p', null, 'Two worlds are built so that the auditor sees identical observables up to a stated information set, yet their private labels differ. A method that sees only the same evidence must give the same output; only new evidence can separate them. Pick a pair, then step the evidence from I0 to I5.'));
+    main.appendChild(h('div', { class: 'head' }, h('h1', null, 'When does new evidence distinguish the worlds?'), h('span', { class: 'badge ' + (dev ? 'dev' : 'held'), title: T.provenance_label }, T.provenance_label)));
+    main.appendChild(h('p', null, 'Two programmed policies can share the same observed evidence. Explore which additional evidence distinguishes them, from transcript alone (I0) to authorization (I5).'));
+    main.appendChild(h('p', { class: 'muted' }, 'Selected deterministic constructions (ε = 0). The scope restriction was post hoc; four aggregate criteria were unmet, and noisy results have unresolved cross-platform differences.'));
+    main.appendChild(disclosure('Scope, selection, and all aggregate outcomes', h('div', null,
+      T.banner ? h('p', null, T.banner) : null,
+      h('p', null, 'Selection rule: ' + T.selection_rule),
+      T.scope_note ? h('p', null, T.scope_note) : null,
+      T.aggregate_criteria ? h('p', null, 'Frozen aggregate criteria: ' + Object.keys(T.aggregate_criteria).map(function (rq) { return rq + ' ' + T.aggregate_criteria[rq]; }).join(' · ') + '. RQ1/RQ2 pass by construction, not independent detection performance. Selected deterministic examples do not replace the aggregate outcomes.') : null,
+      T.limitations ? h('p', null, T.limitations) : null)));
     var tabs = h('div', { class: 'steps', role: 'group', 'aria-label': 'Twin pair types' });
-    T.pairs.forEach(function (p, i) { tabs.appendChild(h('button', { type: 'button', class: 'tabbtn', 'aria-pressed': i === twinState.pair ? 'true' : 'false', on: { click: function () { twinState.pair = i; renderTwins(); } } }, p.kind)); });
+    T.pairs.forEach(function (p, i) { tabs.appendChild(h('button', { type: 'button', class: 'tabbtn', 'data-pair': i, 'aria-pressed': i === twinState.pair ? 'true' : 'false', on: { click: function () { updateTwin(i, twinState.set, 'pair'); } } }, p.kind)); });
     main.appendChild(tabs);
     main.appendChild(h('h3', null, P.kind + ' · ' + P.title), h('p', null, P.description));
     // stepper
     var slider = h('input', { type: 'range', min: 0, max: 5, step: 1, value: si, id: 'tw-range', 'aria-valuetext': SETS_T[si] + ': ' + T.sets[si].adds, 'aria-label': 'Information set, I0 to I5' });
-    slider.addEventListener('input', function () { twinState.set = +slider.value; renderTwins(); $('tw-range').focus(); });
+    slider.addEventListener('input', function () { twinState.set = +slider.value; try { history.replaceState(null, '', '#/twins/' + P.kind + '/' + twinState.set); } catch (e) { /* file browser may restrict history */ } renderTwins(); $('tw-range').focus(); });
     var btns = h('div', { class: 'steps', role: 'group', 'aria-label': 'Information set' });
-    SETS_T.forEach(function (s2, i) { btns.appendChild(h('button', { type: 'button', class: 'tabbtn', 'aria-pressed': i === si ? 'true' : 'false', on: { click: function () { twinState.set = i; renderTwins(); } } }, s2)); });
+    SETS_T.forEach(function (s2, i) { btns.appendChild(h('button', { type: 'button', class: 'tabbtn', 'data-set': i, 'aria-pressed': i === si ? 'true' : 'false', on: { click: function () { updateTwin(twinState.pair, i, 'set'); } } }, s2)); });
     main.appendChild(h('div', { class: 'card' }, h('div', { class: 'stepper' }, h('label', { for: 'tw-range' }, 'Evidence revealed: ', h('strong', null, SETS_T[si])), slider, btns),
       h('p', null, h('strong', null, SETS_T[si] + ' adds: '), T.sets[si].adds, si > 0 ? h('span', { class: 'muted' }, ' (cumulative: everything from earlier sets is still shown)') : null)));
     // columns
@@ -779,7 +909,7 @@
     var vr = T.methods.map(function (mt) {
       var va = A.by_set[SETS_T[si]].verdicts[mt.id], vb = B ? B.by_set[SETS_T[si]].verdicts[mt.id] : null;
       var lab = mt.id === 'baseline' ? mt.label + ' (' + T.strongest_baseline.id + ')' : mt.label;
-      return h('tr', null, h('th', { scope: 'row' }, lab), h('td', null, vtxt(va)), B ? h('td', null, vtxt(vb)) : null, B ? h('td', null, vsame(va, vb) ? h('span', { class: 'pf n' }, 'same') : h('span', { class: 'pf f' }, 'DIFFERENT')) : null);
+      return h('tr', null, h('th', { scope: 'row' }, lab), h('td', null, vtxt(va)), B ? h('td', null, vtxt(vb)) : null, B ? h('td', null, vsame(va, vb) ? h('span', { class: 'pf n' }, 'same') : h('span', { class: 'pf f' }, 'differs')) : null);
     });
     main.appendChild(tw(h('table', null, h('thead', null, h('tr', null, h('th', null, 'Method'), h('th', null, 'Twin A'), B ? h('th', null, 'Twin B') : null, B ? h('th', null, 'Same?') : null)), h('tbody', null, vr))));
     // matrix
@@ -806,61 +936,80 @@
       h('p', null, 'Run: ', h('code', null, T.run_dir), '. Strongest-baseline rule: ' + T.strongest_baseline.rule + ' Balanced accuracy B2+ ' + fmt(T.strongest_baseline.balanced_accuracy['B2+'], 3) + ', B3b ' + fmt(T.strongest_baseline.balanced_accuracy['B3b'], 3) + '.'),
       T.sources.map(function (x) { return h('p', null, h('code', null, x.path), h('br'), sha(x.sha256)); }))));
   }
-  function probeTwins() {
-    var sc = document.createElement('script');
-    sc.src = 'data/twins.js';
-    sc.onload = function () { if (D.twins) { var a = $('twins-nav'); a.hidden = false; if (/^#\/twins/.test(location.hash) || location.hash === '#/start' || !location.hash) route(); } };
-    sc.onerror = function () { /* absent: show nothing */ };
-    document.head.appendChild(sc);
-  }
-
-  /* ---------- sidebar + router ---------- */
+  /* ---------- compact case selection, local theme and hash routes ---------- */
   function buildSidebar() {
-    var list = $('case-list'); clear(list);
-    var worlds = {}, order = [];
-    cases.filter(function (c) { return c.id.charAt(0) === 'H'; }).forEach(function (c) { var k = c.id.slice(0, 3); if (!worlds[k]) { worlds[k] = []; order.push(k); } worlds[k].push(c); });
-    list.appendChild(h('div', { class: 'grp' }, 'Held-out real agent · EXP-002 · frozen'));
-    list.appendChild(h('p', { class: 'muted', style: null }, '8 matched world pairs · B1 deceptive / B2 authorized cooperation'));
-    order.forEach(function (k) {
-      list.appendChild(h('div', { class: 'world' }, 'World ' + k));
-      var pair = h('div', { class: 'pair' });
-      worlds[k].forEach(function (c) { pair.appendChild(caseBtn(c, c.id.slice(4) + (c.id.endsWith('B1') ? ' deceptive' : ' authorized'))); });
-      list.appendChild(pair);
+    var select = $('case-select'); clear(select);
+    [['Held-out real-agent · EXP-002', 'H'], ['Development · scripted fixtures', 'GateA']].forEach(function (group) {
+      var g = h('optgroup', { label: group[0] });
+      cases.filter(function (c) { return c.id.indexOf(group[1]) === 0; }).forEach(function (c) {
+        g.appendChild(h('option', { value: c.id }, c.id + ' · ' + c.title + ' · ' + String(c.status).replace(/_/g, ' ')));
+      }); select.appendChild(g);
     });
-    list.appendChild(h('div', { class: 'grp' }, 'Development · scripted fixtures'));
-    cases.filter(function (c) { return c.id.indexOf('GateA') === 0; }).forEach(function (c) { list.appendChild(caseBtn(c, c.title)); });
-  }
-  function caseBtn(c, label) {
-    var held = c.id.charAt(0) === 'H';
-    return h('button', { class: 'casebtn', type: 'button', 'data-id': c.id, title: c.title + ' — ' + c.provenance_label, on: { click: function () { location.hash = '#/case/' + c.id; if (window.innerWidth <= 900) $('case-menu').open = false; } } },
-      label, h('span', { class: 'sub' }, h('span', null, String(c.status).replace('_', ' '))));
+    select.addEventListener('change', function () { location.hash = '#/case/' + select.value; });
   }
   function mark(view, id) {
     document.querySelectorAll('.views a').forEach(function (a) { if (a.getAttribute('data-view') === view) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-    document.querySelectorAll('.casebtn').forEach(function (b) { if (b.getAttribute('data-id') === id) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); });
-    $('case-current').textContent = id ? '· ' + id : '';
+    document.querySelector('.side').hidden = view !== 'case';
+    main.className = view + '-page';
+    if (id) $('case-select').value = id;
+    $('case-current').textContent = id ? (/^H/.test(id) ? 'Held-out · descriptive' : 'Development · scripted') : '';
+    document.title = (view === 'start' ? 'When Cooperation Looks Like Collusion' : ({ study: 'Study evidence', twins: 'Twin worlds', case: id, about: 'Concepts & sources' }[view])) + ' · CCC Evidence Explorer';
+  }
+  var revealObserver = null;
+  function enhance() {
+    if (revealObserver) revealObserver.disconnect();
+    if (reducedMotion() || !('IntersectionObserver' in window)) return;
+    // Content is always visible. An observed entry adds only a brief enhancement.
+    revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add('reveal-in'); revealObserver.unobserve(entry.target); } });
+    }, { threshold: .06 });
+    main.querySelectorAll('.essay-section, .study-figure').forEach(function (el) { revealObserver.observe(el); });
   }
   function route() {
     var hash = location.hash || '#/start', m = hash.match(/^#\/case\/([\w-]+)$/);
+    curId = null;
     if (m && byId[m[1]]) { mark('case', m[1]); renderCase(m[1]); }
-    else if (hash === '#/study') { mark('study'); curId = null; renderStudy(); }
-    else if (hash === '#/about') { mark('about'); curId = null; renderAbout(); }
+    else if (hash === '#/study') { mark('study'); renderStudy(); }
+    else if (hash === '#/about') { mark('about'); renderAbout(); }
     else if (/^#\/twins(\/|$)/.test(hash) && D.twins) {
       var tm = hash.match(/^#\/twins\/(\w+)(?:\/([0-5]))?$/);
       if (tm) { D.twins.pairs.forEach(function (p, i) { if (p.kind === tm[1]) twinState.pair = i; }); if (tm[2] !== undefined) twinState.set = +tm[2]; }
-      mark('twins'); curId = null; renderTwins();
+      mark('twins'); renderTwins();
+    } else {
+      mark('start'); renderStart();
+      if (m) main.insertBefore(h('p', { class: 'note', role: 'status' }, 'That case is not in the frozen pack. Open Case inspector to choose one of the available cases.'), main.firstChild);
     }
-    else { mark('start'); curId = null; renderStart(); }
-    if (!m) window.scrollTo(0, 0);
+    if (!m) window.scrollTo({ top: 0, behavior: 'instant' });
+    enhance();
+    if (hash === '#/start/counterexample') localScroll('counterexample');
   }
-  window.addEventListener('hashchange', route);
-  document.querySelector('.skip').addEventListener('click', function (event) {
-    event.preventDefault();
-    main.focus();
-    main.scrollIntoView({ block: 'start' });
+  var resizeFrame;
+  window.addEventListener('resize', function () {
+    if (resizeFrame) cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(function () { main.querySelectorAll('.matched-plot').forEach(function (plot) { plot.replaceWith(stripPlot(D.study)); }); });
   });
+  var toggle = $('theme-toggle');
+  function themeLabel() {
+    var dark = document.documentElement.dataset.theme === 'dark';
+    toggle.setAttribute('aria-label', dark ? 'Use light theme' : 'Use dark theme');
+    toggle.setAttribute('aria-pressed', String(dark));
+    toggle.firstChild.textContent = dark ? 'Light ' : 'Dark ';
+  }
+  toggle.addEventListener('click', function () {
+    var theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = theme;
+    try { localStorage.setItem('ccc-theme', theme); } catch (e) { /* preference remains valid for this page */ }
+    themeLabel();
+  });
+  document.querySelectorAll('.brand, .views a, .footer-mark').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      if (link.getAttribute('href') === (location.hash || '#/start')) { event.preventDefault(); window.scrollTo({ top: 0, behavior: reducedMotion() ? 'auto' : 'smooth' }); main.focus({ preventScroll: true }); }
+    });
+  });
+  window.addEventListener('hashchange', function () { route(); main.focus({ preventScroll: true }); });
+  document.querySelector('.skip').addEventListener('click', function (event) { event.preventDefault(); main.focus(); main.scrollIntoView({ block: 'start' }); });
   buildSidebar();
-  if (window.innerWidth <= 900) $('case-menu').open = false;
+  if (D.twins) $('twins-nav').hidden = false;
+  themeLabel();
   route();
-  probeTwins();
 })();

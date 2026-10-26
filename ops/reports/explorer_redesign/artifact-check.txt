@@ -1,0 +1,1 @@
+PASS: 15 reading-path pages, 113 local links/anchors, 4 editable SVG variants; no README PDF link

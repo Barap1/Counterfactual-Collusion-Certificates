@@ -1,43 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src data:; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
-<title>CCC Evidence Explorer</title>
+<meta name="description" content="An interactive research companion on the limits of counterfactual auditing in multi-agent AI. Explore a constructed counterexample and inspect the frozen study evidence.">
+<meta property="og:title" content="When Cooperation Looks Like Collusion">
+<meta property="og:description" content="The limits of counterfactual auditing in multi-agent AI. An interactive evidence companion.">
+<meta property="og:type" content="website">
+<title>When Cooperation Looks Like Collusion · CCC</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="top" role="banner">
-  <div class="brand">
-    <span class="mark" aria-hidden="true">CCC</span>
-    <div>
-      <h1>Evidence Explorer</h1>
-      <p class="tag">A knockout measures what a message did, not whether it should have done it.</p>
-    </div>
-  </div>
-  <nav class="views" aria-label="Views">
-    <a href="#/start" data-view="start">Start here</a>
+<header class="top">
+  <a class="brand" href="#/start" aria-label="CCC Evidence Explorer — Start"><span class="mark">CCC<span class="mark-dot">.</span></span><span class="brand-label">Evidence Explorer</span></a>
+  <nav class="views" aria-label="Research views">
+    <a href="#/start" data-view="start">Start</a>
     <a href="#/study" data-view="study">Study</a>
-    <a href="#/twins" data-view="twins" id="twins-nav" hidden>Twin worlds</a>
+    <a href="#/twins/P2/2" data-view="twins" id="twins-nav" hidden>Twin worlds</a>
+    <a href="#/case/H02_B1" data-view="case">Case inspector</a>
     <a href="#/about" data-view="about">Concepts &amp; sources</a>
   </nav>
+  <button id="theme-toggle" type="button" aria-label="Use dark theme" aria-pressed="false">Dark <span aria-hidden="true">◐</span></button>
 </header>
 <div class="shell">
-  <aside class="side" aria-label="Case selection">
-    <details id="case-menu" open>
-      <summary>Cases <span id="case-current" class="muted"></span></summary>
-      <div id="case-list"></div>
-    </details>
+  <aside class="side" aria-label="Case selection" hidden>
+    <label for="case-select">Inspect a case</label>
+    <select id="case-select"></select>
+    <span id="case-current" class="muted"></span>
   </aside>
-  <main id="main" tabindex="-1" aria-live="polite"></main>
+  <main id="main" tabindex="-1"></main>
 </div>
 <footer class="foot">
-  <p>Offline, no network requests. Every number is read from the frozen JSON pack in <code>demo/data/</code> (bundled by <code>bundle_data.py</code>); nothing is simulated. Held-out data are descriptive; development data are scripted fixtures.</p>
+  <div><a class="footer-mark" href="#/start">CCC.</a><p>A research companion on evidence, influence, and attribution.<br>Independent research submission · Not an official Apart Research product.</p></div>
+  <div class="footer-links"><a href="#/about">Sources &amp; provenance</a><a href="https://github.com/Barap1/Counterfactual-Collusion-Certificates">Repository ↗</a><span>Frozen evidence · Works offline · No tracking</span></div>
 </footer>
+<noscript><p class="noscript">This interactive companion needs JavaScript. The frozen records remain available in <a href="../data/study.json">study.json</a>, <a href="../data/twins.json">twins.json</a>, and <a href="../data/cases.json">the case index</a>.</p></noscript>
 <script src="data/index.js"></script>
+<script src="research-context.js"></script>
+<script src="data/twins.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -1,39 +1,38 @@
 name: Deploy CCC Evidence Explorer
-
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+    paths: ['demo/**', '.github/workflows/deploy-demo.yml']
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: github-pages
   cancel-in-progress: false
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload evidence explorer
-        uses: actions/upload-pages-artifact@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          path: ./demo/explorer
-
-      - name: Deploy to GitHub Pages
+          python-version: '3.12'
+      - name: Verify frozen evidence and source-derived review context
+        run: |
+          python -m unittest tests.test_demo_data tests.test_explorer_context -v
+          python demo/explorer/bundle_data.py
+          git diff --exit-code -- demo/data demo/explorer/data
+      - name: Stage public demo assets only
+        run: python demo/explorer/prepare_pages.py _site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

@@ -1,0 +1,33 @@
+{
+  "base": "http://127.0.0.1:8766/",
+  "checked": "2026-10-26T01:35:17.054Z",
+  "errors": [],
+  "responses": [],
+  "downloads": [
+    {
+      "url": "http://127.0.0.1:8766/demo/data/MANIFEST.json",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8766/demo/data/TRACE.md",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8766/demo/data/study.json",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8766/demo/data/twins.json",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8766/demo/data/cases.json",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8766/demo/explorer/fonts/OFL.txt",
+      "status": 200
+    }
+  ],
+  "status": "PASS"
+}
