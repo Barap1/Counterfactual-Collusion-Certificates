@@ -1,0 +1,4 @@
+Scan progress: 250 blobs
+Flagged path='paper/final/last_minute/figure_A_same_evidence.svg'; regex rules=['7']
+Flagged path='paper/final/last_minute/figure_B_evidence_establishes.svg'; regex rules=['7']
+Scanned 313 working/generated/staged blobs; 2 flagged blobs; credential files never read

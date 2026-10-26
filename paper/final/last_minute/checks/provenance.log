@@ -1,0 +1,13 @@
+test_archive_sample_hashes_checks_and_untruncated_responses (tests.test_demo_data.DemoDataTests.test_archive_sample_hashes_checks_and_untruncated_responses) ... ok
+test_case_coverage_categories_and_exact_certificates (tests.test_demo_data.DemoDataTests.test_case_coverage_categories_and_exact_certificates) ... ok
+test_continuation_metrics_rederived_from_agent_rewards (tests.test_demo_data.DemoDataTests.test_continuation_metrics_rederived_from_agent_rewards) ... ok
+test_fixture_per_instance_numbers_and_no_invented_transcripts (tests.test_demo_data.DemoDataTests.test_fixture_per_instance_numbers_and_no_invented_transcripts) ... ok
+test_gate_trace_is_source_derived (tests.test_demo_data.DemoDataTests.test_gate_trace_is_source_derived) ... ok
+test_manifest_complete_hashes_and_size (tests.test_demo_data.DemoDataTests.test_manifest_complete_hashes_and_size) ... ok
+test_primary_is_exact_frozen_row (tests.test_demo_data.DemoDataTests.test_primary_is_exact_frozen_row) ... ok
+test_secondary_and_world_contrasts (tests.test_demo_data.DemoDataTests.test_secondary_and_world_contrasts) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.944s
+
+OK
