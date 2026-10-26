@@ -1,0 +1,23 @@
+{
+  "task": "FINAL-60",
+  "started_utc": "2026-10-26T02:30:58Z",
+  "deadline_utc": "2026-10-26T03:30:58Z",
+  "owned_paths": [
+    "paper/final/last_minute/"
+  ],
+  "registry_observation": "ops/tasks.json live_agents empty; existing changes preserved; no existing lease on owned path.",
+  "authorization": "Owner's Final 60-Minute Research and Submission Upgrade brief: offline frozen-data reanalysis, read-only authoritative Google Doc, up to two figures, handoff, one commit and push to origin/main if permitted.",
+  "budget": "Zero new spending; no model experiments, cloud jobs or paid research APIs.",
+  "authoritative_doc": {
+    "title": "When Cooperation Looks Like Collusion \u2014 Counterfactual Auditing in Multi-Agent AI",
+    "text_characters": 25240,
+    "paragraph_count": 125,
+    "policy": "Read only. No remote mutation tools invoked. Target paragraphs identified by exact opening words and observed UTF-16 indexes; indexes may shift with later edits.",
+    "read_utc_date": "2026-10-26"
+  },
+  "unrelated_initial_changes": [
+    "ops/tasks.json",
+    "ops/reports/graphics_redesign/",
+    "paper/graphics_redesign/"
+  ]
+}

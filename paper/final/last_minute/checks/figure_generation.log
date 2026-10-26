@@ -1,0 +1,34 @@
+{
+  "figure_A_same_evidence": {
+    "width_pt": 468,
+    "height_pt": 278,
+    "minimum_text_pt": 9,
+    "png_pixels": [
+      1950,
+      1158
+    ],
+    "png_dpi": [
+      299.9994,
+      299.9994
+    ],
+    "svg_text_elements": 18,
+    "text_bounds_checked": true,
+    "text_overlaps": []
+  },
+  "figure_B_evidence_establishes": {
+    "width_pt": 468,
+    "height_pt": 405,
+    "minimum_text_pt": 8.8,
+    "png_pixels": [
+      1950,
+      1687
+    ],
+    "png_dpi": [
+      299.9994,
+      299.9994
+    ],
+    "svg_text_elements": 36,
+    "text_bounds_checked": true,
+    "text_overlaps": []
+  }
+}

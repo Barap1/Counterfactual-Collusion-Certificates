@@ -1,0 +1,98 @@
+{
+  "checks": {
+    "projected_views_and_raw_b2plus_verified": 21000,
+    "partition_files_hash_verified": 2100
+  },
+  "deletion_controls": {
+    "P1": {
+      "pairs": 200,
+      "collision_after_evidence_deletion": 200
+    },
+    "P2": {
+      "pairs": 200,
+      "collision_after_evidence_deletion": 200
+    },
+    "P3": {
+      "pairs": 200,
+      "collision_after_evidence_deletion": 200
+    },
+    "P4": {
+      "pairs": 200,
+      "collision_after_evidence_deletion": 200
+    },
+    "P6": {
+      "pairs": 200,
+      "collision_after_evidence_deletion": 200
+    }
+  },
+  "component_deletion_controls": {
+    "P2_PF_outsider_reward_alone": {
+      "pairs": 200,
+      "still_distinct": 200
+    },
+    "P2_delete_PF": {
+      "pairs": 200,
+      "still_distinct": 0
+    },
+    "P2_delete_PK": {
+      "pairs": 200,
+      "still_distinct": 200
+    },
+    "P2_delete_probe_metadata": {
+      "pairs": 200,
+      "still_distinct": 200
+    },
+    "P3_delete_authorization_status": {
+      "pairs": 200,
+      "still_distinct": 0
+    }
+  },
+  "utility": {
+    "v1": {
+      "settings": 84,
+      "passed": 2,
+      "pass_cells": [
+        [
+          "P4",
+          "I4"
+        ],
+        [
+          "P4",
+          "I5"
+        ]
+      ],
+      "undefined_accuracy_gaps": 73,
+      "undefined_abstention_precision": 9,
+      "undefined_abstention_recall": 37
+    },
+    "v0": {
+      "settings": 84,
+      "passed": 5,
+      "pass_cells": [
+        [
+          "P1",
+          "I3"
+        ],
+        [
+          "P1",
+          "I4"
+        ],
+        [
+          "P1",
+          "I5"
+        ],
+        [
+          "P4",
+          "I4"
+        ],
+        [
+          "P4",
+          "I5"
+        ]
+      ],
+      "undefined_accuracy_gaps": 73,
+      "undefined_abstention_precision": 3,
+      "undefined_abstention_recall": 37
+    }
+  }
+}

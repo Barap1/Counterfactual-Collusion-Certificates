@@ -1,0 +1,165 @@
+{
+  "status": "PASS",
+  "frozen_and_derived_input_hashes_verified": 2113,
+  "deterministic_accusations": {
+    "P2": [
+      200,
+      200
+    ],
+    "P3": [
+      200,
+      200
+    ],
+    "P6": [
+      0,
+      200
+    ],
+    "benign-cooperation": [
+      0,
+      100
+    ]
+  },
+  "designed_pair_attribution": [
+    {
+      "cp95": [
+        0.9817246596448637,
+        1.0
+      ],
+      "epsilon": 0,
+      "k": 200,
+      "kind": "P2",
+      "method": "CCC-L-v1",
+      "n": 200,
+      "pass_criterion": true,
+      "rate": 1.0,
+      "set": "I4"
+    },
+    {
+      "cp95": [
+        0.9817246596448637,
+        1.0
+      ],
+      "epsilon": 0,
+      "k": 200,
+      "kind": "P3",
+      "method": "CCC-L-v1",
+      "n": 200,
+      "pass_criterion": true,
+      "rate": 1.0,
+      "set": "I5"
+    }
+  ],
+  "aggregate_failures": [
+    "RQ3",
+    "RQ4",
+    "RQ4b",
+    "RQ5"
+  ],
+  "utility": {
+    "v0": {
+      "pass_cells": [
+        [
+          "P1",
+          "I3"
+        ],
+        [
+          "P1",
+          "I4"
+        ],
+        [
+          "P1",
+          "I5"
+        ],
+        [
+          "P4",
+          "I4"
+        ],
+        [
+          "P4",
+          "I5"
+        ]
+      ],
+      "passed": 5,
+      "settings": 84,
+      "undefined_abstention_precision": 3,
+      "undefined_abstention_recall": 37,
+      "undefined_accuracy_gaps": 73
+    },
+    "v1": {
+      "pass_cells": [
+        [
+          "P4",
+          "I4"
+        ],
+        [
+          "P4",
+          "I5"
+        ]
+      ],
+      "passed": 2,
+      "settings": 84,
+      "undefined_abstention_precision": 9,
+      "undefined_abstention_recall": 37,
+      "undefined_accuracy_gaps": 73
+    }
+  },
+  "primary": {
+    "estimate": 1.354325711018898,
+    "L": -0.01954964911635066,
+    "U": 2.8336288730243204,
+    "p_raw": 0.0703125
+  },
+  "real_agent_certificates": {
+    "not_supported": 11,
+    "inconclusive": 5
+  },
+  "platform_overlap_record_rechecked": {
+    "0": {
+      "common_units": 149,
+      "compressed_identical": 149,
+      "decompressed_identical": 149,
+      "records": 1458,
+      "records_with_method_differences": 0
+    },
+    "0.1": {
+      "common_units": 148,
+      "compressed_identical": 6,
+      "decompressed_identical": 6,
+      "records": 1452,
+      "records_with_method_differences": 1160
+    }
+  },
+  "graphics": [
+    {
+      "stem": "figure_A_same_evidence",
+      "minimum_font_pt": 9.0,
+      "png_pixels": [
+        1950,
+        1158
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "embedded_fonts_exactly_match_tracked_OFL_sources": true,
+      "document_id_pattern_candidates_inside_font_payloads": 1,
+      "document_id_pattern_candidates_outside_font_payloads": 0
+    },
+    {
+      "stem": "figure_B_evidence_establishes",
+      "minimum_font_pt": 8.8,
+      "png_pixels": [
+        1950,
+        1687
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "embedded_fonts_exactly_match_tracked_OFL_sources": true,
+      "document_id_pattern_candidates_inside_font_payloads": 1,
+      "document_id_pattern_candidates_outside_font_payloads": 0
+    }
+  ],
+  "scope": "Hashes and published arithmetic/artifact checks; no model reruns, new sensitivity claim, fresh clean-install verification or live-Doc layout validation."
+}

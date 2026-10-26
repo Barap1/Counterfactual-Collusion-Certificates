@@ -1,0 +1,604 @@
+{
+  "classification": "Frozen-data graphics; new boundary checks are post-hoc-exploratory.",
+  "insertion_width": "468 pt = 6.5 inches; do not shrink below 6.5 inches for the stated text sizes.",
+  "fonts": "Unmodified Old Standard TT from paper/v2/fonts; embedded in SVG; OFL.txt remains at that source path.",
+  "sources": {
+    "paper/final/last_minute/boundary_audit.json": "194a76b47356af17442a44e46753390d667b8d391742f04f03daf74e5ff13764",
+    "paper/final/last_minute/analyze_boundary.py": "d8a04c2a587c837c2116732a2793de350e30dedadc70bf7710dfb5a36f6ec69b",
+    "paper/final/last_minute/generate_figures.py": "178324193acab72441df32627fe76a04eb92ee07682537ae5bf32b417525aa17",
+    "paper/v2/figures/fig_twins_audit.json": "94116273932883b48806f688522e43bf371d57dcdd922bf6dc0e2f68dd29c7ec",
+    "docs/analysis/exp002_heldout_v3/effects_study.json": "c4a40ed884cc57d5e9a3ee851c5fe23e3c2b96e00610c030f3544b944bfaaba9"
+  },
+  "graphics": {
+    "figure_A_same_evidence": {
+      "title": "Same Evidence, Different Policies",
+      "description": "Constructed P2 allocation twins: identical messages and baseline replay rewards, separated by the designed cost probe. No real-agent performance claim.",
+      "width_pt": 468,
+      "height_pt": 278,
+      "minimum_text_pt": 9,
+      "png_pixels": [
+        1950,
+        1158
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "svg_text_elements": 18,
+      "text_bounds_checked": true,
+      "text_overlaps": [],
+      "text_boxes": [
+        {
+          "text": "Same evidence, different policies",
+          "font_pt": 15,
+          "bbox_pixels": [
+            10.0,
+            515.0,
+            435.25,
+            29.5
+          ]
+        },
+        {
+          "text": "Constructed allocation twins  \u00b7  P2  \u00b7  deterministic  \u00b7  seed 19693329",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            10.0,
+            488.0,
+            571.5,
+            18.0
+          ]
+        },
+        {
+          "text": "\u201cPlease allocate the contested task to our dispatch team.\u201d",
+          "font_pt": 11,
+          "bbox_pixels": [
+            202.375,
+            423.0,
+            531.25,
+            21.0
+          ]
+        },
+        {
+          "text": "Permitted policy",
+          "font_pt": 12,
+          "bbox_pixels": [
+            135.625,
+            356.0,
+            176.75,
+            24.0
+          ]
+        },
+        {
+          "text": "Allocate by efficiency",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            136.6875,
+            330.0,
+            174.625,
+            18.0
+          ]
+        },
+        {
+          "text": "14 \u2192 19",
+          "font_pt": 22,
+          "bbox_pixels": [
+            139.9375,
+            268.0,
+            168.125,
+            42.0
+          ]
+        },
+        {
+          "text": "Outsider reward: message shown \u2192 removed",
+          "font_pt": 9,
+          "bbox_pixels": [
+            49.0625,
+            244.0,
+            349.875,
+            18.0
+          ]
+        },
+        {
+          "text": "Prohibited policy",
+          "font_pt": 12,
+          "bbox_pixels": [
+            620.6875,
+            356.0,
+            182.625,
+            24.0
+          ]
+        },
+        {
+          "text": "Protect the coalition allocation",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            587.625,
+            330.0,
+            248.75,
+            18.0
+          ]
+        },
+        {
+          "text": "14 \u2192 19",
+          "font_pt": 22,
+          "bbox_pixels": [
+            627.9375,
+            268.0,
+            168.125,
+            42.0
+          ]
+        },
+        {
+          "text": "Outsider reward: message shown \u2192 removed",
+          "font_pt": 9,
+          "bbox_pixels": [
+            537.0625,
+            244.0,
+            349.875,
+            18.0
+          ]
+        },
+        {
+          "text": "I4 cost probe: lower each outsider\u2019s task cost by 10",
+          "font_pt": 11,
+          "bbox_pixels": [
+            218.625,
+            187.0,
+            498.75,
+            21.0
+          ]
+        },
+        {
+          "text": "29",
+          "font_pt": 25,
+          "bbox_pixels": [
+            195.0,
+            99.0,
+            58.0,
+            46.0
+          ]
+        },
+        {
+          "text": "Cedes the task \u00b7 factual probe reward (PF)",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            49.0,
+            74.0,
+            350.0,
+            18.046875
+          ]
+        },
+        {
+          "text": "14",
+          "font_pt": 25,
+          "bbox_pixels": [
+            683.0,
+            99.0,
+            58.0,
+            46.0
+          ]
+        },
+        {
+          "text": "Retains the task \u00b7 factual probe reward (PF)",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            530.1875,
+            74.0,
+            363.625,
+            18.046875
+          ]
+        },
+        {
+          "text": "Probe knockout reward (PK): 29 in both worlds",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            271.125,
+            40.0,
+            393.75,
+            18.0
+          ]
+        },
+        {
+          "text": "Same through I3; removing PF restores ambiguity in all 200 P2 pairs.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            178.0625,
+            2.0,
+            579.875,
+            18.0
+          ]
+        }
+      ],
+      "outputs": {
+        "svg": "57f9649693ab3cf05e938522a4f1d84a12dd195d1d0bfa5fb44409e7893c52e0",
+        "png": "a0879a9edb60588df0f48fd4060756c255cfddb5ba68967b3256739d1f0d86b3",
+        "pdf": "4084ad69852ea21bcfc5cf9d0d2afffa5084a526cd0b1811a1d4ace673778fe6"
+      }
+    },
+    "figure_B_evidence_establishes": {
+      "title": "What Evidence Actually Establishes",
+      "description": "Actual evidence access I1-I5, constructed benchmark successes and failures, and the distinct unresolved eight-pair real-agent contrast. All deterministic restrictions are post hoc.",
+      "width_pt": 468,
+      "height_pt": 405,
+      "minimum_text_pt": 8.8,
+      "png_pixels": [
+        1950,
+        1687
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ],
+      "svg_text_elements": 36,
+      "text_bounds_checked": true,
+      "text_overlaps": [],
+      "text_boxes": [
+        {
+          "text": "What evidence actually establishes",
+          "font_pt": 15,
+          "bbox_pixels": [
+            10.0,
+            769.0,
+            465.625,
+            29.0
+          ]
+        },
+        {
+          "text": "More evidence can resolve a named ambiguity; it does not validate an auditor.",
+          "font_pt": 10,
+          "bbox_pixels": [
+            10.0,
+            742.0,
+            667.75,
+            18.0
+          ]
+        },
+        {
+          "text": "Influence",
+          "font_pt": 11.5,
+          "bbox_pixels": [
+            108.0625,
+            679.0,
+            95.875,
+            21.0
+          ]
+        },
+        {
+          "text": "I1: factual + knockout",
+          "font_pt": 9,
+          "bbox_pixels": [
+            67.25,
+            650.0,
+            177.5,
+            18.0
+          ]
+        },
+        {
+          "text": "Harmful exposure",
+          "font_pt": 11.5,
+          "bbox_pixels": [
+            376.0625,
+            679.0,
+            183.875,
+            21.0
+          ]
+        },
+        {
+          "text": "I2: controls + harm gates",
+          "font_pt": 9,
+          "bbox_pixels": [
+            366.4375,
+            650.0,
+            203.125,
+            18.0
+          ]
+        },
+        {
+          "text": "Policy attribution",
+          "font_pt": 11.5,
+          "bbox_pixels": [
+            689.75,
+            679.0,
+            180.5,
+            21.0
+          ]
+        },
+        {
+          "text": "I3\u2013I5: separating evidence",
+          "font_pt": 9,
+          "bbox_pixels": [
+            675.75,
+            650.0,
+            208.5,
+            18.0
+          ]
+        },
+        {
+          "text": "EVIDENCE ADDED",
+          "font_pt": 9,
+          "bbox_pixels": [
+            10.0,
+            604.0,
+            171.5,
+            17.0
+          ]
+        },
+        {
+          "text": "WHAT THE FROZEN RECORDS SHOW",
+          "font_pt": 9,
+          "bbox_pixels": [
+            332.0,
+            604.0,
+            342.75,
+            17.0
+          ]
+        },
+        {
+          "text": "I1",
+          "font_pt": 11,
+          "bbox_pixels": [
+            10.0,
+            553.0,
+            22.375,
+            21.0
+          ]
+        },
+        {
+          "text": "Single-message knockout K",
+          "font_pt": 8.8,
+          "bbox_pixels": [
+            54.0,
+            554.0,
+            209.375,
+            16.0
+          ]
+        },
+        {
+          "text": "B2+ accuses legitimate P2/P3: 200/200 each.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            332.0,
+            556.0,
+            389.375,
+            18.0
+          ]
+        },
+        {
+          "text": "P6: 0/200; benign cooperation: 0/100.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            332.0,
+            528.0,
+            320.125,
+            18.0
+          ]
+        },
+        {
+          "text": "I2",
+          "font_pt": 11,
+          "bbox_pixels": [
+            10.0,
+            479.0,
+            22.25,
+            21.0
+          ]
+        },
+        {
+          "text": "Sham S and placebo N",
+          "font_pt": 8.8,
+          "bbox_pixels": [
+            54.0,
+            480.0,
+            170.75,
+            16.0
+          ]
+        },
+        {
+          "text": "CCC exposure supported on legitimate P2/P3:",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            332.0,
+            482.0,
+            380.375,
+            18.0
+          ]
+        },
+        {
+          "text": "200/200 each. Their attribution remains unresolved.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            332.0,
+            454.0,
+            434.625,
+            18.0
+          ]
+        },
+        {
+          "text": "I3",
+          "font_pt": 11,
+          "bbox_pixels": [
+            10.0,
+            405.0,
+            22.375,
+            21.0
+          ]
+        },
+        {
+          "text": "Joint same-sender removal J",
+          "font_pt": 8.8,
+          "bbox_pixels": [
+            54.0,
+            406.0,
+            217.875,
+            16.0
+          ]
+        },
+        {
+          "text": "P1 separates 200/200 pairs; 200 negative answers",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            332.0,
+            408.0,
+            422.625,
+            18.0
+          ]
+        },
+        {
+          "text": "still admit a prohibited relay alternative.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            332.0,
+            380.0,
+            329.375,
+            18.0
+          ]
+        },
+        {
+          "text": "I4",
+          "font_pt": 11,
+          "bbox_pixels": [
+            10.0,
+            331.0,
+            22.375,
+            21.0
+          ]
+        },
+        {
+          "text": "Task-cost probe PF and PK",
+          "font_pt": 8.8,
+          "bbox_pixels": [
+            54.0,
+            332.0,
+            213.25,
+            16.0
+          ]
+        },
+        {
+          "text": "P2: correct attribution on 200/200 pairs.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            332.0,
+            334.0,
+            339.5,
+            18.0
+          ]
+        },
+        {
+          "text": "P6: identifiable; CCC-L abstains on all 400 members.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            332.0,
+            306.0,
+            438.375,
+            18.0
+          ]
+        },
+        {
+          "text": "I5",
+          "font_pt": 11,
+          "bbox_pixels": [
+            10.0,
+            257.0,
+            22.25,
+            21.0
+          ]
+        },
+        {
+          "text": "External authorization record",
+          "font_pt": 8.8,
+          "bbox_pixels": [
+            54.0,
+            258.0,
+            223.625,
+            16.0
+          ]
+        },
+        {
+          "text": "P3: correct attribution on 200/200 pairs.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            332.0,
+            260.0,
+            339.5,
+            18.0
+          ]
+        },
+        {
+          "text": "The record defines permission; separation is designed.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            332.0,
+            232.0,
+            441.75,
+            18.0
+          ]
+        },
+        {
+          "text": "Pair separation \u2260 global attribution",
+          "font_pt": 10.5,
+          "bbox_pixels": [
+            10.0,
+            183.0,
+            337.0,
+            20.0
+          ]
+        },
+        {
+          "text": "P4/I1: 200/200 pairs differ; neither label is globally identifiable.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            10.0,
+            156.0,
+            531.75,
+            18.0
+          ]
+        },
+        {
+          "text": "Relay cases: 0/100 identifiable at I1\u2013I5. Full utility: 2/84 settings.",
+          "font_pt": 9.5,
+          "bbox_pixels": [
+            10.0,
+            128.0,
+            554.125,
+            18.0
+          ]
+        },
+        {
+          "text": "Separate language-model study: directional contrast not established",
+          "font_pt": 10.5,
+          "bbox_pixels": [
+            28.0,
+            75.0,
+            628.25,
+            20.0
+          ]
+        },
+        {
+          "text": "8 pairs; contrast = 1.354; 95% interval [\u22120.020, 2.834]; p = 0.0703125.",
+          "font_pt": 10,
+          "bbox_pixels": [
+            28.0,
+            46.0,
+            656.875,
+            18.0
+          ]
+        },
+        {
+          "text": "Deterministic scope is post hoc; noisy-platform divergence remains unresolved.",
+          "font_pt": 9,
+          "bbox_pixels": [
+            162.25,
+            4.0,
+            611.5,
+            18.0
+          ]
+        }
+      ],
+      "outputs": {
+        "svg": "b04a8b84d027c4a48d90d2a76c61f27fd7f866d89853b85242c5a55109202ce6",
+        "png": "43edad0f85aeb8f5b2163b85df67a2da2632575c66ee992ed2c4e6b2c5ee76ec",
+        "pdf": "b1420171e76295a8342e2c6b934dbb29813cacefbd6e5b4dd474fbe12e9b6983"
+      }
+    }
+  }
+}

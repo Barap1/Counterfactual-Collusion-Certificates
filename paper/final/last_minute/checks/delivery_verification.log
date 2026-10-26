@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "frozen_and_derived_input_hashes_verified": 2113,
+  "aggregate_failures": [
+    "RQ3",
+    "RQ4",
+    "RQ4b",
+    "RQ5"
+  ],
+  "graphics": [
+    {
+      "stem": "figure_A_same_evidence",
+      "minimum_font_pt": 9.0,
+      "png_pixels": [
+        1950,
+        1158
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "embedded_fonts_exactly_match_tracked_OFL_sources": true,
+      "document_id_pattern_candidates_inside_font_payloads": 1,
+      "document_id_pattern_candidates_outside_font_payloads": 0
+    },
+    {
+      "stem": "figure_B_evidence_establishes",
+      "minimum_font_pt": 8.8,
+      "png_pixels": [
+        1950,
+        1687
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "embedded_fonts_exactly_match_tracked_OFL_sources": true,
+      "document_id_pattern_candidates_inside_font_payloads": 1,
+      "document_id_pattern_candidates_outside_font_payloads": 0
+    }
+  ]
+}
