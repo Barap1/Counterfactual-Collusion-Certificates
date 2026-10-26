@@ -7,7 +7,7 @@ A message can change what other agents do and disadvantage outsiders without pro
 
 CCC builds executable counterexamples: teams that look identical under message removal but follow different programmed policies. Extra evidence can separate particular pairs.
 
-[Explore the example](#try-it-offline) · [Reproduce the primary result](#reproduce-the-primary-result) · [Research and evidence](docs/README.md)
+[Read the paper](paper/paper.pdf) · [Explore the example](#try-it-offline) · [Reproduce the primary result](#reproduce-the-primary-result) · [Research and evidence](docs/README.md)
 
 ## Two teams. The same evidence.
 
