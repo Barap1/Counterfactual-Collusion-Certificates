@@ -1,0 +1,11 @@
+{
+  "scope": "Existing public frozen JSON and JavaScript bundles only; no secret files read",
+  "patterns_checked": [
+    "private_key",
+    "openai_key",
+    "aws_access_key",
+    "bearer_token"
+  ],
+  "findings_without_values": [],
+  "limits": "Pattern scan is not exhaustive privacy review or third-party redistribution clearance. Existing NOTICE.md and docs/release/LICENSES.md leave upstream scenario/trace rights unresolved. No new trace content was added."
+}

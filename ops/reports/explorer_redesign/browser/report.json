@@ -1,0 +1,597 @@
+{
+  "base": "http://127.0.0.1:8765/explorer/",
+  "started": "2026-10-26T01:30:32.768Z",
+  "checks": [
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "#/start",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "#/study",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "#/twins/P2/2",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "#/twins/P2/4",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "#/case/H02_B1",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": false
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "#/about",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "#/start",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "#/study",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "#/twins/P2/2",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "#/twins/P2/4",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "#/case/H02_B1",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": false
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "#/about",
+      "viewport": 1440,
+      "doc": 1440,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "#/start",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "#/study",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "#/twins/P2/2",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "#/twins/P2/4",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "#/case/H02_B1",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": false
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "#/about",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "#/start",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "#/study",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "#/twins/P2/2",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "#/twins/P2/4",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "#/case/H02_B1",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": false
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "#/about",
+      "viewport": 768,
+      "doc": 768,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "route": "#/start",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "route": "#/study",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "route": "#/twins/P2/2",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "route": "#/twins/P2/4",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "route": "#/case/H02_B1",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": false
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "route": "#/about",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "route": "#/start",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "route": "#/study",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "route": "#/twins/P2/2",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "route": "#/twins/P2/4",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "route": "#/case/H02_B1",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": false
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "route": "#/about",
+      "viewport": 390,
+      "doc": 390,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "route": "#/start",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "route": "#/study",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "route": "#/twins/P2/2",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "route": "#/twins/P2/4",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "route": "#/case/H02_B1",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": false
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "route": "#/about",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "route": "#/start",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "route": "#/study",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "route": "#/twins/P2/2",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "route": "#/twins/P2/4",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "route": "#/case/H02_B1",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": false
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "route": "#/about",
+      "viewport": 320,
+      "doc": 320,
+      "headings": 1,
+      "fonts": true,
+      "sideHidden": true
+    },
+    {
+      "functional": "probe 14/14 → 29/14 and reset; persisted theme; reduced motion; 36 twin states; 21 cases; keyboard and disclosure navigation; invalid case; section anchor; no overflow"
+    }
+  ],
+  "errors": [],
+  "badResponses": [],
+  "externalRequests": [],
+  "screenshots": [
+    "start_1440_light.png",
+    "study_1440_light.png",
+    "twins_P2_2_1440_light.png",
+    "twins_P2_4_1440_light.png",
+    "case_H02_B1_1440_light.png",
+    "about_1440_light.png",
+    "start_1440_dark.png",
+    "study_1440_dark.png",
+    "twins_P2_2_1440_dark.png",
+    "twins_P2_4_1440_dark.png",
+    "case_H02_B1_1440_dark.png",
+    "about_1440_dark.png",
+    "start_768_light.png",
+    "study_768_light.png",
+    "twins_P2_2_768_light.png",
+    "twins_P2_4_768_light.png",
+    "case_H02_B1_768_light.png",
+    "about_768_light.png",
+    "start_768_dark.png",
+    "study_768_dark.png",
+    "twins_P2_2_768_dark.png",
+    "twins_P2_4_768_dark.png",
+    "case_H02_B1_768_dark.png",
+    "about_768_dark.png",
+    "start_390_light.png",
+    "study_390_light.png",
+    "twins_P2_2_390_light.png",
+    "twins_P2_4_390_light.png",
+    "case_H02_B1_390_light.png",
+    "about_390_light.png",
+    "start_390_dark.png",
+    "study_390_dark.png",
+    "twins_P2_2_390_dark.png",
+    "twins_P2_4_390_dark.png",
+    "case_H02_B1_390_dark.png",
+    "about_390_dark.png",
+    "start_320_light.png",
+    "study_320_light.png",
+    "twins_P2_2_320_light.png",
+    "twins_P2_4_320_light.png",
+    "case_H02_B1_320_light.png",
+    "about_320_light.png",
+    "start_320_dark.png",
+    "study_320_dark.png",
+    "twins_P2_2_320_dark.png",
+    "twins_P2_4_320_dark.png",
+    "case_H02_B1_320_dark.png",
+    "about_320_dark.png",
+    "probe_390_reduced-motion.png"
+  ],
+  "contrast": [
+    {
+      "theme": "light",
+      "result": [
+        {
+          "key": "--ink",
+          "ratio": 12.960854659068051
+        },
+        {
+          "key": "--muted",
+          "ratio": 5.537873311002073
+        },
+        {
+          "key": "--accent",
+          "ratio": 9.188325935066326
+        },
+        {
+          "key": "--harm",
+          "ratio": 5.804985947134316
+        },
+        {
+          "key": "--unc",
+          "ratio": 5.790954711947338
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "result": [
+        {
+          "key": "--ink",
+          "ratio": 12.987857987330088
+        },
+        {
+          "key": "--muted",
+          "ratio": 7.893101537899651
+        },
+        {
+          "key": "--accent",
+          "ratio": 9.535530044822176
+        },
+        {
+          "key": "--harm",
+          "ratio": 7.428709796159359
+        },
+        {
+          "key": "--unc",
+          "ratio": 8.445910239046416
+        }
+      ]
+    }
+  ],
+  "status": "PASS",
+  "finished": "2026-10-26T01:30:40.126Z"
+}

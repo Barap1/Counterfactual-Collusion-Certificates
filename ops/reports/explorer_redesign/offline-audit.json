@@ -1,0 +1,19 @@
+{
+  "status": "PASS static dependency audit",
+  "entry": "demo/explorer/index.html",
+  "local_assets": [
+    "favicon.svg",
+    "fonts/fonts.css",
+    "style.css",
+    "theme.js",
+    "data/index.js",
+    "research-context.js",
+    "data/twins.js",
+    "app.js"
+  ],
+  "all_21_dynamic_case_files_exist": true,
+  "embedded_font_bytes": true,
+  "network_content_API_calls": false,
+  "browser_file_URL": "NOT EXECUTED: browser URL policy rejects file protocol; no workaround attempted",
+  "runtime": "HTTP preview tested separately, with external requests blocked"
+}
