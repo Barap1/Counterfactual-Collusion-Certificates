@@ -45,7 +45,7 @@ python3 scripts/check_artifact.py
 node --check demo/explorer/app.js
 python3 -m http.server 8765 --bind 127.0.0.1 --directory demo
 # In another terminal, with Playwright installed for development:
-node demo/explorer/qa_browser.cjs http://127.0.0.1:8765/explorer/ ops/reports/explorer_redesign/browser
+node demo/explorer/qa_browser.cjs http://127.0.0.1:8765/explorer/ research-log/ops/reports/explorer_redesign/browser
 ```
 
 The QA runner accepts HTTP(S) previews only. It covers 1440/768/390/320px, both themes, reduced motion, persistence, all cases, all twin states, keyboard controls, contrast tokens, errors, asset failures, and unexpected external requests. Full-page and viewport screenshots are written locally; selected screenshots and the report are retained with the handoff. Direct `file://` navigation was blocked by the browser tool's URL policy and is not claimed as an executed browser test. The static offline dependency audit and HTTP runtime tests are recorded separately.
@@ -54,4 +54,4 @@ The QA runner accepts HTTP(S) previews only. It covers 1440/768/390/320px, both 
 
 `.github/workflows/deploy-demo.yml` verifies evidence, stages only public demo files with `prepare_pages.py`, and deploys through GitHub Pages. Existing root hash links are preserved by a small redirect to `demo/explorer/`. The staged pack includes raw JSON and the numerical trace, so disclosures keep working publicly. Repository files, local settings, and operational reports are outside the staged site.
 
-Upstream scenario/trace redistribution rights remain unresolved in `NOTICE.md` and `docs/release/LICENSES.md`. The restricted public-data pattern scan is not exhaustive privacy or licensing clearance. No new model outputs or experimental records were added.
+Upstream scenario/trace redistribution rights remain unresolved in `NOTICE.md` and `research-log/docs/release/LICENSES.md`. The restricted public-data pattern scan is not exhaustive privacy or licensing clearance. No new model outputs or experimental records were added.

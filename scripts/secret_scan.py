@@ -11,7 +11,7 @@ os.chdir(ROOT)
 def forbidden(p):
     s=p.as_posix()
     return (s.startswith(('docs/runner/exp002', 'runs/exp002', '.git/', 'starter/')) or
-            s=='ops/budget_ledger.jsonl' or p.name in ('.env','compute.env') or s.endswith('.local.json'))
+            s in ('ops/budget_ledger.jsonl', 'research-log/ops/budget_ledger.jsonl') or p.name in ('.env','compute.env') or s.endswith('.local.json'))
 patterns=[
     re.compile(rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
     re.compile(rb'\b(?:sk-or-v1-|sk-proj-)[A-Za-z0-9_-]{16,}'),
@@ -44,10 +44,10 @@ if release_only and changed_only:
 extra_roots=[a for a in sys.argv[1:] if a not in ('--release-only', '--changed-only')]
 selection=(['git','diff','--cached','--name-only','--diff-filter=ACM','-z'] if changed_only
            else ['git','ls-files','-z'])
-tracked=subprocess.check_output(selection+['--','.',':!:docs/runner/exp002-*',':!:runs/exp002',':!:ops/budget_ledger.jsonl',':!:starter']).split(b'\0')
+tracked=subprocess.check_output(selection+['--','.',':!:docs/runner/exp002-*',':!:runs/exp002',':!:ops/budget_ledger.jsonl',':!:research-log/ops/budget_ledger.jsonl',':!:starter']).split(b'\0')
 files=set() if release_only else {Path(os.fsdecode(n)) for n in tracked if n and not forbidden(Path(os.fsdecode(n)))}
 # Scan newly prepared artifacts as well as tracked files, pruning before traversal.
-for top in ([] if changed_only else ['scripts','docs/release'])+extra_roots:
+for top in ([] if changed_only else ['scripts','research-log/docs/release'])+extra_roots:
     p=Path(top)
     if p.is_absolute():
         p=p.resolve().relative_to(ROOT)

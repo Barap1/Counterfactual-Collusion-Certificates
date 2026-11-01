@@ -6,7 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 REAL = Path('docs/runner/exp001-live')
 ANALYSIS = Path('docs/analysis/exp001_dev')
 FIXTURE = Path('docs/gate_a/v1.2/correction_v1.2.2/gate_a_results.json.gz')

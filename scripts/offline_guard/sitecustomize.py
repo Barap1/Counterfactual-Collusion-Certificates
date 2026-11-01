@@ -14,7 +14,7 @@ def guard(event,args):
             raise PermissionError('release: credentials forbidden')
         if p.is_relative_to(ROOT):
             rel=p.relative_to(ROOT).as_posix()
-            if rel.startswith(('docs/runner/exp002','runs/exp002')) or rel=='ops/budget_ledger.jsonl':
+            if rel.startswith(('docs/runner/exp002','runs/exp002')) or rel in ('ops/budget_ledger.jsonl', 'research-log/ops/budget_ledger.jsonl'):
                 raise PermissionError('release: held-out access forbidden')
     if event=='subprocess.Popen' and any('ollama' in str(x).lower() for x in args[:2]):
         raise PermissionError('release: inference server forbidden')

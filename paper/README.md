@@ -10,4 +10,4 @@ Earlier `draft.md`, `v2/draft_v2.md`, outlines, build scripts and historical rev
 
 ## Final PDF
 
-The owner-provided submission is at **[`paper/paper.pdf`](paper.pdf)** and is linked from the root README. The PDF is preserved byte-for-byte; adding it did not regenerate the manuscript or change frozen research results. Source and verification details are in [`ops/reports/PAPER-PDF-RELEASE.md`](../ops/reports/PAPER-PDF-RELEASE.md).
+The owner-provided submission is at **[`paper/paper.pdf`](paper.pdf)** and is linked from the root README. The PDF is preserved byte-for-byte; adding it did not regenerate the manuscript or change frozen research results. Source and verification details are in [`ops/reports/PAPER-PDF-RELEASE.md`](../research-log/ops/reports/PAPER-PDF-RELEASE.md).

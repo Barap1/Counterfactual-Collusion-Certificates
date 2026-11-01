@@ -15,7 +15,7 @@ def release_guard(event, args):
         p = Path(os.fsdecode(args[0])).absolute()
         if p.is_relative_to(ROOT):
             rel = p.relative_to(ROOT).as_posix()
-            if rel.startswith(('docs/runner/exp002', 'runs/exp002')) or rel == 'ops/budget_ledger.jsonl':
+            if rel.startswith(('docs/runner/exp002', 'runs/exp002')) or rel in ('ops/budget_ledger.jsonl', 'research-log/ops/budget_ledger.jsonl'):
                 raise PermissionError('held-out access forbidden')
 sys.addaudithook(release_guard)
 from ccc.analysis.pipeline import run
@@ -27,8 +27,8 @@ def digest(p):
 
 def main_driver():
     out = Path(sys.argv[1]).resolve()
-    source = ROOT/'docs/release/exp001_dev_input'
-    expected = json.loads((ROOT/'docs/release/input_hashes.json').read_text())
+    source = ROOT/'research-log/docs/release/exp001_dev_input'
+    expected = json.loads((ROOT/'research-log/docs/release/input_hashes.json').read_text())
     for name, sha in expected.items():
         assert digest(source/name) == sha, 'DEV input hash mismatch: '+name
     run(source, out/'analysis')

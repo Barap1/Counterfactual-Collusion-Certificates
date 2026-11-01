@@ -24,11 +24,11 @@ def main():
     with tempfile.TemporaryDirectory(prefix="ccc-headline-") as directory:
         with tarfile.open(archive, "r:gz") as tar:
             tar.extractall(directory, filter="data")
-        result = subprocess.run([sys.executable, "-I", str(ROOT / "review/reproduce_headline/independent.py"),
+        result = subprocess.run([sys.executable, "-I", str(ROOT / "research-log/review/reproduce_headline/independent.py"),
                                  "--input", str(Path(directory) / "exp002-live")],
                                 check=True, text=True, capture_output=True)
         data = json.loads(result.stdout)
-        reference = json.loads((ROOT / "review/reproduce_headline/exp002_independent.json").read_text())
+        reference = json.loads((ROOT / "research-log/review/reproduce_headline/exp002_independent.json").read_text())
         for field in ("Delta", "sign_flip", "pairs"):
             if data[field] != reference[field]:
                 raise SystemExit("Independent arithmetic differs: " + field)

@@ -1,8 +1,20 @@
-# Research and evidence guide
+# Documentation
 
-Start with the [project overview](../README.md), [verified results](RESULTS.md), [reproduction guide](REPRODUCING.md) and [limitations](LIMITATIONS.md). The latest manuscript source is indexed in [paper/README.md](../paper/README.md).
+Start with the [project README](../README.md). The documents below are written for readers; the scientific records they cite are listed after them.
+
+## Reader documents
+
+| Document | What it covers |
+| --- | --- |
+| [RESULTS.md](RESULTS.md) | Every reported number mapped to its frozen source field |
+| [LIMITATIONS.md](LIMITATIONS.md) | Scientific scope, reproduction limits and release status |
+| [REPRODUCING.md](REPRODUCING.md) | Commands for the dependency-free check, the explorer and the full suite |
+| [STUDIO_RESEARCH_PLAN.md](STUDIO_RESEARCH_PLAN.md) | A proposed continuation study (a proposal, not a conducted study) |
+| [assets/README.md](assets/README.md) | Sources and values for the README figures |
 
 ## Canonical scientific records
+
+These paths are fixed: frozen manifests, seed checks and hash-pinned code refer to them.
 
 | Record | Purpose |
 | --- | --- |
@@ -13,22 +25,21 @@ Start with the [project overview](../README.md), [verified results](RESULTS.md),
 | [`analysis/exp002_heldout_v3/`](analysis/exp002_heldout_v3/) | Corrected real-agent analysis |
 | [`stats/`](stats/) | Real-agent preregistration, freeze and deviations |
 | [`runner/archives/`](runner/archives/) | Archived real-agent experiment inputs and hash files |
+| [`research/sci002/`](research/sci002/) | Audit protocol (v1, v1.1, v1.2) and amendment |
 | [`enh/fix/`](enh/fix/) | Certificate mapping correction and review |
+| [`gate_a/`](gate_a/) | Development fixture validation (Gate A) |
 | [`../demo/data/TRACE.md`](../demo/data/TRACE.md) | Explorer data lineage |
-| [`assets/README.md`](assets/README.md) | Editable explanatory figures and sources |
 
-## Supporting history
+Earlier `analysis/exp002_heldout*` versions, development fixtures in `gate_a/` and `enh/bench/`, the interrupted serial `enh/r2/run/` and the stopped `enh/exp003/` are supporting provenance, not competing results. The completed prospective execution is `enh/r2/run_par/`. `inf/` holds the inference backend benchmark and `fix/` the fixture evidence.
 
-Research paths stay stable so archived hashes, generators and citations remain valid. Earlier `analysis/exp002_heldout*` versions, development fixtures in `gate_a/` and `enh/bench/`, the interrupted serial `enh/r2/run/`, and stopped `enh/exp003/` are supporting provenance. They are not competing final results. Completed prospective execution is `enh/r2/run_par/`.
+## Process records
 
-`eng/`, `inf/`, `review/`, `research/`, `spec/` and `../ops/` retain design, engineering, audit and coordination records. They include superseded plans and historical task status. Current release instructions are this guide and [REPRODUCING.md](REPRODUCING.md), not old agent restart prompts. `../viewer/` is a legacy viewer builder; the maintained reader entry is `../demo/explorer/index.html`.
-
-The [repository cleanup inventory](../ops/reports/repo_final/INVENTORY.md) records retained, archived and removed presentation material. Frozen outputs and negative findings remain in place.
+The decision log, claims register, task reports, independent reviews, specification modules and agent coordination files are in [`../research-log/`](../research-log/README.md). To resolve an old path such as `ops/DECISIONS.md`, prefix it with `research-log/`.
 
 ## Provenance and acknowledgments
 
-Colosseum/Terrarium, upstream checkpoint machinery and the prompted seed-1 pilot were inherited development infrastructure. CCC's protocol, replay layer, controls, runner, baselines, analysis, EXP-002 and prospective benchmark were developed during October 23–25, 2026. “Original study” means earlier than the later benchmark, not before the sprint. The pilot is development-only.
+Colosseum/Terrarium, the upstream checkpoint machinery and the prompted seed-1 pilot were inherited development infrastructure. CCC's protocol, replay layer, controls, runner, baselines, analysis, the real-agent study (EXP-002) and the prospective benchmark were developed during October 23 to 25, 2026. "Original study" means earlier than the later benchmark, not before the sprint. The pilot is development data only.
 
-Author: Aarav Patel, Georgia Institute of Technology. The research used substantial Claude/Codex assistance; this does not imply independent human verification. Prior work is credited in the [verified bibliography](../paper/v2/references_v2.bib) and [citation audit](../paper/v2/CITATION_AUDIT.md). PlaneFuse influenced visual presentation only and supplied no scientific content. New README diagrams are original editable SVGs.
+Author: Aarav Patel, Georgia Institute of Technology. Prior work is credited in the [verified bibliography](../paper/v2/references_v2.bib) and [citation audit](../paper/v2/CITATION_AUDIT.md). PlaneFuse influenced visual presentation only and supplied no scientific content. The README diagrams are original editable SVGs.
 
-Original CCC work is MIT licensed. [NOTICE](../NOTICE.md) and the [license inventory](release/LICENSES.md) retain distinct third-party terms and unresolved upstream rights. See [current release boundaries](LIMITATIONS.md#release-status).
+Original CCC work is MIT licensed. [NOTICE](../NOTICE.md) and the [license inventory](../research-log/docs/release/LICENSES.md) retain distinct third-party terms and unresolved upstream rights. See [release status](LIMITATIONS.md#release-status).

@@ -118,7 +118,7 @@ class IndependentTests(unittest.TestCase):
         self.assertEqual(i.exact_sign_flip([Fraction('0.1'), Fraction('0.2'), Fraction('0.3')])['numerator'], 1)
 
     def test_readiness_known_vector(self):
-        source = MODULE.parents[2] / 'docs/analysis/readiness/synthetic_input'
+        source = MODULE.parents[3] / 'docs/analysis/readiness/synthetic_input'
         out = i.reproduce(source)
         self.assertEqual(out['Delta'], Fraction(22, 7))
         self.assertEqual([p['d_w'] for p in out['pairs']],

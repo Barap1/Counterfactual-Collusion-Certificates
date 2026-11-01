@@ -8,9 +8,9 @@ import sys
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ('README.md', 'CCC_START_HERE.md', 'docs/README.md', 'docs/RESULTS.md',
+PAGES = ('README.md', 'docs/README.md', 'docs/RESULTS.md',
          'docs/REPRODUCING.md', 'docs/LIMITATIONS.md', 'docs/assets/README.md',
-         'docs/archive/README.md', 'paper/README.md', 'docs/release/CHECKLIST.md',
+         'paper/README.md', 'research-log/README.md',
          'demo/explorer/README.md', 'paper/final/FIGURE_EVIDENCE_MAP.md', 'NOTICE.md',
          'paper/final/manuscript.md', 'paper/final/CLAIMS_LEDGER.md')
 

@@ -315,7 +315,7 @@
     var rows = rc.map(function (r) {
       ['pass', 'fail', 'na'].forEach(function (k) { tot[k] += r.counts[k] || 0; });
       var extra = Object.keys(r.counts).filter(function (k) { return ['pass', 'fail', 'na'].indexOf(k) < 0; }).map(function (k) { return k + ' ' + r.counts[k]; });
-      return h('tr', null, h('td', null, h('code', null, r.check)), h('td', null, VMEAN[r.check] || 'Meaning not stated in the pack; see docs/spec/10_verification.md.'),
+      return h('tr', null, h('td', null, h('code', null, r.check)), h('td', null, VMEAN[r.check] || 'Meaning not stated in the pack; see research-log/docs/spec/10_verification.md.'),
         h('td', null, h('span', { class: 'pf p' }, 'pass ' + (r.counts.pass || 0)), h('span', { class: 'pf ' + (r.counts.fail ? 'f' : 'n') }, 'fail ' + (r.counts.fail || 0)), h('span', { class: 'pf n' }, 'na ' + (r.counts.na || 0)), extra.join(' ')));
     });
     var canon = c.validity.canonical_records || [];
@@ -807,7 +807,7 @@
     main.appendChild(disclosure('Public data, privacy, and redistribution scope', h('div', null,
       h('p', null, 'This site republishes the repository’s existing frozen research evidence: synthetic scenario identifiers, scripted messages, and recorded model outputs. It runs without inference, analytics, or network requests for its content. Explicit external links leave this local evidence companion. Theme preference is stored only in the browser.'),
       h('p', null, 'Prior repository reviews leave upstream scenario and trace redistribution rights unresolved. Publication authorization does not establish third-party licensing clearance. Source text and tool outputs are research artifacts; they should not be interpreted as statements by real participants.'),
-      h('p', null, sourceLink('NOTICE.md', 'Repository notices'), ' · ', sourceLink('docs/release/LICENSES.md', 'Existing license inventory'), ' · ', sourceLink('docs/release/CHECKLIST.md', 'Release limitations')))));
+      h('p', null, sourceLink('NOTICE.md', 'Repository notices'), ' · ', sourceLink('research-log/docs/release/LICENSES.md', 'Existing license inventory'), ' · ', sourceLink('research-log/docs/release/CHECKLIST.md', 'Release limitations')))));
     main.appendChild(h('h3', null, 'Design and offline use'));
     main.appendChild(h('p', null, 'Old Standard TT is embedded locally under the ', h('a', { href: 'fonts/OFL.txt' }, 'SIL Open Font License 1.1'), '. The warm paper and forest accents take inspiration from the ', h('a', { href: 'https://apartresearch.com/' }, 'Apart Research website'), '; this is an independent research companion, not an official Apart product.'));
     main.appendChild(h('p', null, 'To use offline, download the repository and open demo/explorer/index.html. Keep its adjacent assets and demo/data directory together. Hash routes work without a server.'));

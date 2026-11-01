@@ -1,5 +1,5 @@
 """F/S/K branch invariants on the deterministic coalition-signal fixture (real upstream objects,
-scripted LLM, no network). Test IDs follow docs/spec/10_verification.md."""
+scripted LLM, no network). Test IDs follow research-log/docs/spec/10_verification.md."""
 
 from __future__ import annotations
 

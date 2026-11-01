@@ -17,8 +17,8 @@ The standard-library headline check works from public files without network or i
 
 ## Release status
 
-The repository was already public before this overhaul. Original CCC code/documentation are [MIT](../LICENSE); bundled Old Standard TT fonts are [OFL 1.1](../paper/v2/fonts/OFL.txt). These terms do not confer rights in Colosseum/poseidon/CoLLAB adaptations, scenarios or traces. Upstream redistribution permissions remain unverified. The [third-party notice](../NOTICE.md) and [license inventory](release/LICENSES.md) explain the boundary. No upstream starter, model weights or environment is newly bundled here.
+The repository was already public before this overhaul. Original CCC code/documentation are [MIT](../LICENSE); bundled Old Standard TT fonts are [OFL 1.1](../paper/v2/fonts/OFL.txt). These terms do not confer rights in Colosseum/poseidon/CoLLAB adaptations, scenarios or traces. Upstream redistribution permissions remain unverified. The [third-party notice](../NOTICE.md) and [license inventory](../research-log/docs/release/LICENSES.md) explain the boundary. No upstream starter, model weights or environment is newly bundled here.
 
 Earlier audits found potentially private owner-document references in existing public history. Current-tree checks and removal of redundant presentation exports do not erase prior commits or revoke access to external documents. Document access/revocation and upstream permission determinations remain owner actions. This overhaul does not rewrite public history, edit the live Google Doc or assert legal clearance.
 
-No final paper PDF is included. The owner will supply it separately; see [paper/README.md](../paper/README.md).
+The final paper PDF is the owner-provided export at [paper/paper.pdf](../paper/paper.pdf), added unchanged; see [paper/README.md](../paper/README.md).

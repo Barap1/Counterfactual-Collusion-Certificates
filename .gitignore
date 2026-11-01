@@ -10,7 +10,8 @@ starter/collusion_hackathon/
 ops/environment.local.json
 ops/resource_policy.local.json
 .claude/settings.local.json
-# raw pilot / experiment traces stay local until a sanitized release (hash manifest is tracked in ops/)
+research-log/.claude/settings.local.json
+# raw pilot / experiment traces stay local until a sanitized release (hash manifest is tracked in research-log/ops/)
 results/baselines/
 results/raw/
 # models, envs, caches, OS noise
@@ -27,7 +28,7 @@ runs/
 docs/gate_a/gate_a_results.json
 docs/runner/exp001-*/
 docs/runner/exp002-*/
-viewer/index.html
+research-log/viewer/index.html
 docs/runner/exp00*-live.log
 docs/runner/exp00*-live.watchdog.log
 docs/enh/bench/*/cache/
@@ -39,16 +40,16 @@ paper/v2/build/.submission_v2.pdf.tmp
 
 # Local presentation previews and worker logs (scientific records stay tracked).
 .playwright-mcp/
-ops/reports/codex_runs/*.log
-ops/reports/codex_runs/*.pid
-ops/reports/codex_runs/*.stdout
-ops/reports/codex_runs/*.stderr
-ops/reports/codex_runs/gate1_failed/
-ops/reports/final_audit/FINAL_COMMIT.json
+research-log/ops/reports/codex_runs/*.log
+research-log/ops/reports/codex_runs/*.pid
+research-log/ops/reports/codex_runs/*.stdout
+research-log/ops/reports/codex_runs/*.stderr
+research-log/ops/reports/codex_runs/gate1_failed/
+research-log/ops/reports/final_audit/FINAL_COMMIT.json
 paper/build/
 paper/v2/build/
 paper/final/qa/
 paper/final/submission.pdf
 paper/final/submission.docx
 # Machine-local test XML includes generated fixture identifiers/host metadata.
-ops/reports/repo_final/*.xml
+research-log/ops/reports/repo_final/*.xml

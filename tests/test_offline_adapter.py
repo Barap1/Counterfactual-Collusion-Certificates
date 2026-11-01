@@ -14,7 +14,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 PILOT = REPO / "results" / "baselines" / "colosseum_positive_control_seed1" / "20261023-111625"
-MANIFEST = REPO / "ops" / "pilot_manifest.sha256"
+MANIFEST = REPO / "research-log" / "ops" / "pilot_manifest.sha256"
 
 _real_connect = socket.socket.connect
 _attempts: list = []

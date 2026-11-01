@@ -4,7 +4,7 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 const assert = require('node:assert/strict');
 const base = process.argv[2] || 'http://127.0.0.1:8765/explorer/';
-const output = path.resolve(process.argv[3] || 'ops/reports/explorer_redesign/browser');
+const output = path.resolve(process.argv[3] || 'research-log/ops/reports/explorer_redesign/browser');
 if (!/^https?:/.test(base)) throw new Error('This QA runner accepts HTTP(S) previews only.');
 (async () => {
  await fs.mkdir(output,{recursive:true});

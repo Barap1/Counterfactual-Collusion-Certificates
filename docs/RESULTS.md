@@ -36,7 +36,7 @@ In `effects_study.json`, row `Delta_total`:
 
 Sixteen worlds produced 143 valid executed continuations and 56 scheduled but unexecuted placebo continuations; no executed continuation was invalid. `checkpoint_certificates.json` records 0 supported, 11 not supported and 5 inconclusive exploratory case-level certificates. Prompt regimes are not verified ground truth for realized collusion. A nonsignificant result does not establish a null effect.
 
-The independent standard-library reduction prints `1.354325711018899`; its difference from the frozen NumPy estimate is about 10⁻¹⁵ from arithmetic order. The [independent bootstrap receipt](../ops/reports/final_audit/tests/independent_bootstrap.json) verifies the frozen interval. The primary quickstart does not recompute it.
+The independent standard-library reduction prints `1.354325711018899`; its difference from the frozen NumPy estimate is about 10⁻¹⁵ from arithmetic order. The [independent bootstrap receipt](../research-log/ops/reports/final_audit/tests/independent_bootstrap.json) verifies the frozen interval. The primary quickstart does not recompute it.
 
 ## Corrections and current terminology
 
