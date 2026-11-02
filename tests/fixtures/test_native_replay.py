@@ -45,7 +45,7 @@ class NativeReplayBridge(unittest.TestCase):
                         self.assertNotIn(marker,text)
 
     def test_native_verbatim_resend_is_valid_and_flagged_but_masked_rerender_is_invalid(self):
-        # Decided V07 behaviour (ops/reports/ENG-003.md): a new post-fork sender
+        # Decided V07 behaviour (research-log/ops/reports/ENG-003.md): a new post-fork sender
         # resend passes K and is flagged as a carrier; a re-render of the masked
         # original event in the receiver's view is a leak and invalidates K.
         from ccc.replay.engine import run_branch, scripted_factory
