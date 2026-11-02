@@ -1,100 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-labelledby="t d">
-  <title id="t">CCC: Counterfactual Collusion Certificates</title>
-  <desc id="d">Project banner. Left: logo, title and tagline. Right: two constructed teams, one permitted and one prohibited, show the same outsider reward at evidence levels I0 to I3 (14, 19, 14, 19). At I4 a cost probe separates them: 29 for the permitted team and 14 for the prohibited team.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0a1424"/>
-      <stop offset="1" stop-color="#10263c"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0.78" cy="0.45" r="0.55">
-      <stop offset="0" stop-color="#1f5f8b" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#1f5f8b" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#2a4a6b" opacity="0.55"/>
-    </pattern>
-    <clipPath id="card"><rect x="0" y="0" width="1280" height="440" rx="26"/></clipPath>
-  </defs>
-
-  <g clip-path="url(#card)">
-    <rect width="1280" height="440" fill="url(#bg)"/>
-    <rect width="1280" height="440" fill="url(#dots)"/>
-    <rect width="1280" height="440" fill="url(#glow)"/>
-  </g>
-  <rect x="0.75" y="0.75" width="1278.5" height="438.5" rx="26" fill="none" stroke="#24486b" stroke-width="1.5"/>
-
-  <!-- Logo: a hexagon holding a two-agent coalition and one outsider -->
-  <g transform="translate(64 58)">
-    <path d="M44 0 L88 25 L88 75 L44 100 L0 75 L0 25 Z" fill="#0f2a44" stroke="#38bdf8" stroke-width="4" stroke-linejoin="round"/>
-    <line x1="28" y1="38" x2="56" y2="38" stroke="#7dd3fc" stroke-width="5" stroke-linecap="round"/>
-    <circle cx="26" cy="38" r="10" fill="#38bdf8"/>
-    <circle cx="60" cy="38" r="10" fill="#38bdf8"/>
-    <line x1="43" y1="46" x2="43" y2="62" stroke="#94a3b8" stroke-width="3" stroke-dasharray="4 4" stroke-linecap="round"/>
-    <circle cx="43" cy="72" r="9" fill="none" stroke="#fbbf24" stroke-width="4"/>
-  </g>
-
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <text x="172" y="104" fill="#f1f5f9" font-size="64" font-weight="800" letter-spacing="10">CCC</text>
-    <text x="174" y="136" fill="#7dd3fc" font-size="15" font-weight="700" letter-spacing="1.8">COUNTERFACTUAL COLLUSION CERTIFICATES</text>
-
-    <text x="64" y="214" fill="#e2e8f0" font-size="27" font-weight="600">When cooperation looks like collusion.</text>
-    <text x="64" y="252" fill="#cbd5e1" font-size="21">Auditing multi-agent AI with controlled replay,</text>
-    <text x="64" y="282" fill="#cbd5e1" font-size="21">twin worlds and exact tests.</text>
-  </g>
-
-  <!-- Chips -->
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" letter-spacing="1.2" fill="#bae6fd">
-    <rect x="64" y="322" width="232" height="34" rx="17" fill="#0f2a44" stroke="#2f6a96"/>
-    <text x="180" y="344" text-anchor="middle">COUNTERFACTUAL REPLAY</text>
-    <rect x="306" y="322" width="140" height="34" rx="17" fill="#0f2a44" stroke="#2f6a96"/>
-    <text x="376" y="344" text-anchor="middle">TWIN WORLDS</text>
-    <rect x="456" y="322" width="140" height="34" rx="17" fill="#0f2a44" stroke="#2f6a96"/>
-    <text x="526" y="344" text-anchor="middle">EXACT TESTS</text>
-    <rect x="64" y="366" width="170" height="34" rx="17" fill="#0f2a44" stroke="#2f6a96"/>
-    <text x="149" y="388" text-anchor="middle">PREREGISTERED</text>
-    <rect x="244" y="366" width="214" height="34" rx="17" fill="#0f2a44" stroke="#2f6a96"/>
-    <text x="351" y="388" text-anchor="middle">HASH-PINNED RECORDS</text>
-  </g>
-
-  <!-- Evidence panel -->
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <rect x="652" y="44" width="580" height="352" rx="20" fill="#0c1d31" fill-opacity="0.85" stroke="#24486b" stroke-width="1.5"/>
-    <text x="680" y="82" fill="#94a3b8" font-size="15" font-weight="700" letter-spacing="2">OUTSIDER REWARD BY EVIDENCE LEVEL</text>
-
-    <!-- bracket over I0-I3 -->
-    <path d="M818 118 V108 H1102 V118" fill="none" stroke="#38bdf8" stroke-width="2"/>
-    <text x="960" y="100" fill="#7dd3fc" font-size="15" font-weight="600" text-anchor="middle">identical evidence</text>
-    <path d="M1124 118 V108 H1198 V118" fill="none" stroke="#fbbf24" stroke-width="2"/>
-    <text x="1161" y="100" fill="#fcd34d" font-size="15" font-weight="600" text-anchor="middle">cost probe</text>
-
-    <!-- column headings -->
-    <g fill="#cbd5e1" font-size="17" font-weight="700" text-anchor="middle">
-      <text x="848" y="146">I0</text><text x="924" y="146">I1</text><text x="1000" y="146">I2</text><text x="1076" y="146">I3</text><text x="1161" y="146">I4</text>
-    </g>
-
-    <!-- row A -->
-    <text x="680" y="190" fill="#f1f5f9" font-size="19" font-weight="700">Team A</text>
-    <text x="680" y="212" fill="#86efac" font-size="14" font-weight="600">permitted</text>
-    <g font-size="20" font-weight="700" text-anchor="middle">
-      <rect x="818" y="164" width="60" height="54" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="848" y="198" fill="#e0f2fe">14</text>
-      <rect x="894" y="164" width="60" height="54" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="924" y="198" fill="#e0f2fe">19</text>
-      <rect x="970" y="164" width="60" height="54" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="1000" y="198" fill="#e0f2fe">14</text>
-      <rect x="1046" y="164" width="60" height="54" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="1076" y="198" fill="#e0f2fe">19</text>
-      <rect x="1131" y="164" width="60" height="54" rx="10" fill="#14532d" stroke="#4ade80" stroke-width="2"/><text x="1161" y="198" fill="#dcfce7">29</text>
-    </g>
-
-    <!-- row B -->
-    <text x="680" y="276" fill="#f1f5f9" font-size="19" font-weight="700">Team B</text>
-    <text x="680" y="298" fill="#fca5a5" font-size="14" font-weight="600">prohibited</text>
-    <g font-size="20" font-weight="700" text-anchor="middle">
-      <rect x="818" y="250" width="60" height="54" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="848" y="284" fill="#e0f2fe">14</text>
-      <rect x="894" y="250" width="60" height="54" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="924" y="284" fill="#e0f2fe">19</text>
-      <rect x="970" y="250" width="60" height="54" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="1000" y="284" fill="#e0f2fe">14</text>
-      <rect x="1046" y="250" width="60" height="54" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="1076" y="284" fill="#e0f2fe">19</text>
-      <rect x="1131" y="250" width="60" height="54" rx="10" fill="#451a03" stroke="#fbbf24" stroke-width="2"/><text x="1161" y="284" fill="#fef3c7">14</text>
-    </g>
-
-    <text x="680" y="346" fill="#94a3b8" font-size="15">Factual, knockout, controls and joint removal look the same.</text>
-    <text x="680" y="370" fill="#94a3b8" font-size="15">Only the probe shows which policy is running.</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="1280" height="360" role="img" aria-labelledby="t d">
+  <title id="t">CCC: When Cooperation Looks Like Collusion</title>
+  <desc id="d">Banner: When Cooperation Looks Like Collusion, the limits of counterfactual auditing in multi-agent AI, by Aarav Patel, Georgia Institute of Technology. A small chart shows the outsider reward for two constructed teams across evidence levels I0 to I3 (14, 19, 14, 19), identical for both, then at I4 a cost probe splits them: 29 for the permitted team and 14 for the prohibited team.</desc>
+  <style>@font-face{font-family:'CCC Serif';font-weight:400;font-style:normal;src:url(data:font/woff2;base64,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) format('woff2');}@font-face{font-family:'CCC Serif';font-weight:400;font-style:italic;src:url(data:font/woff2;base64,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) format('woff2');}</style>
+  <rect x="0.75" y="0.75" width="1278.5" height="358.5" rx="16" fill="#f8f5f1" stroke="#e3dfda" stroke-width="1.5"/>
+  <text x="64" y="76" fill="#194b37" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2.4">COUNTERFACTUAL COLLUSION CERTIFICATES</text>
+  <text x="62" y="146" fill="#193025" font-family="'CCC Serif', 'Old Standard TT', Georgia, serif" font-size="54">When Cooperation Looks</text>
+  <text x="62" y="206" fill="#193025" font-family="'CCC Serif', 'Old Standard TT', Georgia, serif" font-size="54">Like Collusion</text>
+  <text x="64" y="252" fill="#65635b" font-family="'CCC Serif', 'Old Standard TT', Georgia, serif" font-style="italic" font-size="25">The limits of counterfactual auditing in multi-agent AI</text>
+  <line x1="64" y1="282" x2="160" y2="282" stroke="#194b37" stroke-width="2"/>
+  <text x="64" y="316" fill="#65635b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16">Aarav Patel  ·  Georgia Institute of Technology</text>
+  <line x1="800" y1="56" x2="800" y2="304" stroke="#d5dbd6" stroke-width="1.5"/>
+  <text x="840" y="76" fill="#65635b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.8">OUTSIDER REWARD</text>
+    <path d="M850 221.2 L916 190.2 L982 221.2 L1048 190.2" fill="none" stroke="#193025" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="850" cy="221.2" r="5" fill="#193025"/>
+    <circle cx="916" cy="190.2" r="5" fill="#193025"/>
+    <circle cx="982" cy="221.2" r="5" fill="#193025"/>
+    <circle cx="1048" cy="190.2" r="5" fill="#193025"/>
+    <path d="M1048 190.2 L1114 128.2" fill="none" stroke="#194b37" stroke-width="2.5"/>
+    <circle cx="1114" cy="128.2" r="6" fill="#f8f5f1" stroke="#194b37" stroke-width="2.5"/>
+    <text x="1128" y="134" fill="#194b37" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600">29 permitted</text>
+    <path d="M1048 190.2 L1114 221.2" fill="none" stroke="#85543b" stroke-width="2.5" stroke-dasharray="7 5"/>
+    <circle cx="1114" cy="221.2" r="6" fill="#f8f5f1" stroke="#85543b" stroke-width="2.5"/>
+    <text x="1128" y="227" fill="#85543b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600">14 prohibited</text>
+    <line x1="836" y1="258" x2="1128" y2="258" stroke="#d5dbd6" stroke-width="1.5"/>
+    <text x="850" y="278" fill="#65635b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle">I0</text>
+    <text x="916" y="278" fill="#65635b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle">I1</text>
+    <text x="982" y="278" fill="#65635b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle">I2</text>
+    <text x="1048" y="278" fill="#65635b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle">I3</text>
+    <text x="1114" y="278" fill="#65635b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle">I4</text>
+    <text x="949.0" y="306" fill="#65635b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" text-anchor="middle">same evidence for both teams</text>
+    <text x="1114" y="306" fill="#65635b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" text-anchor="middle">cost probe</text>
 </svg>

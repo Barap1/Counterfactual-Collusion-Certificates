@@ -1,27 +1,31 @@
 <p align="center">
   <picture>
     <source media="(max-width: 700px)" srcset="docs/assets/banner.mobile.svg">
-    <img src="docs/assets/banner.svg" width="100%" alt="CCC: Counterfactual Collusion Certificates. When cooperation looks like collusion: auditing multi-agent AI with controlled replay, twin worlds and exact tests. Two constructed teams, one permitted and one prohibited, show the same outsider reward at evidence levels I0 to I3; at I4 a cost probe separates them, 29 versus 14.">
+    <img src="docs/assets/banner.svg" width="100%" alt="When Cooperation Looks Like Collusion: the limits of counterfactual auditing in multi-agent AI. Aarav Patel, Georgia Institute of Technology. A small chart shows two constructed teams with the same outsider reward at evidence levels I0 to I3; at I4 a cost probe splits them, 29 for the permitted team and 14 for the prohibited team.">
   </picture>
 </p>
 
 <p align="center">
-  <a href="paper/paper.pdf"><img alt="paper: PDF" src="https://img.shields.io/badge/paper-PDF-b31b1b"></a>
-  <a href="docs/MATH.md"><img alt="math: proofs and derivations" src="https://img.shields.io/badge/math-proofs%20%26%20derivations-0f766e"></a>
-  <a href="docs/REPRODUCING.md"><img alt="Python 3.12+, standard library reproduction" src="https://img.shields.io/badge/python-3.12%2B%20%C2%B7%20stdlib%20reproduction-3776AB?logo=python&amp;logoColor=white"></a>
-  <a href="LICENSE"><img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-64748b"></a>
+  <a href="docs/REPRODUCING.md"><img alt="python 3.12+" src="docs/assets/badges/python.svg"></a>
+  <a href="ccc/analysis/"><img alt="analysis: NumPy and SciPy" src="docs/assets/badges/analysis.svg"></a>
+  <a href="ccc/runner/live.py"><img alt="local inference: Ollama with gemma4:26b" src="docs/assets/badges/inference.svg"></a>
+  <a href="NOTICE.md"><img alt="environment: Colosseum and Terrarium" src="docs/assets/badges/environment.svg"></a>
+  <a href="docs/enh/r2/PARALLEL_EXECUTION.md"><img alt="benchmark compute: Modal on Linux" src="docs/assets/badges/compute.svg"></a>
+  <a href="demo/explorer/"><img alt="explorer: vanilla JavaScript, offline" src="docs/assets/badges/explorer.svg"></a>
+  <a href="LICENSE"><img alt="license: MIT" src="docs/assets/badges/license.svg"></a>
 </p>
 
 <p align="center">
+  <a href="paper/paper.pdf"><b>Paper (PDF)</b></a> ·
+  <a href="docs/MATH.md">Math</a> ·
   <a href="#the-problem">The problem</a> ·
-  <a href="#the-mathematics-in-brief">Math</a> ·
   <a href="#how-it-is-built">How it is built</a> ·
   <a href="#what-the-experiments-showed">Results</a> ·
   <a href="#how-the-work-was-done">Process</a> ·
   <a href="#run-it-yourself">Run it</a>
 </p>
 
-**When Cooperation Looks Like Collusion: The Limits of Counterfactual Auditing in Multi-Agent AI** · Aarav Patel, Georgia Institute of Technology · Apart Research AI Collusion Research Sprint, October 2026
+Built by Aarav Patel during Apart Research's AI Collusion Research Sprint, October 2026.
 
 ## The problem
 

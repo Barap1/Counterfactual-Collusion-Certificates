@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="165" height="24" viewBox="0 0 165.4 24" role="img" aria-label="explorer: vanilla JS, offline">
+  <title>explorer: vanilla JS, offline</title>
+  <clipPath id="r"><rect width="165.4" height="24" rx="4"/></clipPath>
+  <g clip-path="url(#r)"><rect width="59.4" height="24" fill="#193025"/><rect x="59.4" width="106.0" height="24" fill="#194b37"/></g>
+  <g font-family="Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12">
+    <text x="8" y="16.3" fill="#e9eee7" textLength="43.4" lengthAdjust="spacingAndGlyphs">explorer</text>
+    <text x="67.4" y="16.3" fill="#ffffff" textLength="90.0" lengthAdjust="spacingAndGlyphs">vanilla JS, offline</text>
+  </g>
+</svg>
