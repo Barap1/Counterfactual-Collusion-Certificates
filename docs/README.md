@@ -7,11 +7,13 @@ Start with the [project README](../README.md). The documents below are written f
 | Document | What it covers |
 | --- | --- |
 | [MATH.md](MATH.md) | Formal setting, estimands, both propositions with proofs, the exact sign-flip test, the bootstrap, and the utility criterion, each tied to code and a test |
+| [ENGINEERING.md](ENGINEERING.md) | Architecture, data flow, design decisions and the correctness strategy |
 | [RESULTS.md](RESULTS.md) | Every reported number mapped to its frozen source field |
 | [LIMITATIONS.md](LIMITATIONS.md) | Scientific scope, reproduction limits and release status |
 | [REPRODUCING.md](REPRODUCING.md) | Commands for the dependency-free check, the explorer and the full suite |
 | [STUDIO_RESEARCH_PLAN.md](STUDIO_RESEARCH_PLAN.md) | A proposed continuation study (a proposal, not a conducted study) |
 | [assets/README.md](assets/README.md) | Sources and values for the README figures |
+| [../ccc/README.md](../ccc/README.md) | Package layout and what each module computes |
 
 ## Canonical scientific records
 

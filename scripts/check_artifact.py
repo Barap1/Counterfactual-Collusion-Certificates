@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = ('README.md', 'docs/README.md', 'docs/RESULTS.md',
          'docs/REPRODUCING.md', 'docs/LIMITATIONS.md', 'docs/assets/README.md',
-         'docs/MATH.md', 'paper/README.md', 'research-log/README.md',
+         'docs/MATH.md', 'docs/ENGINEERING.md', 'ccc/README.md', 'paper/README.md', 'research-log/README.md',
          'demo/explorer/README.md', 'paper/final/FIGURE_EVIDENCE_MAP.md', 'NOTICE.md',
          'paper/final/manuscript.md', 'paper/final/CLAIMS_LEDGER.md')
 
