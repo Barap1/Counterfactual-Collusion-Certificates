@@ -8,6 +8,7 @@ Start with the [project README](../README.md). The documents below are written f
 | --- | --- |
 | [MATH.md](MATH.md) | Formal setting, estimands, both propositions with proofs, the exact sign-flip test, the bootstrap, and the utility criterion, each tied to code and a test |
 | [ENGINEERING.md](ENGINEERING.md) | Architecture, data flow, design decisions and the correctness strategy |
+| [RESEARCH_PROCESS.md](RESEARCH_PROCESS.md) | Threat model, claim ladder, preregistration, freezes, corrections and negative results |
 | [RESULTS.md](RESULTS.md) | Every reported number mapped to its frozen source field |
 | [LIMITATIONS.md](LIMITATIONS.md) | Scientific scope, reproduction limits and release status |
 | [REPRODUCING.md](REPRODUCING.md) | Commands for the dependency-free check, the explorer and the full suite |
