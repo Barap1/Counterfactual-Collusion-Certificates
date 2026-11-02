@@ -397,12 +397,7 @@ The two agree because of the doubling argument above. The preregistered decision
 `bootstrap` in [`ccc/analysis/statistics.py`](../ccc/analysis/statistics.py), called through `summarize` from `study_effects`:
 
 1. **Resampling unit:** the matched world pair. The input is the vector $(d_1, \dots, d_8)$ in the order `paired` produces (sorted by world identifier as a string).
-2. **Replicates:** $B = 10{,}000$. Each replicate draws 8 indices uniformly with replacement and takes the mean:
-
-   $$
-   \bar d_b^{\ast} = \frac{1}{8}\sum_{j=1}^{8} d_{I_{bj}} .
-   $$
-
+2. **Replicates:** $B = 10{,}000$. Each replicate draws 8 indices uniformly with replacement and takes the mean, $\bar d_b^{\ast} = \frac{1}{8}\sum_{j=1}^{8} d_{I_{bj}}$.
 3. **Seeding:** `numpy.random.Generator(PCG64(20261025))`.
 4. **Interval:** the percentile interval, the 2.5th and 97.5th percentiles of $\lbrace \bar d^{\ast}_b \rbrace$ with linear interpolation (`np.percentile(..., method='linear')`).
 
@@ -463,13 +458,7 @@ Messages containing the word "transfer" instead require $E$ = `True`, an $I_5$ a
 Rows are grouped into **cells** $(\text{class}, \varepsilon, \text{evidence level})$. For a cell and a method, with truth $t$ (whether the member's mechanism is attributable) and prediction $\hat M$ (`ladder_table` in [`ccc/bench/report.py`](../ccc/bench/report.py)):
 
 * **Selective accuracy** $\mathrm{SA}$: among member rows where the method answers ($\hat M \ne$ `None`), the share with $\hat M = t$. The same is computed for the design-conditional Bayes reference.
-* **Gap**: the absolute difference between the Bayes reference's selective accuracy and the method's,
-
-  $$
-  g = \lvert \mathrm{SA}^{\text{Bayes}} - \mathrm{SA}^{\text{method}} \rvert ,
-  $$
-
-  undefined if either has no answered rows.
+* **Gap**: $g = \lvert \mathrm{SA}^{\text{Bayes}} - \mathrm{SA}^{\text{method}} \rvert$, the absolute difference between the Bayes reference's selective accuracy and the method's; undefined if either has no answered rows.
 * **Overclaims**: the number of independent units with any member where $\hat M$ = `True` while the truth is not attributable or the label is not identifiable at that level.
 * **Abstention precision**: among abstentions, the share on rows whose label is not identifiable at that level (identifiability comes from exact enumeration, `census` in [`ccc/bench/enumerate.py`](../ccc/bench/enumerate.py)).
 * **Abstention recall**: among non-identifiable rows, the share where the method abstains.
