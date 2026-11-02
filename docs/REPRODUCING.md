@@ -8,12 +8,13 @@ Use Python 3.12+ from the repository root:
 python3 scripts/reproduce_headline.py
 python3 -m unittest discover -s research-log/review/reproduce_headline/tests -v
 python3 -m unittest tests.test_demo_data -v
+python3 -m unittest tests.test_math_derivations -v
 python3 scripts/check_artifact.py
 ```
 
 The headline script verifies SHA-256 `83bf451dad54c773afbc3e775acc13e08bd97fbe92dee4d1a21307cc60625831` before safe extraction to a temporary directory. It recomputes eight pair contrasts and the exact 18/256 sign-flip p-value from recorded rewards. Expected estimate: `1.354325711018899`; exact p: `0.0703125`. Its independent implementation is [`research-log/review/reproduce_headline/independent.py`](../research-log/review/reproduce_headline/independent.py). No runner or inference transport is invoked.
 
-The independent arithmetic tests check corrupted inputs, rewards and attempt accounting. Eight explorer tests verify frozen estimates/certificates, case coverage, transcript samples and complete data-pack hashes. `check_artifact.py` checks public navigation and SVG structure. CI runs these public-file checks with read-only repository permissions. They are not the complete implementation suite.
+The independent arithmetic tests check corrupted inputs, rewards and attempt accounting. Eight explorer tests verify frozen estimates/certificates, case coverage, transcript samples and complete data-pack hashes. The derivation tests recheck every closed-form value in [MATH.md](MATH.md) from frozen records, read-only. `check_artifact.py` checks public navigation and SVG structure. CI runs these public-file checks with read-only repository permissions. They are not the complete implementation suite.
 
 The quickstart does not recompute the world-cluster bootstrap interval. Its [independent verification receipt](../research-log/ops/reports/final_audit/tests/independent_bootstrap.json) and [verifier source](../research-log/ops/reports/final_audit/verify_bootstrap.py) are retained; numerical execution requires NumPy.
 
