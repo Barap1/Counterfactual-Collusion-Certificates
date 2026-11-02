@@ -24,3 +24,7 @@ Deterministic allocation pair, seed **19693329**. Message: “Please allocate th
 Exact values: [`paper/v2/figures/fig_twins_audit.json`](../../paper/v2/figures/fig_twins_audit.json), `plotted_values.members`. Original exhibit: [`figures/enh/prospective/fig_twins.json`](../../figures/enh/prospective/fig_twins.json). Broader lineage: [`paper/final/figures/provenance.json`](../../paper/final/figures/provenance.json). Implementation: [`ccc/bench/`](../../ccc/bench/). Explorer exhibit: [`demo/data/twins.json`](../../demo/data/twins.json).
 
 Labels describe generator-defined policies across contexts, not independently adjudicated initial actions or real-agent intent. All displayed rewards are mean outsider task reward. The diagrams show factual probe responses; probe-knockout values remain in the source. The example separates these specified policies, not arbitrary legitimate alternatives.
+
+## Header banner
+
+`banner.svg` (wide) and `banner.mobile.svg` (narrow) are hand-written SVGs used at the top of the root README. The outsider rewards they show (14, 19, 14, 19, then 29 versus 14 at I4) are the allocation-twin values for seed 19693329, derived in [MATH.md section 4](../MATH.md#4-proposition-2-separation-by-the-cost-probe) and checked by `tests/test_math_derivations.py`.

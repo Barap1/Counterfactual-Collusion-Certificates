@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 820" width="720" height="820" role="img" aria-labelledby="t d">
+  <title id="t">CCC: Counterfactual Collusion Certificates</title>
+  <desc id="d">Project banner, narrow layout. Logo, title and tagline, then two constructed teams, one permitted and one prohibited, showing the same outsider reward at evidence levels I0 to I3 (14, 19, 14, 19). At I4 a cost probe separates them: 29 for the permitted team and 14 for the prohibited team.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1424"/>
+      <stop offset="1" stop-color="#10263c"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#2a4a6b" opacity="0.55"/>
+    </pattern>
+    <clipPath id="card"><rect x="0" y="0" width="720" height="820" rx="26"/></clipPath>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="720" height="820" fill="url(#bg)"/>
+    <rect width="720" height="820" fill="url(#dots)"/>
+  </g>
+  <rect x="0.75" y="0.75" width="718.5" height="818.5" rx="26" fill="none" stroke="#24486b" stroke-width="1.5"/>
+
+  <g transform="translate(48 48)">
+    <path d="M44 0 L88 25 L88 75 L44 100 L0 75 L0 25 Z" fill="#0f2a44" stroke="#38bdf8" stroke-width="4" stroke-linejoin="round"/>
+    <line x1="28" y1="38" x2="56" y2="38" stroke="#7dd3fc" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="26" cy="38" r="10" fill="#38bdf8"/>
+    <circle cx="60" cy="38" r="10" fill="#38bdf8"/>
+    <line x1="43" y1="46" x2="43" y2="62" stroke="#94a3b8" stroke-width="3" stroke-dasharray="4 4" stroke-linecap="round"/>
+    <circle cx="43" cy="72" r="9" fill="none" stroke="#fbbf24" stroke-width="4"/>
+  </g>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="158" y="104" fill="#f1f5f9" font-size="68" font-weight="800" letter-spacing="10">CCC</text>
+    <text x="160" y="136" fill="#7dd3fc" font-size="17" font-weight="700" letter-spacing="2.4">COUNTERFACTUAL COLLUSION</text>
+    <text x="160" y="158" fill="#7dd3fc" font-size="17" font-weight="700" letter-spacing="2.4">CERTIFICATES</text>
+    <text x="48" y="226" fill="#e2e8f0" font-size="32" font-weight="600">When cooperation looks</text>
+    <text x="48" y="266" fill="#e2e8f0" font-size="32" font-weight="600">like collusion.</text>
+    <text x="48" y="310" fill="#cbd5e1" font-size="24">Auditing multi-agent AI with controlled</text>
+    <text x="48" y="342" fill="#cbd5e1" font-size="24">replay, twin worlds and exact tests.</text>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.2" fill="#bae6fd">
+    <rect x="48" y="378" width="262" height="38" rx="19" fill="#0f2a44" stroke="#2f6a96"/>
+    <text x="179" y="403" text-anchor="middle">COUNTERFACTUAL REPLAY</text>
+    <rect x="322" y="378" width="158" height="38" rx="19" fill="#0f2a44" stroke="#2f6a96"/>
+    <text x="401" y="403" text-anchor="middle">TWIN WORLDS</text>
+    <rect x="492" y="378" width="158" height="38" rx="19" fill="#0f2a44" stroke="#2f6a96"/>
+    <text x="571" y="403" text-anchor="middle">EXACT TESTS</text>
+  </g>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <rect x="32" y="448" width="656" height="340" rx="20" fill="#0c1d31" fill-opacity="0.85" stroke="#24486b" stroke-width="1.5"/>
+    <text x="60" y="488" fill="#94a3b8" font-size="17" font-weight="700" letter-spacing="1.6">OUTSIDER REWARD BY EVIDENCE LEVEL</text>
+
+    <path d="M234 530 V520 H546 V530" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <text x="390" y="512" fill="#7dd3fc" font-size="17" font-weight="600" text-anchor="middle">identical evidence</text>
+    <path d="M566 530 V520 H648 V530" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <text x="607" y="512" fill="#fcd34d" font-size="17" font-weight="600" text-anchor="middle">probe</text>
+
+    <g fill="#cbd5e1" font-size="19" font-weight="700" text-anchor="middle">
+      <text x="267" y="558">I0</text><text x="349" y="558">I1</text><text x="431" y="558">I2</text><text x="513" y="558">I3</text><text x="607" y="558">I4</text>
+    </g>
+
+    <text x="60" y="604" fill="#f1f5f9" font-size="22" font-weight="700">Team A</text>
+    <text x="60" y="628" fill="#86efac" font-size="16" font-weight="600">permitted</text>
+    <g font-size="22" font-weight="700" text-anchor="middle">
+      <rect x="234" y="576" width="66" height="58" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="267" y="613" fill="#e0f2fe">14</text>
+      <rect x="316" y="576" width="66" height="58" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="349" y="613" fill="#e0f2fe">19</text>
+      <rect x="398" y="576" width="66" height="58" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="431" y="613" fill="#e0f2fe">14</text>
+      <rect x="480" y="576" width="66" height="58" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="513" y="613" fill="#e0f2fe">19</text>
+      <rect x="574" y="576" width="66" height="58" rx="10" fill="#14532d" stroke="#4ade80" stroke-width="2"/><text x="607" y="613" fill="#dcfce7">29</text>
+    </g>
+
+    <text x="60" y="690" fill="#f1f5f9" font-size="22" font-weight="700">Team B</text>
+    <text x="60" y="714" fill="#fca5a5" font-size="16" font-weight="600">prohibited</text>
+    <g font-size="22" font-weight="700" text-anchor="middle">
+      <rect x="234" y="662" width="66" height="58" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="267" y="699" fill="#e0f2fe">14</text>
+      <rect x="316" y="662" width="66" height="58" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="349" y="699" fill="#e0f2fe">19</text>
+      <rect x="398" y="662" width="66" height="58" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="431" y="699" fill="#e0f2fe">14</text>
+      <rect x="480" y="662" width="66" height="58" rx="10" fill="#12385a" stroke="#38bdf8" stroke-width="1.5"/><text x="513" y="699" fill="#e0f2fe">19</text>
+      <rect x="574" y="662" width="66" height="58" rx="10" fill="#451a03" stroke="#fbbf24" stroke-width="2"/><text x="607" y="699" fill="#fef3c7">14</text>
+    </g>
+
+    <text x="60" y="762" fill="#94a3b8" font-size="17">Same evidence through I3. Only the probe tells them apart.</text>
+  </g>
+</svg>
