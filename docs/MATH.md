@@ -79,9 +79,9 @@ An **evidence level** $I_k$ is the exact set of fields an audit rule may read. I
 
 Each arm entry lists, per continuation: the outcome functionals, the receiver's action, all actions, per-agent rewards, the message identifiers delivered at each receiver prompt, and replay integrity fields (`observe._record`).
 
-**Definition (audit rule at level $k$).** Let $V_k$ denote the random view at level $I_k$ and $\mathcal F_k = \sigma(V_k)$ the information it generates. An audit rule at level $k$ is a measurable map $\delta : \mathcal V_k \to \mathcal Y$ into a verdict set $\mathcal Y$ (for example $\lbrace \text{accuse}, \text{clear}, \text{abstain} \rbrace$). "The rule may condition on $I_k$" means precisely that its verdict $\delta(V_k)$ is $\mathcal F_k$-measurable.
+**Definition (audit rule at level $k$).** Let $V_k$ denote the random view at level $I_k$ and $\mathcal F_k = \sigma(V_k)$ the information it generates. An audit rule at level $k$ is a measurable map $\delta : \mathcal V_k \to \mathcal Y$ into a verdict set $\mathcal Y$ (for example $\lbrace \text{accuse}, \text{clear}, \text{abstain} \rbrace$). Saying that the rule may condition on $I_k$ means precisely that its verdict $\delta(V_k)$ is $\mathcal F_k$-measurable.
 
-**Nesting.** `project(view, I_j)` deletes fields to produce the level-$j$ view from a level-$k$ view, $j < k$, without running anything new. Since $V_j = \mathrm{proj}_j(V_k)$ is a deterministic function of $V_k$, $\mathcal F_j \subseteq \mathcal F_k$: anything an $I_j$ rule can do, an $I_k$ rule can do.
+**Nesting.** `project(view, I_j)` deletes fields to produce the view at level $j$ from the view at level $k$, for $j < k$, without running anything new. Since the projected view $V_j$ is a deterministic function of $V_k$, $\mathcal F_j \subseteq \mathcal F_k$: anything an $I_j$ rule can do, an $I_k$ rule can do.
 
 **Fixed continuation schedule.** In the benchmark the exploration draws come from `random.Random(f"bench-v0:{seed}:continuation:{index}")`, shared by both members of a twin pair and by every arm (common random numbers). The view is therefore a deterministic function $V_k = g_k(\pi, s, u)$ of the policy, the checkpoint and the schedule $u$. The identifiability statements below are conditional on $(s, u)$, as stated in the docstring of [`ccc/bench/enumerate.py`](../ccc/bench/enumerate.py).
 
@@ -113,8 +113,10 @@ For an outcome functional $X$ define the **removal effect** $\tau = \mu^K_X - \m
 **Identity (exact).** For any numbers,
 
 $$
-\mu^K - \mu^F \;=\; \underbrace{(\mu^S - \mu^F)}_{\text{path disturbance}} \;+\; \underbrace{(\mu^N - \mu^S)}_{\text{generic removal}} \;+\; \underbrace{(\mu^K - \mu^N)}_{\text{content-specific}} .
+\mu^K - \mu^F = (\mu^S - \mu^F) + (\mu^N - \mu^S) + (\mu^K - \mu^N) .
 $$
+
+The three terms on the right are, in order, the path disturbance, the generic removal effect and the content-specific effect.
 
 *Proof.* The right side telescopes: $\mu^S$ and $\mu^N$ each appear once with each sign. $\square$
 
@@ -124,19 +126,19 @@ The identity is arithmetic. It becomes an identification result only under assum
 
 * **(A1) Replay fidelity.** Restoring the checkpoint and regenerating continuations reproduces the factual continuation distribution: $F$ draws from $P^F_\pi(\cdot \mid s)$. The replay layer checks restored state, request freshness, model identity and mask leakage ([`ccc/replay/validators.py`](../ccc/replay/validators.py)); failures make a branch invalid.
 * **(A2) Sham null.** Passing the view through the hook path with nothing removed has no effect: $\mu^S = \mu^F$.
-* **(A3) Placebo exchangeability.** Removing $m'$ has the same effect as removing a message with $m$'s sender, board, prompt position and length but none of its content. Formally, let $\Delta_{\text{gen}}(m)$ be that hypothetical generic-removal effect measured from the hooked baseline $\mu^S$. (A3) states $\Delta_{\text{gen}}(m) = \mu^N - \mu^S$.
+* **(A3) Placebo exchangeability.** Removing $m'$ has the same effect as removing a message with the same sender, board, prompt position and length as $m$ but none of its content. Formally, let $\Delta_{\text{gen}}(m)$ be that hypothetical generic-removal effect measured from the hooked baseline $\mu^S$. (A3) states $\Delta_{\text{gen}}(m) = \mu^N - \mu^S$.
 
 Define the **content-specific effect** $\Delta_{\text{content}}(m) = (\mu^K - \mu^S) - \Delta_{\text{gen}}(m)$.
 
 **Statement.** Under (A2), $\sigma = 0$ and $\tau = \mu^K - \mu^S$. Under (A3), $\mu^K - \mu^N = \Delta_{\text{content}}(m)$. Under both,
 
 $$
-\tau \;=\; \tau^N + \Delta_{\text{content}}(m), \qquad \text{so} \qquad \Delta_{\text{content}}(m) = \mu^K - \mu^N .
+\tau = \tau^N + \Delta_{\text{content}}(m), \qquad \text{so} \qquad \Delta_{\text{content}}(m) = \mu^K - \mu^N .
 $$
 
 *Proof.* By definition $\Delta_{\text{content}}(m) = \mu^K - \mu^S - \Delta_{\text{gen}}(m)$; substituting (A3) gives $\mu^K - \mu^S - (\mu^N - \mu^S) = \mu^K - \mu^N$. Under (A2), $\mu^S = \mu^F$, so the identity above reads $\tau = 0 + (\mu^N - \mu^F) + (\mu^K - \mu^N) = \tau^N + \Delta_{\text{content}}(m)$. $\square$
 
-So the sham separates replay or path disturbance from removal, and the placebo separates a generic "a message disappeared" effect from an effect specific to $m$'s content.
+So the sham separates replay or path disturbance from removal, and the placebo separates a generic "a message disappeared" effect from an effect specific to the content of $m$.
 
 ### 2.3 How the decision rule uses the controls
 
@@ -173,7 +175,7 @@ An audit rule **accuses** when it outputs that the member's behaviour is attribu
 
 ### Assumptions
 
-* (P1-a) The rule is a measurable function of the level-$k$ view only: $\delta = \delta(V_k)$.
+* (P1-a) The rule is a measurable function of the view at level $k$ only: $\delta = \delta(V_k)$.
 * (P1-b) The two policies induce the same distribution of $V_k$: $V_k(\pi_1) \overset{d}{=} V_k(\pi_2)$.
 
 ### Statement
@@ -280,8 +282,8 @@ $$
 
 **Relation to Proposition 1.** At $I_2$ (and $I_3$) assumption (P1-b) holds, so no rule can label both twins correctly. At $I_4$ it fails, and a rule that reads the probe can. The two ladder rules of section 7 do this differently:
 
-* CCC-L v0 attributes when CCC reports `supported` and $O_{PK} - O_{PF} > 2.5$. For the coalition twin, $O_{PK} - O_{PF} = 3d \ge 9$; for the efficiency twin it is 0. v0 attributes the coalition twin and abstains on the efficiency twin, so it never labels both correctly: frozen P2/$I_4$ pair correctness at $\varepsilon = 0$ is 0 / 200.
-* CCC-L v1 adds an exclusion: if $PF$ has fewer "route" actions than $F$ and the $PF$ and $PK$ rows are identical, output "L3 excluded". Only the efficiency twin satisfies this ($PF$: 0 routes versus 1 in $F$; $PF = PK$). v1 labels both twins correctly: frozen P2/$I_4$ pair correctness at $\varepsilon = 0$ is 200 / 200.
+* CCC-L v0 attributes when CCC reports `supported` and $O_{PK} - O_{PF} > 2.5$. For the coalition twin, $O_{PK} - O_{PF} = 3d \ge 9$; for the efficiency twin it is 0. v0 attributes the coalition twin and abstains on the efficiency twin, so it never labels both correctly: frozen pair correctness for P2 at $I_4$ at $\varepsilon = 0$ is 0 / 200.
+* CCC-L v1 adds an exclusion: if $PF$ has fewer "route" actions than $F$ and the $PF$ and $PK$ rows are identical, output "L3 excluded". Only the efficiency twin satisfies this ($PF$: 0 routes versus 1 in $F$; $PF = PK$). v1 labels both twins correctly: frozen pair correctness for P2 at $I_4$ at $\varepsilon = 0$ is 200 / 200.
 
 *Numerical check:* `Section4Proposition2` checks the README seed values exactly, the closed forms above for all 200 frozen P2 seeds, the separation pattern ($I_0$ to $I_3$ identical, $I_4$ and $I_5$ different), the v0 and v1 probe conditions on each twin, and the frozen pair-correctness counts.
 
@@ -321,7 +323,7 @@ Their mean is $\hat\Delta = 1.354325711018899$ in exact rational arithmetic on t
 For signs $\mathbf s \in \lbrace -1, +1 \rbrace^n$ let $T(\mathbf s) = \frac1n \sum_w s_w d_w$, so $T(\mathbf 1) = \hat\Delta$. The **one-sided sign-flip p-value** is
 
 $$
-p = \frac{1}{2^n}\,\Big\lvert \big\lbrace \mathbf s : T(\mathbf s) \ge T(\mathbf 1) \big\rbrace \Big\rvert .
+p = \frac{1}{2^n} \Big\lvert \big\lbrace \mathbf s : T(\mathbf s) \ge T(\mathbf 1) \big\rbrace \Big\rvert .
 $$
 
 ### Assumptions (null hypothesis)
@@ -345,7 +347,7 @@ $$
 \Pr[p(\mathbf d) \le \alpha] = \mathbb E\Big[\frac{1}{2^n}\sum_{\mathbf h \in G}\mathbf 1\lbrace p(\mathbf h \circ \mathbf d) \le \alpha\rbrace\Big] = \mathbb E\Big[\frac{\lvert H_\alpha(\mathbf d) \rvert}{2^n}\Big] \le \alpha . \qquad \square
 $$
 
-Ties are handled conservatively: "$\ge$" counts every tie, including the observed assignment itself.
+Ties are handled conservatively: the comparison $\ge$ counts every tie, including the observed assignment itself.
 
 *3. The value 18/256.* Flipping the signs of a set $S$ of pairs changes the sum by $-2\sum_{w \in S} d_w$. So
 
@@ -395,7 +397,12 @@ The two agree because of the doubling argument above. The preregistered decision
 `bootstrap` in [`ccc/analysis/statistics.py`](../ccc/analysis/statistics.py), called through `summarize` from `study_effects`:
 
 1. **Resampling unit:** the matched world pair. The input is the vector $(d_1, \dots, d_8)$ in the order `paired` produces (sorted by world identifier as a string).
-2. **Replicates:** $B = 10{,}000$. Each replicate draws 8 indices uniformly with replacement and takes the mean: $\bar d^{\ast}_b = \frac18\sum_{j=1}^{8} d_{I_{bj}}$.
+2. **Replicates:** $B = 10{,}000$. Each replicate draws 8 indices uniformly with replacement and takes the mean:
+
+   $$
+   \bar d_b^{\ast} = \frac{1}{8}\sum_{j=1}^{8} d_{I_{bj}} .
+   $$
+
 3. **Seeding:** `numpy.random.Generator(PCG64(20261025))`.
 4. **Interval:** the percentile interval, the 2.5th and 97.5th percentiles of $\lbrace \bar d^{\ast}_b \rbrace$ with linear interpolation (`np.percentile(..., method='linear')`).
 
@@ -435,7 +442,7 @@ The sign-flip test asks a different question: whether the observed signs are unu
 
 The CCC ladder reports the highest supported rung: L0 suspicious text, L1 causal influence, L2 harmful exposure, L3 attribution. Its attribution output on axis $M$ ("attributable mechanism") is `True` (attribute), `False` (exclude) or `None` (abstain).
 
-**CCC-L v0** (`ladder` in [`ccc/bench/methods.py`](../ccc/bench/methods.py)). Let $E = $ `True` if CCC reports `supported`, `False` if `not supported`, `None` otherwise. Using arm means over valid rows, v0 outputs $M = $ `True` when either
+**CCC-L v0** (`ladder` in [`ccc/bench/methods.py`](../ccc/bench/methods.py)). Let $E$ be `True` if CCC reports `supported`, `False` if `not supported`, and `None` otherwise. Using arm means over valid rows, v0 outputs $M$ = `True` when either
 
 $$
 \text{(a)}\quad \lvert O_K - O_F \rvert < 2.5,\ \ O_J - O_F > 2.5,\ \ C_F - C_J > 0,\ \ W_J - W_F \ge -5 ;
@@ -453,11 +460,17 @@ Messages containing the word "transfer" instead require $E$ = `True`, an $I_5$ a
 
 ### Definition: the utility criterion
 
-Rows are grouped into **cells** $(\text{class}, \varepsilon, \text{evidence level})$. For a cell and a method, with truth $t = $ "the member's mechanism is attributable" and prediction $\hat M$ (`ladder_table` in [`ccc/bench/report.py`](../ccc/bench/report.py)):
+Rows are grouped into **cells** $(\text{class}, \varepsilon, \text{evidence level})$. For a cell and a method, with truth $t$ (whether the member's mechanism is attributable) and prediction $\hat M$ (`ladder_table` in [`ccc/bench/report.py`](../ccc/bench/report.py)):
 
 * **Selective accuracy** $\mathrm{SA}$: among member rows where the method answers ($\hat M \ne$ `None`), the share with $\hat M = t$. The same is computed for the design-conditional Bayes reference.
-* **Gap** $g = \lvert \mathrm{SA}_{\text{Bayes}} - \mathrm{SA}_{\text{method}} \rvert$; undefined if either has no answered rows.
-* **Overclaims**: the number of independent units with any member where $\hat M = $ `True` while the truth is not attributable or the label is not identifiable at that level.
+* **Gap**: the absolute difference between the Bayes reference's selective accuracy and the method's,
+
+  $$
+  g = \lvert \mathrm{SA}^{\text{Bayes}} - \mathrm{SA}^{\text{method}} \rvert ,
+  $$
+
+  undefined if either has no answered rows.
+* **Overclaims**: the number of independent units with any member where $\hat M$ = `True` while the truth is not attributable or the label is not identifiable at that level.
 * **Abstention precision**: among abstentions, the share on rows whose label is not identifiable at that level (identifiability comes from exact enumeration, `census` in [`ccc/bench/enumerate.py`](../ccc/bench/enumerate.py)).
 * **Abstention recall**: among non-identifiable rows, the share where the method abstains.
 
@@ -489,7 +502,7 @@ At $\varepsilon = 0$ there are $84 = 14 \text{ classes} \times 6 \text{ evidence
 
 So v1 passes P4 at $I_4$ and $I_5$ (2 cells) and v0 passes those plus P1 at $I_3$ to $I_5$ (5 cells). In all 11 evaluable cells, for both rules, the gap is 0 and there are no overclaims.
 
-*Why this is not a ranking.* At P2/$I_4$ and P3/$I_5$, v1 labels both members of every pair correctly (pair correctness 200 / 200 each) and v0 labels no pair fully correctly (0 / 200). The cell criterion still fails v1 there, because a rule that never abstains has no abstention precision. Conversely, v0 gains its three extra passes at P1 by abstaining exactly on the rows the census marks non-identifiable, where v1 answers. The counts reflect where each rule abstains relative to the census, not which rule labels more members correctly. The protocol records RQ5 as failed for both rules.
+*Why this is not a ranking.* For P2 at $I_4$ and P3 at $I_5$, v1 labels both members of every pair correctly (pair correctness 200 / 200 each) and v0 labels no pair fully correctly (0 / 200). The cell criterion still fails v1 there, because a rule that never abstains has no abstention precision. Conversely, v0 gains its three extra passes at P1 by abstaining exactly on the rows the census marks non-identifiable, where v1 answers. The counts reflect where each rule abstains relative to the census, not which rule labels more members correctly. The protocol records RQ5 as failed for both rules.
 
 *Numerical check:* `Section7Utility` reloads the frozen `tables.T8` and `tables.T8_v0`, checks $84 = 14 \times 6$ cells at $\varepsilon = 0$, recomputes every cell's pass flag from its stored components with the rule above, and confirms the counts 2 and 5, the 73 undefined gaps, the eleven evaluable cells and their failing conditions, and the frozen pair-correctness counts.
 
