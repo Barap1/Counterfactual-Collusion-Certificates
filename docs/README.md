@@ -6,6 +6,7 @@ Start with the [project README](../README.md). The documents below are written f
 
 | Document | What it covers |
 | --- | --- |
+| [MATH.md](MATH.md) | Formal setting, estimands, both propositions with proofs, the exact sign-flip test, the bootstrap, and the utility criterion, each tied to code and a test |
 | [RESULTS.md](RESULTS.md) | Every reported number mapped to its frozen source field |
 | [LIMITATIONS.md](LIMITATIONS.md) | Scientific scope, reproduction limits and release status |
 | [REPRODUCING.md](REPRODUCING.md) | Commands for the dependency-free check, the explorer and the full suite |

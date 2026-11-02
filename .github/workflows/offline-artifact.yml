@@ -21,5 +21,7 @@ jobs:
         run: |
           python -m unittest discover -s research-log/review/reproduce_headline/tests -v
           python -m unittest tests.test_demo_data -v
+      - name: Check the closed-form derivations in docs/MATH.md
+        run: python -m unittest tests.test_math_derivations -v
       - name: Check public navigation and editable graphics
         run: python scripts/check_artifact.py
