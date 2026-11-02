@@ -81,7 +81,7 @@ Each arm entry lists, per continuation: the outcome functionals, the receiver's 
 
 **Definition (audit rule at level $k$).** Let $V_k$ denote the random view at level $I_k$ and $\mathcal F_k = \sigma(V_k)$ the information it generates. An audit rule at level $k$ is a measurable map $\delta : \mathcal V_k \to \mathcal Y$ into a verdict set $\mathcal Y$ (for example $\lbrace \text{accuse}, \text{clear}, \text{abstain} \rbrace$). "The rule may condition on $I_k$" means precisely that its verdict $\delta(V_k)$ is $\mathcal F_k$-measurable.
 
-**Nesting.** `project(view, I_j)` deletes fields to produce the level-$j$ view from a level-$k$ view, $j < k$, without running anything new. Since $V_j = \operatorname{proj}_j(V_k)$ is a deterministic function of $V_k$, $\mathcal F_j \subseteq \mathcal F_k$: anything an $I_j$ rule can do, an $I_k$ rule can do.
+**Nesting.** `project(view, I_j)` deletes fields to produce the level-$j$ view from a level-$k$ view, $j < k$, without running anything new. Since $V_j = \mathrm{proj}_j(V_k)$ is a deterministic function of $V_k$, $\mathcal F_j \subseteq \mathcal F_k$: anything an $I_j$ rule can do, an $I_k$ rule can do.
 
 **Fixed continuation schedule.** In the benchmark the exploration draws come from `random.Random(f"bench-v0:{seed}:continuation:{index}")`, shared by both members of a twin pair and by every arm (common random numbers). The view is therefore a deterministic function $V_k = g_k(\pi, s, u)$ of the policy, the checkpoint and the schedule $u$. The identifiability statements below are conditional on $(s, u)$, as stated in the docstring of [`ccc/bench/enumerate.py`](../ccc/bench/enumerate.py).
 
@@ -337,7 +337,7 @@ $H_0$: the $d_w$ are independent across pairs and each is symmetric about zero, 
 
 ### Proof
 
-*1. Uniformity.* Write $d_w = \epsilon_w \lvert d_w \rvert$ with $\epsilon_w = \operatorname{sign}(d_w)$. Symmetry of $d_w$ means that, given $\lvert d_w \rvert > 0$, $\epsilon_w$ is $+1$ or $-1$ with probability $\tfrac12$ each; independence across pairs makes the $\epsilon_w$ independent given all magnitudes. Hence, given the magnitudes, every vector $\mathbf s \circ \mathbf d$ ($\circ$ is the coordinatewise product) has the same conditional probability as $\mathbf d$, namely $2^{-n}$ per sign pattern of the nonzero coordinates. A zero coordinate's sign does not change $T$, so counting all $2^n$ patterns lists each distinct value with equal multiplicity. The conditional law of $T(\mathbf 1)$ is therefore uniform on the multiset $\lbrace T(\mathbf s) \rbrace_{\mathbf s}$.
+*1. Uniformity.* Write $d_w = \epsilon_w \lvert d_w \rvert$ with $\epsilon_w = \mathrm{sign}(d_w)$. Symmetry of $d_w$ means that, given $\lvert d_w \rvert > 0$, $\epsilon_w$ is $+1$ or $-1$ with probability $\tfrac12$ each; independence across pairs makes the $\epsilon_w$ independent given all magnitudes. Hence, given the magnitudes, every vector $\mathbf s \circ \mathbf d$ ($\circ$ is the coordinatewise product) has the same conditional probability as $\mathbf d$, namely $2^{-n}$ per sign pattern of the nonzero coordinates. A zero coordinate's sign does not change $T$, so counting all $2^n$ patterns lists each distinct value with equal multiplicity. The conditional law of $T(\mathbf 1)$ is therefore uniform on the multiset $\lbrace T(\mathbf s) \rbrace_{\mathbf s}$.
 
 *2. Exactness.* Let $G = \lbrace -1, +1 \rbrace^n$ act on vectors by $\mathbf s \cdot \mathbf x = \mathbf s \circ \mathbf x$, and write $p(\mathbf x) = 2^{-n}\lvert \lbrace \mathbf s : T(\mathbf s \circ \mathbf x) \ge T(\mathbf x)\rbrace \rvert$, where now $T(\mathbf x) = \frac1n\sum x_w$. Fix $\mathbf x$ and let $H_\alpha = \lbrace \mathbf h \in G : p(\mathbf h \circ \mathbf x) \le \alpha \rbrace$ with $m = \lvert H_\alpha \rvert$. Because $G$ is a group, the multiset $\lbrace T(\mathbf s \circ \mathbf h \circ \mathbf x) \rbrace_{\mathbf s}$ does not depend on $\mathbf h$. Take $\mathbf h_0 \in H_\alpha$ with the smallest value of $T(\mathbf h \circ \mathbf x)$ over $H_\alpha$. All $m$ elements of $H_\alpha$ give values at least as large, so $2^n p(\mathbf h_0 \circ \mathbf x) \ge m$, and $p(\mathbf h_0 \circ \mathbf x) \le \alpha$ gives $m \le \alpha 2^n$. Under $H_0$, $\mathbf d \overset{d}{=} \mathbf h \circ \mathbf d$ for every $\mathbf h$, so averaging over $\mathbf h$ uniform on $G$:
 
@@ -410,10 +410,10 @@ Continuations within a world share its checkpoint, its agents' earlier history a
 Let $\bar d^{\ast}$ be the mean of one resample. Its exact distribution is a finite mixture over the $\binom{15}{8} = 6435$ multisets of indices, each weighted by its multinomial probability $\frac{8!}{\prod_j k_j!} 8^{-8}$. Two facts follow from linearity:
 
 $$
-\mathbb E^\ast[\bar d^{\ast}] = \hat\Delta, \qquad \operatorname{Var}^\ast[\bar d^{\ast}] = \frac{\hat\sigma^2}{n}, \quad \hat\sigma^2 = \frac1n\sum_w (d_w - \hat\Delta)^2 .
+\mathbb E^\ast[\bar d^{\ast}] = \hat\Delta, \qquad \mathrm{Var}^\ast[\bar d^{\ast}] = \frac{\hat\sigma^2}{n}, \quad \hat\sigma^2 = \frac1n\sum_w (d_w - \hat\Delta)^2 .
 $$
 
-*Proof.* Each index is uniform on $\lbrace 1, \dots, n \rbrace$, so $\mathbb E^\ast[d_{I}] = \hat\Delta$ and $\operatorname{Var}^\ast[d_I] = \hat\sigma^2$; the mean of $n$ independent draws has the stated mean and variance. $\square$
+*Proof.* Each index is uniform on $\lbrace 1, \dots, n \rbrace$, so $\mathbb E^\ast[d_{I}] = \hat\Delta$ and $\mathrm{Var}^\ast[d_I] = \hat\sigma^2$; the mean of $n$ independent draws has the stated mean and variance. $\square$
 
 Every resampled mean lies in $[\min_w d_w, \max_w d_w]$, so the interval does too. The Monte Carlo interval approximates the percentiles of this exact distribution; $B = 10{,}000$ draws make that approximation error small relative to the interval width.
 
